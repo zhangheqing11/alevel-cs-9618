@@ -1,0 +1,9 @@
+// global: LeftPointer, TreeData, RightPointer : ARRAY[0:9] OF INTEGER
+// global: RootPointer : INTEGER; FreeNode : INTEGER
+FUNCTION InsertNode(Item : INTEGER) RETURNS BOOLEAN
+
+ENDFUNCTION
+
+FUNCTION SearchTree(Item : INTEGER) RETURNS INTEGER
+
+ENDFUNCTION

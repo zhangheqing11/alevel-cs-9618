@@ -1,0 +1,20 @@
+{
+  "id": "L10/E03",
+  "kind": "ladder",
+  "title": "Ordered linked list: insert in order",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "linked-list",
+    "global-scope",
+    "pre-condition-loop",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "InsertInOrder",
+  "ms_verified": false,
+  "difficulty": 4
+}

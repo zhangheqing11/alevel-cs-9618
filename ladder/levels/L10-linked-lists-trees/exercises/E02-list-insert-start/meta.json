@@ -1,0 +1,20 @@
+{
+  "id": "L10/E02",
+  "kind": "ladder",
+  "title": "Linked list: initialise the free list, insert at the start, output",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "linked-list",
+    "global-scope",
+    "boundary-values",
+    "boolean-return",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "InsertAtStart",
+  "ms_verified": false,
+  "difficulty": 3
+}
