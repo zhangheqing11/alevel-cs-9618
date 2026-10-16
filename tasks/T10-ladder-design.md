@@ -73,3 +73,9 @@ T14 每批 PR 合并前，总控会请你抽查 codex 写的测试：是否真�
 - worktree 与分支由总控启动会话时创建：分支 `task/T10-ladder-design`。
 - 进度写进 `tasks/progress/T10.md`（已完成 / 进行中 / 下一步 / 坑）。
 - 交付：`git fetch origin && git rebase origin/main` → 两个检查 → `git push -u origin HEAD` → `gh pr create --base main --title "T10 batch N: …"`。不要合并。
+
+## 考纲事实（总控已核对 2027–29 版原文）
+
+- 所有卷禁用计算器（考纲第 11 页）。
+- P4 只考 19–20 节，**不考低级语言与声明式编程**；考生须提交完整代码与测试证据；**官方源文件不再含二进制文件**——阶梯里的文件练习只需文本文件（L07、L09 不要设计二进制/随机存取文件练习，除非作为可选拓展并注明）。
+- 2021 年起认可的教材仍适用。
