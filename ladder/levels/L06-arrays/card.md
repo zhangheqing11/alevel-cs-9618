@@ -179,7 +179,7 @@ def bubble_sort(data: list[int]) -> None:
 | 练习 | 形态 | 先写伪代码 | 练什么 |
 |:--|:--|:--|:--|
 | [`exercises/E01-trace-arrays/`](exercises/E01-trace-arrays/spec.md) | 干跑 | 否 | 初始化、整体右移、整个数组复制 vs Python 别名、二维下标 |
-| [`exercises/E02-linear-search/`](exercises/E02-linear-search/spec.md) | 函数 | 是 | 找到就停；返回 1 起位置 |
+| [`exercises/E02-linear-search/`](exercises/E02-linear-search/spec.md) | 函数 | 是 | 找到就停；并行数组里返回分数（找不到返回 -1） |
 | [`exercises/E03-bubble-sort/`](exercises/E03-bubble-sort/spec.md) | 函数（原地修改） | 是 | 带标志的冒泡排序；升序/降序；原地修改 list |
 | [`exercises/E04-noughts-crosses/`](exercises/E04-noughts-crosses/spec.md) | 函数 | 是 | 二维数组：行、列、两条对角线 |
 | [`exercises/E05-tally-counts/`](exercises/E05-tally-counts/spec.md) | 函数 | 是 | 计数数组：初始化、值 → 下标的换算 |
