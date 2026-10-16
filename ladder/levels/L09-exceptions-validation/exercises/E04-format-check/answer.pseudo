@@ -1,0 +1,4 @@
+FUNCTION ValidCode(Code : STRING) RETURNS BOOLEAN
+   // length check, then check each character with MID() and comparisons
+
+ENDFUNCTION
