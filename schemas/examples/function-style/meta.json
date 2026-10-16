@@ -1,0 +1,14 @@
+{
+  "id": "L00/E01",
+  "kind": "ladder",
+  "title": "Linear search (format example: function-style + pseudocode)",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": ["loop-bounds", "return-value"],
+  "pseudocode": true,
+  "files": [],
+  "entry": "linear_search",
+  "ms_verified": false,
+  "difficulty": 1
+}

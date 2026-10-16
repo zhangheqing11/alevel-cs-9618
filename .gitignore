@@ -1,0 +1,23 @@
+# Copyrighted / large source material: never commit
+sources/
+*.pdf
+*.zip
+*.pptx
+*.docx
+
+# Generated (rebuild with `make build`)
+output/
+
+# Learner attempt scratch (committed deliberately via ledger, not here)
+attempts/**/__pycache__/
+
+# Python / OS
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store
+work/tmp/
+
+# Claude Code app worktrees
+.claude/worktrees/

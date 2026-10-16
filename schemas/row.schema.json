@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "row.schema.json",
+  "title": "One leaf sub-question of a 9618 past paper (one line of corpus/rows/p<N>/<paper>.jsonl)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "paper", "component", "session", "year", "variant", "q", "qn", "marks",
+               "command_word", "stem", "stem_ctx", "qp_page", "ms_page", "ms_text",
+               "has_figure", "equivalent_of", "extension", "flags"],
+  "properties": {
+    "id":        {"type": "string", "pattern": "^9618_[msw][0-9]{2}_[1-4][1-3]:[0-9]+(\\([a-z]\\))?(\\((i|ii|iii|iv|v|vi|vii|viii|ix|x)\\))?(\\([A-Z0-9]+\\))?$",
+                  "description": "<paper>:<question label down to the finest level>, e.g. 9618_s24_22:3(b)(ii)"},
+    "paper":     {"type": "string", "pattern": "^9618_[msw][0-9]{2}_[1-4][1-3]$"},
+    "component": {"type": "integer", "enum": [1, 2, 3, 4]},
+    "session":   {"type": "string", "enum": ["m", "s", "w"]},
+    "year":      {"type": "integer", "minimum": 2021, "maximum": 2030},
+    "variant":   {"type": "integer", "enum": [1, 2, 3]},
+    "q":         {"type": "string", "description": "Question label as printed, normalised: 3(b)(ii)"},
+    "qn":        {"type": "integer", "minimum": 1},
+    "marks":     {"type": "integer", "minimum": 0, "maximum": 20},
+    "command_word": {"type": ["string", "null"], "description": "Leading command phrase, e.g. Explain / State / Write program code / Complete"},
+    "stem":      {"type": "string", "description": "The leaf's own text from the QP"},
+    "stem_ctx":  {"type": "string", "description": "Parent context needed to understand the leaf (shared scenario, earlier parts' givens); may be empty"},
+    "qp_page":   {"type": "integer", "minimum": 1, "description": "1-based page in the QP PDF where the leaf starts"},
+    "ms_page":   {"type": "integer", "minimum": 1, "description": "1-based page in the MS PDF where the leaf's MS entry starts"},
+    "ms_text":   {"type": "string", "description": "Raw MS answer text for exactly this leaf (layout-preserved where it matters)"},
+    "has_figure": {"type": "boolean", "description": "True when a diagram/table/code listing in the QP matters to the answer: always consult the PDF page"},
+    "equivalent_of": {"type": ["string", "null"], "description": "Row id of an identical earlier leaf (duplicate variant), else null"},
+    "extension": {"type": "boolean", "description": "True for 2021 (extension corpus); excluded from stats/priority"},
+    "flags":     {"type": "array", "items": {"type": "string", "enum": ["split-uncertain", "ms-misaligned", "marks-unclear", "figure", "ocr-garbled", "needs-review"]}, "uniqueItems": true},
+
+    "types": {
+      "type": "object", "additionalProperties": false, "required": ["primary", "cross"],
+      "description": "Added by tagging tasks (T24/T34). Absent until then.",
+      "properties": {
+        "primary": {"type": ["string", "null"], "pattern": "^P[1-4]-[A-Z]{2,3}-[0-9]{2}$"},
+        "cross":   {"type": "array", "items": {"type": "string", "pattern": "^P[1-4]-[A-Z]{2,3}-[0-9]{2}$"}, "uniqueItems": true}
+      }
+    },
+    "tag_confidence": {"type": "string", "enum": ["high", "low"], "description": "Added with types; low = needs design-agent adjudication"},
+    "tag_note": {"type": "string", "description": "Why confidence is low / adjudication note"},
+    "markpoints": {
+      "type": "array",
+      "description": "P2/P4 coding leaves with marks >= 4: the MS split into individually credited points (T24/T34)",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["n", "text", "marks", "skills"],
+        "properties": {
+          "n": {"type": "integer", "minimum": 1},
+          "text": {"type": "string", "description": "Verbatim MS wording of this point"},
+          "marks": {"type": "integer", "minimum": 1},
+          "skills": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"}, "minItems": 1}
+        }
+      }
+    },
+    "ms_max": {"type": "integer", "minimum": 1, "description": "When the MS lists more points than marks ('Max 4'), the cap"},
+    "er": {"type": "string", "description": "Examiner-report excerpt for this leaf (T27); for 易错 only, never a scoring source"}
+  }
+}

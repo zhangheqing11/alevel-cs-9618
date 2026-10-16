@@ -1,0 +1,6 @@
+pymupdf
+jsonschema
+pytest
+pyyaml
+markdown
+pygments

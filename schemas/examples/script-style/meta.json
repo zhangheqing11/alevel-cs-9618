@@ -1,0 +1,14 @@
+{
+  "id": "L00/E02",
+  "kind": "ladder",
+  "title": "Top scorer from a text file (format example: script-style + data file)",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": ["file-open-read", "loop-to-eof", "type-conversion"],
+  "pseudocode": false,
+  "files": ["scores.txt"],
+  "entry": "main",
+  "ms_verified": false,
+  "difficulty": 2
+}

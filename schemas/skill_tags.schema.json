@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill_tags.schema.json",
+  "title": "Mark-point skill-tag vocabulary (papers/p2/skill_tags.json; P4 may extend in papers/p4/skill_tags.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "tags"],
+  "properties": {
+    "version": {"type": "string"},
+    "extends": {"type": "string", "description": "Path of a vocabulary this one extends"},
+    "tags": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["tag", "group", "name_zh", "desc"],
+        "properties": {
+          "tag": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+          "group": {"type": "string", "description": "e.g. structure, data, file, string, control, oop, adt, io, exception"},
+          "name_zh": {"type": "string"},
+          "desc": {"type": "string", "description": "What earning this point requires, in one line"},
+          "example_ms": {"type": "string", "description": "A verbatim MS wording example with its row id"}
+        }
+      }
+    }
+  }
+}

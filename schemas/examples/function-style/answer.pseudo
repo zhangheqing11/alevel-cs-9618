@@ -1,0 +1,4 @@
+FUNCTION LinearSearch(Items : ARRAY OF INTEGER, Target : INTEGER) RETURNS INTEGER
+    // write your pseudocode here
+
+ENDFUNCTION
