@@ -127,9 +127,11 @@ CASE OF Move
    'S' : Position ← Position + 10
    'A' : Position ← Position - 1
    'D' : Position ← Position + 1
-   OTHERWISE : CALL Beep
+   OTHERWISE : CALL Beep()
 ENDCASE
 ```
+
+（指南 p.19 的原例写作 `CALL Beep`，省略了括号；无参过程的正式调用语法是 `CALL <identifier>()`，见 p.22–23，本阶梯一律写 `CALL Beep()`。）
 
 两种 Python 写法都可以：
 
