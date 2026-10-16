@@ -1,11 +1,13 @@
-FUNCTION BinarySearch(SearchArray : ARRAY OF INTEGER, NumberItems : INTEGER, SearchItem : INTEGER) RETURNS INTEGER
+// global: SearchArray : ARRAY[0:99] OF INTEGER (sorted)
+// global: NumberItems : INTEGER
+FUNCTION BinarySearch(SearchItem : INTEGER) RETURNS INTEGER
    DECLARE Low : INTEGER
    DECLARE High : INTEGER
    DECLARE Mid : INTEGER
 
 ENDFUNCTION
 
-FUNCTION RecursiveBinarySearch(SearchArray : ARRAY OF INTEGER, SearchItem : INTEGER, Low : INTEGER, High : INTEGER) RETURNS INTEGER
+FUNCTION RecursiveBinarySearch(SearchItem : INTEGER, Low : INTEGER, High : INTEGER) RETURNS INTEGER
    DECLARE Mid : INTEGER
 
 ENDFUNCTION
