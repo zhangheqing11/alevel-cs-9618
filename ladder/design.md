@@ -1,7 +1,7 @@
 # Python 阶梯 · 总设计（T10）
 
 > 读者：导师会话（教学 skill）、T14 实现者（codex）、总控。学生看 `ladder/README.md` 即可。
-> 版本：批 2（本文件全量 + L01–L08 的卡与练习规格）。L09–L12 的卡与规格在批 3 交付；本文件中它们的条目是**计划**，届时可能细调（调整写进 §3）。
+> 版本：批 3（本文件全量 + L01–L12 全部卡片与练习规格）。
 
 ## 1. 定位与原则
 
@@ -30,10 +30,10 @@
 | L06 | 一维/二维数组 ↔ list；线性查找、冒泡排序 | 声明与初始化 `ARRAY[1:n]`、二维 `[1:r,1:c]` ↔ list / 嵌套 list；下标换算；线性查找、冒泡排序（含提前结束） | L05 | 10.2, 9.2 | §3 p.10–11 | Lecture 2（lists）/ TP3e ch.9, §7.6 | 13.03–13.05, 14.14, 23.01–23.02 | 11 月末–12 月第 1 周 | 5 |
 | L07 | 文本文件 | `OPENFILE … FOR READ/WRITE/APPEND`、`READFILE`、`EOF`、`WRITEFILE`、`CLOSEFILE` ↔ `open`/`with`；读到文件尾、读入数组、写出结果 | L06 | 10.3, 20.2（文本部分） | §9.1 p.25–26 | Lecture 6；PS6 / TP3e §7.2, §8.6, §13.1 | 13.06, 14.15, 26.02 | 12 月第 1–2 周 | 5 |
 | L08 | 记录 TYPE…ENDTYPE；数组 + 指针实现栈与队列 | 定义与使用记录、记录数组 ↔ 只有属性的 class；用数组 + 栈顶/队首队尾指针实现栈、（线性与循环）队列的入/出 | L07 | 10.1, 10.4；预习 19.1 | §4 p.12–14 | Lecture 8（Classes）/ TP3e ch.14 | 13.02, 13.07–13.09, 23.08–23.09, 26.01 | 12 月第 2–3 周 | 5 |
-| L09 | 异常处理与输入校验；P4 工作方式 | Python `try/except`；用 `IS_NUM` 式校验与异常两种思路；P4 规定标识符（CamelCase）、全局数组、证据文档 | L08 | 20.2 | 指南无 TRY（见 §3 调整 5）；§9.2 p.26–27 选学 | Lecture 3 / — | 26.02–26.03 | 1 月第 1–2 周 | 4–5（批 3） |
-| L10 | 链表与二叉树（数组 + 指针实现） | 链表的查找、插入、删除；二叉树的插入、查找、遍历；空指针约定（-1 或 0） | L09 | 19.1 | §4 p.12–14（指针） | — / — | 23.05–23.09 | 1 月第 3 周–2 月第 1 周 | 5（批 3） |
-| L11 | 递归；二分查找、插入排序；算法比较 | 写递归函数并追踪调用栈；二分查找（迭代与递归）、插入排序；Big O 比较 | L10 | 19.1, 19.2 | §8 p.22–24 | — / TP3e §5.8–5.10, §6.6–6.8 | 23.01–23.04, 23.13, 24 | 2 月 | 5（批 3） |
-| L12 | OOP：类、私有属性、构造、getter/setter、继承、多态 | `CLASS…ENDCLASS`、`PRIVATE`、`NEW`、`INHERITS`、`SUPER` ↔ `class`、`__init__`、`self.__x`、`super()`；聚合 | L11 | 20.1 | §10 p.28–29 | Lecture 8 / TP3e ch.14–17 | 27 | 3 月 | 5（批 3） |
+| L09 | 异常处理与输入校验；P4 工作方式 | Python `try/except`；用 `IS_NUM` 式校验与异常两种思路；P4 规定标识符（CamelCase）、全局数组、证据文档 | L08 | 20.2, 12.3 | 指南无 TRY（见 §3 调整 5）；§9.2 p.26–27 选学 | Lecture 3；PS3 / — | 26.02–26.03, 15.05, 15.07 | 1 月第 1–2 周 | 5 |
+| L10 | 链表与二叉树（数组 + 指针实现） | 链表的查找、插入、删除；二叉树的插入、查找、遍历；空指针约定（-1 或 0） | L09 | 19.1 | §4 p.12–14（指针） | — / —（没有对应讲次） | 13.10, 23.05–23.07, 23.10, 23.12 | 1 月第 3 周–2 月第 1 周 | 5 |
+| L11 | 递归；二分查找、插入排序；算法比较 | 写递归函数并追踪调用栈；二分查找（迭代与递归）、插入排序；Big O 比较 | L10 | 19.1, 19.2 | §8 p.22–24 | — / TP3e §5.8–5.10, §6.6–6.8 | 23.01–23.04, 23.13, 24 | 2 月 | 5 |
+| L12 | OOP：类、私有属性、构造、getter/setter、继承、多态 | `CLASS…ENDCLASS`、`PRIVATE`、`NEW`、`INHERITS`、`SUPER` ↔ `class`、`__init__`、`self.__x`、`super()`；聚合 | L11 | 20.1 | §10 p.28–29 | Lecture 8 / TP3e §15.1, §15.6, §16.7, §17.8–17.9 | 27 | 3 月 | 5 |
 
 ### 2.1 考纲覆盖核对（Learner Guide p.20 的 Paper 2 自查清单）
 
@@ -48,6 +48,8 @@
 | Write pseudocode statements for IF, CASE and loop statements | L02、L03 | 已覆盖 |
 | Define and use procedures and functions | L04（L01 起当外壳） | 已覆盖（L04/E01–E05） |
 | Test … choice of test data | L02 起每份规格 | 「必测行为」示范边界选值；L02 有专项过关点 |
+
+A2 的 L09–L12 按考纲 19–20 节（p.37–38）设计，覆盖见 §2 表的「考纲」列。
 
 Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只用考纲给出的命令、给伪代码加注释）已写进 §4.1 第 2 条的核对项。
 
@@ -68,6 +70,11 @@ Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只�
 | 11 | **L05 第一题先写「插页函数库」**：`left`/`right`/`mid`/`length` 的 Python 版（L05/E01）。 | 把 P2 伪代码译成 Python 时，下标错误最集中在子串函数上（ECR P2 2024 p.27：长度参数差一很常见）；换算集中写一次、测一次，以后直接调用。 |
 | 12 | **L06 的查找、排序题用并行数组，记录数组留到 L08。** | 指南顺序是数组（§3）在记录（§4）之前；P2 真题两种都考（并行数组同步交换见 ER w22 9618/22 Q7 p.24–25）。 |
 | 13 | **L08 加一道栈的应用题（括号配对，L08/E05）。** | AS 10.4 要求会「使用」栈；从「实现」到「使用」是 A2 链表、树之前的过渡。 |
+| 14 | **L09 起引入 `script` 型练习（L09/E05）与「P4 工作方式」表**（标识符照抄、全局数组、测试证据）。 | P4 要提交完整程序与运行证据（考纲 p.11、p.40）；ER s22 9618/41 p.35–36 对证据与测试数据的要求。 |
+| 15 | **L10 的练习一律用并行数组表示结点**（卡片里同时介绍记录数组的写法）。 | 测试可以直接给全局数组赋值来建立初始状态；ECR P4 2021 p.16 的点评同时提到记录类型与两个数组两种结构。 |
+| 16 | **二叉树遍历放到 L11/E05（递归）**，L10 只做插入与查找。 | 中序遍历最自然的写法是递归；先学递归再遍历，L10 的负担也更合理。 |
+| 17 | **L11、L12 的测试会检查「写法」**：用计数包装检查确实递归、确实调用了指定的方法；用统计 `__getitem__` 的 list 子类检查二分查找的读取次数；用 `vars()` 检查属性私有且名字照抄题目。 | D10：题目要求写算法时不能用内置函数代劳；P4 的类题要求私有属性与指定标识符（ER s22 9618/41 Q2 p.36）。 |
+| 18 | **L12/E04 的「包含」题仿照 9618_s24_42 Q2 的 `TreeClass` 包含 `Node`**，但换成图书馆与图书。 | ER s24 9618/42 Q2 p.44：考生把包含写成继承、对象数组初始化错误。 |
 
 其余与初拟表一致。
 
@@ -93,7 +100,10 @@ Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只�
 | L06 | 声明一维、二维数组（含 P4 的 Python 写法与注释）；不看卡写出带标志、逐趟缩短的冒泡排序；说出 Python `copy = nums` 与 `[[0] * 3] * 3` 的问题；说出线性查找为什么不能把 FOR 套在 WHILE 里 |
 | L07 | 默写「打开 → 读到文件尾 → 关闭」与「打开 → 写 → 关闭」的伪代码；说出 WRITE 与 APPEND 的区别；说出 Python 行尾 `"\n"` 的两个坑；说出文件名变量为什么不加引号 |
 | L08 | 定义一个 `TYPE` 并声明记录数组；不看卡写出 `Push`/`Pop` 与循环队列的 `Enqueue`/`Dequeue`（伪代码、Python 各一份）；说出 `[Record()] * n` 与 `pupil2 = pupil1` 的问题 |
-| L09–L12 | 批 3 补 |
+| L09 | 写出 `try`/`except` 并说出只捕捉指定异常的理由；把同一个校验分别用 P2 写法（`IS_NUM` + 条件）和 P4 写法（`try`）写出；照题目标识符写一个读文件到全局数组的过程，打开与关闭都在 `try` 里 |
+| L10 | 不看卡写出链表的表头插入与删除（伪代码），并说出改指针的顺序；在纸上画出二叉查找树插入一组数后的三个数组；说出 Python 里 `-1` 当下标为什么危险 |
+| L11 | 说出递归的三个要素并画出一次调用栈；不看卡写出迭代二分查找和插入排序；把一个递归函数改成迭代；填出线性/二分查找、冒泡/插入排序的 Big O 表 |
+| L12 | 按类说明表写出一个带私有属性、getter/setter 的类；写出调用父类构造并重写方法的子类；用「有一个 / 是一个」区分包含与继承；用一句话解释多态并举例 |
 
 ## 5. 全局「伪代码 ↔ Python」速查表
 
@@ -142,7 +152,10 @@ Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只�
 | 栈、队列 | 数组 + `TopPointer`；数组 + `FrontPointer`、`RearPointer`、`NumberOfItems` | list + 整数指针（全局，`global`）；绕回用 `% size` | L08 | 空栈指针：1 起数组为 0，0 起为 -1；P4 照题目给的初值 |
 | 指针、枚举、集合 | `TYPE TIntPointer = ^INTEGER`、`TYPE Season = (…)`、`SET OF`（p.12–13） | 用数组下标充当指针；`enum.Enum`；`set` | L08/L10 | 阶梯里指针一律用数组下标实现 |
 | 随机文件 | `OPENFILE … FOR RANDOM`、`SEEK`、`GETRECORD`、`PUTRECORD`（p.26–27） | 选学（P4 源文件不含二进制文件） | L09 选学 | |
-| 异常 | 指南没有 | `try:` / `except ValueError:` / `finally:` | L09 | |
+| 异常 | 指南没有 | `try:` / `except ValueError:` / `finally:` | L09 | P2 用 `IS_NUM` + 条件做同样的校验 |
+| 链表、二叉树 | 数组 + `StartPointer`/`FreePointer`；`LeftPointer`/`TreeData`/`RightPointer` + `RootPointer`；空指针 `-1` | 全局 list + 整数指针（`global`） | L10 | Python 里 `list[-1]` 不报错，用指针前先判 `!= -1` |
+| 递归 | 函数在自己的定义里调用自己；先写基本情况 | 同左 | L11 | Python 约 1000 层后抛 `RecursionError` |
+| 二分查找 | `Mid ← (Low + High) DIV 2`；`WHILE Low <= High` | `Mid = (Low + High) // 2` | L11 | |
 | 类 | `CLASS Pet` / `PRIVATE Name : STRING` / `PUBLIC PROCEDURE NEW(GivenName : STRING)` / `ENDCLASS`（p.28） | `class Pet:` / `def __init__(self, given_name: str):` / `self.__name = given_name` | L12 | 构造过程名为 `NEW`；Python 私有靠 `__` 前缀（名字改写） |
 | 继承 | `CLASS Cat INHERITS Pet`；`SUPER.NEW(GivenName)`（p.28） | `class Cat(Pet):`；`super().__init__(given_name)` | L12 | |
 | 创建对象 | `MyCat ← NEW Cat("Kitty", "Shorthaired")`（p.29） | `my_cat = Cat("Kitty", "Shorthaired")` | L12 | |
@@ -167,11 +180,11 @@ Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只�
 | P2：数组、线性查找、冒泡排序 | L06 | L06 E01–E05（含并行数组、二维数组） |
 | P2：文本文件读写 | L07 | L07 E01–E05 |
 | P2：记录；栈、队列、链表的概念与数组实现 | L08 | L08 E01–E05（链表在 L10） |
-| P4：读源文件到全局数组、处理并输出 | L06–L07, L09 | L07 E03（参考 9618_s24_42 Q1）；批 3 加 P4 风格标识符、`script` 型 |
-| P4：栈、队列、链表、二叉树 | L08, L10 | L08 E03–E04（全局数组 + 指针）；链表、二叉树在批 3 |
-| P4：查找、排序、递归 | L06, L11 | L06 E02–E03；二分查找、插入排序、递归在批 3 |
-| P4：类、继承、getter/setter | L12 | 批 3 |
-| P4：异常处理与测试证据 | L09 | 批 3 |
+| P4：读源文件到全局数组、处理并输出 | L06–L07, L09 | L07 E03（参考 9618_s24_42 Q1）；L09 E03、E05（P4 标识符、`script` 型） |
+| P4：栈、队列、链表、二叉树 | L08, L10 | L08 E03–E04；L10 E02–E05；L11 E05（遍历） |
+| P4：查找、排序、递归 | L06, L11 | L06 E02–E03；L11 E01–E05 |
+| P4：类、继承、getter/setter、包含 | L12 | L12 E01–E05 |
+| P4：异常处理与测试证据 | L09 | L09 E01–E05 |
 
 ## 7. 练习规格约定（给 T14）
 
@@ -188,7 +201,7 @@ Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只�
 | `function` 函数型 | 纯函数：参数进、`return` 出 | 直接调 `sol.<entry>(…)`；比对返回值，必要时比对类型（`type(r) is int` 等） | 函数名 |
 | `io` 输入输出过程型 | `def <entry>() -> None`，内部用 `input()` / `print()` | `feed_input(monkeypatch, …)` 喂输入 → 调 `sol.<entry>()` → `capsys.readouterr().out` 取输出，按 7.3 比对 | 过程名 |
 | `trace` 干跑型 | 模块级常量 `PREDICTED`（手算答案）+ 一个翻译函数 | ① `sol.PREDICTED` 与期望逐项比对；② 运行翻译函数，按 7.3 或返回值比对 | 翻译函数名 |
-| `script` 脚本型 | 整个程序（读写文件） | `tools/testkit.run_script` | `main`（L07 起使用；本批没有） |
+| `script` 脚本型 | 整个程序（模块级全局变量 + 过程 + 主程序） | `tools/testkit.run_script(candidate_path, files_dir=…)`，比对 `result.lines` 与返回码；也可用 `sol` 直接测其中的函数 | `main`（L09/E05 起） |
 
 `io` 与 `trace` 的 `starter.py` 末尾必须有守卫，保证测试 `import` 时不会卡在 `input()` 上：
 
@@ -215,6 +228,11 @@ if __name__ == "__main__":
 - 规格「mutant 建议」逐条实现为 `ref/mutant_<n>.py`（编号同规格的 M1、M2…）。每个 mutant 必须让至少一个测试失败；**不得写成死循环**（会拖垮 `make check`）。
 - 不要对实现细节过拟合：`for`/`while`、`if/elif`/`match`、链式比较、字符串方法等不同的正确写法都必须能通过。写法上的要求（如「伪代码必须用 CASE」）只进人工核对清单。
 - 只用标准库；单个练习测试总时长 < 5 秒；不依赖随机数与时间。
+- **L09 起检查「写法」的三种手段**（规格里写明时才用）：
+  - **确实递归 / 确实调用了指定模块**：`orig = sol.F`；`sol.F = wrapper`（先计数再调 `orig`）；调用后计数 ≥ 规格给的下限；测试结束前恢复。学生函数通过模块全局名调用自己，所以内部调用也会经过包装。
+  - **读取次数**：用重写了 `__getitem__` 的 `list` 子类统计读取次数（L11/E03）。`in`、`index()` 不经过 `__getitem__`，这类写法交给人工核对清单。
+  - **私有与命名**：`vars(obj)` 的键应恰好是规格列出的名字改写形式（如 `_Pet__Name`）；`issubclass` 检查继承 / 包含关系。
+- **测试可以直接给模块全局变量赋值**来建立初始状态（L10/E04、L11/E05）；规格会写明。
 
 ### 7.6 `task.md` 与 `answer.pseudo`
 
@@ -266,7 +284,13 @@ if __name__ == "__main__":
 | `file-write` | WRITE 模式写文件 | `file-append` | APPEND 模式 |
 | `file-close` | 关闭文件 | `record-type` | `TYPE…ENDTYPE` ↔ class |
 | `array-of-records` | 记录数组 | `stack-array` | 数组 + 指针实现栈 |
-| `queue-array` | 数组 + 指针实现（循环）队列 | | |
+| `queue-array` | 数组 + 指针实现（循环）队列 | `exception-handling` | `try`/`except` |
+| `p4-identifiers` | 照抄题目指定的标识符 | `linked-list` | 数组 + 指针的链表 |
+| `binary-tree` | 数组 + 指针的二叉树 | `recursion` | 递归 |
+| `binary-search` | 二分查找 | `insertion-sort` | 插入排序 |
+| `class-definition` | 定义类与构造 | `encapsulation` | 私有属性、通过方法访问 |
+| `getter-setter` | getter / setter | `inheritance` | 继承、父类构造、`super()` |
+| `polymorphism` | 重写与多态 | `containment` | 包含（聚合） |
 
 ## 8. 出处与许可
 
@@ -294,4 +318,4 @@ if __name__ == "__main__":
 
 批 1 提出的五项已由总控决定并记入 `docs/DECISIONS.md`：D7（`output_lines` 已进 `tools/testkit.py`）、D8（技能标签只有一份词表，以 §7.8 为种子）、D9（`ledger/ladder.csv` 优先级一律 ★★★）、D2（只教指南写法；非指南写法以该题 MS 为准）、D1（避开 `9618_s26_*`——批 2 起插页统一引用 `9618_w25_in_21`，内容与页码同 s26 插页）。
 
-批 2 新提的事项见 `tasks/progress/T10.md` 与批 2 PR 描述。
+批 2 的两项已定为 D10（P4 数组、指针初值、不用内置函数代劳）、D11（T14 照抄数据文件）。批 3 新提的事项见 `tasks/progress/T10.md` 与批 3 PR 描述。
