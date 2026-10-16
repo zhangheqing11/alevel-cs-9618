@@ -11,7 +11,7 @@
 
 ## 盲标与 pilot
 
-- 先完成全部 979 行并提交封存（原提交 `da13eb6`），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。
+- 先完成全部 979 行并提交封存（当前分支提交 `d346f20`；rebase 前为 `da13eb6`），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。
 - 盲标 SHA-256：`14e5797e6ab18a13609639639addf7064bd96e7a67553813a60d42f70113dbdd`。
 - **主题型一致率：88/88 = 100.00%**。主题型加副题型集合完全一致：87/88 = 98.86%。
 - 此处是按已发布指南（含示例）盲标后与 pilot 的一致率，不能当作未见题目的独立准确率。没有为追求一致率改写封存标签。

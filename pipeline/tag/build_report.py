@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 from apply_tags import ROOT, load_jsonl, prepare
@@ -52,6 +53,7 @@ def main():
                       primary_cross_matches=full_matches, differences=differences)
     (folder / 'pilot_comparison.json').write_text(json.dumps(comparison, ensure_ascii=False, indent=2)+'\n')
 
+    freeze = subprocess.check_output(['git', 'log', '-1', '--format=%h', '--fixed-strings', '--grep=T24: freeze all 979 blind decisions before pilot comparison'], cwd=ROOT, text=True).strip()
     lines = ['# P1 全量标签报告（T24）', '',
         '## 覆盖与复核', '',
         f'- 全部 {len(rows)} 行、33 卷均有一个主题型；核验语料 {len(verified)} 行、{sum(r["marks"] for r in verified)} 分；2021 扩展 {len(extension)} 行、{sum(r["marks"] for r in extension)} 分。',
@@ -61,7 +63,7 @@ def main():
         '- 979 行的原有字段值 token 已逐字比对通过；重复套用无改动。合并器另有 16 项保真与错误输入测试。',
         '- 9618_s25_12:7(b)(ii) 带 marks-unclear：题目明确是 XOR 求结果，保留 high/PF-12；未修改抽取字段或分值。', '',
         '## 盲标与 pilot', '',
-        '- 先完成全部 979 行并提交封存（原提交 `da13eb6`），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。',
+        f'- 先完成全部 979 行并提交封存（当前分支提交 `{freeze}`；rebase 前为 `da13eb6`），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。',
         f'- 盲标 SHA-256：`{manifest["blind_sha256"]}`。',
         f'- **主题型一致率：{matches}/{len(pilot)} = {matches/len(pilot):.2%}**。主题型加副题型集合完全一致：{full_matches}/{len(pilot)} = {full_matches/len(pilot):.2%}。',
         '- 此处是按已发布指南（含示例）盲标后与 pilot 的一致率，不能当作未见题目的独立准确率。没有为追求一致率改写封存标签。',
