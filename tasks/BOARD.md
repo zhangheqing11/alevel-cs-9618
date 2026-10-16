@@ -8,10 +8,11 @@
 | T01 | 资料导入（老师的官方导出）、清单、配对 | 总控 | T00 | ✅ | main |
 | T10 | Python 阶梯设计（批 1 ✅ #3 / 批 2 ✅ #4 / 批 3：L09–12 🔨） | cc-A | T00 | 🔨 | `task/T10-ladder-batch3` |
 | T11 | 教学 skill（已装到 ~/.claude/skills） | cc-B | T00 | ✅ | #2 |
-| T13 | 构建器（审查：5 处待改） | codex-2 | T00 | 👀 | #1 |
-| T12 | 抽文本、拆小问（P1 → P2 → P3 → P4） | codex-1 | T01 | 🔨 | `task/T12-extract-rows` |
-| T14 | 阶梯练习 + 伪代码审计（T13 之后；批 1、批 2 已可做） | codex-2 | T10 批 1–2 ✅ | ⏳ | `task/T14-ladder-exercises` |
-| T20/T22 | P1 题型体系 → 题型卡 + 概念表 | cc-A | T12 P1 | ⏳ | — |
+| T13 | 构建器 | codex-2 | T00 | ✅ | #1 |
+| T12 | 抽文本、拆小问（P1 ✅ #6 → P2 → P3 → P4） | codex-1 | T01 | 🔨 | `task/T12-extract-rows` |
+| T14 | 阶梯练习 + 伪代码审计（批 1 ✅ #5 / 批 2 待做） | codex-2 | T10 批 1–2 ✅ | 🔨 | `task/T14-ladder-exercises` |
+| T20 | P1 题型体系 + 打标签指南 + 试标 | cc（新会话） | T12 P1 ✅ | 🔨 | `task/T20-p1-taxonomy` |
+| T22 | P1 题型卡 + 核心概念表 | cc | T20, T24 | ⏳ | — |
 | T21/T23 | P2 题型体系 + 技能标签 → 题型卡 | cc-B | T12 P2 | ⏳ | — |
 | T24/T26 | P1/P2 打标签 → 审计卡片 | codex-1 | T20, T21 | ⏳ | — |
 | T25 | P2 练习文件夹 | codex-2 | T21, T24 | ⏳ | — |

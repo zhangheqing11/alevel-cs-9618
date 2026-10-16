@@ -1,11 +1,54 @@
 {
-  "T01": {"allow": ["pipeline/download/**", "corpus/inventory.csv", "corpus/README.md", "corpus/download_report.md"]},
-  "T10": {"allow": ["ladder/README.md", "ladder/design.md", "ladder/levels/*/card.md", "ladder/levels/*/exercises/*/spec.md"]},
-  "T11": {"allow": ["skill/**"]},
-  "T12": {"allow": ["pipeline/extract/**", "corpus/rows/**", "corpus/extract_report.md"]},
-  "T13": {"allow": ["build/**"]},
-  "T14": {"allow": ["ladder/levels/*/exercises/*/task.md", "ladder/levels/*/exercises/*/meta.json",
-                    "ladder/levels/*/exercises/*/starter.py", "ladder/levels/*/exercises/*/test_task.py",
-                    "ladder/levels/*/exercises/*/answer.pseudo", "ladder/levels/*/exercises/*/ref/**",
-                    "ladder/levels/*/exercises/*/files/**", "ladder/audit/**"]}
+  "T01": {
+    "allow": [
+      "pipeline/download/**",
+      "corpus/inventory.csv",
+      "corpus/README.md",
+      "corpus/download_report.md"
+    ]
+  },
+  "T10": {
+    "allow": [
+      "ladder/README.md",
+      "ladder/design.md",
+      "ladder/levels/*/card.md",
+      "ladder/levels/*/exercises/*/spec.md"
+    ]
+  },
+  "T11": {
+    "allow": [
+      "skill/**"
+    ]
+  },
+  "T12": {
+    "allow": [
+      "pipeline/extract/**",
+      "corpus/rows/**",
+      "corpus/extract_report.md"
+    ]
+  },
+  "T13": {
+    "allow": [
+      "build/**"
+    ]
+  },
+  "T14": {
+    "allow": [
+      "ladder/levels/*/exercises/*/task.md",
+      "ladder/levels/*/exercises/*/meta.json",
+      "ladder/levels/*/exercises/*/starter.py",
+      "ladder/levels/*/exercises/*/test_task.py",
+      "ladder/levels/*/exercises/*/answer.pseudo",
+      "ladder/levels/*/exercises/*/ref/**",
+      "ladder/levels/*/exercises/*/files/**",
+      "ladder/audit/**"
+    ]
+  },
+  "T20": {
+    "allow": [
+      "papers/p1/taxonomy.json",
+      "papers/p1/tagging-guide.md",
+      "papers/p1/pilot_tags.csv"
+    ]
+  }
 }
