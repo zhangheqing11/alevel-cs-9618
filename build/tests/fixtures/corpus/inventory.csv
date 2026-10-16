@@ -1,0 +1,4 @@
+paper,component,session,year,variant,corpus,qp,ms,in,sf,er,gt,total_marks,qp_sha256,ms_sha256,duplicate_of,status
+9618_s24_11,1,s,2024,1,verified,9618_s24_qp_11.pdf,9618_s24_ms_11.pdf,,,,,9,,, ,ok
+9618_w23_12,1,w,2023,2,verified,9618_w23_qp_12.pdf,9618_w23_ms_12.pdf,,,,,6,,, ,ok
+9618_s21_11,1,s,2021,1,extension,9618_s21_qp_11.pdf,9618_s21_ms_11.pdf,,,,,2,,, ,ok
