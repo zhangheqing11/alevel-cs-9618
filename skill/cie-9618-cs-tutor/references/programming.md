@@ -84,8 +84,8 @@
 
 1. **按 MS 得分点逐点判断**：看学生的写法是否满足该点描述的意思。MS 的代码是示例解，算法不同但满足得分点描述同样给分；MS 列出的替代答案都接受；「Max n」封顶。
 2. **书写细节不合指南、结构与关键字都对**（关键字小写、缩进不齐、少了 `DECLARE`——除非得分点要求声明、`NEXT` 后没重复循环变量等）：**不因此扣得分点**；在「规范提示」里列出，给出指南写法并注明节号。
-3. **混入编程语言语法**（`def`、`print` / `input`、`len()`、`range()`、切片 `s[1:3]`、`elif`、`==`、`+` 连接字符串、`FOR Line IN InputFile`、只靠缩进没有 `ENDIF` / `ENDWHILE`、默认 0 起下标）：题目要求的是伪代码，得分点按伪代码表达来认；关键步骤只用 Python 语法写出时，该点**不给**，记「伪代码规范」，并给出伪代码版本。拿不准时按不给处理并说明理由——考场上宁严勿宽。2024 年 6 月考官报告写明考 pseudocode 时 "variations with their studied programming language will be unacceptable"，并把 `FOR Line IN InputFile` 列为常见错误（引用它只为解释为什么严格，不是给分依据）。
-4. **指南里没有的关键字或结构**（如 `ELSIF`、`ENDFOR`、用 `=` 赋值、`FOR i = 1 TO 10`）：只有**该题 MS 原文**显示接受（MS 示例就这样写，或列为可接受写法）时才给分；否则按不给处理，记「伪代码规范」，并给指南写法。不要因为考官范答（ECR / Example Responses）或教材里出现过就当作可接受——例如 2024 年 P2 范答册里用了 `ELSIF`，那不能证明别的题的 MS 接受它。
+3. **混入编程语言语法或插页以外的语言函数**（`def`、`print` / `input`、`len()`、`range()`、切片 `s[1:3]`、`elif`、`==`、`+` 连接字符串、`FOR Line IN InputFile`、只靠缩进没有 `ENDIF` / `ENDWHILE`、默认 0 起下标）：题目要求的是伪代码，得分点按伪代码表达来认；关键步骤只用 Python 语法写出时，该点**不给**，记「伪代码规范」，并给出伪代码版本。拿不准时按不给处理并说明理由——考场上宁严勿宽。2024 年 6 月考官报告写明考 pseudocode 时 "variations with their studied programming language will be unacceptable"，并把 `FOR Line IN InputFile` 列为常见错误（引用它只为解释为什么严格，不是给分依据）。
+4. **指南里没有的关键字或结构**（如 `ELSIF`、`ENDFOR`、`INPUT a, b, c`、用 `=` 赋值、`FOR i = 1 TO 10`）：只有**该题 MS 原文**显示接受（MS 示例就这样写，或列为可接受写法）时才给分；否则按不给处理，记「伪代码规范」，并给指南写法。不要因为考官范答（ECR / Example Responses）或教材里出现过就当作可接受——例如 2024 年 P2 范答册里用了 `ELSIF`，那不能证明别的题的 MS 接受它。
 5. **语义错误照常不给**：变量未初始化、循环边界错、函数里用 `OUTPUT` 代替 `RETURN`、用 `CALL` 调函数、过程写了 `RETURNS`、文件没打开就读等。
 6. **顺序**：先给得分点表，再给「规范版完整答案」（指南写法 + 注释）。
 
