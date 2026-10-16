@@ -1,0 +1,4 @@
+FUNCTION Grade(Mark : INTEGER) RETURNS STRING
+   // use a CASE structure with ranges and an OTHERWISE clause
+
+ENDFUNCTION

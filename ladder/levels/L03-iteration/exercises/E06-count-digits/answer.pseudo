@@ -1,0 +1,12 @@
+FUNCTION CountDigits(Number : INTEGER) RETURNS INTEGER
+   // use a REPEAT ... UNTIL loop and DIV
+
+ENDFUNCTION
+
+FUNCTION DigitSum(Number : INTEGER) RETURNS INTEGER
+   // use a WHILE loop, DIV and MOD
+
+ENDFUNCTION
+
+// What would CountDigits(0) return with WHILE Number > 0, and why?
+//

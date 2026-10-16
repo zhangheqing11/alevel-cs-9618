@@ -1,0 +1,20 @@
+{
+  "id": "L03/E02",
+  "kind": "ladder",
+  "title": "Count, total and average until a rogue value",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "sentinel-loop",
+    "pre-condition-loop",
+    "accumulator",
+    "output-format",
+    "input-prompt"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "rogue_average",
+  "ms_verified": false,
+  "difficulty": 3
+}

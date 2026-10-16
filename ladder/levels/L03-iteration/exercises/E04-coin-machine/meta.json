@@ -1,0 +1,21 @@
+{
+  "id": "L03/E04",
+  "kind": "ladder",
+  "title": "Coin machine: accumulate coins until the price is paid",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "post-condition-loop",
+    "accumulator",
+    "declare-constant",
+    "logic-ops",
+    "boundary-values"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "coin_machine",
+  "ms_verified": false,
+  "difficulty": 3,
+  "adapted_from": "CS50P Problem Set 2 \"Coke Machine\" (https://cs50.harvard.edu/python/psets/2/coke/), CC BY-NC-SA 4.0; adapted: new price and coin set, rejected-coin message, pseudocode-first REPEAT loop, new output format"
+}

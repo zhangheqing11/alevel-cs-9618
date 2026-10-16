@@ -1,0 +1,7 @@
+PROCEDURE Calculator()
+   DECLARE Num1 : INTEGER
+   DECLARE Num2 : INTEGER
+   DECLARE Operator : CHAR
+   // prompt and input, then use a CASE structure on Operator
+
+ENDPROCEDURE

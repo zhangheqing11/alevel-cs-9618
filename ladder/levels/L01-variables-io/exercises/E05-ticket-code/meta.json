@@ -1,0 +1,19 @@
+{
+  "id": "L01/E05",
+  "kind": "ladder",
+  "title": "Build a ticket code from a name, row and seat",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "string-concat",
+    "type-conversion",
+    "output-format",
+    "input-prompt"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "ticket_code",
+  "ms_verified": false,
+  "difficulty": 2
+}

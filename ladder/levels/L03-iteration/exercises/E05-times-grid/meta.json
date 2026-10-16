@@ -1,0 +1,20 @@
+{
+  "id": "L03/E05",
+  "kind": "ladder",
+  "title": "Multiplication grid with nested FOR loops",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "nested-loops",
+    "count-loop",
+    "accumulator",
+    "string-concat",
+    "loop-bounds"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "times_grid",
+  "ms_verified": false,
+  "difficulty": 3
+}

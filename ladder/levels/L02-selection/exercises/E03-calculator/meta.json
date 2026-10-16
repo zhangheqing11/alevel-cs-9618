@@ -1,0 +1,21 @@
+{
+  "id": "L02/E03",
+  "kind": "ladder",
+  "title": "Five-operator calculator with a CASE structure",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "case-of",
+    "nested-if",
+    "div-mod",
+    "type-conversion",
+    "input-prompt"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "calculator",
+  "ms_verified": false,
+  "difficulty": 3,
+  "adapted_from": "CS50P Problem Set 1 \"Math Interpreter\" (https://cs50.harvard.edu/python/psets/1/interpreter/), CC BY-NC-SA 4.0; adapted: three separate inputs, MOD operator added, division-by-zero and unknown-operator messages, new output format"
+}

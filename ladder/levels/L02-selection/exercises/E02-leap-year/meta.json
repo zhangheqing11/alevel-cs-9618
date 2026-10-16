@@ -1,0 +1,20 @@
+{
+  "id": "L02/E02",
+  "kind": "ladder",
+  "title": "Leap year test with compound conditions",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "logic-ops",
+    "nested-if",
+    "div-mod",
+    "boolean-return",
+    "boundary-values"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "is_leap",
+  "ms_verified": false,
+  "difficulty": 2
+}

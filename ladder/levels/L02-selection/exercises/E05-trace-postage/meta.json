@@ -1,0 +1,20 @@
+{
+  "id": "L02/E05",
+  "kind": "ladder",
+  "title": "Dry run: a postage function with nested IF and DIV",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "nested-if",
+    "div-mod",
+    "operator-precedence"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "postage",
+  "ms_verified": false,
+  "difficulty": 2
+}
