@@ -10,7 +10,8 @@
 
 - `ladder/levels/*/exercises/*/spec.md`（**唯一需求来源**；不要改它）、`ladder/levels/*/card.md`、`ladder/design.md`。
 - `schemas/exercise-format.md`、`schemas/exercise.schema.json`、`schemas/examples/`（函数型与脚本型各一例，照着做）。
-- `conftest.py`（`sol`、`candidate_path`、`exercise_dir` fixture）与 `tools/testkit.py`（`run_script`、`feed_input`）。
+- `conftest.py`（`sol`、`candidate_path`、`exercise_dir` fixture）与 `tools/testkit.py`（`run_script`、`feed_input`、`output_lines`）。
+- `ladder/design.md` §7（**给 T14 的规格约定**：四种练习形态、输出比对规则、浮点、mutant、技能标签）与 `docs/DECISIONS.md`。
 - 伪代码指南：`$ALEVEL_CS_SOURCES/official/`（默认 `/Users/zhangheqing/Desktop/alevel cs/sources/official/`）。
 
 ## 每份规格要产出

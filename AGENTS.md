@@ -6,7 +6,7 @@
 
 ## 1. 开工前必读
 
-1. 本文件。
+1. 本文件，以及 `docs/DECISIONS.md`（已定决策，优先于任务卡）。
 2. 你的任务卡 `tasks/Txx-*.md`（目标、输入、产出、允许写的路径、完成标准）。
 3. 你的进度日志 `tasks/progress/Txx.md`（若存在：从上次停下的地方继续）。
 4. 任务卡点名的 schema（`schemas/`）与格式规范（`schemas/*.md`）。

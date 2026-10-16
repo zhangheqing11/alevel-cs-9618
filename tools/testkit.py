@@ -10,6 +10,15 @@ import sys
 import tempfile
 
 
+def output_lines(text: str) -> list[str]:
+    """Split captured stdout into comparable lines: strip trailing spaces, drop blank lines.
+
+    Same rule as ScriptResult.lines; use with capsys for io/trace-style tests:
+        sol.rogue_average(); assert output_lines(capsys.readouterr().out) == [...]
+    """
+    return [ln.rstrip() for ln in text.splitlines() if ln.strip()]
+
+
 @dataclasses.dataclass
 class ScriptResult:
     stdout: str
@@ -20,7 +29,7 @@ class ScriptResult:
     @property
     def lines(self) -> list[str]:
         """Non-empty stdout lines with trailing spaces stripped."""
-        return [ln.rstrip() for ln in self.stdout.splitlines() if ln.strip()]
+        return output_lines(self.stdout)
 
     def read(self, name: str) -> str:
         """Contents of a file the script wrote (or left) in its working directory."""

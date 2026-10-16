@@ -6,15 +6,15 @@
 |:--|:--|:--|:--|:--|:--|
 | T00 | 地基：规则、schema、校验器、任务卡 | 总控 | — | ✅ | main |
 | T01 | 资料导入（老师的官方导出）、清单、配对 | 总控 | T00 | ✅ | main |
-| T10 | Python 阶梯设计（批 1：L01–03 / 批 2：L04–08 / 批 3：L09–12） | cc-A | T00 | 🔨 | `task/T10-ladder-design` |
-| T11 | 教学 skill | cc-B | T00 | 🔨 | `task/T11-tutor-skill` |
+| T10 | Python 阶梯设计（批 1 ✅ #3 / 批 2：L04–08 🔨 / 批 3：L09–12） | cc-A | T00 | 🔨 | `task/T10-*` |
+| T11 | 教学 skill | cc-B | T00 | 👀 | #2 |
 | T13 | 构建器 | codex-2 | T00 | ⏳ | `task/T13-builder` |
 | T12 | 抽文本、拆小问（P1 → P2 → P3 → P4） | codex-1 | T01 | ⏳ | `task/T12-extract-rows` |
-| T14 | 阶梯练习 + 伪代码审计（T13 之后） | codex-2 | T10 批 1 | ⏳ | `task/T14-ladder-exercises` |
+| T14 | 阶梯练习 + 伪代码审计（T13 之后；批 1 已可做） | codex-2 | T10 批 1 ✅ | ⏳ | `task/T14-ladder-exercises` |
 | T20/T22 | P1 题型体系 → 题型卡 + 概念表 | cc-A | T12 P1 | ⏳ | — |
 | T21/T23 | P2 题型体系 + 技能标签 → 题型卡 | cc-B | T12 P2 | ⏳ | — |
 | T24/T26 | P1/P2 打标签 → 审计卡片 | codex-1 | T20, T21 | ⏳ | — |
 | T25 | P2 练习文件夹 | codex-2 | T21, T24 | ⏳ | — |
 | T27 | 考官报告摘录挂到行 | codex | T12 | ⏳ | — |
 
-第 2 阶段以后的任务卡在依赖完成时由总控写出。
+第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
