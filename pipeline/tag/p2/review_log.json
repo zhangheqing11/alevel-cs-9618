@@ -101,5 +101,67 @@
   "9618_s23_21": {
     "stage": "blind",
     "qp_contact_sheets_viewed": 3
+  },
+  "9618_s23_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s23_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s24_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      10
+    ]
+  },
+  "9618_s24_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      5
+    ]
+  },
+  "9618_s24_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      7
+    ],
+    "ms_pages_viewed": [
+      6
+    ]
+  },
+  "9618_s25_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      4
+    ]
+  },
+  "9618_s25_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s25_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4,
+    "ms_pages_viewed": [
+      11
+    ]
+  },
+  "9618_s26_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_s26_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s26_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
   }
 }
