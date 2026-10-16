@@ -1,4 +1,4 @@
-# T13 · 手册构建器 md → md/html/json（执行工位 codex-1）
+# T13 · 手册构建器 md → md/html/json（执行工位 codex-2）
 
 ## 目标
 
@@ -47,4 +47,4 @@ git worktree add ~/Desktop/alevel-cs-wt/T13 -b task/T13-builder origin/main
 cd ~/Desktop/alevel-cs-wt/T13 && codex
 ```
 
-进度写 `tasks/progress/T13.md`；交付：rebase → 检查 → `git push -u origin HEAD` → `gh pr create --base main`。不要合并。完成后回到 T12（若总控已通知语料就绪）。
+进度写 `tasks/progress/T13.md`；交付：rebase → 检查 → `git push -u origin HEAD` → `gh pr create --base main`。不要合并。完成后转 T14（若总控已通知 T10 批 1 合并）。
