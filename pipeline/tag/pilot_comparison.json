@@ -1,0 +1,42 @@
+{
+  "blind_sha256": "14e5797e6ab18a13609639639addf7064bd96e7a67553813a60d42f70113dbdd",
+  "pilot_rows": 88,
+  "primary_matches": 88,
+  "primary_agreement": 1.0,
+  "primary_cross_matches": 87,
+  "differences": [
+    {
+      "id": "9618_w24_11:4(b)(i)",
+      "blind": {
+        "id": "9618_w24_11:4(b)(i)",
+        "primary": "P1-IR-13",
+        "cross": [
+          "P1-CM-12"
+        ],
+        "confidence": "high",
+        "note": "按指南 §3：MS 有带宽占用及其他传输得分点，副 CM-12。"
+      },
+      "pilot": {
+        "id": "9618_w24_11:4(b)(i)",
+        "primary": "P1-IR-13",
+        "cross": "",
+        "confidence": "high",
+        "note": ""
+      },
+      "final": {
+        "id": "9618_w24_11:4(b)(i)",
+        "primary": "P1-IR-13",
+        "cross": [
+          "P1-CM-12"
+        ],
+        "confidence": "high",
+        "note": "按指南 §3：MS 有带宽占用及其他传输得分点，副 CM-12。"
+      },
+      "review": {
+        "id": "9618_w24_11:4(b)(i)",
+        "decision": "retain_blind",
+        "reason": "主题型同为 P1-IR-13。自己的 MS 第 7 页列出 Bandwidth usage is reduced 及其他传输不受影响的扩展点。指南 §3 明确 MS 有带宽类独立得分点时加 P1-CM-12，所以保留盲标副题型；pilot 的 cross 为空。需要设计工位裁决是否所有带宽理由均满足 §3，或仅实时流情境需要副题型。"
+      }
+    }
+  ]
+}
