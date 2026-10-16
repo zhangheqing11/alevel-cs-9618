@@ -10,7 +10,8 @@
 | `component` | 1–4 |
 | `session`, `year`, `variant` | `s`, 2024, 2 |
 | `corpus` | `verified`（2022–2026s）或 `extension`（2021） |
-| `qp`, `ms`, `in`, `sf` | 相对 `sources/pastpapers/` 的文件名；没有则空 |
+| `qp`, `ms`, `in` | 相对 `sources/pastpapers/` 的文件名；没有则空 |
+| `sf` | P4 源文件**目录名**（`9618_s24_sf_41`）；非 P4 为空 |
 | `er`, `gt` | 该考季考官报告、分数线文件名（同季各卷共用） |
 | `total_marks` | 整卷总分（QP 封面标注；9618 各卷为 75） |
 | `qp_sha256`, `ms_sha256` | 校验和，用于去重与变更检测 |

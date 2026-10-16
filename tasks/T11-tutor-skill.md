@@ -67,3 +67,11 @@
 - AS = P1 + P2；A Level = P1–P4；各卷 75 分。P1 1h30（1–8 节）、P2 2h（9–12 节，伪代码作答）、P3 1h30（13–20 节）、P4 2h30（19–20 节上机，Python 控制台模式，不考低级语言与声明式编程，提交完整代码与测试证据）。
 - 所有卷禁用计算器：涉及进制换算、浮点表示等计算的题，教学时练手算。
 - P4 官方源文件不含二进制文件。
+
+## 补充资料（老师提供，2026-10-16 加入；skill 里要写清每种资料的用法）
+
+- `sources/textbooks/Langfield_Duddell_Coursebook_2e_2019.pdf`：9618 教材，承担物理 skill 里 `a2physics.pdf` 的角色（概念讲解与直觉）。章节与考纲节号的对应写进 references。
+- `sources/official/support/` 的 Example Candidate Responses（P1–P4，2021/2024 版）与 Specimen Paper Answers（P1–P3）：真实答卷 + 考官点评。用于讲「怎样的答案拿满分 / 差在哪」，**不作给分依据**。
+- Learner Guide（学生自查清单）、Scheme of Work（官方教学顺序与常见误区）。
+- 2021 样卷 `sources/official/specimen/`：冲刺模式的整卷练习备选。
+- `sources/textbooks/ZNotes_AS_Theory_2026.pdf`：精简笔记，仅作核对。

@@ -39,13 +39,17 @@
 
 - **原始资料**在主 checkout 的 `sources/`（gitignore，不入库，只读）。worktree 里没有这个目录，一律用绝对路径或环境变量：
   - `ALEVEL_CS_SOURCES`，默认 `/Users/zhangheqing/Desktop/alevel cs/sources`
-  - `sources/pastpapers/`：真题与配套，命名 `9618_<季><yy>_<类>_<卷号>.<ext>`，类 = `qp` 题卷、`ms` 评分方案、`in` 插页、`sf` P4 源文件、`er` 考官报告、`gt` 分数线。
-  - `sources/official/`：考纲、伪代码指南（2027–2029 版）。
-  - `sources/textbooks/`：学生放入的教材。
+  - `sources/pastpapers/`：真题与配套（来自老师提供的 Teach Cambridge 官方导出，即原件），命名 `9618_<季><yy>_<类>_<卷号>.pdf`，类 = `qp` 题卷、`ms` 评分方案、`in` P2 插页（内置函数表）、`er` 考官报告（每季一份，无卷号）、`gt` 分数线（同）；P4 源文件是**目录** `9618_<季><yy>_sf_<卷号>/`（数据 `.txt` + 证据文档模板 `evidence.doc`）。
+  - `sources/official/`：2027–2029 考纲、考纲更新说明、伪代码指南（**唯一权威写法**）。
+  - `sources/official/support/`：Example Candidate Responses（P1–P4，2021 与 2024 版，真实考生答卷 + 考官点评）、Specimen Paper Answers（P1–P3）、Learner Guide、Scheme of Work、旧版伪代码指南（2023–25、2026）与 2026 考纲。
+  - `sources/official/specimen/`：2021 样卷 `9618_y21_sp_<qp|ms|in>_<n>.pdf`（不进 `corpus/rows`，可作冲刺整卷练习）。
+  - `sources/textbooks/`：`Langfield_Duddell_Coursebook_2e_2019.pdf`（对应 9618，概念讲解主参考）、`ZNotes_AS_Theory_2026.pdf`（精简笔记，仅作核对）。
+  - `sources/teach_cambridge_raw/`、`sources/teach_cambridge_sf/`：导出包原样解压，**不要直接引用**，用上面规范化后的路径。
 - 不得编辑、改名、移动、删除 `sources/` 下任何文件；不得把 PDF/ZIP 提交进 git。
 - **语料**：核验语料 = 2022–2026s 全部 variant，每份 QP 与其**同季同年同 variant** 的 MS 精确配对；2021 为扩展语料（也有 MS，但统计与优先级只用核验语料）。
 - 任何关于「某题得几分 / MS 接受什么写法」的陈述，必须来自该题自己的 MS 原文。不得用相似题、别的 variant、记忆或 OCR 摘要代替；需要看图、表、代码排版时回到 PDF 原页。
-- 考官报告（ER）只用于「易错与失分」，不能作为给分依据。
+- 考官报告（ER）、Example Candidate Responses、Specimen Paper Answers 只用于「易错与失分」、范答展示与教学示范，**不能作为给分依据**；给分只认该题自己的 MS。
+- 教材与 ZNotes 只用于概念讲解与直觉补充；与 MS 冲突时以 MS 为准，并记录差异。不整段复制教材或笔记原文。
 
 ## 6. 编号与数据约定
 

@@ -5,7 +5,7 @@
 | ID | 任务 | 工位 | 依赖 | 状态 | 分支 / PR |
 |:--|:--|:--|:--|:--|:--|
 | T00 | 地基：规则、schema、校验器、任务卡 | 总控 | — | ✅ | main |
-| T01 | 下载、清单、配对 | 总控 | T00 | 🔨 | main |
+| T01 | 资料导入（老师的官方导出）、清单、配对 | 总控 | T00 | ✅ | main |
 | T10 | Python 阶梯设计（批 1：L01–03 / 批 2：L04–08 / 批 3：L09–12） | cc-A | T00 | ⏳ | `task/T10-ladder-design` |
 | T11 | 教学 skill | cc-B | T00 | ⏳ | `task/T11-tutor-skill` |
 | T13 | 构建器 | codex-1 | T00 | ⏳ | `task/T13-builder` |

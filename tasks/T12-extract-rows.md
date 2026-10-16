@@ -1,6 +1,6 @@
 # T12 · 抽文本、拆最细小问（执行工位 codex-1）
 
-> **开工前提**：T01 已合并（`corpus/inventory.csv` 在 main 上，PDF 已下载到主 checkout 的 `sources/pastpapers/`）。总控会通知你。在此之前先做 T13。
+> **开工前提已满足**：`corpus/inventory.csv` 已在 main（130 份卷，全部配对）；PDF 在主 checkout 的 `sources/pastpapers/`，P4 源文件是同目录下的 `9618_<季><yy>_sf_<卷号>/` 目录。可在 T13 之后或与之交替进行。
 
 ## 目标
 

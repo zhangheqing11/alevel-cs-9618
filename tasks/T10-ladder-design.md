@@ -79,3 +79,10 @@ T14 每批 PR 合并前，总控会请你抽查 codex 写的测试：是否真�
 - 所有卷禁用计算器（考纲第 11 页）。
 - P4 只考 19–20 节，**不考低级语言与声明式编程**；考生须提交完整代码与测试证据；**官方源文件不再含二进制文件**——阶梯里的文件练习只需文本文件（L07、L09 不要设计二进制/随机存取文件练习，除非作为可选拓展并注明）。
 - 2021 年起认可的教材仍适用。
+
+## 补充资料（老师提供，2026-10-16 加入）
+
+- `sources/official/support/9618_Scheme_of_Work_for_examination_from_2021.pdf`（官方教学进度：编程相关单元的顺序、活动与常见误区——用来校准分级顺序与练习设计）。
+- `sources/official/support/9618_Learner_Guide_for_examination_from_2021.pdf`（官方学生指南：各节「你应该能够…」清单——用来核对每级目标覆盖考纲）。
+- `sources/textbooks/Langfield_Duddell_Coursebook_2e_2019.pdf`（9618 教材：编程章节可作对照卡的概念参考，注明章节页码；不整段复制）。
+- `sources/official/support/9618_Example_Candidate_Responses_Paper_2_*.pdf`、`…_Paper_4_*.pdf`：真实考生的伪代码与 Python 作答 + 考官点评——从中提炼「常见坑」与 mutant 建议。
