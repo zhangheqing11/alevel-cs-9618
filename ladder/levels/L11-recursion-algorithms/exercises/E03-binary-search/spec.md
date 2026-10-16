@@ -47,20 +47,22 @@ def RecursiveBinarySearch(SearchArray: list[int], SearchItem: int, Low: int, Hig
 `answer.pseudo` 模板：
 
 ```pseudocode
-FUNCTION BinarySearch(SearchArray : ARRAY OF INTEGER, NumberItems : INTEGER, SearchItem : INTEGER) RETURNS INTEGER
+// global: SearchArray : ARRAY[0:99] OF INTEGER (sorted)
+// global: NumberItems : INTEGER
+FUNCTION BinarySearch(SearchItem : INTEGER) RETURNS INTEGER
    DECLARE Low : INTEGER
    DECLARE High : INTEGER
    DECLARE Mid : INTEGER
 
 ENDFUNCTION
 
-FUNCTION RecursiveBinarySearch(SearchArray : ARRAY OF INTEGER, SearchItem : INTEGER, Low : INTEGER, High : INTEGER) RETURNS INTEGER
+FUNCTION RecursiveBinarySearch(SearchItem : INTEGER, Low : INTEGER, High : INTEGER) RETURNS INTEGER
    DECLARE Mid : INTEGER
 
 ENDFUNCTION
 ```
 
-（指南没有给出数组参数的写法；这里沿用 `schemas/examples` 的 `ARRAY OF INTEGER`，伪代码用 `NumberItems` 代替 Python 的 `len()`。）
+（伪代码里数组是带上下界的**全局**数组，不作为参数传入——真题的写法，指南也没有无界数组参数的写法（D24）；`NumberItems` 是已用元素个数，代替 Python 的 `len()`。Python 版为便于测试，仍把数组作为参数传入。）
 
 ## 必测行为
 
@@ -91,7 +93,7 @@ ENDFUNCTION
 ## 人工核对清单
 
 - [ ] 伪代码：`Mid ← (Low + High) DIV 2`；`WHILE Low <= High`；`Low ← Mid + 1` / `High ← Mid - 1`。
-- [ ] 伪代码：递归版的基本情况 `IF Low > High THEN RETURN -1`；一般情况 `RETURN RecursiveBinarySearch(SearchArray, SearchItem, Mid + 1, High)` 等，函数调用不写 `CALL`。
+- [ ] 伪代码：递归版的基本情况 `IF Low > High THEN RETURN -1`；一般情况 `RETURN RecursiveBinarySearch(SearchItem, Mid + 1, High)` 等，函数调用不写 `CALL`。
 - [ ] Python：没有用 `in`、`index()` 代劳（D10）——这两者不经过 `__getitem__`，B7 抓不到，靠这一条人工核对。
 - [ ] 能说出二分查找的前提（已排序），以及 1024 个元素最多比较多少次。
 

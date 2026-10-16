@@ -73,7 +73,7 @@ ENDFUNCTION
 
 ## 人工核对清单
 
-- [ ] 伪代码：去开头空格，例如 `WHILE Text <> "" AND LEFT(Text, 1) = ' '` / `Text ← RIGHT(Text, LENGTH(Text) - 1)`；去结尾空格用 `LEFT(Text, LENGTH(Text) - 1)`。
+- [ ] 伪代码：去开头空格用标志变量（如 `Trimming`）控制 `WHILE`：循环里先判断 `Text = ""`（置标志为 FALSE），否则在内层 `IF` 里判断 `LEFT(Text, 1) = ' '`（是则 `Text ← RIGHT(Text, LENGTH(Text) - 1)`，否则置标志为 FALSE）；去结尾空格同理，用 `RIGHT(Text, 1)` 和 `LEFT(Text, LENGTH(Text) - 1)`。**不要**写 `WHILE Text <> "" AND LEFT(Text, 1) = ' '`——指南没有保证 `AND` 短路，空串时 `LEFT(Text, 1)` 的调用格式不对（D25）。
 - [ ] 伪代码：判空写在取字符之前（卡片常见坑 12）；全是空格的串不会让 `LEFT`/`RIGHT` 收到负数长度。
 - [ ] 伪代码：每个 `LEFT`/`RIGHT` 的返回值都赋回了变量（ER s22 9618/22 Q7 p.19）；以 `RETURN Text` 结束，不是 `OUTPUT`。
 - [ ] 能用 `"  IF"` 代入自己写的长度表达式，验证不差一。

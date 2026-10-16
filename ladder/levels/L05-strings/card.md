@@ -121,7 +121,7 @@ for ch in text:                            # the usual Python way
 9. **`isdigit()` 当成 `IS_NUM`**：`"-5".isdigit()`、`"3.5".isdigit()` 都是 `False`。
 10. **`SETDATE` 的参数顺序**照搬到 `date(26, 10, 2003)`：Python 报 `ValueError`（26 年 10 月 2003 日不存在）。
 11. **`DAYINDEX` 直接用 `isoweekday()`**：星期二得 2 而不是 3。
-12. **逐字符扫描时条件顺序**：判空要写在取字符之前，如 ECR P2 2024 p.27 的写法 `WHILE Line <> "" AND LEFT(Line, 1) = Space`。Python 的 `and` 会短路（左边为假就不算右边），写反了会 `IndexError`；指南没有规定 `AND` 是否短路，所以伪代码里也按「先判空」的顺序写。
+12. **逐字符扫描时条件顺序**：判空要写在取字符之前。ECR P2 2024 p.27 的考官范答写了 `WHILE Line <> "" AND LEFT(Line, 1) = Space`，这依赖 `AND` 短路；Python 的 `and` 会短路（左边为假就不算右边），但**指南没有规定伪代码的 `AND` 是否短路**，所以本阶梯的伪代码不这样写：用标志变量控制 `WHILE`，循环里先 `IF Line = "" THEN` 置标志，`ELSE` 里再用 `LEFT`/`MID` 取字符（D25）。
 
 ## 延伸阅读
 

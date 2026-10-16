@@ -90,7 +90,7 @@ sol.FreePointer = 4
 
 ## 人工核对清单
 
-- [ ] 伪代码：`Previous ← -1`、`Current ← StartPointer`；`WHILE Current <> -1 AND ListData[Current] <> Item` 时向前走；走到 `-1` 就 `RETURN FALSE`。
+- [ ] 伪代码：`Previous ← -1`、`Current ← StartPointer`；用标志变量（如 `Found`）控制 `WHILE`：循环里先判断 `Current = -1`（没找到，`RETURN FALSE`），否则再比较 `ListData[Current] = Item`（相等则 `Found ← TRUE`，否则 `Previous ← Current`、`Current ← ListPointer[Current]`）。**不要**写 `WHILE Current <> -1 AND ListData[Current] <> Item`——指南没有保证 `AND` 短路（D25，与 L11 card §4 同一口径）。
 - [ ] 伪代码：`IF Previous = -1 THEN StartPointer ← ListPointer[Current] ELSE ListPointer[Previous] ← ListPointer[Current]`；然后 `ListPointer[Current] ← FreePointer`、`FreePointer ← Current`。
 - [ ] Python：`global StartPointer, FreePointer`；没有用 `remove`、`pop` 或重建 list 代替指针操作。
 - [ ] 能说出为什么删掉的结点不必清空 `ListData`。
