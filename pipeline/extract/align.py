@@ -16,7 +16,7 @@ COMMANDS = re.compile(
 )
 FIGURE_WORDS = re.compile(
     r"\b(table|diagram|circuit|graph|flowchart|map|array|register|truth table|syntax diagram|"
-    r"class diagram|following code|code listing|shown below|shown above)\b",
+    r"class diagram|following code|code listing|shown below|shown above|draw|tick|underline|INPUT|pseudocode|following section)\b",
     re.I,
 )
 
@@ -26,8 +26,11 @@ def _clean_layout_text(text: str) -> str:
 
 
 def _command_word(stem: str) -> str | None:
-    match = COMMANDS.match(stem.strip())
-    return match.group(1) if match else None
+    for line in stem.splitlines():
+        match = COMMANDS.match(line.strip())
+        if match:
+            return match.group(1)
+    return None
 
 
 def _figure(stem: str) -> bool:

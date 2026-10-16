@@ -49,8 +49,18 @@ def _word_pages(pdf: pathlib.Path) -> list[list[dict[str, Any]]]:
     pages: list[list[dict[str, Any]]] = []
     for page in doc:
         words = []
+        directions = {}
+        for block_index, block_data in enumerate(page.get_text("dict")["blocks"]):
+            for line_index, line_data in enumerate(block_data.get("lines", [])):
+                directions[(block_data.get("number", block_index), line_index)] = line_data.get("dir", (1, 0))
         for x0, y0, x1, y1, text, block, line, word in page.get_text("words", sort=True):
-            rect = pymupdf.Rect(x0, y0, x1, y1) * page.rotation_matrix
+            dx, dy = directions.get((block, line), (1, 0))
+            matrix = page.rotation_matrix
+            visible_dx = dx * matrix.a + dy * matrix.c
+            visible_dy = dx * matrix.b + dy * matrix.d
+            if visible_dx < 0.9 or abs(visible_dy) > 0.1:
+                continue
+            rect = pymupdf.Rect(x0, y0, x1, y1) * matrix
             x0, y0, x1, y1 = rect
             words.append(
                 {
@@ -74,8 +84,8 @@ def extract_pdf(pdf: pathlib.Path, cache_root: pathlib.Path = DEFAULT_CACHE_ROOT
     out = cache_path(pdf, cache_root)
     if out.exists() and out.stat().st_mtime >= pdf.stat().st_mtime:
         cached = json.loads(out.read_text(encoding="utf-8"))
-        if cached.get("version") == 2:
+        if cached.get("version") == 3:
             return cached
-    data = {"version": 2, "pdf": str(pdf), "layout": _layout_text(pdf), "word_pages": _word_pages(pdf)}
+    data = {"version": 3, "pdf": str(pdf), "layout": _layout_text(pdf), "word_pages": _word_pages(pdf)}
     out.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     return data

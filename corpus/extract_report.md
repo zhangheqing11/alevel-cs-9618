@@ -1,219 +1,234 @@
 # T12 抽取报告
 
-> 生成方式：`pipeline/extract/run_all.py`。题卷分值取 PyMuPDF 右侧分值栏；MS 文本取同卷同 variant 的 Mark Scheme。源 PDF 只读，缓存位于 `/tmp/alevel-cs-extract/`。
+生成命令：`python pipeline/extract/run_all.py --component 1`（后续批次改卷号，或 `--all`）。
+源 PDF：`$ALEVEL_CS_SOURCES/pastpapers/`，只读；缓存：`/tmp/alevel-cs-extract/`。
+
+## 方法与核验边界
+
+- QP 从 PDF 坐标识别实际最细题号和右侧 `[n]` 分值；不把数组下标当分值，不为凑总分拆题。
+- MS 按同季同年同 variant、同题号对齐，只抽 Answer 列；重复题号的语言示例与无表头续页连续保留。Marks 列单独比对，Guidance 列未混入 `ms_text`。
+- 表格、代码尽量以坐标重建列位。文字层无法表达连线、阴影、下划线、逻辑取反横线及部分图形箭头；相关行标 `figure`，图形的完整语义以 QP/MS 原页为准。
+- `stem_ctx` 保留可直接继承的父级情景；题目引用的其他小问仍按题号回看，未把相邻小问当成本题题干。
+- `equivalent_of` 采用保守的逐字比较：相同卷别、分值、题干、父级情景及 MS（只忽略空白），按年/季排序；图形行未仅凭相同文字判重。
+- 2021 标 `extension: true`；s26 全量入库。模考保留规则由下游执行。T12 不写 types/tag_confidence/markpoints/er。
 
 ## 卷级统计
 
-| 卷 | 小问行数 | 分值和 | ms-misaligned | split-uncertain | 其他 flags |
-|---|---:|---:|---:|---:|---:|
-| 9618_s21_11 | 30 | 75 | 0 | 0 | 5 |
-| 9618_s21_12 | 28 | 75 | 0 | 0 | 8 |
-| 9618_s21_13 | 30 | 75 | 0 | 0 | 5 |
-| 9618_s22_11 | 25 | 75 | 0 | 0 | 6 |
-| 9618_s22_12 | 29 | 75 | 0 | 0 | 11 |
-| 9618_s22_13 | 27 | 75 | 0 | 0 | 8 |
-| 9618_s23_11 | 29 | 75 | 0 | 0 | 10 |
-| 9618_s23_12 | 29 | 75 | 0 | 0 | 6 |
-| 9618_s23_13 | 26 | 75 | 0 | 0 | 5 |
-| 9618_s24_11 | 26 | 75 | 0 | 0 | 8 |
-| 9618_s24_12 | 26 | 75 | 0 | 0 | 7 |
-| 9618_s24_13 | 30 | 75 | 0 | 0 | 7 |
-| 9618_s25_11 | 28 | 75 | 0 | 0 | 13 |
-| 9618_s25_12 | 29 | 75 | 0 | 0 | 12 |
-| 9618_s25_13 | 27 | 75 | 0 | 0 | 13 |
-| 9618_s26_11 | 29 | 75 | 0 | 0 | 11 |
-| 9618_s26_12 | 28 | 75 | 0 | 0 | 10 |
-| 9618_s26_13 | 29 | 75 | 0 | 0 | 6 |
-| 9618_w21_11 | 29 | 75 | 0 | 0 | 7 |
-| 9618_w21_12 | 28 | 75 | 0 | 0 | 17 |
-| 9618_w21_13 | 29 | 75 | 0 | 0 | 7 |
-| 9618_w22_11 | 36 | 75 | 0 | 0 | 14 |
-| 9618_w22_12 | 36 | 75 | 0 | 0 | 11 |
-| 9618_w22_13 | 35 | 75 | 0 | 0 | 12 |
-| 9618_w23_11 | 33 | 75 | 0 | 0 | 11 |
-| 9618_w23_12 | 32 | 75 | 0 | 0 | 7 |
-| 9618_w23_13 | 29 | 75 | 0 | 0 | 6 |
-| 9618_w24_11 | 32 | 75 | 0 | 0 | 6 |
-| 9618_w24_12 | 26 | 75 | 0 | 0 | 9 |
-| 9618_w24_13 | 30 | 75 | 0 | 0 | 10 |
-| 9618_w25_11 | 36 | 75 | 0 | 0 | 11 |
-| 9618_w25_12 | 35 | 75 | 0 | 0 | 10 |
-| 9618_w25_13 | 28 | 75 | 0 | 0 | 9 |
+| 卷 | 行数 | 分值和 | split-uncertain | ms-misaligned | marks-unclear | figure | ocr-garbled | needs-review |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 9618_s21_11 | 30 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_s21_12 | 28 | 75 | 0 | 0 | 0 | 11 | 0 | 0 |
+| 9618_s21_13 | 30 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_s22_11 | 25 | 75 | 0 | 0 | 0 | 7 | 0 | 0 |
+| 9618_s22_12 | 29 | 75 | 0 | 0 | 0 | 15 | 0 | 0 |
+| 9618_s22_13 | 27 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_s23_11 | 29 | 75 | 0 | 0 | 0 | 11 | 0 | 0 |
+| 9618_s23_12 | 29 | 75 | 0 | 0 | 0 | 6 | 0 | 0 |
+| 9618_s23_13 | 26 | 75 | 0 | 0 | 0 | 7 | 0 | 0 |
+| 9618_s24_11 | 26 | 75 | 0 | 0 | 0 | 9 | 0 | 0 |
+| 9618_s24_12 | 26 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_s24_13 | 30 | 75 | 0 | 0 | 0 | 7 | 0 | 0 |
+| 9618_s25_11 | 28 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_s25_12 | 29 | 75 | 0 | 0 | 1 | 14 | 0 | 0 |
+| 9618_s25_13 | 27 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_s26_11 | 29 | 75 | 0 | 0 | 0 | 12 | 0 | 0 |
+| 9618_s26_12 | 28 | 75 | 0 | 0 | 0 | 12 | 0 | 0 |
+| 9618_s26_13 | 29 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_w21_11 | 29 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_w21_12 | 28 | 75 | 0 | 0 | 0 | 20 | 0 | 0 |
+| 9618_w21_13 | 29 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_w22_11 | 36 | 75 | 0 | 0 | 0 | 15 | 0 | 0 |
+| 9618_w22_12 | 36 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_w22_13 | 35 | 75 | 0 | 0 | 0 | 14 | 0 | 0 |
+| 9618_w23_11 | 33 | 75 | 0 | 0 | 0 | 12 | 0 | 0 |
+| 9618_w23_12 | 32 | 75 | 0 | 0 | 0 | 8 | 0 | 0 |
+| 9618_w23_13 | 29 | 75 | 0 | 0 | 0 | 7 | 0 | 0 |
+| 9618_w24_11 | 32 | 75 | 0 | 0 | 0 | 6 | 0 | 0 |
+| 9618_w24_12 | 26 | 75 | 0 | 0 | 0 | 9 | 0 | 0 |
+| 9618_w24_13 | 30 | 75 | 0 | 0 | 0 | 11 | 0 | 0 |
+| 9618_w25_11 | 36 | 75 | 0 | 0 | 0 | 11 | 0 | 0 |
+| 9618_w25_12 | 35 | 75 | 0 | 0 | 0 | 13 | 0 | 0 |
+| 9618_w25_13 | 28 | 75 | 0 | 0 | 0 | 11 | 0 | 0 |
 
-总计：33 卷，979 行，分值和 2475；未解决拆分/MS flags 0 行（0.00%）。
+总计 33 卷、979 行、2475 分；extension 174 行；保守重复链接 38 行。
+`ms-misaligned` / `split-uncertain` 涉及 0 行（0.00%）；split-uncertain=0、ms-misaligned=0、marks-unclear=1、figure=353、ocr-garbled=0、needs-review=0。
 
-## 未解决问题
+## 未解决问题与源文件差异
 
-- 无。
+- `9618_s25_12:7(b)(ii)`：marks-unclear：QP p.16 印 [1]；MS p.12 的 Answer 为 1 mark for: / 0000 0011，但右侧 Marks 单元格为空（已查看渲染原页）。保留 QP 的 marks=1，标 marks-unclear，不补造 MS Marks 列。
+- MS 文本层题号缺括号：s22_13 的 `5(b(iii)`、w23_42 的 `3(b(iii)`，通用规则只修正题号括号；Answer 内容照原文保留。
+- 图形行的 figure 标记不是解析成功的替代证明；使用连线、阴影、箭头、上划线或下划线给分时必须回原页。
 
-## 每卷随机 5 行核验记录
+## 每卷随机 5 行人工抽查
 
-记录以来源 PDF 页码、缓存布局文本和分值栏坐标作自动对照；含 `figure` 的行仍应在 PDF 原页做视觉复核。
+固定随机种子为卷号（Random(paper).sample(..., 5)）。记录中的所见来自源 PDF 文字层与相应原页渲染。
+核验范围：题号、题干起句/关键数据、分值框、QP/MS 起始页与同题 MS 起句；图表/代码布局另看原页。不是对全部语料逐字人工校勘。
+人工记录存于 `pipeline/extract/audit_p*.json`，附行内容 SHA-256；行内容变化后记录自动作废，须复核。未核验不能写一致。
 
-| 卷 | 题号 | QP 页 | MS 页 | 分值 | 自动对照结果 |
-|---|---|---:|---:|---:|---|
-| 9618_s21_11 | `5(a)` | 13 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_s21_11 | `1(c)(iii)` | 3 | 3 | 3 | 文本非空且页码已对齐 |
-| 9618_s21_11 | `1(d)` | 4 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_s21_11 | `3(b)` | 7 | 5 | 6 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s21_11 | `3(a)` | 6 | 5 | 5 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s21_12 | `7(b)(i)` | 13 | 9 | 4 | 文本非空且页码已对齐 |
-| 9618_s21_12 | `7(a)` | 13 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_s21_12 | `5(c)(ii)` | 10 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_s21_12 | `8(b)` | 14 | 9 | 1 | 文本非空且页码已对齐 |
-| 9618_s21_12 | `5(a)` | 9 | 7 | 5 | 文本非空且页码已对齐 |
-| 9618_s21_13 | `7(a)` | 15 | 9 | 3 | 文本非空且页码已对齐 |
-| 9618_s21_13 | `4(b)` | 11 | 6 | 4 | 文本非空且页码已对齐 |
-| 9618_s21_13 | `8` | 16 | 10 | 3 | 文本非空且页码已对齐 |
-| 9618_s21_13 | `6(b)` | 14 | 8 | 1 | 文本非空且页码已对齐 |
-| 9618_s21_13 | `7(b)(ii)` | 15 | 9 | 1 | 文本非空且页码已对齐 |
-| 9618_s22_11 | `6(c)(i)` | 14 | 8 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_11 | `5(a)` | 10 | 7 | 4 | 文本非空且页码已对齐 |
-| 9618_s22_11 | `4(d)` | 9 | 6 | 4 | 文本非空且页码已对齐 |
-| 9618_s22_11 | `1(d)` | 2 | 3 | 1 | 文本非空且页码已对齐 |
-| 9618_s22_11 | `2(a)(ii)` | 3 | 3 | 3 | 文本非空且页码已对齐 |
-| 9618_s22_12 | `5(a)` | 8 | 6 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_12 | `3(c)` | 6 | 4 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_12 | `3(e)` | 6 | 5 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_12 | `2(c)` | 4 | 4 | 1 | 文本非空且页码已对齐 |
-| 9618_s22_12 | `1(b)(i)` | 2 | 3 | 1 | 文本非空且页码已对齐 |
-| 9618_s22_13 | `7(b)` | 14 | 9 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_13 | `8(b)` | 15 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_s22_13 | `2(b)` | 4 | 4 | 5 | 文本非空且页码已对齐 |
-| 9618_s22_13 | `2(a)` | 4 | 4 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s22_13 | `5(b)(iii)` | 11 | 7 | 2 | 文本非空且页码已对齐 |
-| 9618_s23_11 | `3(c)` | 8 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_s23_11 | `3(d)(iv)` | 9 | 6 | 2 | 文本非空且页码已对齐 |
-| 9618_s23_11 | `4(b)` | 10 | 7 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_11 | `6` | 13 | 9 | 5 | 文本非空且页码已对齐 |
-| 9618_s23_11 | `1(a)` | 2 | 3 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_12 | `2(a)` | 5 | 4 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_12 | `5(c)(i)` | 11 | 7 | 1 | 文本非空且页码已对齐 |
-| 9618_s23_12 | `6(a)` | 12 | 8 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_12 | `6(b)` | 12 | 8 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_12 | `5(d)(ii)` | 11 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_s23_13 | `3(c)(i)` | 5 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_s23_13 | `7(b)` | 12 | 10 | 4 | 文本非空且页码已对齐 |
-| 9618_s23_13 | `1(b)` | 2 | 3 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s23_13 | `5(a)(ii)` | 10 | 7 | 3 | 文本非空且页码已对齐 |
-| 9618_s23_13 | `3(a)` | 5 | 5 | 5 | 文本非空且页码已对齐 |
-| 9618_s24_11 | `2(c)(iii)` | 4 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_s24_11 | `2(a)` | 3 | 3 | 2 | 文本非空且页码已对齐 |
-| 9618_s24_11 | `1(a)` | 2 | 3 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s24_11 | `6(b)` | 13 | 7 | 4 | 文本非空且页码已对齐 |
-| 9618_s24_11 | `5(c)(i)` | 12 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_s24_12 | `7(c)` | 14 | 10 | 2 | 文本非空且页码已对齐 |
-| 9618_s24_12 | `5(a)` | 11 | 8 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s24_12 | `6` | 13 | 9 | 4 | 文本非空且页码已对齐 |
-| 9618_s24_12 | `4(b)` | 7 | 7 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s24_12 | `4(a)` | 7 | 7 | 1 | 文本非空且页码已对齐 |
-| 9618_s24_13 | `4(c)` | 9 | 5 | 4 | 文本非空且页码已对齐 |
-| 9618_s24_13 | `2(b)(ii)` | 3 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_s24_13 | `1(b)` | 2 | 3 | 1 | 文本非空且页码已对齐 |
-| 9618_s24_13 | `5(a)(ii)` | 10 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_s24_13 | `7(f)(ii)` | 16 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_s25_11 | `2(b)(ii)` | 5 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_s25_11 | `7(c)` | 13 | 11 | 3 | 文本非空且页码已对齐 |
-| 9618_s25_11 | `6(b)` | 11 | 10 | 5 | 文本非空且页码已对齐 |
-| 9618_s25_11 | `4(b)` | 7 | 7 | 2 | 文本非空且页码已对齐 |
-| 9618_s25_11 | `6(a)(i)` | 10 | 10 | 4 | 文本非空且页码已对齐 |
-| 9618_s25_12 | `5(d)(i)` | 10 | 9 | 3 | 文本非空且页码已对齐 |
-| 9618_s25_12 | `2(c)` | 4 | 5 | 2 | 文本非空且页码已对齐 |
-| 9618_s25_12 | `6(d)` | 12 | 11 | 4 | 文本非空且页码已对齐 |
-| 9618_s25_12 | `5(b)` | 8 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_s25_12 | `7(b)(ii)` | 16 | 12 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s25_13 | `1(a)(i)` | 2 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_s25_13 | `7(b)` | 17 | 12 | 1 | 文本非空且页码已对齐 |
-| 9618_s25_13 | `2(a)(ii)` | 4 | 5 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s25_13 | `6(c)` | 15 | 11 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s25_13 | `1(c)(i)` | 3 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_s26_11 | `2(c)` | 4 | 7 | 1 | 文本非空且页码已对齐 |
-| 9618_s26_11 | `4(c)(i)` | 11 | 12 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_11 | `5(c)` | 12 | 14 | 3 | 文本非空且页码已对齐 |
-| 9618_s26_11 | `4(a)` | 10 | 11 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_11 | `2(d)` | 5 | 8 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_12 | `5(b)` | 10 | 13 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_12 | `3(c)` | 8 | 11 | 5 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_12 | `6(d)` | 12 | 14 | 4 | 文本非空且页码已对齐 |
-| 9618_s26_12 | `6(c)` | 11 | 14 | 2 | 文本非空且页码已对齐 |
-| 9618_s26_12 | `1(c)` | 2 | 5 | 1 | 文本非空且页码已对齐 |
-| 9618_s26_13 | `8(b)` | 14 | 16 | 3 | 文本非空且页码已对齐 |
-| 9618_s26_13 | `2(a)` | 3 | 6 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_s26_13 | `6(a)` | 11 | 13 | 4 | 文本非空且页码已对齐 |
-| 9618_s26_13 | `6(c)` | 12 | 14 | 1 | 文本非空且页码已对齐 |
-| 9618_s26_13 | `4(b)` | 6 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_11 | `4(d)` | 7 | 7 | 4 | 文本非空且页码已对齐 |
-| 9618_w21_11 | `1(b)(i)` | 2 | 3 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_11 | `6(b)` | 12 | 8 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w21_11 | `2(b)(i)` | 3 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_11 | `2(c)` | 3 | 4 | 3 | 文本非空且页码已对齐 |
-| 9618_w21_12 | `6(a)(i)` | 10 | 6 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w21_12 | `8(b)(iii)` | 16 | 10 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w21_12 | `6(a)(ii)` | 10 | 7 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w21_12 | `5(a)` | 8 | 5 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w21_12 | `7(c)` | 12 | 8 | 4 | 文本非空且页码已对齐 |
-| 9618_w21_13 | `8(b)` | 15 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_13 | `4(a)` | 6 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_w21_13 | `1(b)(i)` | 2 | 3 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_13 | `2(a)` | 3 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_w21_13 | `7(a)(i)` | 14 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_w22_11 | `9(a)` | 19 | 10 | 2 | 文本非空且页码已对齐 |
-| 9618_w22_11 | `9(b)` | 19 | 11 | 2 | 文本非空且页码已对齐 |
-| 9618_w22_11 | `1(d)(ii)` | 3 | 3 | 2 | 文本非空且页码已对齐 |
-| 9618_w22_11 | `4(b)` | 7 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_w22_11 | `1(b)` | 2 | 3 | 2 | 文本非空且页码已对齐 |
-| 9618_w22_12 | `5(b)` | 7 | 6 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w22_12 | `5(a)` | 7 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_w22_12 | `10(b)(ii)` | 17 | 10 | 3 | 文本非空且页码已对齐 |
-| 9618_w22_12 | `10(a)` | 17 | 10 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w22_12 | `1(a)` | 2 | 3 | 5 | 文本非空且页码已对齐 |
-| 9618_w22_13 | `3` | 6 | 5 | 4 | 文本非空且页码已对齐 |
-| 9618_w22_13 | `6(a)(ii)` | 12 | 7 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w22_13 | `6(c)` | 13 | 8 | 1 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w22_13 | `4(a)(i)` | 7 | 5 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w22_13 | `2(e)` | 5 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_11 | `2(c)` | 5 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_11 | `5(b)` | 9 | 7 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_11 | `2(d)` | 5 | 5 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_11 | `8(a)` | 13 | 10 | 1 | 文本非空且页码已对齐 |
-| 9618_w23_11 | `6(b)` | 11 | 8 | 1 | 文本非空且页码已对齐 |
-| 9618_w23_12 | `7(b)(i)` | 10 | 7 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w23_12 | `7(b)(ii)` | 10 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_12 | `7(b)(iii)` | 11 | 8 | 4 | 文本非空且页码已对齐 |
-| 9618_w23_12 | `6(b)` | 9 | 7 | 3 | 文本非空且页码已对齐 |
-| 9618_w23_12 | `6(a)` | 9 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_w23_13 | `7(b)` | 10 | 7 | 2 | 文本非空且页码已对齐 |
-| 9618_w23_13 | `7(d)` | 11 | 8 | 3 | 文本非空且页码已对齐 |
-| 9618_w23_13 | `9(a)(i)` | 13 | 9 | 3 | 文本非空且页码已对齐 |
-| 9618_w23_13 | `1(a)` | 2 | 3 | 1 | 文本非空且页码已对齐 |
-| 9618_w23_13 | `8(c)` | 12 | 9 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_11 | `4(b)(ii)` | 9 | 7 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_11 | `4(b)(i)` | 9 | 7 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_11 | `7(a)` | 13 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_w24_11 | `3(b)(i)` | 7 | 5 | 2 | 文本非空且页码已对齐 |
-| 9618_w24_11 | `3(d)(ii)` | 8 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_12 | `4(b)` | 6 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_12 | `7(a)(i)` | 10 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_w24_12 | `3(c)` | 5 | 5 | 4 | 文本非空且页码已对齐 |
-| 9618_w24_12 | `7(a)(iii)` | 10 | 8 | 1 | 文本非空且页码已对齐 |
-| 9618_w24_12 | `2(b)` | 3 | 4 | 1 | 文本非空且页码已对齐 |
-| 9618_w24_13 | `4(e)` | 8 | 5 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_13 | `1(c)` | 2 | 3 | 2 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w24_13 | `5(b)` | 9 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_w24_13 | `7(b)` | 14 | 7 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w24_13 | `5(a)` | 9 | 5 | 3 | 文本非空且页码已对齐；需视觉复核图表/代码 |
-| 9618_w25_11 | `5(a)(ii)` | 10 | 8 | 2 | 文本非空且页码已对齐 |
-| 9618_w25_11 | `1(b)(i)` | 3 | 4 | 1 | 文本非空且页码已对齐 |
-| 9618_w25_11 | `9` | 15 | 14 | 3 | 文本非空且页码已对齐 |
-| 9618_w25_11 | `6(c)` | 11 | 10 | 3 | 文本非空且页码已对齐 |
-| 9618_w25_11 | `2(d)` | 6 | 6 | 3 | 文本非空且页码已对齐 |
-| 9618_w25_12 | `10(c)` | 15 | 11 | 1 | 文本非空且页码已对齐 |
-| 9618_w25_12 | `6(a)` | 10 | 8 | 1 | 文本非空且页码已对齐 |
-| 9618_w25_12 | `6(d)` | 11 | 9 | 2 | 文本非空且页码已对齐 |
-| 9618_w25_12 | `1` | 2 | 4 | 2 | 文本非空且页码已对齐 |
-| 9618_w25_12 | `5(c)` | 8 | 7 | 3 | 文本非空且页码已对齐 |
-| 9618_w25_13 | `8(a)` | 15 | 12 | 2 | 文本非空且页码已对齐 |
-| 9618_w25_13 | `7(d)` | 13 | 12 | 4 | 文本非空且页码已对齐 |
-| 9618_w25_13 | `2(b)` | 3 | 5 | 1 | 文本非空且页码已对齐 |
-| 9618_w25_13 | `5(c)` | 7 | 9 | 5 | 文本非空且页码已对齐 |
-| 9618_w25_13 | `6(b)` | 11 | 10 | 4 | 文本非空且页码已对齐；需视觉复核图表/代码 |
+| 卷/小问 | QP / MS 页 | 分值 | 所见 | 核验结果 |
+|---|---|---:|---|---|
+| `9618_s21_11:5(a)` | 13 / 8 | 2 | QP: She has an embedded system in her washing machine. Describe what is meant by an embedded system, using the washing machine as an example. / MS: 1 mark per bullet point to max 2 • Definition: Microprocessor/microcontroller within a larger system // microprocessor/microcontroller that performs one specifi | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_11:1(c)(iii)` | 3 / 3 | 3 | QP: Hexadecimal 23 in two’s complement representation is 00100011. The denary number 10 needs to be subtracted from this value. Subtract the denary number 10 from the two’s complement representation 00100011. Give  / MS: 1 mark per bullet point • Converting −10 to two's complement binary 1111 0110 • Adding values • Final answer 0001 1001 10 = 0000 1010 –10 = 1111 0110 0010 0011  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_11:1(d)` | 4 / 4 | 2 | QP: Anya made sure that the image was not subject to any copyright before scanning it. Describe what is meant by copyright. / MS: 1 mark per bullet point to max 2 • The formal and legal rights to ownership // intellectual property rights • Protects against unauthorised reproduction of work | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_11:3(b)` | 7 / 5 | 6 | QP: The following table shows part of the instruction set for a processor. The processor has one general purpose register, the Accumulator (ACC), and an Index Register (IX). Instruction Explanation Opcode     Opera / MS: 1 mark for each shaded set of values Memory address Instruction ACC IX Output address 365 366 367 368 1 3 65 66 0 200 1 201 202 203 2 204 2 205 2 206 65 207 A 2 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s21_11:3(a)` | 6 / 5 | 5 | QP: Complete the following description of the role of the registers in the fetch-execute cycle by writing the missing registers. The ........................................................................ holds th / MS: 1 mark for each completed statement The Program Counter holds the address of the next instruction to be loaded. This address is sent to the Memory Address Regis | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s21_12:7(b)(i)` | 13 / 9 | 4 | QP: The IDE allows Jennifer to use both an interpreter and a compiler while creating her computer program. Describe the ways in which Jennifer can use both a compiler and an interpreter while developing the program / MS: 1 mark per bullet point to max 4; max 3 from each section Interpreter: • Use an interpreter while writing the program • … to test/debug the partially completed  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_12:7(a)` | 13 / 9 | 2 | QP: Jennifer uses a program library to help her write her computer program. Describe how a program library can be used while writing a computer program. / MS: 1 mark per bullet point to max 2 • Program libraries store pre-written functions and routines • The program library can be referenced/imported • the functions/r | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_12:5(c)(ii)` | 10 / 8 | 2 | QP: Give two drawbacks of Seth using cloud computing. 1 ........................................................................................................................................ 2 ................... / MS: 1 mark per bullet point to max 2: • Can only access (the cloud) with internet access • Security may not be strong // no control over security • There may not be | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_12:8(b)` | 14 / 9 | 1 | QP: Each employee has a username and password to allow them to log onto a computer. An employee’s access rights to the data on the computers is set to either read-only, or read and write. Identify one other softwar / MS: 1 mark for a correct answer • Two factor authentication • Biometric passwords • Key Card Access • Firewall | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_12:5(a)` | 9 / 7 | 5 | QP: Complete the following descriptions of internal components of a computer by writing the missing terms. The ............................................................ transmits the signals to coordinate events / MS: 1 mark for each term correctly inserted The control unit/bus transmits the signals to coordinate events based on the pulses of the (system) clock. The data bus  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_13:7(a)` | 15 / 9 | 3 | QP: Bobby tells Kim that a file-based approach is usually better than a relational database. Explain why Bobby is incorrect. / MS: 1 mark per bullet point to max 3 • Flat-file has more data redundancy • … because the same data is stored many times // data is stored in different tables which | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_13:4(b)` | 11 / 6 | 4 | QP: Describe two drawbacks to Melinda and her friends of using a peer-to-peer network. 1 ............................................................................................................................. / MS: 1 mark per bullet point to max 2 per drawback • Reduced security // no central management of security • … only as secure as the weakest computer on the network  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s21_13:8` | 16 / 10 | 3 | QP: Tick (3) one box in each row to identify the logic gate that each statement describes. Statement                     AND    NAND   NOR    XOR     OR The output is 1 only when both inputs are 1 The output is 1 o / MS: 1 mark per correct row Statement AND NAND NOR XOR OR The output is 1 only when  both inputs are 1 The output is 1 only when  both inputs are different The out | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s21_13:6(b)` | 14 / 8 | 1 | QP: INPUT x IF x = "" THEN OUTPUT "Invalid" ENDIF / MS: Presence (check) | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s21_13:7(b)(ii)` | 15 / 9 | 1 | QP: Tick (3) one box to identify the relationship that cannot be directly implemented in a normalised relational database. Relationship   Tick (3) one-to-one one-to-many many-to-many / MS: 1 mark Relationship Tick () one-to-one one-to-many many-to-many  | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_11:6(c)(i)` | 14 / 8 | 1 | QP: Complete the register to show the result after the instruction AND #2 is executed. Register before:     0    1    1    0    1    1    0    1 Register after: / MS: 0000 0000 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_11:5(a)` | 10 / 7 | 4 | QP: Draw one line from each IDE feature to its correct description. IDE feature                                      Description Executes one line of the program and Context-sensitive prompt then stops Underlines o / MS: 1 mark for 1 correct line, 2 marks for 2 correct lines, 3 marks for 3 or 4 correct lines, 4 marks for all 5 correct lines IDE feature Description Context-sensit | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_11:4(d)` | 9 / 6 | 4 | QP: The mark a student is awarded in a test will be entered into the database. This mark needs to be a whole number between 0 and the maximum number of marks for that test (inclusive). Explain how data validation a / MS: 1 mark per bullet point to max 3 for validation e.g.  range check to make sure it is between 0 and max marks  presence check to make sure a mark is entered   | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s22_11:1(d)` | 2 / 3 | 1 | QP: Add the following unsigned binary integers. 0 1 0 1 0 0 0 0 + 0 0 1 1 1 1 1 0 / MS: 1000 1110 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s22_11:2(a)(ii)` | 3 / 3 | 3 | QP: Explain the difference between Programmable ROM (PROM), Erasable Programmable ROM (EPROM) and Electrically Erasable Programmable ROM (EEPROM). / MS: 1 mark per bullet point to max 3  PROM can be set once, EPROM and EEPROM can be overwritten multiple times.  EPROM needs to be removed from device EEPROM can  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s22_12:5(a)` | 8 / 6 | 2 | QP: Complete the entity-relationship (E-R) diagram. ACTOR                                        FILM_FACT FILM_ACTOR / MS: 1 mark for each correct relationship ACTOR FILM_FACT FILM_ACTOR | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_12:3(c)` | 6 / 4 | 1 | QP: Convert the following positive binary integer into hexadecimal. 0 1 1 1 1 1 1 0 / MS: 7E | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_12:3(e)` | 6 / 5 | 3 | QP: Convert the denary numbers 127 and 12 to 8-bit binary and then perform the subtraction 12 − 127 in binary. Show your working. 127 in binary ...................................................................... / MS: 1 mark per point  Correct conversion to binary 01111111 (127) and 00001100 (12)  Working e.g. turning 01111111 into two's complement 10000001  Answer: 1000 1 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_12:2(c)` | 4 / 4 | 1 | QP: The car has a resistive touchscreen for the user to select options. Tick (3) one box in each row to show whether each statement about a resistive touchscreen is true or false. Statement                    True  / MS: 1 mark for all correct ticks Statement True False The screen always has five different layers  A processor determines the horizontal and  vertical coordinates | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_12:1(b)(i)` | 2 / 3 | 1 | QP: Identify the smallest number of bits that can be used to represent each colour in the complete bitmap image. / MS: 8 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_13:7(b)` | 14 / 9 | 2 | QP: Complete the truth table for the following logic expression: X = (A NAND B) OR (A AND NOT C) Working space A         B         C                                              X 0         0         0 0         0  / MS: 1 mark for first 4 rows, 1 mark for second 4 rows (shaded) A B C Working space X 0 0 0 1 0 0 1 1 0 1 0 1 0 1 1 1 1 0 0 1 1 0 1 1 1 1 0 1 1 1 1 0 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_13:8(b)` | 15 / 9 | 2 | QP: State what is meant by a public cloud and a private cloud. Public cloud .............................................................................................................................. Private clo / MS: 1 mark each from: Public e.g.  Computing services offered by 3rd party provider over the public Internet  Public is open/available to anyone with the appropri | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s22_13:2(b)` | 4 / 4 | 5 | QP: Explain how interrupts are handled during the F-E cycle. / MS: 1 mark per point to max 5  Check for interrupt at start/end of an F-E cycle  Priority is checked  If lower priority than current process continue with F-E cy | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s22_13:2(a)` | 4 / 4 | 3 | QP: The Fetch-Execute (F-E) cycle is represented in register transfer notation. Describe each of the given steps. Step                                 Description PC     [PC] + 1 MDR     [[MAR]] MAR     [PC] / MS: 1 mark for each correct description Step Description PC  [PC] + 1 Address in PC is incremented MDR  [[MAR]] The data in the address held in the MAR is copied  | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s22_13:5(b)(iii)` | 11 / 7 | 2 | QP: Explain why the data in the system may not be correct even after validating and verifying the data. / MS: 1 mark per bullet point to max 2  Validation checks data is reasonable/within bounds it does not check that accurate data has been entered  Verification check | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_11:3(c)` | 8 / 6 | 3 | QP: The Operating System has utility software including defragmentation software. Explain how defragmentation can improve the performance of the computer. / MS: 1 mark each to max 3  Rearranges blocks of individual files (on the HDD) so they are contiguous // moves the free space together  Accessing each file is faste | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_11:3(d)(iv)` | 9 / 6 | 2 | QP: Give the smallest and largest two’s complement binary number that can be represented using 8 bits. Smallest ...................................................................................................... / MS: Smallest: 10000000 Largest: 01111111 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_11:4(b)` | 10 / 7 | 4 | QP: The central computer stores the video files on secondary storage. Describe two reasons why magnetic storage is more appropriate than solid state storage for this computer. 1 .................................... / MS: 1 mark for reason, 1mark for application/justification  The computer will have a large number of read/write operations because it is working all the time  ..  | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_11:6` | 13 / 9 | 5 | QP: An interrupt is generated when a key is pressed on a computer keyboard. Explain how the computer handles this interrupt. / MS: 1 mark each to max 5  An interrupt flag is raised in the (interrupt) register  At the end of the current FE cycle // at the start of the next FE cycle  The s | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_11:1(a)` | 2 / 3 | 3 | QP: Complete the table by defining the image terms. Term                                  Definition Drawing list    ................................................................................................. / MS: 1 mark for each correct definition Term Definition Drawing list All the drawing objects in an image // a list that stores the commands required to draw each obj | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_12:2(a)` | 5 / 4 | 4 | QP: The table contains names and descriptions of DBMS features and tools. Complete the table by writing down the missing names and descriptions. Name                                 Description Data dictionary Quer / MS: 1 mark for each correct feature or description Feature Description Data dictionary Data about the data in the database // data about the structure of the databa | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_12:5(c)(i)` | 11 / 7 | 1 | QP: A printer is connected to a Universal Serial Bus (USB) port. Describe how data is transmitted through a USB port. / MS: 1 mark for a correct answer  1 bit is transferred at a time  Can be synchronous or asynchronous  USB-3 is full duplex and earlier versions are half-duplex | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_12:6(a)` | 12 / 8 | 2 | QP: Draw the logic circuit for this logic expression: Z = (R XOR S) AND (NOT T NOR P) R S Z T P / MS: 1 mark for correct XOR and AND gates, with correct inputs 1 mark for correct NOT and NOR gates with correct inputs | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_12:6(b)` | 12 / 8 | 2 | QP: Complete the truth table for this logic expression: Z = (NOT P OR Q) XOR (R NOR Q) Working space P    Q    R                                                               Z 0    0    0 0    0    1 0    1    0 0 / MS: 1 mark for first 4 rows 1 mark for last 4 rows P Q R Working space Z 0 0 0 0 0 0 1 1 0 1 0 1 0 1 1 1 1 0 0 1 1 0 1 0 1 1 0 1 1 1 1 1 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_12:5(d)(ii)` | 11 / 8 | 2 | QP: Describe the purpose of utility software in a computer. / MS: 1 mark each to max 2  To help users to set-up / configure / analyse / optimise / maintain the computer ...  ... by for example, making memory allocation more  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_13:3(c)(i)` | 5 / 5 | 3 | QP: Describe how sound is represented in a computer. / MS: 1 mark each  The amplitude is recorded a set number of times a second  Each (instance of an) amplitude is given a corresponding binary number  The binary  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_13:7(b)` | 12 / 10 | 4 | QP: The computer has a Control Unit (CU), system clock and control bus. Explain how the CU, system clock and control bus operate to transfer data between the components of the computer system. / MS: 1 mark each to max 4  The system clock gives out timing signals  … which are sent on the control bus  …to synchronise the other system components  The C | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_13:1(b)` | 2 / 3 | 2 | QP: Complete the truth table for this logic circuit: A B                                                                            X C Working space A         B         C                                            / MS: 1 mark for first 4 rows correct; 1 mark for second 4 rows correct A B C X 0 0 0 1 0 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 1 1 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s23_13:5(a)(ii)` | 10 / 7 | 3 | QP: Explain the reasons why the programmer uses a compiler when the program has been written. / MS: 1 mark each to max 3  The compiler produces an executable file  ... so the user cannot access / edit / sell the code  ... and users do not need the transl | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s23_13:3(a)` | 5 / 5 | 5 | QP: The mobile telephone has a touchscreen. There are different types of touchscreen. Complete the description of the principal operation of touchscreens. A ......................................................... / MS: 1 mark for each term  Resistive  Circuit  Capacitive  Change  Coordinates A resistive touchscreen has two layers. When the user touches the screen, th | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_11:2(c)(iii)` | 4 / 4 | 2 | QP: The video doorbell uses a buffer. Describe how the video doorbell will use the buffer. / MS: 1 mark each to max 2: • Captured video is transmitted to buffer • … video is transmitted from buffer to smartphone • Store recent data in a buffer for the user  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_11:2(a)` | 3 / 3 | 2 | QP: The video doorbell can be considered an example of an embedded system. Identify two characteristics of the doorbell that suggest it is an embedded system. 1 ..................................................... / MS: 1 mark each to max 2: • The doorbell only performs the specific tasks of motion detection/video recording/doorbell ringing • The motion sensor and digital camer | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_11:1(a)` | 2 / 3 | 1 | QP: Tick (✓) one box to identify the correct logic statement for this truth table. A       B       C       X 0       0       0       1 0       0       1       0 0       1       0       0 0       1       1       0 1 / MS: 1 mark for: (A XOR B) NOR C | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s24_11:6(b)` | 13 / 7 | 4 | QP: The company is using a Database Management System (DBMS) to set up the database. Describe what is meant by the following DBMS features: Data dictionary .......................................................... / MS: 1 mark each to max 2 for data dictionary and max 2 for logical schema: Data dictionary: • Data about the data in the database // metadata • Identifies the chara | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_11:5(c)(i)` | 12 / 6 | 3 | QP: The bank’s network has a firewall. Explain how a firewall can help protect the customers’ data. / MS: 1 mark each to max 3: • Compares all incoming and outgoing transmissions • ... against set criteria/whitelist/blacklist • Blocks all transmissions that do not m | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_12:7(c)` | 14 / 10 | 2 | QP: Convert the hexadecimal number C0F into denary. Show your working. Working ..................................................................................................................................... A / MS: 1 mark for working: 1100 0000 1111 // 2048 + 1024 + 8 + 4 + 2 + 1 // (12 * 162) + 15 // (12 * 16 * 16) + 15 // 3072 + 15 1 mark for correct answer: 3087 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_12:5(a)` | 11 / 8 | 4 | QP: The current contents of memory are shown: Address   Data 10  1 11  3 12  5 13  11 14  10 15  16 16  12 The current contents of the ACC and IX are shown: ACC  10 IX  0 Complete the table by writing the content o / MS: 1 mark for each correct answer: Program Code ACC Content Number 1 LDI 15 11 SUB #1 2 LDD 14 13 ADD 11 3 LDM #11 2 ADD #3 SUB 16 4 LDR #2 14 LDX 14 ADD #2 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s24_12:6` | 13 / 9 | 4 | QP: A computer has an Operating System (OS). Memory management and process management are two OS tasks. Explain how memory management and process management support multi-tasking. / MS: 1 mark each to max 4 Max 3 marks for each management task: Memory management: Max 3 marks  Stores data from all currently running programs concurrently in RAM  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_12:4(b)` | 7 / 7 | 3 | QP: Sample data for the table EXAM is shown: ExamID           Subject            Level        TotalMarks 00956124       Computer Science  2                75 00956125       Computer Science  3                120 00 / MS: 1 mark each:  Creating table EXAM with opening and closing brackets  All fields with appropriate data types and commas at end of lines  ExamID as primary key | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s24_12:4(a)` | 7 / 7 | 1 | QP: Identify the relationship between EXAM and EXAM_QUESTION. / MS: 1 mark for: 1-to-many | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_13:4(c)` | 9 / 5 | 4 | QP: Write an SQL script to return the number of times each show is scheduled. For example, in the sample data in part (b), the show MK12 is scheduled three times. The result needs to include the show name and a sui / MS: 1 mark each for:  Selecting COUNT of an attribute in PERFORMANCE table with suitable name  FROM clause  Joining tables  Grouping by the title and selecting  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_13:2(b)(ii)` | 3 / 4 | 2 | QP: Explain how run-length encoding (RLE) will compress the photograph. / MS: 1 mark each:  Identifies consecutive repeating pixels of the same colour  Stores the colour /pattern and the number of times it repeats | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_13:1(b)` | 2 / 3 | 1 | QP: Convert the denary number 241 to hexadecimal. / MS: 1 mark for correct answer: F1 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_13:5(a)(ii)` | 10 / 6 | 3 | QP: Describe the benefits to the company of using private cloud storage instead of public cloud storage. / MS: 1 mark each to max 3: e.g.  Not reliant on a third party  … gives greater control over security/privacy  … gives greater control over backup  Storage can be | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s24_13:7(f)(ii)` | 16 / 9 | 2 | QP: Explain how encryption can protect the security of data during transmission. / MS: 1 mark each to max 2:  Encodes/scrambles data  ... so if it is intercepted it cannot be understood  Algorithm/key is required to decode the data | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_11:2(b)(ii)` | 5 / 5 | 3 | QP: Identify whether the lossy or lossless compression method is more appropriate for real‑time bit streaming. Justify your answer. Compression method ............................................................... / MS: No mark for choice but lossy is most appropriate 1 mark each to max 3 e.g. • Reduces file size more than lossless • so significantly less bandwidth / data is ne | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_11:7(c)` | 13 / 11 | 3 | QP: The data that is transferred can also be verified using a checksum. Explain how data can be verified using a checksum. / MS: 1 mark each to max 3 • The data is put through an algorithm to create a checksum value • The data and checksum are sent to the receiver • The receiver performs  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_11:6(b)` | 11 / 10 | 5 | QP: Both computers have an Operating System (OS). Describe the purpose of an OS in a computer. / MS: 1 mark each to max 5 e.g. • To provide a user interface • so that the user is able to communicate with the hardware • To manage memory • so that data can be sto | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_11:4(b)` | 7 / 7 | 2 | QP: The new system uses sensors to identify the items taken from a shelf. Identify one type of sensor that can be used in this new system. State how the sensor can be used to identify the items taken from a shelf.  / MS: 1 mark for sensor, 1 mark for corresponding use e.g. Sensor Use Pressure Detects when the pressure of an item is removed from a shelf / put back on a shelf Infr | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_11:6(a)(i)` | 10 / 10 | 4 | QP: Computer 1 has a magnetic hard disk. Complete the description of the principal operation of a magnetic hard disk by writing the missing words. The magnetic hard disk has one or more ............................ / MS: 1 mark for each correctly completed space • platters • spindle • read/write head • magnetic field The magnetic hard disk has one or more platters that can be ma | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_12:5(d)(i)` | 10 / 9 | 3 | QP: Write a Structured Query Language (SQL) script to count the number of items purchased by the user with the username "KAT123". / MS: 1 mark for each point • Select COUNT • FROM (using correct tables) and joining • WHERE (or AND) condition for correct username Example 1: SELECT COUNT(ItemName) | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_12:2(c)` | 4 / 5 | 2 | QP: Give one application where Binary Coded Decimal (BCD) is used and justify its use. Application ................................................................................................................... / MS: 1 mark for application and 1 mark for corresponding justification e.g. • an application that performs financial / banking calculations • because financial trans | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_12:6(d)` | 12 / 11 | 4 | QP: The main office for the company has four wired computers, one server, two printers, one central switch and a device providing a single point of access for the internet. The network is set up as a star topology. / MS: 1 mark each • Server directly connected to the switch • Four labelled computers all connected directly to the switch • Two printers each directly connected to t | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s25_12:5(b)` | 8 / 8 | 2 | QP: Underline the attribute, or attributes, that form the primary key in each of the tables. USER(Username, Password, DateOfBirth) CHARACTER(CharacterName, CharacterID, Username, Level, Money) ITEM(ItemName, Minimu / MS: 1 mark for the three single Primary Keys 1 mark for the composite key USER(Username, Password, DateOfBirth) CHARACTER(CharacterName, CharacterID, Username, Leve | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s25_12:7(b)(ii)` | 16 / 12 | 1 | QP: The ACC currently contains the following binary value. 0     0     0     1     1     1     0     1 Write the result after the instruction XOR #30 is run. / MS: 1 mark for: 0000 0011 | 题号/答案一致；原 MS Marks 栏留空，已标 marks-unclear |
+| `9618_s25_13:1(a)(i)` | 2 / 4 | 2 | QP: Calculate the file size of the image created by the digital camera in megabytes (MB). Show your working. Working space ........................................................................................... / MS: 1 mark for correct working: e.g. 2000000 * 16 / (8 * 1000 * 1000) 1 mark for answer: 4MB | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_13:7(b)` | 17 / 12 | 1 | QP: Complete the following binary addition. Show your working. Include any overflow bit(s). 1   1   1   1   0   1   0   1 +   1   0   1   1   0   0   0   1 / MS: 1 mark for 1 1 1 1 0 1 0 1 +1 11 01 11 1 0 0 01 1 (1) 1 0 1 0 0 1 1 0 Answer: (1) 1010 0110 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s25_13:2(a)(ii)` | 4 / 5 | 4 | QP: The processor runs the Fetch-Execute (F-E) cycle. Write the stages of the F-E cycle using register transfer notation. / MS: 1 mark each • MAR  [PC] and PC  [PC] + 1 • MDR  [[MAR]] • CIR  [MDR] • Correct order • For example: • MAR  [PC] • PC  [PC] + 1 • MDR  [[MAR]] • CIR  [MD | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s25_13:6(c)` | 15 / 11 | 4 | QP: The attribute Collected in the table ORDER stores the Boolean value TRUE if the order has been collected and FALSE if the order has not been collected. Write an SQL script to return the customer name for each c / MS: 1 mark each • Selection of customer name and counting any field from ORDER as an appropriate identifier • Joining tables ORDER and CUSTOMER • AND (or WHERE) cla | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s25_13:1(c)(i)` | 3 / 4 | 2 | QP: The computer uses the Unicode character set. Give two characteristics of the Unicode character set. 1 ............................................................................................................ / MS: 1 mark each to max 2 • 8 / 16 / 32 / bits per character • Represents 28 / 216 / etc. characters • Represents every language and other characters such as emojis | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_11:2(c)` | 4 / 7 | 1 | QP: Identify one other type of translator. / MS: 1 mark for a correct answer Assembler | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_11:4(c)(i)` | 11 / 12 | 2 | QP: The field will store whether the toy has been returned and will store either Yes or No. Write an SQL script to include the additional field in the table BORROW. / MS: 1 mark for each correct statement • Altering the correct table • Adding an appropriately named field with an appropriate data type ALTER TABLE BORROW ADD Return | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_11:5(c)` | 12 / 14 | 3 | QP: Tick (3) one box to identify whether a bitmap image or a vector graphic will be most appropriate for the school logo. Justify your choice. tick (3) bitmap image vector graphic justification .................... / MS: No mark for the choice. 1 mark for each point for a matching justification to max 3 Bitmap image: • The logo might include something like a photograph • Bitmaps | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_11:4(a)` | 10 / 11 | 4 | QP: Complete the table by describing the relationship between each pair of tables. Include the primary key(s) and foreign key(s) and how these create each relationship. pair of tables                      descripti / MS: 1 mark for each correct point • CUSTOMER BORROW is a one-to-many relationship // 1:M • TOY_INSTANCE to TOY is a many-to-one relationship // M:1 • Identifying th | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_11:2(d)` | 5 / 8 | 3 | QP: The completed computer program is distributed under a licence. Complete the table by writing the name of each software licence that is described. software licence                            description The soft / MS: 1 mark for each correct licence Software licence Description Shareware The software is released on a trial period. After the trial period ends, a fee may be req | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_12:5(b)` | 10 / 13 | 3 | QP: Complete the table by writing the answer to each statement. statement                                 answer The smallest 12-bit two’s complement binary number The denary value represented by the 8-bit unsigned / MS: 1 mark for each correct answer statement answer The smallest 12-bit two's complement binary 1000 0000 0000 number The denary value represented by the 8-bit 24 u | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_12:3(c)` | 8 / 11 | 5 | QP: Complete the description of database key terms by writing the missing words. The ....................................................... stores data about the data in the database. The table names, field names  / MS: 1 mark for two data dictionary examples For example: • data types of individual fields/attributes • type of validation • primary key • foreign key 1 mark for ea | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_12:6(d)` | 12 / 14 | 4 | QP: The data from the health monitor is transmitted to the smartphone and stored in the cloud. Discuss the benefits and drawbacks of storing the data from the health monitor in the cloud. / MS: 1 mark for each correct point to max 4, max 3 if only either benefits or drawbacks discussed, not both For example: • The data can be accessed anywhere with int | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_12:6(c)` | 11 / 14 | 2 | QP: The health monitor contains Random Access Memory (RAM) and Read Only Memory (ROM). Describe two differences between RAM and ROM. 1 ............................................................................... / MS: 1 mark for each correct point to max 2 • RAM can be changed; ROM cannot be changed // RAM can be read from and written to, ROM can only be read • RAM is volatil | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_12:1(c)` | 2 / 5 | 1 | QP: Two items in a bitmap image file header are the resolution and colour depth. Identify one other item included in the file header of a bitmap image. / MS: 1 mark for a correct answer For example: • File size • File type • Dimensions of the image // image size • Compression type • Data offset – bytes from the begin | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_13:8(b)` | 14 / 16 | 3 | QP: The sound is recorded using a microphone. Describe the principal operation of a microphone. / MS: 1 mark each. • The microphone has a diaphragm / ribbon • The incoming sound waves cause vibrations of the diaphragm • … causing a coil to move past a magnet //  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_13:2(a)` | 3 / 6 | 2 | QP: Complete the truth table for the given logic circuit. X A Y B Z working space X   Y   Z                                                          A       B 0   0   0 0   0   1 0   1   0 0   1   1 1   0   0 1   0 / MS: 1 mark for each correct column X Y Z Working space A B 0 0 0 1 1 0 0 1 0 0 0 1 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 0 1 0 1 1 1 1 1 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_13:6(a)` | 11 / 13 | 4 | QP: Draw one or more lines to match each denary number with its equivalent unsigned binary, hexadecimal or Binary Coded Decimal (BCD) value(s). Denary number                                 Equivalent unsigned valu / MS: 1 mark for each set of lines from each denary number Denary number Equivalent unsigned value Hexadecimal: 121 BCD: 3120 00010101100001010001 Binary: 289 1100001 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_s26_13:6(c)` | 12 / 14 | 1 | QP: Convert the two’s complement integer 011010110001 into denary. / MS: 1 mark for correct answer 1713 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_s26_13:4(b)` | 6 / 8 | 2 | QP: Explain the reasons why the library database should enforce referential integrity. / MS: 1 mark each to max 2 • Ensure consistency of data // up-to-date // not redundant data • Ensure relationships between data remain valid and prevent orphaned reco | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_11:4(d)` | 7 / 7 | 4 | QP: Francis’s team use language translators. Complete the descriptions of language translators by writing the missing words. ............................................... are usually used when a high‑level langua / MS: 1 mark for each correctly completed term Compilers are usually used when a high-level language program is complete. They translate all the code at the same time | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_11:1(b)(i)` | 2 / 3 | 2 | QP: Perform the following binary addition. Show your working. 10101010 + 00110111 / MS: 1 mark for answer 1 mark for working e.g. 1010 1010 0011 0111 1110 0001 1 1 1 1 1 1 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_11:6(b)` | 12 / 8 | 4 | QP: The following table shows part of the instruction set for a processor. The processor has one general purpose register, the Accumulator (ACC), and an Index Register (IX). Instruction Explanation Opcode     Opera / MS: 1 mark for each correct row Current contents of the ACC Instruction New contents of the ACC 11111111 OR 101 11111111 00000000 XOR #15 00001111 10101010 LSR #2 0 | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w21_11:2(b)(i)` | 3 / 4 | 2 | QP: Describe how data validation helps to protect the integrity of the data. Give an example in your answer. Description ............................................................................................. / MS: 1 mark per bullet point • validation checks that data is reasonable / sensible • example e.g. checking data is the right number / type of characters | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_11:2(c)` | 3 / 4 | 3 | QP: Two malware threats are spyware and viruses. Give two similarities and one difference between spyware and a virus. Similarity 1 .................................................................................. / MS: 1 mark per similarity to max 2 • Both are pieces of malicious software • Both are downloaded / installed/run without the user's knowledge • Both can pretend to  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_12:6(a)(i)` | 10 / 6 | 2 | QP: The table lists the following three stages of normalisation: •   The first stage is from a database that is not normalised (0NF) to First Normal Form (1NF). •   The second stage is from 1NF to Second Normal For / MS: 1 mark for 1 tick in the correct place 2 marks for all 3 ticks correct Normalisation stage Task 0NF to 1NF to 2NF to 1NF 2NF 3NF Remove any partial key dependen | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w21_12:8(b)(iii)` | 16 / 10 | 2 | QP: The opcode LDM uses immediate addressing. The opcode LDD uses direct addressing. Identify and describe one additional mode of addressing. Mode of addressing ..................................................... / MS: 1 mark for name, 1 mark for description • Indirect addressing • the address to be used is at the given address • Relative addressing • the address to be used is | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w21_12:6(a)(ii)` | 10 / 7 | 3 | QP: Draw an entity-relationship (E-R) diagram for the database PLANTSALES. PLANT                                             CUSTOMER PURCHASE_ITEM                                        PURCHASE / MS: 1 mark for each correct relationship PLANT CUSTOMER PURCHASE_ITEM PURCHASE | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w21_12:5(a)` | 8 / 5 | 4 | QP: Complete the table by writing a description of each vector graphic term and give an example for this logo. Term                         Description                        Example from logo Property Drawing list / MS: 1 mark for each description,1 mark for each valid example Term Description Example from logo data about the shapes e.g. // defines one aspect of the black line  | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w21_12:7(c)` | 12 / 8 | 4 | QP: Identify two utility programs that can be used to improve the performance of a computer and state how they improve the performance. 1 ............................................................................ / MS: 1 mark for identifying program 1 mark for description, max 2 per program e.g. • Defragmentation • Less time is taken to access files because each one is contigu | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_13:8(b)` | 15 / 9 | 2 | QP: One classroom in the building has 30 computers. The computers need to be connected to the network. Each computer has a network interface card (NIC). Identify two possible devices that can be used to physically  / MS: 1 mark per item • router • switch • hub | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_13:4(a)` | 6 / 6 | 3 | QP: Francis has been advised to join a professional ethical body. Describe the benefits to Francis of joining a professional ethical body. / MS: 1 mark per bullet point to max 3 e.g. • He has ethical guidelines to follow • … so clients/other staff know the standards being applied • … so he does not have  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_13:1(b)(i)` | 2 / 3 | 2 | QP: Perform the following binary addition. Show your working. 10101010 + 00110111 / MS: 1 mark for answer 1 mark for working e.g. 1010 1010 0011 0111 1110 0001 1 1 1 1 1 1 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_13:2(a)` | 3 / 4 | 2 | QP: Explain the difference between data security and data integrity. / MS: 1 mark per bullet point • security is protecting data from loss / corruption • integrity is ensuring the consistency / accuracy of the data | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w21_13:7(a)(i)` | 14 / 8 | 2 | QP: Describe the reasons why the sound is closer to the original when a higher sample rate is used. / MS: 1 mark per bullet point • Smaller time gaps between the samples • Makes the digital sound wave more accurate • Smaller quantisation errors | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_11:9(a)` | 19 / 10 | 2 | QP: Explain why these televisions are embedded systems. / MS: 1 mark for each bullet point (max 2): • the embedded system is built into / integrated into the TV • combination of hardware and software designed for a specifi | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_11:9(b)` | 19 / 11 | 2 | QP: Embedded systems use Electrically Erasable Programmable ROM (EEPROM). Describe one benefit of using EEPROMs in an embedded system. / MS: 1 mark for each benefit and 1 mark for corresponding expansion (max 2). For example: • no additional equipment is needed to change • ... enables firmware update | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_11:1(d)(ii)` | 3 / 3 | 2 | QP: Explain the effect of increasing the sampling resolution on the sound file. / MS: 1 mark for each bullet point (max 2): • increases the number of bits per sample // larger range of values • which means that the file size increases • makes the | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_11:4(b)` | 7 / 5 | 3 | QP: The database is normalised and is in Third Normal Form (3NF). Describe the characteristics of a database that is in Third Normal Form (3NF). / MS: 1 mark for each bullet point (max 3): • no repeating groups of attributes // data is atomic • no partial key dependencies • no non-key dependencies // no transi | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_11:1(b)` | 2 / 3 | 2 | QP: Perform the following binary subtraction. Show your working. 1   0   1   1   0   0   1   1 _ 0   1   1   1   0   1   0   1 / MS: 1 mark for working, 1 mark for answer (0011 1110) Working using borrowing: 1 10 10 1 0 10 0 0 10 10 1 0 1 1 0 0 1 1 0 1 1 1 0 1 0 1 - 0 0 1 1 1 1 1 0 Working us | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_12:5(b)` | 7 / 6 | 3 | QP: Write the Structured Query Language (SQL) script to add a new record in the table TREE to store the following data: Attribute                   Value TreeID                 LOW_1276 ScientificName           Sal / MS: 1 mark for each bullet point: • INSERT INTO TREE • VALUES ( ) and correct values • Values in correct order Option 1: INSERT INTO TREE(TreeID, ScientificName, Ma | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_12:5(a)` | 7 / 5 | 3 | QP: The database is not in Third Normal Form (3NF). Explain how the database can be normalised to 3NF. / MS: 1 mark for each bullet point (max 3): Solution 1: • removing the many-to-many relationship between Owner and Tree • ... by removing TreeID and TreePosition from | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_12:10(b)(ii)` | 17 / 10 | 3 | QP: Describe the role and function of the router in the network. / MS: 1 mark for each bullet point (max 3): • receive packets from devices / internet • find destination of packets using the IP address • forward packets to the dest | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w22_12:10(a)` | 17 / 10 | 1 | QP: Complete the following diagram to show how the hardware is connected. Switch Computer   Computer                  Server      Computer      Computer / MS: all four computers directly connected to the switch and no other connections. | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_12:1(a)` | 2 / 3 | 5 | QP: Draw one line from each utility software to its most appropriate purpose. Utility software                                                Purpose to reorganise files so they are contiguous virus checker to scan / MS: 1 mark for each correct line. Utility software Purpose to reorganise files so virus checker they are contiguous to scan for malicious program code disk formatte | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_13:3` | 6 / 5 | 4 | QP: Draw one line from each Operating System (OS) management task to its most appropriate description. OS Management task                                    Description dynamically allocates memory to processes har / MS: 1 mark for each correct line: OS Management task Description dynamically allocates memory to processes hardware management marks unallocated file storage for av | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_13:6(a)(ii)` | 12 / 7 | 2 | QP: Explain the purpose of relative addressing in an assembly language program. / MS: 1 mark for each bullet point: • To allow for re-locatable code • ... because all (target) addresses can be specified by the base address + offset | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_13:6(c)` | 13 / 8 | 1 | QP: One instruction group is data movement. Give the name of one other instruction group. / MS: 1 mark for a correct name: • input and output of data • arithmetic operations • unconditional and conditional instructions • compare instructions | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_13:4(a)(i)` | 7 / 5 | 2 | QP: State the roles of the following registers. Memory Address Register (MAR) ..................................................................................... Memory Data Register (MDR) ....................... / MS: 1 mark for each register: MAR: • holds address in memory from which data will be read / to which data will be written MDR: • holds the data/instructions which h | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w22_13:2(e)` | 5 / 4 | 2 | QP: The photographs are stored as bitmap images. Complete the statements about bitmap images by writing the missing words. The ................................................................................. of a  / MS: 1 mark for each correctly completed term; The bit depth of a bitmap image is the number of bits that are used to store each pixel. Metadata about the image is s | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_11:2(c)` | 5 / 4 | 2 | QP: The students can save their school files on a public cloud. Identify two drawbacks of the students storing their files on the public cloud. 1 .................................................................... / MS: 1 mark for each bullet point (max 2) • The students cannot access their files without a reliable internet connection • The amount of space for no payment may be | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_11:5(b)` | 9 / 7 | 2 | QP: Describe what is meant by the Immediate Access Store (IAS) in a computer system. / MS: 1 mark for each bullet point (max 2) • Immediate Access Store holds all the data / instructions / programs currently in use • Immediate Access Store is volatile | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_11:2(d)` | 5 / 5 | 2 | QP: A new classroom is being set up with 20 computers and a switch. Explain one advantage of implementing a star topology instead of a bus topology in the new classroom. / MS: 1 mark for each advantage and 1 mark for valid corresponding expansion • Star topology is more resilient to faults • …because there is no single cable and leads | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_11:8(a)` | 13 / 10 | 1 | QP: Identify the purpose of the first pass of a two-pass assembler. / MS: 1 mark for: • To create a symbol table | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_11:6(b)` | 11 / 8 | 1 | QP: State one reason why some high-level languages are partially compiled and partially interpreted. / MS: 1 mark for each bullet point (max 1) • Partially compiled programs can be used on different platforms as they are interpreted when run • Code is optimised for t | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_12:7(b)(i)` | 10 / 7 | 2 | QP: The LAN is set up as a star topology. Draw a diagram of the topology of the LAN. / MS: 1 mark for server only connected to router 1 mark for two laptop computers connected only to router | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w23_12:7(b)(ii)` | 10 / 8 | 2 | QP: Explain how data is transmitted between the two laptops in the LAN. / MS: 1 mark for each bullet point (max 2) • The data from the sending laptop is transmitted to the router • The data has address of recipient • The router determines | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_12:7(b)(iii)` | 11 / 8 | 4 | QP: Subnetting can be used to separate a network into logical segments. Describe two other reasons why subnetting is used in a network. 1 ............................................................................ / MS: 1 mark for each use (max 2) and 1 mark for corresponding expansion (max 2) • To improve the security of the LAN • … so that devices do not receive unintended da | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_12:6(b)` | 9 / 7 | 3 | QP: Explain the impact of changing the sampling resolution on the accuracy of a sound recording. / MS: 1 mark for each bullet point (max 3) Increase sampling resolution • … the number of bits used for each sample is increased • … there will be more values availab | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_12:6(a)` | 9 / 6 | 3 | QP: A real-time video of a music concert needs to be streamed to subscribers. Tick (✓) one box to identify the most appropriate type of compression and justify your answer. Lossy     Lossless Justification ........ / MS: 1 mark for each bullet point (max 3) Lossy compression (ticked) • Loss of quality will not be noticed • Needs to be viewed in real time so less bandwidth needed | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w23_13:7(b)` | 10 / 7 | 2 | QP: Identify two reasons for using Electrically Erasable Programmable ROM (EEPROM) in a virtual reality headset. 1 ................................................................................................... / MS: 1 mark for each bullet point (max 2) • EEPROM allows frequent / multiple read / write / erase operations • …which means that the contents of the firmware in the | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_13:7(d)` | 11 / 8 | 3 | QP: Identify one port that could be used to connect the virtual reality headset to the laptop. Justify your choice. Port ............................................................................................. / MS: 1 mark for naming a correct port 2 marks for matching justification • USB • …has fast data transfer speeds for data (to the headset) • …is a universal/popular c | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_13:9(a)(i)` | 13 / 9 | 3 | QP: Identify three other components in the Von Neumann model of a computer system. Do not include registers or buses in your answers. 1 .............................................................................. / MS: 1 mark for each bullet point (max 3). • Control unit (CU) • Arithmetic and Logic Unit (ALU) • Immediate Access Store (IAS) • (System clock) | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_13:1(a)` | 2 / 3 | 1 | QP: State what is meant by analogue data. / MS: 1 mark for: • data values that are continuously changing // variable // any value | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w23_13:8(c)` | 12 / 9 | 3 | QP: Explain how the data security risks of malware can be restricted. / MS: 1 mark for each bullet point (max 3). • Download programs from reputable websites / sources • …as these are less likely to contain malware • Backup / archive co | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_11:4(b)(ii)` | 9 / 7 | 3 | QP: Describe one lossless method of compressing a text file. / MS: 1 mark for each bullet point (max 3) • Run-Length Encoding // RLE • Repeated sequences of the same characters are replaced by • ... a single copy of the charact | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_11:4(b)(i)` | 9 / 7 | 3 | QP: Explain the benefits to the teacher of the attachment being a compressed file. / MS: 1 mark for each bullet point (max 3) e.g. • Less of the teacher’s storage space is used • ... so more student work can be stored • Transmission time is reduced  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_11:7(a)` | 13 / 9 | 2 | QP: Give two benefits of distributing software using a shareware software licence. 1 ................................................................................................................................. / MS: 1 mark for each bullet point (max 2) • The user can test/trial the program before purchasing to see whether it meets needs • There is no initial cost • Users wh | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_11:3(b)(i)` | 7 / 5 | 2 | QP: The number of cores in the processor affects the performance of the computer system. Identify one other feature of a processor that can affect the performance of a computer system and state why it affects the p / MS: 1 mark for the feature, 1 mark max for the matching reason e.g. Feature: clock speed • Higher clock speed means that more F-E cycles are executed per second //  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_11:3(d)(ii)` | 8 / 6 | 3 | QP: The computer uses a buffer when writing data to the optical disc. Explain the use of a buffer when writing data to the optical disc. / MS: 1 mark for each bullet point (max 3) • The computer and optical disc reader/writer send and receive at different speeds • A buffer allows temporary storage of t | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_12:4(b)` | 6 / 5 | 3 | QP: The programmers created a new program library whilst developing the program. Describe the benefits to the programmers of creating a program library. / MS: 1 mark for each bullet point (max 3) e.g. • Subroutines can be shared / reused • … between team members who are working independently • … without having to rewr | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_12:7(a)(i)` | 10 / 8 | 2 | QP: Define the following bitmap terms. Colour depth ...................................................................................................................... File header ............................... / MS: 1 mark for each correct definition Colour depth: • the number of bits used to represent a colour // the number of colours that can be represented in an image Fi | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_12:3(c)` | 5 / 5 | 4 | QP: The computer has an Operating System (OS). One of the key management tasks of the OS is process management. Describe the process management tasks performed by an OS. / MS: 1 mark for each bullet point (max 4) e.g. • It manages the scheduling of processes // Decides which process is to be run next • Allows multi-tasking/multi-proce | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_12:7(a)(iii)` | 10 / 8 | 1 | QP: Identify one lossless method of compressing an image. / MS: 1 mark for correct method For example: • Run-Length Encoding | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_12:2(b)` | 3 / 4 | 1 | QP: An embedded system has Dynamic RAM (DRAM). Identify one benefit of using DRAM instead of Static RAM (SRAM) in an embedded system. / MS: 1 mark from: • DRAM is less expensive to manufacture/purchase than SRAM in the embedded system • DRAM has a higher bit density per chip // more data can be stor | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_13:4(e)` | 8 / 5 | 3 | QP: A Database Management System (DBMS) supports data integrity. Explain how a DBMS supports data integrity. / MS: 1 mark for each bullet point each (max 3) • Referential integrity is enforced • … such as cascade update/delete // if the data is changed in one place it is upd | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_13:1(c)` | 2 / 3 | 2 | QP: Draw the logic circuit for the logic expression: X = ((NOT A AND (B AND C)) OR (B NAND C)) AND NOT A A B                                                                                X C / MS: 1 mark for NOT gate, 2 correct AND gates and the NAND gate 1 mark for OR gate and the final AND gate | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w24_13:5(b)` | 9 / 6 | 3 | QP: Explain the reasons why it is important for the computer programmer to join a professional ethical body. / MS: 1 mark for each bullet point (max 3) e.g. • The professional ethical body has ethical guidelines to follow • … so clients/other staff know the standards being a | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w24_13:7(b)` | 14 / 7 | 3 | QP: The instruction set also includes these bit manipulation instructions: Instruction Explanation Opcode    Operand AND  #n/Bn/&n   Bitwise AND operation of the contents of ACC with the operand Bitwise AND operati / MS: 1 mark for each bullet point for the explanation 1 mark for correct instruction • A bit manipulation operation is required to set all the bits to zero • Compare | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w24_13:5(a)` | 9 / 5 | 3 | QP: Complete the table by writing the type of software licence each statement describes. Statement                            Software licence A fee is charged for the software. The source code cannot be accessed.  / MS: 1 mark for each correct licence Statement Software Licence A fee is charged for the software. The source code Commercial cannot be accessed. Users do not get a  | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w25_11:5(a)(ii)` | 10 / 8 | 2 | QP: State two tasks that are performed by security management. 1 ........................................................................................................................................ 2 .......... / MS: 1 mark per bullet point, max 2 marks • Prevents unauthorised access • ... by providing authentication // by validating users and processes • Implements access r | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_11:1(b)(i)` | 3 / 4 | 1 | QP: The following binary addition is performed using 8-bit registers. Complete the calculation using binary addition. 1 0 1 1 0 0 1 1 + 0 1 1 1 1 0 0 0 / MS: (1) 00101011 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_11:9` | 15 / 14 | 3 | QP: Describe the differences between a monitoring system and a control system. / MS: 1 mark per bullet point, max 3 marks • Monitoring systems do not take any action whereas control systems act autonomously to change the environment if the value | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_11:6(c)` | 11 / 10 | 3 | QP: State three differences between Dynamic RAM (DRAM) and Static RAM (SRAM). 1 ...................................................................................................................................... / MS: 1 mark per bullet point, max 3 marks • DRAM requires to be refreshed/charged SRAM does not request a refresh • DRAM stores each bit as charge SRAM uses flip-flo | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_11:2(d)` | 6 / 6 | 3 | QP: The database tables are repeated here: STUDENT(StudentID, FirstName, TelephoneNumber, UniversityName) PLACEMENT( PlacementID, StudentID, CompanyID, StartDate, EndDate, Complete) COMPANY(CompanyID, CompanyName,  / MS: 1 mark per bullet point, max 3 marks Generic mark points (max 2) • Referential integrity ensures that related data is consistent • Referential integrity ensures | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_12:10(c)` | 15 / 11 | 1 | QP: A user downloads the computer program from the internet. State what should be included as part of the download to make sure the program is authentic. / MS: 1 mark for a correct answer • Digital Signature | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_12:6(a)` | 10 / 8 | 1 | QP: A sound file is compressed by reducing the sampling rate. State whether this is lossless or lossy compression. Justify your choice. Type of compression .......................................................... / MS: 1 mark for correct answer Type of compression: lossy Justification: There will be fewer samples per second, so data will be permanently lost // There will be fe | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_12:6(d)` | 11 / 9 | 2 | QP: A bitmap image has a resolution of 1000 pixels wide by 2000 pixels high. The colour depth is 16 bits. Calculate an estimate of the file size in megabytes. Show your working. File size .......................... / MS: 1 mark for the working 1 mark for the correct answer Working: (1000 * 2000 * 16) / (8 * 1000 * 1000) // (1000 * 2000 * 2 / (1000 * 1000) Answer: 4 megabytes | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_12:1` | 2 / 4 | 2 | QP: Draw one line from each verification method to indicate whether it is used during data transfer or data entry. Verification Method                                 Use Parity byte check Checksum                  / MS: 1 mark for 2 or 3 correctly connected verification method boxes, 2 marks for all 4 correct Verification Method Use Parity byte check Checksum Data transfer Visu | 一致；图表/代码布局已看原页，文字不代替图形 |
+| `9618_w25_12:5(c)` | 8 / 7 | 3 | QP: Describe how packets are transmitted between two hosts using a star topology. / MS: 1 mark per bullet point, max 3 marks • The sending device sends the packets to the switch • The switch checks the destination address on each packet • … and sen | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_13:8(a)` | 15 / 12 | 2 | QP: State  two  disadvantages  of  using  a  compiler  compared  to  an  interpreter  during program development. 1 .................................................................................................. / MS: 1 mark per bullet point, max 2 • Large amounts of source code take time to compile • It can be slower to produce the object code than an interpreter • The code  | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_13:7(d)` | 13 / 12 | 4 | QP: Describe two reasons why the server that stores the videos uses magnetic hard disks instead of solid state (flash) memory. 1 ..................................................................................... / MS: 1 mark per reason, 1 mark for corresponding justification x2 max 4 marks • Lower cost per unit of storage • ... so the high capacity of storage required for lar | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_13:2(b)` | 3 / 5 | 1 | QP: Convert the denary number –108 into a 12‑bit two’s complement binary number. / MS: 1 mark 1111 1001 0100 | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_13:5(c)` | 7 / 9 | 5 | QP: Products are given a rating between 1 and 10 inclusive. Write an SQL script to return only the ProductID, ProductName and ComplaintDetails for all products with a rating of 5 or less. The results need to be dis / MS: 1 mark per bullet point, max 5 marks • SELECT and the correct attributes • FROM and the correct tables • Tables joined correctly • Correct condition for the rat | 一致（题号、起句/关键数据、分值、页码、同题 MS 起句） |
+| `9618_w25_13:6(b)` | 11 / 10 | 4 | QP: The Von Neumann model for a computer system uses registers. Describe the role of the Memory Address Register (MAR) and Memory Data Register (MDR) in the fetch‑execute (F‑E) cycle. / MS: 1 mark for each bullet point, max 4 marks • MAR stores the address of the next instruction / data to be read from / or written to memory • The address is receiv | 一致；图表/代码布局已看原页，文字不代替图形 |

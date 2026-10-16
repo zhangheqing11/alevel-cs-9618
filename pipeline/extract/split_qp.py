@@ -20,7 +20,7 @@ class QPSegment:
     end_y: float = 0
 
 
-def visual_lines(words: list[dict[str, Any]], x_min: float = 44, x_max: float = 552):
+def visual_lines(words: list[dict[str, Any]], x_min: float = 25, x_max: float = 565):
     """Rejoin independent PDF text blocks by baseline; retain table columns."""
     groups: list[list[dict[str, Any]]] = []
     for word in sorted(words, key=lambda w: (w["y0"], w["x0"])):
