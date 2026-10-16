@@ -1,0 +1,1033 @@
+{
+  "component": 2,
+  "version": "1.0",
+  "chapters": [
+    {
+      "code": "AD",
+      "name_zh": "算法设计与问题求解",
+      "name_en": "Algorithm design and problem-solving",
+      "syllabus": [
+        "9.1",
+        "9.2"
+      ]
+    },
+    {
+      "code": "DT",
+      "name_zh": "数据类型与数据结构",
+      "name_en": "Data types and structures",
+      "syllabus": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4"
+      ]
+    },
+    {
+      "code": "PG",
+      "name_zh": "编程",
+      "name_en": "Programming",
+      "syllabus": [
+        "11.1",
+        "11.2",
+        "11.3"
+      ]
+    },
+    {
+      "code": "SD",
+      "name_zh": "软件开发",
+      "name_en": "Software development",
+      "syllabus": [
+        "12.1",
+        "12.2",
+        "12.3"
+      ]
+    }
+  ],
+  "types": [
+    {
+      "code": "P2-AD-01",
+      "chapter": "AD",
+      "name_zh": "抽象：需要的信息与操作",
+      "name_en": "Abstraction: required information and operations",
+      "summary": "说明抽象的目的或好处；在给定情境里挑出新模块需要/不需要的数据项并说明理由；列出处理这些数据所需的操作。",
+      "cues": [
+        "Explain the purpose of abstraction / State one advantage of applying abstraction",
+        "Identify (three) items of information that will be required by the new module. Justify your choices",
+        "Identify … items … that would not be required",
+        "State (four) items of data that must be stored each time …",
+        "Identify (two) operations that would be required to process the … data",
+        "Tick one box in each row … essential information"
+      ],
+      "not": [
+        "P2-AD-02：要把问题拆成模块/子模块并写名称与用途 → AD-02；本题型只挑数据项与对数据的操作",
+        "P2-DT-04：问用什么数据结构存这些数据 → DT-04"
+      ],
+      "syllabus": [
+        "9.1"
+      ]
+    },
+    {
+      "code": "P2-AD-02",
+      "chapter": "AD",
+      "name_zh": "分解与逐步求精",
+      "name_en": "Decomposition and stepwise refinement",
+      "summary": "描述分解或逐步求精；为一个问题/新模块列出若干模块（子模块）的名称与用途；说明把程序分成阶段或模块的理由与好处。",
+      "cues": [
+        "Describe decomposition / Describe stepwise refinement",
+        "Decomposition will be used to break the problem down … Identify three program modules / sub-modules … and describe their use",
+        "Module 1 … Use …",
+        "Suggest a reason why the … program has been split into a number of stages"
+      ],
+      "not": [
+        "P2-PG-06：问为什么用子程序（subroutine）、库程序、过程与函数的区别 → PG-06",
+        "P2-AD-01：只挑数据项或操作，不要求写模块 → AD-01",
+        "P2-SD-03：要画或补全结构图 → SD-03"
+      ],
+      "syllabus": [
+        "9.1",
+        "9.2"
+      ]
+    },
+    {
+      "code": "P2-AD-03",
+      "chapter": "AD",
+      "name_zh": "标识符命名与标识符表",
+      "name_en": "Identifier names and identifier tables",
+      "summary": "补全标识符表（变量名、说明、示例值）；指出不好的变量名并说明原因；说明怎样记录变量（标识符表及其内容）。",
+      "cues": [
+        "Complete the identifier table / Complete the identifier table by adding meaningful variable names",
+        "An identifier table includes the names … State two other pieces of information",
+        "One of the names used … is not an example of good practice",
+        "State why these variable names are not suitable",
+        "State a suitable way of documenting the variables"
+      ],
+      "not": [
+        "P2-DT-01：表格只要求填数据类型 → DT-01；标识符表里既有名称又有类型时，按得分点多数定",
+        "P2-PG-08：问一般的良好编程习惯（注释、缩进、常量）→ PG-08"
+      ],
+      "syllabus": [
+        "9.2"
+      ]
+    },
+    {
+      "code": "P2-AD-04",
+      "chapter": "AD",
+      "name_zh": "画或补全程序流程图",
+      "name_en": "Drawing or completing a program flowchart",
+      "summary": "按结构化英语或伪代码画出（或补全）程序流程图，包括判断、回路与输入输出；也包括按标号补全流程图框内文字。",
+      "cues": [
+        "Draw a program flowchart to represent the algorithm（给出 START / END）",
+        "Complete the program flowchart",
+        "Complete the table by writing the text that should replace each of the labels（流程图标号）"
+      ],
+      "not": [
+        "P2-AD-05：给了流程图要写伪代码 → AD-05",
+        "P2-SD-03：画的是结构图（模块与参数）→ SD-03",
+        "P2-SD-04：画的是状态转换图 → SD-04"
+      ],
+      "syllabus": [
+        "9.2"
+      ]
+    },
+    {
+      "code": "P2-AD-05",
+      "chapter": "AD",
+      "name_zh": "流程图转伪代码",
+      "name_en": "Pseudocode from a flowchart",
+      "summary": "把给定的程序流程图写成等价的伪代码；或说出流程图里循环的名称。",
+      "cues": [
+        "Write the equivalent pseudocode for the algorithm represented by the flowchart",
+        "A … part of the program contains an algorithm represented by the following program flowchart … Write pseudocode for the algorithm",
+        "Give the name of the iterative construct in the flowchart"
+      ],
+      "not": [
+        "P2-AD-04：方向相反（伪代码/文字 → 流程图）→ AD-04",
+        "P2-PG-09：算法用文字要点给出（不是流程图）→ PG-09"
+      ],
+      "syllabus": [
+        "9.2",
+        "11.1"
+      ]
+    },
+    {
+      "code": "P2-AD-06",
+      "chapter": "AD",
+      "name_zh": "用文字步骤描述算法",
+      "name_en": "Describing an algorithm in steps",
+      "summary": "不写伪代码，用编号步骤或文字描述算法（读文件、遍历数组、输入循环等）；补全已给出一部分的编号步骤；说明某几步的作用。",
+      "cues": [
+        "Describe the algorithm (needed / that would be required). Do not include pseudocode statements in your answer",
+        "Describe the steps that the algorithm should perform",
+        "Express an algorithm for … as five steps",
+        "The algorithm … is expressed in eight steps. Complete the steps / Complete the following numbered steps",
+        "Describe how an algorithm would use the … array to …"
+      ],
+      "not": [
+        "P2-PG-09 / P2-DT-05 / P2-DT-09 等写代码题型：题目要求写伪代码 → 按写代码题型定；只要求文字描述 → AD-06",
+        "P2-SD-12：描述的是对已有程序要做的修改 → SD-12",
+        "P2-DT-16：描述怎样用数组和变量实现栈/队列/链表 → DT-16"
+      ],
+      "syllabus": [
+        "9.2"
+      ]
+    },
+    {
+      "code": "P2-DT-01",
+      "chapter": "DT",
+      "name_zh": "选择数据类型",
+      "name_en": "Choosing data types",
+      "summary": "按变量用途、示例值或赋值语句给出最合适的数据类型；说明声明数组前还需要什么信息（元素类型）。",
+      "cues": [
+        "Complete the table by writing the most appropriate data type for each variable",
+        "Give the appropriate data types for the following variables",
+        "four valid pseudocode assignment statements. Complete the table by giving an appropriate data type",
+        "Variable | Example data value | Data type"
+      ],
+      "not": [
+        "P2-AD-03：标识符表主要考名称与说明 → AD-03",
+        "P2-DT-02：写 TYPE 定义（字段类型是其中一部分）→ DT-02"
+      ],
+      "syllabus": [
+        "10.1"
+      ]
+    },
+    {
+      "code": "P2-DT-02",
+      "chapter": "DT",
+      "name_zh": "记录类型：定义与字段访问",
+      "name_en": "Record types: definition and field access",
+      "summary": "用 TYPE…ENDTYPE 定义记录（字段名与类型）；写给记录字段赋值或读取字段的语句；指出记录定义中的错误。",
+      "cues": [
+        "Write pseudocode to declare the record structure for type …",
+        "Complete the pseudocode to create a record structure with the identifier …",
+        "Write pseudocode to define MyType",
+        "Write the pseudocode statement to assign the value … to the … field of …",
+        "State the error in the record declaration"
+      ],
+      "not": [
+        "P2-DT-03：声明「记录数组」那一句 DECLARE … ARRAY … OF 记录类型 → DT-03",
+        "P2-DT-04：问用记录（数组）有什么好处 → DT-04",
+        "P2-DT-07：遍历记录数组的模块 → DT-07"
+      ],
+      "syllabus": [
+        "10.1"
+      ]
+    },
+    {
+      "code": "P2-DT-03",
+      "chapter": "DT",
+      "name_zh": "数组：声明、术语与未用元素",
+      "name_en": "Arrays: declaration, terminology and unused elements",
+      "summary": "写一维/二维数组声明（含记录数组）；回答维数、上下界、元素个数、下标等术语；说明怎样标记未用元素以及为什么要统一标记。",
+      "cues": [
+        "Write pseudocode to declare the … array / Give the pseudocode declaration for the array",
+        "Complete the pseudocode statement used to declare the global 2D array",
+        "State the number of dimensions / the total number of elements / upper bound / index",
+        "Give an appropriate way of indicating an unused array element",
+        "State why it is good practice to have a standard way to indicate unused array elements",
+        "State the one additional piece of information required before the array can be declared"
+      ],
+      "not": [
+        "P2-DT-04：问为什么用数组/用哪种数组 → DT-04",
+        "P2-DT-01：只问一个普通变量的类型 → DT-01"
+      ],
+      "syllabus": [
+        "10.2"
+      ]
+    },
+    {
+      "code": "P2-DT-04",
+      "chapter": "DT",
+      "name_zh": "选择数据结构并说明好处",
+      "name_en": "Choosing a data structure and justifying it",
+      "summary": "为一组数据选合适的结构（单独变量、一维/二维数组、记录、记录数组、文件中的格式除外）并说明好处；比较两种设计（如用数组查表代替多重选择）；说明结构改变后的新设计。",
+      "cues": [
+        "Explain why it would be good practice to use arrays",
+        "State three benefits of using an array of records",
+        "Identify a suitable structure for storing the information for one customer. Explain the advantage",
+        "State a suitable data structure … (student name and test score)",
+        "Explain why the 2D array … can no longer be used / Explain how a 1D array could be used to store both …",
+        "An alternative design would involve the use of multiple selection statements"
+      ],
+      "not": [
+        "P2-DT-11：选的是文本文件或文件里的存储格式 → DT-11",
+        "P2-DT-12：选的是 ADT（栈、队列、链表）→ DT-12",
+        "P2-DT-03：写声明或回答下标、上下界等术语 → DT-03"
+      ],
+      "syllabus": [
+        "10.1",
+        "10.2"
+      ]
+    },
+    {
+      "code": "P2-DT-05",
+      "chapter": "DT",
+      "name_zh": "一维数组处理模块",
+      "name_en": "Processing a 1D array",
+      "summary": "写（或补全）遍历一维数组的模块：查找、计数、求和/平均、最值、找空位插入、按条件输出或改写元素；含并行数组与把输入序列存进数组。",
+      "cues": [
+        "A global 1D array … contains n elements … Write pseudocode for …",
+        "Two global 1D arrays … corresponding elements / parallel arrays",
+        "search for the largest value / output the index of the element with the smallest value",
+        "Unused elements … contain the empty string / the value 999",
+        "input a sequence of values … store … in the array"
+      ],
+      "not": [
+        "P2-DT-07：数组元素是记录、要用点号访问字段 → DT-07",
+        "P2-DT-06：二维数组 → DT-06",
+        "P2-DT-08：要求写排序 → DT-08",
+        "P2-DT-16：数组是在实现栈/队列/链表 → DT-16"
+      ],
+      "syllabus": [
+        "10.2",
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-DT-06",
+      "chapter": "DT",
+      "name_zh": "二维数组处理模块",
+      "name_en": "Processing a 2D array",
+      "summary": "写遍历二维数组的模块：按行或按列查找、计数、求平均、找空行、写入一行等，通常要嵌套循环或固定一列。",
+      "cues": [
+        "A global 2D array … organised as n rows by 2 columns",
+        "array … [1:r, 1:c] / column 1 / column 2",
+        "Write pseudocode for procedure Mix()（行列平均）",
+        "Unused elements contain the empty string (\"\") … anywhere in the array"
+      ],
+      "not": [
+        "P2-DT-05：一维数组 → DT-05",
+        "P2-DT-07：二维数组的元素类型是记录 → DT-07",
+        "P2-DT-03：只写二维数组声明 → DT-03"
+      ],
+      "syllabus": [
+        "10.2",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-DT-07",
+      "chapter": "DT",
+      "name_zh": "记录数组处理模块",
+      "name_en": "Processing an array of records",
+      "summary": "写遍历记录数组的模块：用 数组[下标].字段 查找、计数、统计、修改字段、标记未用记录、输出若干字段。",
+      "cues": [
+        "The programmer has defined a record type … A global array … stores n … records",
+        "Write (efficient) pseudocode for module …（Loan / Character / Staff / Batch 等记录数组）",
+        "data items for each … record: Data item | Data type | Comment"
+      ],
+      "not": [
+        "P2-DT-02：只定义 TYPE 或写一条字段赋值 → DT-02",
+        "P2-DT-09 / P2-DT-10：模块同时读写文件且文件操作 ≥ 2 分 → 文件题型主题型，记录数组作副题型"
+      ],
+      "syllabus": [
+        "10.1",
+        "10.2",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-DT-08",
+      "chapter": "DT",
+      "name_zh": "冒泡排序",
+      "name_en": "Bubble sort",
+      "summary": "写（高效的）冒泡排序伪代码或描述其步骤；解释高效版本为什么更快；改成降序；同时交换并行数组。",
+      "cues": [
+        "Write an efficient bubble sort algorithm in pseudocode",
+        "Sorts the arrays into ascending order",
+        "An algorithm to sort a 1D array into ascending order is described as follows: move the largest value to the end …",
+        "Explain why the second bubble sort algorithm is more efficient"
+      ],
+      "not": [
+        "P2-DT-05：只是线性查找、计数等，不排序 → DT-05",
+        "P2-SD-07：给了排序代码只要填追踪表 → SD-07"
+      ],
+      "syllabus": [
+        "10.2"
+      ]
+    },
+    {
+      "code": "P2-DT-09",
+      "chapter": "DT",
+      "name_zh": "读文本文件逐行处理",
+      "name_en": "Reading and processing a text file",
+      "summary": "写模块：以 READ 打开文本文件，读到 EOF 为止逐行处理（查找、计数、提取字段、输出、读入数组），最后关闭；不写文件。",
+      "cues": [
+        "OPENFILE … FOR READ / Stock.txt / a text file … Each line of the file contains …",
+        "search the file for … / output the … lines from that file",
+        "take the name of a text file as a parameter",
+        "uses the file … to …（只读）"
+      ],
+      "not": [
+        "P2-DT-10：模块里有 WRITEFILE（写新文件、追加、复制）→ DT-10",
+        "P2-DT-11：只问文件的用途、模式或存储格式，不写代码 → DT-11",
+        "P2-AD-06：要求用文字描述读文件算法 → AD-06"
+      ],
+      "syllabus": [
+        "10.3"
+      ]
+    },
+    {
+      "code": "P2-DT-10",
+      "chapter": "DT",
+      "name_zh": "写入或复制文本文件",
+      "name_en": "Writing, appending or copying a text file",
+      "summary": "写模块：以 WRITE / APPEND 打开文件写行（数组 → 文件、按条件复制或过滤另一个文件、生成多个文件、把记录拼成一行写出），并关闭。",
+      "cues": [
+        "copies each line from the input file to the existing output file",
+        "A new module will store the contents of the … array in a text file",
+        "create a new file / write … to the file / OPENFILE … FOR WRITE / APPEND",
+        "Only non-blank elements … are written to the file"
+      ],
+      "not": [
+        "P2-DT-09：只读不写 → DT-09",
+        "P2-DT-11：只问选什么模式或格式 → DT-11"
+      ],
+      "syllabus": [
+        "10.3"
+      ]
+    },
+    {
+      "code": "P2-DT-11",
+      "chapter": "DT",
+      "name_zh": "文件的用途、模式与存储格式",
+      "name_en": "Files: purpose, modes and storage formats",
+      "summary": "说明为什么用文件（相对数组的好处）；选择或解释文件模式（READ / WRITE / APPEND）；设计一行内多项数据的存储格式（分隔符、定长、转换为字符串）并分析其问题；有意义的文件名。",
+      "cues": [
+        "Explain how the program could use text files to …",
+        "Give two benefits of using a text file instead of an array",
+        "State the file mode that should be used / Explain why WRITE mode cannot be used",
+        "Suggest a suitable separator character and give a reason",
+        "Suggest how data relating to each booking may be stored in a text file",
+        "State any change that will need to be made before each value is written to the file"
+      ],
+      "not": [
+        "P2-DT-09 / P2-DT-10：要写读写文件的伪代码 → DT-09 / DT-10",
+        "P2-DT-04：选的是内存里的数据结构 → DT-04"
+      ],
+      "syllabus": [
+        "10.3"
+      ]
+    },
+    {
+      "code": "P2-DT-12",
+      "chapter": "DT",
+      "name_zh": "ADT 的概念与选择",
+      "name_en": "Abstract data types: concept and choice",
+      "summary": "说明什么是 ADT；识别图中是哪种 ADT；描述栈、队列、链表的主要特征；为情境选择 ADT 并说明理由。",
+      "cues": [
+        "A stack is an example of an Abstract Data Type (ADT). Identify one other example … and describe its main features",
+        "Identify this type of ADT",
+        "Describe two features of a queue",
+        "Suggest a more appropriate Abstract Data Type",
+        "Identify the ADT"
+      ],
+      "not": [
+        "P2-DT-13 / P2-DT-14 / P2-DT-15：要在图上做操作或描述某个操作的过程 → 对应 ADT 题型",
+        "P2-DT-16：问怎样用数组和变量实现 → DT-16"
+      ],
+      "syllabus": [
+        "10.4"
+      ]
+    },
+    {
+      "code": "P2-DT-13",
+      "chapter": "DT",
+      "name_zh": "栈的操作与状态",
+      "name_en": "Stack operations and states",
+      "summary": "在给定栈状态上执行 PUSH / POP 并画出新状态与栈顶指针；回答栈底、栈顶、最多能连续 POP 几次等。",
+      "cues": [
+        "The following diagram shows the current state of the stack … Complete the diagram",
+        "TopOfStack / Stack Pointer / Memory location",
+        "the value that has been on the stack for the longest time",
+        "POP and store value in variable … PUSH value …"
+      ],
+      "not": [
+        "P2-DT-16：要写 Push() 伪代码或描述数组实现 → DT-16",
+        "P2-DT-12：只问栈的特征 → DT-12"
+      ],
+      "syllabus": [
+        "10.4"
+      ]
+    },
+    {
+      "code": "P2-DT-14",
+      "chapter": "DT",
+      "name_zh": "队列的操作与状态",
+      "name_en": "Queue operations and states",
+      "summary": "在给定（循环）队列状态上入队、出队并画出新状态与队首/队尾指针；描述入队、出队的过程及满/空检查；两指针相等的含义。",
+      "cues": [
+        "Describe how … is added to the given queue",
+        "front of queue pointer / end of queue pointer",
+        "Complete the diagram to show the state of the queue after the following operations",
+        "Describe two operations … implementing a queue. State the check that must be carried out"
+      ],
+      "not": [
+        "P2-DT-16：要写 AddTo() 伪代码或描述声明与初始化 → DT-16",
+        "P2-DT-12：只问队列的特征或选择 → DT-12"
+      ],
+      "syllabus": [
+        "10.4"
+      ]
+    },
+    {
+      "code": "P2-DT-15",
+      "chapter": "DT",
+      "name_zh": "链表的操作与状态",
+      "name_en": "Linked list operations and states",
+      "summary": "在链表图（数据 + 指针）上插入、删除结点并改写指针；回答起始指针、空指针的值与含义；按顺序补全指针域。",
+      "cues": [
+        "Explain how a node containing data value B is added to the list",
+        "Complete the pointer field to produce a linked list",
+        "start pointer / null pointer / Pointer array",
+        "Nodes with data … are added … Nodes … are deleted"
+      ],
+      "not": [
+        "P2-DT-16：问怎样用数组和变量实现链表、写初始化或遍历代码 → DT-16",
+        "P2-DT-12：只问链表的特征与适用场合 → DT-12"
+      ],
+      "syllabus": [
+        "10.4"
+      ]
+    },
+    {
+      "code": "P2-DT-16",
+      "chapter": "DT",
+      "name_zh": "用数组实现栈、队列与链表",
+      "name_en": "Implementing stacks, queues and linked lists with arrays",
+      "summary": "描述怎样用数组和指针变量实现某个 ADT（声明、初始化）；写或补全入栈、入队、链表初始化/遍历的伪代码或流程图。",
+      "cues": [
+        "Explain how the stack can be implemented using an array",
+        "Describe the declaration and initialisation of the variables and data structures used to implement the queue",
+        "Describe how the linked list … may be implemented using variables and arrays",
+        "A function Push() / AddTo() / AddToQueue() will add a value …",
+        "The design uses two variables and two 1D arrays to implement the linked list"
+      ],
+      "not": [
+        "P2-DT-13 / P2-DT-14 / P2-DT-15：只在图上演示操作 → 对应操作题型",
+        "P2-DT-05：数组只是普通数据表、不是 ADT 的实现 → DT-05"
+      ],
+      "syllabus": [
+        "10.4"
+      ]
+    },
+    {
+      "code": "P2-PG-01",
+      "chapter": "PG",
+      "name_zh": "识别程序结构与语句成分",
+      "name_en": "Identifying constructs and parts of code",
+      "summary": "在给定伪代码里识别选择、循环、赋值、输入输出、子程序调用等结构（打勾表）；写出含某成分的行号；识别所用的结构类型或某种技术术语。",
+      "cues": [
+        "Complete the table by placing one or more ticks … selection / iteration / assignment / input/output",
+        "Give a line number containing an example of …",
+        "Identify the type of construct used in this pseudocode",
+        "Sequence is one programming construct. Identify one other programming construct that will be required",
+        "State the purpose of the variable Count in the statement …"
+      ],
+      "not": [
+        "P2-PG-05：问哪种循环更合适 → PG-05",
+        "P2-SD-08：要解释代码的作用或问题 → SD-08"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-PG-02",
+      "chapter": "PG",
+      "name_zh": "表达式求值",
+      "name_en": "Evaluating expressions",
+      "summary": "按给定变量值计算表达式（算术、关系、逻辑、插页函数、日期函数），写结果或 ERROR。",
+      "cues": [
+        "Complete the table by evaluating each expression",
+        "Evaluate each expression in the table … Write 'ERROR' if the expression contains an error",
+        "Expression | Evaluation / Evaluates to",
+        "State the values that would result in the condition …"
+      ],
+      "not": [
+        "P2-PG-03：反过来要填函数或运算符使表达式成立 → PG-03",
+        "P2-SD-07：要逐行干跑一段程序 → SD-07"
+      ],
+      "syllabus": [
+        "11.1"
+      ]
+    },
+    {
+      "code": "P2-PG-03",
+      "chapter": "PG",
+      "name_zh": "写或补全单条语句与表达式",
+      "name_en": "Writing or completing single statements and expressions",
+      "summary": "填入插页函数或运算符使表达式合法或得出给定值；写一条赋值、条件、输入输出语句或子句；化简表达式或语句。",
+      "cues": [
+        "Complete the table by filling in each gap with a function (from the insert)",
+        "Complete each pseudocode expression so that it evaluates to the value shown",
+        "Write a pseudocode clause to check whether …",
+        "Write a simplified version of the statement in line …",
+        "Write expression 4 … in its simplest form",
+        "Complete the pseudocode statement / Write the single line of pseudocode"
+      ],
+      "not": [
+        "P2-PG-12：语句的核心是日期函数（SETDATE、DAYINDEX 等）→ PG-12",
+        "P2-PG-02：只求值 → PG-02",
+        "P2-DT-02 / P2-DT-03：语句是记录或数组的声明、字段赋值 → DT-02 / DT-03",
+        "P2-PG-07：要写的是模块头 → PG-07"
+      ],
+      "syllabus": [
+        "11.1"
+      ]
+    },
+    {
+      "code": "P2-PG-04",
+      "chapter": "PG",
+      "name_zh": "选择结构：IF 与 CASE 的改写",
+      "name_en": "Selection: rewriting IF and CASE",
+      "summary": "把 CASE 改写成 IF（或反之）、合并或简化嵌套 IF、合并 CASE 子句、补 OTHERWISE 等关键字，保持功能不变。",
+      "cues": [
+        "Write pseudocode with the same functionality … using … IF / a single selection construct",
+        "Write pseudocode for a single clause to replace the two clauses",
+        "The final CASE condition … could be replaced with a keyword",
+        "Examine the following pseudocode (nested IF) … Write …"
+      ],
+      "not": [
+        "P2-SD-08：问哪个分支永远不会执行、为什么 → SD-08",
+        "P2-PG-05：改写的是循环 → PG-05"
+      ],
+      "syllabus": [
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-PG-05",
+      "chapter": "PG",
+      "name_zh": "循环结构的选择与改写",
+      "name_en": "Choosing and rewriting loops",
+      "summary": "说出更合适的循环（计数、前测、后测）并说明理由；指出现有循环不合适之处；识别循环种类及终止条件；用另一种循环改写（写行号或语句）。",
+      "cues": [
+        "State a more appropriate loop structure. Justify your answer",
+        "The design … does not use the most appropriate loop construct. Suggest …",
+        "Explain why this is not the most appropriate loop construct",
+        "Identify the type of loop and state the condition that ends the loop",
+        "Two lines of pseudocode are changed and two lines are removed"
+      ],
+      "not": [
+        "P2-PG-01：只识别结构类型、不比较优劣 → PG-01",
+        "P2-AD-05：给流程图问其中循环的名称 → AD-05"
+      ],
+      "syllabus": [
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-PG-06",
+      "chapter": "PG",
+      "name_zh": "过程、函数与参数的概念",
+      "name_en": "Procedures, functions and parameters: concepts",
+      "summary": "说明使用子程序或库程序的理由；过程与函数的区别及何时用函数；参数、实参、接口、返回值等术语；局部与全局变量；BYVAL 与 BYREF 的含义；把过程改成函数需要的改动。",
+      "cues": [
+        "State two reasons why the programmer may decide to use a subroutine / library routines",
+        "Explain one difference between functions and procedures",
+        "Give the correct term for the identifiers …（parameters）/ Explain the term procedure interface",
+        "State one difference between local and global variables",
+        "In the case of Mod-F, the parameter is passed by value … by reference",
+        "Identify the type of module that should be used / Identify the modules that would be implemented as functions"
+      ],
+      "not": [
+        "P2-PG-07：要写出模块头 → PG-07",
+        "P2-AD-02：把问题分解成模块并写用途 → AD-02",
+        "P2-PG-08：问一般良好习惯（含常量、注释）→ PG-08"
+      ],
+      "syllabus": [
+        "11.3"
+      ]
+    },
+    {
+      "code": "P2-PG-07",
+      "chapter": "PG",
+      "name_zh": "写模块头",
+      "name_en": "Writing module headers",
+      "summary": "按说明、模块表或结构图写 PROCEDURE / FUNCTION 头（参数名与类型、BYREF、RETURNS 类型）。",
+      "cues": [
+        "Write the pseudocode module headers for …",
+        "Write the pseudocode to define the module headers",
+        "Write the header for the function in pseudocode",
+        "Write pseudocode for the new module header",
+        "Pseudocode module header（由结构图或说明给出参数）"
+      ],
+      "not": [
+        "P2-SD-03：反过来由模块头画结构图 → SD-03",
+        "P2-PG-06：只解释头部里的术语 → PG-06"
+      ],
+      "syllabus": [
+        "11.3",
+        "12.2"
+      ]
+    },
+    {
+      "code": "P2-PG-08",
+      "chapter": "PG",
+      "name_zh": "良好编程实践",
+      "name_en": "Good programming practice",
+      "summary": "说明用常量代替字面值、注释、缩进、空白、关键字大写、有意义的名称、库程序等为何有益；指出代码中让人易读的特征；说明某写法为何高效或低效并给出改进。",
+      "cues": [
+        "Identify a more appropriate way of representing the … (constants)",
+        "Describe the benefits of your answer … with reference to this program",
+        "The lines of pseudocode contain features that make them easier to understand. State three",
+        "Explain how the use of constants helps to reduce the risk of programming errors",
+        "Give the reason why this is good practice. Give two other examples of good practice",
+        "Describe a feature of your solution … that indicates … an efficient algorithm / Explain why this is not efficient"
+      ],
+      "not": [
+        "P2-AD-03：专门问变量名或标识符表 → AD-03",
+        "P2-PG-06：问子程序、参数、局部变量 → PG-06"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.3"
+      ]
+    },
+    {
+      "code": "P2-PG-09",
+      "chapter": "PG",
+      "name_zh": "输入-处理-输出算法",
+      "name_en": "Input–process–output algorithms",
+      "summary": "按要点写伪代码：反复从键盘输入（定次数、到哨兵值、到合法为止），计数、累加、求平均或最值，生成随机数，最后输出；可有简单游戏或菜单逻辑。不以数组、字符串、文件为主。",
+      "cues": [
+        "An algorithm will: • input … one at a time • … • output …",
+        "prompt and input … until …",
+        "Write pseudocode for the algorithm. You must declare all variables used",
+        "generate a random integer value between …",
+        "The user will input value –1 to indicate there are no more …"
+      ],
+      "not": [
+        "P2-PG-10：只对参数或一次输入的少数几个值做计算判断（不循环输入）→ PG-10",
+        "P2-DT-05：输入的值要存进数组且数组操作 ≥ 2 分 → DT-05（PG-09 作副题型）",
+        "P2-AD-06：要求文字描述、不写伪代码 → AD-06"
+      ],
+      "syllabus": [
+        "9.2",
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P2-PG-10",
+      "chapter": "PG",
+      "name_zh": "数值计算与判断函数",
+      "name_en": "Numeric calculation and decision modules",
+      "summary": "写模块：对参数（或一次输入的几个值）做算术与判断——逐位取数、校验码、阶乘、素数、范围检查、时间换算、多分支返回结果。",
+      "cues": [
+        "A function … will take … integer parameters … return …",
+        "factorial / check digit / prime / the time … HH, MM and SS",
+        "return TRUE if the value is within the range … otherwise return FALSE",
+        "The value returned from the function will be as follows: Outcome | Return value"
+      ],
+      "not": [
+        "P2-PG-11：参数是字符串、主要考子串与逐字符处理 → PG-11（题目只给数值、MS 某解法转成字符串的不算）",
+        "P2-PG-09：循环读入一串输入并统计 → PG-09",
+        "P2-PG-12：主要用日期函数 → PG-12"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.3"
+      ]
+    },
+    {
+      "code": "P2-PG-11",
+      "chapter": "PG",
+      "name_zh": "字符串处理模块",
+      "name_en": "String-processing modules",
+      "summary": "写模块：逐字符扫描、用插页函数取子串、按分隔符或定长拆字段、拼出新字符串、统计或替换字符、判断格式（回文、字母数字）等。",
+      "cues": [
+        "take a string … as a parameter … return the string …",
+        "Each password must … / palindrome / count the number of times that the character occurs",
+        "A text string contains … data items concatenated / separated by commas",
+        "Write pseudocode … to implement your own version of the MID() function",
+        "returns the line after removing any leading space characters"
+      ],
+      "not": [
+        "P2-DT-09 / P2-DT-10：同一模块还要读写文件且文件操作 ≥ 2 分 → 文件题型主题型，PG-11 作副题型",
+        "P2-PG-10：本质是数值计算 → PG-10",
+        "P2-PG-03：只写一条表达式 → PG-03"
+      ],
+      "syllabus": [
+        "11.1"
+      ]
+    },
+    {
+      "code": "P2-PG-12",
+      "chapter": "PG",
+      "name_zh": "日期处理",
+      "name_en": "Using date functions",
+      "summary": "用插页日期函数（SETDATE、DAY、MONTH、YEAR、DAYINDEX、TODAY 等）写赋值语句、条件或模块：日期赋值、星期判断、月份差、加天数、日期字符串转换。",
+      "cues": [
+        "Write a pseudocode statement, using a function from the insert, to assign the value corresponding to … to MyDOB",
+        "test whether … was born on a Thursday",
+        "Date functions from the insert should be used in your solution",
+        "the third Sunday in March / daylight saving",
+        "A date is stored in … in the format: DDMMYYYY"
+      ],
+      "not": [
+        "P2-PG-02：只对含日期函数的表达式求值 → PG-02",
+        "P2-DT-01：只问 DATE 类型 → DT-01"
+      ],
+      "syllabus": [
+        "10.1",
+        "11.1"
+      ]
+    },
+    {
+      "code": "P2-SD-01",
+      "chapter": "SD",
+      "name_zh": "开发生命周期的阶段与活动",
+      "name_en": "Life-cycle stages and activities",
+      "summary": "说明生命周期的作用；把活动对应到分析、设计、编码、测试、维护阶段；各阶段的活动与产出文档；某项工作属于哪一阶段。",
+      "cues": [
+        "Complete the table by writing the name of the life cycle stage for each activity",
+        "State three activities that will take place during the design stage",
+        "State one document that may be produced from the analysis stage",
+        "Identify the stage of the program development life cycle …",
+        "State one benefit of a development life cycle"
+      ],
+      "not": [
+        "P2-SD-02：问瀑布、迭代、RAD 等模型 → SD-02",
+        "P2-SD-09：问测试方法 → SD-09"
+      ],
+      "syllabus": [
+        "12.1"
+      ]
+    },
+    {
+      "code": "P2-SD-02",
+      "chapter": "SD",
+      "name_zh": "生命周期模型",
+      "name_en": "Life-cycle models",
+      "summary": "瀑布、迭代、RAD 的原理、优缺点与选择；补全或解释瀑布模型图中的箭头；为情境挑选更合适的模型。",
+      "cues": [
+        "The program will be developed using the Rapid Application Development (RAD) life cycle",
+        "waterfall / iterative",
+        "Give two reasons why this may not be the most appropriate model",
+        "Explain the meaning of the downward and upward arrows",
+        "Identify a life cycle method that would be appropriate in this case"
+      ],
+      "not": [
+        "P2-SD-01：只问阶段与活动 → SD-01"
+      ],
+      "syllabus": [
+        "12.1"
+      ]
+    },
+    {
+      "code": "P2-SD-03",
+      "chapter": "SD",
+      "name_zh": "结构图",
+      "name_en": "Structure charts",
+      "summary": "说明结构图的目的；按模块说明或模块头画出/补全结构图（模块、参数箭头、BYREF、返回值、选择菱形、迭代弧线）；解释符号与模块间关系。",
+      "cues": [
+        "Draw a structure chart / Complete the structure chart",
+        "Explain the meaning of the diamond symbol / curved arrow symbol",
+        "Describe the purpose of a structure chart",
+        "Explain the relationship between the four modules shown",
+        "The structure chart uses the two symbols shown. Complete the table"
+      ],
+      "not": [
+        "P2-PG-07：由结构图写模块头 → PG-07",
+        "P2-AD-02：只列模块名称与用途、不画图 → AD-02"
+      ],
+      "syllabus": [
+        "12.2"
+      ]
+    },
+    {
+      "code": "P2-SD-04",
+      "chapter": "SD",
+      "name_zh": "状态转换图",
+      "name_en": "State-transition diagrams",
+      "summary": "按表格补全状态转换图（状态、事件 | 输出、自环）；按图补全输入/输出/下一状态表；回答某输入序列的结果或最短序列；说出缺少的状态或事件。",
+      "cues": [
+        "Complete the state-transition diagram",
+        "Complete the table to show the inputs, outputs and next states",
+        "Current state | Input | Output | Next state",
+        "Identify the input sequence that will cause the minimum number of state changes",
+        "The number of transitions that result in a different state"
+      ],
+      "not": [
+        "P2-AD-04：画的是程序流程图 → AD-04"
+      ],
+      "syllabus": [
+        "12.2"
+      ]
+    },
+    {
+      "code": "P2-SD-05",
+      "chapter": "SD",
+      "name_zh": "错误类型与 IDE 调试",
+      "name_en": "Error types and IDE debugging",
+      "summary": "区分语法、逻辑、运行时错误并举例或说原因（如死循环导致无响应）；为什么编译器发现不了；怎样用 IDE 的断点、单步、变量监视/报告窗口定位错误。",
+      "cues": [
+        "Identify and describe two other types of error",
+        "Identify the type of error that has occurred / unexpectedly stops responding",
+        "Explain why the compiler does not identify this error",
+        "Describe how a typical Integrated Development Environment (IDE) could be used to … debug",
+        "breakpoint / single stepping / report window / watch window"
+      ],
+      "not": [
+        "P2-SD-06：要在给定代码里指出具体哪一句错并改正 → SD-06",
+        "P2-SD-09：问测试方法 → SD-09"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-06",
+      "chapter": "SD",
+      "name_zh": "找出并改正伪代码错误",
+      "name_en": "Finding and correcting errors in pseudocode",
+      "summary": "逐句判断给定语句是否有错（函数用法、运算符、类型），或在一段伪代码里找出语法错误与其他错误、给出行号与改正。",
+      "cues": [
+        "The pseudocode statements in the following table may contain errors. State the error in each case or write 'NO ERROR'",
+        "The pseudocode contains two syntax errors and one other error. Identify the errors",
+        "Identify each error and state the correction required",
+        "Describe the error in the algorithm and explain how it may be corrected",
+        "The pseudocode contains a logical error. Identify the error and suggest a correction"
+      ],
+      "not": [
+        "P2-SD-05：只问错误类型的概念或 IDE → SD-05",
+        "P2-SD-08：代码本身没错、问其作用或局限 → SD-08"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-07",
+      "chapter": "SD",
+      "name_zh": "追踪表（干跑）",
+      "name_en": "Trace tables (dry run)",
+      "summary": "按给定调用或输入干跑伪代码（或流程图），填追踪表的变量与输出列；写出最终输出或返回值；补全执行后的数组状态。",
+      "cues": [
+        "Complete the trace table by dry running the function / procedure",
+        "Complete the trace table below … when the following values are input",
+        "State the value returned when … is called",
+        "Complete the diagram showing the contents of the global arrays … after the procedure has run"
+      ],
+      "not": [
+        "P2-PG-02：只求单个表达式 → PG-02",
+        "P2-SD-08：不要求逐行记录，只问代码作用或问题 → SD-08"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-08",
+      "chapter": "SD",
+      "name_zh": "分析给定伪代码",
+      "name_en": "Analysing given pseudocode",
+      "summary": "读懂给定代码并解释：作用或目的、某变量初值为何这样选、某条件或分支的作用、哪条语句永远不执行或多余、为什么结果不对、在什么条件下输出才正确。",
+      "cues": [
+        "Explain why the program gives unexpected results",
+        "One of these assignments will never be performed. Identify this assignment and explain why",
+        "The procedure contains a statement that is not needed",
+        "Comment on why the programmer chose –1 as the initial value",
+        "Explain the purpose of the outer conditional clause",
+        "State the purpose of the STAGE 2 algorithm / State the condition that results in …"
+      ],
+      "not": [
+        "P2-SD-06：要指出错并改正 → SD-06",
+        "P2-SD-07：要填追踪表 → SD-07",
+        "P2-PG-05：问循环是否合适 → PG-05"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-09",
+      "chapter": "SD",
+      "name_zh": "测试方法与测试策略",
+      "name_en": "Testing methods and strategy",
+      "summary": "白盒、黑盒、走查、干跑、集成、桩（stub）、alpha、beta、验收测试的含义与适用场合；把描述对应到测试方法；说明某方法怎样发现错误；测试策略与测试计划的作用。",
+      "cues": [
+        "Identify this method of testing / Describe integration testing",
+        "Describe a testing method that can be used to address this problem（stub）",
+        "The program will be tested using the walkthrough method. Additional information will be needed",
+        "Identify and describe a final stage of testing that should take place before …",
+        "Complete the table by identifying the test method that matches the test description",
+        "State two tests, using valid data, that can be used to test different paths（white-box）"
+      ],
+      "not": [
+        "P2-SD-10：要给出具体测试数据或补全测试计划 → SD-10",
+        "P2-SD-05：用 IDE 调试 → SD-05"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-10",
+      "chapter": "SD",
+      "name_zh": "测试数据与有效性检查",
+      "name_en": "Test data and validity checks",
+      "summary": "补全测试计划（测试数据、类型、预期结果）；选正常、异常、边界数据；给出能暴露问题的输入；描述对参数或数据应做的有效性检查。",
+      "cues": [
+        "A test plan is needed … Complete the table. The first line has been completed for you",
+        "normal / abnormal / extreme / boundary",
+        "Give a test string that could be used to show …",
+        "Give a sequence of four test data values that could be input to demonstrate the problem",
+        "State two checks that could be applied to the values passed to the function",
+        "Outline a test plan that could be used to fully test the function"
+      ],
+      "not": [
+        "P2-SD-09：只问测试方法名称或作用 → SD-09"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-11",
+      "chapter": "SD",
+      "name_zh": "维护类型",
+      "name_en": "Types of maintenance",
+      "summary": "纠正性、适应性、完善性维护的区分；为情境判断是哪种维护；给出需要某种维护的理由。",
+      "cues": [
+        "One type of maintenance is called perfective. Name two other types",
+        "Give two reasons why adaptive maintenance may be required",
+        "Identify the type of maintenance",
+        "changes are made to the program to improve the speed of response"
+      ],
+      "not": [
+        "P2-SD-12：问具体要怎样修改程序 → SD-12"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    },
+    {
+      "code": "P2-SD-12",
+      "chapter": "SD",
+      "name_zh": "按新需求修改程序",
+      "name_en": "Amending a program for new requirements",
+      "summary": "需求改变后，说明对算法、模块或记录结构要做的修改；写出要改的那一行或移动的行号；概述扩展功能的设计；提出更高效的改法。",
+      "cues": [
+        "The requirements … are changed … Explain the changes that will need to be made",
+        "Describe the changes that the student needs to make to the algorithm",
+        "Change 1 may be implemented by modifying one line … Write the modified line",
+        "Write the number of the line to be moved and state its new position",
+        "Outline the changes that are necessary to meet the two requirements",
+        "Describe how this might be achieved / Describe how the design could be modified"
+      ],
+      "not": [
+        "P2-SD-06：原代码有错要改正 → SD-06",
+        "P2-AD-06：从零描述一个新算法 → AD-06",
+        "P2-SD-11：只问维护类型 → SD-11"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    }
+  ]
+}
