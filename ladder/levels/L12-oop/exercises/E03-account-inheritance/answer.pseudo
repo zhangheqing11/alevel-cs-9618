@@ -1,0 +1,7 @@
+CLASS Account
+
+ENDCLASS
+
+CLASS SavingsAccount INHERITS Account
+
+ENDCLASS

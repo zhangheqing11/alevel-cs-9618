@@ -1,0 +1,20 @@
+{
+  "id": "L12/E01",
+  "kind": "ladder",
+  "title": "A first class: private attributes, constructor, getters and setters",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "class-definition",
+    "encapsulation",
+    "getter-setter",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "Pet",
+  "ms_verified": false,
+  "difficulty": 2
+}
