@@ -1,0 +1,4 @@
+FUNCTION FilterMarks(InFile : STRING, OutFile : STRING, PassMark : INTEGER) RETURNS INTEGER
+   // find the comma with MID(), convert the mark with STR_TO_NUM()
+
+ENDFUNCTION

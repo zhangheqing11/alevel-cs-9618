@@ -1,0 +1,24 @@
+{
+  "id": "L07/E03",
+  "kind": "ladder",
+  "title": "Load words from a file into an array",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "file-open-read",
+    "loop-to-eof",
+    "file-close",
+    "array-index",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [
+    "game.txt",
+    "tie.txt",
+    "empty.txt"
+  ],
+  "entry": "load_words",
+  "ms_verified": false,
+  "difficulty": 3
+}

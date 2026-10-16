@@ -1,0 +1,24 @@
+{
+  "id": "L07/E01",
+  "kind": "ladder",
+  "title": "Dry run: read to end of file, skip blank lines, write a new file",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "file-open-read",
+    "loop-to-eof",
+    "file-write",
+    "file-close"
+  ],
+  "pseudocode": false,
+  "files": [
+    "words.txt",
+    "out.txt"
+  ],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 3
+}

@@ -1,0 +1,10 @@
+// global: WordArray : ARRAY[1:100] OF STRING
+// global: NumberWords : INTEGER
+PROCEDURE LoadWords(FileName : STRING)
+
+ENDPROCEDURE
+
+FUNCTION LongestWord() RETURNS STRING
+   // assume LoadWords() has already been called
+
+ENDFUNCTION

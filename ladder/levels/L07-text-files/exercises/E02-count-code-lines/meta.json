@@ -1,0 +1,26 @@
+{
+  "id": "L07/E02",
+  "kind": "ladder",
+  "title": "Count lines of code, skipping blank and comment lines",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "file-open-read",
+    "loop-to-eof",
+    "file-close",
+    "string-functions",
+    "char-loop"
+  ],
+  "pseudocode": true,
+  "files": [
+    "program1.txt",
+    "comments.txt",
+    "empty.txt",
+    "trailing.txt"
+  ],
+  "entry": "count_code_lines",
+  "ms_verified": false,
+  "difficulty": 3,
+  "adapted_from": "CS50P Problem Set 6 \"Lines of Code\" (https://cs50.harvard.edu/python/psets/6/lines/), CC BY-NC-SA 4.0; adapted: Cambridge pseudocode comments (//) instead of Python comments, file name as a parameter, no command-line arguments"
+}
