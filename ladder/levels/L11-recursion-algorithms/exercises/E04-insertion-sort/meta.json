@@ -1,0 +1,20 @@
+{
+  "id": "L11/E04",
+  "kind": "ladder",
+  "title": "Insertion sort: one insertion step, then the whole sort",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "insertion-sort",
+    "pre-condition-loop",
+    "array-index",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "InsertionSort",
+  "ms_verified": false,
+  "difficulty": 4
+}

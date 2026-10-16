@@ -1,0 +1,12 @@
+// global: LeftPointer, TreeData, RightPointer : ARRAY[0:9] OF INTEGER; RootPointer : INTEGER
+PROCEDURE InOrder(NodePointer : INTEGER)
+
+ENDPROCEDURE
+
+FUNCTION CountNodes(NodePointer : INTEGER) RETURNS INTEGER
+
+ENDFUNCTION
+
+FUNCTION TreeHeight(NodePointer : INTEGER) RETURNS INTEGER
+
+ENDFUNCTION

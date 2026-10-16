@@ -1,0 +1,20 @@
+{
+  "id": "L11/E05",
+  "kind": "ladder",
+  "title": "Recursive tree traversal: in-order output, count nodes, height",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "recursion",
+    "binary-tree",
+    "global-scope",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "InOrder",
+  "ms_verified": false,
+  "difficulty": 4
+}
