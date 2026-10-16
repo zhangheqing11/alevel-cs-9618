@@ -1,6 +1,6 @@
 # L01 · 变量、数据类型、输入输出与运算
 
-> 考纲 9.2、10.1、11.1（考纲 p.27–29）· 指南 §1–2（p.5–9）、§5.1–5.2（p.15）、§5.5–5.6（p.16–17）· 插页函数表（以 9618_s26_in_21 p.2–4 为代表）
+> 考纲 9.2、10.1、11.1（考纲 p.27–29）· 指南 §1–2（p.5–9）、§5.1–5.2（p.15）、§5.5–5.6（p.16–17）· 插页函数表（以 9618_w25_in_21 p.2–4 为代表）
 
 ## 本级目标
 
@@ -207,7 +207,7 @@ if __name__ == "__main__":
 - CS50P Problem Set 0 “Tip Calculator”：<https://cs50.harvard.edu/python/psets/0/tip/>（E03 的改编来源；CC BY-NC-SA 4.0）
 - Think Python 3e（Allen B. Downey，CC BY-NC-SA 4.0）：第 1 章 [Arithmetic operators](https://allendowney.github.io/ThinkPython/chap01.html#arithmetic-operators)、[Values and types](https://allendowney.github.io/ThinkPython/chap01.html#values-and-types)；第 2 章 [Variables](https://allendowney.github.io/ThinkPython/chap02.html#variables)、[Variable names](https://allendowney.github.io/ThinkPython/chap02.html#variable-names)、[The print function](https://allendowney.github.io/ThinkPython/chap02.html#the-print-function)；第 5 章 [5.1 Integer division and modulus](https://allendowney.github.io/ThinkPython/chap05.html#integer-division-and-modulus)。
 - 教材 Langfield & Duddell 2e：12.04–12.05 Variables / Assignments（p.184）、14.02 Programming basics（p.243）、14.03 Data types（p.248）、14.07 Built-in functions（p.260）。书中伪代码与 2027–29 指南不同时以指南为准。
-- 官方：伪代码指南 §1–2、§5（p.5–9、p.15–17）；P2 插页函数表（`sources/pastpapers/9618_s26_in_21.pdf` p.2–4）。
+- 官方：伪代码指南 §1–2、§5（p.5–9、p.15–17）；P2 插页函数表（`sources/pastpapers/9618_w25_in_21.pdf` p.2–4）。
 
 ## 练习
 
