@@ -1,0 +1,1863 @@
+{
+  "component": 1,
+  "version": "1.1",
+  "chapters": [
+    {
+      "code": "IR",
+      "name_zh": "信息表示",
+      "name_en": "Information representation",
+      "syllabus": [
+        "1.1",
+        "1.2",
+        "1.3"
+      ]
+    },
+    {
+      "code": "CM",
+      "name_zh": "通信",
+      "name_en": "Communication",
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "HW",
+      "name_zh": "硬件",
+      "name_en": "Hardware",
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "LG",
+      "name_zh": "逻辑门与逻辑电路",
+      "name_en": "Logic gates and logic circuits",
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "PF",
+      "name_zh": "处理器基础",
+      "name_en": "Processor fundamentals",
+      "syllabus": [
+        "4.1",
+        "4.2",
+        "4.3"
+      ]
+    },
+    {
+      "code": "SS",
+      "name_zh": "系统软件",
+      "name_en": "System software",
+      "syllabus": [
+        "5.1",
+        "5.2"
+      ]
+    },
+    {
+      "code": "SP",
+      "name_zh": "安全、隐私与数据完整性",
+      "name_en": "Security, privacy and data integrity",
+      "syllabus": [
+        "6.1",
+        "6.2"
+      ]
+    },
+    {
+      "code": "EO",
+      "name_zh": "伦理与所有权",
+      "name_en": "Ethics and ownership",
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "DB",
+      "name_zh": "数据库",
+      "name_en": "Databases",
+      "syllabus": [
+        "8.1",
+        "8.2",
+        "8.3"
+      ]
+    }
+  ],
+  "types": [
+    {
+      "code": "P1-IR-01",
+      "chapter": "IR",
+      "name_zh": "二进制量级与单位前缀",
+      "name_en": "Binary magnitudes and prefixes",
+      "summary": "二进制前缀（kibi/mebi/gibi/tebi，按 1024 进）与十进制前缀（kilo/mega/giga/tera，按 1000 进）的区别与换算；n 位能表示多少个不同值、存某个值最少要几位。",
+      "cues": [
+        "kibibyte / mebibyte / gibibyte / tebibyte 与 kilobyte / megabyte / gigabyte / terabyte 并列出现",
+        "State (one) difference between a kibibyte and a kilobyte",
+        "binary prefix / decimal (denary) prefix",
+        "Tick one box to identify the largest file size（混合单位比大小）",
+        "State the number of unique binary values that can be represented in n bits",
+        "minimum number of bits used to store each example of data"
+      ],
+      "not": [
+        "P1-IR-03：问补码能表示的最小/最大值 → IR-03",
+        "P1-IR-12：在图像/声音情境里算文件大小或颜色数 → IR-12（单位换算只是其中一步）"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-02",
+      "chapter": "IR",
+      "name_zh": "进制转换（无符号与 BCD）",
+      "name_en": "Number base conversion: unsigned binary, denary, hexadecimal and BCD",
+      "summary": "在无符号二进制、十进制、十六进制、BCD 之间互相转换（含写步骤、填表、连线），以及说明一串位为什么不是合法 BCD。",
+      "cues": [
+        "Convert the unsigned binary integer / hexadecimal number / denary number into …",
+        "Convert … into Binary Coded Decimal (BCD) / Convert the BCD into denary",
+        "Complete the table by calculating the missing values（denary / binary / hexadecimal / BCD 各列）",
+        "Show your working（进制转换）",
+        "State why the value cannot be interpreted as BCD"
+      ],
+      "not": [
+        "P1-IR-03：题目写明 two's complement / one's complement / 负数 → IR-03",
+        "P1-IR-04：问 BCD 或十六进制用在哪里、为什么用 → IR-04",
+        "P1-IR-06：必须利用「字符编码连续」才能求出某字符的码值 → IR-06；码值已给、只做进制转换 → IR-02"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-03",
+      "chapter": "IR",
+      "name_zh": "有符号整数：补码与反码",
+      "name_en": "Signed integers: two's complement and one's complement",
+      "summary": "十进制负数与 n 位补码（或反码）互转、说明转换步骤、n 位补码能表示的最小值与最大值。",
+      "cues": [
+        "two's complement binary integer → denary / denary → n-bit two's complement",
+        "one's complement representation",
+        "smallest / largest … two's complement … 8 / 12 / 16 bits",
+        "Explain how to convert the two's complement integer … into denary",
+        "signed denary value −…"
+      ],
+      "not": [
+        "P1-IR-02：无符号数或 BCD → IR-02",
+        "P1-IR-05：要做加减运算（即使用补码做减法）→ IR-05",
+        "P1-PF-11：对补码数做算术移位 → PF-11"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-04",
+      "chapter": "IR",
+      "name_zh": "BCD 与十六进制的应用",
+      "name_en": "Applications of BCD and hexadecimal",
+      "summary": "说出 BCD（或十六进制）的一个实际应用并论证为什么在该场合使用，或列举使用 BCD 的好处。",
+      "cues": [
+        "Identify / Give one (practical) application where BCD is used and justify its use",
+        "State two benefits of using Binary Coded Decimal (BCD)",
+        "Application … Justification 两栏表",
+        "why hexadecimal is used（如 MAC 地址、颜色码、错误码）"
+      ],
+      "not": [
+        "P1-IR-02：只要求转换数值 → IR-02"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-05",
+      "chapter": "IR",
+      "name_zh": "二进制加减法与溢出",
+      "name_en": "Binary addition, subtraction and overflow",
+      "summary": "做 n 位二进制加法或减法（直接借位，或转补码后相加），写出进位/借位过程并标出溢出；解释溢出是什么、为什么会发生。",
+      "cues": [
+        "Add / Perform / Complete the following binary addition. Show your working.",
+        "Subtract … using binary subtraction",
+        "Include any overflow bit(s)",
+        "State what is meant by an overflow / State one reason why … can result in overflow",
+        "Name and describe the error that can occur when binary addition is performed"
+      ],
+      "not": [
+        "P1-IR-03：只转换补码、不做运算 → IR-03",
+        "P1-PF-09：汇编情境中执行 ADD/SUB 指令后求 ACC → PF-09"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-06",
+      "chapter": "IR",
+      "name_zh": "字符集",
+      "name_en": "Character sets: ASCII, extended ASCII and Unicode",
+      "summary": "字符集是什么；文本如何按字符集存成二进制（每个字符有唯一编码、按顺序存放、相邻字符码值连续）；ASCII、扩展 ASCII、Unicode 的位数、可表示字符数、差异与优缺点。",
+      "cues": [
+        "character set / ASCII / extended ASCII / Unicode",
+        "Explain how the word '…' / text is represented by a character set",
+        "Give two differences / advantages … Unicode … instead of ASCII",
+        "number of bits each character set allocates / number of characters that can be represented",
+        "The Unicode value for '0' is … Write the value for '5'（利用码值连续）"
+      ],
+      "not": [
+        "P1-IR-02：字符的码值已经给出，只要求换成另一进制 → IR-02"
+      ],
+      "syllabus": [
+        "1.1"
+      ]
+    },
+    {
+      "code": "P1-IR-07",
+      "chapter": "IR",
+      "name_zh": "位图编码与术语",
+      "name_en": "Bitmap images: encoding and terms",
+      "summary": "解释位图如何编码（由像素组成、每像素一种颜色、每种颜色有唯一二进制码、按顺序存放、文件头），定义 pixel、colour/bit depth、image resolution、screen resolution、file header，说出文件头里存什么。",
+      "cues": [
+        "Describe / Explain how the data for a bitmapped image is encoded",
+        "Define / Complete the table by defining: pixel, colour depth, bit depth, image resolution, file header",
+        "difference between the terms image resolution and screen resolution",
+        "Identify … other items that could be included in the file header",
+        "Explain why the actual file size may be larger than the one calculated（文件头/元数据）"
+      ],
+      "not": [
+        "P1-IR-08：问改变分辨率/色深对质量或大小的影响 → IR-08",
+        "P1-IR-12：要算文件大小或最少位深 → IR-12",
+        "P1-IR-09：矢量图术语 → IR-09"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-08",
+      "chapter": "IR",
+      "name_zh": "改变位图参数的影响",
+      "name_en": "Effects of changing bitmap resolution and colour depth",
+      "summary": "说明提高或降低图像分辨率、色深对图像质量（细节、像素化、颜色数）和文件大小的影响与原因，或指出可以改哪些参数来减小文件。",
+      "cues": [
+        "Explain / Describe the effect of increasing / decreasing the bit depth / colour depth / image resolution",
+        "Effect on image … Effect on image file / image quality … file size",
+        "Identify two elements of a bitmap image that can be changed to reduce its file size",
+        "Tick … to identify the effect of each action on the image file size",
+        "State one drawback of increasing the number of bits that represents each pixel"
+      ],
+      "not": [
+        "P1-IR-11：声音的采样率/采样分辨率 → IR-11",
+        "P1-IR-15：把降低色深当作有损压缩方法来描述 → IR-15"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-09",
+      "chapter": "IR",
+      "name_zh": "矢量图及与位图的比较",
+      "name_en": "Vector graphics and bitmap vs vector",
+      "summary": "矢量图如何编码（drawing object、property、drawing list）及术语定义与举例；位图与矢量图的差异，为给定任务选择其一并论证。",
+      "cues": [
+        "vector graphic / drawing list / drawing object / property",
+        "Describe the contents of a vector graphic drawing list",
+        "differences between a vector graphic and a bitmap image",
+        "benefits of creating a vector graphic instead of a bitmap image",
+        "Tick … whether a bitmap image or a vector graphic will be most appropriate … Justify your choice"
+      ],
+      "not": [
+        "P1-IR-07：只问位图术语或位图编码 → IR-07"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-10",
+      "chapter": "IR",
+      "name_zh": "声音的数字化与术语",
+      "name_en": "Sound representation and terms",
+      "summary": "解释声音如何数字化（模拟声波、按固定时间间隔测量振幅、每个样本存为二进制数），定义 sampling、sampling rate、sampling resolution、analogue data。",
+      "cues": [
+        "Describe how sound is represented / encoded in a computer",
+        "Explain how an analogue sound wave is converted into digital data",
+        "State what is meant by sampling rate / sampling resolution / analogue data",
+        "Describe what is meant by a sampling rate of 44.1 kHz",
+        "Complete the table by giving the term for each description about sound"
+      ],
+      "not": [
+        "P1-IR-11：问改变采样率/分辨率的影响 → IR-11",
+        "P1-IR-12：算声音文件大小 → IR-12"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-11",
+      "chapter": "IR",
+      "name_zh": "采样参数改变的影响",
+      "name_en": "Effects of changing sampling rate and sampling resolution",
+      "summary": "说明提高或降低采样率、采样分辨率对录音准确度（与原声的接近程度）和文件大小的影响及原因。",
+      "cues": [
+        "Explain the effect of increasing / decreasing the sampling rate / sampling resolution",
+        "on the accuracy / precision of the (sound) recording / on the file size",
+        "Describe the reasons why the sound is closer to the original when a higher sample rate is used",
+        "Tick … to identify the effect of each action on the accuracy of the recording",
+        "Draw lines from each change to the impacts it has on the sound file"
+      ],
+      "not": [
+        "P1-IR-10：只定义术语或描述采样过程 → IR-10",
+        "P1-IR-15：把降低采样率当作压缩方法来描述 → IR-15"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-12",
+      "chapter": "IR",
+      "name_zh": "多媒体文件大小与位深计算",
+      "name_en": "Multimedia calculations: file size, bit depth and number of colours",
+      "summary": "用 宽×高×色深（视频再 × 帧数 × 秒数；声音为 采样率 × 采样分辨率 × 时长）估算文件大小并换算成要求的单位；由颜色数求最少位深，或由位数求最多颜色数。",
+      "cues": [
+        "Calculate (an estimate for) the file size … Show your working",
+        "Give your answer in megabytes / mebibytes / kibibytes / bytes",
+        "pixels wide … pixels high … bit depth / colour depth",
+        "frames … per second / sampling rate … sampling resolution … minutes",
+        "Identify the smallest bit depth / smallest number of bits … for the image shown",
+        "State the largest number of different colours that can be represented by n bits"
+      ],
+      "not": [
+        "P1-IR-01：没有多媒体情境的单位比较或「n 位能表示几个值」→ IR-01",
+        "P1-IR-08：只定性说影响、不计算 → IR-08"
+      ],
+      "syllabus": [
+        "1.2"
+      ]
+    },
+    {
+      "code": "P1-IR-13",
+      "chapter": "IR",
+      "name_zh": "压缩的理由",
+      "name_en": "Reasons for compression",
+      "summary": "说明在给定场景中压缩文件的理由与好处（占用存储更少、传输/下载更快、占用带宽更少、满足附件大小限制），或说明为什么某场景不需要压缩。",
+      "cues": [
+        "Explain the reasons why … is compressed (before it is transmitted / attached to an email)",
+        "Explain the benefits … of the attachment being a compressed file",
+        "Give two reasons why the video does not need to be compressed",
+        "Explain the reasons for compressing the files"
+      ],
+      "not": [
+        "P1-IR-14：要在有损与无损之间选择或比较 → IR-14",
+        "P1-IR-15：问怎样压缩 → IR-15"
+      ],
+      "syllabus": [
+        "1.3"
+      ]
+    },
+    {
+      "code": "P1-IR-14",
+      "chapter": "IR",
+      "name_zh": "有损与无损：选择与论证",
+      "name_en": "Lossy vs lossless compression: choose and justify",
+      "summary": "区分有损与无损压缩，为给定文件（文本、照片、实时视频、声音）选择更合适的一种并论证，或判断某种做法属于哪一种。",
+      "cues": [
+        "Identify whether the lossy or lossless compression method is more appropriate … Justify your answer",
+        "Tick one box … Lossy / Lossless … Justification",
+        "Explain why lossless compression is more appropriate than lossy for a text file / why lossy should not be used on a text file",
+        "Give three benefits of … lossy compression instead of lossless compression",
+        "State whether this is lossless or lossy compression. Justify your choice."
+      ],
+      "not": [
+        "P1-IR-13：只问为什么要压缩 → IR-13",
+        "P1-IR-15：描述具体压缩方法 → IR-15"
+      ],
+      "syllabus": [
+        "1.3"
+      ]
+    },
+    {
+      "code": "P1-IR-15",
+      "chapter": "IR",
+      "name_zh": "压缩方法",
+      "name_en": "Compression methods: RLE and lossy techniques",
+      "summary": "描述文本、位图、声音的具体压缩方法：游程编码 RLE（能按 RLE 编码/解码一串数据，说明何时不省空间）；有损方法如降低色深/分辨率/采样率、去掉人听不到的声音。",
+      "cues": [
+        "Describe / Explain how … can be compressed using run-length encoding (RLE)",
+        "Describe one lossless / lossy method of compressing a text file / sound file / image",
+        "Complete the table（uncompressed 与 RLE compressed 对照）",
+        "Explain the reasons why RLE may not reduce the file size",
+        "Explain how the image shown can be compressed using lossless compression"
+      ],
+      "not": [
+        "P1-IR-14：重点是选哪种并论证 → IR-14",
+        "P1-SS-02：只问压缩实用软件的用途 → SS-02"
+      ],
+      "syllabus": [
+        "1.3"
+      ]
+    },
+    {
+      "code": "P1-CM-01",
+      "chapter": "CM",
+      "name_zh": "局域网与广域网",
+      "name_en": "LAN and WAN",
+      "summary": "联网的好处；LAN 与 WAN 的特征与区别（地理范围、基础设施归谁、传输介质），为情境选择 LAN 或 WAN 并论证。",
+      "cues": [
+        "Give two benefits of connecting computers to a LAN",
+        "Give / Describe the characteristics of a LAN / WAN",
+        "Identify / State two differences between a WAN and a LAN",
+        "State whether the network will be a LAN or a WAN. Justify your choice."
+      ],
+      "not": [
+        "P1-CM-03：问拓扑结构 → CM-03",
+        "P1-CM-06：问有线/无线或传输介质 → CM-06"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-02",
+      "chapter": "CM",
+      "name_zh": "网络模型：客户端-服务器、对等网、瘦/胖客户端",
+      "name_en": "Network models: client-server, peer-to-peer, thin and thick client",
+      "summary": "描述客户端-服务器与对等网络中各台计算机的角色、优缺点并结合情境论证；瘦客户端与胖客户端的含义与特征。",
+      "cues": [
+        "client-server model … Describe the roles of the different devices / computers",
+        "peer-to-peer network … key features / drawbacks",
+        "thin-client / thick-client … characteristics / what is meant by",
+        "Explain the reasons why the statement '… uses a client-server model' is correct"
+      ],
+      "not": [
+        "P1-CM-08：问云计算或公有/私有云 → CM-08"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-03",
+      "chapter": "CM",
+      "name_zh": "网络拓扑",
+      "name_en": "Network topologies",
+      "summary": "总线、星型、网状、混合拓扑的结构特点、优缺点比较、按语句勾选拓扑、为情境选择拓扑并论证，以及画出或补全拓扑连接图。",
+      "cues": [
+        "bus / star / mesh / hybrid topology",
+        "Describe what is meant by a mesh topology",
+        "advantage(s) of … star topology instead of a bus topology",
+        "Draw a diagram to show the layout of … star topology / Complete the diagram to show how the hardware is connected",
+        "Identify the topology of … network. Justify your choice.",
+        "Tick one or more boxes … to identify the topology each statement describes"
+      ],
+      "not": [
+        "P1-CM-04：问数据包在某拓扑中怎样传输 → CM-04",
+        "P1-CM-07：总线网的冲突检测（CSMA/CD）→ CM-07"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-04",
+      "chapter": "CM",
+      "name_zh": "拓扑中的数据包传输",
+      "name_en": "How packets are transmitted in a topology",
+      "summary": "按步骤描述数据包在星型网络（经交换机按目的地址转发）或总线网络（在总线上广播、只有目的节点接收）中两台主机之间怎样传输。",
+      "cues": [
+        "Explain / Describe how packets are transmitted between two devices / hosts in a star topology",
+        "Explain how data is transmitted between the two laptops in the LAN",
+        "Explain how data is transmitted between two nodes in a bus topology"
+      ],
+      "not": [
+        "P1-CM-03：只问拓扑特点或优缺点 → CM-03",
+        "P1-CM-05：只问交换机/路由器的作用 → CM-05"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-05",
+      "chapter": "CM",
+      "name_zh": "网络硬件与路由器",
+      "name_en": "Networking hardware and routers",
+      "summary": "交换机、集线器、服务器、NIC、WNIC、无线接入点 WAP、网桥、中继器的用途；路由器的作用（接收数据包、读目的 IP、选路转发、连接不同网络/接入互联网）。",
+      "cues": [
+        "Describe the role / function of a router / switch in a network",
+        "Complete the table by writing the purpose of each hardware device (switch, WAP, bridge, repeater)",
+        "Identify two possible devices that can be used to physically connect …",
+        "Describe the functions of a Wireless Network Interface Card (WNIC)",
+        "Tick … whether the task is performed by the router or not"
+      ],
+      "not": [
+        "P1-CM-09：调制解调器、PSTN、专线、蜂窝网络等互联网支撑硬件 → CM-09",
+        "P1-SP-03：防火墙作为安全措施 → SP-03"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-06",
+      "chapter": "CM",
+      "name_zh": "有线与无线、传输介质",
+      "name_en": "Wired and wireless networks; transmission media",
+      "summary": "有线与无线网络的优缺点及选择；铜缆、光纤、无线电波（WiFi）、微波、卫星的特性与比较。",
+      "cues": [
+        "wired or wireless … Justify / advantages of a wireless network compared to a wired network",
+        "benefits … of allowing them to use both wired and wireless connections",
+        "differences between fibre-optic cables and copper cables",
+        "transmitting data using satellites instead of copper cables",
+        "identifying and describing two other transmission media"
+      ],
+      "not": [
+        "P1-CM-05：问 WNIC、WAP 等设备本身的功能 → CM-05"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-07",
+      "chapter": "CM",
+      "name_zh": "以太网与 CSMA/CD",
+      "name_en": "Ethernet and CSMA/CD",
+      "summary": "以太网是什么；CSMA/CD 如何侦听信道、检测冲突、发送阻塞信号、随机等待后重发，以及它的缺点。",
+      "cues": [
+        "Describe what is meant by Ethernet",
+        "Carrier Sense Multiple Access / Collision Detection (CSMA/CD)",
+        "Describe how collisions are detected and managed / avoided",
+        "State three tasks performed by devices to deal with collisions",
+        "Identify two drawbacks of using CSMA/CD"
+      ],
+      "not": [
+        "P1-CM-04：只问数据在总线上怎样传输、不涉及冲突 → CM-04"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-08",
+      "chapter": "CM",
+      "name_zh": "云计算",
+      "name_en": "Cloud computing",
+      "summary": "云计算、公有云、私有云的定义；结合情境说明使用云（或公有云/私有云）的好处与缺点。",
+      "cues": [
+        "Define cloud computing / State what is meant by a public cloud / private cloud",
+        "benefits / drawbacks of (storing data using) cloud computing",
+        "private cloud storage instead of public cloud storage",
+        "Discuss the benefits and drawbacks of storing … in the cloud"
+      ],
+      "not": [
+        "P1-CM-02：客户端-服务器模型中各机器的角色 → CM-02"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-09",
+      "chapter": "CM",
+      "name_zh": "互联网与万维网基础设施",
+      "name_en": "Internet, WWW and supporting infrastructure",
+      "summary": "互联网与 WWW 的区别；调制解调器、PSTN、专线、蜂窝网络在互联网数据传输中的作用；URL 如何经 DNS 定位网页资源。",
+      "cues": [
+        "internet … World Wide Web (WWW) … or both",
+        "modems / dedicated lines / PSTN (Public Switched Telephone Network)",
+        "Explain how data is transmitted using the cell phone network",
+        "Uniform Resource Locator (URL) … web browser … Domain Name Service (DNS)"
+      ],
+      "not": [
+        "P1-CM-05：路由器的作用 → CM-05",
+        "P1-CM-10：IP 地址格式与类型 → CM-10"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-10",
+      "chapter": "CM",
+      "name_zh": "IP 地址",
+      "name_en": "IP addresses",
+      "summary": "IPv4 与 IPv6 的格式与区别、判断地址是否合法；公有/私有、静态/动态 IP 的含义、用途与安全含义；IP 地址如何与设备关联。",
+      "cues": [
+        "IPv4 / IPv6 … groups / bits / full stops / colons / hexadecimal",
+        "Explain why this is not an IPv6 address / Circle whether this IP address is IPv4, IPv6 or invalid",
+        "public IP address / private IP address / static / dynamic",
+        "State what is meant by a static private IP address",
+        "Complete the description of IP addresses"
+      ],
+      "not": [
+        "P1-CM-11：子网、网络 ID/主机 ID、子网掩码 → CM-11"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-11",
+      "chapter": "CM",
+      "name_zh": "子网划分",
+      "name_en": "Subnetting",
+      "summary": "子网划分的目的与好处（提高安全、减少流量、便于管理与扩展）；子网中的 IP 地址分为网络 ID 与主机 ID，结合子网掩码求出网络 ID、主机 ID。",
+      "cues": [
+        "subnetting / subnetworks / subnet mask",
+        "Describe two benefits of subnetting a network",
+        "network ID / host ID",
+        "Describe the purpose of subnetting in a network"
+      ],
+      "not": [
+        "P1-CM-10：IP 地址类型与格式 → CM-10"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-CM-12",
+      "chapter": "CM",
+      "name_zh": "位流传输",
+      "name_en": "Bit streaming",
+      "summary": "位流的含义；实时与点播位流的区别与过程（编码压缩、经媒体服务器连续传输、缓冲）；带宽/比特率对位流的影响。",
+      "cues": [
+        "State what is meant by bit streaming",
+        "real-time and on-demand bit streaming",
+        "Explain how data is transferred using real-time bit streaming",
+        "Explain how bit streaming is used in a real-time video conference",
+        "bit rate / broadband speed"
+      ],
+      "not": [
+        "P1-IR-13：流媒体前为什么要压缩 → IR-13（得分点涉及实时/缓冲时加副题型 CM-12）",
+        "P1-HW-06：只问缓冲区的作用 → HW-06"
+      ],
+      "syllabus": [
+        "2.1"
+      ]
+    },
+    {
+      "code": "P1-HW-01",
+      "chapter": "HW",
+      "name_zh": "主存：RAM 与 ROM",
+      "name_en": "Primary memory: RAM and ROM",
+      "summary": "输入、输出、主存、辅存各自为什么需要；RAM 与 ROM 的区别、各自存什么、在嵌入式或其他设备中的用途；某项数据该放主存还是辅存。",
+      "cues": [
+        "Random Access Memory (RAM) … Read Only Memory (ROM)",
+        "Describe two differences between RAM and ROM",
+        "State the purpose of RAM and ROM within …",
+        "Describe the contents of the ROM / Explain the reasons why ROM is used in an embedded system",
+        "Identify … data … stored in primary memory / primary or secondary storage"
+      ],
+      "not": [
+        "P1-HW-02：SRAM 与 DRAM → HW-02",
+        "P1-HW-03：PROM / EPROM / EEPROM → HW-03",
+        "P1-PF-05：RAM 容量对性能的影响 → PF-05"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-02",
+      "chapter": "HW",
+      "name_zh": "SRAM 与 DRAM",
+      "name_en": "Static RAM and dynamic RAM",
+      "summary": "SRAM 与 DRAM 的差异（触发器 vs 电容、是否需要刷新、访问速度、成本、存储密度、功耗），为设备选择其一并说明理由。",
+      "cues": [
+        "Dynamic RAM (DRAM) … Static RAM (SRAM)",
+        "advantages / disadvantages of using DRAM instead of SRAM",
+        "Explain why Static RAM is used in … instead of Dynamic RAM",
+        "State three differences between DRAM and SRAM"
+      ],
+      "not": [
+        "P1-HW-01：RAM 与 ROM → HW-01"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-03",
+      "chapter": "HW",
+      "name_zh": "PROM、EPROM 与 EEPROM",
+      "name_en": "PROM, EPROM and EEPROM",
+      "summary": "三种可编程 ROM 的区别（只能写一次 / 紫外线擦除且需取出 / 电信号擦除可原位重写），以及在设备中使用 EEPROM 的理由。",
+      "cues": [
+        "Programmable ROM (PROM) / Erasable Programmable ROM (EPROM) / Electrically Erasable Programmable ROM (EEPROM)",
+        "Explain the benefits of using EEPROM instead of other types of ROM",
+        "naming and describing two other types of ROM",
+        "the type of memory technology for each description"
+      ],
+      "not": [
+        "P1-HW-01：一般的 RAM/ROM 区别 → HW-01"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-04",
+      "chapter": "HW",
+      "name_zh": "存储设备原理与选择",
+      "name_en": "Secondary storage devices: principal operation and choice",
+      "summary": "磁性硬盘、固态（闪存）存储、光盘读写器的工作原理；结合情境在磁性存储与固态存储之间选择并说明理由。",
+      "cues": [
+        "Describe the principal operation(s) of a magnetic hard disk / optical disc reader/writer / solid state (flash) memory",
+        "platters / read/write head / NAND / NOR / laser / pits and lands",
+        "reasons why magnetic storage is more appropriate than solid state storage",
+        "magnetic hard disks instead of solid state (flash) memory"
+      ],
+      "not": [
+        "P1-HW-05：输入输出设备 → HW-05",
+        "P1-HW-06：写盘时用缓冲区 → HW-06"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-05",
+      "chapter": "HW",
+      "name_zh": "输入输出设备原理",
+      "name_en": "Input and output devices: principal operation",
+      "summary": "触摸屏（电阻式/电容式）、麦克风、扬声器、激光打印机、3D 打印机、VR 头显的工作原理（常以填空出现）。",
+      "cues": [
+        "Describe the principal operation of a touchscreen / microphone / speaker / laser printer / 3D printer",
+        "resistive / capacitive touchscreen",
+        "Complete the description of the principal operation of a VR headset",
+        "Explain how a touchscreen converts the point of touch to a selection",
+        "Explain how the model will be printed using a 3D printer"
+      ],
+      "not": [
+        "P1-HW-04：存储设备 → HW-04",
+        "P1-HW-09：传感器的选择与用途 → HW-09"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-06",
+      "chapter": "HW",
+      "name_zh": "缓冲区",
+      "name_en": "Buffers",
+      "summary": "缓冲区作为临时存储解决设备之间速度不一致：数据先送入缓冲区、处理器可以去做别的事、缓冲区空或满时发中断；在打印机、光盘、硬盘、声音播放等情境中描述其用法。",
+      "cues": [
+        "buffer / memory buffer",
+        "Describe how … will use the buffer / Explain the use of a buffer when writing data to …",
+        "Describe the purpose of the buffer",
+        "State why a 3D printer needs a buffer"
+      ],
+      "not": [
+        "P1-PF-04：中断处理本身 → PF-04",
+        "P1-CM-12：流媒体整体过程 → CM-12"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-07",
+      "chapter": "HW",
+      "name_zh": "嵌入式系统",
+      "name_en": "Embedded systems",
+      "summary": "嵌入式系统的定义与特征（专用、嵌在更大的系统里、软硬件结合、固件），说明某设备为什么是嵌入式系统，以及嵌入式系统的优点与缺点。",
+      "cues": [
+        "embedded system",
+        "Explain why … is an example of an embedded system / Identify two characteristics … that suggest it is an embedded system",
+        "Describe the drawbacks / features of embedded systems",
+        "Give one example of an embedded system and explain why"
+      ],
+      "not": [
+        "P1-HW-08：监测/控制系统 → HW-08",
+        "P1-HW-01：嵌入式系统里 RAM/ROM 的用途 → HW-01"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-08",
+      "chapter": "HW",
+      "name_zh": "监测系统与控制系统",
+      "name_en": "Monitoring and control systems",
+      "summary": "区分监测系统与控制系统，判断情境属于哪一种并论证（选择本身通常不给分）；反馈在控制系统中的作用。",
+      "cues": [
+        "State / Explain whether … is a monitoring system or a control system. Justify",
+        "Describe the differences between a monitoring system and a control system",
+        "Explain the importance of feedback in a control system / Describe how feedback is used",
+        "Identify whether the automated system is an example of a monitoring or control system"
+      ],
+      "not": [
+        "P1-HW-09：选传感器或说执行器的作用 → HW-09"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-HW-09",
+      "chapter": "HW",
+      "name_zh": "传感器与执行器",
+      "name_en": "Sensors and actuators",
+      "summary": "为情境选择合适的传感器（温度、压力、红外、声音、光、接近）并说明用途；执行器在控制系统中的作用。",
+      "cues": [
+        "Identify one (appropriate) type of sensor that can be used … State how / purpose",
+        "Complete the table by identifying two sensors … and the purpose of each",
+        "Describe the purpose of a temperature sensor within …",
+        "Describe the role of an actuator"
+      ],
+      "not": [
+        "P1-HW-08：判断监测还是控制、或说反馈 → HW-08"
+      ],
+      "syllabus": [
+        "3.1"
+      ]
+    },
+    {
+      "code": "P1-LG-01",
+      "chapter": "LG",
+      "name_zh": "逻辑门的功能与单门真值表",
+      "name_en": "Logic gate functions and single-gate truth tables",
+      "summary": "NOT、AND、OR、NAND、NOR、XOR 的功能描述、符号、单个门的真值表；按描述识别门、写出使输出为 1 的输入、找出电路中没用到的门。",
+      "cues": [
+        "Describe the operation / function of the NAND / NOR / XOR logic gates",
+        "Complete the truth table for each of the following two logic gates / Create and complete the truth table for a two-input NAND gate",
+        "Tick … to identify the logic gate that each statement describes",
+        "writing one set of values (input 1 and input 2) for each gate that will give the output 1",
+        "Identify one logic gate not used in the given logic circuit / State two logic gates that are not in the circuit"
+      ],
+      "not": [
+        "P1-LG-04：多个门组合的真值表 → LG-04"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-LG-02",
+      "chapter": "LG",
+      "name_zh": "由逻辑表达式画电路",
+      "name_en": "Drawing a logic circuit from an expression",
+      "summary": "按括号层次把逻辑表达式画成电路（除 NOT 外每门两输入，不加多余的门）。",
+      "cues": [
+        "Draw a / the logic circuit for (this / the given) logic expression",
+        "X = NOT ((A AND B) OR …) 之后是输入 A、B、C 与输出 X 的作图区"
+      ],
+      "not": [
+        "P1-LG-03：由电路写表达式 → LG-03",
+        "P1-LG-06：从问题描述（参数表）出发 → LG-06"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-LG-03",
+      "chapter": "LG",
+      "name_zh": "由电路写逻辑表达式",
+      "name_en": "Writing a logic expression from a circuit",
+      "summary": "读电路图，从输入到输出逐门写出逻辑表达式（不化简、括号正确）。",
+      "cues": [
+        "Write the logic expression(s) for the (following / given) logic circuit",
+        "Write the Boolean expression that corresponds to the following logic circuit",
+        "X = …  Y = …（电路图后留空）"
+      ],
+      "not": [
+        "P1-LG-05：由真值表写表达式 → LG-05",
+        "P1-LG-04：由电路填真值表 → LG-04"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-LG-04",
+      "chapter": "LG",
+      "name_zh": "构造真值表",
+      "name_en": "Completing a truth table from an expression or circuit",
+      "summary": "由逻辑表达式或电路图逐步算出中间列，完成三输入（或多输出）真值表；或检查给定真值表哪些行错了。",
+      "cues": [
+        "Complete the truth table for this / the (following) logic expression / the given logic circuit",
+        "Working space（真值表旁的中间列）",
+        "Identify the row numbers … that are incorrect"
+      ],
+      "not": [
+        "P1-LG-01：单个门的真值表 → LG-01",
+        "P1-LG-05：由真值表反推表达式 → LG-05"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-LG-05",
+      "chapter": "LG",
+      "name_zh": "由真值表写逻辑表达式",
+      "name_en": "Deriving a logic expression from a truth table",
+      "summary": "从真值表中输出为 1 的行写出（积之和）表达式，或在选项中勾选、连线匹配对应的表达式。",
+      "cues": [
+        "Write the logic expression / logic statement for this / the following truth table",
+        "Tick one box to identify the correct logic statement for this truth table",
+        "Draw one line to match each truth table with its logic expression"
+      ],
+      "not": [
+        "P1-LG-04：由表达式填真值表 → LG-04"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-LG-06",
+      "chapter": "LG",
+      "name_zh": "由问题描述建立逻辑表达式",
+      "name_en": "Logic expression from a problem statement",
+      "summary": "读参数表（每个输入取 1/0 各代表什么）和文字条件，写出逻辑表达式或画出电路。",
+      "cues": [
+        "operate(s) according to the following criteria",
+        "Parameter / Description of parameter / Binary value / Condition 四栏表",
+        "Write the logic expression(s) for …（条件由文字给出，没有电路图）"
+      ],
+      "not": [
+        "P1-LG-03：给的是电路图 → LG-03",
+        "P1-LG-02：给的是现成表达式 → LG-02"
+      ],
+      "syllabus": [
+        "3.2"
+      ]
+    },
+    {
+      "code": "P1-PF-01",
+      "chapter": "PF",
+      "name_zh": "冯·诺依曼模型、CPU 部件与总线",
+      "name_en": "Von Neumann model, CPU components and buses",
+      "summary": "存储程序概念；ALU、CU、系统时钟、IAS 的作用与协作；地址总线、数据总线、控制总线传什么、方向与作用（含控制总线上的信号）。",
+      "cues": [
+        "stored program concept / Von Neumann model",
+        "purpose of the Control Unit (CU) / system clock / ALU / Immediate Access Store (IAS)",
+        "Explain how the CU and the system clock work together",
+        "address bus / data bus / control bus … Identify two types of signal that a control bus can transfer",
+        "Identify three other components in the Von Neumann model",
+        "Tick … the system bus used by each CPU component"
+      ],
+      "not": [
+        "P1-PF-02：寄存器的作用 → PF-02",
+        "P1-PF-05：总线宽度、时钟速度对性能的影响 → PF-05"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-02",
+      "chapter": "PF",
+      "name_zh": "寄存器的作用",
+      "name_en": "Registers: roles and types",
+      "summary": "PC、MAR、MDR、ACC、IX、CIR、状态寄存器 SR 的作用；通用寄存器与专用寄存器的区别；改正关于寄存器的错误陈述。",
+      "cues": [
+        "Describe / State the role / purpose of the following registers: PC, MAR, MDR, IX, SR, ACC, CIR",
+        "Identify two other special purpose registers and state their role",
+        "differences between general purpose registers and special purpose registers",
+        "Three of the statements are incorrect … corrected statement"
+      ],
+      "not": [
+        "P1-PF-03：放在取指-执行周期里讲寄存器如何配合 → PF-03"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-03",
+      "chapter": "PF",
+      "name_zh": "取指-执行周期",
+      "name_en": "Fetch-execute cycle and register transfer notation",
+      "summary": "按顺序描述取指-执行周期中寄存器与总线之间的数据流动，并用寄存器传送记法写出、补全或改错（MAR ← [PC]，PC ← [PC] + 1，MDR ← [[MAR]]，CIR ← [MDR]）。",
+      "cues": [
+        "Fetch-Execute (F-E) cycle",
+        "register transfer notation",
+        "Describe the role of the registers in the F-E cycle",
+        "MAR ← [PC] / MDR ← [[MAR]] / CIR ← [MDR]",
+        "There are two errors in the following register transfer notation",
+        "Complete the following description of the role of the registers in the fetch-execute cycle"
+      ],
+      "not": [
+        "P1-PF-02：只问单个寄存器的作用、不涉及周期顺序 → PF-02",
+        "P1-PF-04：问何时检测中断、如何处理 → PF-04"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-04",
+      "chapter": "PF",
+      "name_zh": "中断",
+      "name_en": "Interrupts",
+      "summary": "中断的目的；硬件中断与软件中断的成因与举例；在取指-执行周期什么时候检测中断；怎样处理（比较优先级、保存寄存器内容、调用中断服务程序 ISR、恢复后继续）。",
+      "cues": [
+        "interrupt / Interrupt Service Routine (ISR)",
+        "Describe the purpose of an interrupt",
+        "Identify two causes of a software interrupt / hardware interrupt or software interrupt",
+        "State when interrupts are detected during the F-E cycle",
+        "Explain how the computer handles this interrupt / how an interrupt … will be detected and handled",
+        "the stages that the CPU performs when an interrupt is detected"
+      ],
+      "not": [
+        "P1-PF-03：取指-执行周期本身 → PF-03",
+        "P1-SS-01：操作系统进程管理中提到处理中断 → SS-01"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-05",
+      "chapter": "PF",
+      "name_zh": "影响计算机性能的因素",
+      "name_en": "Factors affecting computer performance",
+      "summary": "处理器类型与核数、时钟速度、高速缓存、总线宽度（以及 RAM 容量）如何影响性能；硬件升级建议及其效果；多核为什么不一定加倍速度。",
+      "cues": [
+        "Identify one (other) factor / feature … that can affect the performance … and state why",
+        "Describe two ways the hardware … can be upgraded to improve the performance",
+        "number of cores / clock speed / cache memory / bus width",
+        "Explain why the second computer does not always run twice as fast",
+        "Explain how different amounts of RAM / bus widths affect the performance"
+      ],
+      "not": [
+        "P1-PF-01：只问时钟或总线的作用、不问性能 → PF-01"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-06",
+      "chapter": "PF",
+      "name_zh": "端口",
+      "name_en": "Ports: USB, HDMI and VGA",
+      "summary": "USB、HDMI、VGA 等端口怎样连接外设、数据怎样经端口传输，为设备选择端口并论证。",
+      "cues": [
+        "Universal Serial Bus (USB) / High Definition Multimedia Interface (HDMI) / Video Graphics Array (VGA)",
+        "Identify one … port that can be used to connect … Justify your choice",
+        "Describe how data is transmitted through a USB port",
+        "Explain how HDMI provides connection to peripheral devices",
+        "State the name of a peripheral device port"
+      ],
+      "not": [
+        "P1-PF-01：计算机内部的总线 → PF-01"
+      ],
+      "syllabus": [
+        "4.1"
+      ]
+    },
+    {
+      "code": "P1-PF-07",
+      "chapter": "PF",
+      "name_zh": "汇编语言：机器码、两遍汇编与指令分组",
+      "name_en": "Assembly language: machine code, two-pass assembler and instruction groups",
+      "summary": "汇编语言与机器码的关系；两遍汇编器每一遍做什么（第一遍去注释、建立符号表，第二遍生成目标码）；指令分组（数据移动、输入输出、算术运算、无条件/条件跳转、比较）与举例。",
+      "cues": [
+        "two-pass assembler / first pass / second pass / symbol table",
+        "Tick … whether the task is performed in the first pass or the second pass",
+        "instruction group(s): data movement / input and output of data / arithmetic operations / unconditional and conditional instructions / compare instructions",
+        "Identify the instruction group for each of the following opcodes",
+        "Give one example of an instruction that belongs to each of the following instruction groups"
+      ],
+      "not": [
+        "P1-SS-04：为什么需要汇编器这类翻译程序 → SS-04",
+        "P1-PF-08：寻址方式 → PF-08"
+      ],
+      "syllabus": [
+        "4.2"
+      ]
+    },
+    {
+      "code": "P1-PF-08",
+      "chapter": "PF",
+      "name_zh": "寻址方式",
+      "name_en": "Addressing modes",
+      "summary": "立即、直接、间接、变址、相对寻址的名称、含义、举例与比较，以及相对寻址的用途（可重定位代码）。",
+      "cues": [
+        "mode(s) of addressing / immediate / direct / indirect / indexed / relative addressing",
+        "Identify and describe one (additional) mode of addressing",
+        "Complete the following description of addressing modes",
+        "Give one similarity and one difference between direct addressing and indexed addressing",
+        "Explain the purpose of relative addressing"
+      ],
+      "not": [
+        "P1-PF-09：给出内存表要求算 ACC 的值 → PF-09"
+      ],
+      "syllabus": [
+        "4.2"
+      ]
+    },
+    {
+      "code": "P1-PF-09",
+      "chapter": "PF",
+      "name_zh": "执行指令后的寄存器内容",
+      "name_en": "Register contents after executing instructions",
+      "summary": "给出内存内容与 ACC/IX 的初值，按每条（或每组）装入、存储、算术、增减指令的寻址方式算出执行后 ACC（或 IX）的值；各组指令互相独立，没有程序流程。",
+      "cues": [
+        "The current contents of memory are shown … The current contents of the ACC and IX are shown",
+        "Complete the table by writing the content of the ACC (and the IX) after each program / set of instructions",
+        "LDM / LDD / LDI / LDX / LDR / ADD / SUB / INC / DEC",
+        "Instruction … Value in ACC / Accumulator 两栏表"
+      ],
+      "not": [
+        "P1-PF-10：按顺序跟踪含跳转/比较/输出的完整程序 → PF-10",
+        "P1-PF-12：只有 AND / OR / XOR 位运算 → PF-12"
+      ],
+      "syllabus": [
+        "4.2"
+      ]
+    },
+    {
+      "code": "P1-PF-10",
+      "chapter": "PF",
+      "name_zh": "汇编程序跟踪",
+      "name_en": "Tracing an assembly language program",
+      "summary": "用跟踪表逐条执行内存中的程序（含 CMP、JPE、JPN、JMP、IN、OUT 与循环），记录 ACC、IX、内存单元与输出的变化；说明程序的作用或改一条指令的影响。",
+      "cues": [
+        "Trace the program currently in memory using the (following) trace table",
+        "Memory address / Instruction address / ACC / IX / Output 各列",
+        "stopping when line … is executed for a second time / Do not trace the program any further when …",
+        "State the effect of changing instruction … / State the purpose of the program"
+      ],
+      "not": [
+        "P1-PF-09：各指令相互独立、没有程序流程 → PF-09"
+      ],
+      "syllabus": [
+        "4.2"
+      ]
+    },
+    {
+      "code": "P1-PF-11",
+      "chapter": "PF",
+      "name_zh": "移位",
+      "name_en": "Binary shifts",
+      "summary": "逻辑、算术、循环的左移与右移结果；移位的数学含义（乘以或除以 2ⁿ）；逻辑右移与算术右移的异同；写出实现某移位效果的 LSL/LSR 指令。",
+      "cues": [
+        "logical shift / arithmetic shift / cyclic shift / left shift / right shift",
+        "Show the result of a n-place … shift on …",
+        "LSL #n / LSR #n",
+        "Identify the mathematical operation that the following instruction will perform",
+        "similarity and one difference between a right logical shift and a right arithmetic shift",
+        "Write a bit manipulation instruction that uses a binary shift to change the contents of the ACC to …"
+      ],
+      "not": [
+        "P1-PF-12：AND / OR / XOR 运算 → PF-12（同一表格混合时按得分点多数定主题型）"
+      ],
+      "syllabus": [
+        "4.3"
+      ]
+    },
+    {
+      "code": "P1-PF-12",
+      "chapter": "PF",
+      "name_zh": "按位运算求结果",
+      "name_en": "Bitwise operations: AND, OR and XOR results",
+      "summary": "给出 ACC 当前值与 AND / OR / XOR 指令（立即数或内存地址操作数，十进制、二进制或十六进制），写出执行后的 ACC。",
+      "cues": [
+        "Show / Write the contents of the ACC after the execution of the following instruction: AND / OR / XOR …",
+        "Complete the table by writing the new contents of the ACC",
+        "操作数写成 B… / #… / &…",
+        "AND <address> / XOR <address> / OR <address>"
+      ],
+      "not": [
+        "P1-PF-13：要求写出能达到某效果的指令，或解释掩码 → PF-13",
+        "P1-PF-11：移位 → PF-11"
+      ],
+      "syllabus": [
+        "4.3"
+      ]
+    },
+    {
+      "code": "P1-PF-13",
+      "chapter": "PF",
+      "name_zh": "位掩码与设备监控",
+      "name_en": "Bit masking: testing, setting and clearing bits to monitor and control devices",
+      "summary": "选择掩码与运算（AND 清零或测试、OR 置 1、XOR 取反）写出实现指定效果的指令；解释怎样用位操作测试/设置某一位来监测或控制设备。",
+      "cues": [
+        "Write the bit manipulation instruction(s) that (will / can be used to) set … / set the ACC to &0 / set only the most significant bit to 1",
+        "test whether bit number … is a 1 / test whether … represents an odd denary number",
+        "Explain how bit manipulation can be used to monitor or control a device",
+        "Write the bit manipulation instruction that would change the binary integer in ACC to …"
+      ],
+      "not": [
+        "P1-PF-12：指令已给出，只求结果 → PF-12",
+        "P1-PF-11：要写的是移位指令 → PF-11"
+      ],
+      "syllabus": [
+        "4.3"
+      ]
+    },
+    {
+      "code": "P1-SS-01",
+      "chapter": "SS",
+      "name_zh": "操作系统的作用与管理任务",
+      "name_en": "Operating system: purpose and management tasks",
+      "summary": "为什么需要操作系统（提供用户界面、隐藏硬件复杂性、管理资源）；内存、文件、安全、硬件（外设与驱动）、进程管理的名称与具体做法，以及它们如何支持多任务。",
+      "cues": [
+        "Explain why a computer system requires an Operating System / Describe the purpose of an OS",
+        "key management tasks carried out by the Operating System",
+        "memory management / file management / process management / security management / hardware management",
+        "Describe how the OS manages processes / peripheral hardware devices",
+        "Explain how memory management and process management support multi-tasking"
+      ],
+      "not": [
+        "P1-SS-02：实用软件 → SS-02",
+        "P1-PF-04：中断的检测与处理 → PF-04"
+      ],
+      "syllabus": [
+        "5.1"
+      ]
+    },
+    {
+      "code": "P1-SS-02",
+      "chapter": "SS",
+      "name_zh": "实用软件",
+      "name_en": "Utility software",
+      "summary": "实用软件的目的；磁盘格式化、病毒检查、碎片整理、磁盘内容分析与修复、文件压缩、备份软件各自的作用与必要性。",
+      "cues": [
+        "utility software / utility program(s)",
+        "defragmentation / disk formatter / virus checker / back-up software / disk repair / disk contents analysis",
+        "Explain how defragmentation can improve the performance",
+        "Explain the need for back-up software",
+        "Draw one line from each utility software to its most appropriate purpose"
+      ],
+      "not": [
+        "P1-SP-03：杀毒软件作为防范威胁的安全措施 → SP-03",
+        "P1-IR-15：描述压缩算法本身 → IR-15"
+      ],
+      "syllabus": [
+        "5.1"
+      ]
+    },
+    {
+      "code": "P1-SS-03",
+      "chapter": "SS",
+      "name_zh": "程序库与 DLL",
+      "name_en": "Program libraries and DLLs",
+      "summary": "程序库的定义；用库例程开发的好处（节省编程与测试时间、代码已测试、复用）与缺点；动态链接库 DLL 相对普通库的好处（内存占用小、可执行文件更小、库单独维护更新）。",
+      "cues": [
+        "program library / library routines / library files",
+        "Define the term program library",
+        "benefits … of using program libraries",
+        "Dynamic Link Library (DLL)",
+        "Describe one drawback of using library routines"
+      ],
+      "not": [
+        "P1-SS-07：IDE 功能 → SS-07"
+      ],
+      "syllabus": [
+        "5.1"
+      ]
+    },
+    {
+      "code": "P1-SS-04",
+      "chapter": "SS",
+      "name_zh": "翻译程序及其工作方式",
+      "name_en": "Language translators and how they work",
+      "summary": "为什么需要翻译程序；汇编器、编译器、解释器各自的作用与工作方式（编译器整体翻译、生成可执行文件、一次报告全部错误；解释器逐行翻译并执行、遇错即停）。",
+      "cues": [
+        "Explain why language translators are needed",
+        "Describe the operation of a compiler / an interpreter",
+        "Complete the description(s) of compilers and interpreters / language translators",
+        "Identify one other type of translator"
+      ],
+      "not": [
+        "P1-SS-05：比较两者优缺点或结合情境选择 → SS-05",
+        "P1-PF-07：两遍汇编器的步骤 → PF-07"
+      ],
+      "syllabus": [
+        "5.2"
+      ]
+    },
+    {
+      "code": "P1-SS-05",
+      "chapter": "SS",
+      "name_zh": "编译器与解释器：优缺点与选择",
+      "name_en": "Compiler vs interpreter: benefits, drawbacks and choice",
+      "summary": "开发阶段用解释器、发布阶段用编译器的理由；两者的优缺点比较，结合情境选择并论证。",
+      "cues": [
+        "Identify whether an interpreter or a compiler would be more appropriate … Justify your choice",
+        "benefits / advantages / drawbacks of using an interpreter instead of a compiler (during program development)",
+        "Explain the reasons why the programmer uses a compiler when the program has been written",
+        "Explain how the programmer can first use an interpreter and then a compiler"
+      ],
+      "not": [
+        "P1-SS-04：只描述工作方式 → SS-04",
+        "P1-SS-06：部分编译、部分解释 → SS-06"
+      ],
+      "syllabus": [
+        "5.2"
+      ]
+    },
+    {
+      "code": "P1-SS-06",
+      "chapter": "SS",
+      "name_zh": "部分编译、部分解释",
+      "name_en": "Partially compiled and partially interpreted languages",
+      "summary": "说明某些高级语言（如 Java）为什么先编译成中间代码、再在各平台上解释执行（跨平台、比纯解释快）。",
+      "cues": [
+        "partially compiled and partially interpreted",
+        "Java (console mode)",
+        "intermediate code / bytecode / virtual machine"
+      ],
+      "not": [
+        "P1-SS-05：纯编译器与解释器的比较 → SS-05"
+      ],
+      "syllabus": [
+        "5.2"
+      ]
+    },
+    {
+      "code": "P1-SS-07",
+      "chapter": "SS",
+      "name_zh": "集成开发环境 IDE",
+      "name_en": "Integrated Development Environment features",
+      "summary": "IDE 的编码功能（上下文提示、自动补全）、初步查错（动态语法检查）、呈现（美化打印、代码块折叠、自动缩进）、调试（单步执行、断点、变量/报告窗口）的名称、作用与用法。",
+      "cues": [
+        "Integrated Development Environment (IDE)",
+        "context-sensitive prompts / dynamic syntax checks / prettyprint / expand and collapse code blocks",
+        "single stepping / breakpoints / report window / variable watch",
+        "Describe how … can use the debugging features",
+        "Identify two features that support the visual presentation / debugging of the code"
+      ],
+      "not": [
+        "P1-SS-05：在 IDE 里用解释器还是编译器 → SS-05"
+      ],
+      "syllabus": [
+        "5.2"
+      ]
+    },
+    {
+      "code": "P1-SP-01",
+      "chapter": "SP",
+      "name_zh": "安全、隐私与完整性的概念",
+      "name_en": "Security, privacy and integrity of data",
+      "summary": "区分数据的安全、隐私与完整性；为什么数据和计算机系统都需要保护；把各种措施归类为保护安全还是保护完整性。",
+      "cues": [
+        "difference between data security and data integrity / the security and privacy of data",
+        "State the meaning of privacy of data / integrity of data",
+        "Explain why … needs to keep both its data and its computer system secure",
+        "State why data needs to be kept secure",
+        "Draw one line from each measure to indicate whether it keeps data secure or protects the integrity of data"
+      ],
+      "not": [
+        "P1-DB-09：数据库中怎样实现数据完整性 → DB-09",
+        "P1-SP-08：校验与验证的区别 → SP-08"
+      ],
+      "syllabus": [
+        "6.1"
+      ]
+    },
+    {
+      "code": "P1-SP-02",
+      "chapter": "SP",
+      "name_zh": "安全威胁",
+      "name_en": "Threats to computer and data security",
+      "summary": "恶意软件（病毒、间谍软件）、黑客、网络钓鱼（phishing）、域名欺骗（pharming）的含义、危害与异同；常以「威胁—描述—防范措施」表格出现。",
+      "cues": [
+        "malware / virus / spyware / hacker / phishing / pharming",
+        "Describe the following threats",
+        "similarities and one difference between spyware and a virus / between pharming and phishing",
+        "Identify and describe two threats … Identify one security measure to protect against each threat",
+        "Explain what is meant by a virus and pharming"
+      ],
+      "not": [
+        "P1-SP-03：只问防护措施怎样起作用 → SP-03"
+      ],
+      "syllabus": [
+        "6.1"
+      ]
+    },
+    {
+      "code": "P1-SP-03",
+      "chapter": "SP",
+      "name_zh": "安全措施",
+      "name_en": "Security measures for computer systems and data",
+      "summary": "用户账户与密码、身份认证（含生物识别、双因素）、访问权限、防火墙、杀毒与反间谍软件等措施怎样工作；结合情境选择措施并描述；怎样限制恶意软件的风险。",
+      "cues": [
+        "security measure(s) / protect … from hackers / unauthorised access",
+        "Explain how a firewall can help protect …",
+        "State how the following security measures can be used: firewall, encryption, passwords",
+        "biometric / authentication / access rights / anti-virus / anti-spyware",
+        "Explain how the data security risks of malware can be restricted",
+        "types of software that can be installed on a computer to prevent threats"
+      ],
+      "not": [
+        "P1-SP-04：题干点名加密，或问怎样保护传输中的数据且 MS 只接受加密 → SP-04",
+        "P1-SP-05：数字签名 → SP-05",
+        "P1-DB-08：DBMS 的访问权限、备份等数据库安全 → DB-08"
+      ],
+      "syllabus": [
+        "6.1"
+      ]
+    },
+    {
+      "code": "P1-SP-04",
+      "chapter": "SP",
+      "name_zh": "加密",
+      "name_en": "Encryption",
+      "summary": "加密的含义（用算法和密钥把明文变成密文）、为什么要加密、传输中如何让被截获的数据无法被读懂。",
+      "cues": [
+        "encryption / encrypted / cipher text / key",
+        "Explain how encryption can protect the security of data during transmission",
+        "Describe what is meant by encryption and explain why it is used",
+        "Identify and describe one method of restricting the risks posed by … intercepting the data whilst it is being transferred",
+        "Identify one security method / measure that can be used to protect … during transmission / email transfer"
+      ],
+      "not": [
+        "P1-SP-03：问一般安全措施、MS 接受多种措施（加密只是其一）→ SP-03",
+        "P1-SP-05：数字签名 → SP-05"
+      ],
+      "syllabus": [
+        "6.1"
+      ]
+    },
+    {
+      "code": "P1-SP-05",
+      "chapter": "SP",
+      "name_zh": "数字签名",
+      "name_en": "Digital signatures",
+      "summary": "数字签名如何证明来源真实且内容未被篡改：发送方对文档做哈希得到摘要，用私钥加密摘要成为签名；接收方用公钥解密签名，与自己重新算出的摘要比较。",
+      "cues": [
+        "digital signature",
+        "authenticate a digital document / ensures the email is authentic",
+        "make sure the data has not been changed during transmission",
+        "hash / digest / private key / public key",
+        "State what should be included as part of the download to make sure the program is authentic"
+      ],
+      "not": [
+        "P1-SP-04：只问加密 → SP-04"
+      ],
+      "syllabus": [
+        "6.1"
+      ]
+    },
+    {
+      "code": "P1-SP-06",
+      "chapter": "SP",
+      "name_zh": "数据校验",
+      "name_en": "Data validation",
+      "summary": "范围、格式、长度、存在（presence）、存在于列表（existence / look-up）、界限、类型、校验位等校验的含义；在给定字段上举例应用；从伪代码算法判断是哪种校验；校验如何帮助保护完整性。",
+      "cues": [
+        "validation / validate / validation check / validation rule",
+        "range check / format check / length check / presence check / existence check / limit check / check digit",
+        "Describe two methods of validating the field …",
+        "State the type of validation check that each algorithm performs",
+        "Give one example of how each of the following data validation rules can be used"
+      ],
+      "not": [
+        "P1-SP-07：核对数据与原件/发送端是否一致 → SP-07",
+        "P1-SP-08：同时比较校验与验证，或说明其局限 → SP-08"
+      ],
+      "syllabus": [
+        "6.2"
+      ]
+    },
+    {
+      "code": "P1-SP-07",
+      "chapter": "SP",
+      "name_zh": "数据验证",
+      "name_en": "Data verification during data entry and data transfer",
+      "summary": "录入时的验证（目视检查、两次录入）与传输时的验证（奇偶校验位、校验字节、校验块，校验和）的过程与描述，包括补写奇偶位、用奇偶块定位出错位。",
+      "cues": [
+        "verification / verify / verified",
+        "visual check / double entry",
+        "parity check / parity bit / parity byte / parity block / even parity / odd parity",
+        "checksum",
+        "methods of data verification that can be used during data transfer / data entry"
+      ],
+      "not": [
+        "P1-SP-06：检查数据是否合理 → SP-06",
+        "P1-SP-08：比较校验与验证，或说明其局限 → SP-08"
+      ],
+      "syllabus": [
+        "6.2"
+      ]
+    },
+    {
+      "code": "P1-SP-08",
+      "chapter": "SP",
+      "name_zh": "校验与验证的区别与局限",
+      "name_en": "Validation vs verification: differences and limitations",
+      "summary": "校验与验证的区别、两者如何共同保护数据完整性，以及为什么数据通过校验和验证后仍可能不正确。",
+      "cues": [
+        "State the difference between data verification and data validation",
+        "Explain how validation and verification support data integrity",
+        "Explain how data validation and data verification can be used when …（同一问兼顾两者）",
+        "why … might be incorrect even after it has been validated and verified"
+      ],
+      "not": [
+        "P1-SP-06 / P1-SP-07：只问其中一种的方法或作用 → SP-06 / SP-07"
+      ],
+      "syllabus": [
+        "6.2"
+      ]
+    },
+    {
+      "code": "P1-EO-01",
+      "chapter": "EO",
+      "name_zh": "职业道德团体与行为准则",
+      "name_en": "Professional ethical bodies and codes of conduct",
+      "summary": "加入 BCS、IEEE 等职业道德团体的好处、不加入的后果、为什么重要；行为准则的目的。",
+      "cues": [
+        "professional ethical body / BCS / IEEE",
+        "benefits … of joining a professional ethical body",
+        "consequences of the programmer not joining a professional ethical body",
+        "Explain why it is important for a programmer to join …",
+        "Describe the purpose of a code of conduct"
+      ],
+      "not": [
+        "P1-EO-02：具体情境中怎样合乎道德地行事 → EO-02"
+      ],
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "P1-EO-02",
+      "chapter": "EO",
+      "name_zh": "合乎道德地行事",
+      "name_en": "Acting ethically in a given situation",
+      "summary": "在给定情境中（对同事、客户、公众，或使用学校网络）怎样做才合乎道德、为什么要这样做、不道德行为的影响。",
+      "cues": [
+        "act ethically / ethical considerations",
+        "Describe the ways in which … can act ethically in this situation",
+        "Explain the reasons why … needs to act ethically towards colleagues and the public",
+        "Explain the reasons why … did not act ethically",
+        "Give three other ethical considerations"
+      ],
+      "not": [
+        "P1-EO-01：职业道德团体 → EO-01",
+        "P1-EO-05：AI 带来的伦理影响 → EO-05"
+      ],
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "P1-EO-03",
+      "chapter": "EO",
+      "name_zh": "版权与软件许可",
+      "name_en": "Copyright and software licensing",
+      "summary": "版权的含义与必要性；商业软件、共享软件、开源（Open Source Initiative）、自由软件（Free Software Foundation）许可的特征；按描述识别许可，结合情境选择并论证。",
+      "cues": [
+        "copyright / intellectual property",
+        "software licence / commercial / shareware / open source / Free Software (Foundation)",
+        "Identify the most appropriate type of software licence … justify your choice",
+        "Complete the table by writing the name of each software licence that is described",
+        "Give two benefits of distributing software using a … licence"
+      ],
+      "not": [
+        "P1-EO-01：职业道德团体 → EO-01"
+      ],
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "P1-EO-04",
+      "chapter": "EO",
+      "name_zh": "人工智能的应用",
+      "name_en": "Applications of artificial intelligence",
+      "summary": "描述 AI 在给定系统中怎样工作（图像、人脸、字符、语音识别；与训练数据或数据库比对；学习并作出决策）。",
+      "cues": [
+        "Artificial Intelligence (AI)",
+        "Explain / Describe how AI is used in …",
+        "facial recognition / image recognition / speech recognition / optical character recognition",
+        "Describe one application of Artificial Intelligence"
+      ],
+      "not": [
+        "P1-EO-05：问 AI 带来的社会、经济、伦理或环境影响 → EO-05"
+      ],
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "P1-EO-05",
+      "chapter": "EO",
+      "name_zh": "人工智能的影响",
+      "name_en": "Impacts of artificial intelligence",
+      "summary": "说明 AI 应用带来的社会、经济、环境与伦理影响（好处与问题）。",
+      "cues": [
+        "social / economic / environmental / ethical impact(s) of … AI",
+        "State two social benefits of the use of AI",
+        "Describe … impacts of students using Artificial Intelligence (AI)"
+      ],
+      "not": [
+        "P1-EO-04：只问 AI 怎样工作 → EO-04"
+      ],
+      "syllabus": [
+        "7.1"
+      ]
+    },
+    {
+      "code": "P1-DB-01",
+      "chapter": "DB",
+      "name_zh": "文件方式的局限与关系数据库",
+      "name_en": "File-based approach vs relational databases",
+      "summary": "文件方式的局限（数据冗余、不一致、数据依赖程序、难以查询与共享）及关系数据库怎样解决这些问题。",
+      "cues": [
+        "file-based approach",
+        "limitation(s) of using a file-based approach … how a relational database addresses",
+        "advantages / benefits of (using) a relational database compared to / instead of a file-based approach",
+        "Explain why … is incorrect（声称文件方式更好）"
+      ],
+      "not": [
+        "P1-DB-07：DBMS 提供的功能 → DB-07"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-02",
+      "chapter": "DB",
+      "name_zh": "关系模型术语与键",
+      "name_en": "Relational database terms and keys",
+      "summary": "定义 entity、table、record、field、tuple、attribute、主键、候选键、次键、外键、复合键、参照完整性等术语，并在给定的表设计中识别或标出各种键。",
+      "cues": [
+        "Define / Describe / State what is meant by … entity / tuple / attribute / field / candidate key / secondary key / foreign key",
+        "Complete the table by writing the missing term or description（数据库术语表）",
+        "Identify two foreign keys … and the table each is found in / references",
+        "Underline the attribute(s) that form the primary key",
+        "Tick … whether each field is a primary key or a foreign key",
+        "Explain why … has a composite primary key"
+      ],
+      "not": [
+        "P1-DB-03：描述表之间的关系 → DB-03",
+        "P1-DB-09：解释参照完整性为什么重要 → DB-09"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-03",
+      "chapter": "DB",
+      "name_zh": "关系类型及其实现",
+      "name_en": "Relationships and how they are implemented",
+      "summary": "识别并描述表之间的一对一、一对多、多对多关系，说明怎样用主键—外键实现，怎样用连接表消除多对多关系，以及为什么某些数据不能放进同一张表。",
+      "cues": [
+        "Identify / Describe the relationship between … tables",
+        "Refer to the primary and foreign keys in your answer",
+        "one-to-one / one-to-many / many-to-many / 1:M",
+        "Explain the purpose of the table …（连接表）",
+        "explain how each relationship can be implemented"
+      ],
+      "not": [
+        "P1-DB-04：画或补全 E-R 图 → DB-04",
+        "P1-DB-06：设计新表 → DB-06"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-04",
+      "chapter": "DB",
+      "name_zh": "E-R 图",
+      "name_en": "Entity-relationship diagrams",
+      "summary": "根据表设计画出或补全 E-R 图，正确标出各关系的度（1:1、1:M、M:N）。",
+      "cues": [
+        "Complete / Draw the entity-relationship (E-R) diagram",
+        "实体名方框（CUSTOMER、ORDER …）之间待连线"
+      ],
+      "not": [
+        "P1-DB-03：用文字描述关系 → DB-03"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-05",
+      "chapter": "DB",
+      "name_zh": "范式",
+      "name_en": "Normal forms",
+      "summary": "描述 1NF、2NF、3NF 的条件，判断给定数据库处于哪一范式，并用表中的例子论证。",
+      "cues": [
+        "First / Second / Third Normal Form (1NF / 2NF / 3NF)",
+        "Describe the characteristics of a database that is in 3NF",
+        "Explain why the database … is in 3NF / Give the highest level of Normal Form … and justify",
+        "Draw one line from each Normal Form to the most appropriate definition",
+        "Tick … whether the database is in 3NF or not in 3NF"
+      ],
+      "not": [
+        "P1-DB-06：动手规范化或设计新表 → DB-06"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-06",
+      "chapter": "DB",
+      "name_zh": "规范化设计",
+      "name_en": "Producing a normalised design",
+      "summary": "把未规范化的表或情境描述规范化到 3NF：写出新表定义 TableName(PK, …)、标出主键与外键、补上所需的新表并说明理由。",
+      "cues": [
+        "Create a 3-table design … normalised to Third Normal Form (3NF)",
+        "Normalise the database table … Write the table definitions for your new tables",
+        "Explain how the database can be normalised to 3NF",
+        "Describe the additional tables that will need to be included",
+        "The following database table is not normalised"
+      ],
+      "not": [
+        "P1-DB-05：只判断或描述范式 → DB-05"
+      ],
+      "syllabus": [
+        "8.1"
+      ]
+    },
+    {
+      "code": "P1-DB-07",
+      "chapter": "DB",
+      "name_zh": "DBMS 的功能与工具",
+      "name_en": "DBMS features and tools",
+      "summary": "数据字典（元数据及其内容）、逻辑模式、数据建模、开发者界面、查询处理器的含义与用途。",
+      "cues": [
+        "data dictionary / metadata",
+        "logical schema / data modelling",
+        "developer interface / query processor",
+        "Describe what is meant by the following DBMS features",
+        "Identify three other items stored in a data dictionary"
+      ],
+      "not": [
+        "P1-DB-08：DBMS 的安全措施 → DB-08",
+        "P1-DB-09：DBMS 怎样保证完整性 → DB-09"
+      ],
+      "syllabus": [
+        "8.2"
+      ]
+    },
+    {
+      "code": "P1-DB-08",
+      "chapter": "DB",
+      "name_zh": "DBMS 数据安全",
+      "name_en": "DBMS data security",
+      "summary": "DBMS 怎样保护数据库：用户账户与密码认证、对个人或用户组设置访问权限、备份与恢复、加密等。",
+      "cues": [
+        "methods (that) the DBMS can use to protect the data / improve the security of a database",
+        "access rights … protect the data in … database",
+        "backup procedures",
+        "protect the data in the table … from unauthorised access"
+      ],
+      "not": [
+        "P1-SP-03：一般计算机系统的安全措施 → SP-03"
+      ],
+      "syllabus": [
+        "8.2"
+      ]
+    },
+    {
+      "code": "P1-DB-09",
+      "chapter": "DB",
+      "name_zh": "数据库中的数据完整性",
+      "name_en": "Data integrity and referential integrity in a database",
+      "summary": "参照完整性为什么重要；DBMS 怎样支持数据完整性（强制参照完整性、级联更新/删除、校验规则、规范化）。",
+      "cues": [
+        "referential integrity … important / should enforce",
+        "Explain how a DBMS supports data integrity",
+        "Give two ways that a DBMS can support data integrity",
+        "State what is meant by data integrity and give one example of how this is implemented in a database"
+      ],
+      "not": [
+        "P1-DB-02：只要求给参照完整性下定义（术语表）→ DB-02",
+        "P1-SP-01：一般意义上的完整性定义 → SP-01"
+      ],
+      "syllabus": [
+        "8.1",
+        "8.2"
+      ]
+    },
+    {
+      "code": "P1-DB-10",
+      "chapter": "DB",
+      "name_zh": "SQL DDL：建库、建表与改表",
+      "name_en": "SQL DDL: CREATE DATABASE, CREATE TABLE and ALTER TABLE",
+      "summary": "用 DDL 写 CREATE DATABASE、带合适数据类型与约束（NOT NULL、PRIMARY KEY、FOREIGN KEY … REFERENCES）的 CREATE TABLE、用 ALTER TABLE 增加字段或外键，或找出并改正 DDL 脚本中的错误。",
+      "cues": [
+        "Write a Structured Query Language (SQL) script to define / create the table / database",
+        "Data Definition Language (DDL)",
+        "CREATE TABLE / CREATE DATABASE / ALTER TABLE … ADD / FOREIGN KEY … REFERENCES",
+        "include an additional field / add one field / link the foreign key",
+        "identify the errors in the SQL script that defines the table and write the correct statements"
+      ],
+      "not": [
+        "P1-DB-13：插入、更新、删除记录 → DB-13"
+      ],
+      "syllabus": [
+        "8.3"
+      ]
+    },
+    {
+      "code": "P1-DB-11",
+      "chapter": "DB",
+      "name_zh": "SQL 单表查询",
+      "name_en": "SQL queries on one table",
+      "summary": "在一张表上用 SELECT … FROM … WHERE（AND、OR、LIKE、比较）、ORDER BY、COUNT/SUM/AVG、AS 别名、GROUP BY 写出、补全或改正查询。",
+      "cues": [
+        "Write an SQL script to return / find / count …（只用到一张表）",
+        "Complete the SQL script / DML statements",
+        "SELECT … FROM … WHERE / LIKE / ORDER BY / GROUP BY",
+        "COUNT / SUM / AVG … appropriate field name"
+      ],
+      "not": [
+        "P1-DB-12：需要两张表的数据 → DB-12"
+      ],
+      "syllabus": [
+        "8.3"
+      ]
+    },
+    {
+      "code": "P1-DB-12",
+      "chapter": "DB",
+      "name_zh": "SQL 两表连接查询",
+      "name_en": "SQL queries joining two tables",
+      "summary": "需要两张表的数据时，用 INNER JOIN … ON 或在 WHERE 中写连接条件，再配合条件、聚合、GROUP BY、ORDER BY 写出、补全或改正查询。",
+      "cues": [
+        "要返回的字段或条件分属两张表（如顾客名 + 订单数）",
+        "INNER JOIN … ON",
+        "WHERE TABLE1.Key = TABLE2.Key",
+        "for each customer / each player … the number of …（跨表分组计数）",
+        "The following SQL script should return … There are errors（两表查询改错）"
+      ],
+      "not": [
+        "P1-DB-11：只用一张表 → DB-11"
+      ],
+      "syllabus": [
+        "8.3"
+      ]
+    },
+    {
+      "code": "P1-DB-13",
+      "chapter": "DB",
+      "name_zh": "SQL 数据维护：INSERT、UPDATE、DELETE",
+      "name_en": "SQL data maintenance: INSERT, UPDATE and DELETE",
+      "summary": "用 INSERT INTO … VALUES 添加记录、UPDATE … SET … WHERE 修改记录、DELETE FROM … WHERE 删除记录。",
+      "cues": [
+        "Write … SQL script to add a new record / to enter the new product",
+        "INSERT INTO … VALUES",
+        "change the … data / amend the record → UPDATE … SET … WHERE",
+        "delete all … → DELETE FROM … WHERE"
+      ],
+      "not": [
+        "P1-DB-10：改表结构（ALTER TABLE 加字段）→ DB-10"
+      ],
+      "syllabus": [
+        "8.3"
+      ]
+    }
+  ]
+}
