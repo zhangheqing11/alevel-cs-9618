@@ -42,4 +42,4 @@ Then write the Python procedure `ticket_code()` that inputs the name, row and se
 
 ## 出处
 
-自编。语法与函数依据：指南 p.15（OUTPUT）、p.17（&）；插页 9618_s26_in_21 p.2（NUM_TO_STR）、p.4（& 运算符）。
+自编。语法与函数依据：指南 p.15（OUTPUT）、p.17（&）；插页 9618_w25_in_21 p.2（NUM_TO_STR）、p.4（& 运算符）。

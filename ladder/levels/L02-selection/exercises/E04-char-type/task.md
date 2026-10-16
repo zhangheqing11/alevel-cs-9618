@@ -32,4 +32,4 @@ Use comparison operators and `AND` only (no built-in functions). Then write the 
 
 ## 出处
 
-自编。语法依据：指南 p.7（CHAR 字面量）、p.16（比较、AND）；插页 9618_s26_in_21 p.4（CHAR 与 STRING 的比较区分大小写）。
+自编。语法依据：指南 p.7（CHAR 字面量）、p.16（比较、AND）；插页 9618_w25_in_21 p.4（CHAR 与 STRING 的比较区分大小写）。

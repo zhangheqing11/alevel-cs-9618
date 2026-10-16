@@ -32,4 +32,4 @@ Use nested `FOR` loops. In pseudocode, build each line as a string with `&` and 
 
 ## 出处
 
-自编。结构参考指南 p.20 的嵌套 FOR 例子（行累加器与总累加器）。语法依据：指南 p.17（&）、p.20（FOR、NEXT）；插页 9618_s26_in_21 p.2（NUM_TO_STR）。
+自编。结构参考指南 p.20 的嵌套 FOR 例子（行累加器与总累加器）。语法依据：指南 p.17（&）、p.20（FOR、NEXT）；插页 9618_w25_in_21 p.2（NUM_TO_STR）。

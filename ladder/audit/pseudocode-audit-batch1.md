@@ -12,7 +12,7 @@
 
 已核对全部 13 份 `answer.pseudo`，并逐份与规格接口中的模板比对：L01/E02–E05（4 份）、L02/E01–E04（4 份）、L03/E02–E06（5 份）。L01/E01、L02/E05、L03/E01 为 trace 题，没有该文件。
 
-辅助来源：`sources/pastpapers/9618_s26_in_21.pdf` p.2、p.4，核对指南没有列出的 `NUM_TO_STR` / `STR_TO_NUM` 与 CHAR/STRING 拼接、比较规则。使用插页函数表不涉及分发保留卷 QP 的专项刷题。
+辅助来源：`sources/pastpapers/9618_w25_in_21.pdf` p.2、p.4，核对指南没有列出的 `NUM_TO_STR` / `STR_TO_NUM` 与 CHAR/STRING 拼接、比较规则。已按 rebase 后的最新规格核对并同步此来源。
 
 ## 差异 / 需要总控决定
 
