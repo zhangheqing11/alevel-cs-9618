@@ -52,3 +52,12 @@ PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/（只读）。�
 ```
 T12 后续：按 docs/DECISIONS.md D21，用 pipeline/extract/overrides.json 给 9618_s21_23、9618_w21_23 中与同季 _21 卷逐题相同、但还没标 equivalent_of 的 37 行补上 equivalent_of（指向 _21 卷对应行），重跑抽取确认其余字段不变。从最新 origin/main 开分支 task/T12-p2-equivalents。交付：make check → make check-scope TASK=T12 → push → gh pr create --base main。不要合并。
 ```
+
+## codex-2 · T28（现在可开：P2 全量打标签 + 拆得分点）
+
+```
+你是执行工位 codex-2，负责任务 T28（P2 全量打标签 + 拆得分点）。它与 codex-1 的 T24（P1）并行，不要碰 P1 的文件。
+先读 AGENTS.md、docs/DECISIONS.md，再读 tasks/T28-p2-tagging.md、papers/p2/taxonomy.json、papers/p2/skill_tags.json、papers/p2/tagging-guide.md（唯一规则，§8 是得分点拆分）。若 tasks/progress/T28.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T28-p2-tagging。先盲标全部 721 行并拆得分点，再与 papers/p2/pilot_tags.csv、pilot_markpoints.jsonl 比对。真源放 pipeline/tag/p2/，用脚本合并进 corpus/rows/p2/。
+只改 tasks/scope.json 里 T28 允许的路径。交付：rebase origin/main → make check → make check-scope TASK=T28 → push → gh pr create --base main。不要合并 PR。停下前更新 tasks/progress/T28.md 并提交。
+```

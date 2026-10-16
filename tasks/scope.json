@@ -75,5 +75,12 @@
       "papers/p1/core/**",
       "papers/p1/adjudication.csv"
     ]
+  },
+  "T28": {
+    "allow": [
+      "pipeline/tag/p2/**",
+      "corpus/rows/p2/**",
+      "corpus/tag_report_p2.md"
+    ]
   }
 }
