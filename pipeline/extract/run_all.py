@@ -51,12 +51,13 @@ def row_hash(row):
 def report(selected, rows_by_paper):
     flags = ["split-uncertain", "ms-misaligned", "marks-unclear", "figure", "ocr-garbled", "needs-review"]
     audits = {}
+    overrides = json.loads((ROOT / "pipeline/extract/overrides.json").read_text(encoding="utf-8"))
     for path in sorted((ROOT / "pipeline/extract").glob("audit_p*.json")):
         for entry in json.loads(path.read_text(encoding="utf-8")):
             audits[entry["id"]] = entry
     lines = [
         "# T12 抽取报告", "",
-        "生成命令：`python pipeline/extract/run_all.py --component 1`（后续批次改卷号，或 `--all`）。",
+        "生成命令：`python pipeline/extract/run_all.py --component N`（N 为本次批次卷号，或 `--all`）；报告累积保留已有批次。",
         "源 PDF：`$ALEVEL_CS_SOURCES/pastpapers/`，只读；缓存：`/tmp/alevel-cs-extract/`。",
         "", "## 方法与核验边界", "",
         "- QP 从 PDF 坐标识别实际最细题号和右侧 `[n]` 分值；不把数组下标当分值，不为凑总分拆题。",
@@ -86,7 +87,7 @@ def report(selected, rows_by_paper):
     issues = [r for r in all_rows if set(r["flags"]) - {"figure"}]
     if issues:
         for row in issues:
-            note = ""
+            note = ": " + overrides[row["id"]]["reason"] if row["id"] in overrides else ""
             if row["id"] == "9618_s25_12:7(b)(ii)":
                 note = "：QP p.16 印 [1]；MS p.12 的 Answer 为 1 mark for: / 0000 0011，但右侧 Marks 单元格为空（已查看渲染原页）。保留 QP 的 marks=1，标 marks-unclear，不补造 MS Marks 列。"
             lines.append(f"- `{row['id']}`：{', '.join(f for f in row['flags'] if f != 'figure')}{note}")
