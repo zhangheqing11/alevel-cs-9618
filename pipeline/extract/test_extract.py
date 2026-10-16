@@ -82,3 +82,27 @@ def test_array_indices_are_not_mark_boxes():
     leaves = split_question_paper(source("9618_s25_qp_33.pdf"))
     assert sum(q.marks for q in leaves) == 75
     assert len(leaves) == 26
+
+
+def test_multpage_p2_leaf_keeps_module_table_and_final_instruction():
+    leaf = qp("9618_s24_qp_22.pdf", "8(c)")
+    assert (leaf.page, leaf.end_page, leaf.marks) == (20, 21, 8)
+    assert "DeleteComment()" in leaf.text and "Stage_2()" in leaf.text
+    assert "must be used in your solution" in leaf.text
+    assert "student project" in leaf.context
+
+
+def test_p2_ms_keeps_alternative_solution_on_continuation_page():
+    block = ms("9618_w24_ms_23.pdf", "4(b)(ii)")
+    assert block.page == 8 and block.marks == 6
+    assert "GBInitialise()" in block.text
+    assert "Version 1" in block.text and "Version 2" in block.text
+    assert "IF ThisIndex >= Lower AND ThisIndex <= Higher" in block.text
+
+
+def test_p2_ms_keeps_both_schemes_for_same_question():
+    block = ms("9618_s26_ms_22.pdf", "6(a)")
+    assert block.page == 16 and block.marks == 8
+    assert "Mark Schme One" in block.text
+    assert "Mark Scheme Two" in block.text
+    assert "RETURN Plaintext" in block.text

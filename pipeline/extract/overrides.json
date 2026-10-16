@@ -1,1 +1,20 @@
-{}
+{
+  "9618_w22_22:1(c)": {
+    "reason": "原页核验：QP p.3 第三个表达式是 (Count >= 29) AND (DAY(FlagDay) > 23)，MS p.3 同行印 (Count >= 99)。分别保留各自原文，标 needs-review 供总控/下游教学裁决；不改写给分依据。",
+    "fields": {
+      "flags": [
+        "figure",
+        "needs-review"
+      ]
+    }
+  },
+  "9618_w25_23:3": {
+    "reason": "原页核验：QP p.6 和 MS p.7 均声明局部变量 ThisPop : PopData，但示例赋值使用 PopData.Exists/PopData.Data，最后 RETURN ThisPop（MS 还带尾随反引号）。原文照录，标 needs-review 供总控裁决标识符问题。",
+    "fields": {
+      "flags": [
+        "figure",
+        "needs-review"
+      ]
+    }
+  }
+}
