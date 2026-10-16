@@ -209,8 +209,10 @@ def cmd_render(args, root) -> int:
         import pymupdf
     except ImportError as e:
         # D23: re-run under the project venv, which has PyMuPDF
-        venv_py = pathlib.Path.home() / ".venvs" / "alevel-cs" / "bin" / "python"
-        if venv_py.exists() and pathlib.Path(sys.executable).resolve() != venv_py.resolve():
+        venv_dir = pathlib.Path.home() / ".venvs" / "alevel-cs"
+        venv_py = venv_dir / "bin" / "python"
+        # compare prefixes, not executables: the venv python is a symlink to the same framework binary
+        if venv_py.exists() and pathlib.Path(sys.prefix).resolve() != venv_dir.resolve():
             os.execv(str(venv_py), [str(venv_py), os.path.abspath(sys.argv[0]), *sys.argv[1:]])
         raise RowsError("PyMuPDF missing: run `make setup` (venv ~/.venvs/alevel-cs)") from e
     r = get_row(root, args.row_id)

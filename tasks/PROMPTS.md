@@ -70,3 +70,9 @@ T12 后续：按 docs/DECISIONS.md D21，用 pipeline/extract/overrides.json 给
 2) T13b（分支 task/T13b-command-words）：build/stats.py 的设问分布把 Convert/Give/Identify/Complete/Write/Draw/Calculate/Show 等都归成了 other。按 9618 常见命令词整理成有限几类（state/identify/give、describe、explain/justify、complete/draw、write（代码/表达式/SQL）、calculate/convert、compare/evaluate、other），md 里用中文类名显示；补测试。scope 用 T13。
 交付：make check → make check-scope TASK=T24（或 T13）→ push → gh pr create --base main。
 ```
+
+## codex-1 · T12c 私用区字符归一（D26，等 T28 合并后再做）
+
+```
+T12c（分支 task/T12c-pua-normalise）：按 docs/DECISIONS.md D26 的对照表，在 pipeline/extract 的文本归一步骤里把私用区字符改写成真实符号，作用于全部卷的 stem、stem_ctx、ms_text；重跑抽取，确认除这些字符外其余字段逐字不变（写一个对比脚本，报告每卷改了多少处）。表外若还有 U+E000–U+F8FF 字符，列进报告，不要猜。然后用 pipeline/tag/apply_tags.py（P1）与 pipeline/tag/p2/apply_p2.py（P2，T28 的产物）重新套上标签，并把 markpoints 的 text 按同一张表改写。scope 用 T12 + T24 + T28 的路径（如被 check-scope 拦下，写进 PR「需要总控决定」）。交付：make check-all → push → gh pr create --base main。不要合并。
+```

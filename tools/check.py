@@ -67,7 +67,18 @@ def schema_errors(validator, obj) -> list[str]:
             for e in sorted(validator.iter_errors(obj), key=lambda e: list(map(str, e.absolute_path)))]
 
 
+# D26: Symbol / Wingdings glyphs that PDF extraction leaves in the Private Use Area,
+# mapped to what the original pages show (verified on rendered QP/MS pages).
+PUA_MAP = {
+    "": " ", "": "−", "": "<", "": ">", "": "✓",
+    "": "•", "": "○", "": "←", "": "±", "": "×",
+    "": "•", "": "←", "": "✓",
+}
+PUA_TABLE = str.maketrans(PUA_MAP)
+
+
 def norm(text: str) -> str:
+    text = text.translate(PUA_TABLE).replace("−", "-")
     text = unicodedata.normalize("NFKC", text).lower()
     text = text.replace("‘", "'").replace("’", "'").replace("“", '"').replace("”", '"')
     text = text.replace("←", "<-").replace("–", "-").replace("—", "-")
