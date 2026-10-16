@@ -1,0 +1,9 @@
+// Program to add two numbers
+DECLARE A : INTEGER
+DECLARE B : INTEGER
+
+   // read the values
+INPUT A
+INPUT B
+OUTPUT A + B   // show the sum
+    

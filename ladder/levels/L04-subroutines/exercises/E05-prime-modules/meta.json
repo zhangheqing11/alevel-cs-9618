@@ -1,0 +1,20 @@
+{
+  "id": "L04/E05",
+  "kind": "ladder",
+  "title": "Prime modules: calling a function inside a condition",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "module-header",
+    "boolean-return",
+    "procedure-call",
+    "boundary-values",
+    "pre-condition-loop"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "is_prime",
+  "ms_verified": false,
+  "difficulty": 3
+}

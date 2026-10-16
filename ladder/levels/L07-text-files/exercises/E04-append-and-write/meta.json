@@ -1,0 +1,23 @@
+{
+  "id": "L07/E04",
+  "kind": "ladder",
+  "title": "APPEND and WRITE: add to a log, rewrite a report",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "file-write",
+    "file-append",
+    "file-close",
+    "type-conversion",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [
+    "log.txt",
+    "report.txt"
+  ],
+  "entry": "append_entry",
+  "ms_verified": false,
+  "difficulty": 2
+}

@@ -1,0 +1,13 @@
+// global variables
+DECLARE NextNumber : INTEGER
+DECLARE Issued : INTEGER
+NextNumber ← 1
+Issued ← 0
+
+FUNCTION TakeTicket() RETURNS INTEGER
+
+ENDFUNCTION
+
+PROCEDURE ResetTickets(Start : INTEGER)
+
+ENDPROCEDURE

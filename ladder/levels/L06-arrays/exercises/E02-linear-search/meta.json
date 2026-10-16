@@ -1,0 +1,20 @@
+{
+  "id": "L06/E02",
+  "kind": "ladder",
+  "title": "Linear search in parallel arrays",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "linear-search",
+    "parallel-arrays",
+    "array-index",
+    "string-functions",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "look_up_mark",
+  "ms_verified": false,
+  "difficulty": 3
+}

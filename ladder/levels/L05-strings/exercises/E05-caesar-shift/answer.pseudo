@@ -1,0 +1,4 @@
+FUNCTION CaesarShift(Text : STRING, Shift : INTEGER) RETURNS STRING
+   // use ASC(), CHR() and MOD
+
+ENDFUNCTION

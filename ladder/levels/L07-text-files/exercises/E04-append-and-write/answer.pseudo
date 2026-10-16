@@ -1,0 +1,8 @@
+PROCEDURE AppendEntry(FileName : STRING, Entry : STRING)
+
+ENDPROCEDURE
+
+// global: Names : ARRAY[1:50] OF STRING; Marks : ARRAY[1:50] OF INTEGER; NumStudents : INTEGER
+PROCEDURE WriteReport(FileName : STRING)
+
+ENDPROCEDURE

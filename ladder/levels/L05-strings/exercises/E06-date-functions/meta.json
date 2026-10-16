@@ -1,0 +1,19 @@
+{
+  "id": "L05/E06",
+  "kind": "ladder",
+  "title": "Insert date functions and datetime.date",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "date-functions",
+    "string-functions",
+    "type-conversion",
+    "boolean-return"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "date_to_string",
+  "ms_verified": false,
+  "difficulty": 3
+}

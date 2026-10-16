@@ -1,0 +1,4 @@
+FUNCTION CountCodeLines(FileName : STRING) RETURNS INTEGER
+   // open, read to the end of the file, close, then return the count
+
+ENDFUNCTION

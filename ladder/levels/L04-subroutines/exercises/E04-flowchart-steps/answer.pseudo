@@ -1,0 +1,6 @@
+PROCEDURE CountSteps()
+   DECLARE Number : INTEGER
+   DECLARE Steps : INTEGER
+   // write the algorithm from the flowchart
+
+ENDPROCEDURE

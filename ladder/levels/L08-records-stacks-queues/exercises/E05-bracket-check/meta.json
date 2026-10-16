@@ -1,0 +1,20 @@
+{
+  "id": "L08/E05",
+  "kind": "ladder",
+  "title": "Check that brackets are balanced using a stack",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "stack-array",
+    "char-loop",
+    "string-functions",
+    "boolean-return",
+    "boundary-values"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "balanced",
+  "ms_verified": false,
+  "difficulty": 4
+}

@@ -1,0 +1,15 @@
+DECLARE Queue : ARRAY[1:5] OF STRING
+DECLARE FrontPointer : INTEGER
+DECLARE RearPointer : INTEGER
+DECLARE NumberOfItems : INTEGER
+FrontPointer ← 1
+RearPointer ← 0
+NumberOfItems ← 0
+
+FUNCTION Enqueue(Item : STRING) RETURNS BOOLEAN
+
+ENDFUNCTION
+
+FUNCTION Dequeue() RETURNS STRING
+
+ENDFUNCTION

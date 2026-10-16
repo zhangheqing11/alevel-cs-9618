@@ -1,0 +1,6 @@
+PROCEDURE LetterStats(BYVAL Text : STRING, BYREF Vowels : INTEGER, BYREF Consonants : INTEGER, BYREF Others : INTEGER)
+   DECLARE Index : INTEGER
+   DECLARE Ch : CHAR
+   // count-controlled loop, MID(), TO_UPPER() and a CASE structure
+
+ENDPROCEDURE

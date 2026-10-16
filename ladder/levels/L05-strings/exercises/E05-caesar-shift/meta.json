@@ -1,0 +1,20 @@
+{
+  "id": "L05/E05",
+  "kind": "ladder",
+  "title": "Caesar shift with ASC, CHR and MOD",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "char-loop",
+    "char-code",
+    "div-mod",
+    "char-compare",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "caesar_shift",
+  "ms_verified": false,
+  "difficulty": 3
+}

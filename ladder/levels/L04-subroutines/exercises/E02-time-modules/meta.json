@@ -1,0 +1,20 @@
+{
+  "id": "L04/E02",
+  "kind": "ladder",
+  "title": "Write three modules from a module table",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "module-header",
+    "byval-byref",
+    "return-value",
+    "div-mod",
+    "procedure-call"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "add_durations",
+  "ms_verified": false,
+  "difficulty": 3
+}

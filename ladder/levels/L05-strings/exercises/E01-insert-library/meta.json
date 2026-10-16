@@ -1,0 +1,18 @@
+{
+  "id": "L05/E01",
+  "kind": "ladder",
+  "title": "Insert library: LEFT, RIGHT, MID and LENGTH in Python",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "string-functions",
+    "string-index",
+    "boundary-values"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "mid",
+  "ms_verified": false,
+  "difficulty": 2
+}

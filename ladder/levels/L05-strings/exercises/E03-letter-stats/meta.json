@@ -1,0 +1,20 @@
+{
+  "id": "L05/E03",
+  "kind": "ladder",
+  "title": "Count vowels, consonants and other characters",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "char-loop",
+    "string-functions",
+    "case-of",
+    "byval-byref",
+    "accumulator"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "letter_stats",
+  "ms_verified": false,
+  "difficulty": 3
+}

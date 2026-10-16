@@ -1,0 +1,20 @@
+{
+  "id": "L08/E03",
+  "kind": "ladder",
+  "title": "Stack: an array and a top pointer",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "stack-array",
+    "global-scope",
+    "boundary-values",
+    "boolean-return",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "push",
+  "ms_verified": false,
+  "difficulty": 3
+}

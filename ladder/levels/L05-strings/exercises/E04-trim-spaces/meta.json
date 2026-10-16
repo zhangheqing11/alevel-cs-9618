@@ -1,0 +1,19 @@
+{
+  "id": "L05/E04",
+  "kind": "ladder",
+  "title": "Remove leading and trailing spaces",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "string-functions",
+    "string-index",
+    "pre-condition-loop",
+    "boundary-values"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "trim_spaces",
+  "ms_verified": false,
+  "difficulty": 3
+}

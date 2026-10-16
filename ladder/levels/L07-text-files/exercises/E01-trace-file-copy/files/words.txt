@@ -1,0 +1,6 @@
+apple
+
+Banana
+cherry
+
+date

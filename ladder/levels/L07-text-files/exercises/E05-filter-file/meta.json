@@ -1,0 +1,23 @@
+{
+  "id": "L07/E05",
+  "kind": "ladder",
+  "title": "Filter a file: split fields, write matching lines, count the rest",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "file-open-read",
+    "loop-to-eof",
+    "file-write",
+    "file-close",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [
+    "marks.txt"
+  ],
+  "entry": "filter_marks",
+  "ms_verified": false,
+  "difficulty": 4
+}
