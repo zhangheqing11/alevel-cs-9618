@@ -18,6 +18,8 @@
 
 在规格所在目录里：`task.md`（中文导读 + 英文题干 + 人工核对清单，取自规格）、`meta.json`（`kind: "ladder"`、`id: "L05/E03"`、`source: null`、`adapted_from` 照抄规格出处）、`starter.py`、`test_task.py`、`ref/solution.py`、`ref/mutant_*.py`（**按规格的 mutant 建议逐个实现，至少 2 个**）、`files/`（若需要）、`answer.pseudo`（规格要求先写伪代码时；含题目要求的过程/函数头）。
 
+数据文件（D11）：逐字照抄规格「数据文件」小节；规格里的 `·` 是普通空格的可视标记；注明「最后一行不换行」的文件不得以换行结尾（写完用 `tail -c1 文件 | xxd` 自查）。
+
 测试要求：
 - 覆盖规格「必测行为」的每一条，docstring 注明对应条目；
 - 只通过 fixture 访问被测代码，不 `import solution`；
