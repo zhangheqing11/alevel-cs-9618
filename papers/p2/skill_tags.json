@@ -1,0 +1,513 @@
+{
+  "version": "1.0",
+  "tags": [
+    {
+      "tag": "trace-dry-run",
+      "group": "design",
+      "name_zh": "干跑与追踪表",
+      "desc": "按语句顺序执行给定代码，逐行记下变量与输出（追踪表、写出输出或返回值）。",
+      "example_ms": "If no marks per group then mark by columns (columns 3 to 6) for max 4 — 9618_s22_22:5(b)"
+    },
+    {
+      "tag": "translate-pseudocode",
+      "group": "design",
+      "name_zh": "伪代码译成 Python",
+      "desc": "把伪代码逐行译成等价的 Python（阶梯与 P4 用；P2 得分点不用此标签）。"
+    },
+    {
+      "tag": "flowchart-to-pseudocode",
+      "group": "design",
+      "name_zh": "流程图 → 伪代码",
+      "desc": "把流程图的判断与回路准确写成 IF / 循环结构（判断条件方向、循环种类与位置）。",
+      "example_ms": "(Outer) conditional loop testing Flag — 9618_s24_22:2(b)"
+    },
+    {
+      "tag": "flowchart-draw",
+      "group": "design",
+      "name_zh": "画/补全程序流程图",
+      "desc": "用正确符号画出算法：判断用菱形且两出口标 Yes/No，输入输出用平行四边形，回路线回到判断前。",
+      "example_ms": "Output of Ans and average in output symbol / parallelogram — 9618_s24_22:2(a)"
+    },
+    {
+      "tag": "find-fix-errors",
+      "group": "design",
+      "name_zh": "找错改错",
+      "desc": "在给定代码里指出语法、逻辑或运行错误并写出改正（含说明为什么错）。",
+      "example_ms": "NEXT Index (should be ENDWHILE) — 9618_s24_22:5(a)(i)"
+    },
+    {
+      "tag": "boundary-values",
+      "group": "design",
+      "name_zh": "边界值与测试数据",
+      "desc": "选正常、异常、边界（极端）测试数据并写出预期结果；说明某组数据为何能暴露问题。"
+    },
+    {
+      "tag": "data-types",
+      "group": "data",
+      "name_zh": "选对数据类型",
+      "desc": "为变量、记录字段、参数与返回值选对类型（INTEGER / REAL / CHAR / STRING / BOOLEAN / DATE）。",
+      "example_ms": "One mark for Limit fields as REAL — 9618_s24_22:3(a)(i)"
+    },
+    {
+      "tag": "declare-constant",
+      "group": "data",
+      "name_zh": "声明变量与常量",
+      "desc": "用 DECLARE 声明所用的（局部）变量，用 CONSTANT 定义常量；得分点常写作 Declare local variables …。",
+      "example_ms": "Declare local Integers for Index and Count — 9618_s23_22:4"
+    },
+    {
+      "tag": "initialise-variables",
+      "group": "data",
+      "name_zh": "变量赋初值",
+      "desc": "在正确位置（循环前、内层循环前）给计数器、累加器、标志、下标、结果字符串赋初值。",
+      "example_ms": "Initialise Total — 9618_w25_21:6(b)"
+    },
+    {
+      "tag": "type-conversion",
+      "group": "data",
+      "name_zh": "类型转换",
+      "desc": "STR_TO_NUM / NUM_TO_STR / INT 等转换（Python 的 int()、float()、str()）；写文件前把数值转成字符串。",
+      "example_ms": "Convert ThisNum (loop counter) to a string — 9618_s23_23:6(a)"
+    },
+    {
+      "tag": "div-mod",
+      "group": "data",
+      "name_zh": "整除与取余",
+      "desc": "DIV、MOD（与 INT）求商、余数、逐位取数、判断奇偶或整除。",
+      "example_ms": "attempt to use MOD and DIV to sum successive digits in Number — 9618_w25_21:6(b)"
+    },
+    {
+      "tag": "operator-precedence",
+      "group": "data",
+      "name_zh": "运算优先级与表达式",
+      "desc": "算术表达式与括号、平均值等计算写对（如求平均不能用 DIV）。",
+      "example_ms": "Average calculated using Num1, Num2 and Num3 and stored in a variable. Reject use of DIV — 9618_s24_22:2(a)"
+    },
+    {
+      "tag": "relational-ops",
+      "group": "data",
+      "name_zh": "比较运算",
+      "desc": "=、<>、<、<=、>、>= 写对且边界取等号正确。"
+    },
+    {
+      "tag": "logic-ops",
+      "group": "data",
+      "name_zh": "逻辑运算",
+      "desc": "AND / OR / NOT 组合条件，循环条件里同时写两个测试。",
+      "example_ms": "Attempt at conditional loop including both tests — 9618_w25_21:4(a)"
+    },
+    {
+      "tag": "input-prompt",
+      "group": "io",
+      "name_zh": "输入前提示",
+      "desc": "INPUT 之前先 OUTPUT 提示语（Python 写在 input(\"…\") 里）。",
+      "example_ms": "Appropriate prompt and two inputs — 9618_w22_23:7(a)"
+    },
+    {
+      "tag": "output-format",
+      "group": "io",
+      "name_zh": "输出结果与说明",
+      "desc": "按要求输出结果并带说明文字；输出放在正确位置（循环内/循环后、两种情况都输出）；OUTPUT 用逗号分隔。",
+      "example_ms": "Output an appropriate message in both cases after the loop — 9618_w25_21:8(a)"
+    },
+    {
+      "tag": "nested-if",
+      "group": "control",
+      "name_zh": "IF 与嵌套 IF",
+      "desc": "用 IF…THEN…ELSE…ENDIF（含嵌套）覆盖所有分支。",
+      "example_ms": "Check for Reject — 9618_w22_23:6(b)"
+    },
+    {
+      "tag": "case-of",
+      "group": "control",
+      "name_zh": "CASE 结构",
+      "desc": "CASE OF … OTHERWISE … ENDCASE 多分支选择及与 IF 的互换。"
+    },
+    {
+      "tag": "case-range",
+      "group": "control",
+      "name_zh": "CASE 范围子句",
+      "desc": "CASE 子句里写范围 a TO b 或多个值。"
+    },
+    {
+      "tag": "count-loop",
+      "group": "control",
+      "name_zh": "FOR 计数循环",
+      "desc": "FOR … TO … NEXT，次数固定的循环。",
+      "example_ms": "Loop for 7000 iterations — 9618_w25_22:8(a)"
+    },
+    {
+      "tag": "loop-step",
+      "group": "control",
+      "name_zh": "STEP 与负步长",
+      "desc": "FOR 循环的 STEP 步长（含负步长倒序）。",
+      "example_ms": "STEP 10 or explicit increment if conditional loop used — 9618_s22_21:6(a)"
+    },
+    {
+      "tag": "pre-condition-loop",
+      "group": "control",
+      "name_zh": "WHILE 前测循环",
+      "desc": "WHILE … ENDWHILE，条件在前、可能一次也不执行。",
+      "example_ms": "(Conditional) loop while error number input is in range — 9618_w22_23:7(a)"
+    },
+    {
+      "tag": "post-condition-loop",
+      "group": "control",
+      "name_zh": "REPEAT 后测循环",
+      "desc": "REPEAT … UNTIL，至少执行一次，条件是停止条件。"
+    },
+    {
+      "tag": "sentinel-loop",
+      "group": "control",
+      "name_zh": "哨兵值循环",
+      "desc": "输入到特定终止值（rogue value，如 0、-1）为止的循环。",
+      "example_ms": "Loop until 0 input — 9618_w23_22:2(a)"
+    },
+    {
+      "tag": "input-validation",
+      "group": "control",
+      "name_zh": "输入校验循环",
+      "desc": "输入不合法就重新输入，直到合法为止。"
+    },
+    {
+      "tag": "nested-loops",
+      "group": "control",
+      "name_zh": "嵌套循环",
+      "desc": "外层与内层循环配合（行列、逐对比较、内层计数）。",
+      "example_ms": "An inner loop — 9618_s25_21:6(b)"
+    },
+    {
+      "tag": "loop-bounds",
+      "group": "control",
+      "name_zh": "循环边界",
+      "desc": "循环次数与起止值正确（遍历全部元素、到字符串长度、不差一）。",
+      "example_ms": "Loop through all elements in Loan array — 9618_w25_21:8(a)"
+    },
+    {
+      "tag": "loop-choice",
+      "group": "control",
+      "name_zh": "选择与改写循环",
+      "desc": "说明哪种循环最合适并给出理由，或把一种循环改写成另一种。"
+    },
+    {
+      "tag": "flag-variable",
+      "group": "control",
+      "name_zh": "标志变量",
+      "desc": "用 BOOLEAN 标志记录「已找到/已交换/已结束」并据此结束循环或分支。",
+      "example_ms": "Set a flag (or similar) if match found — 9618_s21_22:8(a)"
+    },
+    {
+      "tag": "module-header",
+      "group": "structure",
+      "name_zh": "模块头与结尾",
+      "desc": "按要求写 PROCEDURE / FUNCTION 头（名称、参数及类型、RETURNS 类型）与 ENDPROCEDURE / ENDFUNCTION；判断该用过程还是函数。",
+      "example_ms": "Function heading and end, including parameters and return type — 9618_s23_22:4"
+    },
+    {
+      "tag": "byval-byref",
+      "group": "structure",
+      "name_zh": "BYVAL 与 BYREF",
+      "desc": "需要把值带回调用者的参数用 BYREF，其余 BYVAL；Python 里改用返回值或可变对象。",
+      "example_ms": "...and use of BYREF for the three extracted values — 9618_w22_23:5(a)(i)"
+    },
+    {
+      "tag": "procedure-call",
+      "group": "structure",
+      "name_zh": "调用模块",
+      "desc": "CALL 过程、在表达式中调用函数并使用其返回值；按要求调用已写好的模块。",
+      "example_ms": "Assign return values from DeleteComment() and DeleteSpaces() in a loop — 9618_s24_22:8(c)"
+    },
+    {
+      "tag": "return-value",
+      "group": "structure",
+      "name_zh": "返回值",
+      "desc": "RETURN 正确的值，所有路径都返回，且在合理位置（通常循环后）返回。",
+      "example_ms": "Return Count after loop — 9618_s23_22:4"
+    },
+    {
+      "tag": "boolean-return",
+      "group": "structure",
+      "name_zh": "返回 BOOLEAN",
+      "desc": "函数在各种情况下正确返回 TRUE / FALSE。",
+      "example_ms": "Return TRUE or FALSE in all cases — 9618_s21_22:8(a)"
+    },
+    {
+      "tag": "global-scope",
+      "group": "structure",
+      "name_zh": "全局与局部",
+      "desc": "区分全局与局部变量；在模块内声明局部变量而不重复声明全局数组。"
+    },
+    {
+      "tag": "accumulator",
+      "group": "algorithm",
+      "name_zh": "计数器与累加器",
+      "desc": "在循环中按条件计数或求和（需配合赋初值）。",
+      "example_ms": "Increment Count if match in a loop — 9618_s23_22:4"
+    },
+    {
+      "tag": "max-min",
+      "group": "algorithm",
+      "name_zh": "最大值与最小值",
+      "desc": "找最大/最小值或其位置：用第一个值或极端值作初值，逐个比较更新。",
+      "example_ms": "Condition for selecting one of the input numbers as largest value — 9618_s24_22:2(a)"
+    },
+    {
+      "tag": "linear-search",
+      "group": "algorithm",
+      "name_zh": "线性查找",
+      "desc": "逐个比较查找目标，找到即停（条件循环 not found AND not end）或记录位置；未找到时有处理。",
+      "example_ms": "Conditional loop while not found and not end of array — 9618_s22_21:8(b)"
+    },
+    {
+      "tag": "bubble-sort",
+      "group": "algorithm",
+      "name_zh": "冒泡排序",
+      "desc": "比较相邻元素并交换（用临时变量），外层循环减少范围或用「无交换即停止」提高效率。",
+      "example_ms": "Swap elements in both arrays in a loop — 9618_w22_22:7(b)"
+    },
+    {
+      "tag": "counting-array",
+      "group": "algorithm",
+      "name_zh": "计数数组",
+      "desc": "以值作下标在数组里分别计数（如每个字符、每小时一个计数）。",
+      "example_ms": "Maintain CharCount in a loop — 9618_w23_23:8(a)"
+    },
+    {
+      "tag": "random-numbers",
+      "group": "algorithm",
+      "name_zh": "随机数",
+      "desc": "用 RAND(x) 与 INT 生成指定范围的随机整数（或随机字符）。",
+      "example_ms": "Uses RAND() function — 9618_s25_21:3"
+    },
+    {
+      "tag": "binary-search",
+      "group": "algorithm",
+      "name_zh": "二分查找",
+      "desc": "在有序数据上取中点、缩小范围查找（A2 / P4）。"
+    },
+    {
+      "tag": "insertion-sort",
+      "group": "algorithm",
+      "name_zh": "插入排序",
+      "desc": "把元素插入左侧已排序部分（A2 / P4）。"
+    },
+    {
+      "tag": "recursion",
+      "group": "algorithm",
+      "name_zh": "递归",
+      "desc": "递归调用与基本情况（A2 / P4）。"
+    },
+    {
+      "tag": "string-functions",
+      "group": "string",
+      "name_zh": "插页字符串函数",
+      "desc": "正确使用 MID / LEFT / RIGHT / LENGTH / TO_UPPER / TO_LOWER 等插页函数（参数顺序、个数正确）。",
+      "example_ms": "Use of MID() to extract single character — 9618_s21_22:6"
+    },
+    {
+      "tag": "char-loop",
+      "group": "string",
+      "name_zh": "逐字符循环",
+      "desc": "从 1 到 LENGTH 逐个取出字符并处理。",
+      "example_ms": "Extract a character and compare with parameter in a loop — 9618_s23_22:4"
+    },
+    {
+      "tag": "string-index",
+      "group": "string",
+      "name_zh": "字符串下标",
+      "desc": "1 起的字符位置、子串起点与长度的计算（Python 0 起、切片）。",
+      "example_ms": "Calculation of length of SCost (remainder of string) — 9618_w22_23:5(a)(i)"
+    },
+    {
+      "tag": "string-concat",
+      "group": "string",
+      "name_zh": "字符串连接",
+      "desc": "用 & 逐步拼出新字符串（先赋初值空串）；不能把数值直接 & 连接。",
+      "example_ms": "Use of concatenate – must have been initialised in a loop — 9618_s23_23:4"
+    },
+    {
+      "tag": "char-compare",
+      "group": "string",
+      "name_zh": "字符判断与比较",
+      "desc": "判断字符是否字母/数字/空格、大小写统一后比较、字符范围比较。",
+      "example_ms": "Test if char is alphabetic in a loop — 9618_s23_21:8(a)"
+    },
+    {
+      "tag": "char-code",
+      "group": "string",
+      "name_zh": "字符编码",
+      "desc": "ASC / CHR 与码值运算（Python 的 ord / chr）。"
+    },
+    {
+      "tag": "field-extract",
+      "group": "string",
+      "name_zh": "按分隔符或定长取字段",
+      "desc": "从一行文本中按分隔符位置或固定长度取出各字段；写出时用分隔符拼成一行。",
+      "example_ms": "Extract a character and test for comma in a loop — 9618_s22_22:6"
+    },
+    {
+      "tag": "date-functions",
+      "group": "date",
+      "name_zh": "日期函数",
+      "desc": "插页日期函数 SETDATE、DAY、MONTH、YEAR、DAYINDEX、TODAY 等的正确使用（Python 的 datetime）。",
+      "example_ms": "Use of TODAY() function to obtain current date — 9618_s25_23:7(a)(i)"
+    },
+    {
+      "tag": "declare-array",
+      "group": "array",
+      "name_zh": "声明数组",
+      "desc": "DECLARE … : ARRAY[l:u] OF 类型，二维写 [l1:u1, l2:u2]；上下界与元素类型都要写。",
+      "example_ms": "Declare a (1D) array of size >= 10 — 9618_w22_23:4(b)(ii)"
+    },
+    {
+      "tag": "array-index",
+      "group": "array",
+      "name_zh": "数组下标",
+      "desc": "用变量作下标访问元素、下标不越界、记下（第一个）符合条件元素的下标。",
+      "example_ms": "Save index of (first) unused element found — 9618_s21_21:7(b)"
+    },
+    {
+      "tag": "array-2d",
+      "group": "array",
+      "name_zh": "二维数组",
+      "desc": "用 [行, 列] 访问二维数组，按行或按列遍历。",
+      "example_ms": "Compare value of element in column 1 with parameter passed into — 9618_s22_21:8(b)"
+    },
+    {
+      "tag": "array-copy",
+      "group": "array",
+      "name_zh": "数组复制与别名",
+      "desc": "整个数组/记录赋值是复制还是别名（Python 列表别名问题）。"
+    },
+    {
+      "tag": "parallel-arrays",
+      "group": "array",
+      "name_zh": "并行数组",
+      "desc": "几个数组用同一下标对应同一对象，交换或写入时同步处理。",
+      "example_ms": "Assignment of values to arrays — 9618_w22_23:7(b)(i)"
+    },
+    {
+      "tag": "record-type",
+      "group": "record",
+      "name_zh": "定义记录类型",
+      "desc": "TYPE … ENDTYPE 中逐个 DECLARE 字段并选对类型（Python 用只有属性的 class）。",
+      "example_ms": "One mark for TYPE and ENDTYPE statements — 9618_s24_22:3(a)(i)"
+    },
+    {
+      "tag": "array-of-records",
+      "group": "record",
+      "name_zh": "记录数组与点号访问",
+      "desc": "用 数组[下标].字段 读写记录数组中某条记录的字段。",
+      "example_ms": "Index references an indexed data item with correct .dot notation — 9618_w25_22:8(a)"
+    },
+    {
+      "tag": "file-open-read",
+      "group": "file",
+      "name_zh": "以 READ 打开并读行",
+      "desc": "OPENFILE … FOR READ，READFILE 在循环中读一行到变量。",
+      "example_ms": "Read a line from the file in a loop — 9618_s22_21:5"
+    },
+    {
+      "tag": "loop-to-eof",
+      "group": "file",
+      "name_zh": "读到文件尾",
+      "desc": "用 WHILE NOT EOF(文件名) 读完所有行（文件可能为空时也正确）。",
+      "example_ms": "Loop to EOF(F1) — 9618_s24_22:8(c)"
+    },
+    {
+      "tag": "file-write",
+      "group": "file",
+      "name_zh": "WRITE 写文件",
+      "desc": "OPENFILE … FOR WRITE（新建/覆盖），WRITEFILE 写一行。",
+      "example_ms": "If not blank then write the value to the file in a loop — 9618_w25_23:2(a)"
+    },
+    {
+      "tag": "file-append",
+      "group": "file",
+      "name_zh": "APPEND 追加",
+      "desc": "OPENFILE … FOR APPEND 在已有文件末尾追加。",
+      "example_ms": "Open file in APPEND mode (and subsequent Close) — 9618_w22_22:2(a)(i)"
+    },
+    {
+      "tag": "file-close",
+      "group": "file",
+      "name_zh": "关闭文件",
+      "desc": "用完后 CLOSEFILE（多数 MS 与打开合成一个得分点：and subsequently close）。",
+      "example_ms": "Open both files in correct modes and subsequently close — 9618_s24_22:8(c)"
+    },
+    {
+      "tag": "stack-array",
+      "group": "adt",
+      "name_zh": "数组实现栈",
+      "desc": "数组 + 栈顶指针：初始化、PUSH 前判满、POP 前判空、指针增减。",
+      "example_ms": "Check there is a value on the stack — 9618_s23_23:3(b)(ii)"
+    },
+    {
+      "tag": "queue-array",
+      "group": "adt",
+      "name_zh": "数组实现队列",
+      "desc": "数组 + 队首/队尾指针（与计数）：入队判满、出队判空、循环队列回绕。"
+    },
+    {
+      "tag": "linked-list",
+      "group": "adt",
+      "name_zh": "链表",
+      "desc": "数据与指针数组、起始指针、空闲表、空指针；插入删除时改指针。",
+      "example_ms": "Pointer from A will be changed to point to node containing B — 9618_s21_21:6(a)"
+    },
+    {
+      "tag": "binary-tree",
+      "group": "adt",
+      "name_zh": "二叉树",
+      "desc": "数组 + 左右指针的二叉树插入、查找、遍历（A2 / P4）。"
+    },
+    {
+      "tag": "class-definition",
+      "group": "oop",
+      "name_zh": "定义类与构造",
+      "desc": "CLASS … ENDCLASS 与构造方法（Python class 与 __init__）（A2 / P4）。"
+    },
+    {
+      "tag": "encapsulation",
+      "group": "oop",
+      "name_zh": "封装",
+      "desc": "私有属性只通过方法访问（A2 / P4）。"
+    },
+    {
+      "tag": "getter-setter",
+      "group": "oop",
+      "name_zh": "getter 与 setter",
+      "desc": "为私有属性写取值与设值方法（A2 / P4）。"
+    },
+    {
+      "tag": "inheritance",
+      "group": "oop",
+      "name_zh": "继承",
+      "desc": "INHERITS、调用父类构造（Python super()）（A2 / P4）。"
+    },
+    {
+      "tag": "polymorphism",
+      "group": "oop",
+      "name_zh": "多态与重写",
+      "desc": "子类重写父类方法（A2 / P4）。"
+    },
+    {
+      "tag": "containment",
+      "group": "oop",
+      "name_zh": "包含（聚合）",
+      "desc": "一个类的属性是另一个类的对象或其数组（A2 / P4）。"
+    },
+    {
+      "tag": "exception-handling",
+      "group": "exception",
+      "name_zh": "异常处理",
+      "desc": "Python try / except 捕获并处理运行时错误（P4）。"
+    },
+    {
+      "tag": "p4-identifiers",
+      "group": "p4",
+      "name_zh": "照抄题目标识符",
+      "desc": "P4 中一律使用题目指定的变量、数组、模块名（P4）。"
+    }
+  ]
+}
