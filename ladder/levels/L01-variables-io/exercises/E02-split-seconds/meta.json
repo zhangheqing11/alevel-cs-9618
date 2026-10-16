@@ -10,7 +10,7 @@
     "type-conversion",
     "input-prompt",
     "output-format",
-    "declare-constant"
+    "declare-variables"
   ],
   "pseudocode": true,
   "files": [],

@@ -288,7 +288,7 @@ def run_pytest(test_file: pathlib.Path, candidate: pathlib.Path) -> tuple[int, s
     return proc.returncode, proc.stdout + proc.stderr
 
 
-def check_exercises(rep: Report, rows: dict, types: dict, all_exercises: bool, only: str | None) -> None:
+def check_exercises(rep: Report, rows: dict, types: dict, vocab: dict, all_exercises: bool, only: str | None) -> None:
     validator = schema("exercise.schema.json")
     metas = sorted(p for base in ("practice", "ladder", "schemas/examples")
                    for p in (ROOT / base).rglob("meta.json") if "attempts" not in p.parts)
@@ -327,6 +327,11 @@ def check_exercises(rep: Report, rows: dict, types: dict, all_exercises: bool, o
             for code in meta.get("types", []):
                 if code not in types:
                     rep.err(meta_path, f"unknown type code {code}")
+        all_tags = set().union(*vocab.values()) if vocab else set()
+        if all_tags and "schemas" not in ex.parts:  # D8: one shared skill vocabulary
+            for s in meta.get("skills", []):
+                if s not in all_tags:
+                    rep.err(meta_path, f"skill tag {s} not in papers/p*/skill_tags.json")
         # Run tests only when the exercise changed (or --all / --only)
         if not (all_exercises or only) and changed is not None:
             if not any(p.startswith(ex_rel + "/") for p in changed):
@@ -376,7 +381,7 @@ def main() -> int:
     check_row_links(rep, rows, types, vocab)
     check_markdown(rep, rows, types)
     if not args.no_exercises:
-        check_exercises(rep, rows, types, args.all_exercises, args.only)
+        check_exercises(rep, rows, types, vocab, args.all_exercises, args.only)
     check_ledger(rep)
 
     for n in rep.notes:

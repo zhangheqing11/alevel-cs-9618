@@ -8,7 +8,7 @@
 | entry | `split_seconds` |
 | pseudocode | `true` |
 | files | `[]` |
-| skills | `div-mod`, `type-conversion`, `input-prompt`, `output-format`, `declare-constant` |
+| skills | `div-mod`, `type-conversion`, `input-prompt`, `output-format`, `declare-variables` |
 | difficulty | 1 |
 | title | `Split seconds into hours, minutes and seconds` |
 | adapted_from | 无（不写该字段） |

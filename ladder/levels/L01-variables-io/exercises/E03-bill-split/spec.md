@@ -8,7 +8,7 @@
 | entry | `split_bill` |
 | pseudocode | `true` |
 | files | `[]` |
-| skills | `declare-constant`, `type-conversion`, `output-format`, `input-prompt` |
+| skills | `declare-variables`, `type-conversion`, `output-format`, `input-prompt` |
 | difficulty | 2 |
 | title | `Split a restaurant bill with a service charge` |
 | adapted_from | `CS50P Problem Set 0 "Tip Calculator" (https://cs50.harvard.edu/python/psets/0/tip/), CC BY-NC-SA 4.0; adapted: fixed service-charge constant, numeric input, bill shared between people, new output format` |

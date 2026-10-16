@@ -8,7 +8,7 @@
   "skills": [
     "find-fix-errors",
     "operator-precedence",
-    "declare-constant",
+    "declare-variables",
     "output-format",
     "type-conversion"
   ],

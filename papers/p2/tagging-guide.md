@@ -163,8 +163,8 @@ P2 大题（Q6–Q8）的模块往往同时用到文件、数组、字符串。�
 |:--|:--|
 | Procedure / Function heading (and ending) including parameters (and return type) | `module-header` |
 | … and use of BYREF … | `byval-byref` |
-| Declare (local) variables … / Declaration of … | `declare-constant`；写明了类型要求（as REAL、Integers）再加 `data-types` |
-| Initialise … / Declaration and initialisation of … | `initialise-variables`（含声明时加 `declare-constant`） |
+| Declare (local) variables … / Declaration of … | `declare-variables`；写明了类型要求（as REAL、Integers）再加 `data-types` |
+| Initialise … / Declaration and initialisation of … | `initialise-variables`（含声明时加 `declare-variables`） |
 | (Appropriate) prompt and input … | `input-prompt` |
 | Output … (with a suitable message) (after the loop / in both cases) | `output-format` |
 | Return … (after loop / in all cases) | `return-value`；返回 TRUE/FALSE 用 `boolean-return` |
@@ -284,7 +284,7 @@ P2 大题（Q6–Q8）的模块往往同时用到文件、数组、字符串。�
 
 - **章节**：按考纲第 9–12 节建 4 章，章码采用任务卡建议；章内顺序就是学习顺序（概念 → 读代码 → 写代码）。写代码的大题按 §3「在场结构 + 优先级」归章：ADT 实现、排序、文件、各类数组归 DT；日期、字符串、数值、输入算法归 PG。优先级把「更难、更少见、MS 得分点更依赖的结构」排在前面，保证同一道 Q8 不会因打标签人不同而落到不同题型。
 - **粒度**：一个题型 = 识别信号、作答套路、MS 得分点模式都稳定的一种考法。写代码题按「主要处理的数据结构」而不是按情境或模块名分；P2-DT-08（核验语料 3 次，含 s26）因考纲 10.2 点名要求单独保留。
-- **技能词表**：`ladder/design.md` §7.8 的 68 个标签全部保留、不改名（阶梯练习 `meta.skills` 不受影响）。任务卡建议的 `procedure-header`、`declare-locals`、`mid-substring`、`concatenate`、`byref-param` 是种子标签的同义词，已分别并入 `module-header`、`declare-constant`、`string-functions`、`string-concat`、`byval-byref`，不另立。新增 8 个 P2 得分点常见技能：`data-types`、`initialise-variables`、`flag-variable`、`max-min`、`random-numbers`、`field-extract`、`declare-array`、`flowchart-draw`。分 15 组：design、data、io、control、structure、algorithm、string、date、array、record、file、adt、oop、exception、p4。
+- **技能词表**：`ladder/design.md` §7.8 的 68 个标签全部保留、不改名（阶梯练习 `meta.skills` 不受影响）。任务卡建议的 `procedure-header`、`declare-locals`、`mid-substring`、`concatenate`、`byref-param` 是种子标签的同义词，已分别并入 `module-header`、`declare-variables`、`string-functions`、`string-concat`、`byval-byref`，不另立。新增 8 个 P2 得分点常见技能：`data-types`、`initialise-variables`、`flag-variable`、`max-min`、`random-numbers`、`field-extract`、`declare-array`、`flowchart-draw`。分 15 组：design、data、io、control、structure、algorithm、string、date、array、record、file、adt、oop、exception、p4。
 - **试标**：`papers/p2/pilot_tags.csv`（列 `id,primary,cross,confidence,note`，多个副题型用 `;` 分隔），3 份不同考季的卷全部小问（9618_w22_23、9618_s24_22、9618_w25_21，共 66 行，225 分）。每行都找到了主题型；低信心 0 行；带副题型 8 行；用到 33 个题型。`papers/p2/pilot_markpoints.jsonl`（每行 `{"id", "ms_max", "markpoints"}`，`ms_max` 为 null 表示不写该字段）：18 行需拆分的小问拆出 110 条得分点，用到 42 个技能标签；每条 `text` 已核对为 MS 原文子串（压缩空白后），每个技能都在词表里，每行得分点总分等于分值或带 `ms_max`。
 - **试标中补充的规则**：① 9618_s24_22:8(c)（文件 + 字符串）、9618_w25_21:4(a)（数组 + 循环输入）按整体印象两种归法都说得通，由此把 §3 定成「≥ 2 分在场 + 优先级」并把副题型门槛定为 ≥ 2 分；② 9618_w25_21:6(b) 暴露「按 MS 解法定结构」会把数值题判成字符串题，加 §2 第 5 条；③ 9618_w25_21:8(a) 暴露 MS 编号少于分值，加 §8.2 第 5 条。
 - T24 打完后，若某题型核验语料不足 2 次、或低信心集中在某一对题型，交设计工位复核再定是否合并。

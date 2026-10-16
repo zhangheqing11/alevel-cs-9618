@@ -8,7 +8,7 @@
 | entry | `mark_summary` |
 | pseudocode | `true` |
 | files | `[]` |
-| skills | `find-fix-errors`, `operator-precedence`, `declare-constant`, `output-format`, `type-conversion` |
+| skills | `find-fix-errors`, `operator-precedence`, `declare-variables`, `output-format`, `type-conversion` |
 | difficulty | 2 |
 | title | `Find and correct the errors: total and average of three marks` |
 | adapted_from | 无（不写该字段） |

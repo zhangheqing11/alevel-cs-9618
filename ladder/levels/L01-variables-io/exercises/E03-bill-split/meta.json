@@ -6,7 +6,7 @@
   "marks": null,
   "types": [],
   "skills": [
-    "declare-constant",
+    "declare-variables",
     "type-conversion",
     "output-format",
     "input-prompt"

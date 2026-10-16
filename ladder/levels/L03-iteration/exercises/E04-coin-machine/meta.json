@@ -8,7 +8,7 @@
   "skills": [
     "post-condition-loop",
     "accumulator",
-    "declare-constant",
+    "declare-variables",
     "logic-ops",
     "boundary-values"
   ],

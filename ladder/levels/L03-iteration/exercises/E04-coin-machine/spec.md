@@ -8,7 +8,7 @@
 | entry | `coin_machine` |
 | pseudocode | `true` |
 | files | `[]` |
-| skills | `post-condition-loop`, `accumulator`, `declare-constant`, `logic-ops`, `boundary-values` |
+| skills | `post-condition-loop`, `accumulator`, `declare-variables`, `logic-ops`, `boundary-values` |
 | difficulty | 3 |
 | title | `Coin machine: accumulate coins until the price is paid` |
 | adapted_from | `CS50P Problem Set 2 "Coke Machine" (https://cs50.harvard.edu/python/psets/2/coke/), CC BY-NC-SA 4.0; adapted: new price and coin set, rejected-coin message, pseudocode-first REPEAT loop, new output format` |

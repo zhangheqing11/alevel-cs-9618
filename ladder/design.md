@@ -259,7 +259,7 @@ if __name__ == "__main__":
 |:--|:--|:--|:--|
 | `trace-dry-run` | 干跑、预测输出 | `relational-ops` | 比较运算 |
 | `translate-pseudocode` | 伪代码逐行译成 Python | `logic-ops` | AND / OR / NOT |
-| `declare-constant` | DECLARE 与 CONSTANT | `nested-if` | 嵌套 IF / elif |
+| `declare-variables` | DECLARE 与 CONSTANT | `nested-if` | 嵌套 IF / elif |
 | `type-conversion` | `input` → `int`/`float`、`str()`、`NUM_TO_STR` | `case-of` | CASE / match |
 | `div-mod` | 整除与取余 | `case-range` | CASE 范围子句 |
 | `operator-precedence` | 运算优先级与括号 | `boundary-values` | 边界值 |
