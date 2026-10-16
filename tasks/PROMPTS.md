@@ -61,3 +61,12 @@ T12 后续：按 docs/DECISIONS.md D21，用 pipeline/extract/overrides.json 给
 从最新 origin/main 开分支 task/T28-p2-tagging。先盲标全部 721 行并拆得分点，再与 papers/p2/pilot_tags.csv、pilot_markpoints.jsonl 比对。真源放 pipeline/tag/p2/，用脚本合并进 corpus/rows/p2/。
 只改 tasks/scope.json 里 T28 允许的路径。交付：rebase origin/main → make check → make check-scope TASK=T28 → push → gh pr create --base main。不要合并 PR。停下前更新 tasks/progress/T28.md 并提交。
 ```
+
+## codex-1 · T24b 回写裁决 + T13b 命令词归类（T22 批 A 合并后可做）
+
+```
+两个小任务，各开一个分支、各一个 PR，不要合并：
+1) T24b（分支 task/T24b-apply-adjudication）：把 papers/p1/adjudication.csv（设计工位的裁决，id,primary,cross,reason）回写进 pipeline/tag/p1_tags.jsonl（cross 用分号分隔；confidence 改 high；note 写 "adjudicated: " + reason 的规则编号），再用 apply_tags.py 套进 corpus/rows/p1/。以后 T22 批 B/C 追加的 adjudication 行也照此回写（可重复运行）。scope 用 T24。
+2) T13b（分支 task/T13b-command-words）：build/stats.py 的设问分布把 Convert/Give/Identify/Complete/Write/Draw/Calculate/Show 等都归成了 other。按 9618 常见命令词整理成有限几类（state/identify/give、describe、explain/justify、complete/draw、write（代码/表达式/SQL）、calculate/convert、compare/evaluate、other），md 里用中文类名显示；补测试。scope 用 T13。
+交付：make check → make check-scope TASK=T24（或 T13）→ push → gh pr create --base main。
+```
