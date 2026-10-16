@@ -1386,7 +1386,7 @@
         "types of software that can be installed on a computer to prevent threats"
       ],
       "not": [
-        "P1-SP-04：专门问加密怎样保护数据 → SP-04",
+        "P1-SP-04：题干点名加密，或问怎样保护传输中的数据且 MS 只接受加密 → SP-04",
         "P1-SP-05：数字签名 → SP-05",
         "P1-DB-08：DBMS 的访问权限、备份等数据库安全 → DB-08"
       ],
@@ -1404,10 +1404,11 @@
         "encryption / encrypted / cipher text / key",
         "Explain how encryption can protect the security of data during transmission",
         "Describe what is meant by encryption and explain why it is used",
-        "Identify and describe one method of restricting the risks posed by … intercepting the data whilst it is being transferred"
+        "Identify and describe one method of restricting the risks posed by … intercepting the data whilst it is being transferred",
+        "Identify one security method / measure that can be used to protect … during transmission / email transfer"
       ],
       "not": [
-        "P1-SP-03：问一般的安全措施（答案恰好可以是加密）→ SP-03",
+        "P1-SP-03：问一般安全措施、MS 接受多种措施（加密只是其一）→ SP-03",
         "P1-SP-05：数字签名 → SP-05"
       ],
       "syllabus": [
