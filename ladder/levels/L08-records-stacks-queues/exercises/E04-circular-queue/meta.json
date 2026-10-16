@@ -1,0 +1,20 @@
+{
+  "id": "L08/E04",
+  "kind": "ladder",
+  "title": "Circular queue: front and rear pointers that wrap round",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "queue-array",
+    "global-scope",
+    "div-mod",
+    "boundary-values",
+    "boolean-return"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "enqueue",
+  "ms_verified": false,
+  "difficulty": 4
+}

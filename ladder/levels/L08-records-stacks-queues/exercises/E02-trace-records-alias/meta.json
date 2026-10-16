@@ -1,0 +1,20 @@
+{
+  "id": "L08/E02",
+  "kind": "ladder",
+  "title": "Dry run: record assignment copies, arrays of records",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "record-type",
+    "array-of-records",
+    "array-copy"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 3
+}

@@ -1,0 +1,11 @@
+// define the record type Book here
+
+// declare the global array Library and the global integer NumBooks here
+
+FUNCTION CountOnLoan() RETURNS INTEGER
+
+ENDFUNCTION
+
+PROCEDURE ListTitlesBefore(Year : INTEGER)
+
+ENDPROCEDURE

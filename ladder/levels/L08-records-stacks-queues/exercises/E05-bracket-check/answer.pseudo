@@ -1,0 +1,6 @@
+FUNCTION Balanced(Text : STRING) RETURNS BOOLEAN
+   DECLARE Stack : ARRAY[1:100] OF CHAR
+   DECLARE TopPointer : INTEGER
+   // push opening brackets, pop and compare on closing brackets
+
+ENDFUNCTION

@@ -1,0 +1,20 @@
+{
+  "id": "L08/E01",
+  "kind": "ladder",
+  "title": "Book records: TYPE and class, counting and searching an array of records",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "record-type",
+    "array-of-records",
+    "linear-search",
+    "accumulator",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "make_book",
+  "ms_verified": false,
+  "difficulty": 3
+}
