@@ -31,3 +31,18 @@ PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/（只读）。�
 只改 tasks/scope.json 里 T14 允许的路径。交付：rebase origin/main → make check-all → make check-scope TASK=T14 → push → gh pr create --base main。不要合并 PR。
 停下前更新 tasks/progress/T14.md 并提交。
 ```
+
+## codex-1 · T24（现在：手上那卷 T12 开出 PR 后就转这个）
+
+```
+你是执行工位 codex-1，负责任务 T24（P1 全量打标签）。它优先于 T12 剩余的 P3/P4。
+先读 AGENTS.md、docs/DECISIONS.md，再读 tasks/T24-p1-tagging.md、papers/p1/taxonomy.json、papers/p1/tagging-guide.md（唯一打标签规则）。若 tasks/progress/T24.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T24-p1-tagging。先盲标全部 979 行，再与 papers/p1/pilot_tags.csv 比对一致率。标签真源放 pipeline/tag/p1_tags.jsonl，用脚本合并进 corpus/rows/p1/。
+只改 tasks/scope.json 里 T24 允许的路径。交付：rebase origin/main → make check → make check-scope TASK=T24 → push → gh pr create --base main。不要合并 PR。停下前更新 tasks/progress/T24.md 并提交。
+```
+
+## codex-2 · T14 批 3（现在可开：T10 批 3 已合并）
+
+```
+继续 T14：实现 T10 批 3（L09–L12）的练习与伪代码审计，同批 1、批 2 的做法。先读 docs/DECISIONS.md（D10–D13、D18）。从最新 origin/main 开分支 task/T14-ladder-batch3。交付：rebase → make check-all → make check-scope TASK=T14 → push → gh pr create --base main --title "T14 batch 3: L09–L12"。不要合并 PR。
+```

@@ -50,5 +50,21 @@
       "papers/p1/tagging-guide.md",
       "papers/p1/pilot_tags.csv"
     ]
+  },
+  "T24": {
+    "allow": [
+      "pipeline/tag/**",
+      "corpus/rows/p1/**",
+      "corpus/tag_report_p1.md"
+    ]
+  },
+  "T21": {
+    "allow": [
+      "papers/p2/taxonomy.json",
+      "papers/p2/skill_tags.json",
+      "papers/p2/tagging-guide.md",
+      "papers/p2/pilot_tags.csv",
+      "papers/p2/pilot_markpoints.jsonl"
+    ]
   }
 }
