@@ -91,7 +91,7 @@ ENDFUNCTION
 
 ## 人工核对清单
 
-- [ ] 伪代码：先判断 `FreePointer = -1`；取结点并存数据；`Previous ← -1`、`Current ← StartPointer`；`WHILE Current <> -1 AND ListData[Current] <= Item` 时向前走。
+- [ ] 伪代码：先判断 `FreePointer = -1`；取结点并存数据；`Previous ← -1`、`Current ← StartPointer`；用标志变量（如 `Searching`）控制 `WHILE`：循环里先判断 `Current = -1`（到表尾，标志置 FALSE），否则再比较 `ListData[Current] <= Item`（不大于则 `Previous ← Current`、`Current ← ListPointer[Current]`，否则标志置 FALSE）。**不要**写 `WHILE Current <> -1 AND ListData[Current] <= Item`——指南没有保证 `AND` 短路，`Current = -1` 时 `ListData[Current]` 越界（与 L11 card §4 同一口径，D25）。
 - [ ] 伪代码：`IF Previous = -1 THEN` 改 `StartPointer`，`ELSE` 改 `ListPointer[Previous]`；两种情况下新结点都先指向后继（`ListPointer[NewNode] ← StartPointer` 或 `← ListPointer[Previous]`）。
 - [ ] 伪代码：没有 `BREAK`；`RETURN TRUE` / `RETURN FALSE`。
 - [ ] Python：能说出 M3 为什么在 Python 里不报错（`ListPointer[-1]` 是最后一个元素），以及如何避免。
