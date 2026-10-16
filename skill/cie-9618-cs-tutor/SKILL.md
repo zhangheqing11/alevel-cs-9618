@@ -88,7 +88,7 @@ description: Teach, drill and mark CIE AS & A Level Computer Science 9618 (Paper
 
 - **某卷手册还没合并**（`papers/p<N>/` 不存在）：告诉学生该卷手册未就绪，建议先学已就绪的卷或阶梯。学生坚持时，可以按考纲节 + 教材 + `rows.py find --grep` 找到的真题讲，批改照样只认该题 MS；没有题型码就不写记录表，进度写进交接文档。
 - **某卷还没有行数据**：直接读 PDF（`pdftotext -layout` + 原页渲染），照样精确配对 MS。
-- **编程题型没有练习文件夹**：先换一道有文件夹的变式（`rows.py ex`、`index.json`）；整型都没有时，伪代码按 MS 批改，Python 写在 `attempts/practice/p<N>/<行 id 去掉冒号括号>/solution.py`，由你用题目样例数据运行核对；记录表的解释证据注明「无 pytest」，并在交接文档待办里列出「练习建成后补测」。
+- **编程题型没有练习文件夹**：先换一道有文件夹的变式（`rows.py ex`、`index.json`）。整型都没有时照常教和批改：伪代码按 MS 批改，Python 写在 `attempts/practice/p<N>/<行 id 去掉冒号括号>/solution.py`，由你用题目样例数据手动运行核对。但**不能标「已掌握」**（编程题以测试过关）：记录表标「学习中」，解释证据写「无 pytest，待练习建成后补测」，交接文档待办列出补测。
 
 ---
 
@@ -192,6 +192,7 @@ description: Teach, drill and mark CIE AS & A Level Computer Science 9618 (Paper
 2. **MS 得分点齐**：逐条对该行 `markpoints`（没有时对 `ms_text`），按 `ms_max` / 「Max n」上限算满分；task.md 末尾「人工核对清单」（命名、注释、伪代码写法、证据输出等测试测不到的点）逐条满足；
 3. P2：伪代码**首次提交**就按 MS 拿满（Python 版允许学生自己调试到全绿）；P4：学生说「测一下」时的那一版代码为准（之前自己跑测试调试是允许的，等同考场自测）；
 4. 你给过代码级提示（programming.md §9 提示阶梯第 4 级起）的题不算独立，标学习中，之后换一道题复测。
+5. 没有练习文件夹、因而没有 pytest 的题，无论做得多好都只能标学习中（§1.5），等练习建成后补测。
 
 不能从「讲过了」「HTML 里勾了」「最终输出碰巧对」推断掌握。复测通过（不同卷上的一道新题达到上述标准）才把学习中改成已掌握；同一型在不同卷上连续三道干净，是保持或恢复「已掌握」的强证据。
 
