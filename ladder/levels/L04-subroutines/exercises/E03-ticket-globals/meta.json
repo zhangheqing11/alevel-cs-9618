@@ -1,0 +1,19 @@
+{
+  "id": "L04/E03",
+  "kind": "ladder",
+  "title": "Ticket machine: global variables and the global statement",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "global-scope",
+    "return-value",
+    "module-header",
+    "accumulator"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "take_ticket",
+  "ms_verified": false,
+  "difficulty": 2
+}

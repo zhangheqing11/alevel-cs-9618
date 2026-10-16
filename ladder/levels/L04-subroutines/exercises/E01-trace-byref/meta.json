@@ -1,0 +1,20 @@
+{
+  "id": "L04/E01",
+  "kind": "ladder",
+  "title": "Dry run: BYVAL, BYREF and function calls",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "byval-byref",
+    "return-value",
+    "procedure-call"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 2
+}

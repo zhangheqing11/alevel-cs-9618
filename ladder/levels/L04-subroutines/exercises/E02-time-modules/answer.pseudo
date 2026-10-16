@@ -1,0 +1,12 @@
+FUNCTION ToMinutes(Hours : INTEGER, Minutes : INTEGER) RETURNS INTEGER
+
+ENDFUNCTION
+
+PROCEDURE SplitMinutes(BYVAL Total : INTEGER, BYREF Hours : INTEGER, BYREF Minutes : INTEGER)
+
+ENDPROCEDURE
+
+PROCEDURE AddDurations(H1 : INTEGER, M1 : INTEGER, H2 : INTEGER, M2 : INTEGER)
+   // must use ToMinutes() and SplitMinutes()
+
+ENDPROCEDURE
