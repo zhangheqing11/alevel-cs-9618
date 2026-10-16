@@ -35,6 +35,22 @@
 | L11 | 递归；二分查找、插入排序；算法比较 | 写递归函数并追踪调用栈；二分查找（迭代与递归）、插入排序；Big O 比较 | L10 | 19.1, 19.2 | §8 p.22–24 | — / TP3e §5.8–5.10, §6.6–6.8 | 23.01–23.04, 23.13, 24 | 2 月 | 5（批 3） |
 | L12 | OOP：类、私有属性、构造、getter/setter、继承、多态 | `CLASS…ENDCLASS`、`PRIVATE`、`NEW`、`INHERITS`、`SUPER` ↔ `class`、`__init__`、`self.__x`、`super()`；聚合 | L11 | 20.1 | §10 p.28–29 | Lecture 8 / TP3e ch.14–17 | 27 | 3 月 | 5（批 3） |
 
+### 2.1 考纲覆盖核对（Learner Guide p.20 的 Paper 2 自查清单）
+
+| Learner Guide「You should be able to」 | 覆盖的级 | 批 1 状态 |
+|:--|:--|:--|
+| Write pseudocode from structured English or a flowchart | L02–L04 | **缺口**：批 1 的题面都是文字描述，还没有流程图转伪代码的题；批 2 的 L04 补一道（9618_s24_22 Q2 是流程图题，见 ECR P2 2024 p.8–11） |
+| Select and use basic data types including records | L01（基本类型）、L08（记录） | L01 已覆盖 |
+| Select and use 1D and 2D arrays；Write pseudocode for 1D and 2D arrays and to process array data | L06 | 批 2 |
+| Understand and use text files | L07 | 批 2 |
+| Understand and use ADTs including stacks, queues and linked lists | L08、L10 | 批 2、批 3 |
+| Write pseudocode statements for declaration of variables and constants, assignment, expressions (arithmetic / logical), input and output | L01、L02 | 已覆盖 |
+| Write pseudocode statements for IF, CASE and loop statements | L02、L03 | 已覆盖 |
+| Define and use procedures and functions | L04（L01 起当外壳） | 外壳已用，系统讲解在批 2 |
+| Test … choice of test data | L02 起每份规格 | 「必测行为」示范边界选值；L02 有专项过关点 |
+
+Learner Guide p.16 对 Paper 2 的建议（伪代码命令用大写、尽量只用考纲给出的命令、给伪代码加注释）已写进 §4.1 第 2 条的核对项。
+
 ## 3. 对初拟分级的调整及理由
 
 | # | 调整 | 理由 |
@@ -56,7 +72,7 @@
 ### 4.1 每级通用（写进 `ledger/ladder.csv` 时据此标「已掌握」）
 
 1. **全绿**：本级全部练习 `make try EX=…` 通过，且没有先看 `ref/`。
-2. **伪代码合格**：`pseudocode: true` 的练习，`answer.pseudo` 经导师按指南逐条核对（关键字大写与拼写、`←`、`DECLARE`/`CONSTANT` 格式、每个结构的结束关键字、提示语）——人工核对清单全部勾上；错一处就改到对为止。
+2. **伪代码合格**：`pseudocode: true` 的练习，`answer.pseudo` 经导师按指南逐条核对（关键字大写与拼写、`←`、`DECLARE`/`CONSTANT` 格式、每个结构的结束关键字、提示语；关键步骤有 `//` 注释——Learner Guide p.16 建议给伪代码加注释）——人工核对清单全部勾上；错一处就改到对为止。
 3. **能讲坑**：导师从本卡 `## 常见坑` 抽 2 条，学生能说出「错在哪、为什么、怎么改」。
 4. **过关小测**：导师现编一道本级同类变式（新情境、新数据，不入库），学生先写伪代码再写 Python，20 分钟内完成且自测通过。
 5. 1–4 都满足 → `已掌握`；否则 `学习中`，在「解释证据」列写清缺口，章末复测（加速模式，见 T11 skill）。
