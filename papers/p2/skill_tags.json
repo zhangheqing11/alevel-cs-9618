@@ -417,8 +417,8 @@
     {
       "tag": "file-write",
       "group": "file",
-      "name_zh": "WRITE 写文件",
-      "desc": "OPENFILE … FOR WRITE（新建/覆盖），WRITEFILE 写一行。",
+      "name_zh": "写文件（WRITEFILE）",
+      "desc": "WRITEFILE 把一行写进文件（以 WRITE 打开时新建或覆盖）；写之前把各项拼成字符串。",
       "example_ms": "If not blank then write the value to the file in a loop — 9618_w25_23:2(a)"
     },
     {
