@@ -1,0 +1,20 @@
+{
+  "id": "L06/E05",
+  "kind": "ladder",
+  "title": "Dice tally: a counting array indexed by value",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "counting-array",
+    "array-index",
+    "accumulator",
+    "boundary-values",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "tally",
+  "ms_verified": false,
+  "difficulty": 3
+}

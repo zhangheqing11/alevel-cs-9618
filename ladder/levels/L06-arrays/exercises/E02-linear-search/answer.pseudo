@@ -1,0 +1,7 @@
+// global: Names : ARRAY[1:50] OF STRING
+// global: Marks : ARRAY[1:50] OF INTEGER
+// global: NumStudents : INTEGER
+FUNCTION LookUpMark(SearchName : STRING) RETURNS INTEGER
+   // stop searching as soon as a match is found
+
+ENDFUNCTION

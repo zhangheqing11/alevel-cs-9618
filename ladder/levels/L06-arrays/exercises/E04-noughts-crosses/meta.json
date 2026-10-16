@@ -1,0 +1,20 @@
+{
+  "id": "L06/E04",
+  "kind": "ladder",
+  "title": "Noughts and crosses: rows, columns and diagonals of a 2D array",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "array-2d",
+    "array-index",
+    "nested-loops",
+    "logic-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "winner",
+  "ms_verified": false,
+  "difficulty": 3
+}

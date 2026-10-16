@@ -1,0 +1,11 @@
+// global: Rolls : ARRAY[1:100] OF INTEGER
+// global: NumRolls : INTEGER
+// global: Tally : ARRAY[1:6] OF INTEGER
+PROCEDURE CountRolls()
+
+ENDPROCEDURE
+
+FUNCTION MostFrequent() RETURNS INTEGER
+   // assume CountRolls() has already been called
+
+ENDFUNCTION

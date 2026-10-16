@@ -1,0 +1,20 @@
+{
+  "id": "L06/E03",
+  "kind": "ladder",
+  "title": "Bubble sort two parallel arrays into descending order",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "bubble-sort",
+    "parallel-arrays",
+    "array-index",
+    "loop-bounds",
+    "byval-byref"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "sort_by_mark",
+  "ms_verified": false,
+  "difficulty": 4
+}

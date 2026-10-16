@@ -1,0 +1,21 @@
+{
+  "id": "L06/E01",
+  "kind": "ladder",
+  "title": "Dry run: array initialisation, shifting, copying and 2D indexes",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "array-index",
+    "array-copy",
+    "array-2d",
+    "loop-step"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 3
+}

@@ -1,0 +1,7 @@
+// global: Names : ARRAY[1:50] OF STRING
+// global: Marks : ARRAY[1:50] OF INTEGER
+// global: NumStudents : INTEGER
+PROCEDURE SortByMark()
+   // bubble sort with a flag; swap names and marks together
+
+ENDPROCEDURE
