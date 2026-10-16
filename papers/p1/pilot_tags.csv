@@ -21,8 +21,8 @@ id,primary,cross,confidence,note
 9618_s23_12:5(c)(ii),P1-PF-06,,high,
 9618_s23_12:5(d)(i),P1-SS-01,,high,
 9618_s23_12:5(d)(ii),P1-SS-02,,high,
-9618_s23_12:6(a),P1-HW-11,,high,
-9618_s23_12:6(b),P1-HW-13,,high,
+9618_s23_12:6(a),P1-LG-02,,high,
+9618_s23_12:6(b),P1-LG-04,,high,
 9618_s23_12:7(a)(i),P1-SS-03,,high,
 9618_s23_12:7(a)(ii),P1-SS-03,,high,
 9618_s23_12:7(b),P1-SS-05,,high,
@@ -53,7 +53,7 @@ id,primary,cross,confidence,note
 9618_w24_11:4(d)(i),P1-SS-07,,high,
 9618_w24_11:4(d)(ii),P1-SS-07,,high,
 9618_w24_11:5(a),P1-HW-09,,high,
-9618_w24_11:5(b),P1-HW-15,,high,参数表 → 表达式
+9618_w24_11:5(b),P1-LG-06,,high,参数表 → 表达式
 9618_w24_11:5(c),P1-HW-08,,high,
 9618_w24_11:6,P1-EO-04,,high,
 9618_w24_11:7(a),P1-EO-03,,high,
@@ -73,8 +73,8 @@ id,primary,cross,confidence,note
 9618_s25_13:3(b),P1-SP-03,P1-SP-04,high,传输一栏只接受加密、计算机一栏接受多种措施（指南 §6 第 14 条）
 9618_s25_13:3(c),P1-CM-02,,high,
 9618_s25_13:3(d),P1-EO-01,,high,
-9618_s25_13:4(a),P1-HW-12,,high,
-9618_s25_13:4(b),P1-HW-13,,high,
+9618_s25_13:4(a),P1-LG-03,,high,
+9618_s25_13:4(b),P1-LG-04,,high,
 9618_s25_13:5(a)(i),P1-PF-10,,high,
 9618_s25_13:5(a)(ii),P1-PF-08,,high,
 9618_s25_13:5(b),P1-PF-13,,high,给目标效果写指令

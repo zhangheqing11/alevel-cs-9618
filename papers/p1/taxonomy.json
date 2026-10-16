@@ -1,6 +1,6 @@
 {
   "component": 1,
-  "version": "1.0",
+  "version": "1.1",
   "chapters": [
     {
       "code": "IR",
@@ -25,7 +25,14 @@
       "name_zh": "硬件",
       "name_en": "Hardware",
       "syllabus": [
-        "3.1",
+        "3.1"
+      ]
+    },
+    {
+      "code": "LG",
+      "name_zh": "逻辑门与逻辑电路",
+      "name_en": "Logic gates and logic circuits",
+      "syllabus": [
         "3.2"
       ]
     },
@@ -812,8 +819,8 @@
       ]
     },
     {
-      "code": "P1-HW-10",
-      "chapter": "HW",
+      "code": "P1-LG-01",
+      "chapter": "LG",
       "name_zh": "逻辑门的功能与单门真值表",
       "name_en": "Logic gate functions and single-gate truth tables",
       "summary": "NOT、AND、OR、NAND、NOR、XOR 的功能描述、符号、单个门的真值表；按描述识别门、写出使输出为 1 的输入、找出电路中没用到的门。",
@@ -825,15 +832,15 @@
         "Identify one logic gate not used in the given logic circuit / State two logic gates that are not in the circuit"
       ],
       "not": [
-        "P1-HW-13：多个门组合的真值表 → HW-13"
+        "P1-LG-04：多个门组合的真值表 → LG-04"
       ],
       "syllabus": [
         "3.2"
       ]
     },
     {
-      "code": "P1-HW-11",
-      "chapter": "HW",
+      "code": "P1-LG-02",
+      "chapter": "LG",
       "name_zh": "由逻辑表达式画电路",
       "name_en": "Drawing a logic circuit from an expression",
       "summary": "按括号层次把逻辑表达式画成电路（除 NOT 外每门两输入，不加多余的门）。",
@@ -842,16 +849,16 @@
         "X = NOT ((A AND B) OR …) 之后是输入 A、B、C 与输出 X 的作图区"
       ],
       "not": [
-        "P1-HW-12：由电路写表达式 → HW-12",
-        "P1-HW-15：从问题描述（参数表）出发 → HW-15"
+        "P1-LG-03：由电路写表达式 → LG-03",
+        "P1-LG-06：从问题描述（参数表）出发 → LG-06"
       ],
       "syllabus": [
         "3.2"
       ]
     },
     {
-      "code": "P1-HW-12",
-      "chapter": "HW",
+      "code": "P1-LG-03",
+      "chapter": "LG",
       "name_zh": "由电路写逻辑表达式",
       "name_en": "Writing a logic expression from a circuit",
       "summary": "读电路图，从输入到输出逐门写出逻辑表达式（不化简、括号正确）。",
@@ -861,16 +868,16 @@
         "X = …  Y = …（电路图后留空）"
       ],
       "not": [
-        "P1-HW-14：由真值表写表达式 → HW-14",
-        "P1-HW-13：由电路填真值表 → HW-13"
+        "P1-LG-05：由真值表写表达式 → LG-05",
+        "P1-LG-04：由电路填真值表 → LG-04"
       ],
       "syllabus": [
         "3.2"
       ]
     },
     {
-      "code": "P1-HW-13",
-      "chapter": "HW",
+      "code": "P1-LG-04",
+      "chapter": "LG",
       "name_zh": "构造真值表",
       "name_en": "Completing a truth table from an expression or circuit",
       "summary": "由逻辑表达式或电路图逐步算出中间列，完成三输入（或多输出）真值表；或检查给定真值表哪些行错了。",
@@ -880,16 +887,16 @@
         "Identify the row numbers … that are incorrect"
       ],
       "not": [
-        "P1-HW-10：单个门的真值表 → HW-10",
-        "P1-HW-14：由真值表反推表达式 → HW-14"
+        "P1-LG-01：单个门的真值表 → LG-01",
+        "P1-LG-05：由真值表反推表达式 → LG-05"
       ],
       "syllabus": [
         "3.2"
       ]
     },
     {
-      "code": "P1-HW-14",
-      "chapter": "HW",
+      "code": "P1-LG-05",
+      "chapter": "LG",
       "name_zh": "由真值表写逻辑表达式",
       "name_en": "Deriving a logic expression from a truth table",
       "summary": "从真值表中输出为 1 的行写出（积之和）表达式，或在选项中勾选、连线匹配对应的表达式。",
@@ -899,15 +906,15 @@
         "Draw one line to match each truth table with its logic expression"
       ],
       "not": [
-        "P1-HW-13：由表达式填真值表 → HW-13"
+        "P1-LG-04：由表达式填真值表 → LG-04"
       ],
       "syllabus": [
         "3.2"
       ]
     },
     {
-      "code": "P1-HW-15",
-      "chapter": "HW",
+      "code": "P1-LG-06",
+      "chapter": "LG",
       "name_zh": "由问题描述建立逻辑表达式",
       "name_en": "Logic expression from a problem statement",
       "summary": "读参数表（每个输入取 1/0 各代表什么）和文字条件，写出逻辑表达式或画出电路。",
@@ -917,8 +924,8 @@
         "Write the logic expression(s) for …（条件由文字给出，没有电路图）"
       ],
       "not": [
-        "P1-HW-12：给的是电路图 → HW-12",
-        "P1-HW-11：给的是现成表达式 → HW-11"
+        "P1-LG-03：给的是电路图 → LG-03",
+        "P1-LG-02：给的是现成表达式 → LG-02"
       ],
       "syllabus": [
         "3.2"
