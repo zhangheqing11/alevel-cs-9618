@@ -1,0 +1,9 @@
+// global: TheArray : ARRAY[0:99] OF INTEGER; NumberItems : INTEGER
+PROCEDURE InsertOne(Index : INTEGER)
+   // use a flag to end the inner loop (L11 card §4)
+
+ENDPROCEDURE
+
+PROCEDURE InsertionSort()
+
+ENDPROCEDURE

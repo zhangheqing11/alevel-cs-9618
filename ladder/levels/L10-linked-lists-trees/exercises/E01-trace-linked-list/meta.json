@@ -1,0 +1,20 @@
+{
+  "id": "L10/E01",
+  "kind": "ladder",
+  "title": "Dry run: traverse a linked list and insert at the start",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "linked-list",
+    "array-index",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "RunTrace",
+  "ms_verified": false,
+  "difficulty": 3
+}

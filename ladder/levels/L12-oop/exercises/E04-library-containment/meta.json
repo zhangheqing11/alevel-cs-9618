@@ -1,0 +1,20 @@
+{
+  "id": "L12/E04",
+  "kind": "ladder",
+  "title": "Containment: a library holds an array of book objects",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "containment",
+    "encapsulation",
+    "array-of-records",
+    "linear-search",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "Library",
+  "ms_verified": false,
+  "difficulty": 4
+}

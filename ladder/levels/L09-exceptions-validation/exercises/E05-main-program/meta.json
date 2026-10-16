@@ -1,0 +1,23 @@
+{
+  "id": "L09/E05",
+  "kind": "ladder",
+  "title": "A complete Paper 4 style program: global arrays, file input, main program",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "exception-handling",
+    "file-open-read",
+    "global-scope",
+    "output-format",
+    "p4-identifiers",
+    "parallel-arrays"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Products.txt"
+  ],
+  "entry": "main",
+  "ms_verified": false,
+  "difficulty": 3
+}

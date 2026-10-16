@@ -1,0 +1,9 @@
+// global: ListData : ARRAY[0:5] OF STRING
+// global: ListPointer : ARRAY[0:5] OF INTEGER
+// global: StartPointer : INTEGER; FreePointer : INTEGER
+FUNCTION InsertInOrder(Item : STRING) RETURNS BOOLEAN
+   DECLARE NewNode : INTEGER
+   DECLARE Current : INTEGER
+   DECLARE Previous : INTEGER
+
+ENDFUNCTION

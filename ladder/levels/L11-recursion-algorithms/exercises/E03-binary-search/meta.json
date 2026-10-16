@@ -1,0 +1,20 @@
+{
+  "id": "L11/E03",
+  "kind": "ladder",
+  "title": "Binary search: iterative and recursive",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "binary-search",
+    "recursion",
+    "div-mod",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "BinarySearch",
+  "ms_verified": false,
+  "difficulty": 4
+}

@@ -1,0 +1,20 @@
+{
+  "id": "L09/E01",
+  "kind": "ladder",
+  "title": "Convert a mark safely with try and except",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "exception-handling",
+    "input-validation",
+    "type-conversion",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "ConvertMark",
+  "ms_verified": false,
+  "difficulty": 2
+}

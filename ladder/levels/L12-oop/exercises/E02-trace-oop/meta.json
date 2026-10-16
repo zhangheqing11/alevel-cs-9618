@@ -1,0 +1,20 @@
+{
+  "id": "L12/E02",
+  "kind": "ladder",
+  "title": "Dry run: classes, inheritance and SUPER",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "inheritance",
+    "polymorphism",
+    "encapsulation"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "RunTrace",
+  "ms_verified": false,
+  "difficulty": 3
+}

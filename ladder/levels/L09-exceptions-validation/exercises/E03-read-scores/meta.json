@@ -1,0 +1,23 @@
+{
+  "id": "L09/E03",
+  "kind": "ladder",
+  "title": "Read a scores file safely into a global array",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "exception-handling",
+    "file-open-read",
+    "loop-to-eof",
+    "global-scope",
+    "p4-identifiers",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Scores.txt"
+  ],
+  "entry": "ReadScores",
+  "ms_verified": false,
+  "difficulty": 3
+}

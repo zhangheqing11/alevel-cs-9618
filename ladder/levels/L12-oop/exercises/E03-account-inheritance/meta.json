@@ -1,0 +1,20 @@
+{
+  "id": "L12/E03",
+  "kind": "ladder",
+  "title": "Inheritance: a savings account overrides Withdraw",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "inheritance",
+    "polymorphism",
+    "encapsulation",
+    "getter-setter",
+    "boolean-return"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "SavingsAccount",
+  "ms_verified": false,
+  "difficulty": 4
+}

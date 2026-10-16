@@ -1,0 +1,20 @@
+{
+  "id": "L11/E02",
+  "kind": "ladder",
+  "title": "Recursive functions: factorial, digit sum, reverse a string",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "recursion",
+    "return-value",
+    "div-mod",
+    "string-functions",
+    "boundary-values"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "Factorial",
+  "ms_verified": false,
+  "difficulty": 3
+}

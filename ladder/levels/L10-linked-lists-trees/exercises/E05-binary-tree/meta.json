@@ -1,0 +1,20 @@
+{
+  "id": "L10/E05",
+  "kind": "ladder",
+  "title": "Binary search tree: insert (including equal values) and search",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "binary-tree",
+    "global-scope",
+    "pre-condition-loop",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "InsertNode",
+  "ms_verified": false,
+  "difficulty": 4
+}

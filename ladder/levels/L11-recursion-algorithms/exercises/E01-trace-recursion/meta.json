@@ -1,0 +1,19 @@
+{
+  "id": "L11/E01",
+  "kind": "ladder",
+  "title": "Dry run: winding and unwinding in recursion",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "recursion",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "RunTrace",
+  "ms_verified": false,
+  "difficulty": 3
+}

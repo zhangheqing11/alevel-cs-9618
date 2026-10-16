@@ -1,0 +1,21 @@
+{
+  "id": "L09/E02",
+  "kind": "ladder",
+  "title": "Validate a 3-letter name and a score separately",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "input-validation",
+    "exception-handling",
+    "post-condition-loop",
+    "boundary-values",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "InputName",
+  "ms_verified": false,
+  "difficulty": 3,
+  "adapted_from": "CS50P Problem Set 3 \"Fuel Gauge\" (https://cs50.harvard.edu/python/psets/3/fuel/), CC BY-NC-SA 4.0; adapted: idea of catching ValueError and re-prompting, applied to a name and a score validated separately with new rules and messages"
+}

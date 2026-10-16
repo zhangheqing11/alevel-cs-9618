@@ -1,0 +1,20 @@
+{
+  "id": "L12/E05",
+  "kind": "ladder",
+  "title": "Polymorphism: override GetArea, write Describe once",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "polymorphism",
+    "inheritance",
+    "encapsulation",
+    "output-format",
+    "p4-identifiers"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "TotalArea",
+  "ms_verified": false,
+  "difficulty": 3
+}

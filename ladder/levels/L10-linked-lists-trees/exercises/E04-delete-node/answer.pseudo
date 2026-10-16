@@ -1,0 +1,8 @@
+// global: ListData : ARRAY[0:5] OF STRING
+// global: ListPointer : ARRAY[0:5] OF INTEGER
+// global: StartPointer : INTEGER; FreePointer : INTEGER
+FUNCTION DeleteItem(Item : STRING) RETURNS BOOLEAN
+   DECLARE Current : INTEGER
+   DECLARE Previous : INTEGER
+
+ENDFUNCTION
