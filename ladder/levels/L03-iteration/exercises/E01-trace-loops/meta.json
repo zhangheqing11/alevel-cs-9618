@@ -1,0 +1,22 @@
+{
+  "id": "L03/E01",
+  "kind": "ladder",
+  "title": "Dry run: FOR with STEP, WHILE and REPEAT",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "count-loop",
+    "loop-step",
+    "pre-condition-loop",
+    "post-condition-loop",
+    "loop-bounds"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 2
+}

@@ -1,0 +1,21 @@
+{
+  "id": "L03/E03",
+  "kind": "ladder",
+  "title": "Validate a mark with a post-condition loop",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "post-condition-loop",
+    "input-validation",
+    "boundary-values",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "get_mark",
+  "ms_verified": false,
+  "difficulty": 3,
+  "adapted_from": "CS50P Lecture 2 notes, \"Improving with User Input\" (https://cs50.harvard.edu/python/notes/2/#improving-with-user-input), CC BY-NC-SA 4.0; adapted: idea of a while True / break validation loop, applied to a 0-100 mark with an error message and a returned value"
+}

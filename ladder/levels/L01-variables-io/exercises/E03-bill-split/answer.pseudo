@@ -1,0 +1,6 @@
+CONSTANT ServiceRate = 0.10
+
+PROCEDURE SplitBill()
+   // declare your variables, then prompt, input, calculate and output
+
+ENDPROCEDURE

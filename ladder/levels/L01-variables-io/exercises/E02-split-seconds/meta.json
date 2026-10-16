@@ -1,0 +1,20 @@
+{
+  "id": "L01/E02",
+  "kind": "ladder",
+  "title": "Split seconds into hours, minutes and seconds",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "div-mod",
+    "type-conversion",
+    "input-prompt",
+    "output-format",
+    "declare-constant"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "split_seconds",
+  "ms_verified": false,
+  "difficulty": 1
+}

@@ -1,0 +1,4 @@
+FUNCTION IsLeap(Year : INTEGER) RETURNS BOOLEAN
+   // use MOD, and AND / OR / NOT or nested IF statements
+
+ENDFUNCTION

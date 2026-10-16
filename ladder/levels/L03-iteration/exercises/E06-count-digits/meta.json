@@ -1,0 +1,20 @@
+{
+  "id": "L03/E06",
+  "kind": "ladder",
+  "title": "Count and sum the digits of a number: choosing a loop",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "loop-choice",
+    "post-condition-loop",
+    "pre-condition-loop",
+    "div-mod",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "count_digits",
+  "ms_verified": false,
+  "difficulty": 3
+}

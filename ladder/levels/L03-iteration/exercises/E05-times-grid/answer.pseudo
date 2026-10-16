@@ -1,0 +1,9 @@
+PROCEDURE TimesGrid()
+   DECLARE N : INTEGER
+   DECLARE Row : INTEGER
+   DECLARE Column : INTEGER
+   DECLARE Line : STRING
+   DECLARE Total : INTEGER
+   // use nested FOR loops
+
+ENDPROCEDURE

@@ -1,0 +1,20 @@
+{
+  "id": "L01/E01",
+  "kind": "ladder",
+  "title": "Dry run: assignment, DIV/MOD and OUTPUT",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "div-mod",
+    "operator-precedence",
+    "output-format"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 1
+}

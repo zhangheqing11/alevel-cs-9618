@@ -1,0 +1,19 @@
+{
+  "id": "L02/E01",
+  "kind": "ladder",
+  "title": "Grade bands with a CASE structure",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "case-of",
+    "case-range",
+    "boundary-values",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "grade",
+  "ms_verified": false,
+  "difficulty": 2
+}

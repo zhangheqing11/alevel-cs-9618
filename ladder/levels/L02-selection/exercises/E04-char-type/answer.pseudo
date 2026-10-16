@@ -1,0 +1,4 @@
+FUNCTION CharType(Ch : CHAR) RETURNS STRING
+   // use comparison operators and AND
+
+ENDFUNCTION

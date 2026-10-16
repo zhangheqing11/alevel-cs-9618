@@ -1,0 +1,4 @@
+PROCEDURE TicketCode()
+   // declare your variables, then prompt, input, build the code and output
+
+ENDPROCEDURE

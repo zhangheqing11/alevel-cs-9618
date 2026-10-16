@@ -1,0 +1,8 @@
+CONSTANT Price = 60
+
+PROCEDURE CoinMachine()
+   DECLARE Coin : INTEGER
+   DECLARE Paid : INTEGER
+   // use a REPEAT ... UNTIL loop
+
+ENDPROCEDURE

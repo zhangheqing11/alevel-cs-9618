@@ -1,0 +1,20 @@
+{
+  "id": "L01/E03",
+  "kind": "ladder",
+  "title": "Split a restaurant bill with a service charge",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "declare-constant",
+    "type-conversion",
+    "output-format",
+    "input-prompt"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "entry": "split_bill",
+  "ms_verified": false,
+  "difficulty": 2,
+  "adapted_from": "CS50P Problem Set 0 \"Tip Calculator\" (https://cs50.harvard.edu/python/psets/0/tip/), CC BY-NC-SA 4.0; adapted: fixed service-charge constant, numeric input, bill shared between people, new output format"
+}
