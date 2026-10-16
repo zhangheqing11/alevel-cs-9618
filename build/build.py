@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -101,14 +102,18 @@ def _drill_index(rows: Iterable[Mapping], code: str, metadata: Mapping[str, Mapp
     for row in [*current, *extension]:
         value = _citation_entry(row, metadata)
         value["extension"] = bool(row.get("extension")) or row.get("year") == 2021
+        value["reserved"] = str(row.get("paper", "")).startswith("9618_s26_") or (
+            str(row.get("session", "")) == "s" and row.get("year") == 2026
+        )
         entries.append(value)
     return entries
 
 
 def _processed(path: Path, *, root: Path, chapter: str | None, taxonomy: Mapping,
-               stats: Mapping[str, Mapping], rows: list[dict], metadata: Mapping[str, Mapping]) -> str:
+               stats: Mapping[str, Mapping], rows: list[dict], metadata: Mapping[str, Mapping],
+               output: str = "md") -> str:
     return process_document(_read(path), chapter=chapter, taxonomy=taxonomy,
-                            stats=stats, rows=rows, metadata=metadata)
+                            stats=stats, rows=rows, metadata=metadata, output=output)
 
 
 def build_component(root: Path, out: Path, component: int) -> bool:
@@ -120,15 +125,19 @@ def build_component(root: Path, out: Path, component: int) -> bool:
     taxonomy = _load_taxonomy(taxonomy_path)
     rows = load_rows(root, component)
     stats = calculate_stats(rows, taxonomy.get("types", []))
-    metadata = citation_metadata(rows, load_inventory(root))
+    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", str(root / "sources")))
+    metadata = citation_metadata(rows, load_inventory(root), source_root=source_root)
     output_dir = out / f"p{component}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     parts: list[str] = []
+    html_parts: list[str] = []
     front = pdir / "front.md"
     if front.exists():
         parts.append(_processed(front, root=root, chapter=None, taxonomy=taxonomy,
                                 stats=stats, rows=rows, metadata=metadata))
+        html_parts.append(_processed(front, root=root, chapter=None, taxonomy=taxonomy,
+                                     stats=stats, rows=rows, metadata=metadata, output="html"))
     cards_dir = pdir / "cards"
     for chapter in taxonomy.get("chapters", []):
         code = chapter.get("code")
@@ -138,22 +147,28 @@ def build_component(root: Path, out: Path, component: int) -> bool:
         if path.exists():
             parts.append(_processed(path, root=root, chapter=code, taxonomy=taxonomy,
                                     stats=stats, rows=rows, metadata=metadata))
+            html_parts.append(_processed(path, root=root, chapter=code, taxonomy=taxonomy,
+                                         stats=stats, rows=rows, metadata=metadata, output="html"))
     back = pdir / "back.md"
     if back.exists():
         parts.append(_processed(back, root=root, chapter=None, taxonomy=taxonomy,
                                 stats=stats, rows=rows, metadata=metadata))
+        html_parts.append(_processed(back, root=root, chapter=None, taxonomy=taxonomy,
+                                     stats=stats, rows=rows, metadata=metadata, output="html"))
 
     if parts:
         handbook_md = "\n\n".join(part for part in parts if part.strip())
         stem = f"P{component}题型手册"
         md_path = output_dir / f"{stem}.md"
         _write(md_path, handbook_md)
-        _write(output_dir / f"{stem}.html", render_html(handbook_md, stem, "handbook"))
+        handbook_html = "\n\n".join(part for part in html_parts if part.strip())
+        _write(output_dir / f"{stem}.html", render_html(handbook_html, stem, "handbook"))
         print(f"built {_display_path(md_path, root)}")
     else:
         print(f"skip P{component}: no front.md, cards or back.md")
 
     core_parts: list[str] = []
+    core_html_parts: list[str] = []
     core_dir = pdir / "core"
     for chapter in taxonomy.get("chapters", []):
         code = chapter.get("code")
@@ -161,11 +176,14 @@ def build_component(root: Path, out: Path, component: int) -> bool:
         if path.exists():
             core_parts.append(_processed(path, root=root, chapter=code, taxonomy=taxonomy,
                                          stats=stats, rows=rows, metadata=metadata))
+            core_html_parts.append(_processed(path, root=root, chapter=code, taxonomy=taxonomy,
+                                              stats=stats, rows=rows, metadata=metadata, output="html"))
     if core_parts:
         core_md = "\n\n".join(core_parts)
         stem = f"P{component}{'伪代码与Python对照' if component in (2, 4) else '核心概念'}"
         _write(output_dir / f"{stem}.md", core_md)
-        _write(output_dir / f"{stem}.html", render_html(core_md, stem, "core"))
+        core_html = "\n\n".join(part for part in core_html_parts if part.strip())
+        _write(output_dir / f"{stem}.html", render_html(core_html, stem, "core"))
         print(f"built {_display_path(output_dir, root)}/{stem}.md")
 
     codes = [item.get("code") for item in taxonomy.get("types", []) if item.get("code")]
@@ -196,7 +214,7 @@ def build_component(root: Path, out: Path, component: int) -> bool:
             "summary": item.get("summary", ""),
             "stats": stats.get(code, {}),
             "star": stats.get(code, {}).get("star", 1),
-            "stars": stats.get(code, {}).get("stars", "★"),
+            "stars": stats.get(code, {}).get("stars", "★☆☆"),
             "representative": _citation_entry(next((r for r in rows if r.get("id") == representative), {"id": representative or ""}), metadata) if representative else None,
             "next_variation": _citation_entry(next((r for r in rows if r.get("id") == variation), {"id": variation or ""}), metadata) if variation else None,
             "drills": _drill_index(rows, code, metadata),
@@ -220,28 +238,38 @@ def build_ladder(root: Path, out: Path) -> bool:
         print(f"skip ladder: {ladder.relative_to(root)} has no design.md or levels")
         return False
     rows = load_rows(root)
-    metadata = citation_metadata(rows, load_inventory(root))
+    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", str(root / "sources")))
+    metadata = citation_metadata(rows, load_inventory(root), source_root=source_root)
     # Ladder documents have no component taxonomy.  Empty context still allows
     # citations and generic blocks in future cards to render.
     empty_taxonomy = {"chapters": [], "types": []}
     documents = []
+    html_documents = []
     if design.exists():
         documents.append(_processed(design, root=root, chapter=None, taxonomy=empty_taxonomy,
                                      stats={}, rows=rows, metadata=metadata))
+        html_documents.append(_processed(design, root=root, chapter=None, taxonomy=empty_taxonomy,
+                                         stats={}, rows=rows, metadata=metadata, output="html"))
     level_index = []
     for card in levels:
         documents.append(_processed(card, root=root, chapter=None, taxonomy=empty_taxonomy,
                                     stats={}, rows=rows, metadata=metadata))
+        html_documents.append(_processed(card, root=root, chapter=None, taxonomy=empty_taxonomy,
+                                         stats={}, rows=rows, metadata=metadata, output="html"))
         level = card.parent.name
+        title_match = re.search(r"^#\s+(.+?)\s*$", _read(card), re.M)
+        title = title_match.group(1).strip() if title_match else ""
+        title = re.sub(r"\s+\{#[^}]+\}\s*$", "", title).strip()
         exercises = []
         for meta in sorted(card.parent.rglob("meta.json")):
             exercises.append(meta.parent.relative_to(root).as_posix())
-        level_index.append({"id": level, "card": card.relative_to(root).as_posix(), "exercise_paths": exercises})
+        level_index.append({"id": level, "title": title, "card": card.relative_to(root).as_posix(), "exercise_paths": exercises})
     output_dir = out / "ladder"
     output_dir.mkdir(parents=True, exist_ok=True)
     md = "\n\n".join(documents)
     _write(output_dir / "Python阶梯.md", md)
-    _write(output_dir / "Python阶梯.html", render_html(md, "Python阶梯", "ladder"))
+    html_md = "\n\n".join(html_documents)
+    _write(output_dir / "Python阶梯.html", render_html(html_md, "Python阶梯", "ladder"))
     exercises = []
     for meta in sorted(ladder.rglob("meta.json")):
         data = read_json(meta, {})

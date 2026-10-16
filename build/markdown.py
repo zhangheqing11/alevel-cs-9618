@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Iterable, Mapping
+from urllib.parse import quote
 
 from .stats import rows_for_type
 
@@ -41,10 +43,12 @@ def _default_files(row_id: str) -> tuple[str, str]:
             f"9618_{session}{year}_ms_{variant}.pdf")
 
 
-def citation_metadata(rows: Iterable[Mapping], inventory: Mapping[str, Mapping] | None = None) -> dict[str, dict]:
+def citation_metadata(rows: Iterable[Mapping], inventory: Mapping[str, Mapping] | None = None,
+                      source_root: Path | str | None = None) -> dict[str, dict]:
     """Build tooltip metadata for each corpus row."""
 
     inv = inventory or {}
+    source = Path(source_root or os.environ.get("ALEVEL_CS_SOURCES", "sources")).expanduser().resolve()
     result: dict[str, dict] = {}
     for row in rows:
         row_id = str(row.get("id", ""))
@@ -58,6 +62,8 @@ def citation_metadata(rows: Iterable[Mapping], inventory: Mapping[str, Mapping] 
         qp_page = row.get("qp_page", "?")
         ms_page = row.get("ms_page", "?")
         title = f"QP {qp} p.{qp_page}; MS {ms} p.{ms_page}"
+        qp_path = source / "pastpapers" / qp
+        qp_url = f"file://{quote(str(qp_path), safe='/:@')}#page={qp_page}"
         result[row_id] = {
             "id": row_id,
             "paper": paper,
@@ -68,12 +74,17 @@ def citation_metadata(rows: Iterable[Mapping], inventory: Mapping[str, Mapping] 
             "qp_page": qp_page,
             "ms_page": ms_page,
             "title": title,
+            "qp_url": qp_url,
         }
     return result
 
 
-def render_citations(text: str, metadata: Mapping[str, Mapping]) -> str:
-    """Render row references and MS quote references as short, titled links."""
+def render_citations(text: str, metadata: Mapping[str, Mapping], *, output: str = "html") -> str:
+    """Render row references for Markdown or HTML output.
+
+    Markdown intentionally contains plain text only.  HTML gets a QP PDF link with
+    its page fragment and keeps the QP/MS page tooltip for quick source checking.
+    """
 
     combined = re.compile(r"「(.*?)」\s*⟦([^⟧\s]+)⟧|⟦([^⟧\s]+)⟧", re.S)
 
@@ -82,8 +93,15 @@ def render_citations(text: str, metadata: Mapping[str, Mapping]) -> str:
         row_id = quoted_id or bare_id
         info = metadata.get(row_id)
         short = info.get("short", short_question(row_id)) if info else short_question(row_id)
+        if output == "md":
+            if quote is None:
+                return short
+            return f'"{quote}" ({short})'
         title = info.get("title", "未找到题卷/评分方案元数据") if info else "未找到题卷/评分方案元数据"
-        anchor = f'<a class="citation" href="#row-{html.escape(row_id, quote=True)}" title="{html.escape(title, quote=True)}">{html.escape(short)}</a>'
+        href = info.get("qp_url", "") if info else ""
+        if not href:
+            href = "#"
+        anchor = f'<a class="citation" href="{html.escape(href, quote=True)}" title="{html.escape(title, quote=True)}">{html.escape(short)}</a>'
         if quote is None:
             return anchor
         # English score sentences are visually distinct while the exact quoted
@@ -103,7 +121,7 @@ def _type_tree(chapter: str, taxonomy: Mapping, stats: Mapping[str, Mapping]) ->
         stat = stats.get(code, {})
         lines.append(
             f"| [{code}](#{code}) | {item.get('name_zh', '')} | "
-            f"{stat.get('stars', '★')} | {stat.get('questions', 0)} | {stat.get('marks', 0)} |"
+            f"{stat.get('stars', '★☆☆')} | {stat.get('questions', 0)} | {stat.get('marks', 0)} |"
         )
     return "\n".join(lines)
 
@@ -135,12 +153,19 @@ def _chapter_stats(chapter: str | None, taxonomy: Mapping, stats: Mapping[str, M
 def _one_line_stats(code: str, stats: Mapping[str, Mapping]) -> str:
     value = stats.get(code)
     if not value:
-        return f"> **考情**　{code}：暂无核验语料统计。"
+        return f"> **考情**　★☆☆　{code}：暂无核验语料统计。"
     distribution = ", ".join(f"{key} {count}" for key, count in value.get("command_distribution", {}).items()) or "暂无设问分布"
     return (
         f"> **考情**　{value.get('stars', '★')}　{value.get('questions', 0)} 小问 / "
         f"{value.get('marks', 0)} 分；{value.get('paper_count', 0)} 卷、{value.get('session_count', 0)} 考季；"
         f"设问：{distribution}；2021 扩展 {value.get('extension_questions', 0)} 小问。"
+    )
+
+
+def _is_reserved(row: Mapping) -> bool:
+    """D1: s26 leaves are reserved for whole-paper mock exams."""
+    return str(row.get("paper", "")).startswith("9618_s26_") or (
+        str(row.get("session", "")) == "s" and row.get("year") == 2026
     )
 
 
@@ -160,7 +185,13 @@ def _drill_lines(code: str, rows: Iterable[Mapping]) -> str:
                 grouped[paper].append(q)
         return [f"- {paper_short(paper)} " + ", ".join(f"Q{q}" for q in grouped[paper]) for paper in order]
 
-    lines = groups(current)
+    reserved = [row for row in current if _is_reserved(row)]
+    regular = [row for row in current if not _is_reserved(row)]
+    lines = groups(regular)
+    for line in groups(reserved):
+        # Keep the D1 label in front of every paper so reserved rows never look
+        # like ordinary targeted drills in the generated handbook.
+        lines.append(line.replace("- ", "- 保留整卷（模考）：", 1))
     if extension:
         lines.append("- **2021 扩展**")
         lines.extend(f"  {line[2:]}" for line in groups(extension))
@@ -187,11 +218,12 @@ def substitute_auto_blocks(text: str, *, chapter: str | None, taxonomy: Mapping,
 
 
 def process_document(text: str, *, chapter: str | None, taxonomy: Mapping,
-                     stats: Mapping[str, Mapping], rows: Iterable[Mapping], metadata: Mapping[str, Mapping]) -> str:
+                     stats: Mapping[str, Mapping], rows: Iterable[Mapping], metadata: Mapping[str, Mapping],
+                     output: str = "md") -> str:
     """Fill auto blocks and render citations in a document."""
 
     filled = substitute_auto_blocks(text, chapter=chapter, taxonomy=taxonomy, stats=stats, rows=rows)
-    return render_citations(filled, metadata)
+    return render_citations(filled, metadata, output=output)
 
 
 def read_json(path: Path, default: object) -> object:

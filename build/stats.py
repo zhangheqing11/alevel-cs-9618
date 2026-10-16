@@ -105,7 +105,7 @@ def _blank(code: str, taxonomy: Mapping | None = None) -> dict:
         "extension_marks": 0,
         "score": 0,
         "star": 1,
-        "stars": "★",
+        "stars": "★☆☆",
         "representative_questions": [],
     }
     return item
@@ -208,7 +208,7 @@ def apply_stars(stats: Mapping[str, dict]) -> None:
         score = int(item.get("score", 0))
         star = 3 if score >= first_cut else 2 if score >= second_cut else 1
         item["star"] = star
-        item["stars"] = "★" * star
+        item["stars"] = "★" * star + "☆" * (3 - star)
 
 
 def rows_for_type(rows: Iterable[Mapping], code: str, *, extension: bool | None = None) -> list[dict]:
