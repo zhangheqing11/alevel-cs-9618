@@ -23,7 +23,7 @@ def numbered(row):
   end=run[k+1][0] if k+1<len(run) else len(lines)
   content=[body]
   for line in lines[i+1:end]:
-   if re.match(r'^\s*(?:Note\b|Max\b|Example\b|Alternative\b|VARIATION\b|Mark Scheme\b|Solution (?:Two|Three|Four)\b|The [‘\x27]|Mark as|Marks? awarded|One mark|1 mark)',line,re.I):break
+   if re.match(r'^\s*(?:(?-i:PROCEDURE|FUNCTION)\b|Note\b|Max\b|Example\b|Alternative\b|VARIATION\b|Mark Scheme\b|Solution (?:Two|Three|Four)\b|The [‘\x27]|Mark as|Marks? awarded|One mark|1 mark)',line,re.I):break
    content.append(line)
   result.append(norm(' '.join(content)))
  return result
