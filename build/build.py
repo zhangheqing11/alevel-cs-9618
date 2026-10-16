@@ -125,7 +125,7 @@ def build_component(root: Path, out: Path, component: int) -> bool:
     taxonomy = _load_taxonomy(taxonomy_path)
     rows = load_rows(root, component)
     stats = calculate_stats(rows, taxonomy.get("types", []))
-    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", str(root / "sources")))
+    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", "/Users/zhangheqing/Desktop/alevel cs/sources"))
     metadata = citation_metadata(rows, load_inventory(root), source_root=source_root)
     output_dir = out / f"p{component}"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -238,7 +238,7 @@ def build_ladder(root: Path, out: Path) -> bool:
         print(f"skip ladder: {ladder.relative_to(root)} has no design.md or levels")
         return False
     rows = load_rows(root)
-    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", str(root / "sources")))
+    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", "/Users/zhangheqing/Desktop/alevel cs/sources"))
     metadata = citation_metadata(rows, load_inventory(root), source_root=source_root)
     # Ladder documents have no component taxonomy.  Empty context still allows
     # citations and generic blocks in future cards to render.

@@ -6,10 +6,20 @@ from pathlib import Path
 import pytest
 
 from build.build import build_component, build_ladder, main
+from build.markdown import citation_metadata
 from build.stats import apply_stars, calculate_stats, load_rows
 
 
 FIXTURE = Path(__file__).parent / "fixtures"
+
+
+def test_default_source_path_stays_in_primary_checkout(monkeypatch):
+    monkeypatch.delenv("ALEVEL_CS_SOURCES", raising=False)
+    metadata = citation_metadata(load_rows(FIXTURE, 1))
+    assert metadata["9618_s24_11:1"]["qp_url"] == (
+        "file:///Users/zhangheqing/Desktop/alevel%20cs/sources/"
+        "pastpapers/9618_s24_qp_11.pdf#page=2"
+    )
 
 
 def test_stats_counts_and_star_cutoffs():

@@ -48,7 +48,9 @@ def citation_metadata(rows: Iterable[Mapping], inventory: Mapping[str, Mapping] 
     """Build tooltip metadata for each corpus row."""
 
     inv = inventory or {}
-    source = Path(source_root or os.environ.get("ALEVEL_CS_SOURCES", "sources")).expanduser().resolve()
+    source = Path(source_root or os.environ.get(
+        "ALEVEL_CS_SOURCES", "/Users/zhangheqing/Desktop/alevel cs/sources"
+    )).expanduser().resolve()
     result: dict[str, dict] = {}
     for row in rows:
         row_id = str(row.get("id", ""))
@@ -156,7 +158,7 @@ def _one_line_stats(code: str, stats: Mapping[str, Mapping]) -> str:
         return f"> **考情**　★☆☆　{code}：暂无核验语料统计。"
     distribution = ", ".join(f"{key} {count}" for key, count in value.get("command_distribution", {}).items()) or "暂无设问分布"
     return (
-        f"> **考情**　{value.get('stars', '★')}　{value.get('questions', 0)} 小问 / "
+        f"> **考情**　{value.get('stars', '★☆☆')}　{value.get('questions', 0)} 小问 / "
         f"{value.get('marks', 0)} 分；{value.get('paper_count', 0)} 卷、{value.get('session_count', 0)} 考季；"
         f"设问：{distribution}；2021 扩展 {value.get('extension_questions', 0)} 小问。"
     )
