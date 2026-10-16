@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Download 9618 past-paper material from PapaCambridge into sources/pastpapers/.
 
+Fallback only: the corpus comes from the teacher's Teach Cambridge export
+(import_teacher.py). Use this to re-fetch a missing or damaged file.
+
 Re-runnable: existing files are skipped; every attempt is logged to
 pipeline/download/manifest.csv (url, file, status, bytes).
 
@@ -30,8 +33,9 @@ import certifi  # python.org builds ship without CA roots
 SSL_CTX = ssl.create_default_context(cafile=certifi.where())
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) personal-study-downloader"
 
-# (session, two-digit year). March series has variant 2 only; w26 not yet released.
-SESSIONS = [(s, y) for y in range(21, 26) for s in ("m", "s", "w")] + [("m", 26), ("s", 26)]
+# (session, two-digit year). 9618 is examined only in June and November (syllabus p.1);
+# w26 not yet released when this was written.
+SESSIONS = [(s, y) for y in range(21, 26) for s in ("s", "w")] + [("s", 26)]
 
 
 def candidates(only: set[str] | None, kinds: set[str] | None, papers: set[str] | None):
@@ -39,7 +43,7 @@ def candidates(only: set[str] | None, kinds: set[str] | None, papers: set[str] |
         code = f"{sess}{yy:02d}"
         if only and code not in only:
             continue
-        variants = (2,) if sess == "m" else (1, 2, 3)
+        variants = (1, 2, 3)
         per_paper = []
         for comp in (1, 2, 3, 4):
             for v in variants:

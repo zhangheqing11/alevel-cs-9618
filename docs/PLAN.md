@@ -8,7 +8,7 @@
 | 学生基础 | IGCSE CS A*；Python 只能读懂简单代码，愿意学会 |
 | 学习场所 | Claude Code 会话（主 checkout） |
 | 语料 | 核验：2022–2026s 全 variant QP+MS 精确配对；扩展：2021；另收 P4 源文件与证据文档模板、考官报告、分数线、考纲与伪代码指南、学生自备教材 |
-| 资料来源 | 老师提供的 Teach Cambridge 官方导出（2021–2026s 全部 6/11 月卷 QP/MS/插页/P4 源文件/ER/分数线 + ECR、样卷范答、Learner Guide、Scheme of Work、三版伪代码指南）；教材 Langfield & Duddell 第 2 版；3 月卷缺口可由 PapaCambridge 补 |
+| 资料来源 | 老师提供的 Teach Cambridge 官方导出（2021–2026s 全部 6/11 月卷 QP/MS/插页/P4 源文件/ER/分数线 + ECR、样卷范答、Learner Guide、Scheme of Work、三版伪代码指南）；教材 Langfield & Duddell 第 2 版；9618 只设 6 月与 11 月考季（考纲第 1 页），语料完整 |
 | 切分颗粒度 | 全部卷切到最细一级小问；P2/P4 中 ≥4 分的写代码小问再拆 MS 得分点并打技能标签 |
 | P2 练习 | 伪代码按 MS 逐点批改 + 同题 Python 版 pytest 自动测 |
 | P4 练习 | Python；每题一个练习文件夹（官方源文件 + 骨架 + pytest） |
