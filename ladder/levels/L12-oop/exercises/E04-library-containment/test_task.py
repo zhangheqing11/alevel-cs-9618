@@ -50,3 +50,11 @@ def test_lending_and_count(sol):
 def test_containment(sol):
     """B7: Library contains books and does not inherit from Book."""
     assert not issubclass(sol.Library, sol.Book)
+
+
+def test_find_first_duplicate(sol):
+    """English task: FindBook returns the first added book with a matching title."""
+    library = sol.Library()
+    for title in ["Dune", "Emma", "Dune"]:
+        assert library.AddBook(sol.Book(title)) is True
+    assert library.FindBook("Dune") == 0

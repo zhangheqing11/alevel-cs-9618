@@ -19,6 +19,18 @@ def test_empty_insert(sol):
     assert sol.FreePointer == 1
 
 
+def test_initialise_and_empty_output(sol, capsys):
+    """E02 contract required by this spec: initialise/reset the free chain and report an empty list."""
+    sol.InitialiseList()
+    assert sol.InsertInOrder("M") is True
+    sol.InitialiseList()
+    assert sol.ListData == [""] * 6
+    assert sol.ListPointer == [1, 2, 3, 4, 5, -1]
+    assert (sol.StartPointer, sol.FreePointer) == (-1, 0)
+    sol.OutputList()
+    assert output_lines(capsys.readouterr().out) == ["Empty list"]
+
+
 def test_order(sol, capsys):
     """B2-B3: insert before/between/after nodes and output ascending pointer order."""
     sol.InitialiseList()

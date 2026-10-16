@@ -43,3 +43,15 @@ def test_delete_only_node(sol):
     assert sol.StartPointer == -1
     assert sol.FreePointer == 0
     assert walk(sol) == []
+
+
+def test_delete_first_duplicate(sol):
+    """English task: only the first matching node is removed when data is repeated."""
+    sol.ListData = ["A", "A", "B", "", "", ""]
+    sol.ListPointer = [1, 2, -1, 4, 5, -1]
+    sol.StartPointer, sol.FreePointer = 0, 3
+    assert sol.DeleteItem("A") is True
+    assert sol.StartPointer == 1
+    assert sol.FreePointer == 0
+    assert sol.ListPointer[0] == 3
+    assert walk(sol) == ["A", "B"]
