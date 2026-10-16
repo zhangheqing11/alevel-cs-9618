@@ -1,24 +1,5 @@
 # L01/E02 · 秒数换算：DIV 与 MOD
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L01/E02` |
-| 目录 | `ladder/levels/L01-variables-io/exercises/E02-split-seconds/` |
-| 形态 | `io`（见 `ladder/design.md` §7.2） |
-| entry | `split_seconds` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `div-mod`, `type-conversion`, `input-prompt`, `output-format`, `declare-constant` |
-| difficulty | 1 |
-| title | `Split seconds into hours, minutes and seconds` |
-| adapted_from | 无（不写该字段） |
-| 对应卡片小节 | L01 card §3、§4、§5、§8 |
-
-## 练习目标
-
-写出第一个完整的「提示 → 输入 → 计算 → 输出」过程；用 `DIV`/`MOD`（Python `//`/`%`）做单位换算；体会 `input()` 必须 `int()`。
-
-## 题面
 
 ### 中文导读
 
@@ -33,48 +14,13 @@ Write a procedure `SplitSeconds()` that:
 
 Use `DIV` and `MOD` in your pseudocode. Then write the Python procedure `split_seconds()`, which reads the number with `input()` and prints exactly one line in the same format.
 
-## 接口
+## 作答文件
 
-```python
-def split_seconds() -> None:
-    """Input a number of seconds (0-86399); print it as '<h> h <m> min <s> s'."""
-    raise NotImplementedError
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
-if __name__ == "__main__":
-    split_seconds()
-```
-
-`answer.pseudo` 模板：
-
-```pseudocode
-PROCEDURE SplitSeconds()
-   // declare your variables, then prompt, input, calculate and output
-
-ENDPROCEDURE
-```
-
-## 必测行为
-
-每个测试喂 1 行输入；期望输出恰好 1 行。
-
-| # | 输入 | 期望输出行 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `3725` | `1 h 2 min 5 s` | 普通值 |
-| B2 | `59` | `0 h 0 min 59 s` | 不满 1 分钟 |
-| B3 | `60` | `0 h 1 min 0 s` | 刚好 1 分钟（边界） |
-| B4 | `3600` | `1 h 0 min 0 s` | 刚好 1 小时（边界） |
-| B5 | `0` | `0 h 0 min 0 s` | 最小值 |
-| B6 | `86399` | `23 h 59 min 59 s` | 最大值 |
-| B7 | `7199` | `1 h 59 min 59 s` | 分钟要先对 3600 取余：不能出现 119 min |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 用 `/` 代替 `//`：`hours = total / 3600` 等，输出 `1.0347222222222223 h …` | B1 等 |
-| M2 | 分钟忘了取余：`minutes = total // 60`（不是 `total % 3600 // 60`），3725 输出 `1 h 62 min 5 s` | B1、B4、B6、B7 |
-| M3 | 忘了 `int()`：`total = input()`，随后 `total // 3600` 抛 `TypeError` | 全部 |
+提示语写在 `input("…")` 中，不要另用 `print` 输出提示。除题目规定的输出外不要打印其他内容。
 
 ## 人工核对清单
 

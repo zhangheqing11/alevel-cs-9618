@@ -1,24 +1,5 @@
 # L03/E03 · 输入校验：REPEAT…UNTIL ↔ while True + break
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L03/E03` |
-| 目录 | `ladder/levels/L03-iteration/exercises/E03-valid-mark/` |
-| 形态 | `function`，但函数内部用 `input()` 读数据：测试用 `feed_input` 喂输入、用 `capsys` 查提示信息、再检查返回值 |
-| entry | `get_mark` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `post-condition-loop`, `input-validation`, `boundary-values`, `return-value`, `type-conversion` |
-| difficulty | 3 |
-| title | `Validate a mark with a post-condition loop` |
-| adapted_from | `CS50P Lecture 2 notes, "Improving with User Input" (https://cs50.harvard.edu/python/notes/2/#improving-with-user-input), CC BY-NC-SA 4.0; adapted: idea of a while True / break validation loop, applied to a 0-100 mark with an error message and a returned value` |
-| 对应卡片小节 | L03 card §3、§4、§5（输入校验）；常见坑 3 |
-
-## 练习目标
-
-用 `REPEAT … UNTIL` 写输入校验，并把它正确译成 Python 的 `while True` + `break`（或 `return`）；函数把有效值**返回**给调用者，而不是打印。
-
-## 题面
 
 ### 中文导读
 
@@ -36,45 +17,13 @@ Use a post-condition (`REPEAT … UNTIL`) loop. You may assume every input is an
 
 Then write the Python function `get_mark()`. It reads the marks with `input()`, prints the message after each invalid mark, prints nothing else, and returns the valid mark as an `int`.
 
-## 接口
+## 作答文件
 
-```python
-def get_mark() -> int:
-    """Input marks until one is 0-100; print a message for each invalid one; return the valid mark."""
-    raise NotImplementedError
-```
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
-`answer.pseudo` 模板：
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
-```pseudocode
-FUNCTION GetMark() RETURNS INTEGER
-   DECLARE Mark : INTEGER
-   // use a REPEAT ... UNTIL loop
-
-ENDFUNCTION
-```
-
-## 必测行为
-
-测试用 `feed_input(monkeypatch, …)` 喂入恰好需要的行数，调用 `sol.get_mark()`，检查返回值，并用 `capsys` 取输出行（规则见 design.md §7.3）。
-
-| # | 输入（按顺序） | 期望返回 | 期望输出行 | 说明 |
-|:--|:--|:--|:--|:--|
-| B1 | `72` | `72` | （无） | 第一次就有效 |
-| B2 | `105`、`-3`、`72` | `72` | `Invalid: must be 0 to 100` ×2 | 两次无效（两侧越界） |
-| B3 | `0` | `0` | （无） | 下边界有效 |
-| B4 | `100` | `100` | （无） | 上边界有效 |
-| B5 | `101`、`100` | `100` | `Invalid: must be 0 to 100` ×1 | 刚好越界一次 |
-| B6 | `-1`、`0` | `0` | `Invalid: must be 0 to 100` ×1 | 下边界外侧 |
-| B7 | 任一调用的返回值 | `type(result) is int` | | 不是字符串 `"72"` |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 边界用严格不等号：`if 0 < mark < 100`，输入 `0` 被当作无效、程序再要一次输入 → `feed_input` 抛 `AssertionError` | B3–B6 |
-| M2 | 校验时转了 `int`，返回的却是原字符串：`text = input(); if 0 <= int(text) <= 100: return text` | B1–B7（返回值比较 / 类型） |
-| M3 | 每次输入后都打印消息（包括有效的那次）：B1 多出一行 `Invalid: must be 0 to 100` | B1–B6 |
+提示语写在 `input("…")` 中，不要另用 `print` 输出提示。除题目规定的输出外不要打印其他内容。
 
 ## 人工核对清单
 

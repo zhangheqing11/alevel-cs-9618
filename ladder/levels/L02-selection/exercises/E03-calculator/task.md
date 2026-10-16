@@ -1,24 +1,5 @@
 # L02/E03 · 计算器：按字符 CASE、CASE 里嵌 IF
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L02/E03` |
-| 目录 | `ladder/levels/L02-selection/exercises/E03-calculator/` |
-| 形态 | `io`（见 `ladder/design.md` §7.2） |
-| entry | `calculator` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `case-of`, `nested-if`, `div-mod`, `type-conversion`, `input-prompt` |
-| difficulty | 3 |
-| title | `Five-operator calculator with a CASE structure` |
-| adapted_from | `CS50P Problem Set 1 "Math Interpreter" (https://cs50.harvard.edu/python/psets/1/interpreter/), CC BY-NC-SA 4.0; adapted: three separate inputs, MOD operator added, division-by-zero and unknown-operator messages, new output format` |
-| 对应卡片小节 | L02 card §5；L01 card §5；常见坑 4、10 |
-
-## 练习目标
-
-对一个 CHAR 变量用 `CASE OF` 分支，`OTHERWISE` 处理非法运算符；在分支里再嵌 IF 处理除数为零；体会 `/` 与 `MOD` 的结果类型不同。
-
-## 题面
 
 ### 中文导读
 
@@ -38,53 +19,13 @@ Write a procedure `Calculator()` that:
 
 Then write the Python procedure `calculator()`. Print the result of `/` exactly as Python displays a float (for example `3.5`, `2.0`).
 
-## 接口
+## 作答文件
 
-```python
-def calculator() -> None:
-    """Input num1, operator, num2 (one per line); print 'Result: ...' or an error message."""
-    raise NotImplementedError
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
-if __name__ == "__main__":
-    calculator()
-```
-
-`answer.pseudo` 模板：
-
-```pseudocode
-PROCEDURE Calculator()
-   DECLARE Num1 : INTEGER
-   DECLARE Num2 : INTEGER
-   DECLARE Operator : CHAR
-   // prompt and input, then use a CASE structure on Operator
-
-ENDPROCEDURE
-```
-
-## 必测行为
-
-每个测试按顺序喂 3 行输入：`num1`、`operator`、`num2`。期望输出恰好 1 行。
-
-| # | 输入 | 期望输出行 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `7`、`+`、`5` | `Result: 12` | 加 |
-| B2 | `7`、`-`、`10` | `Result: -3` | 减，结果为负 |
-| B3 | `6`、`*`、`7` | `Result: 42` | 乘 |
-| B4 | `7`、`/`、`2` | `Result: 3.5` | 除：实数结果 |
-| B5 | `6`、`/`、`3` | `Result: 2.0` | 能整除时仍是实数 |
-| B6 | `17`、`%`、`5` | `Result: 2` | 取余 |
-| B7 | `5`、`/`、`0` | `Error: division by zero` | 除零（异常数据） |
-| B8 | `5`、`%`、`0` | `Error: division by zero` | 取余也要查除零 |
-| B9 | `5`、`^`、`2` | `Error: unknown operator` | OTHERWISE 分支 |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | `/` 用整除 `num1 // num2`，B4 输出 `Result: 3` | B4、B5 |
-| M2 | 只在 `/` 分支查除零，`%` 分支直接 `num1 % num2`，B8 抛 `ZeroDivisionError` | B8 |
-| M3 | `if operator == "+" or "-":` 的真值陷阱：任何运算符都进第一个分支做加法，B2 输出 `Result: 17` | B2、B3、B4、B9 等 |
+提示语写在 `input("…")` 中，不要另用 `print` 输出提示。除题目规定的输出外不要打印其他内容。
 
 ## 人工核对清单
 

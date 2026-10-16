@@ -1,24 +1,5 @@
 # L01/E04 · 改错：三个分数的总分与平均分
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L01/E04` |
-| 目录 | `ladder/levels/L01-variables-io/exercises/E04-fix-average/` |
-| 形态 | `io`（见 `ladder/design.md` §7.2） |
-| entry | `mark_summary` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `find-fix-errors`, `operator-precedence`, `declare-constant`, `output-format`, `type-conversion` |
-| difficulty | 2 |
-| title | `Find and correct the errors: total and average of three marks` |
-| adapted_from | 无（不写该字段） |
-| 对应卡片小节 | L01 card §3、§4、§5；常见坑 2、4、6 |
-
-## 练习目标
-
-练 P2 的「找出并改正错误」题：在一段有 4 处错误的伪代码里找出错误、写出改正后的完整过程；再写出行为正确的 Python。错误类型取自 ECR P2 2024 p.10 的考官点评（求平均漏括号、OUTPUT 缺分隔符）以及 CONSTANT、数据类型两类基础错误。
-
-## 题面
 
 ### 中文导读
 
@@ -59,52 +40,13 @@ The average is printed to one decimal place.
 
 （行号按指南 §1.4（p.6）的方式写在左侧，不属于伪代码本身。）
 
-## 接口
+## 作答文件
 
-```python
-def mark_summary() -> None:
-    """Input three integer marks; print 'Total: <t>' and 'Average: <a to 1 dp>'."""
-    raise NotImplementedError
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
-if __name__ == "__main__":
-    mark_summary()
-```
-
-`answer.pseudo` 模板：
-
-```pseudocode
-// Errors found (line number, error, correction):
-// Line __ :
-// Line __ :
-// Line __ :
-// Line __ :
-
-PROCEDURE MarkSummary()
-   // write the corrected procedure here
-
-ENDPROCEDURE
-```
-
-## 必测行为
-
-每个测试按顺序喂 3 行输入。期望输出恰好 2 行。
-
-| # | 输入 | 期望输出行 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `60`、`70`、`85` | `Total: 215`、`Average: 71.7` | 普通值（71.666… → 71.7） |
-| B2 | `0`、`0`、`0` | `Total: 0`、`Average: 0.0` | 全零（边界） |
-| B3 | `100`、`100`、`99` | `Total: 299`、`Average: 99.7` | 接近满分 |
-| B4 | `1`、`2`、`2` | `Total: 5`、`Average: 1.7` | 1.666… 显示为 1.7 |
-| B5 | `50`、`50`、`51` | `Total: 151`、`Average: 50.3` | 50.333… |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 照抄第 13 行的优先级错误：`average = m1 + m2 + m3 / 3`，B1 输出 `Average: 158.3` | B1、B3、B4、B5 |
-| M2 | 平均分用整除：`average = total // 3`，B1 输出 `Average: 71.0` | B1、B3、B4、B5 |
-| M3 | 用 `round` 代替格式化：`print(f"Average: {round(total / 3)}")`，B1 输出 `Average: 72` | B1–B5 |
+提示语写在 `input("…")` 中，不要另用 `print` 输出提示。除题目规定的输出外不要打印其他内容。
 
 ## 人工核对清单
 

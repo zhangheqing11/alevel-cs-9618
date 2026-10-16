@@ -1,24 +1,5 @@
 # L02/E02 · 闰年：复合条件与返回 BOOLEAN
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L02/E02` |
-| 目录 | `ladder/levels/L02-selection/exercises/E02-leap-year/` |
-| 形态 | `function`（见 `ladder/design.md` §7.2） |
-| entry | `is_leap` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `logic-ops`, `nested-if`, `div-mod`, `boolean-return`, `boundary-values` |
-| difficulty | 2 |
-| title | `Leap year test with compound conditions` |
-| adapted_from | 无（不写该字段） |
-| 对应卡片小节 | L02 card §2、§4、§6；常见坑 9 |
-
-## 练习目标
-
-把一条带「除非」的规则写成正确的复合条件（或嵌套 IF）；用 `MOD` 判断整除；函数返回真正的布尔值。
-
-## 题面
 
 ### 中文导读
 
@@ -30,41 +11,11 @@ A year is a leap year if it is divisible by 4, except that years divisible by 10
 
 Write a function `IsLeap()` that takes a year (a positive integer) and returns `TRUE` if it is a leap year and `FALSE` otherwise. Use `MOD`. Then write the Python function `is_leap(year)`, which returns a Boolean.
 
-## 接口
+## 作答文件
 
-```python
-def is_leap(year: int) -> bool:
-    """Return True if year is a leap year in the Gregorian calendar."""
-    raise NotImplementedError
-```
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
-`answer.pseudo` 模板：
-
-```pseudocode
-FUNCTION IsLeap(Year : INTEGER) RETURNS BOOLEAN
-   // use MOD, and AND / OR / NOT or nested IF statements
-
-ENDFUNCTION
-```
-
-## 必测行为
-
-| # | 调用 | 期望返回 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `is_leap(2024)` | `True` | 能被 4 整除 |
-| B2 | `is_leap(2023)` | `False` | 不能被 4 整除 |
-| B3 | `is_leap(1900)`、`is_leap(2100)` | `False`、`False` | 能被 100 整除但不能被 400 整除 |
-| B4 | `is_leap(2000)`、`is_leap(2400)` | `True`、`True` | 能被 400 整除 |
-| B5 | `is_leap(4)`、`is_leap(1)` | `True`、`False` | 很小的年份 |
-| B6 | 任一调用的返回值 | `type(result) is bool` | 不是字符串 `"TRUE"`，不是 0/1 |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 只判断 `year % 4 == 0`，1900 返回 `True` | B3 |
-| M2 | 漏了 400 的例外：`year % 4 == 0 and year % 100 != 0`，2000 返回 `False` | B4 |
-| M3 | 返回字符串：`return "TRUE"` / `return "FALSE"` | B1–B6 |
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
 ## 人工核对清单
 

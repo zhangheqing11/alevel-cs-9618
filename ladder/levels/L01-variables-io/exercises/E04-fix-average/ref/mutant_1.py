@@ -1,2 +1,13 @@
-def mark_summary():
- a=int(input()); b=int(input()); c=int(input()); t=a+b+c; print(f"Total: {t}"); print(f"Average: {a+b+c/3:.1f}")
+# M1: intentional fault described in spec.md.
+def mark_summary() -> None:
+    mark1 = int(input("Mark 1: "))
+    mark2 = int(input("Mark 2: "))
+    mark3 = int(input("Mark 3: "))
+    total = mark1 + mark2 + mark3
+    average = mark1 + mark2 + mark3 / 3
+    print(f"Total: {total}")
+    print(f"Average: {average:.1f}")
+
+
+if __name__ == "__main__":
+    mark_summary()

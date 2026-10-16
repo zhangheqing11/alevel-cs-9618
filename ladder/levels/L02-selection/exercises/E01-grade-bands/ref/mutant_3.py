@@ -1,2 +1,13 @@
-def grade(m):
- return "A" if m>=80 else "B" if m>=70 else "C" if m>=60 else "D" if m>=50 else "E" if m>=40 else "U"
+# M3: intentional fault described in spec.md.
+def grade(mark: int) -> str:
+    if mark >= 80:
+        return "A"
+    elif mark >= 70:
+        return "B"
+    elif mark >= 60:
+        return "C"
+    elif mark >= 50:
+        return "D"
+    elif mark >= 40:
+        return "E"
+    return "U"

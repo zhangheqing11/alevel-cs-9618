@@ -1,24 +1,5 @@
 # L03/E04 · 投币机：REPEAT 累加到够数
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L03/E04` |
-| 目录 | `ladder/levels/L03-iteration/exercises/E04-coin-machine/` |
-| 形态 | `io`（见 `ladder/design.md` §7.2） |
-| entry | `coin_machine` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `post-condition-loop`, `accumulator`, `declare-constant`, `logic-ops`, `boundary-values` |
-| difficulty | 3 |
-| title | `Coin machine: accumulate coins until the price is paid` |
-| adapted_from | `CS50P Problem Set 2 "Coke Machine" (https://cs50.harvard.edu/python/psets/2/coke/), CC BY-NC-SA 4.0; adapted: new price and coin set, rejected-coin message, pseudocode-first REPEAT loop, new output format` |
-| 对应卡片小节 | L03 card §3、§4、§5；L02 card §2 |
-
-## 练习目标
-
-用 `REPEAT … UNTIL` 累加直到达到目标（至少投一枚币，所以是后测循环）；用常量表示价格；用 `OR` 判断合法币值；注意「刚好够」的边界。
-
-## 题面
 
 ### 中文导读
 
@@ -37,54 +18,13 @@ When the amount paid is at least the price, stop and output `Change: ` followed 
 
 Use a post-condition (`REPEAT … UNTIL`) loop. Then write the Python procedure `coin_machine()`.
 
-## 接口
+## 作答文件
 
-```python
-PRICE = 60
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
-def coin_machine() -> None:
-    """Input coins until at least PRICE is paid; print Rejected/Due lines, then Change."""
-    raise NotImplementedError
-
-
-if __name__ == "__main__":
-    coin_machine()
-```
-
-`answer.pseudo` 模板：
-
-```pseudocode
-CONSTANT Price = 60
-
-PROCEDURE CoinMachine()
-   DECLARE Coin : INTEGER
-   DECLARE Paid : INTEGER
-   // use a REPEAT ... UNTIL loop
-
-ENDPROCEDURE
-```
-
-## 必测行为
-
-每个测试喂入的行数恰好等于正确程序需要读的行数。
-
-| # | 输入（按顺序） | 期望输出行 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `50`、`10` | `Due: 10`、`Change: 0` | 刚好付够（边界） |
-| B2 | `20`、`20`、`50` | `Due: 40`、`Due: 20`、`Change: 30` | 超付找零 |
-| B3 | `5`、`50`、`1`、`20` | `Rejected: 5`、`Due: 60`、`Due: 10`、`Rejected: 1`、`Due: 10`、`Change: 10` | 非法币被拒，拒收后也显示 Due |
-| B4 | `50`、`50` | `Due: 10`、`Change: 40` | |
-| B5 | `10`、`10`、`10`、`10`、`10`、`10` | `Due: 50`、`Due: 40`、`Due: 30`、`Due: 20`、`Due: 10`、`Change: 0` | 最多枚数 |
-| B6 | `20`、`20`、`20` | `Due: 40`、`Due: 20`、`Change: 0` | 刚好付够的另一种组合 |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 结束条件写成 `paid > PRICE`（`UNTIL Paid > Price`）：刚好 60 时还要一枚币 → `feed_input` 抛 `AssertionError` | B1、B5、B6 |
-| M2 | 不检查币值，任何币都收：B3 输出 `Due: 55`… | B3 |
-| M3 | 每投一枚都无条件输出 `Due:`：B1 多出 `Due: 0` | B1–B6 |
+提示语写在 `input("…")` 中，不要另用 `print` 输出提示。除题目规定的输出外不要打印其他内容。
 
 ## 人工核对清单
 

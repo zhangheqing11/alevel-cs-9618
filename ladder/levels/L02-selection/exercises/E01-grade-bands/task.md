@@ -1,24 +1,5 @@
 # L02/E01 · 分数段：CASE 范围子句
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L02/E01` |
-| 目录 | `ladder/levels/L02-selection/exercises/E01-grade-bands/` |
-| 形态 | `function`（见 `ladder/design.md` §7.2） |
-| entry | `grade` |
-| pseudocode | `true` |
-| files | `[]` |
-| skills | `case-of`, `case-range`, `boundary-values`, `return-value` |
-| difficulty | 2 |
-| title | `Grade bands with a CASE structure` |
-| adapted_from | 无（不写该字段） |
-| 对应卡片小节 | L02 card §4、§5；常见坑 5、6 |
-
-## 练习目标
-
-用 `CASE OF` 的 `TO` 范围子句和 `OTHERWISE` 写多分支；在 Python 里用 `if/elif` 或 `match` 实现；按边界选测试值。
-
-## 题面
 
 ### 中文导读
 
@@ -40,43 +21,11 @@ Write a function `Grade()` that takes an integer mark and returns the grade as a
 
 Your pseudocode must use a `CASE` structure with ranges and an `OTHERWISE` clause. Then write the Python function `grade(mark)`.
 
-## 接口
+## 作答文件
 
-```python
-def grade(mark: int) -> str:
-    """Return "A"-"E", "U" for 0-100, or "Invalid" for any other mark."""
-    raise NotImplementedError
-```
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
-`answer.pseudo` 模板：
-
-```pseudocode
-FUNCTION Grade(Mark : INTEGER) RETURNS STRING
-   // use a CASE structure with ranges and an OTHERWISE clause
-
-ENDFUNCTION
-```
-
-## 必测行为
-
-| # | 调用 | 期望返回 | 说明 |
-|:--|:--|:--|:--|
-| B1 | `grade(85)` | `"A"` | 普通值 |
-| B2 | `grade(100)`、`grade(80)` | `"A"`、`"A"` | A 段两端 |
-| B3 | `grade(79)`、`grade(70)` | `"B"`、`"B"` | B 段两端 |
-| B4 | `grade(69)`、`grade(60)`、`grade(59)`、`grade(50)` | `"C"`、`"C"`、`"D"`、`"D"` | C、D 段两端 |
-| B5 | `grade(49)`、`grade(40)`、`grade(39)` | `"E"`、`"E"`、`"U"` | E/U 分界 |
-| B6 | `grade(0)` | `"U"` | 最小合法值 |
-| B7 | `grade(-1)`、`grade(101)` | `"Invalid"`、`"Invalid"` | 刚好越界（异常数据） |
-| B8 | 任一调用的返回类型 | `str` | 不是 `None`、不是 `print` 出来的 |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | A 段边界用 `>`：`if mark > 80`，80 返回 `"B"` | B2 |
-| M2 | 分支顺序写反：先判断 `mark >= 40` 返回 `"E"`，85 也返回 `"E"` | B1–B4 |
-| M3 | 漏了合法范围检查：101 返回 `"A"`，-1 返回 `"U"` | B7 |
+先完成 `answer.pseudo`，再写 Python。伪代码写法由导师按下列清单人工核对。
 
 ## 人工核对清单
 

@@ -1,8 +1,14 @@
-def grade(mark:int)->str:
-    if 80<=mark<=100:return "A"
-    if 70<=mark<=79:return "B"
-    if 60<=mark<=69:return "C"
-    if 50<=mark<=59:return "D"
-    if 40<=mark<=49:return "E"
-    if 0<=mark<=39:return "U"
-    return "Invalid"
+def grade(mark: int) -> str:
+    if mark < 0 or mark > 100:
+        return "Invalid"
+    if mark >= 80:
+        return "A"
+    elif mark >= 70:
+        return "B"
+    elif mark >= 60:
+        return "C"
+    elif mark >= 50:
+        return "D"
+    elif mark >= 40:
+        return "E"
+    return "U"

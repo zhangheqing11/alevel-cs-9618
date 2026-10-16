@@ -1,9 +1,26 @@
-def calculator():
-    n1=int(input("First: ")); op=input("Operator: "); n2=int(input("Second: "))
-    if op=="+": print(f"Result: {n1+n2}")
-    elif op=="-": print(f"Result: {n1-n2}")
-    elif op=="*": print(f"Result: {n1*n2}")
-    elif op=="/": print("Error: division by zero" if n2==0 else f"Result: {n1/n2}")
-    elif op=="%": print("Error: division by zero" if n2==0 else f"Result: {n1%n2}")
-    else: print("Error: unknown operator")
-if __name__=="__main__": calculator()
+def calculator() -> None:
+    num1 = int(input("First integer: "))
+    operator = input("Operator: ")
+    num2 = int(input("Second integer: "))
+    if operator == "+":
+        print(f"Result: {num1 + num2}")
+    elif operator == "-":
+        print(f"Result: {num1 - num2}")
+    elif operator == "*":
+        print(f"Result: {num1 * num2}")
+    elif operator == "/":
+        if num2 == 0:
+            print("Error: division by zero")
+        else:
+            print(f"Result: {num1 / num2}")
+    elif operator == "%":
+        if num2 == 0:
+            print("Error: division by zero")
+        else:
+            print(f"Result: {num1 % num2}")
+    else:
+        print("Error: unknown operator")
+
+
+if __name__ == "__main__":
+    calculator()

@@ -1,24 +1,5 @@
 # L02/E05 · 干跑：邮费函数（嵌套 IF 与 DIV）
 
-| 属性 | 值 |
-|:--|:--|
-| id | `L02/E05` |
-| 目录 | `ladder/levels/L02-selection/exercises/E05-trace-postage/` |
-| 形态 | `trace`（见 `ladder/design.md` §7.2） |
-| entry | `postage` |
-| pseudocode | `false` |
-| files | `[]` |
-| skills | `trace-dry-run`, `translate-pseudocode`, `nested-if`, `div-mod`, `operator-precedence` |
-| difficulty | 2 |
-| title | `Dry run: a postage function with nested IF and DIV` |
-| adapted_from | 无（不写该字段） |
-| 对应卡片小节 | L02 card §3、§4、§5；L01 card §5 |
-
-## 练习目标
-
-精确执行一段嵌套 IF（含 `DIV` 与括号）并预测返回值；把它译成 Python 函数；判断它能不能改写成 CASE（SoW Unit 11 p.35 的 IF ↔ CASE 互转活动）。
-
-## 题面
 
 ### 中文导读
 
@@ -52,44 +33,9 @@ FUNCTION Postage(Weight : INTEGER, Express : BOOLEAN) RETURNS REAL
 ENDFUNCTION
 ```
 
-## 接口
+## 作答文件
 
-```python
-PREDICTED: list[float] = []  # fill in by hand BEFORE writing postage()
-
-
-def postage(weight: int, express: bool) -> float:
-    """Translate the pseudocode function Postage() line by line."""
-    raise NotImplementedError
-
-
-# Could the weight bands be written as a CASE structure? Answer here:
-```
-
-（不需要 `answer.pseudo`。）
-
-## 必测行为
-
-期望值已用参考实现核对。浮点比对用 `pytest.approx(…, abs=1e-9)`。
-
-| # | 检查 | 期望 |
-|:--|:--|:--|
-| B1 | `sol.PREDICTED` | 长度 6，逐项约等于 `[1.50, 3.00, 4.20, 5.40, 10.80, 13.20]` |
-| B2 | `postage(100, False)`、`postage(0, False)` | `1.50`、`1.50`（`<= 100` 含 100） |
-| B3 | `postage(101, False)`、`postage(500, False)` | `3.00`、`3.00` |
-| B4 | `postage(501, False)` | `4.20`（`1 DIV 250 = 0`，再 `+ 1`） |
-| B5 | `postage(750, False)`、`postage(1250, False)` | `5.40`、`7.80` |
-| B6 | `postage(1001, False)` | `6.60` |
-| B7 | `postage(751, True)`、`postage(1000, True)`、`postage(100, True)` | `10.80`、`13.20`、`3.00`（Express 翻倍） |
-| B8 | 任一调用的返回类型 | `float` |
-
-## mutant 建议
-
-| # | 错误 | 应失败于 |
-|:--|:--|:--|
-| M1 | 第一层边界用 `<`：`if weight < 100`，`postage(100, False)` 返回 `3.00`；`PREDICTED` 第 1 项也写成 `3.00` | B1、B2 |
-| M2 | `DIV` 译成 `/`：`((weight - 500) / 250 + 1) * 1.20`，501 返回约 `4.2048` | B4、B6、B7 |
-| M3 | 漏了括号：`3.00 + (weight - 500) // 250 + 1 * 1.20`，750 返回 `5.20`；`PREDICTED` 也按此算 | B1、B5、B6、B7 |
+在学生作答目录的 `solution.py` 中实现 `starter.py` 给出的接口。
 
 ## 人工核对清单
 

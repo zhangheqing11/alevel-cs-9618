@@ -1,2 +1,11 @@
-def split_seconds():
- t=int(input()); print(f"{t//3600} h {t//60} min {t%60} s")
+# M2: intentional fault described in spec.md.
+def split_seconds() -> None:
+    total = int(input("Enter seconds: "))
+    hours = total // 3600
+    minutes = total // 60
+    seconds = total % 60
+    print(f"{hours} h {minutes} min {seconds} s")
+
+
+if __name__ == "__main__":
+    split_seconds()
