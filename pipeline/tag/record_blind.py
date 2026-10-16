@@ -21,3 +21,13 @@ def record(paper,labels,notes=None):
     print(paper,'recorded',len(rows),'total',len(existing))
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('paper');p.add_argument('labels');p.add_argument('--notes',default='{}');a=p.parse_args();record(a.paper,a.labels,json.loads(a.notes))
+
+def record_visual(papers):
+    """Call only after inspecting the source QP pages for these papers."""
+    path=ROOT/'pipeline/tag/visual_review.jsonl'
+    seen={r['paper'] for r in map(json.loads,path.read_text().splitlines())}
+    with path.open('a') as out:
+        for paper in papers:
+            if paper in seen:raise ValueError('visual review already recorded: '+paper)
+            fig=[r for r in map(json.loads,(ROOT/'corpus/rows/p1'/f'{paper}.jsonl').read_text().splitlines()) if r['has_figure']]
+            out.write(json.dumps(dict(paper=paper,qp_pages=sorted({r['qp_page'] for r in fig}),row_ids=[r['id'] for r in fig],reviewer='codex-1',date='2026-10-16',result='已看源 QP 原页拼图；结合本行题干和配对 MS 定题型'),ensure_ascii=False)+'\n')
