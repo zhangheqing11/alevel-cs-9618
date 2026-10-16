@@ -1,0 +1,20 @@
+{
+  "id": "L05/E02",
+  "kind": "ladder",
+  "title": "Dry run: insert string functions",
+  "source": null,
+  "marks": null,
+  "types": [],
+  "skills": [
+    "trace-dry-run",
+    "translate-pseudocode",
+    "string-functions",
+    "string-index",
+    "loop-step"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "run_trace",
+  "ms_verified": false,
+  "difficulty": 2
+}

@@ -1,0 +1,4 @@
+FUNCTION TrimSpaces(Text : STRING) RETURNS STRING
+   // remove leading spaces, then trailing spaces
+
+ENDFUNCTION
