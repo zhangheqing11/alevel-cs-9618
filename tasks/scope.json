@@ -66,5 +66,14 @@
       "papers/p2/pilot_tags.csv",
       "papers/p2/pilot_markpoints.jsonl"
     ]
+  },
+  "T22": {
+    "allow": [
+      "papers/p1/front.md",
+      "papers/p1/back.md",
+      "papers/p1/cards/**",
+      "papers/p1/core/**",
+      "papers/p1/adjudication.csv"
+    ]
   }
 }
