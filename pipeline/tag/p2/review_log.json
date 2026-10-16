@@ -77,5 +77,29 @@
     "rows": 20,
     "copied_from": "9618_s21_21",
     "method": "D21: every stem and ms_text whitespace-normalised equality checked; copied tags and markpoints."
+  },
+  "9618_s22_23": {
+    "stage": "blind",
+    "rows": 24,
+    "qp_pages_viewed": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      18
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s23_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
   }
 }
