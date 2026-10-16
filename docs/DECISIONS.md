@@ -45,3 +45,14 @@
 | # | 来源 | 决定 | 依据 |
 |:--|:--|:--|:--|
 | D19 | 学生 | 云端会话额度（$100，11 月 5 日过期）用于只靠仓库内容就能完成的任务，模型 **Opus 5.5、effort high**；**预留一部分给最后一轮 Fable 5.1 的最终审查与优化，不要用完**。云端会话看不到 `sources/`。首个云端任务：T22。 | 学生选择；Fable 5.1 单价约为 Opus 5.5 的 2.5 倍 |
+
+## 2026-10-16 · T21 / T14 批 3 审查
+
+| # | 来源 | 决定 | 依据 |
+|:--|:--|:--|:--|
+| D20 | T21 | 技能标签 `declare-constant` **改名为 `declare-variables`**（含义：声明局部变量与常量），在 P2 打标签开始前由总控一次性改完：`papers/p2/skill_tags.json`、`papers/p2/pilot_markpoints.jsonl`、`papers/p2/tagging-guide.md`、`ladder/design.md` §7.8、阶梯各 `meta.json`。 | P2 MS 最常见的是 “Declare local variables”，旧名误导打标签 |
+| D21 | T21 | `9618_s21_23`、`9618_w21_23` 与同季 `_21` 卷逐题相同的 37 行补 `equivalent_of`，由 codex-1 在 T12 的后续 PR 用 `overrides.json` 补齐；补齐前 P2 打标签照抄 `_21` 卷。 | 只有 5 行已标 |
+| D22 | T21 | `ladder/design.md` §6 回填 P2 题型码（T21 PR 描述第 3 项的对照）——由 T10 跟进。 | 阶梯与题型衔接 |
+| D23 | T21 | `skill/cie-9618-cs-tutor/scripts/rows.py` 用系统 python3 运行时，缺 PyMuPDF 就自动改用 `~/.venvs/alevel-cs/bin/python` 重新执行（总控改）。 | `render` 依赖 PyMuPDF |
+| D24 | T14 审计 | 伪代码里的数组一律用**带上下界的全局声明**（真题写法，如 `ARRAY[1:200] OF Node`），不用无界的 `ARRAY OF INTEGER` 参数。L11/E03 的规格与模板由 T10 改成全局数组，`answer.pseudo` 由总控同步。 | 真题 P2 全部是带界全局数组；指南无无界参数写法 |
+| D25 | T14 审计 | 不依赖 `AND` 短路：链表遍历等写成标志变量或分层判断。L10/E03、E04 的人工核对清单由 T10 改，与 L11 card:115 一致。 | 指南未保证短路求值 |
