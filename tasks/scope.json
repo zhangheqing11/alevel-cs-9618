@@ -82,5 +82,14 @@
       "corpus/rows/p2/**",
       "corpus/tag_report_p2.md"
     ]
+  },
+  "T23": {
+    "allow": [
+      "papers/p2/front.md",
+      "papers/p2/back.md",
+      "papers/p2/cards/**",
+      "papers/p2/core/**",
+      "papers/p2/adjudication.csv"
+    ]
   }
 }
