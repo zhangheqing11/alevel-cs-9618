@@ -132,5 +132,25 @@
     "allow": [
       "papers/p2/audit/**"
     ]
+  },
+  "T26c": {
+    "allow": [
+      "papers/p1/cards/**",
+      "papers/p1/core/**",
+      "papers/p1/front.md",
+      "papers/p1/back.md",
+      "papers/p1/audit/**"
+    ]
+  },
+  "T26d": {
+    "allow": [
+      "papers/p2/cards/**",
+      "papers/p2/core/**",
+      "papers/p2/front.md",
+      "papers/p2/back.md",
+      "papers/p2/audit/**",
+      "papers/p3/tagging-guide.md",
+      "papers/p3/taxonomy.json"
+    ]
   }
 }

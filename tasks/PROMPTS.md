@@ -179,3 +179,22 @@ D35：与同季 _31 卷逐字相同的 119 行（T12e 正在补 equivalent_of）
 可以先写脚本做机械检查（选题规则、计数重算、页码引用、伪代码 lint、Python 片段运行），放在 papers/p2/audit/，再逐张人工核对。产出：papers/p2/audit/T26-findings.jsonl（一条问题一行，字段与 kind / severity 取值见任务卡）、papers/p2/audit/T26-report.md。
 只改 tasks/scope.json 里 T26b 允许的路径（papers/p2/audit/**）与 tasks/progress/T26b.md；不要改卡片、概念表、corpus、practice。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T26b → push → gh pr create --base main --title "T26b: audit P2 handbook"。PR 描述：审计卡数、问题数（按 severity）、最严重的 5 条、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T26b.md 并提交。
 ```
+
+## codex-1 · T26c 按审计修正 P1 手册（新开 Codex 会话）
+
+```
+你是执行工位 codex-1，负责任务 T26c：按 docs/DECISIONS.md D40 修正 P1 题型手册里 T26a 审计找出的 13 条问题（F01–F13 = papers/p1/audit/T26-findings.jsonl 的行序；证据见 papers/p1/audit/T26-report.md）。审计也是你做的，这次把它们改掉。
+先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D15、D37、D40）、tasks/T26-fixes.md（任务卡：改法要求、产出、完成标准）、schemas/card-format.md。D40 的四条裁决优先于 findings 里的 suggestion，其中 P1 相关：F12 跟踪表注明 MS 省略 205、211；F04/F05 词条改名为 No partial dependencies（2NF 条件）/ No non-key / transitive dependencies（3NF 条件），英文列保留 MS 原句。
+从最新 origin/main 开分支 task/T26c-p1-fixes。只改有问题的地方及审计点名的同类重复表述；满分作答类（F02 EO-05）动笔前重读该题 QP/MS 原页（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读），重写后与 MS 逐点对齐；F01 示意图改完 make build 后在 output/p1/*.html 里确认。「…」⟦行 id⟧ 只放 MS 原文，新写的非 MS 句子不加「」。
+产出 papers/p1/audit/T26-fixes.md（F 编号 → 文件与行 → 改动摘要；error 附改后原文片段），重跑 papers/p1/audit/check_handbook.py 并记录结果。只改 tasks/scope.json 里 T26c 允许的路径与 tasks/progress/T26c.md。交付：git fetch origin && git rebase origin/main → make check → make build → make check-scope TASK=T26c → push → gh pr create --base main --title "T26c: fix P1 handbook per audit"。不要合并 PR。停下前更新 tasks/progress/T26c.md 并提交。
+```
+
+## codex-2 · T26d 按审计修正 P2 手册 + P3 指南措辞（新开 Codex 会话）
+
+```
+你是执行工位 codex-2，负责任务 T26d：按 docs/DECISIONS.md D40 修正 P2 题型手册里 T26b 审计找出的 13 条问题（F01–F13 = papers/p2/audit/T26-findings.jsonl 的行序；证据见 papers/p2/audit/T26-report.md），并按 D39 同步 P3 指南措辞。审计是你做的，这次把它们改掉。
+先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D2、D25、D37、D39、D40）、tasks/T26-fixes.md（任务卡：改法要求、产出、完成标准）、schemas/card-format.md。D40 的裁决优先于 findings 里的 suggestion，其中 P2 相关：F10（SD-03）BOOLEAN 返回值按该题 MS 画实心圆、删去“空心实心都行”。
+从最新 origin/main 开分支 task/T26d-p2-fixes。只改有问题的地方及审计点名的同类重复表述（如 F02 的 core/SD.md:115、F09 的 core/DT.md 旧状态说明）；动笔前重读相关 QP/MS 原页（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读）；伪代码保持 2027–29 指南写法。「…」⟦行 id⟧ 只放 MS 原文，新写的非 MS 句子不加「」。
+D39 的 P3 部分：papers/p3/tagging-guide.md §7 加“同票时主题型取题干 / MS 中先出现的那项、其余进 cross、标 low”的判例规则（例 9618_s21_31:3(a)）；§8.2 B 写明“MS 只给填空答案片段时，按 QP 留空行逐行对应拆分，text 取 MS 片段”（例 9618_s22_32:8(a)）；papers/p3/taxonomy.json 的 P3-DR-02 summary 与 DR-04 分界统一（给记录字段赋值含赋枚举值归 DR-04）。只改措辞，不动 rows。
+产出 papers/p2/audit/T26-fixes.md（F 编号 → 文件与行 → 改动摘要；error 附改后原文片段；末尾列 D39 三处改动），重跑 papers/p2/audit/check_handbook.py 与 run_python.py 并记录结果。只改 tasks/scope.json 里 T26d 允许的路径与 tasks/progress/T26d.md。交付：git fetch origin && git rebase origin/main → make check → make build → make check-scope TASK=T26d → push → gh pr create --base main --title "T26d: fix P2 handbook per audit"。不要合并 PR。停下前更新 tasks/progress/T26d.md 并提交。
+```
