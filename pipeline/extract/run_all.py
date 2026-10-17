@@ -17,7 +17,7 @@ from typing import Any
 
 from align import align_rows
 from dedupe import dedupe
-from normalise import normalise_row
+from normalise import D26, normalise_row
 from parse_ms import parse_mark_scheme
 from pdf_text import DEFAULT_CACHE_ROOT, DEFAULT_SOURCE_ROOT, extract_pdf, source_path
 from split_qp import split_question_paper
@@ -113,6 +113,18 @@ def report(selected, rows_by_paper):
                 observation = observation.replace("|", "\\|").replace("\n", " ")
                 result = audit["result"]
             lines.append(f"| `{row['id']}` | {row['qp_page']} / {row['ms_page']} | {row['marks']} | {observation} | {result} |")
+    lines += ["", "## D26 归一与表外私用区字符", "",
+              "stem / stem_ctx / ms_text 在结构对齐和判重之后按 D26 归一。表外字符原样保留，不推断含义；以下逐行列出位置。",
+              "P3 对浮点格子、栈状态图和布尔表达式上划线另作保守 figure 标记；文字层不能替代其原页。", "",
+              "| 行 | 字段 | 字符 | 次数 | QP / MS 页 |", "|---|---|---|---:|---|"]
+    unknown = []
+    for row in all_rows:
+        for key in ('stem', 'stem_ctx', 'ms_text'):
+            for char in sorted(set(c for c in row[key] if '\ue000' <= c <= '\uf8ff')):
+                unknown.append(f"| `{row['id']}` | {key} | U+{ord(char):04X} | {row[key].count(char)} | {row['qp_page']} / {row['ms_page']} |")
+    lines += unknown or ["| 无 | — | — | 0 | — |"]
+    if (ROOT / 'pipeline/extract/pua_report.md').exists():
+        lines += ["", "T12c 已有批次的严格基线对比见 `pipeline/extract/pua_report.md`；后续批次不重写其历史统计。"]
     return "\n".join(lines) + "\n"
 
 

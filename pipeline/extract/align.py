@@ -64,6 +64,13 @@ def align_rows(
         if ms is not None and ms.marks != qp.marks:
             flags.append("marks-unclear")
         has_figure = _figure(stem + "\n" + stem_ctx)
+        # P3 answer grids and overbars may carry meaning without the generic
+        # table/diagram keywords. Keep their exact geometry in the source PDF.
+        if int(record['component']) == 3:
+            has_figure |= bool(re.search(
+                r'floating.point|mantissa|sum.of.products|Boolean.*expression|'
+                r'De Morgan|changing contents of the stack|mark per ring',
+                stem + '\n' + stem_ctx + '\n' + ms_text, re.I))
         if has_figure:
             flags.append("figure")
         qn_match = re.match(r"(\d+)", label)
