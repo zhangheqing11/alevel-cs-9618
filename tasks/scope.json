@@ -152,5 +152,59 @@
       "papers/p3/tagging-guide.md",
       "papers/p3/taxonomy.json"
     ]
+  },
+  "T32A": {
+    "allow": [
+      "papers/p3/front.md",
+      "papers/p3/adjudication.csv",
+      "papers/p3/cards/DR.md",
+      "papers/p3/cards/CI.md",
+      "papers/p3/cards/HV.md",
+      "papers/p3/cards/BL.md",
+      "papers/p3/core/DR.md",
+      "papers/p3/core/CI.md",
+      "papers/p3/core/HV.md",
+      "papers/p3/core/BL.md"
+    ]
+  },
+  "T32B": {
+    "allow": [
+      "papers/p3/cards/SY.md",
+      "papers/p3/cards/SC.md",
+      "papers/p3/cards/AI.md",
+      "papers/p3/core/SY.md",
+      "papers/p3/core/SC.md",
+      "papers/p3/core/AI.md"
+    ]
+  },
+  "T32C": {
+    "allow": [
+      "papers/p3/back.md",
+      "papers/p3/cards/CT.md",
+      "papers/p3/cards/FP.md",
+      "papers/p3/core/CT.md",
+      "papers/p3/core/FP.md"
+    ]
+  },
+  "T33": {
+    "allow": [
+      "papers/p4/taxonomy.json",
+      "papers/p4/skill_tags.json",
+      "papers/p4/tagging-guide.md",
+      "papers/p4/pilot_tags.csv",
+      "papers/p4/pilot_markpoints.jsonl",
+      "papers/p4/practice-notes.md"
+    ]
+  },
+  "T40": {
+    "allow": [
+      "pipeline/thresholds/**",
+      "corpus/thresholds/**"
+    ]
+  },
+  "T41": {
+    "allow": [
+      "pipeline/mock/**"
+    ]
   }
 }

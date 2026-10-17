@@ -198,3 +198,21 @@ D35：与同季 _31 卷逐字相同的 119 行（T12e 正在补 equivalent_of）
 D39 的 P3 部分：papers/p3/tagging-guide.md §7 加“同票时主题型取题干 / MS 中先出现的那项、其余进 cross、标 low”的判例规则（例 9618_s21_31:3(a)）；§8.2 B 写明“MS 只给填空答案片段时，按 QP 留空行逐行对应拆分，text 取 MS 片段”（例 9618_s22_32:8(a)）；papers/p3/taxonomy.json 的 P3-DR-02 summary 与 DR-04 分界统一（给记录字段赋值含赋枚举值归 DR-04）。只改措辞，不动 rows。
 产出 papers/p2/audit/T26-fixes.md（F 编号 → 文件与行 → 改动摘要；error 附改后原文片段；末尾列 D39 三处改动），重跑 papers/p2/audit/check_handbook.py 与 run_python.py 并记录结果。只改 tasks/scope.json 里 T26d 允许的路径与 tasks/progress/T26d.md。交付：git fetch origin && git rebase origin/main → make check → make build → make check-scope TASK=T26d → push → gh pr create --base main --title "T26d: fix P2 handbook per audit"。不要合并 PR。停下前更新 tasks/progress/T26d.md 并提交。
 ```
+
+## codex-1 · T40 分数线表（新开 Codex 会话）
+
+```
+你是执行工位 codex-1，负责任务 T40：把 10 份官方分数线 PDF（sources/pastpapers/9618_<季><yy>_gt.pdf，s21–w25）抽成机器可读表，供冲刺阶段按分数线估分。
+先读 AGENTS.md、tasks/T40-grade-thresholds.md（任务卡：产出、规则、完成标准，严格照做）。PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/（只读，不提交）。
+从最新 origin/main 开分支 task/T40-grade-thresholds。产出 pipeline/thresholds/extract_gt.py 与 test_gt.py，corpus/thresholds/components.csv、options.csv（utf-8-sig）、README.md（字段、学生四卷对应的 option、加权方式——以 PDF 或考纲原文为准，查不到写“不确定”）、check_report.md（人工抽查 20 格带页码）。数值照 PDF 原样，异常照录。
+只改 tasks/scope.json 里 T40 允许的路径与 tasks/progress/T40.md。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T40 → python3 -m pytest pipeline/thresholds → push → gh pr create --base main --title "T40: grade threshold tables"。不要合并 PR。停下前更新 tasks/progress/T40.md 并提交。
+```
+
+## codex-2 · T41 整卷模考批改包（新开 Codex 会话）
+
+```
+你是执行工位 codex-2，负责任务 T41：写整卷模考批改包生成器。D1 把 2026 年 6 月的 12 份卷留作考前限时模考；学生做完一份后要能照着批改包自己批改、汇总原始分、按分数线估等级。
+先读 AGENTS.md（§5：给分只认该题自己的 MS，ER 只作易错）、docs/DECISIONS.md（D1、D33）、tasks/T41-mock-kit.md（任务卡：产出、规则、完成标准，严格照做）、schemas/row.schema.json、corpus/inventory.csv。分数线表 corpus/thresholds/ 由 codex-1 的 T40 同时在做；它合并前估分部分用占位并在 PR 注明，合并后 rebase 接上。
+从最新 origin/main 开分支 task/T41-mock-kit。产出 pipeline/mock/make_mock.py（生成 output/mock/<卷 id>/ 的 marking.md、marking.html、score.csv；output/ 不入库）、score_mock.py（汇总、按题型/技能统计失分、估等级、输出可贴进学习记录的摘要）、test_mock.py、README.md。不复制题干（学生看原卷），不显示代表题答案；ER 摘录明确标“仅供易错参考，不是给分依据”。需要 make mock 目标时写进「需要总控决定」，不要改 Makefile。
+只改 tasks/scope.json 里 T41 允许的路径与 tasks/progress/T41.md。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T41 → python3 -m pytest pipeline/mock → push → gh pr create --base main --title "T41: mock exam marking kit"。PR 里贴一份 marking.md 开头片段与 12 份 s26 卷的生成清单。不要合并 PR。停下前更新 tasks/progress/T41.md 并提交。
+```

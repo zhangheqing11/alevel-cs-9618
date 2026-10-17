@@ -20,8 +20,8 @@
 | T24 | P1 全量打标签 | codex-1 | T20 ✅ | ✅ | #14 |
 | T26a | 审计 P1 题型手册（13 条：error 10 / warn 3） | codex-1 | T22 ✅ | ✅ | #34 |
 | T26b | 审计 P2 题型手册（13 条：error 3 / warn 10） | codex-2 | T23 ✅ | ✅ | #35 |
-| T26c | 按审计修正 P1 手册（D40） | codex-1 | T26a ✅ | 🔨 | `task/T26c-p1-fixes` |
-| T26d | 按审计修正 P2 手册 + P3 指南措辞（D40、D39） | codex-2 | T26b ✅ | 🔨 | `task/T26d-p2-fixes` |
+| T26c | 按审计修正 P1 手册（D40） | codex-1 | T26a ✅ | 👀 | #36 |
+| T26d | 按审计修正 P2 手册 + P3 指南措辞（D40、D39） | codex-2 | T26b ✅ | 👀 | #37 |
 | T25 | P2 练习文件夹（批 1 PG ✅ #24 / 批 2 DT ✅ #30 / 批 3 AD ✅ #33；共 126 道） | codex-2 | T28 ✅ | ✅ | #24 #30 #33 |
 | T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
 | T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | ✅ | #28 |
@@ -30,5 +30,8 @@
 | T30 | P3 题型体系 + 打标签指南 + 试标（9 章 79 型） | cc-F · Opus 5.5 high | T12 P3 ✅ | ✅ | #27 |
 | T12e | P3 重复行补 `equivalent_of`（D35） | codex-1 | T30 ✅ | ✅ | #31 |
 | T31 | P3 全量打标签 + 拆得分点（跨模型盲标一致 100%） | codex-1 | T30 ✅ | ✅ | #32 |
-| T32 | P3 题型卡 + 核心概念表 | cc · Opus | T31 ✅ | ⏳ | — |
+| T32 | P3 题型卡 + 核心概念表（批 A DR/CI/HV/BL + front · 批 B SY/SC/AI · 批 C CT/FP + back，并行） | cc-H / cc-I / cc-J · Opus 5.5 high | T31 ✅ | 🔨 | `task/T32{A,B,C}-p3-cards` |
+| T33 | P4 题型体系 + 技能标签 + 指南 + 试标 + 练习约定草案 | cc-K · Opus 5.5 high | T12 P4 ✅ | 🔨 | `task/T33-p4-taxonomy` |
+| T40 | 分数线表（10 季 component / option） | codex-1 | — | 🔨 | `task/T40-grade-thresholds` |
+| T41 | 整卷模考批改包生成器（s26 + 估分） | codex-2 | T40（估分部分） | 🔨 | `task/T41-mock-kit` |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
