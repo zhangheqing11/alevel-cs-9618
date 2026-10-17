@@ -38,7 +38,6 @@ A teacher is designing a program to process pseudocode projects written by her s
                             "FUNCTION Zap(X : INTEGER) RETURNS CHAR"
                             Header()returns the string:
                             "FZap(X : INTEGER) RETURNS CHAR"
-,                                 ,
 A new module is required:
                 Module                                Description
          FindModules()      •   called with a parameter of type string representing a student
@@ -52,7 +51,6 @@ A new module is required:
         ModInfo[11, x]    "35"    "F"     "MyFun(Y : CHAR) RETURNS BOOLEAN"
         Write pseudocode for module FindModules().
         Assume that the array contains enough rows for the number of modules in each project.
-,                                 ,
 ```
 
 ## Python 接口
@@ -68,7 +66,7 @@ A new module is required:
 
 ## 人工核对清单
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Open file in READ mode and subsequently close
 - [ ] MP2：Loop to EOF(FileName)

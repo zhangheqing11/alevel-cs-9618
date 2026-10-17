@@ -1,0 +1,30 @@
+{
+  "id": "9618_w24_21:6(b)",
+  "kind": "past-paper",
+  "title": "计算不考虑闰年的使用期限",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:6(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-05",
+    "P2-PG-12"
+  ],
+  "skills": [
+    "array-index",
+    "data-types",
+    "date-functions",
+    "declare-variables",
+    "nested-if",
+    "operator-precedence",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GetDate"
+}

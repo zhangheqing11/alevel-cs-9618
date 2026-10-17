@@ -1,0 +1,5 @@
+// Loan : global ARRAY[1:7000] of the given loan record.
+
+PROCEDURE CountLoans(ThisStudentID : STRING)
+
+ENDPROCEDURE

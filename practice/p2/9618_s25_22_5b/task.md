@@ -54,7 +54,7 @@ At the end of each sequence of pictures, the time is saved as a string in the fo
 
 本题 MS 总分上限 8 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Any Initialisation of count for number of pictures taken each hour
 - [ ] MP2：Open "TimeTaken.txt" for read and subsequently close

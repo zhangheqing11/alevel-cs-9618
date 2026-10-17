@@ -1,4 +1,4 @@
-# 9618_s22_21:8(b) MP2: loop-bounds
+# 9618_s22_21:8(b) MP2: linear-search
 # Provided: STRING ARRAY[1:500,1:2]; Python row/column = QP index - 1.
 Secret = [['',''] for _ in range(499)]
 def Encrypt(Password):

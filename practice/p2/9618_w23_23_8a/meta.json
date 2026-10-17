@@ -1,0 +1,28 @@
+{
+  "id": "9618_w23_23:8(a)",
+  "kind": "past-paper",
+  "title": "接收文本数据并写入文件",
+  "source": {
+    "paper": "9618_w23_23",
+    "rows": [
+      "9618_w23_23:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-10"
+  ],
+  "skills": [
+    "accumulator",
+    "file-close",
+    "file-write",
+    "output-format",
+    "procedure-call",
+    "sentinel-loop",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "ReceiveFile"
+}

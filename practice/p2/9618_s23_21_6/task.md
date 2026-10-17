@@ -32,15 +32,6 @@ A video-conferencing program supports up to six users. Speech from each user is 
     Write pseudocode for procedure Mix().
     Assume Sample and Result are global.
 
-QP diagram (columns 1,2,3,...,126,127,128):
-Sample rows:
-20 20 20 ... 30 30 2
-20 20 30 ... 50 30 3
-20 20 40 ... 40 40 4
-20 20 50 ... 40 50 20
-20 3 5 ... 6 60 4
-20 4 2 ... 4 70 30
-Result: 20 20 35 ... 40 46 25
 ```
 
 ## Python 接口
@@ -53,7 +44,7 @@ Result: 20 20 35 ... 40 46 25
 
 本题 MS 总分上限 6 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Declaration and initialisation before inner loop of Count and Total
 - [ ] MP2：Outer Loop for 128 iterations

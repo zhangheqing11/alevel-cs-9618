@@ -1,0 +1,1276 @@
+{
+  "batch": 2,
+  "selection": "markpoints present; 2022–25; non-extension; primary P2-DT-*",
+  "merged_rows": [],
+  "skipped_eligible_rows": [],
+  "count": 53,
+  "paper_count": 23,
+  "marks": 352,
+  "exercises": [
+    {
+      "directory": "9618_s22_21_8b",
+      "id": "9618_s22_21:8(b)",
+      "primary": "P2-DT-06",
+      "qp_page": 16,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s22_22_4a",
+      "id": "9618_s22_22:4(a)",
+      "primary": "P2-DT-09",
+      "qp_page": 6,
+      "ms_page": 6,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "sample.txt",
+          "bytes": 25,
+          "final_newline": false,
+          "sha256": "2b7d36e0066223fac14ca86edd9fa468a4352c6a138b0238e563880956c9e5b4"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s22_22_8b",
+      "id": "9618_s22_22:8(b)",
+      "primary": "P2-DT-06",
+      "qp_page": 16,
+      "ms_page": 13,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s22_23_5ai",
+      "id": "9618_s22_23:5(a)(i)",
+      "primary": "P2-DT-02",
+      "qp_page": 6,
+      "ms_page": 5,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s22_23_5c",
+      "id": "9618_s22_23:5(c)",
+      "primary": "P2-DT-07",
+      "qp_page": 7,
+      "ms_page": 6,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s22_23_9b",
+      "id": "9618_s22_23:9(b)",
+      "primary": "P2-DT-06",
+      "qp_page": 16,
+      "ms_page": 11,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s23_21_6",
+      "id": "9618_s23_21:6",
+      "primary": "P2-DT-06",
+      "qp_page": 10,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s23_21_8b",
+      "id": "9618_s23_21:8(b)",
+      "primary": "P2-DT-09",
+      "qp_page": 16,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "Stock.txt",
+          "bytes": 77,
+          "final_newline": false,
+          "sha256": "70f58cf119b5290bb0d39d9c863160a4c2aa1658fd11a4eeb3a7924ab46b4654"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s23_22_8b",
+      "id": "9618_s23_22:8(b)",
+      "primary": "P2-DT-10",
+      "qp_page": 18,
+      "ms_page": 12,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "Stock.txt",
+          "bytes": 48,
+          "final_newline": false,
+          "sha256": "86acecd03d2ca613d7c9841e8e9baae13e1cbec6dcaad1e9e929833b5f426229"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s23_23_8a",
+      "id": "9618_s23_23:8(a)",
+      "primary": "P2-DT-10",
+      "qp_page": 15,
+      "ms_page": 8,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "Stock.txt",
+          "bytes": 78,
+          "final_newline": true,
+          "sha256": "fec088b0fd7af3e78f005377c2c928e69493bdfb9defe34545ae6aefab60610a"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s23_23_8b",
+      "id": "9618_s23_23:8(b)",
+      "primary": "P2-DT-09",
+      "qp_page": 16,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "Stock.txt",
+          "bytes": 86,
+          "final_newline": true,
+          "sha256": "0577273114a5e39d34a8f6a1e1d6e3cfda3c959690311e5a1ab510ff8c286175"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s24_21_4",
+      "id": "9618_s24_21:4",
+      "primary": "P2-DT-05",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s24_21_8b",
+      "id": "9618_s24_21:8(b)",
+      "primary": "P2-DT-10",
+      "qp_page": 20,
+      "ms_page": 12,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "MichaelAday_src.txt",
+          "bytes": 51,
+          "final_newline": false,
+          "sha256": "c062e4177f39f9d075ac431fd84df69d0f4d2d3366064faacea9f6686abef160"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s24_22_3ai",
+      "id": "9618_s24_22:3(a)(i)",
+      "primary": "P2-DT-02",
+      "qp_page": 7,
+      "ms_page": 6,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s24_22_8c",
+      "id": "9618_s24_22:8(c)",
+      "primary": "P2-DT-10",
+      "qp_page": 20,
+      "ms_page": 12,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "input.txt",
+          "bytes": 45,
+          "final_newline": true,
+          "sha256": "cb4afb0c7de839251d7c3210568bbda9c53869231eda430aab7bb4fcf62867b8"
+        },
+        {
+          "name": "output.txt",
+          "bytes": 14,
+          "final_newline": true,
+          "sha256": "22bf75015643eea8272a1c65a2a6ccfbe39c898baaf4f5891294e4e1b1dd724d"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s24_23_8b",
+      "id": "9618_s24_23:8(b)",
+      "primary": "P2-DT-09",
+      "qp_page": 20,
+      "ms_page": 13,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "project.txt",
+          "bytes": 89,
+          "final_newline": false,
+          "sha256": "bd877ddc07b2769be148720457e7eb4621fc532a4cc87ae361f29a7ef92f72bf"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s25_21_6b",
+      "id": "9618_s25_21:6(b)",
+      "primary": "P2-DT-08",
+      "qp_page": 12,
+      "ms_page": 11,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s25_21_7bi",
+      "id": "9618_s25_21:7(b)(i)",
+      "primary": "P2-DT-10",
+      "qp_page": 16,
+      "ms_page": 13,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "Loyalty.txt",
+          "bytes": 18,
+          "final_newline": true,
+          "sha256": "5e98a1ab5327bc126e7d70ab7609a1579ce6e5634f4a91701a22ea5a7e4be513"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s25_22_5b",
+      "id": "9618_s25_22:5(b)",
+      "primary": "P2-DT-09",
+      "qp_page": 10,
+      "ms_page": 12,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "TimeTaken.txt",
+          "bytes": 27,
+          "final_newline": false,
+          "sha256": "3f74288b1302d1e1eb6dab58c4049e52d471d39dccc5c0ea9fee07b9aa99b3a6"
+        }
+      ]
+    },
+    {
+      "directory": "9618_s25_22_7a",
+      "id": "9618_s25_22:7(a)",
+      "primary": "P2-DT-06",
+      "qp_page": 15,
+      "ms_page": 16,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_s25_22_7b",
+      "id": "9618_s25_22:7(b)",
+      "primary": "P2-DT-06",
+      "qp_page": 16,
+      "ms_page": 19,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w22_21_5",
+      "id": "9618_w22_21:5",
+      "primary": "P2-DT-05",
+      "qp_page": 8,
+      "ms_page": 6,
+      "marks": 5,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w22_21_8a",
+      "id": "9618_w22_21:8(a)",
+      "primary": "P2-DT-09",
+      "qp_page": 14,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "project.txt",
+          "bytes": 89,
+          "final_newline": false,
+          "sha256": "433591694ae6f9ac3812789705fe15d5e6716e2dd2fe12145cd7668fac8efe3a"
+        }
+      ]
+    },
+    {
+      "directory": "9618_w22_21_8c",
+      "id": "9618_w22_21:8(c)",
+      "primary": "P2-DT-09",
+      "qp_page": 16,
+      "ms_page": 10,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "project.txt",
+          "bytes": 92,
+          "final_newline": false,
+          "sha256": "a39d235e2abb42e642fbf9ae79ab5b2fee17d229976571aeb3cfc125ba732fff"
+        }
+      ]
+    },
+    {
+      "directory": "9618_w22_22_7a",
+      "id": "9618_w22_22:7(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 17,
+      "ms_page": 11,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w22_22_7b",
+      "id": "9618_w22_22:7(b)",
+      "primary": "P2-DT-08",
+      "qp_page": 18,
+      "ms_page": 12,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w22_23_7a",
+      "id": "9618_w22_23:7(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 13,
+      "ms_page": 8,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w22_23_7bi",
+      "id": "9618_w22_23:7(b)(i)",
+      "primary": "P2-DT-05",
+      "qp_page": 16,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w23_21_4a",
+      "id": "9618_w23_21:4(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 6,
+      "ms_page": 6,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w23_21_8a",
+      "id": "9618_w23_21:8(a)",
+      "primary": "P2-DT-09",
+      "qp_page": 15,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "message.txt",
+          "bytes": 21,
+          "final_newline": false,
+          "sha256": "9abde969a4fb1fd142743484f67d2f81b53c65a4d34df9c28d48574f5c24118f"
+        }
+      ]
+    },
+    {
+      "directory": "9618_w23_22_6a",
+      "id": "9618_w23_22:6(a)",
+      "primary": "P2-DT-10",
+      "qp_page": 12,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w23_22_8a",
+      "id": "9618_w23_22:8(a)",
+      "primary": "P2-DT-06",
+      "qp_page": 17,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w23_23_8a",
+      "id": "9618_w23_23:8(a)",
+      "primary": "P2-DT-10",
+      "qp_page": 17,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_21_6b",
+      "id": "9618_w24_21:6(b)",
+      "primary": "P2-DT-05",
+      "qp_page": 13,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_21_8a",
+      "id": "9618_w24_21:8(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 17,
+      "ms_page": 12,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_21_8b",
+      "id": "9618_w24_21:8(b)",
+      "primary": "P2-DT-10",
+      "qp_page": 18,
+      "ms_page": 13,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_22_6a",
+      "id": "9618_w24_22:6(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 13,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_22_8a",
+      "id": "9618_w24_22:8(a)",
+      "primary": "P2-DT-07",
+      "qp_page": 19,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_22_8b",
+      "id": "9618_w24_22:8(b)",
+      "primary": "P2-DT-10",
+      "qp_page": 20,
+      "ms_page": 12,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_23_3b",
+      "id": "9618_w24_23:3(b)",
+      "primary": "P2-DT-16",
+      "qp_page": 5,
+      "ms_page": 6,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_23_4bii",
+      "id": "9618_w24_23:4(b)(ii)",
+      "primary": "P2-DT-05",
+      "qp_page": 9,
+      "ms_page": 8,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_23_8a",
+      "id": "9618_w24_23:8(a)",
+      "primary": "P2-DT-07",
+      "qp_page": 15,
+      "ms_page": 13,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w24_23_8b",
+      "id": "9618_w24_23:8(b)",
+      "primary": "P2-DT-09",
+      "qp_page": 16,
+      "ms_page": 14,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": [
+        {
+          "name": "SaveFile.txt",
+          "bytes": 974,
+          "final_newline": false,
+          "sha256": "7a35c5175b7821b3ef164aece847282e36153bf6d223f5b126a855530234b63c"
+        }
+      ]
+    },
+    {
+      "directory": "9618_w25_21_3ai",
+      "id": "9618_w25_21:3(a)(i)",
+      "primary": "P2-DT-02",
+      "qp_page": 5,
+      "ms_page": 9,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_21_4a",
+      "id": "9618_w25_21:4(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 6,
+      "ms_page": 10,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_21_8a",
+      "id": "9618_w25_21:8(a)",
+      "primary": "P2-DT-07",
+      "qp_page": 15,
+      "ms_page": 17,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_21_8b",
+      "id": "9618_w25_21:8(b)",
+      "primary": "P2-DT-07",
+      "qp_page": 16,
+      "ms_page": 18,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_22_4a",
+      "id": "9618_w25_22:4(a)",
+      "primary": "P2-DT-05",
+      "qp_page": 6,
+      "ms_page": 9,
+      "marks": 4,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_22_8a",
+      "id": "9618_w25_22:8(a)",
+      "primary": "P2-DT-07",
+      "qp_page": 15,
+      "ms_page": 13,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_22_8b",
+      "id": "9618_w25_22:8(b)",
+      "primary": "P2-DT-07",
+      "qp_page": 16,
+      "ms_page": 14,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_23_4",
+      "id": "9618_w25_23:4",
+      "primary": "P2-DT-05",
+      "qp_page": 8,
+      "ms_page": 8,
+      "marks": 6,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_23_8a",
+      "id": "9618_w25_23:8(a)",
+      "primary": "P2-DT-07",
+      "qp_page": 19,
+      "ms_page": 16,
+      "marks": 8,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    },
+    {
+      "directory": "9618_w25_23_8b",
+      "id": "9618_w25_23:8(b)",
+      "primary": "P2-DT-07",
+      "qp_page": 20,
+      "ms_page": 17,
+      "marks": 7,
+      "mutants": 2,
+      "qp_original_checked": true,
+      "ms_original_checked": true,
+      "files": []
+    }
+  ],
+  "qp_review": {
+    "9618_s22_21": {
+      "file": "9618_s22_qp_21.pdf",
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "42d09857276a14e4b686b6af8923c95d0c549b50015a06076f7e00b233d4b39c"
+    },
+    "9618_s22_22": {
+      "file": "9618_s22_qp_22.pdf",
+      "pages": [
+        6,
+        7,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "243ad7a823b1c9ffe7a2919e710bf81c741ed1e8f44f0d015d064a06372112f6"
+    },
+    "9618_s22_23": {
+      "file": "9618_s22_qp_23.pdf",
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "c7abd80697726182b48e73e1f76a6028ed0fdd3e7cf59ab384c007acfe51285f"
+    },
+    "9618_s23_21": {
+      "file": "9618_s23_qp_21.pdf",
+      "pages": [
+        10,
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "ec3ce014e637b1bba40235dbcd807e7749ed80d0cc816c7862483a484b516d5e"
+    },
+    "9618_s23_22": {
+      "file": "9618_s23_qp_22.pdf",
+      "pages": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "41216c66a226bd48b6125b966c2d348a4d8cd55399d38f45d810653a949d1ce8"
+    },
+    "9618_s23_23": {
+      "file": "9618_s23_qp_23.pdf",
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "138f8a69b1464cced192f707eeb5edf3cc19fe5cc2dfe131dcc82cc3a3f0fef6"
+    },
+    "9618_s24_21": {
+      "file": "9618_s24_qp_21.pdf",
+      "pages": [
+        8,
+        9,
+        18,
+        19,
+        20,
+        21
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "cea30586678603abd65487305af0ea516766653a33acb8abb5f7c9f8619aa091"
+    },
+    "9618_s24_22": {
+      "file": "9618_s24_qp_22.pdf",
+      "pages": [
+        6,
+        7,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "2a454e3660ac7d44569a829e3039acdd32204216385d645a370f1c00a7714c46"
+    },
+    "9618_s24_23": {
+      "file": "9618_s24_qp_23.pdf",
+      "pages": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "1824d4b34caf0bd2e9bb3ffb71eebca3f2e78ad5c131a8a6462fe71ad0114bc6"
+    },
+    "9618_s25_21": {
+      "file": "9618_s25_qp_21.pdf",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "bdc294eb8a519647f24d2fc53053504a0a03c164625c043397a6533ddb09e5b7"
+    },
+    "9618_s25_22": {
+      "file": "9618_s25_qp_22.pdf",
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "d0888a6c10be5f3ad806b71e98de7586274fe1aeb801aa4b82059f06de6e857c"
+    },
+    "9618_w22_21": {
+      "file": "9618_w22_qp_21.pdf",
+      "pages": [
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "6b9620485c70f8bf107fc7c9ea13b5954cd553c3d5408b3a64f8bc69db32fa7e"
+    },
+    "9618_w22_22": {
+      "file": "9618_w22_qp_22.pdf",
+      "pages": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "93bdce2d34e77a3e0f1e66426103320e15cc632c7ab4cee5707105132b4efd7e"
+    },
+    "9618_w22_23": {
+      "file": "9618_w22_qp_23.pdf",
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "7edce92046651b7f5a8b0d411254dc63c3dae372cfd4deb378933d0ca4e20adf"
+    },
+    "9618_w23_21": {
+      "file": "9618_w23_qp_21.pdf",
+      "pages": [
+        5,
+        6,
+        7,
+        14,
+        15,
+        16
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "334b77e019343ba5e4544330d5e0b3e767309c1688253a93af5d5c095aa80342"
+    },
+    "9618_w23_22": {
+      "file": "9618_w23_qp_22.pdf",
+      "pages": [
+        12,
+        13,
+        16,
+        17,
+        18
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "8e46de8183ecf792adf5dd86a42d8868952822bb56d349918b594a08d720f5f4"
+    },
+    "9618_w23_23": {
+      "file": "9618_w23_qp_23.pdf",
+      "pages": [
+        16,
+        17,
+        18
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "f458eade75457917ff50ea76156ffcb5fd4773d04a4cf5684f32768d13f7611d"
+    },
+    "9618_w24_21": {
+      "file": "9618_w24_qp_21.pdf",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "75d0f339acc8e6cb226cf6d4831a7c3fb454d24402cfcac308b25150a8e665dc"
+    },
+    "9618_w24_22": {
+      "file": "9618_w24_qp_22.pdf",
+      "pages": [
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "23df306798f666dc38c29fe896027b4193ba57e0db15ad9681f2680ae4897902"
+    },
+    "9618_w24_23": {
+      "file": "9618_w24_qp_23.pdf",
+      "pages": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "43a2a12ba0040fc7631e54ddc8fb7e3e35632db25fd416e0162fc2350c9b96cf"
+    },
+    "9618_w25_21": {
+      "file": "9618_w25_qp_21.pdf",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "6b85b806813779906ba15c8c5ea7e039247702f8b44b2d6923df0423ca51741a"
+    },
+    "9618_w25_22": {
+      "file": "9618_w25_qp_22.pdf",
+      "pages": [
+        5,
+        6,
+        14,
+        15,
+        16,
+        17
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "02da3baced99f059667fc7619cca0e779db8ae369a250a1106b4c0aa55f0c4e8"
+    },
+    "9618_w25_23": {
+      "file": "9618_w25_qp_23.pdf",
+      "pages": [
+        8,
+        9,
+        18,
+        19,
+        20,
+        21
+      ],
+      "method": "QP original pages visually inspected; tables/examples transcribed, source PDF read-only",
+      "sha256": "7d4f54c316260a841949970ffbea217121b2e8f46ce86fe68d3584b45af35484"
+    }
+  },
+  "ms_review": {
+    "9618_s22_21": {
+      "file": "9618_s22_ms_21.pdf",
+      "pages": [
+        11
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "44b4fbd22c29b1a53e86211ffb0455bdfac185552de5d1967c0701e9f32bf50f"
+    },
+    "9618_s22_22": {
+      "file": "9618_s22_ms_22.pdf",
+      "pages": [
+        6,
+        13
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "367bcb288ebdbc698aa85c79faa768bc8e06ba0f2969709c2eaec3aa4430953f"
+    },
+    "9618_s22_23": {
+      "file": "9618_s22_ms_23.pdf",
+      "pages": [
+        5,
+        6,
+        11
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "15bedf6f00d733eb2401e1afa88e8e65b356291e912cf4a839d4b30a2a8a3192"
+    },
+    "9618_s23_21": {
+      "file": "9618_s23_ms_21.pdf",
+      "pages": [
+        7,
+        10
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "f6709d9da90d460b2192f133f1378928029c5431baf4cae26ce0f275c3b311e5"
+    },
+    "9618_s23_22": {
+      "file": "9618_s23_ms_22.pdf",
+      "pages": [
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "932fc08bedf23d5458a5eee2d5658be2fd03d67ca1cfd9f0da862c0d2f1570db"
+    },
+    "9618_s23_23": {
+      "file": "9618_s23_ms_23.pdf",
+      "pages": [
+        8,
+        9
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "72a96c391f424f230696bb1df31c4d3f16d5cf096d3c49dd5b72bf03dd3a6194"
+    },
+    "9618_s24_21": {
+      "file": "9618_s24_ms_21.pdf",
+      "pages": [
+        7,
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "372460c1d37896d8902ebe57fe083c65443f7782e214e366a6e554eadb6c9fd1"
+    },
+    "9618_s24_22": {
+      "file": "9618_s24_ms_22.pdf",
+      "pages": [
+        6,
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "901cb6ebf4cafc157e39b55f5e764081d9d30384b0ae8f9d3ea5f795cf475d9d"
+    },
+    "9618_s24_23": {
+      "file": "9618_s24_ms_23.pdf",
+      "pages": [
+        13
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "f9160abbea97946befffc4b59c9caa5c871f8b5fc93a7cb68013f310af6c8893"
+    },
+    "9618_s25_21": {
+      "file": "9618_s25_ms_21.pdf",
+      "pages": [
+        11,
+        13
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "cc0ce7f995d039ebed35955a41a87d3d09f6e25470afcf0868f8af897ac9486b"
+    },
+    "9618_s25_22": {
+      "file": "9618_s25_ms_22.pdf",
+      "pages": [
+        12,
+        13,
+        16,
+        17,
+        18,
+        19
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "1a983412767fb5130f36d7b3ddc317384174833647aec1d75a24c41b7bf10715"
+    },
+    "9618_w22_21": {
+      "file": "9618_w22_ms_21.pdf",
+      "pages": [
+        6,
+        9,
+        10
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "01b81fca08971be3f037469849f9f6524d451f73353e587c997f1854dc4e77ad"
+    },
+    "9618_w22_22": {
+      "file": "9618_w22_ms_22.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "f512c37fc1b209841469fcd1a6a3ac37df8af47f0c26a62b86155973060bb27c"
+    },
+    "9618_w22_23": {
+      "file": "9618_w22_ms_23.pdf",
+      "pages": [
+        8,
+        9
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "4c082ac6575485e6b9876f6e0bbf9efb403079356fe532afdfa1914795c4dcc5"
+    },
+    "9618_w23_21": {
+      "file": "9618_w23_ms_21.pdf",
+      "pages": [
+        6,
+        9
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "00b25d38b13ccf7e1c07bcb681ccaab56b0e906ffd689b4d99c40c3d0c68bbe3"
+    },
+    "9618_w23_22": {
+      "file": "9618_w23_ms_22.pdf",
+      "pages": [
+        9,
+        11,
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "168281052448ad61bc0eb52cde0fa8e1714b450e08e9826abe80a8423b342a9a"
+    },
+    "9618_w23_23": {
+      "file": "9618_w23_ms_23.pdf",
+      "pages": [
+        10
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "bc0c24f75aac754933f9d57d2a75b94e4981ddaa2cd941ff7e6528c1c9960706"
+    },
+    "9618_w24_21": {
+      "file": "9618_w24_ms_21.pdf",
+      "pages": [
+        10,
+        12,
+        13
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "0c1ea5a48c249a4c02ab9e9d51ada6109881b219bb9454a7e53fd7bf36687551"
+    },
+    "9618_w24_22": {
+      "file": "9618_w24_ms_22.pdf",
+      "pages": [
+        9,
+        11,
+        12
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "ae619e0388fcae32fdf1a37b3c70c0beceac85426c50bd7692d08be8f4e27c74"
+    },
+    "9618_w24_23": {
+      "file": "9618_w24_ms_23.pdf",
+      "pages": [
+        6,
+        8,
+        9,
+        13,
+        14
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "40a5ba8794ae5c0816f60488deea097623fb2fe6cc989310e828aee8795bcbe8"
+    },
+    "9618_w25_21": {
+      "file": "9618_w25_ms_21.pdf",
+      "pages": [
+        9,
+        10,
+        17,
+        18
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "da487266bdaf79bdebcb2045ba923f46d90f01a9a8b21ed143d189fd34336501"
+    },
+    "9618_w25_22": {
+      "file": "9618_w25_ms_22.pdf",
+      "pages": [
+        9,
+        13,
+        14
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "1fef4ad8713f2424f09545464f1b31af5ee2ee1d9d38435f7487eea2d4278532"
+    },
+    "9618_w25_23": {
+      "file": "9618_w25_ms_23.pdf",
+      "pages": [
+        8,
+        16,
+        17
+      ],
+      "method": "Own same-session/year/variant MS original pages read; linked-list flowchart also inspected visually",
+      "sha256": "9e6101af01a65bfcd78cb1d999b3abddee3c0f17114d599808f5c630fd84a346"
+    }
+  }
+}

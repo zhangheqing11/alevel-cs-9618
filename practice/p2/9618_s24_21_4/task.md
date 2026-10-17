@@ -24,7 +24,7 @@ A global 1D array Data contains 100 elements of type integer.
 
 ## 人工核对清单
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Function heading, ending and return type
 - [ ] MP2：Declare local variables Odd, Even and Index as integers

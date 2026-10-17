@@ -1,0 +1,30 @@
+{
+  "id": "9618_w24_23:8(b)",
+  "kind": "past-paper",
+  "title": "从保存文件恢复角色记录",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-09",
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "file-close",
+    "file-open-read",
+    "loop-bounds",
+    "procedure-call",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [
+    "SaveFile.txt"
+  ],
+  "ms_verified": true,
+  "entry": "Restore"
+}

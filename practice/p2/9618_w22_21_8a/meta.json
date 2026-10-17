@@ -1,0 +1,34 @@
+{
+  "id": "9618_w22_21:8(a)",
+  "kind": "past-paper",
+  "title": "检查项目至少十个非空行",
+  "source": {
+    "paper": "9618_w22_21",
+    "rows": [
+      "9618_w22_21:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-09"
+  ],
+  "skills": [
+    "accumulator",
+    "boolean-return",
+    "data-types",
+    "declare-variables",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "initialise-variables",
+    "loop-to-eof",
+    "module-header",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [
+    "project.txt"
+  ],
+  "ms_verified": true,
+  "entry": "CheckFile"
+}

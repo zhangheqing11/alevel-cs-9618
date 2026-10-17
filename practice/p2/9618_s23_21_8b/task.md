@@ -43,7 +43,7 @@ A new module has been defined:
 
 ## Python 接口
 
-入口：`CheckNewItem(NewLine)`。参数保证符合 QP 格式；Stock.txt 升序、货号唯一。只返回 bool，不输出、不改文件。QP 没有限定文件至少几行，故包括空文件与单行。按升序可以在读到大于目标的货号时停止。MS MP5 原文中的 < 是范例继续循环的比较方向；行为测试按 QP 升序查找，不把范例文字误作提前失败条件。禁止内置查找替代。
+入口：`CheckNewItem(NewLine)`。参数保证符合 QP 格式；Stock.txt 升序、货号唯一。只返回 bool，不输出、不改文件。QP 没有限定文件至少几行，故包括空文件与单行。按升序可以在读到大于目标的货号时停止。MS MP5 原文写 ... OR when ThisItemNum < NewItemNum，但 MS 范例将 < 用作继续条件，两处文字不一致；行为按 QP 升序查找，人工清单保留 MP5 原文，交总控确认人工解释。禁止内置查找替代。
 
 骨架 provided 部分是题目给定的类型、全局量或已有模块，不属于本小问作答。题目没有指定参数名字时采用本题 MS 名字；无命名算法的 Python 入口 main 仅为测试包装。
 
@@ -56,7 +56,7 @@ A new module has been defined:
 
 本题 MS 总分上限 7 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Open Stock.txt in READ mode and subsequently close
 - [ ] MP2：Extract NewItemNum from parameter

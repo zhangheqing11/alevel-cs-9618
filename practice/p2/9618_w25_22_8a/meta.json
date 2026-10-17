@@ -1,0 +1,29 @@
+{
+  "id": "9618_w25_22:8(a)",
+  "kind": "past-paper",
+  "title": "分别统计在借和已还图书",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-records",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "nested-if",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CountLoans"
+}

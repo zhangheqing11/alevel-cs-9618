@@ -1,0 +1,26 @@
+{
+  "id": "9618_w24_23:4(b)(ii)",
+  "kind": "past-paper",
+  "title": "建立等级复核布尔查表数组",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:4(b)(ii)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "nested-loops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GBInitialise"
+}

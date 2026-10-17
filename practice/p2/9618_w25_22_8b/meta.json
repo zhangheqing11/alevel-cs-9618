@@ -1,0 +1,26 @@
+{
+  "id": "9618_w25_22:8(b)",
+  "kind": "past-paper",
+  "title": "向第一个空借阅记录登记",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "boolean-return",
+    "linear-search",
+    "loop-bounds",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "NewLoan"
+}

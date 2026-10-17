@@ -1,0 +1,5 @@
+// Result : global INTEGER 2D array; sufficient rows, columns 1:2.
+
+PROCEDURE CheckAll(CNum : INTEGER)
+
+ENDPROCEDURE

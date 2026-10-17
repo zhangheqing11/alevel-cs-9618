@@ -1,4 +1,4 @@
-# 9618_s23_21:6 MP4: boundary-values
+# 9618_s23_21:6 MP4: relational-ops
 # Provided global arrays: Python row/column = QP index - 1.
 Sample=[[0]*128 for _ in range(6)]
 Result=[0]*128

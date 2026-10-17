@@ -51,7 +51,7 @@ A customer can claim a free coffee for every 11 loyalty points.
 
 本题 MS 总分上限 7 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Create procedure header and ending
 - [ ] MP2：Declare and initialise Index, Sum and Count

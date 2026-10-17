@@ -1,4 +1,4 @@
-# 9618_s23_21:8(b) MP7: return-value
+# 9618_s23_21:8(b) MP8: boolean-return
 def CheckNewItem(NewLine):
     NewItemNum=NewLine[:4]
     with open('Stock.txt',encoding='utf-8') as Handle:

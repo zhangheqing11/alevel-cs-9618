@@ -37,7 +37,7 @@ Each sensor used in the system has a unique sensor ID number in the range 1 to 5
 
 本题 MS 总分上限 8 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Procedure heading and ending
 - [ ] MP2：Conditional loop correctly formed including Boolean flag declared and initialised

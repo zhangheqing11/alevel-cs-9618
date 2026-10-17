@@ -1,4 +1,4 @@
-# 9618_s23_22:8(b) MP5: set-flag
+# 9618_s23_22:8(b) MP5: flag-variable
 def AddItem(NewLine):
     Added=False
     with open('Stock.txt',encoding='utf-8') as Source,open('NewStock.txt','w',encoding='utf-8') as Target:

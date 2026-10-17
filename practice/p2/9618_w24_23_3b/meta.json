@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_23:3(b)",
+  "kind": "past-paper",
+  "title": "初始化链表节点的后继指针",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:3(b)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-DT-16",
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-index",
+    "array-of-records",
+    "count-loop",
+    "initialise-variables",
+    "linked-list",
+    "loop-bounds"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

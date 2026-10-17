@@ -27,7 +27,7 @@ Write pseudocode to declare the record structure for type Employee.
 
 ## 人工核对清单
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：TYPE Employee and ENDTYPE
 - [ ] MP2：Fields: EmployeeNumber and Name and Department

@@ -1,9 +1,14 @@
 def main():
-    HoursArray=[0]*24
     with open('TimeTaken.txt',encoding='utf-8') as Handle:
+        Line=Handle.readline()
+        Hour=Line[:2]
+        Count=1
         for Line in Handle:
-            Hour=int(Line[:2])
-            HoursArray[Hour]+=1
-    for Hour in range(24):
-        if HoursArray[Hour]!=0:
-            print('Hour : '+str(Hour)+'  Total : '+str(HoursArray[Hour]))
+            NextHour=Line[:2]
+            if NextHour==Hour:
+                Count+=1
+            else:
+                print('Hour : '+Hour+'  Total : '+str(Count))
+                Hour=NextHour
+                Count=1
+        print('Hour : '+Hour+'  Total : '+str(Count))

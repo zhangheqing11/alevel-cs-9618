@@ -1,4 +1,4 @@
-# 9618_s23_23:8(b) MP4: string-extract
+# 9618_s23_23:8(b) MP3: field-extract
 def Report_1(Supp):
     Count=0
     print('Report for Supplier: '+Supp)

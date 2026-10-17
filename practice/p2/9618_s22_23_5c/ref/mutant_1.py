@@ -1,4 +1,4 @@
-# 9618_s22_23:5(c) MP4: boundary-values
+# 9618_s22_23:5(c) MP4: relational-ops
 from datetime import date
 # Provided record type; defaults here represent unused fixture records.
 class Employee:

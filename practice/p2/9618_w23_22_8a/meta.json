@@ -1,0 +1,29 @@
+{
+  "id": "9618_w23_22:8(a)",
+  "kind": "past-paper",
+  "title": "从路由范围表寻找端口",
+  "source": {
+    "paper": "9618_w23_22",
+    "rows": [
+      "9618_w23_22:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "linear-search",
+    "logic-ops",
+    "module-header",
+    "pre-condition-loop",
+    "relational-ops",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GetPort"
+}

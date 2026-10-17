@@ -1,0 +1,29 @@
+{
+  "id": "9618_w22_22:7(a)",
+  "kind": "past-paper",
+  "title": "输出对应的语法错误描述",
+  "source": {
+    "paper": "9618_w22_22",
+    "rows": [
+      "9618_w22_22:7(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "linear-search",
+    "logic-ops",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "pre-condition-loop",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "OutputError"
+}

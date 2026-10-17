@@ -1,4 +1,4 @@
-# 9618_s23_23:8(a) MP5: string-extract
+# 9618_s23_23:8(a) MP3: field-extract
 def ChangeSupp(Code1,Code2):
     Count=0
     with open('Stock.txt',encoding='utf-8') as Source,open('NewStock.txt','w',encoding='utf-8') as Target:

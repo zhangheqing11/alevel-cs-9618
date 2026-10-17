@@ -1,0 +1,5 @@
+// DECLARE DaysInMonth : ARRAY[1:12] OF INTEGER
+
+FUNCTION GetDate(ProductionDate : DATE, ShelfLife : INTEGER) RETURNS DATE
+
+ENDFUNCTION

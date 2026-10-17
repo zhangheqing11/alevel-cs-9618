@@ -1,4 +1,4 @@
-# 9618_s25_22:7(a) MP4: loop-bounds
+# 9618_s25_22:7(a) MP3: array-2d
 # Provided global INTEGER ARRAY[1:1000,1:2]; Python indices = QP - 1.
 Loyalty=[[99999,0] for _ in range(1000)]
 

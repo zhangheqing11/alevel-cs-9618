@@ -1,0 +1,28 @@
+{
+  "id": "9618_w22_21:5",
+  "kind": "past-paper",
+  "title": "将每组三个采样压缩成平均值",
+  "source": {
+    "paper": "9618_w22_21",
+    "rows": [
+      "9618_w22_21:5"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "declare-variables",
+    "loop-bounds",
+    "module-header",
+    "operator-precedence",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Summarise"
+}

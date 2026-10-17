@@ -1,0 +1,32 @@
+{
+  "id": "9618_w22_23:7(a)",
+  "kind": "past-paper",
+  "title": "输出错误号范围及缺失描述警告",
+  "source": {
+    "paper": "9618_w22_23",
+    "rows": [
+      "9618_w22_23:7(a)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "input-prompt",
+    "logic-ops",
+    "loop-bounds",
+    "output-format",
+    "pre-condition-loop",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "OutputRange"
+}

@@ -16,10 +16,10 @@
     "declare-variables",
     "file-close",
     "file-open-read",
-    "initialise-variables",
     "loop-to-eof",
     "module-header",
-    "output-format"
+    "output-format",
+    "shift-values"
   ],
   "pseudocode": true,
   "files": [

@@ -1,0 +1,30 @@
+{
+  "id": "9618_w23_21:4(a)",
+  "kind": "past-paper",
+  "title": "判断精确匹配次数是否超限",
+  "source": {
+    "paper": "9618_w23_21",
+    "rows": [
+      "9618_w23_21:4(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "boolean-return",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "TooMany"
+}

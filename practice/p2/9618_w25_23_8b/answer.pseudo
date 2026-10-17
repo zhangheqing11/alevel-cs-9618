@@ -1,0 +1,5 @@
+// Loan : global ARRAY[1:8000] of the given loan record.
+
+FUNCTION LoansPerTutor(TutorID : STRING) RETURNS INTEGER
+
+ENDFUNCTION

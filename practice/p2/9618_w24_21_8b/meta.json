@@ -1,0 +1,33 @@
+{
+  "id": "9618_w24_21:8(b)",
+  "kind": "past-paper",
+  "title": "生成需要复核试卷的 ID 文件",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:8(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-10",
+    "P2-DT-06"
+  ],
+  "skills": [
+    "accumulator",
+    "array-2d",
+    "boolean-return",
+    "count-loop",
+    "file-close",
+    "file-write",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CheckAll"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "9618_w25_21:3(a)(i)",
+  "kind": "past-paper",
+  "title": "声明租车记录",
+  "source": {
+    "paper": "9618_w25_21",
+    "rows": [
+      "9618_w25_21:3(a)(i)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-DT-02"
+  ],
+  "skills": [
+    "data-types",
+    "record-type"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "RentalRecord"
+}

@@ -31,7 +31,7 @@ A procedure LastLines() will:
 
 本题 MS 总分上限 6 分，候选得分点不能简单相加超过此上限。
 
-Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
+Python 行为测试不能替代伪代码逐点批改；另对题目明令禁止的内置查找/排序捷径作单独要求检查。D31：行为边界按 QP；人工批改按本题 MS 得分点，范例代码不是得分点。
 
 - [ ] MP1：Procedure heading (including parameter) and ending
 - [ ] MP2：Declaration of local variables for three lines AND File OPEN in READ mode AND CLOSE
@@ -45,3 +45,5 @@ Python 测试只验证行为，不能替代伪代码逐点批改。D31：行为�
 - [ ] 数组按题给上下界全局声明，Python 真实 list 与索引换算按接口；不用内置查找/排序代替所要求算法（D10/D24）。
 - [ ] 不依赖 AND 短路；先检查指针/下标，再读元素（D25）。
 - [ ] QP 未定义的情况不额外推断；题面另列的 Python 接口约定仅用于自动测。
+
+D30：MP5/MP6 的技能使用 shift-values；原语料暂存 initialise-variables 的回填归 codex-1，本练习没有改语料。
