@@ -1,0 +1,1432 @@
+{
+  "component": 3,
+  "version": "1.0",
+  "chapters": [
+    {"code": "DR", "name_zh": "数据表示", "name_en": "Data representation", "syllabus": ["13.1", "13.2", "13.3"]},
+    {"code": "CI", "name_zh": "通信与互联网技术", "name_en": "Communication and internet technologies", "syllabus": ["14.1", "14.2"]},
+    {"code": "HV", "name_zh": "处理器、并行处理与虚拟机", "name_en": "Processors, parallel processing and virtual machines", "syllabus": ["15.1"]},
+    {"code": "BL", "name_zh": "布尔代数与逻辑电路", "name_en": "Boolean algebra and logic circuits", "syllabus": ["15.2"]},
+    {"code": "SY", "name_zh": "系统软件", "name_en": "System software", "syllabus": ["16.1", "16.2"]},
+    {"code": "SC", "name_zh": "安全", "name_en": "Security", "syllabus": ["17.1"]},
+    {"code": "AI", "name_zh": "人工智能", "name_en": "Artificial intelligence", "syllabus": ["18.1"]},
+    {"code": "CT", "name_zh": "计算思维与问题求解", "name_en": "Computational thinking and problem-solving", "syllabus": ["19.1", "19.2"]},
+    {"code": "FP", "name_zh": "进一步编程", "name_en": "Further programming", "syllabus": ["20.1", "20.2"]}
+  ],
+  "types": [
+    {
+      "code": "P3-DR-01",
+      "chapter": "DR",
+      "name_zh": "用户定义类型的概念与分类",
+      "name_en": "User-defined data types: purpose and classification",
+      "summary": "说明为什么需要用户定义类型；解释组合（composite）与非组合（non-composite）类型；描述枚举、指针、集合、记录各是什么；列出组合类型的种类；说明枚举值列表的特征；在给定记录里挑出适合做枚举的字段并给理由。不写声明语句。",
+      "cues": [
+        "Describe the purpose of a user-defined data type",
+        "Explain what is meant by non-composite and composite data types",
+        "State what is meant by the term enumerated / pointer data type",
+        "Describe the user-defined data type set / record",
+        "Identify two other types of composite user-defined data types",
+        "Identify one field … that could be an efficient enumerated data type and give a reason"
+      ],
+      "not": [
+        "P3-DR-02 / P3-DR-03 / P3-DR-05：要写出 TYPE 声明语句 → 写声明的题型；本题型只用文字回答",
+        "P3-FP-04：class / object 作为 OOP 术语来问（实例、封装等）→ FP-04；只把 class 列为一种组合类型时留在本题型",
+        "P2-DT-01 / P2-DT-04：AS 的内置数据类型选择与数据结构选择，不涉及用户定义类型的分类"
+      ],
+      "syllabus": ["13.1"]
+    },
+    {
+      "code": "P3-DR-02",
+      "chapter": "DR",
+      "name_zh": "声明与使用枚举类型和指针类型",
+      "name_en": "Declaring and using enumerated and pointer types",
+      "summary": "按伪代码指南写 TYPE <名> = (值1, 值2, …) 定义枚举类型、TYPE <名> = ^<类型> 定义指针类型；把记录里某字段改为该枚举类型（DECLARE Gate : GateID）；给字段赋一个枚举值（不加引号）。",
+      "cues": [
+        "Write pseudocode to create an enumerated type called …",
+        "Write the pseudocode statement to declare a non-composite data type … that holds the following data",
+        "Write pseudocode to create a pointer type called … / to declare a pointer data type called … to be used with STRING data",
+        "Write the new pseudocode statement required to replace / update the declaration of … in the definition of …",
+        "Write the new pseudocode statement to assign house to BuildingGroup"
+      ],
+      "not": [
+        "P3-DR-05：TYPE … = SET OF … 与 DEFINE → DR-05",
+        "P3-DR-03：要写整个 TYPE … ENDTYPE 记录 → DR-03（记录里某字段用了枚举类型，副题型不加，除非有得分点专门给枚举声明）",
+        "P3-DR-01：只问枚举/指针是什么、有何特征 → DR-01"
+      ],
+      "syllabus": ["13.1"]
+    },
+    {
+      "code": "P3-DR-03",
+      "chapter": "DR",
+      "name_zh": "声明记录类型",
+      "name_en": "Declaring a record (composite) type",
+      "summary": "根据数据描述写 TYPE <名> … ENDTYPE，逐个 DECLARE 字段并选对类型（编号、电话用 STRING，日期用 DATE，题目给的枚举类型名作字段类型）；也包括改写类型定义里的某一行（范围 1 .. 10、数组字段）。",
+      "cues": [
+        "Write pseudocode statements to declare the composite data type … to hold data about …",
+        "Write pseudocode statements to declare the record data type …",
+        "Define, using pseudocode, the composite data type …",
+        "Use the most appropriate data type in each case",
+        "Write the updated line of pseudocode from the type definition of …"
+      ],
+      "not": [
+        "P3-DR-04：类型已定义好，要声明一个记录变量或给字段赋值 → DR-04",
+        "P3-FP-06：CLASS … ENDCLASS（有方法、PRIVATE 属性）→ FP-06",
+        "P2-DT-02：AS 卷的同类写法；P3 的行一律用 P3 题型"
+      ],
+      "syllabus": ["13.1"]
+    },
+    {
+      "code": "P3-DR-04",
+      "chapter": "DR",
+      "name_zh": "记录变量的声明与字段赋值",
+      "name_en": "Declaring a record variable and assigning to its fields",
+      "summary": "为已定义的记录类型声明一个变量（DECLARE Flight1 : Flight），用点号给字段赋值：字符串加引号、日期按 dd/mm/yyyy 不加引号、布尔写 TRUE/FALSE、枚举值不加引号。",
+      "cues": [
+        "Write the pseudocode statement to set up a variable for one record of the composite data type …",
+        "Write pseudocode to store the details of the following … in the variable you set up",
+        "Write pseudocode statements to assign: … to … of …",
+        "Write the pseudocode statements to assign the following values to the variable set up in part …"
+      ],
+      "not": [
+        "P3-DR-03：要写 TYPE … ENDTYPE 本身 → DR-03",
+        "P3-DR-02：只给字段赋一个枚举值、且该小问是在改用枚举类型的题组里 → 仍按本题型；若小问要写 TYPE … = (…) → DR-02"
+      ],
+      "syllabus": ["13.1"]
+    },
+    {
+      "code": "P3-DR-05",
+      "chapter": "DR",
+      "name_zh": "声明集合类型",
+      "name_en": "Declaring a set type",
+      "summary": "按伪代码指南写 TYPE <类型名> = SET OF <基类型> 与 DEFINE <集合名> (值, …) : <类型名>；字符要加单引号。核验语料 2 次（w24、s24），考纲点名 set，单独保留。",
+      "cues": [
+        "Write pseudocode statements to declare the set data type … to hold …",
+        "… using the variable …",
+        "SET OF / DEFINE"
+      ],
+      "not": [
+        "P3-DR-02：TYPE … = (…) 是枚举类型，不是集合；题干说 \"a data type to hold a set of prime numbers\" 但 MS 给的是枚举写法时按 MS 归 DR-02（9618_s23_31:4(a)）",
+        "P3-DR-01：只描述集合类型是什么 → DR-01"
+      ],
+      "syllabus": ["13.1"]
+    },
+    {
+      "code": "P3-DR-06",
+      "chapter": "DR",
+      "name_zh": "文件组织方式",
+      "name_en": "Methods of file organisation",
+      "summary": "描述、比较串行（serial，按到达先后）、顺序（sequential，按键字段排序）、随机（random，按散列地址）三种文件组织方式；举出各自适用的例子；为给定情境选择组织方式。",
+      "cues": [
+        "Describe how records are organised in serial / sequential / random files",
+        "Compare sequential and serial methods of file organisation",
+        "Describe sequential and random methods of file organisation",
+        "State one example of where serial / sequential / random file organisation could be used"
+      ],
+      "not": [
+        "P3-DR-07：问怎样找到/存取一条记录（sequential access、direct access）→ DR-07",
+        "P3-DR-08：问散列算法或冲突 → DR-08",
+        "P3-FP-10：写文件处理伪代码 → FP-10"
+      ],
+      "syllabus": ["13.2"]
+    },
+    {
+      "code": "P3-DR-07",
+      "chapter": "DR",
+      "name_zh": "文件存取方式",
+      "name_en": "Methods of file access",
+      "summary": "描述顺序存取（从头逐条比较；顺序文件比到键值大于目标即停）与直接存取（顺序文件用索引、随机文件用散列）；说明它们怎样应用于串行、顺序、随机文件；为给定情境选存取方式；概述在某种文件里找一条记录的过程。",
+      "cues": [
+        "Describe the sequential method of file access",
+        "Outline what is meant by direct access as a method of file access",
+        "Explain how the sequential method of file access is applied to files with serial organisation and … sequential organisation",
+        "Explain how direct access is used to locate a specific record in sequential files and random files",
+        "Outline the process that would be used to find a record in a random / serial file",
+        "State the most suitable method of file access when …"
+      ],
+      "not": [
+        "P3-DR-06：只问记录在文件里怎样组织、用在哪里 → DR-06；「organised and accessed」两者都问时按得分点多数",
+        "P3-DR-08：要算散列值或处理冲突 → DR-08（随机文件找记录的过程题里只有一分提散列，不加副题型）"
+      ],
+      "syllabus": ["13.2"]
+    },
+    {
+      "code": "P3-DR-08",
+      "chapter": "DR",
+      "name_zh": "散列算法与冲突处理",
+      "name_en": "Hashing algorithms and collisions",
+      "summary": "用给定散列函数（常为 MOD n）算出记录键的散列值；解释散列算法在直接存取中的作用；说明冲突（collision）是什么、存取时冲突怎样处理（顺序找下一个空位、溢出区）。",
+      "cues": [
+        "A hashing algorithm is used to calculate storage locations for records in a random access file",
+        "Complete the table … hash value",
+        "Explain what is meant by a hashing algorithm in the context of file access",
+        "Outline what is meant by the term collision / Explain how a collision can be dealt with",
+        "Describe what happens … when the calculated hash value is a duplicate"
+      ],
+      "not": [
+        "P3-DR-07：整体问随机文件里怎样找记录（直接存取过程）→ DR-07",
+        "P3-FP-10：写用 SEEK/GETRECORD 处理随机文件的伪代码 → FP-10"
+      ],
+      "syllabus": ["13.2"]
+    },
+    {
+      "code": "P3-DR-09",
+      "chapter": "DR",
+      "name_zh": "浮点数换算成十进制",
+      "name_en": "Converting a binary floating-point number to denary",
+      "summary": "给定补码尾数与补码阶码，求它的十进制值：先算阶码，再按阶码移动二进制小数点，最后按补码求值（负尾数最高位为负权）。MS 常为 2 分过程 + 1 分答案。",
+      "cues": [
+        "Calculate the denary value of the given (normalised) (binary) floating-point number",
+        "Show your working",
+        "Mantissa … Exponent … Working … Answer / Denary value"
+      ],
+      "not": [
+        "P3-DR-10：方向相反，十进制 → 浮点 → DR-10",
+        "P3-DR-11：求最大/最小可表示数、把给定位串规格化 → DR-11",
+        "P1-IR-03：AS 的补码整数换算，没有阶码"
+      ],
+      "syllabus": ["13.3"]
+    },
+    {
+      "code": "P3-DR-10",
+      "chapter": "DR",
+      "name_zh": "十进制写成规格化浮点数",
+      "name_en": "Converting a denary number to normalised floating point",
+      "summary": "把带符号的十进制数（含小数）写成指定位数的规格化浮点数：先转二进制（负数取补码），再移动小数点使尾数以 01 或 10 开头，阶码用补码；必要时说明位数不够造成的精度损失。",
+      "cues": [
+        "Calculate the normalised (binary) floating-point representation of –102.75 in this system",
+        "Write the normalised floating-point representation of +202 in this system",
+        "show how it would be represented in each of these two systems",
+        "Show your working"
+      ],
+      "not": [
+        "P3-DR-11：给的是二进制数（如 0101010.111 或未规格化的位串）而不是十进制数 → DR-11",
+        "P3-DR-12：只解释表示时出了什么问题、不要求写出表示 → DR-12（同题组中各自归类）"
+      ],
+      "syllabus": ["13.3"]
+    },
+    {
+      "code": "P3-DR-11",
+      "chapter": "DR",
+      "name_zh": "规格化与可表示的最大最小值",
+      "name_en": "Normalisation and the range of normalised values",
+      "summary": "把给定的二进制数或未规格化的浮点位串写成规格化形式；说明给定数为什么不是规格化的；说明规格化的理由（精度最大、表示唯一）；写出最大正数、最小（最负）数并给出十进制（可用 2 的幂表示）。",
+      "cues": [
+        "Write the normalised floating-point representation of the following (positive / unsigned) binary number using this system",
+        "The given binary floating-point number is not normalised. Normalise the floating-point number",
+        "State why the number is not normalised",
+        "Explain the reason why binary numbers are stored in normalised form",
+        "Write / Give the largest positive (normalised) two’s complement binary number that can be stored in this system"
+      ],
+      "not": [
+        "P3-DR-10：给的是十进制数 → DR-10",
+        "P3-DR-12：问改变尾数/阶码位数的影响、溢出下溢、近似 → DR-12"
+      ],
+      "syllabus": ["13.3"]
+    },
+    {
+      "code": "P3-DR-12",
+      "chapter": "DR",
+      "name_zh": "精度、范围、舍入误差与上溢下溢",
+      "name_en": "Precision, range, rounding errors, overflow and underflow",
+      "summary": "解释改变尾数与阶码位数分配对精度与范围的影响；解释为什么某数不能精确表示（尾数位不够、0.2 这类小数无法精确表示）及后果；说明何时发生上溢、下溢及其后果；为了精确存储某数应怎样改变位数分配。",
+      "cues": [
+        "Describe the effect of changing the allocation of bits used for the mantissa and for the exponent",
+        "Explain the problem that occurred / will occur in storing …",
+        "Describe the reason why the normalised form of the following binary number cannot be represented accurately",
+        "Explain why a binary representation is sometimes only an approximation to the real number",
+        "State when underflow occurs / Describe one example of a situation that could cause an overflow",
+        "State the consequence of storing … Justify your answer"
+      ],
+      "not": [
+        "P3-DR-10 / P3-DR-11：要写出具体的浮点位串 → 写表示的题型；本题型只用文字解释",
+        "P1-IR-05：AS 的整数加法溢出"
+      ],
+      "syllabus": ["13.3"]
+    },
+    {
+      "code": "P3-CI-01",
+      "chapter": "CI",
+      "name_zh": "协议的必要性与协议栈",
+      "name_en": "Why protocols are needed; protocol stacks",
+      "summary": "解释计算机通信为什么必须有协议；说明协议实现可视为分层的栈、各层只与相邻层交互；描述一条消息从一台主机经互联网发到另一台主机时 TCP/IP 栈怎样被应用（逐层下传、加报头、对端逐层上传）；完成关于协议栈的选词填空段落。",
+      "cues": [
+        "Explain why a protocol is used / Outline why protocols are essential for communication between computers",
+        "Describe how the layers of the TCP/IP protocol stack interact with each other",
+        "Describe how the TCP/IP protocol suite is applied when a message is sent through the internet from one host to another",
+        "Do not describe the function of individual layers",
+        "Complete the following paragraph … using words from the given list"
+      ],
+      "not": [
+        "P3-CI-02：要写出各层名称、顺序或某一层的功能 → CI-02",
+        "P3-CI-03：问具体应用层协议（HTTP、IMAP 等）→ CI-03",
+        "P1-CM-09：AS 的互联网基础设施（URL、DNS 等）"
+      ],
+      "syllabus": ["14.1"]
+    },
+    {
+      "code": "P3-CI-02",
+      "chapter": "CI",
+      "name_zh": "TCP/IP 四层的顺序与功能",
+      "name_en": "TCP/IP layers: order and functions",
+      "summary": "写出或排好 TCP/IP 四层（Application、Transport、Internet、Link）的顺序；描述某一层或两层的目的与功能（传输层分包、排序、端到端、重传；网际层加 IP 地址、路由；链路层成帧、MAC 地址、在直连设备间传送）；把各层与描述连线。",
+      "cues": [
+        "Complete the diagram to show the correct order for these layers",
+        "Describe the function / purpose of the Transport / Internet / Link layer",
+        "Outline the functions of the Transport and Internet layers of the TCP/IP protocol suite",
+        "Identify two (other) layers of the TCP/IP protocol suite (and describe the function of each)",
+        "Draw one line to connect each TCP/IP layer to its most appropriate description"
+      ],
+      "not": [
+        "P3-CI-01：问层与层之间怎样交互、一条消息怎样经过整个栈（明说不描述单层功能）→ CI-01",
+        "P3-CI-03：应用层题目问的是具体协议（HTTP、FTP、SMTP…）→ CI-03；问应用层本身的目的与功能 → 本题型"
+      ],
+      "syllabus": ["14.1"]
+    },
+    {
+      "code": "P3-CI-03",
+      "chapter": "CI",
+      "name_zh": "应用层协议：HTTP、FTP、POP3、IMAP、SMTP",
+      "name_en": "Application-layer protocols: HTTP, FTP, POP3, IMAP, SMTP",
+      "summary": "说出应用层协议的名称与用途；收发电子邮件用哪些协议（发送 SMTP，接收 POP3 / IMAP）；描述 IMAP 等某个协议的作用；把协议与用途连线。",
+      "cues": [
+        "Identify two protocols used by this layer. Describe the use of each protocol",
+        "Name and describe two protocols used by the Application Layer",
+        "State the names of two different protocols associated with the sending and receiving of emails",
+        "Describe the purpose of the IMAP protocol / State the purpose of the HTTP and IMAP protocols",
+        "Draw one line to connect each protocol to its most appropriate use"
+      ],
+      "not": [
+        "P3-CI-04：只问 BitTorrent 怎样共享文件 → CI-04（连线题里 BitTorrent 只占一条线时仍归本题型）",
+        "P3-SC-04：SSL/TLS 协议 → SC-04",
+        "P3-CI-02：问应用层这一层的目的与功能 → CI-02"
+      ],
+      "syllabus": ["14.1"]
+    },
+    {
+      "code": "P3-CI-04",
+      "chapter": "CI",
+      "name_zh": "BitTorrent 点对点文件共享",
+      "name_en": "BitTorrent peer-to-peer file sharing",
+      "summary": "解释 BitTorrent 怎样实现点对点文件共享：torrent 文件、tracker、swarm、文件分块、同时从多个 peer 下载并上传（seed / leech）。核验语料 2 次，考纲 14.1 点名，单独保留。",
+      "cues": [
+        "Explain the meaning of the phrase: BitTorrent protocol provides peer-to-peer file sharing",
+        "Describe how files are shared using the BitTorrent protocol"
+      ],
+      "not": [
+        "P3-CI-03：多个应用层协议一起问（含连线题）→ CI-03",
+        "P1-CM-02：AS 的客户机-服务器与点对点网络模型比较"
+      ],
+      "syllabus": ["14.1"]
+    },
+    {
+      "code": "P3-CI-05",
+      "chapter": "CI",
+      "name_zh": "电路交换",
+      "name_en": "Circuit switching",
+      "summary": "描述电路交换（先建立专用线路、整段带宽独占、按序到达、传完拆除）；给出好处与缺点；说明在什么场合适用并给理由。",
+      "cues": [
+        "Describe circuit switching as a method of data transmission",
+        "Give / State two benefits and two drawbacks of circuit switching",
+        "State, with a reason, where it would be appropriate to use circuit switching"
+      ],
+      "not": [
+        "P3-CI-07：同一小问里同时问电路交换与分组交换（比较、各自的好处、区别）→ CI-07",
+        "P3-CI-06：只问分组交换 → CI-06"
+      ],
+      "syllabus": ["14.2"]
+    },
+    {
+      "code": "P3-CI-06",
+      "chapter": "CI",
+      "name_zh": "分组交换与路由器",
+      "name_en": "Packet switching and the router",
+      "summary": "描述分组交换怎样在网络（含互联网）上传消息：分包、报头（源/目的地址、序号）、各包独立选路、到达后按序重组、校验与重发；给出好处与缺点、适用场合；说明分组交换怎样保证收到完整消息；描述路由器在分组交换中的作用（读目的 IP、查路由表、定下一跳、跳数减 1）。",
+      "cues": [
+        "Describe / Explain how packet switching is used to transmit / pass messages across a network / the internet",
+        "Give / State two benefits and two drawbacks of packet switching",
+        "State two examples of where it would be appropriate to use packet switching",
+        "Describe two ways in which packet switching ensures a complete message is received",
+        "Describe / Outline the function of a router in packet switching"
+      ],
+      "not": [
+        "P3-CI-07：与电路交换比较 → CI-07",
+        "P1-CM-04：AS 的数据包在某种拓扑中怎样走"
+      ],
+      "syllabus": ["14.2"]
+    },
+    {
+      "code": "P3-CI-07",
+      "chapter": "CI",
+      "name_zh": "电路交换与分组交换的比较",
+      "name_en": "Comparing circuit switching and packet switching",
+      "summary": "同一小问里同时考两种交换方式：分别描述并各给一个优点、缺点；写出两者的区别；各给一个好处。",
+      "cues": [
+        "Describe both methods of data transmission. Include a different advantage and disadvantage for each method",
+        "Give four differences between circuit switching and packet switching",
+        "Identify one benefit of circuit switching and one benefit of packet switching",
+        "Identify two differences between circuit switching and packet switching"
+      ],
+      "not": [
+        "P3-CI-05 / P3-CI-06：只问其中一种 → 对应题型"
+      ],
+      "syllabus": ["14.2"]
+    },
+    {
+      "code": "P3-HV-01",
+      "chapter": "HV",
+      "name_zh": "RISC 与 CISC 处理器",
+      "name_en": "RISC and CISC processors",
+      "summary": "描述 RISC 与 CISC 的特征（指令少而简单、定长、单周期、硬连线、寄存器多、便于流水线 vs 指令多而复杂、变长、多周期、微程序）；写出两者区别；在表格里勾选某特征属于 RISC 还是 CISC。",
+      "cues": [
+        "Describe what is meant by RISC and CISC processors",
+        "Identify two differences between RISC and CISC processors",
+        "Identify four features of a RISC / CISC processor / State two features of RISC processors",
+        "Tick one box in each row to show if the statement applies to RISC or CISC processors"
+      ],
+      "not": [
+        "P3-HV-02：问流水线、或 RISC/CISC 的中断处理 → HV-02",
+        "P1-PF-01 / P1-PF-05：AS 的 CPU 部件与性能因素"
+      ],
+      "syllabus": ["15.1"]
+    },
+    {
+      "code": "P3-HV-02",
+      "chapter": "HV",
+      "name_zh": "流水线与中断处理",
+      "name_en": "Pipelining and interrupt handling",
+      "summary": "描述 RISC 中流水线的作用（指令分为五个阶段、各阶段在同一时钟周期并行处理不同指令）；补全流水线时钟周期图；概述 RISC/CISC 的中断处理过程（周期结束时检测、寄存器入栈、执行 ISR、恢复）；解释流水线使中断处理变复杂的原因与做法。",
+      "cues": [
+        "Describe the use of pipelining in Reduced Instruction Set Computers (RISC)",
+        "Describe the process of pipelining during the fetch-execute cycle in RISC processors",
+        "The processing of instructions is divided into five stages … Complete the diagram",
+        "Outline the process of interrupt handling as it could be applied to RISC or CISC processors",
+        "Explain how pipelining affects interrupt handling for RISC processors"
+      ],
+      "not": [
+        "P3-HV-01：只问 RISC/CISC 特征与区别 → HV-01",
+        "P3-SY-03：OS 内核作为中断处理程序、低级调度 → SY-03",
+        "P1-PF-04：AS 的中断概念"
+      ],
+      "syllabus": ["15.1"]
+    },
+    {
+      "code": "P3-HV-03",
+      "chapter": "HV",
+      "name_zh": "四种基本计算机体系结构",
+      "name_en": "The four basic computer architectures (SISD, SIMD, MISD, MIMD)",
+      "summary": "说出并描述 SISD、SIMD、MISD、MIMD（单/多指令流 × 单/多数据流，各举一例）；比较其中两种的异同。",
+      "cues": [
+        "Identify the three other categories of computer architecture. Describe each category",
+        "Describe the features of SISD and MIMD / SIMD and MISD computer architectures",
+        "State one difference and one similarity between the SIMD and MISD computer architectures"
+      ],
+      "not": [
+        "P3-HV-04：问大规模并行计算机的特征 → HV-04"
+      ],
+      "syllabus": ["15.1"]
+    },
+    {
+      "code": "P3-HV-04",
+      "chapter": "HV",
+      "name_zh": "大规模并行计算机",
+      "name_en": "Massively parallel computers",
+      "summary": "概述大规模并行计算机的特征：大量处理器或独立计算机通过网络连接、同时协同处理同一任务的不同部分、各自有内存、通信开销。核验语料 2 次，考纲 15.1 独立要求。",
+      "cues": [
+        "Outline / Describe the characteristics of massively parallel computers"
+      ],
+      "not": [
+        "P3-HV-03：Flynn 四类体系结构 → HV-03"
+      ],
+      "syllabus": ["15.1"]
+    },
+    {
+      "code": "P3-HV-05",
+      "chapter": "HV",
+      "name_zh": "虚拟机",
+      "name_en": "Virtual machines",
+      "summary": "解释虚拟机是什么（在宿主机上用软件仿真另一套硬件/系统，运行客户操作系统）；给出用途与好处（试用新系统、多个 OS 共存、运行旧软件、隔离安全）和局限（性能差、难以测量、受宿主影响、实现复杂）；说明宿主操作系统与客户操作系统的角色。",
+      "cues": [
+        "Explain / Describe what is meant by (the term) virtual machine",
+        "Describe two benefits and one limitation of using a virtual machine",
+        "Outline two benefits and two limitations of a virtual machine",
+        "Explain the roles of the host operating system and the guest operating system"
+      ],
+      "not": [
+        "P3-SY-04：虚拟内存（virtual memory）→ SY-04，名字相近但无关"
+      ],
+      "syllabus": ["15.1"]
+    },
+    {
+      "code": "P3-BL-01",
+      "chapter": "BL",
+      "name_zh": "由逻辑电路完成真值表",
+      "name_en": "Completing a truth table from a logic circuit",
+      "summary": "给出逻辑电路（可有三输入门、中间结点 P、Q、R、S），逐列算出中间结点与输出，完成真值表；MS 常给 1 分「working」（中间列）+ 按行块给输出分。也包括由给定表达式的电路完成真值表。",
+      "cues": [
+        "Complete the truth table for the given logic circuit. Show your working",
+        "Working space … P Q R S Z",
+        "This logic circuit represents the Boolean expression … Complete this truth table"
+      ],
+      "not": [
+        "P3-BL-04：由真值表写积之和表达式 → BL-04",
+        "P3-BL-02：在真值表之后问电路名称（半加器、全加器）与输出用途 → BL-02",
+        "P1-LG-04：AS 的真值表题；P3 的行一律用 P3 题型"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-02",
+      "chapter": "BL",
+      "name_zh": "半加器与全加器",
+      "name_en": "Half adders and full adders",
+      "summary": "认出给定电路是半加器或全加器；说明各输出的用途（和位 Sum、进位 Carry）；可要求写出各输出的积之和表达式。核验语料 2 次（s22），考纲 15.2 点名，单独保留。",
+      "cues": [
+        "State the name of this logic circuit",
+        "State the purpose of each output",
+        "Write the Boolean expressions for the two outputs … and state the purpose of each output"
+      ],
+      "not": [
+        "P3-BL-01：同题组的真值表 → BL-01",
+        "P3-BL-04：只写表达式、不问加法器 → BL-04"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-03",
+      "chapter": "BL",
+      "name_zh": "触发器（SR、JK）",
+      "name_en": "Flip-flops (SR, JK)",
+      "summary": "用两个 NAND 或两个 NOR 门画 SR 触发器并标输入；说明触发器的作用（存储 1 位）；考纲还要求 JK 触发器及触发器真值表，语料尚未出现。核验语料 2 次（w22）。",
+      "cues": [
+        "Draw a logic circuit for an SR flip-flop and label the inputs",
+        "State the purpose of a flip-flop"
+      ],
+      "not": [
+        "P3-BL-01：一般组合逻辑电路的真值表 → BL-01"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-04",
+      "chapter": "BL",
+      "name_zh": "由真值表或电路写积之和表达式",
+      "name_en": "Writing a sum-of-products expression from a truth table or circuit",
+      "summary": "对真值表中输出为 1 的每一行写一个积项（输入为 0 的取反），用 + 连起来得到积之和（不化简）；或先由电路得到真值表再写。MS 按正确积项个数给分。",
+      "cues": [
+        "Write the Boolean (logic) expression that corresponds to the given truth table as the sum-of-products",
+        "Write the Boolean expression that corresponds to the logic circuit as a sum-of-products"
+      ],
+      "not": [
+        "P3-BL-06：由卡诺图圈组写「simplified」积之和 → BL-06",
+        "P1-LG-05：AS 的真值表 → 表达式"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-05",
+      "chapter": "BL",
+      "name_zh": "填写卡诺图",
+      "name_en": "Completing a Karnaugh map",
+      "summary": "按格雷码顺序（00、01、11、10）把真值表或积之和表达式填进 3 变量或 4 变量卡诺图；也包括说明使用卡诺图的好处。MS 常为「全对 2 分、一处错 1 分」。",
+      "cues": [
+        "Complete the Karnaugh map (K-map) for the given truth table",
+        "Complete the Karnaugh map (K-map) for the (following) Boolean expression",
+        "Describe one benefit of using a Karnaugh map (K-map) for solving logic problems"
+      ],
+      "not": [
+        "P3-BL-06：在卡诺图上画圈或由圈写化简表达式 → BL-06"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-06",
+      "chapter": "BL",
+      "name_zh": "卡诺图圈组与化简积之和",
+      "name_en": "Grouping in a K-map and writing the simplified sum-of-products",
+      "summary": "在卡诺图上圈出最大的 2 的幂个相邻 1（可环绕边缘、可重叠），使圈数最少；由每个圈写出一个积项，得到化简后的积之和（题目说「Do not carry out any further simplification」时不再提公因式）。",
+      "cues": [
+        "Draw loop(s) around appropriate group(s) in the K-map to produce an optimal sum-of-products",
+        "Write the Boolean (logic) expression from your answer to part … as a simplified sum-of-products",
+        "Do not carry out any further simplification"
+      ],
+      "not": [
+        "P3-BL-07：「Use Boolean algebra to give your answer … in its simplest form」把化简积之和再提公因式 → BL-07",
+        "P3-BL-05：只填卡诺图 → BL-05"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-BL-07",
+      "chapter": "BL",
+      "name_zh": "布尔代数化简与德摩根定律",
+      "name_en": "Simplifying with Boolean algebra and De Morgan’s laws",
+      "summary": "用德摩根定律、双重否定、分配律、吸收律、等幂律等逐步化简表达式并写出每一步；对给定表达式只应用德摩根定律；把卡诺图得到的积之和用布尔代数写成最简形式（提公因式）。",
+      "cues": [
+        "Simplify the following expression using Boolean algebra, including De Morgan’s laws. Show your working",
+        "Use Boolean algebra including De Morgan’s laws to simplify the following expression. Show all working",
+        "Apply De Morgan’s laws to the expression",
+        "Use Boolean algebra to give your answer to part … in its simplest form"
+      ],
+      "not": [
+        "P3-BL-06：由卡诺图圈组写化简积之和 → BL-06（同一小问里既写化简积之和又要求最简形式时按得分点多数，见指南）"
+      ],
+      "syllabus": ["15.2"]
+    },
+    {
+      "code": "P3-SY-01",
+      "chapter": "SY",
+      "name_zh": "操作系统：资源利用与隐藏硬件复杂性",
+      "name_en": "OS: maximising resource use and hiding hardware complexity",
+      "summary": "说明 OS 怎样最大化利用资源；描述用户界面（GUI/CLI）、设备驱动、API 等怎样向用户隐藏硬件的复杂性，并举例。核验语料 2 次，考纲 16.1 独立要求。",
+      "cues": [
+        "State one benefit to the student of a user interface and give an example",
+        "Describe two ways in which the complexities of the computer hardware are hidden from the user",
+        "Show understanding of how an OS can maximise the use of resources"
+      ],
+      "not": [
+        "P3-SY-02 / P3-SY-03：多任务、进程状态、调度 → 对应题型",
+        "P1-SS-01：AS 的 OS 管理任务清单"
+      ],
+      "syllabus": ["16.1"]
+    },
+    {
+      "code": "P3-SY-02",
+      "chapter": "SY",
+      "name_zh": "进程、多任务与进程状态",
+      "name_en": "Processes, multi-tasking and process states",
+      "summary": "解释多任务是什么、怎样实现（分时间片、轮换占用 CPU、OS 监视各进程状态）及其好处；说出三种进程状态（running、ready、blocked）；说明进程在两种状态间转换的条件、处于某状态的原因。",
+      "cues": [
+        "Describe what is meant by multi-tasking and how it benefits process management",
+        "State the purpose of multi-tasking / Explain how an operating system ensures that multi-tasking operates efficiently",
+        "Identify three process states / Identify one other process state",
+        "Outline conditions under which a process could change from the running state to the ready state",
+        "Complete the table to identify one reason why a process could be in each of the three states"
+      ],
+      "not": [
+        "P3-SY-03：问调度的必要性或某种调度算法 → SY-03",
+        "P3-SY-04：内存管理 → SY-04"
+      ],
+      "syllabus": ["16.1"]
+    },
+    {
+      "code": "P3-SY-03",
+      "chapter": "SY",
+      "name_zh": "进程调度与中断处理",
+      "name_en": "Process scheduling and interrupt handling by the kernel",
+      "summary": "解释为什么需要调度；说出调度算法；描述轮转（round robin）、短作业优先、先来先服务、最短剩余时间各怎样工作并给出好处；说明 OS 内核怎样充当中断处理程序、中断怎样用于低级调度。",
+      "cues": [
+        "Explain the need for scheduling in process management / Describe one reason why scheduling is necessary",
+        "Describe these scheduling routines and identify a benefit for each one",
+        "Explain the function of the round robin / shortest job first / shortest remaining time scheduling routine and give a benefit",
+        "Identify two scheduling routines",
+        "Outline how the kernel of an OS acts as an interrupt handler",
+        "Describe how interrupt handling is used in low-level scheduling"
+      ],
+      "not": [
+        "P3-SY-02：多任务概念与进程状态 → SY-02",
+        "P3-HV-02：处理器层面（RISC/CISC、流水线）的中断处理 → HV-02"
+      ],
+      "syllabus": ["16.1"]
+    },
+    {
+      "code": "P3-SY-04",
+      "chapter": "SY",
+      "name_zh": "虚拟内存、分页、分段与磁盘抖动",
+      "name_en": "Virtual memory, paging, segmentation and disk thrashing",
+      "summary": "解释虚拟内存（用辅存扩展 RAM、页在内存与磁盘间换入换出）及使用原因；描述分页与分段、两者在划分内存方式上的区别；页面怎样被替换；解释磁盘抖动是什么、何时发生。",
+      "cues": [
+        "Explain what is meant by virtual memory / Outline the reasons why an operating system may need to use virtual memory",
+        "State one difference between paging and segmentation",
+        "Describe the process of segmentation for memory management",
+        "Explain what is meant by disk thrashing / the circumstances in which disk thrashing could occur"
+      ],
+      "not": [
+        "P3-HV-05：虚拟机（virtual machine）→ HV-05",
+        "P1-HW-01：AS 的 RAM 与 ROM"
+      ],
+      "syllabus": ["16.1"]
+    },
+    {
+      "code": "P3-SY-05",
+      "chapter": "SY",
+      "name_zh": "解释器怎样执行程序",
+      "name_en": "How an interpreter executes a program",
+      "summary": "描述解释器不生成完整目标程序而执行源程序的过程：逐条读入、检查、翻译并立即执行，遇错停止并报告，每次运行都要重新翻译。核验语料 1 次（另有 2021 扩展 1 次），考纲 16.2 独立要求而保留。",
+      "cues": [
+        "Explain how an interpreter executes a program without producing a complete translated version of it",
+        "Describe the process of executing a program using an interpreter"
+      ],
+      "not": [
+        "P3-SY-06：编译器的各个阶段 → SY-06",
+        "P1-SS-04 / P1-SS-05：AS 的编译器与解释器比较"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-06",
+      "chapter": "SY",
+      "name_zh": "编译的各个阶段",
+      "name_en": "Stages of compilation",
+      "summary": "说出编译的阶段（词法分析、语法分析、代码生成、优化）；解释某一阶段做什么（词法：去空白注释、切成记号、建符号表；语法：按文法检查记号流、建语法树、报语法错；优化：减少时间与内存）；把阶段与描述连线。",
+      "cues": [
+        "Identify two other stages that take place during the compilation of a program",
+        "Explain what is meant by lexical analysis during program compilation",
+        "Outline the purpose of syntax analysis / Explain the process of syntax analysis",
+        "State the purpose of the optimisation stage / Outline the process of optimisation",
+        "Draw one line to connect each stage of compilation to its most appropriate description"
+      ],
+      "not": [
+        "P3-SY-05：解释器 → SY-05",
+        "P3-SY-07 ～ P3-SY-09：用 BNF/语法图描述文法 → 对应题型（语法分析阶段本身的作用留在本题型）",
+        "P3-CT-11：编译器怎样用栈翻译递归代码 → CT-11"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-07",
+      "chapter": "SY",
+      "name_zh": "按语法图或 BNF 判断字符串是否合法",
+      "name_en": "Checking strings against syntax diagrams or BNF",
+      "summary": "根据给定语法图（或 BNF）判断某个变量名、密码、号码是否合法并给出违反了哪条规则；写出一个合法的例子；说明修改后的规则下哪些字符串可以通过。",
+      "cues": [
+        "State whether each … is valid or invalid and give a reason for your choice",
+        "State why … is not a valid … for the given syntax diagrams",
+        "The following assignment statements are invalid. State the reason in each case",
+        "State an example of a valid …"
+      ],
+      "not": [
+        "P3-SY-08：要写出 BNF 规则 → SY-08",
+        "P3-SY-09：要画语法图 → SY-09"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-08",
+      "chapter": "SY",
+      "name_zh": "写或补全 BNF",
+      "name_en": "Writing or completing BNF",
+      "summary": "把语法图或文字规则写成 BNF：用 ::= 定义、| 分隔可选项、<非终结符> 尖括号，用递归（<word> ::= <letter> | <word><letter>）表示「一个或多个」；可先定义中间非终结符。",
+      "cues": [
+        "Complete the Backus-Naur Form (BNF) for the syntax diagrams shown",
+        "Complete the BNF for <word> and use this to complete the BNF for <variable>",
+        "Write the Backus-Naur Form (BNF) for your syntax diagram",
+        "Write the BNF (notation) for password / code"
+      ],
+      "not": [
+        "P3-SY-09：要画语法图 → SY-09",
+        "P3-SY-07：只判断合法性 → SY-07"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-09",
+      "chapter": "SY",
+      "name_zh": "画或补全语法图",
+      "name_en": "Drawing or completing a syntax diagram",
+      "summary": "根据文字规则或修改后的规则画（补全）语法图：方框表示组成部分，箭头表示顺序，分支表示可选，回环表示重复。",
+      "cues": [
+        "Draw a syntax diagram for …",
+        "Draw a syntax diagram for the new syntax of the assignment statement",
+        "Complete the syntax diagram for passcode to show these changes"
+      ],
+      "not": [
+        "P3-SY-08：把语法图写成 BNF → SY-08"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-10",
+      "chapter": "SY",
+      "name_zh": "RPN 的用途与用栈求值的方法",
+      "name_en": "Why RPN is used and how a stack evaluates it",
+      "summary": "解释为什么用逆波兰表示法（无括号、无优先级歧义、从左到右一次扫描）；说出求值用的数据结构（栈）及理由；用文字描述用栈求 RPN 的步骤（从左到右读，操作数入栈，遇运算符弹出两个、运算、结果入栈，最后栈顶为结果）。",
+      "cues": [
+        "Explain why Reverse Polish Notation (RPN) is used to carry out the evaluation of expressions",
+        "Identify, with reasons, a data structure that could be used to evaluate an expression in RPN",
+        "Explain how a stack can be used to evaluate RPN expressions / Explain how an expression stored in RPN can be evaluated",
+        "Describe the main steps in the evaluation of this RPN expression using a stack",
+        "Outline the process of using a stack to evaluate an expression written using RPN"
+      ],
+      "not": [
+        "P3-SY-12：要画出栈内容的变化或算出值 → SY-12",
+        "P3-CT-05：一般地问栈还有什么用途 → CT-05"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-11",
+      "chapter": "SY",
+      "name_zh": "中缀表达式与 RPN 互相转换",
+      "name_en": "Converting between infix and RPN",
+      "summary": "把中缀表达式写成 RPN，或把 RPN 写回中缀（必要时加括号保证运算顺序）；也包括把 RPN 转成中缀后代入数值求值的 1 分小问。MS 常按片段给分。",
+      "cues": [
+        "Write the infix expression in RPN / Write this infix expression in Reverse Polish Notation (RPN)",
+        "Write the RPN expression as an infix expression / Write this RPN expression in infix form",
+        "Convert this Reverse Polish Notation (RPN) back to its original infix form",
+        "Evaluate your infix expression from part … when a = …"
+      ],
+      "not": [
+        "P3-SY-12：要用栈求 RPN 的值、画栈 → SY-12"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SY-12",
+      "chapter": "SY",
+      "name_zh": "RPN 求值与栈内容变化",
+      "name_en": "Evaluating RPN with a stack (stack diagrams)",
+      "summary": "给定 RPN 与变量取值，逐步画出栈中内容的变化（只放数值，不放运算符），得出中间结果与最终值；或直接计算 RPN 的值并写出过程。MS 常「one mark per ring」。",
+      "cues": [
+        "Show the changing contents of the stack as the RPN expression is evaluated",
+        "Show how the contents of the following stack will change as the RPN expression … is evaluated",
+        "Evaluate the RPN expression … where a = … Show your working"
+      ],
+      "not": [
+        "P3-SY-10：只用文字描述求值步骤 → SY-10",
+        "P3-SY-11：中缀与 RPN 互转 → SY-11"
+      ],
+      "syllabus": ["16.2"]
+    },
+    {
+      "code": "P3-SC-01",
+      "chapter": "SC",
+      "name_zh": "加密术语与对称、非对称加密",
+      "name_en": "Encryption terms; symmetric and asymmetric cryptography",
+      "summary": "定义明文、密文、公钥、私钥；说明使用密钥加密的理由与方法种类（对称、非对称、量子）；描述非对称加密的目的；说明对称与非对称加密在密钥数量与分发、加解密方式上的区别。",
+      "cues": [
+        "Define the following asymmetric key encryption terms: cipher text / public key",
+        "State what is meant by a private key",
+        "Give two reasons for using key cryptography / Give two methods of key cryptography",
+        "Describe the purpose of asymmetric key cryptography",
+        "Explain / Describe / State the differences between symmetric and asymmetric cryptography",
+        "Identify one other type of cryptography"
+      ],
+      "not": [
+        "P3-SC-02：描述用两把密钥发送私密消息或已验证消息的完整过程 → SC-02",
+        "P3-SC-03：量子密码的目的、好处、缺点 → SC-03",
+        "P1-SP-04：AS 的加密概念"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-SC-02",
+      "chapter": "SC",
+      "name_zh": "用密钥对发送私密消息与已验证消息",
+      "name_en": "Using key pairs to send private and verified messages",
+      "summary": "按步骤说明非对称加密的过程：接收方生成密钥对并公开公钥，发送方用接收方公钥加密，接收方用自己的私钥解密（私密消息）；或发送方用自己的私钥加密、公众用其公钥解密（已验证消息）。",
+      "cues": [
+        "Describe the process of asymmetric encryption",
+        "Explain how Fred uses asymmetric encryption to send his document securely",
+        "Explain how the organisation makes use of the two keys to receive a secure transmission",
+        "Outline the process that would allow an individual to use asymmetric key encryption to send a private message to an organisation",
+        "Outline the process that would allow a business to use encryption keys to send a verified message"
+      ],
+      "not": [
+        "P3-SC-06：消息先散列成摘要再用私钥加密（数字签名）→ SC-06",
+        "P3-SC-01：只定义术语或比较对称与非对称 → SC-01"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-SC-03",
+      "chapter": "SC",
+      "name_zh": "量子密码",
+      "name_en": "Quantum cryptography",
+      "summary": "描述量子密码的目的（基于物理定律、几乎不可破解的密钥分发）；给出好处（可发现窃听、密钥完整性）与缺点（距离有限、需专用光纤与设备、成本高、偏振可能改变）。",
+      "cues": [
+        "Describe the purpose of quantum cryptography",
+        "State two possible benefits / drawbacks of using quantum cryptography",
+        "Identify / Outline two benefits and two drawbacks of quantum cryptography"
+      ],
+      "not": [
+        "P3-SC-01：对称、非对称加密 → SC-01"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-SC-04",
+      "chapter": "SC",
+      "name_zh": "SSL/TLS",
+      "name_en": "SSL/TLS",
+      "summary": "说明 SSL/TLS 的目的与功能（加密、认证、完整性）；描述客户端-服务器通信开始时的握手过程（请求并验证服务器的数字证书、取得公钥、协商算法、生成会话密钥）；给出适用场合；说出 TLS 的两个协议（握手协议、记录协议）及作用。",
+      "cues": [
+        "Describe the purpose of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols",
+        "State two functions of SSL/TLS",
+        "Explain how SSL/TLS (protocols) are used when a client-server communication is initiated",
+        "Give two examples of situations where the use of SSL/TLS would be appropriate",
+        "Identify the two main protocols that form Transport Layer Security (TLS) and state the purpose of each"
+      ],
+      "not": [
+        "P3-SC-05：只问数字证书怎样获取或包含什么 → SC-05",
+        "P3-CI-03：应用层协议 → CI-03"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-SC-05",
+      "chapter": "SC",
+      "name_zh": "数字证书",
+      "name_en": "Digital certificates",
+      "summary": "描述数字证书是什么（由 CA 签发、证明身份的电子文档，含持有者信息与公钥）；列出证书里的项目；说明组织怎样获取证书（生成密钥对、向 CA 申请并提交身份信息与公钥、CA 核实后签发）。",
+      "cues": [
+        "Describe what is meant by a digital certificate",
+        "State how a digital certificate is obtained",
+        "Explain the process by which an organisation may acquire its digital certificate / Outline the process followed to acquire a digital certificate",
+        "Identify two items commonly found within a digital certificate"
+      ],
+      "not": [
+        "P3-SC-06：证书在产生或验证数字签名中的作用 → SC-06"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-SC-06",
+      "chapter": "SC",
+      "name_zh": "数字签名的产生与验证",
+      "name_en": "Producing and verifying digital signatures",
+      "summary": "说明数字签名怎样产生（消息用散列算法得到摘要，再用发送方私钥加密）；接收方怎样验证（用发送方公钥解密得到摘要，对收到的消息重新散列并比较）；数字证书在其中提供可信公钥的作用。",
+      "cues": [
+        "Explain how a digital signature is produced before the message is sent",
+        "Explain how the digital signature can be checked on receipt / how a digital signature is used to verify a message",
+        "Explain the role of a digital certificate in creating a digital signature",
+        "Explain why a digital certificate is required to validate a digital signature"
+      ],
+      "not": [
+        "P3-SC-05：证书本身是什么、怎样获取 → SC-05",
+        "P1-SP-05：AS 的数字签名概念"
+      ],
+      "syllabus": ["17.1"]
+    },
+    {
+      "code": "P3-AI-01",
+      "chapter": "AI",
+      "name_zh": "图的结构与在 AI 中的用途",
+      "name_en": "Graphs: structure and use in AI",
+      "summary": "描述图的结构（结点/顶点表示实体、边表示关系、可带权、有向或无向）；说明图在 AI 中的用途（表示关系与路线、神经网络、寻路）。考纲注明不要求写建图或搜索图的算法。",
+      "cues": [
+        "Explain the use of graphs to aid Artificial Intelligence (AI)",
+        "Describe the purpose of a graph when used in an AI system",
+        "Describe the structure of a graph as used in an AI system"
+      ],
+      "not": [
+        "P3-AI-02：A* 与 Dijkstra 的目的与区别 → AI-02",
+        "P3-CT-05：把图作为一种 ADT 列出 → CT-05"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-02",
+      "chapter": "AI",
+      "name_zh": "A* 与 Dijkstra 算法：目的与区别",
+      "name_en": "A* and Dijkstra’s algorithms: purpose and differences",
+      "summary": "说出两种算法的目的（在图上找两点间最短/代价最小路径）；说出一种寻路算法的名字；说明 A* 与 Dijkstra 的区别（A* 用启发函数 h 优先探索更有希望的结点，Dijkstra 探索所有可能路线）。",
+      "cues": [
+        "Describe / State the purpose of (both) the A* (algorithm) and Dijkstra’s algorithm(s)",
+        "Outline the difference between the A* and Dijkstra’s algorithms / Outline how the A* algorithm is different from Dijkstra’s algorithm",
+        "Identify one AI algorithm to find the shortest distance between two points on a graph"
+      ],
+      "not": [
+        "P3-AI-03 / P3-AI-04：在给定图上计算 → 计算题型"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-03",
+      "chapter": "AI",
+      "name_zh": "用 Dijkstra 算法求最短距离",
+      "name_en": "Applying Dijkstra’s algorithm",
+      "summary": "在带权图上从起点出发：起点设 0、其余设 ∞，每次取未访问中距离最小的结点、更新邻点的临时距离，直到全部确定；在表里写出到各结点的最短距离（MS 常 3 分过程 + 2 分答案）。",
+      "cues": [
+        "Calculate the shortest distance between the … and each of the other … using Dijkstra’s algorithm",
+        "Calculate the best path between the … node and each of the nodes in the diagram using Dijkstra’s algorithm",
+        "Show your working and write your answers in the table provided"
+      ],
+      "not": [
+        "P3-AI-04：表里有 g、h、f 列，用 A* → AI-04"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-04",
+      "chapter": "AI",
+      "name_zh": "用 A* 算法求路径",
+      "name_en": "Applying the A* algorithm",
+      "summary": "在给定启发值 h 的图上用 A*：对每个候选结点算 g（已走代价）、f = g + h，选 f 最小者扩展，在表里逐行写出计算并给出最终路径。",
+      "cues": [
+        "Calculate the path that takes the shortest time … using the A* algorithm. Show your working in the table provided",
+        "Find a (the shortest) path between the Home and School nodes using the A* algorithm",
+        "The first two rows (in the table) have (already) been completed"
+      ],
+      "not": [
+        "P3-AI-03：Dijkstra → AI-03"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-05",
+      "chapter": "AI",
+      "name_zh": "机器学习的类别",
+      "name_en": "Categories of machine learning",
+      "summary": "说出机器学习的类别；解释监督学习（带标签数据训练、预测）、无监督学习（无标签数据、发现模式与聚类）、强化学习（奖惩反馈、试错）各怎样学习、怎样训练、相互区别；把类别与描述连线。",
+      "cues": [
+        "State one category of machine learning",
+        "Draw one line from each machine learning category to its most appropriate description",
+        "Describe supervised learning and unsupervised learning / Explain how supervised learning and unsupervised learning differ / are trained",
+        "Explain how unsupervised learning takes place in machine learning",
+        "Explain what is meant by Reinforcement Learning in relation to Artificial Intelligence"
+      ],
+      "not": [
+        "P3-AI-06：深度学习、人工神经网络 → AI-06（连线题里深度学习只占一条线时仍归本题型）",
+        "P3-AI-07：回归方法、反向传播 → AI-07"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-06",
+      "chapter": "AI",
+      "name_zh": "人工神经网络与深度学习",
+      "name_en": "Artificial neural networks and deep learning",
+      "summary": "解释人工神经网络（仿人脑的输入层、隐藏层、输出层，带权连接）怎样帮助机器学习；描述深度学习（多隐藏层、从大量非结构化数据中找隐藏模式）及使用理由、应用例子、怎样更有效（更多隐藏层）；用了神经网络的 AI 子领域是什么。",
+      "cues": [
+        "Explain what is meant by the term artificial neural network",
+        "Explain how artificial neural networks enable machine learning / Explain the use of artificial neural networks in Deep Learning",
+        "Describe (what is meant by) deep learning / Explain what is meant by Deep Learning in relation to AI",
+        "Outline the reasons for using deep learning",
+        "State the reason for having multiple hidden layers in an artificial neural network"
+      ],
+      "not": [
+        "P3-AI-07：专门问反向传播或回归 → AI-07（描述深度学习时顺带一分提到反向传播，不加副题型）",
+        "P1-EO-04：AS 的 AI 应用"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-AI-07",
+      "chapter": "AI",
+      "name_zh": "反向传播与回归",
+      "name_en": "Back propagation of errors and regression",
+      "summary": "描述误差反向传播（输出与期望比较、误差从输出层向回传、调整各层权重、反复迭代）；解释回归方法（监督学习技术，找输入与连续输出变量之间的关系以作预测）。核验语料 2 次，考纲 18.1 独立要求。",
+      "cues": [
+        "Describe the back propagation of errors method in Machine Learning",
+        "Explain what is meant by regression methods in relation to machine learning"
+      ],
+      "not": [
+        "P3-AI-06：整体描述深度学习或神经网络 → AI-06"
+      ],
+      "syllabus": ["18.1"]
+    },
+    {
+      "code": "P3-CT-01",
+      "chapter": "CT",
+      "name_zh": "线性查找与二分查找：条件与步骤",
+      "name_en": "Linear and binary search: conditions and method",
+      "summary": "说出二分查找的前提（数据有序）；用文字描述二分查找的步骤（取中点、比较、舍去一半、重复直到找到或范围为空）；比较线性查找与二分查找的方法。不写代码；比较时只问效率归 CT-04。",
+      "cues": [
+        "State the necessary condition for a binary search / State a condition that must be true for an array to be searchable for a binary search",
+        "Describe how to perform a binary search",
+        "Compare the methods used by the linear and binary search algorithms to find an item"
+      ],
+      "not": [
+        "P3-CT-02：写或补全查找的伪代码 → CT-02",
+        "P3-CT-04：问性能如何随数据量变化、大 O → CT-04（「Compare the methods … Refer to Big O」按得分点多数，见指南）"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-02",
+      "chapter": "CT",
+      "name_zh": "写或补全查找算法",
+      "name_en": "Writing or completing a search algorithm",
+      "summary": "写出或补全线性查找、二分查找的伪代码（含函数形式）：初始化上下界与标志、条件循环（找到或范围为空/到末尾）、取中点 DIV 2、比较后移动上下界、输出或返回位置；也包括补全变量说明表。",
+      "cues": [
+        "Complete this pseudocode algorithm for a linear search",
+        "Complete the given pseudocode to find an item in a 1D array … using a binary / linear search",
+        "Complete this pseudocode binary search algorithm",
+        "Complete the pseudocode for the function to perform a binary search on …",
+        "Complete the following table to define the variables used in the function"
+      ],
+      "not": [
+        "P3-CT-08 / P3-CT-09：沿链表或二叉树指针查找 → 对应 ADT 题型",
+        "P3-FP-10：在随机文件中逐个位置查找记录 → FP-10",
+        "P2-DT-05：AS 卷在一维数组里线性查找"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-03",
+      "chapter": "CT",
+      "name_zh": "写或补全排序算法",
+      "name_en": "Writing or completing a sort algorithm",
+      "summary": "写出或补全插入排序（取出当前元素、内层循环把较大元素后移、插回空位）或冒泡排序（相邻比较交换、可同步交换并行数组）的伪代码，常要求按题给标识符、升序或降序。",
+      "cues": [
+        "Write the pseudocode for an insertion sort to sort the array into ascending order",
+        "An insertion sort algorithm is used to sort … Complete the pseudocode",
+        "The given algorithm is a simple bubble sort … Complete the algorithm",
+        "Use the identifiers from the table in your algorithm"
+      ],
+      "not": [
+        "P3-CT-04：问影响排序性能的因素或排序的大 O → CT-04",
+        "P2-DT-08：AS 卷的冒泡排序"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-04",
+      "chapter": "CT",
+      "name_zh": "算法效率与大 O 表示法",
+      "name_en": "Algorithm efficiency and Big O notation",
+      "summary": "说出线性查找 O(n)、二分查找 O(log n)、插入排序最坏 O(n²) 等；说明 O(log n) 的含义；描述查找时间随数据量增加怎样变化；说明影响排序性能的因素（数据量、初始有序程度）；用大 O 比较两种算法；大 O 用于描述时间与空间复杂度。",
+      "cues": [
+        "State the Big O notation for time complexity of a linear search / for the worst-case time complexity of the insertion sort",
+        "Describe the meaning of O(log n) as it applies to a binary search algorithm",
+        "Compare the performance of the algorithms … using Big O notation",
+        "Describe the performance of a binary search in relation to the number of data items … Refer to Big O notation",
+        "State two factors that may affect the performance of a sorting algorithm / Describe the factors … that affect the time efficiency"
+      ],
+      "not": [
+        "P3-CT-01：只问查找的前提与步骤 → CT-01",
+        "P3-CT-02 / P3-CT-03：写代码 → 对应题型"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-05",
+      "chapter": "CT",
+      "name_zh": "ADT 的概念、选择与相互实现",
+      "name_en": "ADTs: identifying, choosing and implementing one ADT from another",
+      "summary": "列举 ADT（栈、队列、链表、二叉树、图、字典）；说明栈的其他用途；比较栈与队列（LIFO / FIFO）、说明某场合（打印任务）为何用队列；说明用链表而不是数组实现栈的理由；说明怎样用两个栈实现队列等「由另一种 ADT 实现」；指出链表结构可怎样改进（空闲表）。考纲还列出字典 ADT，语料尚未出现。",
+      "cues": [
+        "Identify two ADTs other than a stack / Identify two other ADTs",
+        "State two other uses of a stack",
+        "Explain the reasons why a queue ADT works better than a stack ADT in …",
+        "Compare and contrast the queue and stack Abstract Data Types (ADT)",
+        "Justify the use of a linked list instead of an array to implement a stack",
+        "Explain how a new element can be added to the queue if it is implemented using two stacks"
+      ],
+      "not": [
+        "P3-CT-06 ～ P3-CT-09：针对某个 ADT 写声明、补全代码、画结点或改指针 → 对应 ADT 题型",
+        "P3-CT-11：栈为何适合实现递归 → CT-11",
+        "P2-DT-12：AS 卷的 ADT 概念"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-06",
+      "chapter": "CT",
+      "name_zh": "用数组实现栈",
+      "name_en": "Implementing a stack with an array",
+      "summary": "按题给标识符表写出栈的常量、数组与指针声明；写初始化过程（底指针、顶指针取值）；补全 Push / Pop（判满、判空、移动顶指针、返回或输出数据）；写调用 Push / Pop 的语句；补全标识符说明表。",
+      "cues": [
+        "A stack is to be set up / implemented using the information in the table",
+        "Write the pseudocode for the required declarations / to declare the variables, constant and array required to implement the stack",
+        "Complete the pseudocode function Pop() / the procedure to add a data item onto the stack",
+        "Write pseudocode for a procedure to initialise the top and bottom pointers",
+        "The function StackFull() checks whether a stack is full"
+      ],
+      "not": [
+        "P3-CT-07：队列 → CT-07",
+        "P3-CT-05：只比较栈与其他 ADT、说用途 → CT-05",
+        "P2-DT-16：AS 卷用数组实现栈"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-07",
+      "chapter": "CT",
+      "name_zh": "用数组实现队列",
+      "name_en": "Implementing a queue with an array",
+      "summary": "按题给信息写出队列的常量、数组、队首/队尾指针与长度的声明；补全入队、出队（判空判满、循环回绕、长度增减）与初始化代码；补全标识符说明表。",
+      "cues": [
+        "Pseudocode is to be written to implement a queue Abstract Data Type (ADT)",
+        "Write the pseudocode to declare MaxSize, FrontPointer, RearPointer, Length and Queue",
+        "Complete the following pseudocode for the function Dequeue",
+        "Study the pseudocode and insert the identifiers to complete this table"
+      ],
+      "not": [
+        "P3-CT-05：用两个栈实现队列、队列与栈比较 → CT-05",
+        "P2-DT-16：AS 卷用数组实现队列"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-08",
+      "chapter": "CT",
+      "name_zh": "链表的操作与实现",
+      "name_en": "Linked lists: operations and implementation",
+      "summary": "在用数组（数据数组 + 指针数组 + 头指针）实现的链表上删除或插入结点后改写指针；补全沿指针查找某值并输出结果的伪代码。",
+      "cues": [
+        "A simplified linked list is used to store … It is implemented using two 1D arrays",
+        "Complete the table to show the new values of HeadPointer and NextPointer",
+        "Complete the pseudocode algorithm so that … The linked list is searched, in order"
+      ],
+      "not": [
+        "P3-CT-09：结点有左右两个指针（有序二叉树）→ CT-09，即使题干叫它 linked list",
+        "P3-CT-05：「怎样改进链表结构」「为什么用链表实现栈」→ CT-05",
+        "P2-DT-15 / P2-DT-16：AS 卷的链表"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-09",
+      "chapter": "CT",
+      "name_zh": "二叉树：结点图、存储表与查找",
+      "name_en": "Binary trees: node diagrams, storage tables and searching",
+      "summary": "把有序二叉树画成带左指针、数据、右指针的结点图（-1 表示空指针）；把结点填进记录数组或二维数组表（RootPtr、LeftPtr、RightPtr）；补全在记录数组表示的二叉树中查找某值的函数。",
+      "cues": [
+        "The following diagram shows an ordered binary tree",
+        "A linked list of nodes is used to store … Each node consists of a left pointer, the data and a right pointer",
+        "Complete this linked list / diagram",
+        "A user-defined record structure / A 2D array is used to store the nodes … Complete the diagram",
+        "The following pseudocode represents a function that searches for an element in the array of records"
+      ],
+      "not": [
+        "P3-CT-08：单指针链表 → CT-08",
+        "P3-CT-10：「二叉树可以用递归实现」之后问递归的特点或适用 ADT → CT-10"
+      ],
+      "syllabus": ["19.1"]
+    },
+    {
+      "code": "P3-CT-10",
+      "chapter": "CT",
+      "name_zh": "递归的概念、特征与适用场合",
+      "name_en": "Recursion: meaning, essential features and when it is beneficial",
+      "summary": "描述递归（子程序用自身定义、调用自身）；说出三个基本特征（有基本情况、有一般情况、向基本情况推进）；说明何时用递归有益并举例；指出可用递归实现的 ADT 或算法特征。",
+      "cues": [
+        "Describe what is meant by recursion",
+        "State (the) three essential features of recursion",
+        "Describe when the use of recursion would be beneficial and give an example",
+        "Identify one feature of an algorithm that makes it beneficial to use recursion",
+        "Identify one other ADT that a designer can implement using recursive algorithms"
+      ],
+      "not": [
+        "P3-CT-11：栈在执行或翻译递归时的作用 → CT-11",
+        "P3-CT-12：追踪给定递归代码 → CT-12"
+      ],
+      "syllabus": ["19.2"]
+    },
+    {
+      "code": "P3-CT-11",
+      "chapter": "CT",
+      "name_zh": "递归与栈：编译器怎样实现递归",
+      "name_en": "Recursion and the stack: what a compiler does",
+      "summary": "解释为什么用栈实现递归（LIFO，每次调用把返回地址、参数、局部变量压栈，到基本情况后逐层弹出——展开 unwinding）；说明编译器翻译递归代码时怎样用栈。核验语料 2 次，考纲 19.2 独立要求。",
+      "cues": [
+        "Explain the reasons why a stack is (a suitable ADT) used to implement recursion / when a recursive algorithm is executed",
+        "Explain how a compiler makes use of a stack when translating recursive programming code"
+      ],
+      "not": [
+        "P3-CT-10：递归本身的定义与特征 → CT-10",
+        "P3-CT-05：栈的其他用途列举 → CT-05"
+      ],
+      "syllabus": ["19.2"]
+    },
+    {
+      "code": "P3-CT-12",
+      "chapter": "CT",
+      "name_zh": "追踪递归算法",
+      "name_en": "Tracing a recursive algorithm",
+      "summary": "按给定递归函数或过程逐次调用，填写追踪表（调用序号、参数、返回值或数组内容的变化）。考纲还要求写递归算法，语料尚未出现单独的写递归题；出现时也归本题型。",
+      "cues": [
+        "This function calculates … and uses recursion … Complete the trace table",
+        "The recursive procedure … is defined as follows … Complete the trace table"
+      ],
+      "not": [
+        "P3-CT-10：只问递归的概念 → CT-10",
+        "P2-SD-07：AS 卷的非递归追踪表"
+      ],
+      "syllabus": ["19.2"]
+    },
+    {
+      "code": "P3-FP-01",
+      "chapter": "FP",
+      "name_zh": "编程范式",
+      "name_en": "Programming paradigms",
+      "summary": "描述命令式（过程式）、声明式、面向对象、低级编程各是什么；给出代码片段判断属于哪种范式；把范式与描述连线。核验语料 0 次（只在 2021 扩展卷出现），考纲 20.1 独立要求而保留。",
+      "cues": [
+        "Describe what is meant by an imperative (procedural) / a declarative programming language",
+        "Identify the programming paradigm for each of these program code examples",
+        "Draw one line from each programming paradigm to its most appropriate description"
+      ],
+      "not": [
+        "P3-FP-04：OOP 术语 → FP-04",
+        "P3-FP-07 ～ P3-FP-09：写声明式子句 → 对应题型"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-02",
+      "chapter": "FP",
+      "name_zh": "寻址方式与汇编代码执行结果",
+      "name_en": "Addressing modes and the result of running assembly code",
+      "summary": "给出内存内容，说出每条指令（LDM #n、LDD、LDI 等）的寻址方式并写出执行后 ACC 的值；写出一段已写好的汇编代码运行后各标签变量的值。",
+      "cues": [
+        "State the addressing mode and the contents of ACC after each instruction has been executed",
+        "State the value of Answer after the code described in part (a) has executed",
+        "Show the values of the variables … in the following table, after the code has been run"
+      ],
+      "not": [
+        "P3-FP-03：要写出汇编代码 → FP-03",
+        "P1-PF-08 / P1-PF-09：AS 卷的寻址方式与指令执行（P3 的行一律用 P3 题型）"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-03",
+      "chapter": "FP",
+      "name_zh": "用给定指令集写汇编代码",
+      "name_en": "Writing assembly code with a given instruction set",
+      "summary": "只用题给指令（LDM、LDD、LDI、ADD、SUB、STO 和 <label>: <data>）写汇编代码：存常量并加标签、按地址取数、间接寻址、加减、把结果存进标签变量，并在表中写出标签的初始化。",
+      "cues": [
+        "Use only the given instruction set to write assembly language code to:",
+        "Write assembly language code, using only the given instruction set to:",
+        "store … as a named constant / labelled variable",
+        "Show the initialisation of the constant and Answer in the table provided"
+      ],
+      "not": [
+        "P3-FP-02：只读代码、说寻址方式或结果 → FP-02",
+        "P1-PF-09 / P1-PF-10：AS 卷的汇编"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-04",
+      "chapter": "FP",
+      "name_zh": "OOP 术语",
+      "name_en": "Object-oriented programming terms",
+      "summary": "定义或描述对象、类、属性、方法、实例、继承、多态、封装、getter、setter、包含（聚合）；说明属性为什么设为 PRIVATE；类的结构；对象与类的区别；术语与描述连线或填表。",
+      "cues": [
+        "Define these Object-Oriented Programming (OOP) terms",
+        "Describe what is meant by the terms properties, methods and inheritance",
+        "Draw one line from each OOP term to its most appropriate description / Complete the table by filling in the missing OOP terms and descriptions",
+        "Identify the OOP feature / term …",
+        "Explain why the properties have been set to PRIVATE / State one reason why the attributes would be declared as PRIVATE",
+        "Outline the structure of a class / Give three differences between an object and a class"
+      ],
+      "not": [
+        "P3-FP-05：补全类图 → FP-05",
+        "P3-FP-06：写 CLASS … ENDCLASS 伪代码 → FP-06",
+        "P3-DR-01：把 class 作为一种组合类型列出 → DR-01"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-05",
+      "chapter": "FP",
+      "name_zh": "补全类图",
+      "name_en": "Completing a class diagram",
+      "summary": "根据描述补全类图或继承图：属性名与数据类型、构造方法、getter/setter（setter 带参数及类型）、子类特有的属性与方法、继承箭头。",
+      "cues": [
+        "Complete this class inheritance diagram to show the properties, methods and inheritance",
+        "Complete the class diagram for … to include:",
+        "Complete the diagram for the object …"
+      ],
+      "not": [
+        "P3-FP-06：要写 CLASS … ENDCLASS 伪代码 → FP-06",
+        "P4：P4 的 OOP 是写 Python 类"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-06",
+      "chapter": "FP",
+      "name_zh": "用伪代码定义类",
+      "name_en": "Defining a class in pseudocode",
+      "summary": "按伪代码指南写或补全 CLASS … ENDCLASS：PRIVATE 属性及类型、PUBLIC PROCEDURE NEW(…) 构造方法、在构造方法里给属性赋值；也包括把单个属性声明为 PRIVATE 的语句。",
+      "cues": [
+        "Complete the pseudocode for the class … to enable objects to be created",
+        "Write pseudocode statements to declare the … class, its attributes and the constructor",
+        "Write the declaration in pseudocode for … as PRIVATE"
+      ],
+      "not": [
+        "P3-FP-05：类图 → FP-05",
+        "P3-DR-03：TYPE … ENDTYPE 记录 → DR-03",
+        "P4：P4 写 Python 类（class、__init__）"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-07",
+      "chapter": "FP",
+      "name_zh": "声明式编程：写事实",
+      "name_en": "Declarative programming: writing facts",
+      "summary": "按给定事实库的谓词名与参数顺序，把文字信息写成新的事实子句（小写常量、以句点结束），一句一分。",
+      "cues": [
+        "More facts are to be included … Write the additional clauses to record these facts",
+        "Write additional clauses / facts to represent this information"
+      ],
+      "not": [
+        "P3-FP-08：写目标或求目标的返回结果 → FP-08",
+        "P3-FP-09：写带 IF 的规则 → FP-09"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-08",
+      "chapter": "FP",
+      "name_zh": "声明式编程：目标及其结果",
+      "name_en": "Declarative programming: goals and their results",
+      "summary": "根据事实库写出某个目标（goal）返回的变量值；用指定变量写出查询目标，必要时用多个子目标与共享变量组合条件。",
+      "cues": [
+        "Using the variable …, the goal: … returns … Write the result returned by the goal",
+        "Write the goal, using the variable …, to find all the …"
+      ],
+      "not": [
+        "P3-FP-09：「Write this as a rule: … IF」→ FP-09",
+        "P3-FP-07：写事实 → FP-07"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-09",
+      "chapter": "FP",
+      "name_zh": "声明式编程：写规则",
+      "name_en": "Declarative programming: writing rules",
+      "summary": "把文字条件写成规则：规则头 IF 子目标1 AND 子目标2 AND NOT 子目标3，变量与谓词参数位置对应正确；MS 常按每个子目标一分 + 运算符与标点全对一分。",
+      "cues": [
+        "Write this as a rule: … IF",
+        "… may choose … if … and … is not / has not already …"
+      ],
+      "not": [
+        "P3-FP-08：写查询目标或其结果 → FP-08"
+      ],
+      "syllabus": ["20.1"]
+    },
+    {
+      "code": "P3-FP-10",
+      "chapter": "FP",
+      "name_zh": "文件处理伪代码",
+      "name_en": "File-processing pseudocode",
+      "summary": "写或补全文件处理伪代码：随机文件 OPENFILE … FOR RANDOM、SEEK 定位、GETRECORD 读记录、PUTRECORD 写记录（记录用用户定义类型），按位置逐个查找、找空位插入、复制记录；文本文件按 READ / WRITE 打开、读到 EOF、逐行复制、关闭文件；可要求写函数头。",
+      "cues": [
+        "Complete this file handling / file-handling pseudocode",
+        "The pseudocode algorithm … uses random file access to …",
+        "… reads … records stored in a random file using the user-defined data type …",
+        "A function is required to find … in a random file"
+      ],
+      "not": [
+        "P3-DR-06 ～ P3-DR-08：文件组织、存取方式、散列的概念 → DR 题型",
+        "P2-DT-09 / P2-DT-10：AS 卷的文本文件读写",
+        "P4：用 Python 写文件处理"
+      ],
+      "syllabus": ["20.2"]
+    },
+    {
+      "code": "P3-FP-11",
+      "chapter": "FP",
+      "name_zh": "异常与异常处理",
+      "name_en": "Exceptions and exception handling",
+      "summary": "定义异常（运行时意外事件）与异常处理；举出异常的例子与原因（编程错误、用户错误、硬件故障、文件不存在、除以零）；说明为什么要写异常处理程序、怎样避免程序因异常而终止。P3 不要求写异常处理代码（那是 P4）。",
+      "cues": [
+        "Define the term exception handling / Explain what is meant by exception handling",
+        "Describe, with an example, what is meant by an exception / Explain what is meant by an exception",
+        "State / Identify two possible causes of an exception / exceptions",
+        "State the reasons for including exception handling routines when writing a program",
+        "Describe how program termination due to an exception can be avoided"
+      ],
+      "not": [
+        "P2-SD-05：AS 的错误类型（语法、逻辑、运行时）",
+        "P4：用 try / except 写异常处理代码"
+      ],
+      "syllabus": ["20.2"]
+    }
+  ]
+}
