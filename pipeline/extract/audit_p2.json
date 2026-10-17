@@ -250,9 +250,10 @@
     "ms_excerpt": "Simple Solution: DECLARE ThisInt, Count : INTEGER Count  0 FOR ThisInt  100 TO 200 IF ThisInt MOD 10 = 7 THEN OUTPUT ThisInt Count  Count + 1 ENDIF NEXT ThisInt OUTPUT Count Mark as follows: 1 Declare loop variable and counter as integers, counter initialis",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "6fff22bfd6e078cfc95ed51b07d5025f3a5daf5ff0e0edc561b764b7932bd103",
+    "row_sha256": "295ad187f7e17a2f3710e706bbd75ce438e789614a15ea7e8476d25a00ffefb6",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_21:7(a)",
@@ -265,9 +266,10 @@
     "ms_excerpt": "FUNCTION IsPalindrome(InString : STRING) RETURNS BOOLEAN DECLARE IsPal : BOOLEAN DECLARE Index, Num : INTEGER DECLARE CharA, CharB : CHAR IsPal  TRUE Index  1 Num  INT(LENGTH(InString) / 2) WHILE Index <= Num AND IsPal = TRUE CharA  MID(InString, Index, 1)",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "a92a825fcc2be5768a60c04229b4285a22a285d1ed5bb954099200326aeff45f",
+    "row_sha256": "1166a1ab3222891558a4a5154f0c94f04efad435c454d4e30905dbf7691c16db",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_21:1(b)(i)",
@@ -325,9 +327,10 @@
     "ms_excerpt": "PROCEDURE SearchDuplicates() DECLARE IndexA, IndexB : INTEGER DECLARE ThisPassword, ThisValue : STRING DECLARE Duplicates : BOOLEAN Duplicates  FALSE IndexA  1 WHILE Duplicates = FALSE AND IndexA < 500 ThisValue  Secret[IndexA, 2] IF ThisValue <> \"\" THEN Th",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "b6933140b95d39dd66fe9695e42cb805b838467b96b8653268b80ef82d01d8eb",
+    "row_sha256": "ae835b52212f26a2dfb6b0b2c1d7325e2dc7aa4c466fe4d097c00bc50e045e0a",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_22:1(c)",
@@ -340,9 +343,10 @@
     "ms_excerpt": "One mark per bullet point to Max 2  A description of what the identifier is used for / the purpose of the identifier  The data type of the identifier  The number of elements of an array // the length of a string  An example data value  Value of any consta",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "29be74c20c6b3beab0643b30ce894533c3f054cd825fc28a5f55e7a5f482f1da",
+    "row_sha256": "45cddaecf94771a0abf8c24d1bea6492aa251593b1ec683eb99024598ac41ff4",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_22:2",
@@ -370,9 +374,10 @@
     "ms_excerpt": "One mark per point Check that:  Start and/or Num are >= 1 // positive  Length of InString is \"sufficient\" for required operation",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "93a5a0881a91fbbaf1056a7bbf63b88d9b0077e465e570df1842d54c11739aea",
+    "row_sha256": "134335a66aebd70cc2df5e6e75d6990cf8f7fd89940d927fbe460f3900571095",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_23:4",
@@ -400,9 +405,10 @@
     "ms_excerpt": "Description of error: (Max 2 marks)  If the final line of the file is not written into array element 3  then outputting the elements in the sequence 1 to 3 will give the error. Explanation of error correction: (Max 2 marks)  Attempt at description of 'shuff",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "36a0099b73eb253bbc49f55bdaebe70e191725257ddaa024a876531f65cb5a80",
+    "row_sha256": "6f02d11d7e515257d12e4f20d10d8362e6b9e2e67c31e237570ee26a447c31af",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_23:5(b)(ii)",
@@ -415,9 +421,10 @@
     "ms_excerpt": "Use of any 'impossible' field value, for example:  An EmployeeNumber field. e.g. < 1  An empty string / impossible string e.g. \"EMPTY\" for name or department  DOB a long time ago...  Zero / Negative value for attendance",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "be88d5c661dcae8d7e195bea7cc3e46fa5456af7cd7b9c524e5fba5dbc5c05a3",
+    "row_sha256": "245862b05054361513068cf853c185646eff32a5ec34f95c183b9460de027764",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_23:7(c)",
@@ -430,9 +437,10 @@
     "ms_excerpt": "Correct answers include: LineNum  (LineNum MOD 3) + 1 // ((LineNum + 3) MOD 3) + 1 One mark for assignment to LineNum making any use of MOD One for completely correct statement",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "25b41f6760363358782290fe4a3aa9dc2cd3d360dce6e4157aa7d5d34edca730",
+    "row_sha256": "007faefb7c0ca4c69db65d17c463b2d7447488f1812a3d9e36d9b2bc563dd869",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_23:8(b)",
@@ -460,9 +468,10 @@
     "ms_excerpt": "For example: Could set a breakpoint to stop the program at a particular point / instruction then the value of variables could be checked using a report/watch window while single stepping can be used to execute one statement/line at a time. Marks available as f",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "a7e00f48cc7b3db07bdac61df76690609a8bbeb17bd0e818d41703bdea3fd19c",
+    "row_sha256": "aca030305a42670581d904dc6943849afea5efb4e02a00448bc9849a402d202d",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_21:1(c)(ii)",
@@ -505,9 +514,10 @@
     "ms_excerpt": "One mark for structure Structure: Record One mark for each point Advantage:  A set of data / all data related to one customer  of different types  is held under a single identifier/entity",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "1669fc5e75f7bfaa0c736747258c5fca2b4691675ba9c9dc1479a623f1bcbed1",
+    "row_sha256": "4760e778e4da0e922734341934b591d16928bf9a2a943332cc176a001abd1343",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_21:7(b)(i)",
@@ -520,9 +530,10 @@
     "ms_excerpt": "One mark per point:  Module-A calls the other three modules  The process is repeated",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "81e03fcde1130c78b81a31617018451397b61e1e3418c6aeca85f29c87a7ee88",
+    "row_sha256": "715cf44b973a5a22d9935e7b0760f35e178da976cf71a0008d177feb45d05053",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_22:5(c)",
@@ -535,9 +546,10 @@
     "ms_excerpt": "Could use an IDE to:  Set a breakpoint to stop the program at a certain line / statement / point  Step through the program line by line / statement by statement  checking the value of 'num' / a variable using a report / watch window One mark per bullet",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "b4855dabf4b1581b96d3bbea35bc73415405c1530bb55e21fda807a2abbbecea",
+    "row_sha256": "9ae33d218ac88ff6359674273156383afbf04b08d64c48eb5ef353faba735e0c",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_22:1(b)",
@@ -550,9 +562,10 @@
     "ms_excerpt": "One mark per bullet point:  Indentation  White space  Comments  Sensible / meaningful variable names // use of Camel Case  Capitalised keywords Note: Max 3 marks",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "ff8603b60c0cfbc065cb39251fd366955cfb7dc203dcb0ce27133225704ae73d",
+    "row_sha256": "c25c76b4c17aa5560a7544610a165f40aea692588fb5925f1d6585e3b9bd45a8",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_22:2(c)",
@@ -565,9 +578,10 @@
     "ms_excerpt": "One mark per array definition bullet:  A (1D) array containing 7 elements  of type STRING One mark per Step: Step1: Assign value \"Sunday\" to first element, \"Monday\" to second element etc. Step2: Use the function DAYINDEX() to return / find the day number fro",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "4acddf501824ba4ff862dc4d8881521f28395ea11358110e67cc74f4eeb578df",
+    "row_sha256": "25d522e775a2d269658dc2a1d2a998ccac829a29a8cdf4b9ad2539a451c5bbe4",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_22:1(a)(ii)",
@@ -595,9 +609,10 @@
     "ms_excerpt": "One mark for each piece of information and matching justification:  postal address Justification: sending an email, not a letter  payment details Justification: Nothing being bought / sold at this stage  order history Justification: Customer preference used",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "7e941d27fdeb82f0a4421216d230ee4ac2ac918e6baa92cd478c4b03b0034772",
+    "row_sha256": "10cae9aab457d98048665c41e3b05d59f018b31f5bf9a2f039a41990fe158571",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_23:8(c)(i)",
@@ -655,9 +670,10 @@
     "ms_excerpt": " To filter out information (that is not necessary to solve the problem) // to include only essential information",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "4241b9784c2d3378572d1e6cfbf6abe7db40b1e4928268d647a46dacef095317",
+    "row_sha256": "64cf757b10504025323cc8ebd68435c1c96c202485ba1bd27b13b13d7f255be0",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_23:6(a)",
@@ -670,9 +686,10 @@
     "ms_excerpt": "Max 7 marks PROCEDURE Select(Start, End : INTEGER) DECLARE ThisNum, Total: INTEGER DECLARE ThisString : STRING DECLARE Char1, Char2 : CHAR FOR ThisNum  Start+1 TO End-1 ThisString  NUM_TO_STR(ThisNum) Char1  RIGHT(ThisString, 1) Char2  LEFT(RIGHT(ThisStrin",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "3806099244545394ee59a17d3c30bf84787155a1d822416617906bfb69f9a798",
+    "row_sha256": "fff4e71da2a41edaa9a3de6d89606aef48eeffc806a648a5306849cf6c0e70e0",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_21:1(c)(i)",
@@ -730,9 +747,10 @@
     "ms_excerpt": "Assignment statement Data type A  LEFT(MyName, 1) CHAR / STRING B  Total * 2 INTEGER / REAL C  INT(ItemCost) / 3 REAL D  \"Odd OR Even\" STRING One mark per row",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "6e1de40c9d717ae6143d8d02051f43e97420664a51f16f56776cfa301c85fcbe",
+    "row_sha256": "3baf845631c306ceabdff53fe0b17203f8e79dedad1c7a1aeb2e46adab8b73f5",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_21:5(b)(ii)",
@@ -760,9 +778,10 @@
     "ms_excerpt": "Expression MyInt  INT (3.1415926) MyChar  MID (\"Elwood\", 3, 1) Any of:  MyString  NUM_TO_STR (INT (27.509))  MyString  CHR (INT (27.509))  MyString  TO_UPPER( NUM_TO_STR( 27.509))  MyString  TO_LOWER( NUM_TO_STR( 27.509)) Any of:  MyInt  STR_TO_NUM",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "eab4029f85b672f2d467d4e42f56ecdedf66e4bc1e88ca9f634f7d7b05712a74",
+    "row_sha256": "ffcf52cc8850e4e50978def3b6f26be52e3c9c172bd9b66fdda1b4c3e9062844",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_22:8(c)",
@@ -775,9 +794,10 @@
     "ms_excerpt": "Example: PROCEDURE Stage_2(F1, F2 : STRING) DECLARE Line : STRING DECLARE Count : INTEGER Count  0 OPEN F1 FOR READ OPEN F2 FOR APPEND WHILE NOT EOF(F1) READFILE F1, Line Line  DeleteSpaces(Line) Line  DeleteComment(Line) IF Line <> \"\" THEN WRITEFILE F2, Li",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "a1fb2642eac02bb01d828c1eaabb60493a6187b0d8a252b7ebbeedb19543342a",
+    "row_sha256": "c7dfa6d580ede4e87b31b1c1e0833bb60056f60c41e5e7394442a3acfb90ee81",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_22:6(b)(iii)",
@@ -805,9 +825,10 @@
     "ms_excerpt": "One mark for:  Values are delimited by a special character / a separator character  First character indicates sample length Max 1 mark",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS）；已看 QP/MS 原页",
-    "row_sha256": "bcaa9f3bcf55e7d81dacb1909d1f37180470997b5ad341a04a41cbfba43daa0c",
+    "row_sha256": "fd3546f088b32cf57c3b521c0e82147e6af514c2f9bb7f75c819d21a10210149",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_22:8(b)",
@@ -820,9 +841,10 @@
     "ms_excerpt": "Example algorithm based on finding position of first non-space character and then using substring function: FUNCTION DeleteSpaces(Line : STRING) RETURNS STRING DECLARE NewLine : STRING DECLARE EndOfLeading : BOOLEAN DECLARE Count, NumSpaces : INTEGER DECLARE N",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "b10748153feb08d067567f2dd2f4de9b2b56b96423aad82d9c170eed573bc749",
+    "row_sha256": "3329d7bcc5c8cbb5be4f93e1f6a8444733f4b1a6d63291e0679fd896f76aea24",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_23:2(a)",
@@ -925,9 +947,10 @@
     "ms_excerpt": "Example solution: PROCEDURE Sort() DECLARE Temp, J, Boundary : INTEGER DECLARE NoSwaps : BOOLEAN Boundary  1999 REPEAT NoSwaps  TRUE FOR J  1 TO Boundary IF Reading[J, 1] > Reading[J+1, 1] THEN //first swap sensor value Temp  Reading[J, 1] Reading[J, 1]  ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "5f943a1ffe4e2c88292a7d8c4c3556271abe7c0b35aec01352ef7354cc75fb5b",
+    "row_sha256": "4645a2bb9b38506a7517434973cba8d56596636ec503772c0f7a41f215534160",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s25_21:2(c)",
@@ -1105,9 +1128,10 @@
     "ms_excerpt": "Example solution: FUNCTION RollDice(NoOfTimes : INTEGER) RETURNS REAL DECLARE RollValue : INTEGER DECLARE Average : REAL DECLARE Count : INTEGER DECLARE Sum : INTEGER Sum  0 FOR Count  1 TO NoOfTimes RollValue  INT(RAND(6)) + 1 OUTPUT RollValue Sum  Sum + ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "98393119fad4adc7407d0541b816e93f0ddbf9754962908bd1332cff8a0e25c7",
+    "row_sha256": "d1184e5685e794f44ca778c823b1f6e8a8e2c53215490afe01f064d75b324536",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s25_23:1(b)",
@@ -1150,9 +1174,10 @@
     "ms_excerpt": "Example solution: FUNCTION RejectDescription(ThisReject : STRING) RETURNS STRING DECLARE Description : STRING Description  MID(ThisReject, 7, Part 1 LENGTH(ThisReject) - 6) Part 2 OR: Description  RIGHT(ThisReject, LENGTH(ThisReject) - 6) Part 1 Part 2 RETUR",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "15a687c129db9a96d4b2cff52cdb514174a00e3cb41934c1bb7414c94db706b6",
+    "row_sha256": "c0eb00f9771b4054667dffdff164aecc823cb491d7881818f2f4cc39fff3a71f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s26_21:9(c)(ii)",
@@ -1165,9 +1190,10 @@
     "ms_excerpt": "Example solution: DECLARE BoolView : BOOLEAN DECLARE MyRoomType : CHAR DECLARE InputView, MyRoomGrade : STRING DECLARE Floor, Room : INTEGER OUTPUT \"Room type - S/D/F ?\" INPUT MyRoomType OUTPUT \"View - True/False ?\" INPUT InputView IF TO_UPPER(InputView) = \"TR",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "4c795db7ac4333dd5f91fec6ec6bd461cfd80824f861729499cdc99f51d6e2c1",
+    "row_sha256": "189f2d6a2e7eac1e90564aeddf2093d4c0f489f116b8a5ed7e260d957e069bd4",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s26_21:3(a)",
@@ -1240,9 +1266,10 @@
     "ms_excerpt": "Mark Schme One – loop used to form return string (See MS Two for solutions using LEFT()/MID() to form return string) Example solution FUNCTION AddPadding() RETURNS STRING CONSTANT Space = ' ' DECLARE Plaintext : STRING DECLARE LenOfPlaintext : INTEGER DECLARE ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "4ac208ee3836e38e62cf160cde75225b8f276985c3e89b36bf787a900cb34720",
+    "row_sha256": "8de4d53b92db8638d85e0dbb9620676fa8460ad1b99ae4a6d58b1f3c827051fb",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s26_22:2(c)",
@@ -1630,9 +1657,10 @@
     "ms_excerpt": "One mark for each point (Max 7) as follows: 1 Function heading and ending including parameter and return type 2 Declaration and initialisation of local Integer for Count 3 OPEN in READ mode and CLOSE 4 Conditional loop until EOF() 5 Read a line in a loop 6 If ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "383af547ecd48abb68e0118f6ca0e86b1520a65671562e3fbd2a715e302da45c",
+    "row_sha256": "fddc7fa735c85cdcaf838898d0e6f20f5b048fbd6c2aab80084cc6faec88df2f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w22_21:6(a)",
@@ -1705,9 +1733,10 @@
     "ms_excerpt": "One mark per point (Max 6): 1 Procedure heading and ending including parameters 2 Conditional loop containing incrementing Index... 3 ...terminating when ErrNum found 4 ...terminating when ErrCode[Index] > ErrNum (i.e. ErrNum not found) 5 ... OR after element ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "498b6b798f35afe0bb7a521fed1ecef99719e39532e36dd11b91099f197f676d",
+    "row_sha256": "8d727e5c23fc714fd6d1a6eef983a89364bf96da3d4f798376c635ab6d551228",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w22_22:7(b)",
@@ -1720,9 +1749,10 @@
     "ms_excerpt": "One mark per point (Max 8): 1 Procedure heading and ending as shown 2 Conditional loop correctly terminated 3 An inner loop 4 Correct range for inner loop 5 Comparison (element J with J+1) in a loop 6 Swap elements in both arrays in a loop 7 'No-Swap' mechanis",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "335d2db8211aaae5037f5095f6d8639bed614b6bc99c9818cf11d45681177c49",
+    "row_sha256": "eb87339575bfde1260664fdc45ab892d59b09b4c7218e13ea22e3ab39fe15bc9",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w22_23:3",
@@ -1810,9 +1840,10 @@
     "ms_excerpt": "MP1 Num > Min should be Num < Min MP2 Count & 1 should be Count + 1 MP3 NextInput  \"END\" should be NextInput = \"END\"",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "628bdbdb16c09940d33075889b159cdf9ffdca17200bc527d7b1be6119d74315",
+    "row_sha256": "152fb4268d795f5e839a067e6ba63244361fb1b455c941608ceb9f3589ecebd6",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w23_21:8(d)",
@@ -1825,9 +1856,10 @@
     "ms_excerpt": "FUNCTION GetField(Msg : STRING, FieldNo : INTEGER) RETURNS STRING DECLARE RetString : STRING CASE OF FieldNo 1 : RetString  MID(Msg, 2, 3) 2 : RetString  MID(Msg, 5, 3) 3 : RetString  MID(Msg, 8, LENGTH(Msg) - 8) OTHERWISE : RetString  \"\" ENDCASE RETURN Re",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "127db1b556aa51b8ad72c01b4510fc8e52f9efc8473a979af197db3896da9ada",
+    "row_sha256": "b0282a9443ffd8bfaa382ff1e4665d3952abba5667f0de927f6f8a94a51acbc8",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w23_21:8(c)(i)",
@@ -1900,9 +1932,10 @@
     "ms_excerpt": "Example Solution PROCEDURE Count() DECLARE COdd, CEven, ThisNum : INTEGER COdd  0 CEven  0 INPUT ThisNum WHILE ThisNum <> 99 IF ThisNum MOD 2 = 1 THEN COdd  COdd + 1 ELSE CEven  CEven + 1 ENDIF INPUT ThisNum ENDWHILE OUTPUT \"Count of odd and even numbers: ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "d5c0ea2821b040916d48aabbede30d33d54b4cfff13d50f53da1eb01e4a499d5",
+    "row_sha256": "11a99b7e6185581bb8588916a748f6e86301f8b5a5ad05415f1fee9e3b63fe6b",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w23_22:2(b)",
@@ -1930,9 +1963,10 @@
     "ms_excerpt": "Solution using a loop Example solution – using a loop FUNCTION GetPort(ThisDest : STRING) RETURNS INTEGER DECLARE Index, DNum, Port : INTEGER DNum  STR_TO_NUM(ThisDest) Index  1 Port  -1 REPEAT IF RouteTable[Index, 1] <> -1 THEN IF DNum >= RouteTable[Index,",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "8b716a041c20272919d5c110ce9b6bac5cc98d50ef21654420f268defdfaa2bc",
+    "row_sha256": "8bc643f10eba21d13ed427108854895b06c7cfaf2f70d3c78772a07b3dbf8626",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w23_22:2(a)",
@@ -1990,9 +2024,10 @@
     "ms_excerpt": "Assignment statement Data type MyVar1  Total1 / Total2 REAL MyVar2  27/10/2023 DATE MyVar3  \"Sum1 / Sum2\" STRING MyVar4  Result1 AND Result2 BOOLEAN",
     "figure": true,
     "result": "题号/数据/分值及 MS 一致；QP 赋值箭头行位由文字层重建，准确位置以原页为准",
-    "row_sha256": "e490f1c8dff934b7447dd7240d9b59855bd64f4367b744ddfda204a6810b6918",
+    "row_sha256": "feaad83e0ee2c5d17885f080d4fc58335dd0d8e48e067a4870bf1357b002db82",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w23_23:1(c)",
@@ -2110,9 +2145,10 @@
     "ms_excerpt": "Example solution: PROCEDURE Timer(Mins, Secs : INTEGER) DECLARE WarningTick, EndTick : INTEGER EndTick  Tick + 1000 * ((Mins * 60) + Secs) WarningTick  EndTick - (30 * 1000) REPEAT //do nothing UNTIL Tick = WarningTick OUTPUT \"30 seconds to go\" REPEAT //do n",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "e8c2ccf8dde749fe0585f87d834abf5104d24219542e80094e7f6e765f33273d",
+    "row_sha256": "4d49b13eb1c599985ea5eb44664edcdba3854588adcb1eb7661e3dd746eb38b3",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w24_22:7(b)",
@@ -2140,9 +2176,10 @@
     "ms_excerpt": "Example solution: PROCEDURE Special() DECLARE Index : INTEGER DECLARE Filling1, Filling2 : STRING REPEAT Index  INT(RAND(35)) + 1 UNTIL Filling[Index] <> \"\" Filling1  Filling[Index] REPEAT Index  INT(RAND(35)) + 1 UNTIL Filling[Index] <> \"\" AND Filling1 <> ",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "bd12958372bcc8544904f1a7ad494384bab500d5cbfe0093ba0568fd7a650eaf",
+    "row_sha256": "67b6e07cb2041c13985f738a40dda0f8a7c5cb35fe1f98b43241e7ff9b35bb66",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w24_22:1(c)",
@@ -2185,9 +2222,10 @@
     "ms_excerpt": "Example:solution PROCEDURE GBInitialise() DECLARE GBIndex, GBMark, ThisIndex : INTEGER FOR ThisIndex  0 TO 75 Check[ThisIndex]  FALSE // initialise all values NEXT ThisIndex FOR GBIndex  1 TO 5 GBMark  GB[GBIndex] FOR ThisIndex  GBMark - 2 TO GBMark + 2 C",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "d5755bbce641d53ada73ecad31dcf4c32ec6876d564f3956cfd3f39f82cf4751",
+    "row_sha256": "07c8894b384d76ecb3c7305c0b86bdc70d0f43ec0e7ad125614e32ea7eed957e",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w24_23:1(b)",
@@ -2245,9 +2283,10 @@
     "ms_excerpt": "Pseudocode example Selection Iteration Subroutine FOR Index  1 TO 3 IF Safe[Index] = TRUE THEN Flap[Index]  0   ENDIF NEXT Index CASE OF Compound(3)   REPEAT UNTIL AllDone() = TRUE   WHILE Result[3] <> FALSE  One mark per row",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "ad7a319ce9f9b8f1001d3704a47dd0320d635a1152f0bed46b9fe9288a61aa82",
+    "row_sha256": "e013768cb1753012afaf2ae03e5ff0f99bb7ae047e7b5312ec352891e8b99297",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w25_21:8(a)",
@@ -2260,9 +2299,10 @@
     "ms_excerpt": "Example solution: PROCEDURE OKToBorrow(ThisStudentID : STRING) DECLARE Index, Count : INTEGER CONSTANT Max = 5 Count  0 Index  1 / 0 WHILE Index <= 5000 / Index <= 4999 AND Count < Max IF Loan[Index].StudentID = ThisStudentID AND __ Loan[Index].OnLoan = TRUE",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "1593243d2b4fe9d30c9efd96c0e861a20c2b3502ba5a968f4dcf49a88858821e",
+    "row_sha256": "b15c51993363551d9646d617c4641616b51dfb50fc0ccfd6ca4710698499943f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w25_21:5(a)(i)",
@@ -2350,9 +2390,10 @@
     "ms_excerpt": "Example solution: DECLARE CheckTotal : ARRAY [0:35] OF BOOLEAN DECLARE Index : INTEGER FOR Index  0 TO 35 CheckTotal[Index]  FALSE NEXT Index Mark as follows: MP1 Declaration of CheckTotal array MP2 Declaration of a loop counter MP3 Loop – with correct synta",
     "figure": true,
     "result": "题号/关键数据/分值及同题 MS 已核对；图表/代码原页已看，文字不代替图形",
-    "row_sha256": "da42de53bf1f423639ac3e12e57a9a85efcd70f40c7694abed8b58cf72854f65",
+    "row_sha256": "a031d945348c830ce004d3a22f092c069248a0f035ed1dcb99db6b29cfee0f86",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w25_22:2",
@@ -2425,9 +2466,10 @@
     "ms_excerpt": "FUNCTION Pop() RETURNS PopData DECLARE ThisPop : PopData MP 2 IF SP < 1 // SP = 0 THEN MP 3 PopData.Exists  FALSE // Stack is empty MP 1 ELSE PopData.Data  ThisStack[SP] MP 4 PopData.Exists  TRUE MP 1 SP  SP – 1 MP 5 ENDIF RETURN ThisPop` ENDFUNCTION Mark ",
     "figure": true,
     "result": "源标识符疑点：声明 ThisPop，赋值用 PopData；原文保留，needs-review",
-    "row_sha256": "2b35ca9e4c857bfb1b3ae0d1979f163f627e5bdb34424bec3603281b579cf852",
+    "row_sha256": "a381a7a1bf20b04007e50d7f49a7bece1e2e68b2b12901c13dcad09cb37fdc12",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w25_23:1(a)",
