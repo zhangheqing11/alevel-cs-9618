@@ -14,17 +14,25 @@ from pathlib import Path
 from typing import Iterable, Mapping
 
 
+# Stable machine keys; presentation labels are kept separate for Markdown/HTML.
+COMMAND_LABELS = {
+    "state": "陈述/识别/列举",
+    "describe": "描述",
+    "explain": "解释/论证",
+    "complete": "补全/绘制",
+    "write": "编写（代码/表达式/SQL）",
+    "calculate": "计算/转换",
+    "compare": "比较/评价",
+    "other": "其他",
+}
 COMMAND_GROUPS: tuple[tuple[str, tuple[str, ...]], ...] = (
-    ("state", ("state", "name", "give")),
-    ("define", ("define",)),
-    ("describe", ("describe",)),
-    ("explain", ("explain", "why")),
-    ("identify", ("identify", "identify and")),
-    ("compare", ("compare", "distinguish", "difference")),
-    ("calculate", ("calculate", "work out", "determine", "find")),
+    ("state", ("state", "identify", "give", "name", "define", "list", "label")),
+    ("describe", ("describe", "outline")),
+    ("explain", ("explain", "justify", "why", "suggest")),
+    ("complete", ("complete", "draw", "fill", "trace", "dry run", "tick", "circle", "match", "copy")),
     ("write", ("write", "code", "program", "implement", "construct")),
-    ("complete", ("complete", "fill", "trace", "dry run")),
-    ("suggest", ("suggest", "discuss", "evaluate", "justify")),
+    ("calculate", ("calculate", "convert", "show", "work out", "determine", "find")),
+    ("compare", ("compare", "evaluate", "discuss", "distinguish", "difference", "contrast")),
 )
 
 
@@ -63,11 +71,11 @@ def load_inventory(root: Path) -> dict[str, dict]:
 
 
 def command_group(command_word: object) -> str:
-    """Map the varied leading words in a paper to a compact distribution."""
+    """Group the leading command phrase; missing/unknown commands stay other."""
 
     text = re.sub(r"\s+", " ", str(command_word or "").strip().lower())
     for group, prefixes in COMMAND_GROUPS:
-        if any(text == prefix or text.startswith(prefix + " ") for prefix in prefixes):
+        if any(re.match(rf"^{re.escape(prefix)}\b", text) for prefix in prefixes):
             return group
     return "other"
 
