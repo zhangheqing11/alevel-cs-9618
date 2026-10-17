@@ -1,0 +1,366 @@
+[
+  {
+    "paper": "9618_s21_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s22_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      6,
+      8,
+      10,
+      14,
+      15
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s22_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      7,
+      9,
+      11,
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s23_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s23_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s24_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s24_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      9
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s24_33",
+    "kind": "qp",
+    "pages": [
+      10
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s25_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      11,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s25_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s25_33",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      11,
+      13,
+      14,
+      16
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s26_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s26_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_s26_33",
+    "kind": "qp",
+    "pages": [
+      2,
+      5,
+      7,
+      8,
+      10,
+      12,
+      13,
+      15
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w21_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      11,
+      12,
+      14
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w21_32",
+    "kind": "qp",
+    "pages": [
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w22_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      11
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w22_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      11
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w23_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w23_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w24_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      11,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w24_32",
+    "kind": "qp",
+    "pages": [
+      3,
+      4,
+      6,
+      7,
+      9,
+      12,
+      13
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w25_31",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      11
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w25_32",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12
+    ],
+    "status": "visually reviewed"
+  },
+  {
+    "paper": "9618_w25_33",
+    "kind": "qp",
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10
+    ],
+    "status": "visually reviewed"
+  }
+]

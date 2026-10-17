@@ -1,0 +1,50 @@
+{
+  "status": "frozen before first read of any papers/p3/pilot_* file",
+  "upstream_commit": "1759c64335bccdd8edcc03112f7ee6e3d57a8042",
+  "annotation_commit": "4a6e7fd7e17d7935e9f042d868ce241f8b5a7af8",
+  "counts": {
+    "tags": 858,
+    "split_rows": 59,
+    "markpoints": 290,
+    "low": 3
+  },
+  "sha256": {
+    "p3_markpoints.jsonl": "c370145a5159af0e5f3070e19131ef7708d9c1b8ad42e8ea64df3685e826ca96",
+    "p3_tags.jsonl": "6064b00af8e81adb2e032361c55aef6174fd31ca73115035808cdf3cb4d7c33f"
+  },
+  "input_sha256": {
+    "corpus/rows/p3/9618_s21_31.jsonl": "b065e132ad7efd322d9aaa2ee0b0354276024fff4b5ce003101ee5a662233960",
+    "corpus/rows/p3/9618_s21_32.jsonl": "c6004ac83ae9a170dd1be9af1ff2cdf089d42ad7160a3ca1608b56d0ebbfe079",
+    "corpus/rows/p3/9618_s21_33.jsonl": "d2b032e36868c402cd7959463a47d6a93b524edbc4770de823702b5cc2f8a636",
+    "corpus/rows/p3/9618_s22_31.jsonl": "a16008487a6edd7b14492666d1f76523252ae478ac7acfdcec0a2ac81ffd85b8",
+    "corpus/rows/p3/9618_s22_32.jsonl": "69f90915c3e5bd43a9d9357bb115edee57073b8a014d5f22d3f9be3646eec173",
+    "corpus/rows/p3/9618_s22_33.jsonl": "d85bbfea1f74ebf5c83efbf60f4c5a4aa2e4ec09c5db5cdbcb8ab2009b5f5dec",
+    "corpus/rows/p3/9618_s23_31.jsonl": "d00f41834bf03c393fcd124535296b4f36314f4d1f08972ea272377c38d80aef",
+    "corpus/rows/p3/9618_s23_32.jsonl": "95d0c002e4ff74dfef05a0c48602a9f4b135a895987d0e72bf0ce970b4085b61",
+    "corpus/rows/p3/9618_s23_33.jsonl": "dd4f5fc2c3a214c275b38faf2b49602c88672994796466502ae39c39626fd1ea",
+    "corpus/rows/p3/9618_s24_31.jsonl": "bdd28dbaad69522e341f1e822ae543e6ebf95a7d25d82fee0cb8f3c95891dd36",
+    "corpus/rows/p3/9618_s24_32.jsonl": "cdb0c4d0455303dd97865a5b00a26b78ea81ed3204db11a3061d4c31caada7fb",
+    "corpus/rows/p3/9618_s24_33.jsonl": "338181ac2bf6c4e20fb76f9abd8080b65e29a237f4778561c31cfa7652451032",
+    "corpus/rows/p3/9618_s25_31.jsonl": "783652bc867c669319566aa57c863a2195da44d50a475be35f1a995adcee604e",
+    "corpus/rows/p3/9618_s25_32.jsonl": "b5eb701ffdaf8b0a800fab69753e78a32a09de47703b006f21570307088cf30f",
+    "corpus/rows/p3/9618_s25_33.jsonl": "bc0b50db5e15f4e3aa36191500f50bb064cd609f564b844216365f8614d7a1b7",
+    "corpus/rows/p3/9618_s26_31.jsonl": "3194ce8a708783a7010c6b3a2cfc1c1b08cf6bd232c15b729fd177ee02fe2dd5",
+    "corpus/rows/p3/9618_s26_32.jsonl": "d0beeadbfb4d5f45fd74ea6e560688d494b3c72ac66736303f7d25598e572dea",
+    "corpus/rows/p3/9618_s26_33.jsonl": "6f855b8f0b2a2fcf80ad075d590f4bd9b0adcd4cc66caf8cb353d527586efaee",
+    "corpus/rows/p3/9618_w21_31.jsonl": "3fac4cf4f84c7605cd4eb514ffadfb9c31132146eaf8d4de327a586788162127",
+    "corpus/rows/p3/9618_w21_32.jsonl": "a99828547f8d68678aa530ef16cca36ca4b3e7bbae4042366015cf1eab5b897e",
+    "corpus/rows/p3/9618_w22_31.jsonl": "fa3534efdf9b99f094e83092e9a288df54f9fb5fb3bcdfabbffde0b3192aeb5c",
+    "corpus/rows/p3/9618_w22_32.jsonl": "4b478a88c25a35adfc1ca5da1ac7f54c582c1cec01965d03313dba40e5f11f9c",
+    "corpus/rows/p3/9618_w22_33.jsonl": "aad48166ca6d9ede1434cdc9fa5939d23ad4248533e5c51b0a0bbf1efaa189ff",
+    "corpus/rows/p3/9618_w23_31.jsonl": "2360703260cbc677017ec249e5a1a250ab662191321138df1cc65c687a0b3f1a",
+    "corpus/rows/p3/9618_w23_32.jsonl": "542981cf51843d56d92c5a3283d338ef828a1d69224f94e5428a01fa4ccd86b9",
+    "corpus/rows/p3/9618_w23_33.jsonl": "84e44518c90ce9f66eb5af04c4a439695acead1aa62bae7240e50aa3a87dc9a0",
+    "corpus/rows/p3/9618_w24_31.jsonl": "dc1e3af5e717281f3214466a31eaa1967c9fd19f2ed2b5d813866143701918d0",
+    "corpus/rows/p3/9618_w24_32.jsonl": "ffc4a79e1f075ed8574ecbd434ffda796410a508b384f2912842bf3da8d7a469",
+    "corpus/rows/p3/9618_w24_33.jsonl": "1eeb92287a346580729635cf13b137cb40783cced0240b7bc91f4c5c62017f43",
+    "corpus/rows/p3/9618_w25_31.jsonl": "f252374abf6f4bb0e4494e96f9877f9bf6064331499e9e2fe096060302abab2a",
+    "corpus/rows/p3/9618_w25_32.jsonl": "841bf135a32ea385092d8ac0975c0f12242c543aebf2532adccdb8925c35c36e",
+    "corpus/rows/p3/9618_w25_33.jsonl": "ea2debeba87a18cba20a41435192f12154a747796b600569a8a87fcda86cc837"
+  },
+  "method": "617 行按题干与同题 MS 独立判型；241 行按 equivalent_of/D35 继承；全部独立看图行及拆分候选原页已核对。"
+}
