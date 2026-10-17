@@ -143,3 +143,19 @@ T12e（从最新 origin/main 开分支 task/T12e-p3-equivalents，scope 用 T12�
 D35：与同季 _31 卷逐字相同的 119 行（T12e 正在补 equivalent_of）和已有 equivalent_of 的行，照抄 _31 卷对应行的标签与得分点。行里已有 T27 的 er 字段，apply 必须逐字保留（D33）。
 只改 tasks/scope.json 里 T31 允许的路径；P2 的 apply_p2.py 不要改（需要泛化就写进「需要总控决定」）。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T31 → apply_p3.py --check 与 pipeline/er/apply_er.py --check 都 0 改动 → push → gh pr create --base main --title "T31: tag P3 rows + split markpoints"。不要合并 PR。停下前更新 tasks/progress/T31.md 并提交。
 ```
+
+## codex-2 · T25 批 3（#30 已合并：AD-05 / AD-06，P2 练习收尾）
+
+```
+你是执行工位 codex-2，继续任务 T25（P2 真题练习文件夹），做批 3 = 最后一批（主题型 P2-AD-05 流程图 → 伪代码、P2-AD-06 用文字步骤描述算法）。批 1（#24）、批 2（#30）已合并，写法、目录结构、人工核对清单、D31 口径照原样沿用。
+先读 AGENTS.md、docs/DECISIONS.md（D1、D2、D10、D24、D25、D26、D31、D37，以及新的 D38）、tasks/T25-p2-practice.md、tasks/progress/T25.md（从记录的下一步继续）、schemas/exercise-format.md（新加了 answer.steps.md）。
+从最新 origin/main 开分支 task/T25-p2-practice-b3。题干、流程图、数组/文件定义一律对照 QP 原页转写（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/）；流程图题在 task.md 用文字或 ASCII 框图转写，并写「讲解时请对照原卷 QP p.N」，必要时像批 1 那样用原页裁切图（assets/）。
+
+本批要点：
+- 选题口径同前两批：有 markpoints、2022–25、非 extension、主题型 P2-AD-05 / P2-AD-06（当前主线约 20 行：AD-06 18、AD-05 2），一行一个练习，不跳过符合条件的行；清单写进 practice/p2/batch3_manifest.json 与 README-batch3.md。
+- D38：AD-06 练习 meta.pseudocode=false，作答模板 answer.steps.md（编号空步骤，提示“英文一句一步、不写伪代码语句、说清循环与位置 in the loop / after the loop”），人工清单逐点照该题 MS；同时写同一算法的 Python（starter.py / test_task.py / ref / ≥2 mutant 照常）。AD-05 照常用 answer.pseudo。
+- 原题算法无法有意义地自动测（例如只问“说明怎样用某数组”的 2 分题）时不硬造测试，列进 PR「需要总控决定」，其余照常做。
+- 批 3 完成后在 README 里汇总 T25 三批总数（练习数、覆盖卷数、分值），并在 tasks/progress/T25.md 标明 T25 完成。
+
+只改 tasks/scope.json 里 T25 允许的路径。交付：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T25 → push → gh pr create --base main --title "T25 batch 3: P2 practice (AD)"。PR 描述同前两批：数量、选题口径、对照原页情况、接口约定、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T25.md 并提交。
+```

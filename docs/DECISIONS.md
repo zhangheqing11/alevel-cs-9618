@@ -97,3 +97,10 @@
 | D34 | T30（#27） | P3 题型体系定为 **9 章 79 型**：考纲 15.2 布尔代数与逻辑电路单独成 `BL` 章（同 D15）；卡诺图分 BL-05 填写、BL-06 圈组与化简两型；FP-01 编程范式、SY-05 解释器因考纲独立要求保留；RISC/CISC 中断并入 HV-02，内核与低级调度并入 SY-03；得分点只拆指南 §8 所列写代码 / 类图题型，汇编、Prolog、BNF、语法图、电路不拆。新建 `papers/p3/skill_tags.json`（`extends` P2 词表，D8），收入 `random-file`、`user-defined-type` 两个新标签。 | T30 试标 3 卷 81 行全有主题型、低信心 0；2027–29 考纲 13–20 节与 2026 版逐行相同 |
 | D35 | T30（#27） | P3 有 **119 行**与同季 `_31` 卷同题号逐字相同（题干与 MS 压缩空白后相同）却没有 `equivalent_of`：多为带图行（抽取器对图形行保守不判重）。由 codex-1 在 T12 后续 PR 里核对 QP 图形也相同（渲染原页比对）后，用 `pipeline/extract/overrides.json` 补 `equivalent_of`（同 D21）；图形不同的行不补并列出。补齐前 T31 打标签对这些行照抄 `_31` 卷的标签。 | 总控复核：s21_32 14、s21_33 14、w21_32 15、s22_33 9、s23_33 15、s24_33 12、w22_33 14、w23_33 10、w24_33 16 |
 | D36 | 总控（#29 合并后） | P4 行入库后重跑 `apply_er.py`：P4 新挂 653 行，全语料 2938 / 3302 行带 `er`。D33 ④ 定案：s25 ER Paper 42 Q3 第二个 `(d)(ii)`（p.46，“generate the correct outputs … showing the updated values”）即 3(d)(iii) 测试截图，加入 `LABEL_FIXUPS`。T12d 回填的其余关键词候选（52 条）不扩大回填：现有标签抓的是各点主要技能。 | ER 原页 p.46；`9618_s25_42:3(d)(iii)` 题干为 Test your program / screenshot |
+
+## 2026-10-17 · T25 批 2 / T12e 审查
+
+| # | 来源 | 决定 | 依据 |
+|:--|:--|:--|:--|
+| D37 | T25 批 2（#30） | ①`9618_s23_21:8(b)` MP5「… OR when ThisItemNum < NewItemNum」指范例 WHILE 的第三个条件：Stock.txt 按 ItemNum 升序，读到的编号越过新编号即可提前结束；人工批改时循环含这层判断就给分，写成继续条件 `<` 或结束条件 `>` 均可。②`markpoints[].n` 是语料拆分顺序，可能与 MS 印的 MP 编号不同（如 `9618_w25_21:8(a)`：语料 MP5/MP6 拆自 MS MP5，语料 MP7 = MS MP6）；练习与题型卡在不一致处列出对照，语料不改。③LastLines 的 `shift-values` 已由 T12d（#28）回填，无需处理。 | s23/21 MS p.10；T12e（#31）119 行 equivalent_of 已合并（D35 完成） |
+| D38 | 总控 | P2-AD-06（用文字描述算法、不写伪代码）的真题练习：`meta.pseudocode = false`，作答模板为 `answer.steps.md`（编号步骤，英文一句一步），人工清单逐点按 MS；同时写同一算法的 Python 并自动测试（`starter.py` / `test_task.py` 照常）。AD-05（流程图 → 伪代码）照常用 `answer.pseudo`。原题算法无法自动测时（只问“怎样用某数组”这类）不硬造测试，列进 PR「需要总控决定」。 | T25 批 3 规划；`schemas/exercise-format.md` 已加 `answer.steps.md` |

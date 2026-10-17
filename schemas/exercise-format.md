@@ -6,6 +6,7 @@
   meta.json        # schema: exercise.schema.json
   starter.py       # 给学生的骨架：函数/类签名 + docstring，函数体 `raise NotImplementedError`
   answer.pseudo    # 仅 meta.pseudocode=true：伪代码作答模板（含题目要求的过程/函数头）
+  answer.steps.md  # 仅题目要求“用文字描述算法、不写伪代码”（P2-AD-06）：编号步骤作答模板，meta.pseudocode=false（D38）
   test_task.py     # pytest；只通过 `sol` fixture 访问被测代码
   files/           # 程序要读的数据文件（P4 从官方源文件复制）；测试在临时目录里运行
   ref/
