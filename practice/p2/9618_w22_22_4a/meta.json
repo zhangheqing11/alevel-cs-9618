@@ -1,0 +1,30 @@
+{
+  "id": "9618_w22_22:4(a)",
+  "kind": "past-paper",
+  "title": "流程图中的三次比较累加",
+  "source": {
+    "paper": "9618_w22_22",
+    "rows": [
+      "9618_w22_22:4(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-AD-05",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "flowchart-to-pseudocode",
+    "initialise-variables",
+    "input-prompt",
+    "loop-bounds",
+    "nested-if",
+    "procedure-call"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

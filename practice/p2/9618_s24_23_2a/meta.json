@@ -1,0 +1,31 @@
+{
+  "id": "9618_s24_23:2(a)",
+  "kind": "past-paper",
+  "title": "将文件逐行复制到全局数组",
+  "source": {
+    "paper": "9618_s24_23",
+    "rows": [
+      "9618_s24_23:2(a)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-09",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "file-close",
+    "file-open-read",
+    "initialise-variables",
+    "loop-to-eof"
+  ],
+  "pseudocode": false,
+  "files": [
+    "data.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

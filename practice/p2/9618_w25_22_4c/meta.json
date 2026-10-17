@@ -1,0 +1,26 @@
+{
+  "id": "9618_w25_22:4(c)",
+  "kind": "past-paper",
+  "title": "用已填好的布尔数组验证总分",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:4(c)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "boolean-return",
+    "input-validation",
+    "relational-ops"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "ValidateScore"
+}

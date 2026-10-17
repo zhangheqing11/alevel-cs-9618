@@ -1,0 +1,29 @@
+{
+  "id": "9618_s22_22:8(c)",
+  "kind": "past-paper",
+  "title": "生成无重复字符的分组密码",
+  "source": {
+    "paper": "9618_s22_22",
+    "rows": [
+      "9618_s22_22:8(c)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-AD-06",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "initialise-variables",
+    "loop-bounds",
+    "nested-loops",
+    "procedure-call",
+    "random-numbers",
+    "return-value",
+    "string-concat"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GeneratePassword"
+}

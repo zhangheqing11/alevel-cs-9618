@@ -1,0 +1,27 @@
+{
+  "id": "9618_w24_23:3(c)",
+  "kind": "past-paper",
+  "title": "按指针次序输出链表数据",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:3(c)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-16",
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "linked-list",
+    "output-format",
+    "pre-condition-loop"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

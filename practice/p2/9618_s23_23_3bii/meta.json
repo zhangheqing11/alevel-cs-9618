@@ -1,0 +1,25 @@
+{
+  "id": "9618_s23_23:3(b)(ii)",
+  "kind": "past-paper",
+  "title": "将栈中数据保存到文本文件",
+  "source": {
+    "paper": "9618_s23_23",
+    "rows": [
+      "9618_s23_23:3(b)(ii)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-10"
+  ],
+  "skills": [
+    "file-write",
+    "pre-condition-loop",
+    "stack-array"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "SaveStack"
+}
