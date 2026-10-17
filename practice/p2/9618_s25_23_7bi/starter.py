@@ -7,4 +7,5 @@ def FindCustomer(CustomerID):
     return CustomerID+',132,05032025'
 
 def MondayCheck(CustomerID):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

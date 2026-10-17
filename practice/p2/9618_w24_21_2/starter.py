@@ -9,4 +9,5 @@ def NewDay():
     pass
 
 def Tick():
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

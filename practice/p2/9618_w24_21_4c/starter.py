@@ -13,4 +13,5 @@ def IS_NUM(Text):
         return False
 
 def Evaluate(NumStr1,NumStr2):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

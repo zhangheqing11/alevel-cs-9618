@@ -9,4 +9,5 @@ def SuppExists(Code):
     return False
 
 def IsNewSupp(ThisString):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

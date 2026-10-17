@@ -38,12 +38,14 @@ Write pseudocode for module UpdateVisit()
 
 ## 人工核对清单
 
+本题 MS 总分上限为 5 分；以下候选得分点不能简单相加超过此上限。
+
 Python 测试只核对行为；下面逐点以本题 MS 人工批改，不能把测试通过当作伪代码得分。
 
 - [ ] MP1：Procedure heading and ending and two parameters of correct type
 - [ ] MP2：… both passed BYREF
 - [ ] MP3：Use of TODAY() function to obtain current date
-- [ ] MP4：Use MONTH function (2) and one parameter is the header parameter and 2nd parameter is TODAY() / assigned variable
+- [ ] MP4：Use MONTH function (×2) and one parameter is the header parameter and 2nd parameter is TODAY() / assigned variable
 - [ ] MP5：If visit is same month, increase LoyaltyPoints by 4 otherwise increase by 1
 - [ ] MP6：LastVisitDate set to TODAY() / ‘current date’ variable (assigned or unassigned)
 - [ ] 模块头、参数类型/顺序、RETURNS、结束行与变量声明逐项核对；只要求补算法时不额外要求函数头。

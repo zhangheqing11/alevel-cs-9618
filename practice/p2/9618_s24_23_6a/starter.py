@@ -3,4 +3,5 @@ def Display(Filename):
     print(Filename)
 
 def Progress(Percent,Root):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

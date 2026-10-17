@@ -2,4 +2,5 @@
 Secret = [["", ""] for _ in range(500)]
 
 def Exists(ThisString, Search):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

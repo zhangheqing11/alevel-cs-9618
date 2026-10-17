@@ -3,4 +3,5 @@ import random
 Secret = [["", ""] for _ in range(500)]
 
 def RandomChar():
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

@@ -33,6 +33,8 @@ Write pseudocode for the procedure Calculate().
 
 ## 人工核对清单
 
+本题 MS 总分上限为 7 分；以下候选得分点不能简单相加超过此上限。
+
 Python 测试只核对行为；下面逐点以本题 MS 人工批改，不能把测试通过当作伪代码得分。
 
 - [ ] MP1：Declaration of local variables for Par1 Par2 and Par3

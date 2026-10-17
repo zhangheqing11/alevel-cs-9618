@@ -5,4 +5,5 @@ ModInfo[9] = ["27", "P", "MyProc(Z : CHAR)"]
 ModInfo[10] = ["35", "F", "MyFun(Y : CHAR) RETURNS BOOLEAN"]
 
 def Header(Line):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

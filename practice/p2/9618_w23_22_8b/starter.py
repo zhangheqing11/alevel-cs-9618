@@ -7,4 +7,5 @@ def StackMsg(ThisMsg,StackNum):
     return True
 
 def ProcessMsg(ThisMsg):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

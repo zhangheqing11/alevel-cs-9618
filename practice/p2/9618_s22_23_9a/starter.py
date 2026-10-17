@@ -10,4 +10,5 @@ def Exists(ThisString, Search):
     return False
 
 def Generate():
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

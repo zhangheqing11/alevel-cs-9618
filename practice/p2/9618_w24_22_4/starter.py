@@ -9,4 +9,5 @@ def ReadTick():
     return Tick
 
 def Timer(Mins,Secs):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

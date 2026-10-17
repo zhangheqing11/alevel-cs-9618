@@ -8,4 +8,5 @@ def Transmit(Message,Port):
     SentMessages.append((Message,Port))
 
 def Chat(Destination,Port):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

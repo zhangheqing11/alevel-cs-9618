@@ -4,4 +4,5 @@ def TODAY():
     return date.today()
 
 def UpdateVisit(LoyaltyPoints,LastVisitDate):
+    """Implement the QP algorithm; preserve this public interface."""
     raise NotImplementedError

@@ -31,6 +31,8 @@ A program uses three global integer variables HH, MM and SS to represent the cur
 
 ## 人工核对清单
 
+本题 MS 总分上限为 6 分；以下候选得分点不能简单相加超过此上限。
+
 Python 测试只核对行为；下面逐点以本题 MS 人工批改，不能把测试通过当作伪代码得分。
 
 - [ ] MP1：Increment SS anywhere in the code
