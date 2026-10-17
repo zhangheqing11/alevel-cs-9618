@@ -126,7 +126,7 @@
 | boundary-values | 2 | 2 |
 | data-types | 37 | 33 |
 | declare-variables | 54 | 46 |
-| initialise-variables | 75 | 60 |
+| initialise-variables | 71 | 57 |
 | type-conversion | 24 | 24 |
 | div-mod | 17 | 14 |
 | operator-precedence | 32 | 26 |
@@ -194,6 +194,8 @@
 | containment | 0 | 0 |
 | exception-handling | 0 | 0 |
 | p4-identifiers | 0 | 0 |
+| assign-value | 2 | 1 |
+| shift-values | 2 | 2 |
 
 ## 低信心与低频题型
 
@@ -229,7 +231,68 @@
 | 9618_w25_22:7(b) | MS 按下划线/按行给分，未拆。 |
 | 9618_w25_23:3 | 已看 MS p7：MP1 仅描述两个 Exists 赋值，MP2–5 只指向代码加粗部分，无逐点文字；MS 按下划线/按行给分，未拆。D17 的 PopData 类型名当变量笔误原样保留，教学应使用 ThisPop。 |
 
-- **需要总控决定：9618_w21_22:2(a)** 的五个流程图红框内文字未抽入 ms_text，现有文本只有按框计分说明。已看 QP p5、MS p4；当前按 §8.2.9 同类图示给分例外处理。请补抽图中文字后拆分，或确认按区域给分的例外。未越权改原始抽取字段。
-- **需要总控决定：技能词表缺少通用变量赋值 / 滚动缓存移位技能**。s22/22:4(a) MP5/6、w21/22:6(d) MP6、w23/21:6(a) MP5 暂取 initialise-variables 最近项，note 已说明；建议设计工位增加准确标签后回填，当前不私建技能。
+- D27 已确认 9618_w21_22:2(a) 按 §8.2.9 图示例外不拆：五个流程图红框内文字未抽入 ms_text，现有文本只有按框计分说明。原页核验为 QP p5、MS p4；未越权改抽取字段。
+- D30 已裁决并回填四个暂用技能：w21/22:6(d) MP6、w23/21:6(a) MP5 → assign-value；s22/22:4(a) MP5/6 → shift-values。仅替换 skills，原 text/marks/切分/主题型/tag_note 与盲标快照均不改；tag_note 中的暂用说明保留为 T28 历史记录。
 - w25/23:3 已按 §8.2.9 加粗代码给分例外不拆。D17 的 PopData 类型名当变量笔误原样保留；本次仅标注，不改 MS。w22/22:1(c) 的 D16 官方笔误同样保留。
 - 其余范围内没有新增题型或技能。2021 重复卷和 s26 均完成标注；保留整卷标志由既有规则消费，本任务没有改动抽取字段或共享文件。
+
+## D30 关键词复核候选（需要总控决定）
+
+已扫描全部 1196 条得分点，关键词为 assign、shuffle、shift、move/moving up/down、rotate（兼容词尾）。下表排除 D30 已裁决四点，仅列宽匹配命中；不表示其现有技能错误，未自动回填其他点。
+
+| 行 / 点 | MS 原文 | 现有技能 |
+|:--|:--|:--|
+| 9618_s21_22:5(a)(i) / MP3 | Array element index 'syntax' (left-hand side of assignment expression) in a loop | array-index |
+| 9618_s21_22:5(a)(i) / MP4 | Use of RAND() to generate value in range (and assign to array element) in a loop | random-numbers, array-index |
+| 9618_s21_22:8(b) / MP5 | Assign result of GetWord()to a variable in a loop | procedure-call |
+| 9618_s22_21:6(b) / MP2 | All three comparisons and corresponding assignments | relational-ops |
+| 9618_s22_21:6(b) / MP3 | OTHERWISE, or initial assignment of default value | initialise-variables |
+| 9618_s22_22:8(b) / MP4 | Use Decrypt() and assign return value to ThisPassword | procedure-call |
+| 9618_s23_21:6 / MP6 | Calculate average value and assign to Result array after inner loop and within outer loop | operator-precedence, array-index |
+| 9618_s23_22:2(c) / MP3 | Assign value "Sunday" to first element, "Monday" to second element etc. | array-index |
+| 9618_s23_23:4 / MP3 | Test for Count < 1 and if true, assign "ERROR" to MyString / Immediate RETURN | relational-ops |
+| 9618_s24_22:2(a) / MP2 | … and assign to Ans | max-min |
+| 9618_s24_22:2(a) / MP3 | Condition for selecting largest number for all three number input and assigning to Ans | max-min, nested-if |
+| 9618_s24_22:2(b) / MP2 | Correct assignment of Flag from GetStat() in a loop | procedure-call |
+| 9618_s24_22:8(c) / MP5 | Assign return values from DeleteComment() and DeleteSpaces() in a loop | procedure-call |
+| 9618_s24_23:8(b) / MP6 | Attempt at all three-array assignment for all columns in correct row | array-2d |
+| 9618_s24_23:8(b) / MP7 | Correct values assigned to all columns of array | array-2d |
+| 9618_s25_23:7(a)(i) / MP4 | Use MONTH function (×2) and one parameter is the header parameter and 2nd parameter is TODAY() / assigned variable | date-functions |
+| 9618_s25_23:7(a)(i) / MP6 | LastVisitDate set to TODAY() / ‘current date’ variable (assigned or unassigned) | date-functions |
+| 9618_s25_23:7(b)(ii) / MP4 | SETDATE() function used to convert to a date type and assigned to LastVisitDate | date-functions |
+| 9618_s26_22:6(b)(ii) / MP4 | Attempt to assign the extracted character to Grid in a loop | array-2d |
+| 9618_s26_22:6(b)(ii) / MP5 | Extraction and assignment of all 25 characters in Plaintext to Grid in a loop | array-2d, string-functions |
+| 9618_w21_21:2(b) / MP5 | Assign return value from Check() to Flag inside the loop | procedure-call |
+| 9618_w21_23:2(b) / MP5 | Assign return value from Check() to Flag inside the loop | procedure-call |
+| 9618_w22_21:3 / MP2 | Assign value of first / any element to Max | max-min, initialise-variables |
+| 9618_w22_21:3 / MP6 | ...then assign value to Max | max-min |
+| 9618_w22_21:5 / MP5 | Assign value to correct element of Array2 in a loop | array-index |
+| 9618_w22_22:4(a) / MP1 | Input UserID and use of GetAverage()and assignment | input-prompt, procedure-call |
+| 9618_w22_22:4(a) / MP4 | Assignment of Last from element SameMonth[Index] in a loop | array-index |
+| 9618_w22_22:4(a) / MP6 | Correct assignments and final call to Update()after the loop | procedure-call, accumulator |
+| 9618_w22_23:5(a)(i) / MP3 | Extract and assign SID | field-extract |
+| 9618_w22_23:5(a)(i) / MP4 | Extract and assign SDesc | field-extract |
+| 9618_w22_23:5(a)(i) / MP6 | Extract and assign SCost following an attempt at MP5 | field-extract |
+| 9618_w22_23:7(b)(i) / MP3 | Assignment of values to arrays // save index of first blank location and assign after loop | parallel-arrays, array-index |
+| 9618_w24_21:4(c) / MP7 | … and if so correct calculation and assignment to Value field | operator-precedence, record-type |
+| 9618_w24_21:4(c) / MP8 | Return variable of type Result having assigned both fields | record-type, return-value |
+| 9618_w24_21:6(b) / MP2 | Correct use of date functions from Insert to extract three integer values representing DD, MM and YY and use/assign to a variable | date-functions |
+| 9618_w24_21:6(b) / MP3 | Add parameter ShelfLife to DD and use / assign result to a variable | operator-precedence |
+| 9618_w24_21:6(b) / MP8 | Use of SETDATE to assign value to NewDate, NewDate must have been delared as a type DATE | date-functions |
+| 9618_w24_22:2(a) / MP7 | Assign last four characters to MaskedString // Concatenate the retained original last four digits | string-functions, string-concat |
+| 9618_w24_22:8(a) / MP4 | If available character found, assign ThisPlayer to the character in a loop | array-of-records |
+| 9618_w24_23:3(b) / MP3 | Assign Index+1 to each pointer field in a loop | array-of-records, linked-list |
+| 9618_w24_23:3(b) / MP4 | Assign 0 to 200th pointer field | array-of-records, linked-list |
+| 9618_w24_23:3(c) / MP1 | Assign HeadPointer to ThisPointer / Current Pointer // Identify first node using headpointer | linked-list |
+| 9618_w24_23:3(c) / MP4 | … Assign pointer field from current array element / index / to ThisPointer / Current Pointer // Assign pointer field from current node to ThisPointer / Current Pointer | linked-list, array-of-records |
+| 9618_w24_23:4(b)(ii) / MP6 | Assign each element of Check array to TRUE | array-index |
+| 9618_w24_23:8(b) / MP7 | Completely correct extraction and assignment of all fields in a loop | array-of-records |
+| 9618_w25_21:4(a) / MP2 | Input value and assign to first element | input-prompt, array-index |
+| 9618_w25_21:4(a) / MP5 | Assign input value to current element if greater than previous element and input next value in a loop | input-prompt, array-index, relational-ops |
+| 9618_w25_22:2 / MP5 | Assign number to Data array element and increment index | array-index, accumulator |
+| 9618_w25_22:4(a) / MP4 | Assignment of array element to FALSE | array-index, initialise-variables |
+| 9618_w25_22:8(b) / MP5 | Two item assignment statements correct | array-of-records |
+| 9618_w25_22:8(b) / MP6 | Loan[Index].OnLoan assigned TRUE | array-of-records |
+| 9618_w25_23:4 / MP6 | Convert to integer and assign value to array element in a loop | type-conversion, array-index |
+
+另有 52 个宽匹配候选。请总控逐点决定是否回填；本批保持原标签。

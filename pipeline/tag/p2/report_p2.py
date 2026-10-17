@@ -6,6 +6,7 @@ from collections import Counter
 from pathlib import Path
 
 from check_p2 import norm, records, unique
+from backfill_d30 import TARGETS, candidates
 
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
@@ -91,10 +92,16 @@ def main():
               '| 行 | 未拆依据 |', '|:--|:--|']
     for e in records(HERE/'split_exemptions.jsonl'):
         lines.append(f'| {e["id"]} | {e["reason"]} |')
-    lines += ['', '- **需要总控决定：9618_w21_22:2(a)** 的五个流程图红框内文字未抽入 ms_text，现有文本只有按框计分说明。已看 QP p5、MS p4；当前按 §8.2.9 同类图示给分例外处理。请补抽图中文字后拆分，或确认按区域给分的例外。未越权改原始抽取字段。',
-              '- **需要总控决定：技能词表缺少通用变量赋值 / 滚动缓存移位技能**。s22/22:4(a) MP5/6、w21/22:6(d) MP6、w23/21:6(a) MP5 暂取 initialise-variables 最近项，note 已说明；建议设计工位增加准确标签后回填，当前不私建技能。',
+    lines += ['', '- D27 已确认 9618_w21_22:2(a) 按 §8.2.9 图示例外不拆：五个流程图红框内文字未抽入 ms_text，现有文本只有按框计分说明。原页核验为 QP p5、MS p4；未越权改抽取字段。',
+              '- D30 已裁决并回填四个暂用技能：w21/22:6(d) MP6、w23/21:6(a) MP5 → assign-value；s22/22:4(a) MP5/6 → shift-values。仅替换 skills，原 text/marks/切分/主题型/tag_note 与盲标快照均不改；tag_note 中的暂用说明保留为 T28 历史记录。',
               '- w25/23:3 已按 §8.2.9 加粗代码给分例外不拆。D17 的 PopData 类型名当变量笔误原样保留；本次仅标注，不改 MS。w22/22:1(c) 的 D16 官方笔误同样保留。',
               '- 其余范围内没有新增题型或技能。2021 重复卷和 s26 均完成标注；保留整卷标志由既有规则消费，本任务没有改动抽取字段或共享文件。', '']
+    lines += ['## D30 关键词复核候选（需要总控决定）', '',
+              '已扫描全部 1196 条得分点，关键词为 assign、shuffle、shift、move/moving up/down、rotate（兼容词尾）。下表排除 D30 已裁决四点，仅列宽匹配命中；不表示其现有技能错误，未自动回填其他点。', '',
+              '| 行 / 点 | MS 原文 | 现有技能 |', '|:--|:--|:--|']
+    for rid, point in candidates(points.values()):
+        lines.append(f'| {rid} / MP{point["n"]} | {point["text"].replace("|", "∣")} | {", ".join(point["skills"])} |')
+    lines += ['', f'另有 {len(candidates(points.values()))} 个宽匹配候选。请总控逐点决定是否回填；本批保持原标签。', '']
     (ROOT/'corpus/tag_report_p2.md').write_text('\n'.join(lines),encoding='utf-8')
     print(f'pilot primary {agreement}/{len(pilot)}; split {split_agreement}/{len(pilot_points)}; skill-set differences {changes}')
 
