@@ -16,5 +16,719 @@
         "needs-review"
       ]
     }
+  },
+  "9618_s21_32:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(d)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(d)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(b)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:2(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:3(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:5(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:5(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:7(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:7(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_32:8(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:8(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(d)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:1(d)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(b)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:2(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:2(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:3(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:5(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:5(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:7(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:7(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:7(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_33:8(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_31:8(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:1(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:1(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:1(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:1(b)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:1(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:3": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:3"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:5(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:5(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:9(a)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:9(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s22_33:9(b)": {
+    "fields": {
+      "equivalent_of": "9618_s22_31:9(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:10": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:10"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:11(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:11(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:11(b)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:11(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:11(c)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:11(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:12(b)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:12(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:2(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:2(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:3(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:5(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:5(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:5(b)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:5(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:6(c)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:6(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:7(b)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:7(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s23_33:7(c)": {
+    "fields": {
+      "equivalent_of": "9618_s23_31:7(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p2：10 位尾数 0100111100、6 位阶码 001001、格线及符号标注相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p2：−102.75、10+6 位空格框与尾数/阶码标注相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:10(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:10(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p10：二分查找题及数组可搜索条件要求相同；题目无另一个不同的图形。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:10(c)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:10(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p10–11：数组 Names 的二分查找伪代码、标识符/边界/空格及 Big O 设问相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:2(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:2(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p3：四层 TCP/IP 图的四个空格框及给定层名相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:3(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p3–4：FootballClub 记录声明情景及六个字段相同；题目区域未见不同图形。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:5(c)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:5(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p5：RPN 表达式、给定 a/b/c/d/e 数值及九列五格栈状态框相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:6(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:6(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p6：A/B/C 输入、P/Q/R/S/Z 标注、门符号、连线/结点与八行真值表完全对应。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:6(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:6(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p6：所引用逻辑电路的门、连线、结点与标注同 (a)，未见反相或接线差异。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:6(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:6(c)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p7：放大核对六个积项的取反横线；2×4 K-map 的 A 行 0/1、BC 列 00/01/11/10、格线相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:6(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:6(c)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p7：所引用 K-map 与 (c)(i) 相同，圈组要求和空白网格相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s24_33:6(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:6(c)(iii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）。并排查看原 QP；p7：所引用 K-map/表达式与 (c)(i) 相同，化简作答区域一致。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:1(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:1(a)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:1(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:1(a)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:10(d)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:10(d)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:2": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:2"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:3(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:3(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:4(a)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:4(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:4(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:4(b)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:7(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:7(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:7(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:7(b)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:7(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:7(b)(iii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:7(b)(iv)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:7(b)(iv)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:9(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:9(a)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w21_32:9(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_31:9(a)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:1(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:1(c)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:1(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:1(c)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:10(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:10(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:11(b)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:11(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:12(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:12(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:3(c)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:3(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:3(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:3(d)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:3(d)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:4": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:4"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:7(b)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:7(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w22_33:7(c)": {
+    "fields": {
+      "equivalent_of": "9618_w22_31:7(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:10(a)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:10(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:10(b)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:10(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:10(c)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:10(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:2(a)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:2(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:6(a)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:6(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:6(b)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:6(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:8(a)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:8(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w23_33:9(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_31:9(a)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:1(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:1(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:10(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:10(b)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:11(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:11(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:11(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:11(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:11(c)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:11(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:3(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:3(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:6(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:6(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:7(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:7(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:7(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:7(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:7(c)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:7(c)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:7(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:7(d)(i)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:7(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:7(d)(ii)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:9(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:9(a)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_w24_33:9(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_31:9(b)"
+    },
+    "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
   }
 }

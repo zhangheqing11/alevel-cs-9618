@@ -1,0 +1,5177 @@
+{
+  "base": "416388317b94dbc91fe13d856da0e3dbe03c61d8",
+  "renderer": "PyMuPDF 1.28.2",
+  "scale": 2,
+  "colorspace": "GRAY",
+  "clip_pt": [
+    35,
+    55,
+    570,
+    795
+  ],
+  "records": [
+    {
+      "id": "9618_s21_32:1(a)",
+      "target": "9618_s21_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:1(b)",
+      "target": "9618_s21_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:1(c)",
+      "target": "9618_s21_31:1(c)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:1(d)(i)",
+      "target": "9618_s21_31:1(d)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:1(d)(ii)",
+      "target": "9618_s21_31:1(d)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:2(b)(i)",
+      "target": "9618_s21_31:2(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:2(b)(ii)",
+      "target": "9618_s21_31:2(b)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:2(c)",
+      "target": "9618_s21_31:2(c)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:3(a)",
+      "target": "9618_s21_31:3(a)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "86f1ea1b90879e7ce7377820f80854393cf95ebe24d208e68bd929ef0ed0ad2b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "86f1ea1b90879e7ce7377820f80854393cf95ebe24d208e68bd929ef0ed0ad2b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:5(a)",
+      "target": "9618_s21_31:5(a)",
+      "has_figure": true,
+      "qp_pages": [
+        7
+      ],
+      "target_pages": [
+        7
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "83ebfe3c5eeb5e9271b1389ccf531d2657d38bc1242a75c6277022e068ff9c34"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "83ebfe3c5eeb5e9271b1389ccf531d2657d38bc1242a75c6277022e068ff9c34"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:7(a)",
+      "target": "9618_s21_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:7(b)",
+      "target": "9618_s21_31:7(b)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:7(c)",
+      "target": "9618_s21_31:7(c)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_32:8(b)",
+      "target": "9618_s21_31:8(b)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "2d0f54f9348db6fcd01f6935abf3e947e8567dbed9f25e81942851c2eb162c0d",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d25c0a817a19a004053edba8518f89a896016b38b4ee2653157e705ef519f55d"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d25c0a817a19a004053edba8518f89a896016b38b4ee2653157e705ef519f55d"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3c18264d4e69630a65fffa20583e21b7a835bce04574ae0c29b8f55d69c5b853"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3c18264d4e69630a65fffa20583e21b7a835bce04574ae0c29b8f55d69c5b853"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:1(a)",
+      "target": "9618_s21_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:1(b)",
+      "target": "9618_s21_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:1(c)",
+      "target": "9618_s21_31:1(c)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:1(d)(i)",
+      "target": "9618_s21_31:1(d)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:1(d)(ii)",
+      "target": "9618_s21_31:1(d)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6b4a0a5f1f240b1ec60bdbc9940beb7cbc7f7e84fc6108e42075561c3e2e058c"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2d934616c0e1dbd785a3e3ad2846a3ed4baafdc0e37bdcb42a210b2c27caf471"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:2(b)(i)",
+      "target": "9618_s21_31:2(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:2(b)(ii)",
+      "target": "9618_s21_31:2(b)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:2(c)",
+      "target": "9618_s21_31:2(c)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "271c86895e95bdc6d5df79af2b2e0b220bfa74c9e6171fe2c02d83de4d59949b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:3(a)",
+      "target": "9618_s21_31:3(a)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "86f1ea1b90879e7ce7377820f80854393cf95ebe24d208e68bd929ef0ed0ad2b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "86f1ea1b90879e7ce7377820f80854393cf95ebe24d208e68bd929ef0ed0ad2b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:5(a)",
+      "target": "9618_s21_31:5(a)",
+      "has_figure": true,
+      "qp_pages": [
+        7
+      ],
+      "target_pages": [
+        7
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "83ebfe3c5eeb5e9271b1389ccf531d2657d38bc1242a75c6277022e068ff9c34"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "83ebfe3c5eeb5e9271b1389ccf531d2657d38bc1242a75c6277022e068ff9c34"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:7(a)",
+      "target": "9618_s21_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:7(b)",
+      "target": "9618_s21_31:7(b)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:7(c)",
+      "target": "9618_s21_31:7(c)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "06cc6974ef8291895dc381780c321c9bfb94c00fc659c7eb19cf65376ed3d036"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s21_33:8(b)",
+      "target": "9618_s21_31:8(b)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "b1015d9eb7b5afdcea7f724595a38c1d2003c0258b45e287579489078d0ad11a",
+      "target_qp_sha256": "82f001cd257ae2a2a57b5f47289b9a007b23b48db5496dda4a609c5ed2b5ab9e",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d25c0a817a19a004053edba8518f89a896016b38b4ee2653157e705ef519f55d"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d25c0a817a19a004053edba8518f89a896016b38b4ee2653157e705ef519f55d"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3c18264d4e69630a65fffa20583e21b7a835bce04574ae0c29b8f55d69c5b853"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3c18264d4e69630a65fffa20583e21b7a835bce04574ae0c29b8f55d69c5b853"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:1(a)",
+      "target": "9618_s22_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:1(b)(i)",
+      "target": "9618_s22_31:1(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:1(b)(ii)",
+      "target": "9618_s22_31:1(b)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:1(c)",
+      "target": "9618_s22_31:1(c)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e700643a87353884e7e9db40463d87b592680ce1690f1d579b9afb36e5090862"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f6261132e58085a11ef766215b72a62ab47e164ffef6eb0a21d6c1dcfc022d9a"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f6261132e58085a11ef766215b72a62ab47e164ffef6eb0a21d6c1dcfc022d9a"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:3",
+      "target": "9618_s22_31:3",
+      "has_figure": true,
+      "qp_pages": [
+        6
+      ],
+      "target_pages": [
+        6
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "a89a33052897107a580ff0707391fa92d08d823b3fcc56abf90617d3ea90f1ab"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "a89a33052897107a580ff0707391fa92d08d823b3fcc56abf90617d3ea90f1ab"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:5(b)(i)",
+      "target": "9618_s22_31:5(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "ddebe2cfc9c0dfa29bf6d045a9e32512933ec5ccbb7dbf3e908bc21237da80c5"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "ddebe2cfc9c0dfa29bf6d045a9e32512933ec5ccbb7dbf3e908bc21237da80c5"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:7(a)",
+      "target": "9618_s22_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6e2bdac010e48fd0e94a73730d2f0ad22fe29a0af4407c6d84eb3ddcc6f2bb6e"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6e2bdac010e48fd0e94a73730d2f0ad22fe29a0af4407c6d84eb3ddcc6f2bb6e"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:9(a)",
+      "target": "9618_s22_31:9(a)",
+      "has_figure": true,
+      "qp_pages": [
+        14
+      ],
+      "target_pages": [
+        14
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 14,
+          "target_page": 14,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "255500c499f88b6845decdbdc2e3d3c8deb58789aa779c197130fcefb39bcb8c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "255500c499f88b6845decdbdc2e3d3c8deb58789aa779c197130fcefb39bcb8c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s22_33:9(b)",
+      "target": "9618_s22_31:9(b)",
+      "has_figure": true,
+      "qp_pages": [
+        14,
+        15
+      ],
+      "target_pages": [
+        14,
+        15
+      ],
+      "qp_sha256": "5d9f3ef6c2f000f9b61547c47791adb9c92d9f2fac711c2b378d541561aa6565",
+      "target_qp_sha256": "cb062c2734a9865390415d23f24070fe007c4ae01ea265352c0c621136b0bbc3",
+      "page_pairs": [
+        {
+          "page": 14,
+          "target_page": 14,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "255500c499f88b6845decdbdc2e3d3c8deb58789aa779c197130fcefb39bcb8c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "255500c499f88b6845decdbdc2e3d3c8deb58789aa779c197130fcefb39bcb8c"
+          }
+        },
+        {
+          "page": 15,
+          "target_page": 15,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "96c2b590af25681f66ffa3c32e60198f1b69a7342d12eb8f449d29d3288709d6"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "96c2b590af25681f66ffa3c32e60198f1b69a7342d12eb8f449d29d3288709d6"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:1(a)",
+      "target": "9618_s23_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5444815a49644e61aec8f8befe6b1b5e5803995de974658bedfac258bf26d540"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5444815a49644e61aec8f8befe6b1b5e5803995de974658bedfac258bf26d540"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:1(b)",
+      "target": "9618_s23_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5444815a49644e61aec8f8befe6b1b5e5803995de974658bedfac258bf26d540"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5444815a49644e61aec8f8befe6b1b5e5803995de974658bedfac258bf26d540"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "feea5bb3491d68fd49f090caa05758ed2423933bc88d3ea64e8f1d76f1238140"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "feea5bb3491d68fd49f090caa05758ed2423933bc88d3ea64e8f1d76f1238140"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:10",
+      "target": "9618_s23_31:10",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:11(a)",
+      "target": "9618_s23_31:11(a)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:11(b)",
+      "target": "9618_s23_31:11(b)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:11(c)",
+      "target": "9618_s23_31:11(c)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9a8ad56b92ca47a33076867eb6f3d4944d43794289870945060746d991db2541"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:12(b)",
+      "target": "9618_s23_31:12(b)",
+      "has_figure": true,
+      "qp_pages": [
+        11,
+        12
+      ],
+      "target_pages": [
+        11,
+        12
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa96a8549981ae5597a92c896584213dae5a575d25b14257343387aecfd09482"
+          }
+        },
+        {
+          "page": 12,
+          "target_page": 12,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5e553b5a6f1ad4dc47237303f9740b593aaf5b693d366d881ad26693948dc89e"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5e553b5a6f1ad4dc47237303f9740b593aaf5b693d366d881ad26693948dc89e"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:2(a)",
+      "target": "9618_s23_31:2(a)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "feea5bb3491d68fd49f090caa05758ed2423933bc88d3ea64e8f1d76f1238140"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "feea5bb3491d68fd49f090caa05758ed2423933bc88d3ea64e8f1d76f1238140"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:3(a)",
+      "target": "9618_s23_31:3(a)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7738c4ca8552613b1c9e47d6eb3919658a11e48180d7121a68acf3050d416f6c"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7738c4ca8552613b1c9e47d6eb3919658a11e48180d7121a68acf3050d416f6c"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:5(a)",
+      "target": "9618_s23_31:5(a)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4d1557c2856ad8c0c96b4da46b9fbc7825f774a60b1c432c673f2e515b5cecd3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4d1557c2856ad8c0c96b4da46b9fbc7825f774a60b1c432c673f2e515b5cecd3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:5(b)",
+      "target": "9618_s23_31:5(b)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4d1557c2856ad8c0c96b4da46b9fbc7825f774a60b1c432c673f2e515b5cecd3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4d1557c2856ad8c0c96b4da46b9fbc7825f774a60b1c432c673f2e515b5cecd3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:6(c)",
+      "target": "9618_s23_31:6(c)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20f1267f5add29c619c04400ce6202cb174f0ea5f70d576ab7d8bddb5097f10d"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20f1267f5add29c619c04400ce6202cb174f0ea5f70d576ab7d8bddb5097f10d"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "92b99392cfc4d8b959ada55aa1469bf9a4ff6ee3c6bb641e2a8feb0fd8c5f3c6"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "92b99392cfc4d8b959ada55aa1469bf9a4ff6ee3c6bb641e2a8feb0fd8c5f3c6"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:7(a)",
+      "target": "9618_s23_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:7(b)",
+      "target": "9618_s23_31:7(b)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s23_33:7(c)",
+      "target": "9618_s23_31:7(c)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "8207bc06fc3ed14bdb13fd83d09285e802e6141a42fe34d3bc04aad443c2e787",
+      "target_qp_sha256": "3088a0d9bfcca325ec2cc776fc9d16a49356d8094a80583945bc48a2ea767876",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8120cc28a974361d3843167432b03ce1944170cc71e7d3f6aac33fe9099674a3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_s24_33:1(a)",
+      "target": "9618_s24_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6261bc72646a434c947c83772a585d020c35fe7dcb9f19e9a5972bac2bd30cae"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0d63d5d3a3d21b2920cccbdd29da5de18190d82795b4e4cde70002f31e4f6dd5"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p2：10 位尾数 0100111100、6 位阶码 001001、格线及符号标注相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:1(b)",
+      "target": "9618_s24_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6261bc72646a434c947c83772a585d020c35fe7dcb9f19e9a5972bac2bd30cae"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0d63d5d3a3d21b2920cccbdd29da5de18190d82795b4e4cde70002f31e4f6dd5"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p2：−102.75、10+6 位空格框与尾数/阶码标注相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:10(a)",
+      "target": "9618_s24_31:10(a)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5ee8c0f98bdac13e94e4e35e7b47ff463bf170f3e00c5daa1d2e4756500a1ea4"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "497684ff3ac4f91bc0785a02e084450edbcf8e558b79caceab29284aeb31fda2"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p10：二分查找题及数组可搜索条件要求相同；题目无另一个不同的图形。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:10(c)",
+      "target": "9618_s24_31:10(c)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5ee8c0f98bdac13e94e4e35e7b47ff463bf170f3e00c5daa1d2e4756500a1ea4"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "497684ff3ac4f91bc0785a02e084450edbcf8e558b79caceab29284aeb31fda2"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7038ebd74af001304061f46bba03455b4350f4f0b662a2a7b0164d3c571f8c5b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6fba2cc9cb79fa57bcb3ad7dcc90fcd3a9094408dceeb053f2785d2060c187d0"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p10–11：数组 Names 的二分查找伪代码、标识符/边界/空格及 Big O 设问相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:2(a)",
+      "target": "9618_s24_31:2(a)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "b9a8ab1180c755c5458d089ecbc35a2a8e041f3b30993e8d71c637e26af5e249"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9752d67937038a2e67c4ba56cf4544bee6010c3660a715b807df74a6aa36d6fe"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p3：四层 TCP/IP 图的四个空格框及给定层名相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:3(b)",
+      "target": "9618_s24_31:3(b)",
+      "has_figure": true,
+      "qp_pages": [
+        3,
+        4
+      ],
+      "target_pages": [
+        3,
+        4
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "b9a8ab1180c755c5458d089ecbc35a2a8e041f3b30993e8d71c637e26af5e249"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "9752d67937038a2e67c4ba56cf4544bee6010c3660a715b807df74a6aa36d6fe"
+          }
+        },
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6de051110bd9fb1fd9c7d0ae4caa8d5822c5f8635092198d9c9c6be6881fef0f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6ec8f8e32202bc02d6be25109a0e60b8292cc86446fa212f0be0b9f349629c20"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p3–4：FootballClub 记录声明情景及六个字段相同；题目区域未见不同图形。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:5(c)",
+      "target": "9618_s24_31:5(c)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0d30bd9c6dfb150e7b9ad6559f1fb1994c7ab837d932c152968073c3e6ec1b61"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3c1323b33bffc49ff539efde5abaf92908adfe49ec0ef86263e27d91b420e2db"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p5：RPN 表达式、给定 a/b/c/d/e 数值及九列五格栈状态框相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:6(a)",
+      "target": "9618_s24_31:6(a)",
+      "has_figure": true,
+      "qp_pages": [
+        6
+      ],
+      "target_pages": [
+        6
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0c0e9836cbb12cd58aea6de6e51a7f4df41b663253c666f4445a7ba64b9563f9"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4c46af7bc65f93b282bb0a065e1d3e25e7782f7780497e108cc3c510a24673f8"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p6：A/B/C 输入、P/Q/R/S/Z 标注、门符号、连线/结点与八行真值表完全对应。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:6(b)",
+      "target": "9618_s24_31:6(b)",
+      "has_figure": true,
+      "qp_pages": [
+        6
+      ],
+      "target_pages": [
+        6
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0c0e9836cbb12cd58aea6de6e51a7f4df41b663253c666f4445a7ba64b9563f9"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4c46af7bc65f93b282bb0a065e1d3e25e7782f7780497e108cc3c510a24673f8"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p6：所引用逻辑电路的门、连线、结点与标注同 (a)，未见反相或接线差异。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:6(c)(i)",
+      "target": "9618_s24_31:6(c)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0c0e9836cbb12cd58aea6de6e51a7f4df41b663253c666f4445a7ba64b9563f9"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4c46af7bc65f93b282bb0a065e1d3e25e7782f7780497e108cc3c510a24673f8"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5cf07cedbe4121d9386cf57069f7b0a1624eaa88b9d16d1b0d70a538cb6a9ffe"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dd137299c2fe8700cd33aa86effe4ef9b0dec916cc861fe387068525a1ef99cb"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p7：放大核对六个积项的取反横线；2×4 K-map 的 A 行 0/1、BC 列 00/01/11/10、格线相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:6(c)(ii)",
+      "target": "9618_s24_31:6(c)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0c0e9836cbb12cd58aea6de6e51a7f4df41b663253c666f4445a7ba64b9563f9"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4c46af7bc65f93b282bb0a065e1d3e25e7782f7780497e108cc3c510a24673f8"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5cf07cedbe4121d9386cf57069f7b0a1624eaa88b9d16d1b0d70a538cb6a9ffe"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dd137299c2fe8700cd33aa86effe4ef9b0dec916cc861fe387068525a1ef99cb"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p7：所引用 K-map 与 (c)(i) 相同，圈组要求和空白网格相同。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_s24_33:6(c)(iii)",
+      "target": "9618_s24_31:6(c)(iii)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "228255f4341b8783b7004f9f63c935e4918877ddf95b568d906069622a3e5c93",
+      "target_qp_sha256": "450570faa4a9960fd61ca3ec40b68ad4b34cac382f80fcb0b31f744e47b5cc1f",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0c0e9836cbb12cd58aea6de6e51a7f4df41b663253c666f4445a7ba64b9563f9"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "4c46af7bc65f93b282bb0a065e1d3e25e7782f7780497e108cc3c510a24673f8"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5cf07cedbe4121d9386cf57069f7b0a1624eaa88b9d16d1b0d70a538cb6a9ffe"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dd137299c2fe8700cd33aa86effe4ef9b0dec916cc861fe387068525a1ef99cb"
+          }
+        }
+      ],
+      "pixel_equal": false,
+      "result": "same",
+      "method": "visual",
+      "observation": "并排查看原 QP；p7：所引用 K-map/表达式与 (c)(i) 相同，化简作答区域一致。 两卷条码及整体竖直排版不同，不影响题目图形。审阅：codex-1，2026-10-17。"
+    },
+    {
+      "id": "9618_w21_32:1(a)(i)",
+      "target": "9618_w21_31:1(a)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2ec51039282415223bfdc4dc7426f224bea2896dfe5dc0913a37d7981cea3f99"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2ec51039282415223bfdc4dc7426f224bea2896dfe5dc0913a37d7981cea3f99"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:1(a)(ii)",
+      "target": "9618_w21_31:1(a)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2ec51039282415223bfdc4dc7426f224bea2896dfe5dc0913a37d7981cea3f99"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "2ec51039282415223bfdc4dc7426f224bea2896dfe5dc0913a37d7981cea3f99"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:10(d)",
+      "target": "9618_w21_31:10(d)",
+      "has_figure": true,
+      "qp_pages": [
+        13,
+        14
+      ],
+      "target_pages": [
+        13,
+        14
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 13,
+          "target_page": 13,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3a46108aa3482f595f527b3ef4f007f6b2fd0f95e65bd15047c16fe16e0b108f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3a46108aa3482f595f527b3ef4f007f6b2fd0f95e65bd15047c16fe16e0b108f"
+          }
+        },
+        {
+          "page": 14,
+          "target_page": 14,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7096151b4d7e0066cda39fdee3aba4394585f015a2a0a5cf94f0e077ac44439b"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7096151b4d7e0066cda39fdee3aba4394585f015a2a0a5cf94f0e077ac44439b"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:2",
+      "target": "9618_w21_31:2",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:3(a)",
+      "target": "9618_w21_31:3(a)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:3(b)",
+      "target": "9618_w21_31:3(b)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e1345292fd96fbbaad3f283c1b25377a2df3b726f24802dea95899e06baab6fa"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:4(a)",
+      "target": "9618_w21_31:4(a)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "90d8e80a0e196d67b1e87c2150f44b990adaab9068260fc3e5c9438700d0464f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "90d8e80a0e196d67b1e87c2150f44b990adaab9068260fc3e5c9438700d0464f"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:4(b)(ii)",
+      "target": "9618_w21_31:4(b)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        4,
+        5
+      ],
+      "target_pages": [
+        4,
+        5
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "90d8e80a0e196d67b1e87c2150f44b990adaab9068260fc3e5c9438700d0464f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "90d8e80a0e196d67b1e87c2150f44b990adaab9068260fc3e5c9438700d0464f"
+          }
+        },
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5194ee4e4732982156ab179b32bbdf609c3d84931dc41077f4387cc6cb894bf5"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "5194ee4e4732982156ab179b32bbdf609c3d84931dc41077f4387cc6cb894bf5"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:7(a)",
+      "target": "9618_w21_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:7(b)(i)",
+      "target": "9618_w21_31:7(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        8,
+        9
+      ],
+      "target_pages": [
+        8,
+        9
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          }
+        },
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:7(b)(ii)",
+      "target": "9618_w21_31:7(b)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        8,
+        9
+      ],
+      "target_pages": [
+        8,
+        9
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          }
+        },
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:7(b)(iii)",
+      "target": "9618_w21_31:7(b)(iii)",
+      "has_figure": true,
+      "qp_pages": [
+        8,
+        9
+      ],
+      "target_pages": [
+        8,
+        9
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          }
+        },
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:7(b)(iv)",
+      "target": "9618_w21_31:7(b)(iv)",
+      "has_figure": true,
+      "qp_pages": [
+        8,
+        9
+      ],
+      "target_pages": [
+        8,
+        9
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "7ec674afcd93752e31a4f5afd47bfd199f37a4b277e13d92260bcc3bb931dad2"
+          }
+        },
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "dcad85b75aad3bc8b64b1da00783071e797a8b4ca9b2f6e627cb43eb67671868"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:9(a)(i)",
+      "target": "9618_w21_31:9(a)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        11
+      ],
+      "target_pages": [
+        11
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0f36135539ac93273224ebb94f3ba3196e6143b00756f14461ad86ad24000f01"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0f36135539ac93273224ebb94f3ba3196e6143b00756f14461ad86ad24000f01"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w21_32:9(a)(ii)",
+      "target": "9618_w21_31:9(a)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        11
+      ],
+      "target_pages": [
+        11
+      ],
+      "qp_sha256": "62e4197f425687a37eaaa42b4c3b352d4f7283487926daae63db22eb562c44eb",
+      "target_qp_sha256": "02c66b85fc44069acccbdf46d4ef813bb884ac069ff2e433580fffbb9f8378a5",
+      "page_pairs": [
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0f36135539ac93273224ebb94f3ba3196e6143b00756f14461ad86ad24000f01"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0f36135539ac93273224ebb94f3ba3196e6143b00756f14461ad86ad24000f01"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:1(a)",
+      "target": "9618_w22_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:1(b)",
+      "target": "9618_w22_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:1(c)(i)",
+      "target": "9618_w22_31:1(c)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "349aecc24abf02cc849110f3e13dee9fb77477693b1277e71ccf295884923e99"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "349aecc24abf02cc849110f3e13dee9fb77477693b1277e71ccf295884923e99"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:1(c)(ii)",
+      "target": "9618_w22_31:1(c)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        2,
+        3
+      ],
+      "target_pages": [
+        2,
+        3
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "746d38f98664fd34cc101fd99da162005770f0b10855e5ca9169a8ab1c115fad"
+          }
+        },
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "349aecc24abf02cc849110f3e13dee9fb77477693b1277e71ccf295884923e99"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "349aecc24abf02cc849110f3e13dee9fb77477693b1277e71ccf295884923e99"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:10(a)",
+      "target": "9618_w22_31:10(a)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "577f807749203c9d367457420731a8a1f573597199ab9b8811f119726dc8baeb"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "577f807749203c9d367457420731a8a1f573597199ab9b8811f119726dc8baeb"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:11(b)",
+      "target": "9618_w22_31:11(b)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "891f43d17317e0bd87a4289fee7541a2aa4fa046ab00daa47a875ffa279bf761"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "891f43d17317e0bd87a4289fee7541a2aa4fa046ab00daa47a875ffa279bf761"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:12(a)",
+      "target": "9618_w22_31:12(a)",
+      "has_figure": true,
+      "qp_pages": [
+        11
+      ],
+      "target_pages": [
+        11
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3088886bb48f9c87dc85093987da56d248a89205ee518b2bb15b6c3662e85280"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "3088886bb48f9c87dc85093987da56d248a89205ee518b2bb15b6c3662e85280"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:3(c)",
+      "target": "9618_w22_31:3(c)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:3(d)(i)",
+      "target": "9618_w22_31:3(d)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        4
+      ],
+      "target_pages": [
+        4
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:3(d)(ii)",
+      "target": "9618_w22_31:3(d)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        4,
+        5
+      ],
+      "target_pages": [
+        4,
+        5
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 4,
+          "target_page": 4,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "c01a819a34d68f5206f7fe2c3d07a2b8f5e7deaa60343b741dd3ad22a798c4f1"
+          }
+        },
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "995e633c1aed0586bfbcd376451a3dd9ad44f760269f52294d1058cd08315af3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "995e633c1aed0586bfbcd376451a3dd9ad44f760269f52294d1058cd08315af3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:4",
+      "target": "9618_w22_31:4",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "995e633c1aed0586bfbcd376451a3dd9ad44f760269f52294d1058cd08315af3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "995e633c1aed0586bfbcd376451a3dd9ad44f760269f52294d1058cd08315af3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:7(a)",
+      "target": "9618_w22_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        7
+      ],
+      "target_pages": [
+        7
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:7(b)",
+      "target": "9618_w22_31:7(b)",
+      "has_figure": true,
+      "qp_pages": [
+        7
+      ],
+      "target_pages": [
+        7
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w22_33:7(c)",
+      "target": "9618_w22_31:7(c)",
+      "has_figure": true,
+      "qp_pages": [
+        7
+      ],
+      "target_pages": [
+        7
+      ],
+      "qp_sha256": "bfdc5678f1a6be071849b9d6122223b1deaec1d629f185e53ed3fa706302ee93",
+      "target_qp_sha256": "7175b7ae719b5735be4040f48c73d7f31310d392d0a2cd80fc3fc27b9292c9ed",
+      "page_pairs": [
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "6f099fe12e7867fde7ae6186e846409ad36cb19e53fd926c75cac40e7d6ed616"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:1(a)",
+      "target": "9618_w23_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e38c117bb4c6f1ac94fad7da372ee367cfe0e9e2e57cb437ea1671b4240a2947"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e38c117bb4c6f1ac94fad7da372ee367cfe0e9e2e57cb437ea1671b4240a2947"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:1(b)",
+      "target": "9618_w23_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e38c117bb4c6f1ac94fad7da372ee367cfe0e9e2e57cb437ea1671b4240a2947"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e38c117bb4c6f1ac94fad7da372ee367cfe0e9e2e57cb437ea1671b4240a2947"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:10(a)",
+      "target": "9618_w23_31:10(a)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:10(b)",
+      "target": "9618_w23_31:10(b)",
+      "has_figure": true,
+      "qp_pages": [
+        10
+      ],
+      "target_pages": [
+        10
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:10(c)",
+      "target": "9618_w23_31:10(c)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d31bb5d7e04f86517657b0373eaf276aae5b6294ce2f3ab5a8f2af1bd8dc1157"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "eba152bedabc5a541d63d22eba1bad3bfac720305f9cd716f516ddd4b9e3d303"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "eba152bedabc5a541d63d22eba1bad3bfac720305f9cd716f516ddd4b9e3d303"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:2(a)",
+      "target": "9618_w23_31:2(a)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "65d97b5f2b02df2dae8a4b757232944c428297e64576906a561ff199ae7255bb"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "65d97b5f2b02df2dae8a4b757232944c428297e64576906a561ff199ae7255bb"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:6(a)",
+      "target": "9618_w23_31:6(a)",
+      "has_figure": true,
+      "qp_pages": [
+        6
+      ],
+      "target_pages": [
+        6
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8ae56af4e835b33a254dcfe4c6366497008c54bbac6f4adbe60cb71d49653fb6"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8ae56af4e835b33a254dcfe4c6366497008c54bbac6f4adbe60cb71d49653fb6"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:6(b)",
+      "target": "9618_w23_31:6(b)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8ae56af4e835b33a254dcfe4c6366497008c54bbac6f4adbe60cb71d49653fb6"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8ae56af4e835b33a254dcfe4c6366497008c54bbac6f4adbe60cb71d49653fb6"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f09bd0fb2d226407e1062013d591993bbed799c2a4edacd820007d3d670239b5"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f09bd0fb2d226407e1062013d591993bbed799c2a4edacd820007d3d670239b5"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:8(a)",
+      "target": "9618_w23_31:8(a)",
+      "has_figure": true,
+      "qp_pages": [
+        8
+      ],
+      "target_pages": [
+        8
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 8,
+          "target_page": 8,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d88e722d34d5a6e2fa5e90ee45aa8aa497feb52d1b490329d5ae778568e48d4f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "d88e722d34d5a6e2fa5e90ee45aa8aa497feb52d1b490329d5ae778568e48d4f"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w23_33:9(a)(ii)",
+      "target": "9618_w23_31:9(a)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "d6a6f125ae2fb6e278ee111dc2d193976a4a4a001d4c70c17331884ff98383d0",
+      "target_qp_sha256": "2b5b47e9c874f51d813e84c9665a7d9745b4a1985bc2af3c8edad42a989d52bd",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa7d3dac05b7eb01bb4c1c10680f57491847f0aa946d3716165f6096b014731a"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "aa7d3dac05b7eb01bb4c1c10680f57491847f0aa946d3716165f6096b014731a"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:1(a)",
+      "target": "9618_w24_31:1(a)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0223f8fd5444b489d880bf18223b537f6d6e076bda1b5e07c14d38397a391624"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0223f8fd5444b489d880bf18223b537f6d6e076bda1b5e07c14d38397a391624"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:1(b)",
+      "target": "9618_w24_31:1(b)",
+      "has_figure": true,
+      "qp_pages": [
+        2
+      ],
+      "target_pages": [
+        2
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 2,
+          "target_page": 2,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0223f8fd5444b489d880bf18223b537f6d6e076bda1b5e07c14d38397a391624"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0223f8fd5444b489d880bf18223b537f6d6e076bda1b5e07c14d38397a391624"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:10(b)(i)",
+      "target": "9618_w24_31:10(b)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        10,
+        11
+      ],
+      "target_pages": [
+        10,
+        11
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 10,
+          "target_page": 10,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "bc9353c786ff876b2a095855f6776f90e6556f3fb1bc3edeca73e58361c0136f"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "bc9353c786ff876b2a095855f6776f90e6556f3fb1bc3edeca73e58361c0136f"
+          }
+        },
+        {
+          "page": 11,
+          "target_page": 11,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0473c5b3e31e68953317dc42628545c0042d6fa12646a70d0310d6c8c2aff6ad"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "0473c5b3e31e68953317dc42628545c0042d6fa12646a70d0310d6c8c2aff6ad"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:11(a)",
+      "target": "9618_w24_31:11(a)",
+      "has_figure": true,
+      "qp_pages": [
+        12
+      ],
+      "target_pages": [
+        12
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 12,
+          "target_page": 12,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:11(b)",
+      "target": "9618_w24_31:11(b)",
+      "has_figure": true,
+      "qp_pages": [
+        12,
+        13
+      ],
+      "target_pages": [
+        12,
+        13
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 12,
+          "target_page": 12,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          }
+        },
+        {
+          "page": 13,
+          "target_page": 13,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f53ca1ea3f32a701a3966182bbc83e9b807bf1de4542502805da43eb8035c2b3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f53ca1ea3f32a701a3966182bbc83e9b807bf1de4542502805da43eb8035c2b3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:11(c)",
+      "target": "9618_w24_31:11(c)",
+      "has_figure": true,
+      "qp_pages": [
+        12,
+        13
+      ],
+      "target_pages": [
+        12,
+        13
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 12,
+          "target_page": 12,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "8cdd92616769fecaf69e82f1510867a0487b1bdee11962be6d008f3b78a3c072"
+          }
+        },
+        {
+          "page": 13,
+          "target_page": 13,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f53ca1ea3f32a701a3966182bbc83e9b807bf1de4542502805da43eb8035c2b3"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "f53ca1ea3f32a701a3966182bbc83e9b807bf1de4542502805da43eb8035c2b3"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:3(a)",
+      "target": "9618_w24_31:3(a)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "901e74705b8248bbf521697a288170a7522e015f1e0ce8b281b88020abda6a77"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "901e74705b8248bbf521697a288170a7522e015f1e0ce8b281b88020abda6a77"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:3(b)",
+      "target": "9618_w24_31:3(b)",
+      "has_figure": true,
+      "qp_pages": [
+        3
+      ],
+      "target_pages": [
+        3
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 3,
+          "target_page": 3,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "901e74705b8248bbf521697a288170a7522e015f1e0ce8b281b88020abda6a77"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "901e74705b8248bbf521697a288170a7522e015f1e0ce8b281b88020abda6a77"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:6(b)",
+      "target": "9618_w24_31:6(b)",
+      "has_figure": true,
+      "qp_pages": [
+        5
+      ],
+      "target_pages": [
+        5
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 5,
+          "target_page": 5,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "19dd8541d61621b5c4848727d8f29d68905a1411b967b9d2f81bf04a9ee54f88"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "19dd8541d61621b5c4848727d8f29d68905a1411b967b9d2f81bf04a9ee54f88"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:7(a)",
+      "target": "9618_w24_31:7(a)",
+      "has_figure": true,
+      "qp_pages": [
+        6
+      ],
+      "target_pages": [
+        6
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:7(b)",
+      "target": "9618_w24_31:7(b)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:7(c)",
+      "target": "9618_w24_31:7(c)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:7(d)(i)",
+      "target": "9618_w24_31:7(d)(i)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:7(d)(ii)",
+      "target": "9618_w24_31:7(d)(ii)",
+      "has_figure": true,
+      "qp_pages": [
+        6,
+        7
+      ],
+      "target_pages": [
+        6,
+        7
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 6,
+          "target_page": 6,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "919983ef0e4e5690c1d0079c034fb31339084f0091471b0ee85d012c6e4cd1aa"
+          }
+        },
+        {
+          "page": 7,
+          "target_page": 7,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "e7abf73298915a0ba1f3b0c51ddd3f2acc129834690db24788922ad5651c3983"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:9(a)",
+      "target": "9618_w24_31:9(a)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20e51da718a16563e8b41e3526c8b18450deff2f42cccbe52631a601a943d218"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20e51da718a16563e8b41e3526c8b18450deff2f42cccbe52631a601a943d218"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    },
+    {
+      "id": "9618_w24_33:9(b)",
+      "target": "9618_w24_31:9(b)",
+      "has_figure": true,
+      "qp_pages": [
+        9
+      ],
+      "target_pages": [
+        9
+      ],
+      "qp_sha256": "21da638061df7ce980892f94c35498a143b43cff6aedfb35c5024d133fe25a14",
+      "target_qp_sha256": "2679dc897568988e4a63a1679900e353a0e8484a5589d5a8944be3c6c50d3c19",
+      "page_pairs": [
+        {
+          "page": 9,
+          "target_page": 9,
+          "source": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20e51da718a16563e8b41e3526c8b18450deff2f42cccbe52631a601a943d218"
+          },
+          "target": {
+            "shape": [
+              1070,
+              1480
+            ],
+            "pixel_sha256": "20e51da718a16563e8b41e3526c8b18450deff2f42cccbe52631a601a943d218"
+          }
+        }
+      ],
+      "pixel_equal": true,
+      "result": "same",
+      "method": "pixel-sha256",
+      "observation": "含父级图示的 QP 正文区域逐像素相同。"
+    }
+  ]
+}
