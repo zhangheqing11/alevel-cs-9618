@@ -32,12 +32,50 @@ def load_inventory() -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+DOWNSTREAM_FIELDS = {'types', 'tag_confidence', 'tag_note', 'markpoints', 'ms_max', 'er'}
+
+
 def write_jsonl(path: pathlib.Path, rows: list[dict[str, Any]]) -> None:
+    # Patch only changed extracted values. Preserve downstream tokens and even
+    # their original escapes/spacing, rather than reserializing annotations.
+    from compare_pua import field_spans
+    existing = {}
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines(keepends=True):
+            old = json.loads(line)
+            if old['id'] in existing:
+                raise ValueError(f"duplicate existing id: {old['id']}")
+            existing[old['id']] = (line, old)
+    output = []
+    for row in rows:
+        if row['id'] not in existing:
+            output.append(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n")
+            continue
+        line, old = existing[row['id']]
+        spans, close = field_spans(line)
+        unknown = old.keys() - row.keys() - DOWNSTREAM_FIELDS
+        if unknown:
+            raise ValueError(f"{row['id']}: extracted fields disappeared: {sorted(unknown)}")
+        replacements = []
+        missing = []
+        for key, value in row.items():
+            if key in DOWNSTREAM_FIELDS:
+                continue
+            if key not in old:
+                missing.append((key, value))
+            elif old[key] != value:
+                replacements.append((*spans[key], json.dumps(value, ensure_ascii=False, separators=(",", ":"))))
+        if missing:
+            addition = ',' + ','.join(json.dumps(k) + ':' + json.dumps(v, ensure_ascii=False, separators=(",", ":"))
+                                      for k, v in missing)
+            replacements.append((close, close, addition))
+        for start, end, value in sorted(replacements, reverse=True):
+            line = line[:start] + value + line[end:]
+        for key in DOWNSTREAM_FIELDS & old.keys():
+            row[key] = old[key]
+        output.append(line if line.endswith("\n") else line + "\n")
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        "".join(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n" for row in rows),
-        encoding="utf-8",
-    )
+    path.write_text("".join(output), encoding="utf-8")
 
 
 def _sample(rows: list[dict[str, Any]], paper: str) -> list[dict[str, Any]]:
@@ -128,6 +166,9 @@ def report(selected, rows_by_paper):
     p4_notes = ROOT / 'pipeline/extract/p4_notes.md'
     if any(r['component'] == 4 for r in all_rows) and p4_notes.exists():
         lines += ['', p4_notes.read_text(encoding='utf-8').rstrip()]
+    if (ROOT / "pipeline/extract/p3_equivalents_review.json").exists():
+        from p3_equivalents import report_section
+        lines += report_section(rows_by_paper)
     return "\n".join(lines) + "\n"
 
 

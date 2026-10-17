@@ -85,9 +85,15 @@
     "ms_excerpt": "One mark for each marking point (max 6) MP1 Use of FOR loop to cycle through the whole year group MP2 Temporary storage of the score being ‘inserted’ MP3 Temporary storage of the corresponding name elements MP4 Use of WHILE loop with correct exit clause MP5 Mo",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "19be14ca9d98f6752a0753e371cd2c78cb92384142c710b46d16a47a8123b48c",
+    "row_sha256": "c92efaedd49a9d3d8ba746d4bb429e2fdf529037ea3218e43f86212ed8dc6c37",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "19be14ca9d98f6752a0753e371cd2c78cb92384142c710b46d16a47a8123b48c",
+      "equivalent_of": "9618_s21_31:8(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_32:5(a)",
@@ -100,9 +106,15 @@
     "ms_excerpt": "Working (Max 3) May be seen on diagram • Initialisation: setting Base to 0 • … and the rest of the towns to ∞ • Evidence to show values at nodes being updated • Evidence to show ‘visited node(s)’ May be seen in working section of paper • Evidence to show calcu",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "fc1cc634231f907d9724d173d23cc20b6e884c7116f38db82898a4fafe95af29",
+    "row_sha256": "334e53e466954231fa75d18dfd07ee984a75cbf482294d3d93ffef3ef6f5d8a9",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "fc1cc634231f907d9724d173d23cc20b6e884c7116f38db82898a4fafe95af29",
+      "equivalent_of": "9618_s21_31:5(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_32:9(c)",
@@ -130,9 +142,15 @@
     "ms_excerpt": "One mark for working out the exponent One mark for working out the mantissa One mark for the correct answer Example answers • =1.011000111 × 27 (exponent is 7) • =10110001.11 // –128 + 32 + 16 + 1 + 0.5 + 0.25 // convert to positive 01001110.01 (and add a minu",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "1cecf55db90e8541991e11c99985793f8fec92a92c921f1a52d97354c5e7118a",
+    "row_sha256": "1cea2d1fd4510e62512413876d784b1eae8d35015040d37631f3b241125e8126",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "1cecf55db90e8541991e11c99985793f8fec92a92c921f1a52d97354c5e7118a",
+      "equivalent_of": "9618_s21_31:1(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_32:8(a)",
@@ -175,9 +193,15 @@
     "ms_excerpt": "Working (Max 3) May be seen on diagram • Initialisation: setting Base to 0 • … and the rest of the towns to ∞ • Evidence to show values at nodes being updated • Evidence to show ‘visited node(s)’ May be seen in working section of paper • Evidence to show calcu",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "2e27102e68c14d73ac394cff7fae6fadf6dca9c3f5d5ace1c41d5590339316e7",
+    "row_sha256": "d0a7e97b4ab6816340d1974aa70635b71d92fa569f4019a52a622a2abf259a31",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "2e27102e68c14d73ac394cff7fae6fadf6dca9c3f5d5ace1c41d5590339316e7",
+      "equivalent_of": "9618_s21_31:5(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_33:1(d)(i)",
@@ -190,9 +214,15 @@
     "ms_excerpt": "One mark for each correct marking point (Max 3) • Requires 11 bits / more than 10 bits to store (accurately) / reference to maximum (positive) number that can be stored = 511 • Denary 513 in binary is 1000000001 // Normalised: 0.1000000001 • Results in overflo",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "c6e50a49ea211d2a9d9dea991fa8b088a3193863a231f4204be248c6940d561f",
+    "row_sha256": "757068c861626f0498e2982962ca95106d2db42a49a6f05e36467bf2b4c414ee",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "c6e50a49ea211d2a9d9dea991fa8b088a3193863a231f4204be248c6940d561f",
+      "equivalent_of": "9618_s21_31:1(d)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_33:5(b)",
@@ -220,9 +250,15 @@
     "ms_excerpt": "Working: one mark for calculation of the mantissa and one mark for calculation or use of the exponent Exponent: one from: = 0.11101 × 23 // 0.11101 × 211 // 0.11101 × 103 // 0.11101 × 1011 = 1.00011 × 23 // 1.00011 × 211 // 1.00011 × 103 // 1.00011 × 1011 = ap",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "363c5fa290c50e7e87b2727f403f0293356b3ae8336444f24583bf2d1cd268d1",
+    "row_sha256": "268aa208c182d4b0572723850e0c3722f13f400891686c74d2006ee3380c097d",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "363c5fa290c50e7e87b2727f403f0293356b3ae8336444f24583bf2d1cd268d1",
+      "equivalent_of": "9618_s21_31:1(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_31:1(c)",
@@ -430,9 +466,15 @@
     "ms_excerpt": "Any two from • A data type constructed by a programmer // not a primitive data type • A data type that references at least one other data type… • … the data types can be primitive, or user defined One mark for an example • Class / object / set",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "c9750ac9a3ab5e6f9675ced8e757da0ecb4555c27df0e0003972c8d6cc68746f",
+    "row_sha256": "c3b52f53928cc103c2b7404995691258366b38d2c6d4f015a6273464e937dd6f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "c9750ac9a3ab5e6f9675ced8e757da0ecb4555c27df0e0003972c8d6cc68746f",
+      "equivalent_of": "9618_s22_31:1(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_33:1(a)",
@@ -445,9 +487,15 @@
     "ms_excerpt": "LibraryBook.Title ← \"A Level Computer Science\" LibraryBook.Fiction ← FALSE",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "8f24ee868ec3b615d59642d32fa18094f9d12ed6d0aa084e3535b6cec0574bba",
+    "row_sha256": "a8c82198312175f49fdb938da7abe7a2831479a91a6b4341823d87078712dd59",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "8f24ee868ec3b615d59642d32fa18094f9d12ed6d0aa084e3535b6cec0574bba",
+      "equivalent_of": "9618_s22_31:1(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_31:7(c)",
@@ -610,9 +658,15 @@
     "ms_excerpt": "One mark per mark point (Max 2) • Circuit switching is used where a dedicated path needs to be sustained throughout the call / communication // where the whole bandwidth is required // where a real time communication is used. • A typical application is standar",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "3f28fb84cf1d56475dd0fa8a699ae64104549e24884bb5ed33c07de75f328cac",
+    "row_sha256": "ef08a62076af61836011a7560168e3c625ab4f69f7579f43e426798f1a32fe57",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "3f28fb84cf1d56475dd0fa8a699ae64104549e24884bb5ed33c07de75f328cac",
+      "equivalent_of": "9618_s23_31:5(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_33:7(a)",
@@ -625,9 +679,15 @@
     "ms_excerpt": "Two marks if no errors present One mark if one error present",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "4b986d80ec2ed69f476a3d4d586080d5b3c8e5a9aedad89520e602e4ac79587b",
+    "row_sha256": "0d7cf4fa1482b21d38577139f034bb310f1a99474f6e281c85a2ec98e4137380",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "4b986d80ec2ed69f476a3d4d586080d5b3c8e5a9aedad89520e602e4ac79587b",
+      "equivalent_of": "9618_s23_31:7(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_33:7(b)",
@@ -640,9 +700,15 @@
     "ms_excerpt": "One mark for each correct loop (Max 2)",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "32979a9c40f9c7a1d4ef9dc32a3a01d8b69b97ac8ff335d5b2003892d218a371",
+    "row_sha256": "f0e4451b28e4610a13c146b2ecda28ff6b4f602d8c06423ba308de692d7bc385",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "32979a9c40f9c7a1d4ef9dc32a3a01d8b69b97ac8ff335d5b2003892d218a371",
+      "equivalent_of": "9618_s23_31:7(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_33:11(a)",
@@ -655,9 +721,15 @@
     "ms_excerpt": "One mark per mark point (Max 3) • correctly defined constant • correctly defined array • three correctly defined integers CONSTANT MaxSize = 60 DECLARE Queue : ARRAY[1:60] OF STRING // DECLARE Queue : ARRAY[0:59] OF STRING // DECLARE Queue : ARRAY[1:MaxSize] O",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "ba3e59c519d08b3daa0246e44cad756977d6ca0b8a755000c124302504c98444",
+    "row_sha256": "4a68875756dce6a5f89a333a068551ceaff03621f2ea6479bef70cd41996ae80",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "ba3e59c519d08b3daa0246e44cad756977d6ca0b8a755000c124302504c98444",
+      "equivalent_of": "9618_s23_31:11(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_33:6(c)",
@@ -670,9 +742,15 @@
     "ms_excerpt": "One mark per mark point (Max 4) • begins with a letter • letter can repeat and digit present • digit can repeat or can be bypassed • correct structure – name, boxes and arrows (in and out). Example answers: identifier letter digit identifier letter letter digi",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "2978382f619d069ed8e01ef083671c20757fcb6fb2dfac4fbf3a214102b3530a",
+    "row_sha256": "e927f9fca0ec99447559187353609534c0eae614951bce85dea9bf51ae722f04",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "2978382f619d069ed8e01ef083671c20757fcb6fb2dfac4fbf3a214102b3530a",
+      "equivalent_of": "9618_s23_31:6(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_31:8(a)",
@@ -850,9 +928,15 @@
     "ms_excerpt": "One mark per ring (Max 4) 3 5 7 7 10 10 17 17 12 12 12 12 120 120 12",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "aa7453252847c3db338191fc281db0a36ff499595a81dfeb3200e614b03c823b",
+    "row_sha256": "0f1a4e31926341ab9d84fbe75a0f1f831d90ae6c971470b85e403bd0e756979c",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "aa7453252847c3db338191fc281db0a36ff499595a81dfeb3200e614b03c823b",
+      "equivalent_of": "9618_s24_31:5(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_33:2(b)",
@@ -895,9 +979,15 @@
     "ms_excerpt": "A + B",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "a609eccafe64857394409772ce5d15c4ee7d3da7ab22dc6c3d94d674e9827531",
+    "row_sha256": "5332ba35d33a41468f8284d9abc07f04b07053d953a179373619a26bb008adb9",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "a609eccafe64857394409772ce5d15c4ee7d3da7ab22dc6c3d94d674e9827531",
+      "equivalent_of": "9618_s24_31:6(c)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s25_31:3(b)",
@@ -1450,9 +1540,15 @@
     "ms_excerpt": "One mark for each marking point (Max 2) • <character>::= • $|%|&|*|# Complete answer <character>::= $|%|&|*|#",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "72b629706e161de04697d6c656b0a1bc530b464a1dd4c598404448780aac98f6",
+    "row_sha256": "a8a820b5a56632af92cc4808bfb12335d45c3a7fa7278bf96adc0f783390dc1b",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "72b629706e161de04697d6c656b0a1bc530b464a1dd4c598404448780aac98f6",
+      "equivalent_of": "9618_w21_31:4(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w21_32:6(b)",
@@ -1480,9 +1576,15 @@
     "ms_excerpt": "One mark for each marking point (Max 2) • TYPE SelectParts = ^ • correct data type chosen Parts Complete answer TYPE SelectParts = ^Parts",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "a31b0a574e8e9ec14aa41d7fc42477ba43c26c5671c11beafc2b66428b4fa9a6",
+    "row_sha256": "d84023ec03765c2ce5316682c0da8594bdf78302ba864e70eb0747f662ed149d",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "a31b0a574e8e9ec14aa41d7fc42477ba43c26c5671c11beafc2b66428b4fa9a6",
+      "equivalent_of": "9618_w21_31:3(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w21_32:4(b)(ii)",
@@ -1495,9 +1597,15 @@
     "ms_excerpt": "One mark for each marking point (Max 4) • <password>::=<character> … • … <code> • <code>::= … • … <digit>|<capital_letter> • … |<digit><code>|<capital_letter><code> Complete answer <password>::=<character><code> <code>::=<digit>|<capital_letter>|<digit><code>|",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "fd9fe32d391de92d499bf8a3f5e8e0ff155d49e4d58c23fb4f0f45a813e7ad12",
+    "row_sha256": "f11ec75c5dc0ff52d0c8132a1d520b6329b5e280aa2efc7d67c23a59c8c215bf",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "fd9fe32d391de92d499bf8a3f5e8e0ff155d49e4d58c23fb4f0f45a813e7ad12",
+      "equivalent_of": "9618_w21_31:4(b)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_31:9(b)",
@@ -1660,9 +1768,15 @@
     "ms_excerpt": "One mark for each correct line connecting one stage of compilation to a description",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "db1cd3e3cbdecd889a39ca2991141ec55852e383b9b3d2c7e8f89b85474b682e",
+    "row_sha256": "34f49d7b63d58511f16417909c10b71887002a7549e9991b5657413f96224e97",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "db1cd3e3cbdecd889a39ca2991141ec55852e383b9b3d2c7e8f89b85474b682e",
+      "equivalent_of": "9618_w22_31:4",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_33:1(a)",
@@ -1675,9 +1789,15 @@
     "ms_excerpt": "Two marks for working One mark for correct answer Working: Conversion to binary + 202 = 11001010 // repeated division by 2 // 128 + 64 + 8 + 2 Appropriate shifting of binary point for + 202 = 0.1100101 × 28 // exponent = 8 Answer: = 01100101 00001000 (stored a",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "bf7a291a646d991a2ba217a71baeb5927f58165dcd9e6f1a29ac8a61f409bec6",
+    "row_sha256": "6082227278d80c1d9489636177883c1286ee9504976bee5fc70b5517d396e1ae",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "bf7a291a646d991a2ba217a71baeb5927f58165dcd9e6f1a29ac8a61f409bec6",
+      "equivalent_of": "9618_w22_31:1(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_33:9(b)",
@@ -1945,9 +2065,15 @@
     "ms_excerpt": "One mark for working (Max 1) • conversion of 65.25 to binary seen e.g. 1000001.01 = 65.25 // 64 + 1 + 0.25 / ¼ One mark per mark point (Max 2) • correct mantissa • correct exponent Mantissa Exponent 0 1 0 0 0 0 0 1 0 1 0 0 0 1 1 1",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "a6a905df81e59333c36e356d46b057cf23709e799f54bc75c16b81c865544471",
+    "row_sha256": "e02f104ba319214ea71642cf8f470d18251e6161915df74c389cbc931ecd4aad",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "a6a905df81e59333c36e356d46b057cf23709e799f54bc75c16b81c865544471",
+      "equivalent_of": "9618_w23_31:1(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_31:5(a)",
@@ -2110,9 +2236,15 @@
     "ms_excerpt": "One mark for any correct row (Max 4) FUNCTION SearchTree(Item : STRING) RETURNS INTEGER NowPtr ← RootPtr WHILE NowPtr <> -1 IF BinTree[NowPtr].Data > Item THEN NowPtr ← BinTree[NowPtr].LeftPtr ELSE IF BinTree[NowPtr].Data < Item THEN NowPtr ← BinTree[NowPtr].R",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "62114c882bca2d97cd1d36c4f0e08f7c846cd27c478bdacb138ac30e2fff9860",
+    "row_sha256": "2f41b06e07ee0490d026adf705ca22898698f87b60c12e7c9c78c17bbfb1b0e4",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "62114c882bca2d97cd1d36c4f0e08f7c846cd27c478bdacb138ac30e2fff9860",
+      "equivalent_of": "9618_w24_31:11(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_33:7(b)",
@@ -2125,9 +2257,15 @@
     "ms_excerpt": "Two marks if no errors present One mark if one error present AB CD 00 01 11 10 00 0 0 0 0 01 1 0 1 1 11 1 0 1 1 10 0 0 0 0",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "d09654dde17b4ca9b94b8cda58a978936aeebcbda0ea348c6a64c4fc7017c5b7",
+    "row_sha256": "c80d7bbd9f9b48079035ecdbab35294dcc3a68bd3fcb7cfd1bf372fea41bac85",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "d09654dde17b4ca9b94b8cda58a978936aeebcbda0ea348c6a64c4fc7017c5b7",
+      "equivalent_of": "9618_w24_31:7(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_33:6(b)",
@@ -2140,9 +2278,15 @@
     "ms_excerpt": "One mark for each mark point (Max 4) MP1 TYPE SymbolSet/Operators = MP2 SET OF CHAR MP3 DEFINE Operators/SymbolSet MP4 ('+', '–', '*', '/', '^') MP5 : SymbolSet/Operators Example answers TYPE SymbolSet = SET OF CHAR DEFINE Operators ('+', '–', '*', '/', '^') :",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "491451ee3704cf55fdc5e188ae34530865687ce49f773f5a2c8952ffbe1bbb0c",
+    "row_sha256": "730a2f6461b9d3de49d1880e4a95784a3e7ade1035730569c0ece79ded31427a",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "491451ee3704cf55fdc5e188ae34530865687ce49f773f5a2c8952ffbe1bbb0c",
+      "equivalent_of": "9618_w24_31:6(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_33:7(c)",
@@ -2155,9 +2299,15 @@
     "ms_excerpt": "One mark for each correct loop (Max 2) AB CD 00 01 11 10 00 0 0 0 0 01 1 0 1 1 11 1 0 1 1 10 0 0 0 0",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "5cf671cc319a24b71082fadad1f85e5e186efa0464276a6c98b7d92a84fa905e",
+    "row_sha256": "47d8ba37badcb818f178f7a7f6992d8dcb29f1e15ac9475ca3a5d9d0098417e0",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "5cf671cc319a24b71082fadad1f85e5e186efa0464276a6c98b7d92a84fa905e",
+      "equivalent_of": "9618_w24_31:7(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_33:11(a)",
@@ -2170,9 +2320,15 @@
     "ms_excerpt": "One mark per mark point (Max 4) MP1 Four additional nodes with correct data values MP2 Correct null pointers in all added nodes (6) with no extra null pointers where the arrow points to the next node MP3 Correct arrows to represent pointers joining parent node",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；图形以原页为准",
-    "row_sha256": "d8f32a4163292b2b33ada2c86eb047c58939f16571d2ecb5abf78d85e5cbeb0c",
+    "row_sha256": "947b0ed4ef4d5829bc3fde8a5e242d31897972ba5b4d34363f5f53be745a0b85",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D35",
+      "baseline_row_sha256": "d8f32a4163292b2b33ada2c86eb047c58939f16571d2ecb5abf78d85e5cbeb0c",
+      "equivalent_of": "9618_w24_31:11(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w25_31:2(a)",

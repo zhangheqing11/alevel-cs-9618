@@ -1,0 +1,26 @@
+{
+  "base": "416388317b94dbc91fe13d856da0e3dbe03c61d8",
+  "papers": 130,
+  "rows": 3302,
+  "changed": 119,
+  "per_paper": {
+    "9618_s21_32": 14,
+    "9618_s21_33": 14,
+    "9618_s22_33": 9,
+    "9618_s23_33": 15,
+    "9618_s24_33": 12,
+    "9618_w21_32": 15,
+    "9618_w22_33": 14,
+    "9618_w23_33": 10,
+    "9618_w24_33": 16
+  },
+  "preserved_field_counts": {
+    "types": 1700,
+    "tag_confidence": 1700,
+    "tag_note": 1700,
+    "markpoints": 185,
+    "ms_max": 56,
+    "er": 2938
+  },
+  "audit_hashes_migrated": 26
+}
