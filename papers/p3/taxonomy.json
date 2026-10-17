@@ -2,15 +2,84 @@
   "component": 3,
   "version": "1.0",
   "chapters": [
-    {"code": "DR", "name_zh": "数据表示", "name_en": "Data representation", "syllabus": ["13.1", "13.2", "13.3"]},
-    {"code": "CI", "name_zh": "通信与互联网技术", "name_en": "Communication and internet technologies", "syllabus": ["14.1", "14.2"]},
-    {"code": "HV", "name_zh": "处理器、并行处理与虚拟机", "name_en": "Processors, parallel processing and virtual machines", "syllabus": ["15.1"]},
-    {"code": "BL", "name_zh": "布尔代数与逻辑电路", "name_en": "Boolean algebra and logic circuits", "syllabus": ["15.2"]},
-    {"code": "SY", "name_zh": "系统软件", "name_en": "System software", "syllabus": ["16.1", "16.2"]},
-    {"code": "SC", "name_zh": "安全", "name_en": "Security", "syllabus": ["17.1"]},
-    {"code": "AI", "name_zh": "人工智能", "name_en": "Artificial intelligence", "syllabus": ["18.1"]},
-    {"code": "CT", "name_zh": "计算思维与问题求解", "name_en": "Computational thinking and problem-solving", "syllabus": ["19.1", "19.2"]},
-    {"code": "FP", "name_zh": "进一步编程", "name_en": "Further programming", "syllabus": ["20.1", "20.2"]}
+    {
+      "code": "DR",
+      "name_zh": "数据表示",
+      "name_en": "Data representation",
+      "syllabus": [
+        "13.1",
+        "13.2",
+        "13.3"
+      ]
+    },
+    {
+      "code": "CI",
+      "name_zh": "通信与互联网技术",
+      "name_en": "Communication and internet technologies",
+      "syllabus": [
+        "14.1",
+        "14.2"
+      ]
+    },
+    {
+      "code": "HV",
+      "name_zh": "处理器、并行处理与虚拟机",
+      "name_en": "Processors, parallel processing and virtual machines",
+      "syllabus": [
+        "15.1"
+      ]
+    },
+    {
+      "code": "BL",
+      "name_zh": "布尔代数与逻辑电路",
+      "name_en": "Boolean algebra and logic circuits",
+      "syllabus": [
+        "15.2"
+      ]
+    },
+    {
+      "code": "SY",
+      "name_zh": "系统软件",
+      "name_en": "System software",
+      "syllabus": [
+        "16.1",
+        "16.2"
+      ]
+    },
+    {
+      "code": "SC",
+      "name_zh": "安全",
+      "name_en": "Security",
+      "syllabus": [
+        "17.1"
+      ]
+    },
+    {
+      "code": "AI",
+      "name_zh": "人工智能",
+      "name_en": "Artificial intelligence",
+      "syllabus": [
+        "18.1"
+      ]
+    },
+    {
+      "code": "CT",
+      "name_zh": "计算思维与问题求解",
+      "name_en": "Computational thinking and problem-solving",
+      "syllabus": [
+        "19.1",
+        "19.2"
+      ]
+    },
+    {
+      "code": "FP",
+      "name_zh": "进一步编程",
+      "name_en": "Further programming",
+      "syllabus": [
+        "20.1",
+        "20.2"
+      ]
+    }
   ],
   "types": [
     {
@@ -32,7 +101,9 @@
         "P3-FP-04：class / object 作为 OOP 术语来问（实例、封装等）→ FP-04；只把 class 列为一种组合类型时留在本题型",
         "P2-DT-01 / P2-DT-04：AS 的内置数据类型选择与数据结构选择，不涉及用户定义类型的分类"
       ],
-      "syllabus": ["13.1"]
+      "syllabus": [
+        "13.1"
+      ]
     },
     {
       "code": "P3-DR-02",
@@ -52,7 +123,9 @@
         "P3-DR-03：要写整个 TYPE … ENDTYPE 记录 → DR-03（记录里某字段用了枚举类型，副题型不加，除非有得分点专门给枚举声明）",
         "P3-DR-01：只问枚举/指针是什么、有何特征 → DR-01"
       ],
-      "syllabus": ["13.1"]
+      "syllabus": [
+        "13.1"
+      ]
     },
     {
       "code": "P3-DR-03",
@@ -72,7 +145,9 @@
         "P3-FP-06：CLASS … ENDCLASS（有方法、PRIVATE 属性）→ FP-06",
         "P2-DT-02：AS 卷的同类写法；P3 的行一律用 P3 题型"
       ],
-      "syllabus": ["13.1"]
+      "syllabus": [
+        "13.1"
+      ]
     },
     {
       "code": "P3-DR-04",
@@ -90,7 +165,9 @@
         "P3-DR-03：要写 TYPE … ENDTYPE 本身 → DR-03",
         "P3-DR-02：只给字段赋一个枚举值、且该小问是在改用枚举类型的题组里 → 仍按本题型；若小问要写 TYPE … = (…) → DR-02"
       ],
-      "syllabus": ["13.1"]
+      "syllabus": [
+        "13.1"
+      ]
     },
     {
       "code": "P3-DR-05",
@@ -107,7 +184,9 @@
         "P3-DR-02：TYPE … = (…) 是枚举类型，不是集合；题干说 \"a data type to hold a set of prime numbers\" 但 MS 给的是枚举写法时按 MS 归 DR-02（9618_s23_31:4(a)）",
         "P3-DR-01：只描述集合类型是什么 → DR-01"
       ],
-      "syllabus": ["13.1"]
+      "syllabus": [
+        "13.1"
+      ]
     },
     {
       "code": "P3-DR-06",
@@ -126,7 +205,9 @@
         "P3-DR-08：问散列算法或冲突 → DR-08",
         "P3-FP-10：写文件处理伪代码 → FP-10"
       ],
-      "syllabus": ["13.2"]
+      "syllabus": [
+        "13.2"
+      ]
     },
     {
       "code": "P3-DR-07",
@@ -146,7 +227,9 @@
         "P3-DR-06：只问记录在文件里怎样组织、用在哪里 → DR-06；「organised and accessed」两者都问时按得分点多数",
         "P3-DR-08：要算散列值或处理冲突 → DR-08（随机文件找记录的过程题里只有一分提散列，不加副题型）"
       ],
-      "syllabus": ["13.2"]
+      "syllabus": [
+        "13.2"
+      ]
     },
     {
       "code": "P3-DR-08",
@@ -165,7 +248,9 @@
         "P3-DR-07：整体问随机文件里怎样找记录（直接存取过程）→ DR-07",
         "P3-FP-10：写用 SEEK/GETRECORD 处理随机文件的伪代码 → FP-10"
       ],
-      "syllabus": ["13.2"]
+      "syllabus": [
+        "13.2"
+      ]
     },
     {
       "code": "P3-DR-09",
@@ -183,7 +268,9 @@
         "P3-DR-11：求最大/最小可表示数、把给定位串规格化 → DR-11",
         "P1-IR-03：AS 的补码整数换算，没有阶码"
       ],
-      "syllabus": ["13.3"]
+      "syllabus": [
+        "13.3"
+      ]
     },
     {
       "code": "P3-DR-10",
@@ -201,7 +288,9 @@
         "P3-DR-11：给的是二进制数（如 0101010.111 或未规格化的位串）而不是十进制数 → DR-11",
         "P3-DR-12：只解释表示时出了什么问题、不要求写出表示 → DR-12（同题组中各自归类）"
       ],
-      "syllabus": ["13.3"]
+      "syllabus": [
+        "13.3"
+      ]
     },
     {
       "code": "P3-DR-11",
@@ -220,7 +309,9 @@
         "P3-DR-10：给的是十进制数 → DR-10",
         "P3-DR-12：问改变尾数/阶码位数的影响、溢出下溢、近似 → DR-12"
       ],
-      "syllabus": ["13.3"]
+      "syllabus": [
+        "13.3"
+      ]
     },
     {
       "code": "P3-DR-12",
@@ -240,7 +331,9 @@
         "P3-DR-10 / P3-DR-11：要写出具体的浮点位串 → 写表示的题型；本题型只用文字解释",
         "P1-IR-05：AS 的整数加法溢出"
       ],
-      "syllabus": ["13.3"]
+      "syllabus": [
+        "13.3"
+      ]
     },
     {
       "code": "P3-CI-01",
@@ -260,7 +353,9 @@
         "P3-CI-03：问具体应用层协议（HTTP、IMAP 等）→ CI-03",
         "P1-CM-09：AS 的互联网基础设施（URL、DNS 等）"
       ],
-      "syllabus": ["14.1"]
+      "syllabus": [
+        "14.1"
+      ]
     },
     {
       "code": "P3-CI-02",
@@ -279,7 +374,9 @@
         "P3-CI-01：问层与层之间怎样交互、一条消息怎样经过整个栈（明说不描述单层功能）→ CI-01",
         "P3-CI-03：应用层题目问的是具体协议（HTTP、FTP、SMTP…）→ CI-03；问应用层本身的目的与功能 → 本题型"
       ],
-      "syllabus": ["14.1"]
+      "syllabus": [
+        "14.1"
+      ]
     },
     {
       "code": "P3-CI-03",
@@ -299,7 +396,9 @@
         "P3-SC-04：SSL/TLS 协议 → SC-04",
         "P3-CI-02：问应用层这一层的目的与功能 → CI-02"
       ],
-      "syllabus": ["14.1"]
+      "syllabus": [
+        "14.1"
+      ]
     },
     {
       "code": "P3-CI-04",
@@ -315,7 +414,9 @@
         "P3-CI-03：多个应用层协议一起问（含连线题）→ CI-03",
         "P1-CM-02：AS 的客户机-服务器与点对点网络模型比较"
       ],
-      "syllabus": ["14.1"]
+      "syllabus": [
+        "14.1"
+      ]
     },
     {
       "code": "P3-CI-05",
@@ -332,7 +433,9 @@
         "P3-CI-07：同一小问里同时问电路交换与分组交换（比较、各自的好处、区别）→ CI-07",
         "P3-CI-06：只问分组交换 → CI-06"
       ],
-      "syllabus": ["14.2"]
+      "syllabus": [
+        "14.2"
+      ]
     },
     {
       "code": "P3-CI-06",
@@ -351,7 +454,9 @@
         "P3-CI-07：与电路交换比较 → CI-07",
         "P1-CM-04：AS 的数据包在某种拓扑中怎样走"
       ],
-      "syllabus": ["14.2"]
+      "syllabus": [
+        "14.2"
+      ]
     },
     {
       "code": "P3-CI-07",
@@ -368,7 +473,9 @@
       "not": [
         "P3-CI-05 / P3-CI-06：只问其中一种 → 对应题型"
       ],
-      "syllabus": ["14.2"]
+      "syllabus": [
+        "14.2"
+      ]
     },
     {
       "code": "P3-HV-01",
@@ -386,7 +493,9 @@
         "P3-HV-02：问流水线、或 RISC/CISC 的中断处理 → HV-02",
         "P1-PF-01 / P1-PF-05：AS 的 CPU 部件与性能因素"
       ],
-      "syllabus": ["15.1"]
+      "syllabus": [
+        "15.1"
+      ]
     },
     {
       "code": "P3-HV-02",
@@ -406,7 +515,9 @@
         "P3-SY-03：OS 内核作为中断处理程序、低级调度 → SY-03",
         "P1-PF-04：AS 的中断概念"
       ],
-      "syllabus": ["15.1"]
+      "syllabus": [
+        "15.1"
+      ]
     },
     {
       "code": "P3-HV-03",
@@ -422,7 +533,9 @@
       "not": [
         "P3-HV-04：问大规模并行计算机的特征 → HV-04"
       ],
-      "syllabus": ["15.1"]
+      "syllabus": [
+        "15.1"
+      ]
     },
     {
       "code": "P3-HV-04",
@@ -436,7 +549,9 @@
       "not": [
         "P3-HV-03：Flynn 四类体系结构 → HV-03"
       ],
-      "syllabus": ["15.1"]
+      "syllabus": [
+        "15.1"
+      ]
     },
     {
       "code": "P3-HV-05",
@@ -453,7 +568,9 @@
       "not": [
         "P3-SY-04：虚拟内存（virtual memory）→ SY-04，名字相近但无关"
       ],
-      "syllabus": ["15.1"]
+      "syllabus": [
+        "15.1"
+      ]
     },
     {
       "code": "P3-BL-01",
@@ -471,7 +588,9 @@
         "P3-BL-02：在真值表之后问电路名称（半加器、全加器）与输出用途 → BL-02",
         "P1-LG-04：AS 的真值表题；P3 的行一律用 P3 题型"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-02",
@@ -488,7 +607,9 @@
         "P3-BL-01：同题组的真值表 → BL-01",
         "P3-BL-04：只写表达式、不问加法器 → BL-04"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-03",
@@ -503,7 +624,9 @@
       "not": [
         "P3-BL-01：一般组合逻辑电路的真值表 → BL-01"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-04",
@@ -519,7 +642,9 @@
         "P3-BL-06：由卡诺图圈组写「simplified」积之和 → BL-06",
         "P1-LG-05：AS 的真值表 → 表达式"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-05",
@@ -535,7 +660,9 @@
       "not": [
         "P3-BL-06：在卡诺图上画圈或由圈写化简表达式 → BL-06"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-06",
@@ -552,7 +679,9 @@
         "P3-BL-07：「Use Boolean algebra to give your answer … in its simplest form」把化简积之和再提公因式 → BL-07",
         "P3-BL-05：只填卡诺图 → BL-05"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-BL-07",
@@ -569,7 +698,9 @@
       "not": [
         "P3-BL-06：由卡诺图圈组写化简积之和 → BL-06（同一小问里既写化简积之和又要求最简形式时按得分点多数，见指南）"
       ],
-      "syllabus": ["15.2"]
+      "syllabus": [
+        "15.2"
+      ]
     },
     {
       "code": "P3-SY-01",
@@ -586,7 +717,9 @@
         "P3-SY-02 / P3-SY-03：多任务、进程状态、调度 → 对应题型",
         "P1-SS-01：AS 的 OS 管理任务清单"
       ],
-      "syllabus": ["16.1"]
+      "syllabus": [
+        "16.1"
+      ]
     },
     {
       "code": "P3-SY-02",
@@ -605,7 +738,9 @@
         "P3-SY-03：问调度的必要性或某种调度算法 → SY-03",
         "P3-SY-04：内存管理 → SY-04"
       ],
-      "syllabus": ["16.1"]
+      "syllabus": [
+        "16.1"
+      ]
     },
     {
       "code": "P3-SY-03",
@@ -625,7 +760,9 @@
         "P3-SY-02：多任务概念与进程状态 → SY-02",
         "P3-HV-02：处理器层面（RISC/CISC、流水线）的中断处理 → HV-02"
       ],
-      "syllabus": ["16.1"]
+      "syllabus": [
+        "16.1"
+      ]
     },
     {
       "code": "P3-SY-04",
@@ -643,7 +780,9 @@
         "P3-HV-05：虚拟机（virtual machine）→ HV-05",
         "P1-HW-01：AS 的 RAM 与 ROM"
       ],
-      "syllabus": ["16.1"]
+      "syllabus": [
+        "16.1"
+      ]
     },
     {
       "code": "P3-SY-05",
@@ -659,7 +798,9 @@
         "P3-SY-06：编译器的各个阶段 → SY-06",
         "P1-SS-04 / P1-SS-05：AS 的编译器与解释器比较"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-06",
@@ -679,7 +820,9 @@
         "P3-SY-07 ～ P3-SY-09：用 BNF/语法图描述文法 → 对应题型（语法分析阶段本身的作用留在本题型）",
         "P3-CT-11：编译器怎样用栈翻译递归代码 → CT-11"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-07",
@@ -697,7 +840,9 @@
         "P3-SY-08：要写出 BNF 规则 → SY-08",
         "P3-SY-09：要画语法图 → SY-09"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-08",
@@ -715,7 +860,9 @@
         "P3-SY-09：要画语法图 → SY-09",
         "P3-SY-07：只判断合法性 → SY-07"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-09",
@@ -731,7 +878,9 @@
       "not": [
         "P3-SY-08：把语法图写成 BNF → SY-08"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-10",
@@ -750,7 +899,9 @@
         "P3-SY-12：要画出栈内容的变化或算出值 → SY-12",
         "P3-CT-05：一般地问栈还有什么用途 → CT-05"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-11",
@@ -767,7 +918,9 @@
       "not": [
         "P3-SY-12：要用栈求 RPN 的值、画栈 → SY-12"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SY-12",
@@ -784,7 +937,9 @@
         "P3-SY-10：只用文字描述求值步骤 → SY-10",
         "P3-SY-11：中缀与 RPN 互转 → SY-11"
       ],
-      "syllabus": ["16.2"]
+      "syllabus": [
+        "16.2"
+      ]
     },
     {
       "code": "P3-SC-01",
@@ -805,7 +960,9 @@
         "P3-SC-03：量子密码的目的、好处、缺点 → SC-03",
         "P1-SP-04：AS 的加密概念"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-SC-02",
@@ -824,7 +981,9 @@
         "P3-SC-06：消息先散列成摘要再用私钥加密（数字签名）→ SC-06",
         "P3-SC-01：只定义术语或比较对称与非对称 → SC-01"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-SC-03",
@@ -840,7 +999,9 @@
       "not": [
         "P3-SC-01：对称、非对称加密 → SC-01"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-SC-04",
@@ -859,7 +1020,9 @@
         "P3-SC-05：只问数字证书怎样获取或包含什么 → SC-05",
         "P3-CI-03：应用层协议 → CI-03"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-SC-05",
@@ -876,7 +1039,9 @@
       "not": [
         "P3-SC-06：证书在产生或验证数字签名中的作用 → SC-06"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-SC-06",
@@ -894,7 +1059,9 @@
         "P3-SC-05：证书本身是什么、怎样获取 → SC-05",
         "P1-SP-05：AS 的数字签名概念"
       ],
-      "syllabus": ["17.1"]
+      "syllabus": [
+        "17.1"
+      ]
     },
     {
       "code": "P3-AI-01",
@@ -911,7 +1078,9 @@
         "P3-AI-02：A* 与 Dijkstra 的目的与区别 → AI-02",
         "P3-CT-05：把图作为一种 ADT 列出 → CT-05"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-02",
@@ -927,7 +1096,9 @@
       "not": [
         "P3-AI-03 / P3-AI-04：在给定图上计算 → 计算题型"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-03",
@@ -943,7 +1114,9 @@
       "not": [
         "P3-AI-04：表里有 g、h、f 列，用 A* → AI-04"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-04",
@@ -959,7 +1132,9 @@
       "not": [
         "P3-AI-03：Dijkstra → AI-03"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-05",
@@ -978,7 +1153,9 @@
         "P3-AI-06：深度学习、人工神经网络 → AI-06（连线题里深度学习只占一条线时仍归本题型）",
         "P3-AI-07：回归方法、反向传播 → AI-07"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-06",
@@ -997,7 +1174,9 @@
         "P3-AI-07：专门问反向传播或回归 → AI-07（描述深度学习时顺带一分提到反向传播，不加副题型）",
         "P1-EO-04：AS 的 AI 应用"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-AI-07",
@@ -1012,7 +1191,9 @@
       "not": [
         "P3-AI-06：整体描述深度学习或神经网络 → AI-06"
       ],
-      "syllabus": ["18.1"]
+      "syllabus": [
+        "18.1"
+      ]
     },
     {
       "code": "P3-CT-01",
@@ -1029,7 +1210,9 @@
         "P3-CT-02：写或补全查找的伪代码 → CT-02",
         "P3-CT-04：问性能如何随数据量变化、大 O → CT-04（「Compare the methods … Refer to Big O」按得分点多数，见指南）"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-02",
@@ -1049,7 +1232,9 @@
         "P3-FP-10：在随机文件中逐个位置查找记录 → FP-10",
         "P2-DT-05：AS 卷在一维数组里线性查找"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-03",
@@ -1067,7 +1252,9 @@
         "P3-CT-04：问影响排序性能的因素或排序的大 O → CT-04",
         "P2-DT-08：AS 卷的冒泡排序"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-04",
@@ -1086,14 +1273,16 @@
         "P3-CT-01：只问查找的前提与步骤 → CT-01",
         "P3-CT-02 / P3-CT-03：写代码 → 对应题型"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-05",
       "chapter": "CT",
       "name_zh": "ADT 的概念、选择与相互实现",
       "name_en": "ADTs: identifying, choosing and implementing one ADT from another",
-      "summary": "列举 ADT（栈、队列、链表、二叉树、图、字典）；说明栈的其他用途；比较栈与队列（LIFO / FIFO）、说明某场合（打印任务）为何用队列；说明用链表而不是数组实现栈的理由；说明怎样用两个栈实现队列等「由另一种 ADT 实现」；指出链表结构可怎样改进（空闲表）。考纲还列出字典 ADT，语料尚未出现。",
+      "summary": "列举 ADT（栈、队列、链表、二叉树、图、字典）；说明栈的其他用途；比较栈与队列（LIFO / FIFO）、说明某场合（打印任务）为何用队列；说明用链表而不是数组实现栈的理由；说明怎样用两个栈实现队列等「由另一种 ADT 实现」。考纲还列出字典 ADT，语料尚未出现。",
       "cues": [
         "Identify two ADTs other than a stack / Identify two other ADTs",
         "State two other uses of a stack",
@@ -1107,7 +1296,9 @@
         "P3-CT-11：栈为何适合实现递归 → CT-11",
         "P2-DT-12：AS 卷的 ADT 概念"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-06",
@@ -1127,7 +1318,9 @@
         "P3-CT-05：只比较栈与其他 ADT、说用途 → CT-05",
         "P2-DT-16：AS 卷用数组实现栈"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-07",
@@ -1145,25 +1338,30 @@
         "P3-CT-05：用两个栈实现队列、队列与栈比较 → CT-05",
         "P2-DT-16：AS 卷用数组实现队列"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-08",
       "chapter": "CT",
       "name_zh": "链表的操作与实现",
       "name_en": "Linked lists: operations and implementation",
-      "summary": "在用数组（数据数组 + 指针数组 + 头指针）实现的链表上删除或插入结点后改写指针；补全沿指针查找某值并输出结果的伪代码。",
+      "summary": "在用数组（数据数组 + 指针数组 + 头指针）实现的链表上删除或插入结点后改写指针；补全沿指针查找某值并输出结果的伪代码；说明怎样改进简化的链表（加空闲表指针，把空位连成空闲链表以便重用）。",
       "cues": [
         "A simplified linked list is used to store … It is implemented using two 1D arrays",
         "Complete the table to show the new values of HeadPointer and NextPointer",
-        "Complete the pseudocode algorithm so that … The linked list is searched, in order"
+        "Complete the pseudocode algorithm so that … The linked list is searched, in order",
+        "Explain how you could improve the simplified linked list structure"
       ],
       "not": [
         "P3-CT-09：结点有左右两个指针（有序二叉树）→ CT-09，即使题干叫它 linked list",
-        "P3-CT-05：「怎样改进链表结构」「为什么用链表实现栈」→ CT-05",
+        "P3-CT-05：为什么用链表而不是数组实现栈、链表与其他 ADT 比较 → CT-05",
         "P2-DT-15 / P2-DT-16：AS 卷的链表"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-09",
@@ -1182,7 +1380,9 @@
         "P3-CT-08：单指针链表 → CT-08",
         "P3-CT-10：「二叉树可以用递归实现」之后问递归的特点或适用 ADT → CT-10"
       ],
-      "syllabus": ["19.1"]
+      "syllabus": [
+        "19.1"
+      ]
     },
     {
       "code": "P3-CT-10",
@@ -1201,7 +1401,9 @@
         "P3-CT-11：栈在执行或翻译递归时的作用 → CT-11",
         "P3-CT-12：追踪给定递归代码 → CT-12"
       ],
-      "syllabus": ["19.2"]
+      "syllabus": [
+        "19.2"
+      ]
     },
     {
       "code": "P3-CT-11",
@@ -1217,7 +1419,9 @@
         "P3-CT-10：递归本身的定义与特征 → CT-10",
         "P3-CT-05：栈的其他用途列举 → CT-05"
       ],
-      "syllabus": ["19.2"]
+      "syllabus": [
+        "19.2"
+      ]
     },
     {
       "code": "P3-CT-12",
@@ -1233,7 +1437,9 @@
         "P3-CT-10：只问递归的概念 → CT-10",
         "P2-SD-07：AS 卷的非递归追踪表"
       ],
-      "syllabus": ["19.2"]
+      "syllabus": [
+        "19.2"
+      ]
     },
     {
       "code": "P3-FP-01",
@@ -1250,7 +1456,9 @@
         "P3-FP-04：OOP 术语 → FP-04",
         "P3-FP-07 ～ P3-FP-09：写声明式子句 → 对应题型"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-02",
@@ -1267,7 +1475,9 @@
         "P3-FP-03：要写出汇编代码 → FP-03",
         "P1-PF-08 / P1-PF-09：AS 卷的寻址方式与指令执行（P3 的行一律用 P3 题型）"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-03",
@@ -1285,7 +1495,9 @@
         "P3-FP-02：只读代码、说寻址方式或结果 → FP-02",
         "P1-PF-09 / P1-PF-10：AS 卷的汇编"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-04",
@@ -1306,7 +1518,9 @@
         "P3-FP-06：写 CLASS … ENDCLASS 伪代码 → FP-06",
         "P3-DR-01：把 class 作为一种组合类型列出 → DR-01"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-05",
@@ -1323,7 +1537,9 @@
         "P3-FP-06：要写 CLASS … ENDCLASS 伪代码 → FP-06",
         "P4：P4 的 OOP 是写 Python 类"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-06",
@@ -1341,7 +1557,9 @@
         "P3-DR-03：TYPE … ENDTYPE 记录 → DR-03",
         "P4：P4 写 Python 类（class、__init__）"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-07",
@@ -1357,7 +1575,9 @@
         "P3-FP-08：写目标或求目标的返回结果 → FP-08",
         "P3-FP-09：写带 IF 的规则 → FP-09"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-08",
@@ -1373,7 +1593,9 @@
         "P3-FP-09：「Write this as a rule: … IF」→ FP-09",
         "P3-FP-07：写事实 → FP-07"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-09",
@@ -1388,7 +1610,9 @@
       "not": [
         "P3-FP-08：写查询目标或其结果 → FP-08"
       ],
-      "syllabus": ["20.1"]
+      "syllabus": [
+        "20.1"
+      ]
     },
     {
       "code": "P3-FP-10",
@@ -1407,7 +1631,9 @@
         "P2-DT-09 / P2-DT-10：AS 卷的文本文件读写",
         "P4：用 Python 写文件处理"
       ],
-      "syllabus": ["20.2"]
+      "syllabus": [
+        "20.2"
+      ]
     },
     {
       "code": "P3-FP-11",
@@ -1426,7 +1652,9 @@
         "P2-SD-05：AS 的错误类型（语法、逻辑、运行时）",
         "P4：用 try / except 写异常处理代码"
       ],
-      "syllabus": ["20.2"]
+      "syllabus": [
+        "20.2"
+      ]
     }
   ]
 }
