@@ -122,5 +122,15 @@
       "corpus/rows/p3/**",
       "corpus/tag_report_p3.md"
     ]
+  },
+  "T26a": {
+    "allow": [
+      "papers/p1/audit/**"
+    ]
+  },
+  "T26b": {
+    "allow": [
+      "papers/p2/audit/**"
+    ]
   }
 }

@@ -159,3 +159,23 @@ D35：与同季 _31 卷逐字相同的 119 行（T12e 正在补 equivalent_of）
 
 只改 tasks/scope.json 里 T25 允许的路径。交付：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T25 → push → gh pr create --base main --title "T25 batch 3: P2 practice (AD)"。PR 描述同前两批：数量、选题口径、对照原页情况、接口约定、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T25.md 并提交。
 ```
+
+## codex-1 · T26a 审计 P1 题型手册（跨模型交叉审计；新开 Codex 会话）
+
+```
+你是执行工位 codex-1，负责任务 T26a：逐张审计 P1 题型手册（88 张卡，章：IR、CM、HW、LG、PF、SS、SP、EO、DB），只出报告，不改卡片。手册由 Claude 设计工位写成，你是另一家模型的交叉审计。
+先读 AGENTS.md（尤其 §5 证据规则）、docs/DECISIONS.md（D1、D2、D15、D25、D26、D29–D32、D37）、tasks/T26-card-audit.md（任务卡：7 个审计项、产出格式、完成标准，严格照做）、schemas/card-format.md、papers/p1/tagging-guide.md。若 tasks/progress/T26a.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T26a-p1-audit。审计范围：papers/p1/front.md、papers/p1/cards/*.md、papers/p1/core/*.md、papers/p1/back.md；先 make build 看 output/p1/ 的成品。每张卡的代表题必须对照该题 QP 与 MS 原页（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读；用 rows.py render 或 pymupdf / pdftotext），报告里列出每张卡核对的页码。make check 已保证引文逐字存在，你查的是意义：引文是否支持那句说法、满分作答是否真满分、MP 对齐、选题规则、手写计数、原卷页码、概念句.
+可以先写脚本做机械检查（选题规则、计数重算、页码引用），放在 papers/p1/audit/，再逐张人工核对。产出：papers/p1/audit/T26-findings.jsonl（一条问题一行，字段与 kind / severity 取值见任务卡）、papers/p1/audit/T26-report.md。
+只改 tasks/scope.json 里 T26a 允许的路径（papers/p1/audit/**）与 tasks/progress/T26a.md；不要改卡片、概念表、corpus、practice。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T26a → push → gh pr create --base main --title "T26a: audit P1 handbook"。PR 描述：审计卡数、问题数（按 severity）、最严重的 5 条、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T26a.md 并提交。
+```
+
+## codex-2 · T26b 审计 P2 题型手册（跨模型交叉审计；新开 Codex 会话）
+
+```
+你是执行工位 codex-2，负责任务 T26b：逐张审计 P2 题型手册（46 张卡，章：AD、DT、PG、SD），只出报告，不改卡片。手册由 Claude 设计工位写成，你是另一家模型的交叉审计。
+先读 AGENTS.md（尤其 §5 证据规则）、docs/DECISIONS.md（D1、D2、D15、D25、D26、D29–D32、D37）、tasks/T26-card-audit.md（任务卡：7 个审计项、产出格式、完成标准，严格照做）、schemas/card-format.md、papers/p2/tagging-guide.md。若 tasks/progress/T26b.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T26b-p2-audit。审计范围：papers/p2/front.md、papers/p2/cards/*.md、papers/p2/core/*.md、papers/p2/back.md；先 make build 看 output/p2/ 的成品。每张卡的代表题必须对照该题 QP 与 MS 原页（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读；用 rows.py render 或 pymupdf / pdftotext），报告里列出每张卡核对的页码。make check 已保证引文逐字存在，你查的是意义：引文是否支持那句说法、满分作答是否真满分、MP 对齐、选题规则、手写计数、原卷页码、概念句、伪代码是否合 2027–29 指南（sources/official/9618_pseudocode_guide_2027-2029.pdf）、Python 片段能否运行.
+可以先写脚本做机械检查（选题规则、计数重算、页码引用、伪代码 lint、Python 片段运行），放在 papers/p2/audit/，再逐张人工核对。产出：papers/p2/audit/T26-findings.jsonl（一条问题一行，字段与 kind / severity 取值见任务卡）、papers/p2/audit/T26-report.md。
+只改 tasks/scope.json 里 T26b 允许的路径（papers/p2/audit/**）与 tasks/progress/T26b.md；不要改卡片、概念表、corpus、practice。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T26b → push → gh pr create --base main --title "T26b: audit P2 handbook"。PR 描述：审计卡数、问题数（按 severity）、最严重的 5 条、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T26b.md 并提交。
+```
