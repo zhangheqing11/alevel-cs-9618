@@ -165,16 +165,16 @@
     <rect x="355" y="245" width="140" height="45" />
     <rect x="525" y="245" width="140" height="45" />
   </g>
-  <g fill="#111" font-family="sans-serif" font-size="15" text-anchor="middle">
-    <text x="85" y="38">Computer 1</text>
-    <text x="255" y="38">Computer 2</text>
-    <text x="425" y="38">Computer 3</text>
-    <text x="595" y="38">Computer 4</text>
-    <text x="340" y="156">SWITCH</text>
-    <text x="85" y="273">Printer 1</text>
-    <text x="255" y="273">Printer 2</text>
-    <text x="425" y="273">Server</text>
-    <text x="595" y="273">Router (internet)</text>
+  <g fill="#111">
+    <text x="85" y="38" text-anchor="middle" font-family="Helvetica" font-size="15">Computer 1</text>
+    <text x="255" y="38" text-anchor="middle" font-family="Helvetica" font-size="15">Computer 2</text>
+    <text x="425" y="38" text-anchor="middle" font-family="Helvetica" font-size="15">Computer 3</text>
+    <text x="595" y="38" text-anchor="middle" font-family="Helvetica" font-size="15">Computer 4</text>
+    <text x="340" y="156" text-anchor="middle" font-family="Helvetica" font-size="15">SWITCH</text>
+    <text x="85" y="273" text-anchor="middle" font-family="Helvetica" font-size="15">Printer 1</text>
+    <text x="255" y="273" text-anchor="middle" font-family="Helvetica" font-size="15">Printer 2</text>
+    <text x="425" y="273" text-anchor="middle" font-family="Helvetica" font-size="15">Server</text>
+    <text x="595" y="273" text-anchor="middle" font-family="Helvetica" font-size="15">Router (internet)</text>
   </g>
 </svg>
 
