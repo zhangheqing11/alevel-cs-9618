@@ -37,7 +37,7 @@ def main():
              f'- 共 {len(points)} 行拆出 {sum(len(r["markpoints"]) for r in points.values())} 条候选得分点；核验语料 {sum(rid in verified for rid in points)} 行、{sum(len(r["markpoints"]) for rid,r in points.items() if rid in verified)} 条。ms_max 用于候选总分超过小问分值，候选条数不等于可获分数。',
              f'- low {sum(t["confidence"]=="low" for t in tags.values())} 行，占 {sum(t["confidence"]=="low" for t in tags.values())/len(tags):.2%}。',
              '- 只读每行自己的 QP/MS；原页查看记录见 pipeline/tag/p2/review_log.json。所有独立卷起始图示页均查看，复杂跨页代码和流程图另查原页。D21 重复卷完全复制对应 _21 行。',
-             '- 721 行盲标、拆分及候选排除清单先完成，冻结于提交 7c54a00；blind/ 保存原始快照与 SHA256 manifest。随后才首次读取两个 pilot 文件，未为提高一致率调整主题型或切分。',
+             '- 721 行盲标、拆分及候选排除清单先完成，冻结于提交 5a95bb0；blind/ 保存原始快照与 SHA256 manifest。随后才首次读取两个 pilot 文件，未为提高一致率调整主题型或切分。',
              '- 真源：pipeline/tag/p2/p2_tags.jsonl、p2_markpoints.jsonl。check_p2.py 检查覆盖、词表、原文子串、分值和 D21；apply_p2.py 只写五个授权字段；report_p2.py 重建本报告。', '',
              '## 与试标的盲标比较', '',
              f'- 主题型：{agreement}/{len(pilot)} = {agreement/len(pilot):.2%}（要求 ≥90%）。',
@@ -50,7 +50,7 @@ def main():
         if p['primary'] != t['primary']:
             lines.append(f'| {p["id"]} | {p["primary"]} | {t["primary"]} | 见最终 tag_note |')
         if set(filter(None,p['cross'].split(';'))) != set(t['cross']):
-            lines.append(f'| {p["id"]} | {p["cross"] or "无"} | {", ".join(t["cross"])} | 保留 DT-02：分别复核该题 MS p{rows[p["id"]]["ms_page"]}，数组边界声明与 OF 记录类型是两个独立下划线计分片段；按 §4 非代码综合模块的副题型阈值，记录类型另占一分。 |')
+            lines.append(f'| {p["id"]} | {p["cross"] or "无"} | {", ".join(t["cross"])} | 保留 DT-02：分别复核该题 MS p{rows[p["id"]]["ms_page"]}，数组边界声明与 OF 记录类型是两个独立下划线计分片段；按 §4 §3 不适用的单条声明按“其他行”的副题型阈值，记录类型另占一分。 |')
     lines += ['', '### 技能集合差异', '',
               '以下逐条按 §8.3 与该题 MS 文字复核。表中保留盲标差异，并列出最终技能；七处据原文补准，其他保留较具体或包含独立操作的 1–3 个标签。只比较集合，不把顺序差异当分歧。', '',
               '| 行 / 点 | MS 原文 | pilot 技能 | 盲标技能 | 最终技能与复核 |', '|:--|:--|:--|:--|:--|']
