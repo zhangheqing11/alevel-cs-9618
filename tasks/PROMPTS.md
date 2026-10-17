@@ -133,3 +133,13 @@ T12e（从最新 origin/main 开分支 task/T12e-p3-equivalents，scope 用 T12�
 交付：make check-all → make check-scope TASK=T12 → push → gh pr create --base main --title "T12e: link duplicated P3 rows (equivalent_of)"。不要合并。
 提醒：T27 已合并，rows 现在有 er 字段；你改 pipeline/extract、pipeline/tag 时必须保留 er（D33）。之后的 P4 抽取同样从最新 main 单独开分支、单独 PR。
 ```
+
+## codex（任一工位）· T31 P3 全量打标签 + 拆得分点（T30 已合并；T12e 合并前也可开工）
+
+```
+你是执行工位，负责任务 T31：按 papers/p3/tagging-guide.md 给 P3 全部 858 行打题型标签，并按指南 §8 拆写代码小问的得分点。这是跨模型盲标：P3 的题型体系与试标由 Claude 设计，你要独立标出结果，再与试标比一致率。
+先读 AGENTS.md、docs/DECISIONS.md（D2、D8、D21、D33、D34、D35）、tasks/T31-p3-tagging.md（任务卡：做法、产出、完成标准都在里面，严格照做）、papers/p3/taxonomy.json、papers/p3/tagging-guide.md、papers/p3/skill_tags.json（extends P2 词表）、schemas/row.schema.json；做法照抄 P2 的 T28（pipeline/tag/p2/ 是现成范本）。若 tasks/progress/T31.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T31-p3-tagging。先盲标全部 858 行（不先看 papers/p3/pilot_*），盲标快照存 pipeline/tag/p3/blind/；再对照 pilot 复核分歧。看图题回到原页（rows.py render，PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读）。
+D35：与同季 _31 卷逐字相同的 119 行（T12e 正在补 equivalent_of）和已有 equivalent_of 的行，照抄 _31 卷对应行的标签与得分点。行里已有 T27 的 er 字段，apply 必须逐字保留（D33）。
+只改 tasks/scope.json 里 T31 允许的路径；P2 的 apply_p2.py 不要改（需要泛化就写进「需要总控决定」）。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T31 → apply_p3.py --check 与 pipeline/er/apply_er.py --check 都 0 改动 → push → gh pr create --base main --title "T31: tag P3 rows + split markpoints"。不要合并 PR。停下前更新 tasks/progress/T31.md 并提交。
+```

@@ -115,5 +115,12 @@
       "corpus/er_report.md",
       "corpus/rows/**"
     ]
+  },
+  "T31": {
+    "allow": [
+      "pipeline/tag/p3/**",
+      "corpus/rows/p3/**",
+      "corpus/tag_report_p3.md"
+    ]
   }
 }

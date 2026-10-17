@@ -25,7 +25,7 @@
 | T27 | 考官报告逐题摘录挂到行（`er` 字段，覆盖 98.8%） | cc-G · Sonnet 5.5 high | T12 P1–P3 ✅ | ✅ | #26 |
 
 | T30 | P3 题型体系 + 打标签指南 + 试标（9 章 79 型） | cc-F · Opus 5.5 high | T12 P3 ✅ | ✅ | #27 |
-| T12e | P3 重复行补 `equivalent_of`（D35） | codex-1 | T30 ✅ | ⏳ | `task/T12e-p3-equivalents` |
-| T31 | P3 全量打标签 + 拆得分点 | 待定 | T30 ✅ | ⏳ | — |
+| T12e | P3 重复行补 `equivalent_of`（D35） | codex-1 | T30 ✅ | 🔨 | `task/T12e-p3-equivalents` |
+| T31 | P3 全量打标签 + 拆得分点（跨模型盲标） | codex | T30 ✅ | ⏳ | `task/T31-p3-tagging` |
 | T32 | P3 题型卡 + 核心概念表 | cc · Opus | T31 | ⏳ | — |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
