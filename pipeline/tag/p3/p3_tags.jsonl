@@ -7,7 +7,7 @@
 {"id": "9618_s21_31:2(b)(i)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_31:2(b)(ii)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_31:2(c)", "primary": "P3-DR-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s21_31:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03"], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s21_31:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03", "P3-SY-02"], "confidence": "low", "note": "指南 §7.18 连线：分页/虚拟内存 2 分、内核中断/调度 2 分、多任务 1 分；两主题并列且题干无偏向，暂取 SY-04，供总控裁决。"}
 {"id": "9618_s21_31:3(b)", "primary": "P3-SY-05", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_31:4(a)(i)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_31:4(a)(ii)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -34,7 +34,7 @@
 {"id": "9618_s21_32:2(b)(i)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_32:2(b)(ii)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_32:2(c)", "primary": "P3-DR-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s21_32:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03"], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s21_32:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03", "P3-SY-02"], "confidence": "low", "note": "指南 §7.18 连线：分页/虚拟内存 2 分、内核中断/调度 2 分、多任务 1 分；两主题并列且题干无偏向，暂取 SY-04，供总控裁决。"}
 {"id": "9618_s21_32:3(b)", "primary": "P3-SY-05", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_32:4(a)(i)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_32:4(a)(ii)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -61,7 +61,7 @@
 {"id": "9618_s21_33:2(b)(i)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_33:2(b)(ii)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_33:2(c)", "primary": "P3-DR-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s21_33:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03"], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s21_33:3(a)", "primary": "P3-SY-04", "cross": ["P3-SY-03", "P3-SY-02"], "confidence": "low", "note": "指南 §7.18 连线：分页/虚拟内存 2 分、内核中断/调度 2 分、多任务 1 分；两主题并列且题干无偏向，暂取 SY-04，供总控裁决。"}
 {"id": "9618_s21_33:3(b)", "primary": "P3-SY-05", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_33:4(a)(i)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s21_33:4(a)(ii)", "primary": "P3-SY-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -106,7 +106,7 @@
 {"id": "9618_s22_32:1(a)", "primary": "P3-DR-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:1(b)(i)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:1(b)(ii)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s22_32:1(b)(iii)", "primary": "P3-DR-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s22_32:1(b)(iii)", "primary": "P3-DR-04", "cross": [], "confidence": "high", "note": "指南 §7.4：给已声明记录的字段赋枚举值，不是声明枚举类型；DR-02 summary 与 DR-04 not 的边界措辞不一致，按直接产出取 DR-04。"}
 {"id": "9618_s22_32:1(c)(i)", "primary": "P3-FP-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:1(c)(ii)", "primary": "P3-FP-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:2(a)", "primary": "P3-FP-07", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -125,7 +125,7 @@
 {"id": "9618_s22_32:7(a)", "primary": "P3-SC-05", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:7(b)(i)", "primary": "P3-SC-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:7(b)(ii)", "primary": "P3-SC-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s22_32:8(a)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s22_32:8(a)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "MS p.8 只列四个填空答案片段（无完整代码），按 QP p.11 四行一一映射；text 照录 MS 片段，不补写 QP 已给部分。"}
 {"id": "9618_s22_32:8(b)(i)", "primary": "P3-CT-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:8(b)(ii)", "primary": "P3-CT-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s22_32:8(b)(iii)", "primary": "P3-CT-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -193,7 +193,7 @@
 {"id": "9618_s23_32:5(a)", "primary": "P3-SC-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s23_32:5(b)", "primary": "P3-SC-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s23_32:6(a)", "primary": "P3-DR-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s23_32:6(b)", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s23_32:6(b)", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "GETRECORD 目标为 DentalRecord[Count]，按随机文件与数组下标标记；没有字段点号访问，不打 array-of-records。"}
 {"id": "9618_s23_32:7(a)", "primary": "P3-CI-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s23_32:7(b)", "primary": "P3-CI-07", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s23_32:8(a)", "primary": "P3-HV-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -258,7 +258,7 @@
 {"id": "9618_s24_31:8(c)", "primary": "P3-FP-09", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_31:9", "primary": "P3-AI-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_31:10(a)", "primary": "P3-CT-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s24_31:10(b)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s24_31:10(b)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "QP 的 WHILE 行两处留空；MS 按 completed line 给分，合为一条 1 分（指南 §8.2 B）。"}
 {"id": "9618_s24_31:10(c)", "primary": "P3-CT-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_31:11(a)", "primary": "P3-HV-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_31:11(b)", "primary": "P3-HV-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -314,7 +314,7 @@
 {"id": "9618_s24_33:8(c)", "primary": "P3-FP-09", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_33:9", "primary": "P3-AI-06", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_33:10(a)", "primary": "P3-CT-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s24_33:10(b)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s24_33:10(b)", "primary": "P3-CT-02", "cross": [], "confidence": "high", "note": "QP 的 WHILE 行两处留空；MS 按 completed line 给分，合为一条 1 分（指南 §8.2 B）；本卷 MS 独立核对，与 31 对应代码相同。"}
 {"id": "9618_s24_33:10(c)", "primary": "P3-CT-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_33:11(a)", "primary": "P3-HV-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s24_33:11(b)", "primary": "P3-HV-02", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -371,7 +371,7 @@
 {"id": "9618_s25_32:12(a)", "primary": "P3-FP-05", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s25_32:12(b)(i)", "primary": "P3-FP-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s25_32:12(b)(ii)", "primary": "P3-FP-04", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_s25_32:13", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_s25_32:13", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "Grade 是单条记录；Grade.ExamGrade 赋值标 assign-value，不使用要求 数组[下标].字段 的 array-of-records。"}
 {"id": "9618_s25_33:1(a)", "primary": "P3-DR-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s25_33:1(b)", "primary": "P3-DR-01", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_s25_33:2(a)", "primary": "P3-DR-11", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
@@ -671,7 +671,7 @@
 {"id": "9618_w23_32:11(b)", "primary": "P3-FP-08", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_w23_32:11(c)", "primary": "P3-FP-09", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_w23_32:12(a)", "primary": "P3-FP-11", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
-{"id": "9618_w23_32:12(b)", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
+{"id": "9618_w23_32:12(b)", "primary": "P3-FP-10", "cross": [], "confidence": "high", "note": "指南 §8.2 B：SEEK 行两处留空，MS 按 blank 给分，该条 2 分；6 行共 7 分。"}
 {"id": "9618_w23_33:1(a)", "primary": "P3-DR-10", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_w23_33:1(b)", "primary": "P3-DR-12", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}
 {"id": "9618_w23_33:2(a)", "primary": "P3-CI-03", "cross": [], "confidence": "high", "note": "按产出、MS 主要得分点与指南 §7 判定。"}

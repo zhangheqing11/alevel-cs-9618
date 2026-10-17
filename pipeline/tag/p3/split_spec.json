@@ -1,0 +1,1099 @@
+{
+  "9618_s21_31:2(c)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ]
+    ]
+  },
+  "9618_s21_31:8(b)": {
+    "kind": "A",
+    "count": 7,
+    "skills": [
+      [
+        "count-loop",
+        "loop-bounds",
+        "insertion-sort"
+      ],
+      [
+        "insertion-sort",
+        "assign-value"
+      ],
+      [
+        "parallel-arrays",
+        "assign-value"
+      ],
+      [
+        "pre-condition-loop",
+        "insertion-sort"
+      ],
+      [
+        "insertion-sort",
+        "shift-values",
+        "parallel-arrays"
+      ],
+      [
+        "insertion-sort",
+        "accumulator"
+      ],
+      [
+        "insertion-sort",
+        "parallel-arrays"
+      ]
+    ]
+  },
+  "9618_s22_31:7(a)": {
+    "kind": "A",
+    "count": 5,
+    "texts": [
+      "Acrylic has attribute Soft of type BOOLEAN",
+      "Wool has attribute WoolType with suitable data type",
+      "Acrylic and Wool have method YarnInfo()",
+      "Acrylic, Wool and Mix at least one inherit (one arrow correct) from Yarn …",
+      "… Acrylic, Wool and Mix all inherit (all arrows correct) from Yarn"
+    ],
+    "skills": [
+      [
+        "data-types"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "polymorphism"
+      ],
+      [
+        "inheritance"
+      ],
+      [
+        "inheritance"
+      ]
+    ]
+  },
+  "9618_s22_32:8(a)": {
+    "kind": "B",
+    "lines": [
+      "INTEGER",
+      "9 // LENGTH(MyList) - 1",
+      "Index + 1",
+      "\"Value not found\" (or any similar phrase)"
+    ],
+    "skills": [
+      [
+        "data-types"
+      ],
+      [
+        "loop-bounds",
+        "linear-search"
+      ],
+      [
+        "accumulator",
+        "linear-search"
+      ],
+      [
+        "output-format"
+      ]
+    ]
+  },
+  "9618_s23_31:10": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE \"ActiveFile.txt\" FOR READ",
+      "WHILE NOT EOF(\"ActiveFile.txt\")",
+      "WRITEFILE \"ArchiveFile.txt\", \"Account not present\"",
+      "WRITEFILE \"ArchiveFile.txt\", Account",
+      "CLOSEFILE \"ActiveFile.txt\""
+    ],
+    "skills": [
+      [
+        "file-open-read"
+      ],
+      [
+        "loop-to-eof"
+      ],
+      [
+        "file-write"
+      ],
+      [
+        "file-write"
+      ],
+      [
+        "file-close"
+      ]
+    ]
+  },
+  "9618_s23_31:11(b)": {
+    "kind": "B",
+    "lines": [
+      "IF Length > 0 THEN",
+      "Item ← Queue[FrontPointer]",
+      "Length ← Length – 1",
+      "FrontPointer ← 1"
+    ],
+    "skills": [
+      [
+        "queue-array",
+        "relational-ops"
+      ],
+      [
+        "queue-array",
+        "array-index"
+      ],
+      [
+        "queue-array",
+        "accumulator"
+      ],
+      [
+        "queue-array"
+      ]
+    ]
+  },
+  "9618_s23_32:6(a)": {
+    "kind": "A",
+    "count": 2,
+    "weights": [
+      1,
+      3
+    ],
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ]
+    ]
+  },
+  "9618_s23_32:6(b)": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE DentalFile FOR RANDOM",
+      "Count ← 1",
+      "GETRECORD DentalFile, DentalRecord[Count]",
+      "UNTIL EOF(DentalFile)",
+      "CLOSEFILE DentalFile"
+    ],
+    "skills": [
+      [
+        "random-file"
+      ],
+      [
+        "initialise-variables"
+      ],
+      [
+        "random-file",
+        "array-index"
+      ],
+      [
+        "loop-to-eof",
+        "post-condition-loop"
+      ],
+      [
+        "file-close"
+      ]
+    ]
+  },
+  "9618_s23_32:11(a)(ii)": {
+    "kind": "B",
+    "lines": [
+      "RearPointer ← -1",
+      "Length ← 0",
+      "IF Length < MaxLength THEN // IF Length <= MaxLength - 1 THEN",
+      "RearPointer ← RearPointer + 1",
+      "Queue[RearPointer] ← NewItem"
+    ],
+    "skills": [
+      [
+        "queue-array",
+        "initialise-variables"
+      ],
+      [
+        "queue-array",
+        "initialise-variables"
+      ],
+      [
+        "queue-array",
+        "relational-ops"
+      ],
+      [
+        "queue-array"
+      ],
+      [
+        "queue-array",
+        "array-index"
+      ]
+    ]
+  },
+  "9618_s24_31:3(b)": {
+    "kind": "A",
+    "count": 2,
+    "weights": [
+      1,
+      3
+    ],
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ]
+    ]
+  },
+  "9618_s24_31:10(b)": {
+    "kind": "B",
+    "lines": [
+      "Found ← FALSE",
+      "WHILE Found = FALSE AND NotInList = FALSE",
+      "IF ToFind = Names[CurrentItem]// Names[CurrentItem] = ToFind THEN",
+      "NotInList ← TRUE",
+      "TopOfList ← CurrentItem + 1"
+    ],
+    "skills": [
+      [
+        "initialise-variables",
+        "flag-variable"
+      ],
+      [
+        "pre-condition-loop",
+        "logic-ops",
+        "binary-search"
+      ],
+      [
+        "relational-ops",
+        "binary-search"
+      ],
+      [
+        "binary-search",
+        "flag-variable"
+      ],
+      [
+        "binary-search"
+      ]
+    ]
+  },
+  "9618_s24_32:3(b)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ]
+    ]
+  },
+  "9618_s24_32:8(a)": {
+    "kind": "B",
+    "lines": [
+      "Found ← FALSE",
+      "WHILE Found = FALSE AND NotInList = FALSE // Count <= EndOfList",
+      "IF ToFind = Widgets[Count] // Widgets[Count] = ToFind THEN",
+      "IF Found = FALSE AND Count > EndOfList THEN"
+    ],
+    "skills": [
+      [
+        "initialise-variables",
+        "flag-variable"
+      ],
+      [
+        "pre-condition-loop",
+        "logic-ops",
+        "linear-search"
+      ],
+      [
+        "relational-ops",
+        "linear-search"
+      ],
+      [
+        "logic-ops",
+        "loop-bounds",
+        "linear-search"
+      ]
+    ]
+  },
+  "9618_s24_33:10(b)": {
+    "kind": "copy",
+    "source": "9618_s24_31:10(b)"
+  },
+  "9618_s25_31:1(b)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "data-types",
+        "user-defined-type"
+      ]
+    ]
+  },
+  "9618_s25_31:11(a)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "data-types"
+      ],
+      [
+        "getter-setter"
+      ],
+      [
+        "getter-setter",
+        "data-types"
+      ],
+      [
+        "getter-setter"
+      ],
+      [
+        "getter-setter",
+        "data-types"
+      ]
+    ]
+  },
+  "9618_s25_31:12": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE \"StockList.dat\" FOR RANDOM",
+      "SEEK \"StockList.dat\", Location",
+      "GETRECORD \"StockList.dat\", Item",
+      "OUTPUT \"The item in stock is \", Item",
+      "CLOSEFILE \"StockList.dat\""
+    ],
+    "skills": [
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "output-format"
+      ],
+      [
+        "file-close"
+      ]
+    ]
+  },
+  "9618_s25_32:12(a)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "data-types"
+      ],
+      [
+        "getter-setter"
+      ],
+      [
+        "getter-setter",
+        "data-types"
+      ],
+      [
+        "getter-setter"
+      ],
+      [
+        "getter-setter",
+        "data-types"
+      ]
+    ]
+  },
+  "9618_s25_32:13": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE \"CurrentResults.dat\" FOR RANDOM",
+      "FOR Position ← 1 TO 50",
+      "Grade.ExamGrade ← \"Missing grade\"",
+      "SEEK \"StoredResults.dat\", Position",
+      "PUTRECORD \"StoredResults.dat\", Grade"
+    ],
+    "skills": [
+      [
+        "random-file"
+      ],
+      [
+        "count-loop",
+        "loop-bounds"
+      ],
+      [
+        "assign-value"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ]
+    ]
+  },
+  "9618_s25_33:1(a)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "data-types"
+      ]
+    ]
+  },
+  "9618_s25_33:11": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE \"StockList.dat\" FOR RANDOM",
+      "SEEK \"StockList.dat\", Location",
+      "GETRECORD \"StockList.dat\", CurrentStock",
+      "PUTRECORD \"StockList.dat\", NewStock",
+      "IF Stored = FALSE THEN"
+    ],
+    "skills": [
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "flag-variable",
+        "relational-ops"
+      ]
+    ]
+  },
+  "9618_s25_33:12(b)": {
+    "kind": "A",
+    "count": 6,
+    "skills": [
+      [
+        "insertion-sort",
+        "assign-value"
+      ],
+      [
+        "pre-condition-loop",
+        "insertion-sort"
+      ],
+      [
+        "relational-ops",
+        "insertion-sort"
+      ],
+      [
+        "insertion-sort",
+        "shift-values"
+      ],
+      [
+        "insertion-sort",
+        "accumulator"
+      ],
+      [
+        "insertion-sort"
+      ]
+    ]
+  },
+  "9618_s26_31:10(a)": {
+    "kind": "A",
+    "count": 7,
+    "skills": [
+      [
+        "count-loop",
+        "loop-bounds",
+        "insertion-sort"
+      ],
+      [
+        "initialise-variables",
+        "parallel-arrays"
+      ],
+      [
+        "initialise-variables",
+        "insertion-sort"
+      ],
+      [
+        "pre-condition-loop",
+        "insertion-sort"
+      ],
+      [
+        "insertion-sort",
+        "shift-values",
+        "parallel-arrays"
+      ],
+      [
+        "accumulator",
+        "insertion-sort"
+      ],
+      [
+        "insertion-sort",
+        "parallel-arrays"
+      ]
+    ]
+  },
+  "9618_s26_32:10(b)": {
+    "kind": "A",
+    "count": 8,
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "nested-if"
+      ],
+      [
+        "relational-ops"
+      ],
+      [
+        "file-close"
+      ],
+      [
+        "return-value"
+      ]
+    ],
+    "end": "Completed algorithm"
+  },
+  "9618_s26_32:11(a)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "class-definition"
+      ],
+      [
+        "encapsulation",
+        "data-types"
+      ],
+      [
+        "class-definition"
+      ],
+      [
+        "class-definition",
+        "data-types"
+      ],
+      [
+        "class-definition",
+        "assign-value"
+      ]
+    ]
+  },
+  "9618_s26_33:10(a)(ii)": {
+    "kind": "A",
+    "count": 7,
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "initialise-variables",
+        "binary-search"
+      ],
+      [
+        "pre-condition-loop",
+        "binary-search"
+      ],
+      [
+        "binary-search",
+        "div-mod"
+      ],
+      [
+        "relational-ops",
+        "binary-search"
+      ],
+      [
+        "binary-search"
+      ],
+      [
+        "binary-search",
+        "return-value"
+      ]
+    ]
+  },
+  "9618_w21_31:10(d)": {
+    "kind": "A",
+    "count": 7,
+    "skills": [
+      [
+        "stack-array",
+        "nested-if"
+      ],
+      [
+        "procedure-call"
+      ],
+      [
+        "return-value"
+      ],
+      [
+        "return-value"
+      ],
+      [
+        "stack-array"
+      ],
+      [
+        "assign-value"
+      ],
+      [
+        "stack-array",
+        "array-index"
+      ]
+    ]
+  },
+  "9618_w22_31:11(b)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "class-definition"
+      ],
+      [
+        "encapsulation",
+        "data-types"
+      ],
+      [
+        "class-definition",
+        "data-types"
+      ],
+      [
+        "assign-value"
+      ],
+      [
+        "class-definition",
+        "assign-value"
+      ]
+    ]
+  },
+  "9618_w22_31:12(a)": {
+    "kind": "A",
+    "count": 6,
+    "end": "Lower ← 0",
+    "skills": [
+      [
+        "initialise-variables",
+        "binary-search"
+      ],
+      [
+        "relational-ops",
+        "binary-search"
+      ],
+      [
+        "binary-search"
+      ],
+      [
+        "binary-search"
+      ],
+      [
+        "relational-ops",
+        "binary-search"
+      ],
+      [
+        "post-condition-loop",
+        "flag-variable"
+      ]
+    ]
+  },
+  "9618_w22_32:4(b)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "user-defined-type"
+      ]
+    ]
+  },
+  "9618_w22_32:11(b)": {
+    "kind": "B",
+    "lines": [
+      "INPUT FlowerName",
+      "WHILE Pointer <> 0",
+      "Pointer ← NextPointer[Pointer]",
+      "IF Pointer = 0 THEN // IF Found <> 0 THEN",
+      "OUTPUT \"The flower you wanted is not in the list\""
+    ],
+    "skills": [
+      [
+        "input-prompt"
+      ],
+      [
+        "linked-list",
+        "pre-condition-loop"
+      ],
+      [
+        "linked-list"
+      ],
+      [
+        "linked-list",
+        "relational-ops"
+      ],
+      [
+        "output-format"
+      ]
+    ]
+  },
+  "9618_w23_31:8(a)": {
+    "kind": "B",
+    "lines": [
+      "AccountFile ← \"AccountRecords.dat\"",
+      "OPENFILE AccountFile FOR RANDOM",
+      "Location ← Hash(Customer.AccountNumber)",
+      "SEEK AccountFile, Location",
+      "GETRECORD AccountFile, Customer"
+    ],
+    "skills": [
+      [
+        "initialise-variables"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "procedure-call",
+        "assign-value"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "random-file"
+      ]
+    ]
+  },
+  "9618_w23_31:10(b)": {
+    "kind": "B",
+    "lines": [
+      "FUNCTION Pop() RETURNS REAL",
+      "IF TopPointer >= BasePointer THEN",
+      "Item ← Stack[TopPointer]",
+      "TopPointer ← TopPointer – 1",
+      "RETURN Item"
+    ],
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "stack-array",
+        "relational-ops"
+      ],
+      [
+        "stack-array",
+        "array-index"
+      ],
+      [
+        "stack-array"
+      ],
+      [
+        "return-value"
+      ]
+    ]
+  },
+  "9618_w23_32:9(a)(ii)": {
+    "kind": "B",
+    "lines": [
+      "BasePointer ← 1",
+      "TopPointer ← 0",
+      "IF TopPointer < MaxSize THEN",
+      "TopPointer ← TopPointer + 1",
+      "Stack[TopPointer] ← NewItem"
+    ],
+    "skills": [
+      [
+        "initialise-variables",
+        "stack-array"
+      ],
+      [
+        "initialise-variables",
+        "stack-array"
+      ],
+      [
+        "stack-array",
+        "relational-ops"
+      ],
+      [
+        "stack-array"
+      ],
+      [
+        "stack-array",
+        "array-index"
+      ]
+    ]
+  },
+  "9618_w23_32:12(b)": {
+    "kind": "B",
+    "lines": [
+      "OPENFILE \"AccountRecord.dat\" FOR RANDOM",
+      "FoundFlag ← FALSE",
+      "INPUT SearchCustomer",
+      "WHILE NOT FoundFlag AND Location <= MaxSize",
+      "SEEK \"AccountRecord.dat\", Location",
+      "OUTPUT \"Customer does not exist.\""
+    ],
+    "weights": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    "skills": [
+      [
+        "random-file"
+      ],
+      [
+        "initialise-variables",
+        "flag-variable"
+      ],
+      [
+        "input-prompt"
+      ],
+      [
+        "pre-condition-loop",
+        "logic-ops"
+      ],
+      [
+        "random-file"
+      ],
+      [
+        "output-format"
+      ]
+    ]
+  },
+  "9618_w24_31:6(b)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "user-defined-type"
+      ]
+    ]
+  },
+  "9618_w24_31:9(b)": {
+    "kind": "A",
+    "count": 5,
+    "skills": [
+      [
+        "data-types"
+      ],
+      [
+        "class-definition"
+      ],
+      [
+        "getter-setter",
+        "data-types"
+      ],
+      [
+        "getter-setter"
+      ],
+      [
+        "getter-setter"
+      ]
+    ]
+  },
+  "9618_w24_31:11(c)": {
+    "kind": "B",
+    "lines": [
+      "FUNCTION SearchTree(Item : STRING) RETURNS INTEGER",
+      "NowPtr ← RootPtr",
+      "IF BinTree[NowPtr].Data > Item THEN",
+      "NowPtr ← BinTree[NowPtr].RightPtr"
+    ],
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "binary-tree",
+        "initialise-variables"
+      ],
+      [
+        "binary-tree",
+        "relational-ops",
+        "array-of-records"
+      ],
+      [
+        "binary-tree",
+        "array-of-records"
+      ]
+    ]
+  },
+  "9618_w24_32:3(b)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "record-type"
+      ],
+      [
+        "data-types"
+      ],
+      [
+        "data-types"
+      ]
+    ]
+  },
+  "9618_w24_32:11(c)": {
+    "kind": "B",
+    "lines": [
+      "FUNCTION SearchList(Item : INTEGER) RETURNS INTEGER",
+      "NowPtr ← RootPtr",
+      "IF LinkList[NowPtr].Data > Item THEN",
+      "NowPtr ← LinkList[NowPtr].LeftPtr"
+    ],
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "binary-tree",
+        "initialise-variables"
+      ],
+      [
+        "binary-tree",
+        "relational-ops",
+        "array-of-records"
+      ],
+      [
+        "binary-tree",
+        "array-of-records"
+      ]
+    ]
+  },
+  "9618_w25_31:9(a)(i)": {
+    "kind": "B",
+    "lines": [
+      "FUNCTION Pop() RETURNS STRING",
+      "IF Top > –1 // Top >= Base THEN",
+      "DataItem ← StackArray[Top]",
+      "Top ← Top – 1",
+      "RETURN DataItem // StackArray[Top + 1]"
+    ],
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "stack-array",
+        "relational-ops"
+      ],
+      [
+        "stack-array",
+        "array-index"
+      ],
+      [
+        "stack-array"
+      ],
+      [
+        "return-value"
+      ]
+    ]
+  },
+  "9618_w25_32:12(a)(i)": {
+    "kind": "B",
+    "lines": [
+      "PROCEDURE Push(NewData : STRING)",
+      "Top ← Top + 1",
+      "StackArray[Top] ← NewData",
+      "OUTPUT \"Stack full; new data cannot be added\""
+    ],
+    "skills": [
+      [
+        "module-header"
+      ],
+      [
+        "stack-array"
+      ],
+      [
+        "stack-array",
+        "array-index"
+      ],
+      [
+        "output-format"
+      ]
+    ]
+  },
+  "9618_w25_33:1(b)": {
+    "kind": "A",
+    "count": 4,
+    "skills": [
+      [
+        "record-type"
+      ],
+      [
+        "record-type"
+      ],
+      [
+        "user-defined-type"
+      ],
+      [
+        "data-types"
+      ]
+    ]
+  }
+}
