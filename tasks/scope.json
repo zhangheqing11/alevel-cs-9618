@@ -22,9 +22,12 @@
   },
   "T12": {
     "allow": [
-      "pipeline/extract/**",
+      "corpus/extract_report.md",
       "corpus/rows/**",
-      "corpus/extract_report.md"
+      "corpus/tag_report_p1.md",
+      "corpus/tag_report_p2.md",
+      "pipeline/extract/**",
+      "pipeline/tag/**"
     ]
   },
   "T13": {
@@ -90,6 +93,11 @@
       "papers/p2/cards/**",
       "papers/p2/core/**",
       "papers/p2/adjudication.csv"
+    ]
+  },
+  "T25": {
+    "allow": [
+      "practice/p2/**"
     ]
   }
 }

@@ -76,3 +76,18 @@ T12 后续：按 docs/DECISIONS.md D21，用 pipeline/extract/overrides.json 给
 ```
 T12c（分支 task/T12c-pua-normalise）：按 docs/DECISIONS.md D26 的对照表，在 pipeline/extract 的文本归一步骤里把私用区字符改写成真实符号，作用于全部卷的 stem、stem_ctx、ms_text；重跑抽取，确认除这些字符外其余字段逐字不变（写一个对比脚本，报告每卷改了多少处）。表外若还有 U+E000–U+F8FF 字符，列进报告，不要猜。然后用 pipeline/tag/apply_tags.py（P1）与 pipeline/tag/p2/apply_p2.py（P2，T28 的产物）重新套上标签，并把 markpoints 的 text 按同一张表改写。scope 用 T12 + T24 + T28 的路径（如被 check-scope 拦下，写进 PR「需要总控决定」）。交付：make check-all → push → gh pr create --base main。不要合并。
 ```
+
+## codex-2 · T25 批 1（现在可开：P2 练习文件夹）
+
+```
+你是执行工位 codex-2，负责任务 T25（P2 真题练习文件夹）。先做批 1（主题型 P2-PG-*）。
+先读 AGENTS.md、docs/DECISIONS.md（D1、D2、D10、D24、D25、D26），再读 tasks/T25-p2-practice.md、schemas/exercise-format.md、schemas/examples/，并参考已合并的阶梯练习写法（ladder/levels/*/exercises/*）。若 tasks/progress/T25.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T25-p2-practice-b1。题干与示例一律对照 QP 原页转写（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/）。
+只改 tasks/scope.json 里 T25 允许的路径。交付：rebase origin/main → make check-all → make check-scope TASK=T25 → push → gh pr create --base main --title "T25 batch 1: P2 practice (PG)"。不要合并 PR。停下前更新 tasks/progress/T25.md 并提交。
+```
+
+## codex-1 · T12 P3/P4 抽取（T12c 之后）
+
+```
+继续 T12：抽取 P3 与 P4 的最细小问，P3 先、P4 后，各一个 PR，做法与 P1/P2 相同（tasks/T12-extract-rows.md、schemas/corpus-format.md，分值守恒、每卷抽查 5 行、报告写进 corpus/extract_report.md）。抽取文本按 D26 的私用区对照表归一（T12c 的归一步骤直接复用）。P4 注意：MS 并列 Java/VB/Python 三种范例，全部保留在 ms_text；题目引用的源文件在 sources/pastpapers/9618_<季><yy>_sf_<卷号>/。从最新 origin/main 开分支 task/T12-extract-p3（之后 task/T12-extract-p4）。交付：make check → make check-scope TASK=T12 → push → gh pr create --base main。不要合并 PR。
+```

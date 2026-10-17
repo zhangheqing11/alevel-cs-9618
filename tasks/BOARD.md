@@ -19,7 +19,8 @@
 | T23 | P2 题型卡 + 伪代码↔Python 对照（批 A：AD/DT 🔨，批 B：PG/SD） | cc 云端 · Opus 5.5 high | T28 ✅ | 🔨 | — |
 | T24 | P1 全量打标签 | codex-1 | T20 ✅ | ✅ | #14 |
 | T26 | 审计题型卡引文 | codex | T22/T23 | ⏳ | — |
-| T25 | P2 练习文件夹 | codex-2 | T21 ✅, T28 | ⏳ | — |
+| T25 | P2 练习文件夹（批 1 PG / 批 2 DT / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | `task/T25-p2-practice-b*` |
+| T12c | 私用区字符归一（D26），然后 T12 P3/P4 | codex-1 | T28 ✅ | 🔨 | `task/T12c-pua-normalise` |
 | T27 | 考官报告摘录挂到行 | codex | T12 | ⏳ | — |
 
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
