@@ -13,6 +13,7 @@
     "P2-PG-11"
   ],
   "skills": [
+    "assign-value",
     "initialise-variables",
     "module-header",
     "nested-if",
