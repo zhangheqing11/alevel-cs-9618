@@ -2,7 +2,7 @@ import random
 from testkit import output_lines
 
 def test_random_domains_and_conditional_third(sol,capsys):
-    """9618_s25_22:3 MP1,2,3,4,5,6,7,8 (behaviour; syntax/declarations checked manually)."""
+    """9618_s25_22:3 MP2,3,4,5,6,7,8 (behaviour; syntax/declarations checked manually)."""
     branches=set()
     for seed in range(100):
         random.seed(seed)

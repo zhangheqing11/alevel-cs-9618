@@ -1,0 +1,25 @@
+{
+  "id": "9618_w25_22:6",
+  "kind": "past-paper",
+  "title": "按首尾位置与大小写比较字符串",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:6"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boolean-return",
+    "char-compare",
+    "module-header",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Compare"
+}

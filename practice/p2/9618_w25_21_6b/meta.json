@@ -1,0 +1,30 @@
+{
+  "id": "9618_w25_21:6(b)",
+  "kind": "past-paper",
+  "title": "生成十进制校验位",
+  "source": {
+    "paper": "9618_w25_21",
+    "rows": [
+      "9618_w25_21:6(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "accumulator",
+    "char-loop",
+    "div-mod",
+    "initialise-variables",
+    "module-header",
+    "operator-precedence",
+    "return-value",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Generate"
+}

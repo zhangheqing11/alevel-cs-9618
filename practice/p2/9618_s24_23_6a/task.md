@@ -29,7 +29,6 @@ A program displays a progress bar to inform the user of the progress of tasks th
         ○   a string representing the image filename root
     •   generate the full image filename
     •   call a procedure Display() using the full image filename as the parameter.
-,                                 ,
 Write pseudocode for procedure Progress().
 ```
 

@@ -1,0 +1,2 @@
+def Count():
+    raise NotImplementedError

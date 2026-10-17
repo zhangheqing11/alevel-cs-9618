@@ -1,0 +1,28 @@
+{
+  "id": "9618_w23_22:8(b)",
+  "kind": "past-paper",
+  "title": "把收到的消息放入正确栈",
+  "source": {
+    "paper": "9618_w23_22",
+    "rows": [
+      "9618_w23_22:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boolean-return",
+    "char-compare",
+    "field-extract",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "ProcessMsg"
+}

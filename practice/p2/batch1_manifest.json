@@ -1,0 +1,617 @@
+{
+  "batch": 1,
+  "selection": "markpoints present; 2022–25; non-extension; primary P2-PG-*",
+  "merged_rows": [],
+  "skipped_eligible_rows": [],
+  "exercises": [
+    {
+      "directory": "9618_s22_21_6a",
+      "id": "9618_s22_21:6(a)",
+      "qp_page": 9,
+      "ms_page": 6,
+      "marks": 5,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_21_6b",
+      "id": "9618_s22_21:6(b)",
+      "qp_page": 10,
+      "ms_page": 7,
+      "marks": 4,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_21_7a",
+      "id": "9618_s22_21:7(a)",
+      "qp_page": 11,
+      "ms_page": 8,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_21_8a",
+      "id": "9618_s22_21:8(a)",
+      "qp_page": 15,
+      "ms_page": 10,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_22_6",
+      "id": "9618_s22_22:6",
+      "qp_page": 10,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_22_7a",
+      "id": "9618_s22_22:7(a)",
+      "qp_page": 12,
+      "ms_page": 11,
+      "marks": 4,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_22_8a",
+      "id": "9618_s22_22:8(a)",
+      "qp_page": 15,
+      "ms_page": 12,
+      "marks": 5,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_23_6a",
+      "id": "9618_s22_23:6(a)",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s22_23_9a",
+      "id": "9618_s22_23:9(a)",
+      "qp_page": 15,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_21_4",
+      "id": "9618_s23_21:4",
+      "qp_page": 8,
+      "ms_page": 6,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_21_8a",
+      "id": "9618_s23_21:8(a)",
+      "qp_page": 15,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_22_4",
+      "id": "9618_s23_22:4",
+      "qp_page": 6,
+      "ms_page": 5,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_22_6",
+      "id": "9618_s23_22:6",
+      "qp_page": 10,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_22_8a",
+      "id": "9618_s23_22:8(a)",
+      "qp_page": 17,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_23_4",
+      "id": "9618_s23_23:4",
+      "qp_page": 8,
+      "ms_page": 5,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s23_23_6a",
+      "id": "9618_s23_23:6(a)",
+      "qp_page": 10,
+      "ms_page": 6,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_21_6a",
+      "id": "9618_s24_21:6(a)",
+      "qp_page": 13,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_21_8a",
+      "id": "9618_s24_21:8(a)",
+      "qp_page": 19,
+      "ms_page": 11,
+      "marks": 8,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_22_4",
+      "id": "9618_s24_22:4",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 5,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_22_6a",
+      "id": "9618_s24_22:6(a)",
+      "qp_page": 12,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_22_8b",
+      "id": "9618_s24_22:8(b)",
+      "qp_page": 18,
+      "ms_page": 11,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_23_4a",
+      "id": "9618_s24_23:4(a)",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_23_6a",
+      "id": "9618_s24_23:6(a)",
+      "qp_page": 13,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s24_23_8a",
+      "id": "9618_s24_23:8(a)",
+      "qp_page": 19,
+      "ms_page": 12,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_21_3",
+      "id": "9618_s25_21:3",
+      "qp_page": 7,
+      "ms_page": 8,
+      "marks": 8,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_21_7a",
+      "id": "9618_s25_21:7(a)",
+      "qp_page": 15,
+      "ms_page": 12,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_22_3",
+      "id": "9618_s25_22:3",
+      "qp_page": 6,
+      "ms_page": 9,
+      "marks": 8,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_23_3",
+      "id": "9618_s25_23:3",
+      "qp_page": 7,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_23_5",
+      "id": "9618_s25_23:5",
+      "qp_page": 10,
+      "ms_page": 10,
+      "marks": 8,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_23_7ai",
+      "id": "9618_s25_23:7(a)(i)",
+      "qp_page": 14,
+      "ms_page": 12,
+      "marks": 5,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_23_7bi",
+      "id": "9618_s25_23:7(b)(i)",
+      "qp_page": 17,
+      "ms_page": 13,
+      "marks": 8,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_s25_23_7bii",
+      "id": "9618_s25_23:7(b)(ii)",
+      "qp_page": 18,
+      "ms_page": 14,
+      "marks": 4,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w22_21_7ai",
+      "id": "9618_w22_21:7(a)(i)",
+      "qp_page": 12,
+      "ms_page": 8,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w22_22_5",
+      "id": "9618_w22_22:5",
+      "qp_page": 10,
+      "ms_page": 8,
+      "marks": 4,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w22_22_6a",
+      "id": "9618_w22_22:6(a)",
+      "qp_page": 12,
+      "ms_page": 9,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w22_23_5ai",
+      "id": "9618_w22_23:5(a)(i)",
+      "qp_page": 7,
+      "ms_page": 5,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w22_23_6b",
+      "id": "9618_w22_23:6(b)",
+      "qp_page": 11,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_21_6a",
+      "id": "9618_w23_21:6(a)",
+      "qp_page": 10,
+      "ms_page": 7,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_21_8d",
+      "id": "9618_w23_21:8(d)",
+      "qp_page": 18,
+      "ms_page": 10,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_22_4a",
+      "id": "9618_w23_22:4(a)",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_22_8b",
+      "id": "9618_w23_22:8(b)",
+      "qp_page": 18,
+      "ms_page": 13,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_23_4a",
+      "id": "9618_w23_23:4(a)",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_23_6",
+      "id": "9618_w23_23:6",
+      "qp_page": 12,
+      "ms_page": 9,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w23_23_8c",
+      "id": "9618_w23_23:8(c)",
+      "qp_page": 18,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_21_2",
+      "id": "9618_w24_21:2",
+      "qp_page": 4,
+      "ms_page": 5,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_21_4c",
+      "id": "9618_w24_21:4(c)",
+      "qp_page": 9,
+      "ms_page": 8,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_22_2a",
+      "id": "9618_w24_22:2(a)",
+      "qp_page": 4,
+      "ms_page": 5,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_22_4",
+      "id": "9618_w24_22:4",
+      "qp_page": 8,
+      "ms_page": 7,
+      "marks": 6,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_23_2a",
+      "id": "9618_w24_23:2(a)",
+      "qp_page": 3,
+      "ms_page": 5,
+      "marks": 5,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w24_23_6",
+      "id": "9618_w24_23:6",
+      "qp_page": 11,
+      "ms_page": 10,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w25_21_6b",
+      "id": "9618_w25_21:6(b)",
+      "qp_page": 11,
+      "ms_page": 13,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w25_22_6",
+      "id": "9618_w25_22:6",
+      "qp_page": 10,
+      "ms_page": 11,
+      "marks": 7,
+      "mutants": 2
+    },
+    {
+      "directory": "9618_w25_23_6b",
+      "id": "9618_w25_23:6(b)",
+      "qp_page": 15,
+      "ms_page": 12,
+      "marks": 7,
+      "mutants": 2
+    }
+  ],
+  "source_review": {
+    "9618_s22_21": {
+      "pages": [
+        9,
+        10,
+        11,
+        14,
+        15
+      ]
+    },
+    "9618_s22_22": {
+      "pages": [
+        10,
+        11,
+        12,
+        14,
+        15
+      ]
+    },
+    "9618_s22_23": {
+      "pages": [
+        8,
+        14,
+        15
+      ]
+    },
+    "9618_s23_21": {
+      "pages": [
+        8,
+        14,
+        15
+      ]
+    },
+    "9618_s23_22": {
+      "pages": [
+        6,
+        10,
+        16,
+        17
+      ]
+    },
+    "9618_s23_23": {
+      "pages": [
+        8,
+        9,
+        10
+      ]
+    },
+    "9618_s24_21": {
+      "pages": [
+        12,
+        13,
+        18,
+        19
+      ]
+    },
+    "9618_s24_22": {
+      "pages": [
+        8,
+        11,
+        12,
+        17,
+        18
+      ]
+    },
+    "9618_s24_23": {
+      "pages": [
+        7,
+        8,
+        12,
+        13,
+        18,
+        19
+      ]
+    },
+    "9618_s25_21": {
+      "pages": [
+        7,
+        14,
+        15
+      ]
+    },
+    "9618_s25_22": {
+      "pages": [
+        6
+      ]
+    },
+    "9618_s25_23": {
+      "pages": [
+        7,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "9618_w22_21": {
+      "pages": [
+        11,
+        12
+      ]
+    },
+    "9618_w22_22": {
+      "pages": [
+        10,
+        12
+      ]
+    },
+    "9618_w22_23": {
+      "pages": [
+        6,
+        7,
+        10,
+        11
+      ]
+    },
+    "9618_w23_21": {
+      "pages": [
+        9,
+        10,
+        17,
+        18
+      ]
+    },
+    "9618_w23_22": {
+      "pages": [
+        7,
+        8,
+        16,
+        17,
+        18
+      ]
+    },
+    "9618_w23_23": {
+      "pages": [
+        7,
+        8,
+        12,
+        16,
+        17,
+        18
+      ]
+    },
+    "9618_w24_21": {
+      "pages": [
+        4,
+        8,
+        9
+      ]
+    },
+    "9618_w24_22": {
+      "pages": [
+        3,
+        4,
+        8
+      ]
+    },
+    "9618_w24_23": {
+      "pages": [
+        2,
+        3,
+        11
+      ]
+    },
+    "9618_w25_21": {
+      "pages": [
+        10,
+        11
+      ]
+    },
+    "9618_w25_22": {
+      "pages": [
+        10
+      ]
+    },
+    "9618_w25_23": {
+      "pages": [
+        14,
+        15
+      ]
+    }
+  }
+}

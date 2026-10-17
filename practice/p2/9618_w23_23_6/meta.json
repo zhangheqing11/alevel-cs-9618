@@ -1,0 +1,26 @@
+{
+  "id": "9618_w23_23:6",
+  "kind": "past-paper",
+  "title": "按优先级判断六位数字字符串",
+  "source": {
+    "paper": "9618_w23_23",
+    "rows": [
+      "9618_w23_23:6"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "char-compare",
+    "module-header",
+    "nested-if",
+    "return-value",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "TestNum"
+}

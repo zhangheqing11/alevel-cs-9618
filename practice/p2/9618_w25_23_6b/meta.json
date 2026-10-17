@@ -1,0 +1,31 @@
+{
+  "id": "9618_w25_23:6(b)",
+  "kind": "past-paper",
+  "title": "核验十进制校验位",
+  "source": {
+    "paper": "9618_w25_23",
+    "rows": [
+      "9618_w25_23:6(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "accumulator",
+    "boolean-return",
+    "char-loop",
+    "div-mod",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "relational-ops",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CheckNumber"
+}

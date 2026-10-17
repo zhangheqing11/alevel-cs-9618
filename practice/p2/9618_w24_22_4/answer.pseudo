@@ -1,0 +1,5 @@
+// DECLARE Tick : INTEGER
+
+PROCEDURE Timer(Mins, Secs : INTEGER)
+
+ENDPROCEDURE

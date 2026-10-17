@@ -3,7 +3,7 @@ from testkit import output_lines
 
 @pytest.mark.parametrize('seed',[1,5,23])
 def test_guess_feedback_and_termination(sol,monkeypatch,capsys,seed):
-    """9618_s25_21:3 MP1,2,3,4,5,6,7,8,9 (behaviour; syntax/declarations checked manually)."""
+    """9618_s25_21:3 MP2,3,4,5,6,7,8,9 (behaviour; syntax/declarations checked manually)."""
     random.seed(seed)
     order=[]
     for n in range(1,51):

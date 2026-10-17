@@ -1,0 +1,30 @@
+{
+  "id": "9618_w24_21:4(c)",
+  "kind": "past-paper",
+  "title": "检查并计算字符串商",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:4(c)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-10",
+    "P2-DT-02"
+  ],
+  "skills": [
+    "declare-variables",
+    "input-validation",
+    "module-header",
+    "operator-precedence",
+    "record-type",
+    "relational-ops",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Evaluate"
+}

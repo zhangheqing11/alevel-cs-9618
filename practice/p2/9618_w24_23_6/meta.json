@@ -1,0 +1,30 @@
+{
+  "id": "9618_w24_23:6",
+  "kind": "past-paper",
+  "title": "找三月第三个星期日",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:6"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-12"
+  ],
+  "skills": [
+    "accumulator",
+    "data-types",
+    "date-functions",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "post-condition-loop",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "AdjustClock"
+}
