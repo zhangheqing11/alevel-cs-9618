@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "extends": "papers/p2/skill_tags.json",
+  "tags": [
+    {
+      "tag": "constructor",
+      "group": "oop",
+      "name_zh": "构造方法",
+      "desc": "在类里写构造方法（Python __init__）：参数个数与顺序照题目，把参数赋给对应属性，未作参数的属性赋题给初值（0、100、–1、None、空对象数组）；class-definition 只管类头与属性声明。",
+      "example_ms": "Constructor header (and end) taking 5 parameters — 9618_s24_41:2(a)(i)"
+    },
+    {
+      "tag": "object-instantiation",
+      "group": "oop",
+      "name_zh": "实例化对象",
+      "desc": "用构造方法与正确的实参创建对象（含 Python 里用类表示的记录），存进变量或数组；按条件决定建父类还是子类对象。",
+      "example_ms": "Instantiating an object of type Vehicle with correct parameters (\"Tiger\", 100, 20) — 9618_s23_41:2(d)(i)"
+    },
+    {
+      "tag": "method-call",
+      "group": "oop",
+      "name_zh": "调用对象的方法",
+      "desc": "对指定对象调用方法（对象.方法(实参)），用 getter 读取私有属性而不是直接访问属性，并使用返回值。",
+      "example_ms": "Calling ChangeHealth method for the parameter object … — 9618_s22_41:2(f)"
+    },
+    {
+      "tag": "array-of-objects",
+      "group": "oop",
+      "name_zh": "对象数组",
+      "desc": "声明元素类型为某类的数组，把对象存进下一个空位或指定下标，遍历数组对每个对象调用方法。",
+      "example_ms": "Declaration of array with 30 elements of type Card — 9618_s22_42:3(c)"
+    },
+    {
+      "tag": "object-reference",
+      "group": "adt",
+      "name_zh": "对象引用链接",
+      "desc": "结点对象用属性保存下一个（左 / 右）结点对象，空引用用 None / null；判断引用是否为空，沿 GetNextNode() / GetLeft() 前进，修改引用来插入或删除结点。",
+      "example_ms": "Starts at head node and follows nodes using GetNextNode() until no nodes left … — 9618_s25_43:3(b)(iii)"
+    },
+    {
+      "tag": "strip-newline",
+      "group": "file",
+      "name_zh": "去掉行尾换行",
+      "desc": "从文本文件读出的每一行先去掉行尾换行符（strip()）再比较、拆分或转成数字（P4 的 Java / Python 得分点）。",
+      "example_ms": "Removing carriage return from each line read in (Java, Python) — 9618_s24_42:1(a)"
+    },
+    {
+      "tag": "read-line-groups",
+      "group": "file",
+      "name_zh": "多行一组读文件",
+      "desc": "文件里一条记录占连续的 n 行（如问题、答案、分数各一行）：每轮循环连读 n 行，按题给顺序对应到各字段。",
+      "example_ms": "Reading in all sets of 2 lines (number then colour) … — 9618_s22_42:3(c)"
+    },
+    {
+      "tag": "hash-table",
+      "group": "adt",
+      "name_zh": "散列表",
+      "desc": "用题给散列函数（Key MOD n）算出下标；插入时该位置空就存入，否则放进溢出区或同一行的下一个空位；按散列值找回记录并处理找不到。",
+      "example_ms": "Calculation of parameter MOD 200 — 9618_s25_42:2(c)"
+    },
+    {
+      "tag": "test-input-sequence",
+      "group": "evidence",
+      "name_zh": "按顺序输入测试数据",
+      "desc": "测试截图里按题目给的顺序输入全部测试数据（不多不少），应被拒绝的无效输入确实被拒并重新输入。",
+      "example_ms": "Output showing quantity entered twice (30 and 5) with first being invalid — 9618_s24_41:1(c)(ii)"
+    },
+    {
+      "tag": "test-output",
+      "group": "evidence",
+      "name_zh": "测试输出正确",
+      "desc": "测试截图里的输出与正确程序一致：MS 列出的数值、顺序、提示信息都出现。",
+      "example_ms": "Array output 3 9 4 1 2 — 9618_s24_41:1(c)(ii)"
+    },
+    {
+      "tag": "screenshot-file",
+      "group": "evidence",
+      "name_zh": "截图文件内容",
+      "desc": "截图显示程序写出的文本文件内容，且文件名在同一张截图里可见。",
+      "example_ms": "Screenshot of data in red file. Filename must be shown in same screenshot as data — 9618_s25_41:2(e)(ii)"
+    }
+  ]
+}
