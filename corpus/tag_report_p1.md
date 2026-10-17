@@ -3,7 +3,7 @@
 ## 覆盖与复核
 
 - 全部 979 行、33 卷均有一个主题型；核验语料 805 行、2025 分；2021 扩展 174 行、450 分。
-- 低信心 2/979 = 0.20%；带副题型 33 行。
+- 低信心 0/979 = 0.00%；带副题型 29 行。
 - 全部 353 个 has_figure 行已看自己的 QP 原页；跨页题补看后续页。页码与行号在 `pipeline/tag/visual_review.jsonl`，渲染图片为本地临时缓存，不入库。
 - 标签真源为 `pipeline/tag/p1_tags.jsonl`。`apply_tags.py` 只替换或追加 types、tag_confidence、tag_note；既有字段的原始 JSON 值、转义与空白不重新序列化。覆盖、题型码、低信心说明及 equivalent_of 一致性均在写入前检查。
 - 979 行的原有字段值 token 已逐字比对通过；重复套用无改动。合并器另有 16 项保真与错误输入测试。
@@ -11,7 +11,7 @@
 
 ## 盲标与 pilot
 
-- 先完成全部 979 行并提交封存（当前分支提交 `d346f20`；rebase 前为 `da13eb6`），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。
+- 先完成全部 979 行并提交封存（原封存提交 `da13eb6`；合并后以快照 SHA-256 核验内容），之后才首次读取 pilot。封存文件：`pipeline/tag/p1_tags.blind.jsonl`；输入与哈希：`pipeline/tag/blind_manifest.json`。
 - 盲标 SHA-256：`14e5797e6ab18a13609639639addf7064bd96e7a67553813a60d42f70113dbdd`。
 - **主题型一致率：88/88 = 100.00%**。主题型加副题型集合完全一致：87/88 = 98.86%。
 - 此处是按已发布指南（含示例）盲标后与 pilot 的一致率，不能当作未见题目的独立准确率。没有为追求一致率改写封存标签。
@@ -19,14 +19,15 @@
 
 | 行 id | 盲标 primary / cross | pilot primary / cross | 最终结论与理由 |
 |:--|:--|:--|:--|
-| 9618_w24_11:4(b)(i) | P1-IR-13 / P1-CM-12 | P1-IR-13 / 无 | 保留 P1-IR-13 / P1-CM-12。主题型同为 P1-IR-13。自己的 MS 第 7 页列出 Bandwidth usage is reduced 及其他传输不受影响的扩展点。指南 §3 明确 MS 有带宽类独立得分点时加 P1-CM-12，所以保留盲标副题型；pilot 的 cross 为空。需要设计工位裁决是否所有带宽理由均满足 §3，或仅实时流情境需要副题型。 |
+| 9618_w24_11:4(b)(i) | P1-IR-13 / P1-CM-12 | P1-IR-13 / 无 | 裁决后 P1-IR-13 / 无。adjudicated: B3；详见 papers/p1/adjudication.csv。 |
 
-## 低信心清单（需要总控决定）
+当前最终标签与 pilot：主题型 88/88；主题型加副题型 88/88。盲标一致率仍使用封存快照。
+
+## 低信心清单
 
 | 行 id | 主题型 | 副题型 | 犹豫的题型与理由 |
 |:--|:--|:--|:--|
-| 9618_s23_13:7(a) | P1-IR-03 | P1-IR-01 | 两分补码上下限归 IR-03；一分无符号最大值暂用 IR-01 位容量副题型。IR-01 与 IR-02 的无符号上下限归属未明，指南只明确补码界限，需设计工位裁决。 |
-| 9618_w25_13:6(a) | P1-PF-09 | P1-PF-12 | PF-09 与 PF-12 各两行，各两分；题干只问指令执行后的 ACC，未强调按位运算，暂主 PF-09、副 PF-12。指南只给按位/移位混合表判例，未裁决本例平分。 |
+| 无 | — | — | 当前没有低信心行 |
 
 ## 核验语料统计口径
 
@@ -35,18 +36,18 @@
 | 章 | 主行数 | 主分值 | 副关联行数 | 副关联整行分值 |
 |:--|--:|--:|--:|--:|
 | IR | 172 | 338 | 7 | 23 |
-| CM | 86 | 228 | 11 | 34 |
+| CM | 86 | 228 | 6 | 21 |
 | HW | 69 | 183 | 2 | 8 |
 | LG | 52 | 109 | 0 | 0 |
 | PF | 141 | 330 | 4 | 13 |
 | SS | 75 | 204 | 1 | 3 |
 | SP | 57 | 157 | 4 | 16 |
 | EO | 36 | 103 | 0 | 0 |
-| DB | 117 | 373 | 2 | 8 |
+| DB | 117 | 373 | 3 | 11 |
 
 | 题型码 | 题型 | 主行数 | 主分值 | 副关联行数 | 副关联整行分值 |
 |:--|:--|--:|--:|--:|--:|
-| P1-IR-01 | 二进制量级与单位前缀 | 9 | 15 | 1 | 3 |
+| P1-IR-01 | 二进制量级与单位前缀 | 9 | 15 | 2 | 8 |
 | P1-IR-02 | 进制转换（无符号与 BCD） | 32 | 52 | 0 | 0 |
 | P1-IR-03 | 有符号整数：补码与反码 | 16 | 24 | 2 | 8 |
 | P1-IR-04 | BCD 与十六进制的应用 | 3 | 6 | 0 | 0 |
@@ -72,7 +73,7 @@
 | P1-CM-09 | 互联网与万维网基础设施 | 4 | 12 | 0 | 0 |
 | P1-CM-10 | IP 地址 | 11 | 28 | 1 | 3 |
 | P1-CM-11 | 子网划分 | 7 | 20 | 0 | 0 |
-| P1-CM-12 | 位流传输 | 4 | 11 | 8 | 23 |
+| P1-CM-12 | 位流传输 | 4 | 11 | 3 | 10 |
 | P1-HW-01 | 主存：RAM 与 ROM | 6 | 15 | 0 | 0 |
 | P1-HW-02 | SRAM 与 DRAM | 7 | 14 | 1 | 5 |
 | P1-HW-03 | PROM、EPROM 与 EEPROM | 7 | 19 | 0 | 0 |
@@ -96,10 +97,10 @@
 | P1-PF-06 | 端口 | 8 | 17 | 0 | 0 |
 | P1-PF-07 | 汇编语言：机器码、两遍汇编与指令分组 | 8 | 21 | 0 | 0 |
 | P1-PF-08 | 寻址方式 | 9 | 22 | 0 | 0 |
-| P1-PF-09 | 执行指令后的寄存器内容 | 9 | 33 | 1 | 3 |
+| P1-PF-09 | 执行指令后的寄存器内容 | 8 | 29 | 2 | 7 |
 | P1-PF-10 | 汇编程序跟踪 | 9 | 29 | 0 | 0 |
 | P1-PF-11 | 移位 | 17 | 21 | 2 | 6 |
-| P1-PF-12 | 按位运算求结果 | 23 | 33 | 1 | 4 |
+| P1-PF-12 | 按位运算求结果 | 24 | 37 | 0 | 0 |
 | P1-PF-13 | 位掩码与设备监控 | 8 | 18 | 0 | 0 |
 | P1-SS-01 | 操作系统的作用与管理任务 | 18 | 52 | 1 | 3 |
 | P1-SS-02 | 实用软件 | 12 | 31 | 0 | 0 |
@@ -123,7 +124,7 @@
 | P1-EO-05 | 人工智能的影响 | 5 | 12 | 0 | 0 |
 | P1-DB-01 | 文件方式的局限与关系数据库 | 5 | 17 | 0 | 0 |
 | P1-DB-02 | 关系模型术语与键 | 13 | 29 | 0 | 0 |
-| P1-DB-03 | 关系类型及其实现 | 8 | 22 | 1 | 3 |
+| P1-DB-03 | 关系类型及其实现 | 8 | 22 | 2 | 6 |
 | P1-DB-04 | E-R 图 | 9 | 24 | 0 | 0 |
 | P1-DB-05 | 范式 | 6 | 15 | 0 | 0 |
 | P1-DB-06 | 规范化设计 | 8 | 37 | 0 | 0 |
@@ -139,17 +140,35 @@
 
 - 核验语料未使用题型：无；88 个题型均至少用作一次主题型。
 - 核验语料出现不足两行（含副题型）：无。
-- 需要总控决定：明确无符号整数上下限归 IR-01、IR-02 还是与补码界限一起归 IR-03。9618_s23_13:7(a) 的低信心主要在一分副题型；主题型仍是两分补码界限 IR-03。
-- 需要总控决定：补充 PF-09 与 PF-12 各两分、题干只说执行后 ACC 的混合表平分判例（9618_w25_13:6(a)）。
-- 需要总控决定：指南 §3 的「带宽」是否适用于一般文件压缩，或仅限实时流；当前按字面执行，因此包括照片/文本压缩在内共 8 行加 CM-12，并保留与 pilot 的 1 处副题型分歧。
 - taxonomy、tagging-guide、pilot、MS 与抽取字段均未改动。
+
+## 裁决回写
+
+已应用 papers/p1/adjudication.csv 的 12 行；confidence 统一为 high，note 仅为 adjudicated: 加规则编号。原始裁决理由以 CSV 为准，盲标快照与首次复核历史保留。
+
+| 行 id | 规则 | 当前主题型 | 当前副题型 |
+|:--|:--|:--|:--|
+| 9618_s23_13:7(a) | adjudicated: B1 | P1-IR-03 | P1-IR-01 |
+| 9618_s22_13:1(b) | adjudicated: B1 | P1-IR-02 | P1-IR-03, P1-IR-01 |
+| 9618_w25_13:6(a) | adjudicated: B2 | P1-PF-12 | P1-PF-09 |
+| 9618_s25_11:2(b)(i) | adjudicated: B3 | P1-IR-13 | P1-CM-12 |
+| 9618_s25_11:2(b)(ii) | adjudicated: B3 | P1-IR-14 | P1-CM-12 |
+| 9618_w23_12:6(a) | adjudicated: B3 | P1-IR-14 | P1-CM-12 |
+| 9618_w24_11:4(b)(i) | adjudicated: B3 | P1-IR-13 | 无 |
+| 9618_w23_11:1(c) | adjudicated: B3 | P1-IR-13 | 无 |
+| 9618_s23_11:1(c)(i) | adjudicated: B3 | P1-IR-13 | 无 |
+| 9618_s24_13:2(b)(i) | adjudicated: B3 | P1-IR-14 | 无 |
+| 9618_s24_12:2(d)(iii) | adjudicated: B3 | P1-IR-13 | 无 |
+| 9618_s25_11:5(d) | adjudicated: B4 | P1-DB-05 | P1-DB-03 |
 
 ## 复现
 
 ```sh
+~/.venvs/alevel-cs/bin/python pipeline/tag/apply_adjudication.py
+~/.venvs/alevel-cs/bin/python pipeline/tag/apply_adjudication.py --check
 ~/.venvs/alevel-cs/bin/python pipeline/tag/apply_tags.py
 ~/.venvs/alevel-cs/bin/python pipeline/tag/apply_tags.py --check
-~/.venvs/alevel-cs/bin/python -m pytest pipeline/tag/test_apply_tags.py -q
+~/.venvs/alevel-cs/bin/python -m pytest pipeline/tag/test_apply_tags.py pipeline/tag/test_adjudication.py -q
 ~/.venvs/alevel-cs/bin/python pipeline/tag/build_report.py
 make check
 make check-scope TASK=T24

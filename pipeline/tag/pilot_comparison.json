@@ -26,17 +26,22 @@
       "final": {
         "id": "9618_w24_11:4(b)(i)",
         "primary": "P1-IR-13",
-        "cross": [
-          "P1-CM-12"
-        ],
+        "cross": [],
         "confidence": "high",
-        "note": "按指南 §3：MS 有带宽占用及其他传输得分点，副 CM-12。"
+        "note": "adjudicated: B3"
       },
       "review": {
+        "id": "9618_w24_11:4(b)(i)",
+        "decision": "adjudicated",
+        "reason": "adjudicated: B3；详见 papers/p1/adjudication.csv。"
+      },
+      "initial_review": {
         "id": "9618_w24_11:4(b)(i)",
         "decision": "retain_blind",
         "reason": "主题型同为 P1-IR-13。自己的 MS 第 7 页列出 Bandwidth usage is reduced 及其他传输不受影响的扩展点。指南 §3 明确 MS 有带宽类独立得分点时加 P1-CM-12，所以保留盲标副题型；pilot 的 cross 为空。需要设计工位裁决是否所有带宽理由均满足 §3，或仅实时流情境需要副题型。"
       }
     }
-  ]
+  ],
+  "final_primary_matches": 88,
+  "final_primary_cross_matches": 88
 }

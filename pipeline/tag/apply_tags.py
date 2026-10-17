@@ -99,12 +99,14 @@ def load_jsonl(path):
     return records
 
 
-def prepare(root=ROOT):
+def prepare(root=ROOT, *, tag_records=None):
     """Validate every input and prepare all files before the first write."""
     root = Path(root)
     valid = {t['code'] for t in loads((root / 'papers/p1/taxonomy.json').read_text())['types']}
     tags = {}
-    for tag in load_jsonl(root / 'pipeline/tag/p1_tags.jsonl'):
+    if tag_records is None:
+        tag_records = load_jsonl(root / 'pipeline/tag/p1_tags.jsonl')
+    for tag in tag_records:
         if set(tag) != {'id', 'primary', 'cross', 'confidence', 'note'}:
             raise ValueError(f'Invalid tag fields: {tag.get("id")}')
         row_id = tag['id']

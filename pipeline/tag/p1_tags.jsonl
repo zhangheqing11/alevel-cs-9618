@@ -144,7 +144,7 @@
 {"id":"9618_s22_13:1(a)(ii)","primary":"P1-IR-06","cross":[],"confidence":"high","note":""}
 {"id":"9618_s22_13:1(a)(iii)","primary":"P1-IR-15","cross":[],"confidence":"high","note":""}
 {"id":"9618_s22_13:1(a)(iv)","primary":"P1-IR-14","cross":[],"confidence":"high","note":""}
-{"id":"9618_s22_13:1(b)","primary":"P1-IR-02","cross":["P1-IR-03"],"confidence":"high","note":"混合数值表以无符号/BCD 转换为主；负数补码一格另标 IR-03。最小无符号数 0 随无符号表示归 IR-02。"}
+{"id":"9618_s22_13:1(b)","primary":"P1-IR-02","cross":["P1-IR-03","P1-IR-01"],"confidence":"high","note":"adjudicated: B1"}
 {"id":"9618_s22_13:2(a)","primary":"P1-PF-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s22_13:2(b)","primary":"P1-PF-04","cross":[],"confidence":"high","note":""}
 {"id":"9618_s22_13:3(a)","primary":"P1-PF-09","cross":[],"confidence":"high","note":""}
@@ -170,7 +170,7 @@
 {"id":"9618_s23_11:1(a)","primary":"P1-IR-07","cross":["P1-IR-09"],"confidence":"high","note":"位图术语两分、矢量图 drawing list 一分，按得分多数主 IR-07、副 IR-09。"}
 {"id":"9618_s23_11:1(b)(i)","primary":"P1-IR-07","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_11:1(b)(ii)","primary":"P1-IR-12","cross":[],"confidence":"high","note":""}
-{"id":"9618_s23_11:1(c)(i)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：MS 单列带宽得分点，副 CM-12。"}
+{"id":"9618_s23_11:1(c)(i)","primary":"P1-IR-13","cross":[],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_s23_11:1(c)(ii)","primary":"P1-IR-15","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_11:2(a)(i)","primary":"P1-DB-07","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_11:2(a)(ii)","primary":"P1-DB-09","cross":[],"confidence":"high","note":""}
@@ -248,7 +248,7 @@
 {"id":"9618_s23_13:5(b)","primary":"P1-EO-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_13:6(a)","primary":"P1-SP-05","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_13:6(b)","primary":"P1-SP-03","cross":[],"confidence":"high","note":""}
-{"id":"9618_s23_13:7(a)","primary":"P1-IR-03","cross":["P1-IR-01"],"confidence":"low","note":"两分补码上下限归 IR-03；一分无符号最大值暂用 IR-01 位容量副题型。IR-01 与 IR-02 的无符号上下限归属未明，指南只明确补码界限，需设计工位裁决。"}
+{"id":"9618_s23_13:7(a)","primary":"P1-IR-03","cross":["P1-IR-01"],"confidence":"high","note":"adjudicated: B1"}
 {"id":"9618_s23_13:7(b)","primary":"P1-PF-01","cross":[],"confidence":"high","note":""}
 {"id":"9618_s23_13:7(c)","primary":"P1-PF-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_11:1(a)","primary":"P1-LG-05","cross":[],"confidence":"high","note":""}
@@ -284,7 +284,7 @@
 {"id":"9618_s24_12:2(c)","primary":"P1-HW-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_12:2(d)(i)","primary":"P1-IR-07","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_12:2(d)(ii)","primary":"P1-IR-09","cross":[],"confidence":"high","note":""}
-{"id":"9618_s24_12:2(d)(iii)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：独占带宽、连接速度是独立得分点，副 CM-12。"}
+{"id":"9618_s24_12:2(d)(iii)","primary":"P1-IR-13","cross":[],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_s24_12:3(a)(i)","primary":"P1-SP-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_12:3(a)(ii)","primary":"P1-SP-04","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_12:3(b)","primary":"P1-CM-02","cross":[],"confidence":"high","note":""}
@@ -309,7 +309,7 @@
 {"id":"9618_s24_13:1(d)(i)","primary":"P1-IR-06","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_13:1(d)(ii)","primary":"P1-IR-06","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_13:2(a)","primary":"P1-IR-12","cross":[],"confidence":"high","note":""}
-{"id":"9618_s24_13:2(b)(i)","primary":"P1-IR-14","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：MS 单列带宽得分点，副 CM-12。"}
+{"id":"9618_s24_13:2(b)(i)","primary":"P1-IR-14","cross":[],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_s24_13:2(b)(ii)","primary":"P1-IR-15","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_13:2(c)","primary":"P1-IR-08","cross":[],"confidence":"high","note":""}
 {"id":"9618_s24_13:3(a)","primary":"P1-PF-09","cross":[],"confidence":"high","note":""}
@@ -336,8 +336,8 @@
 {"id":"9618_s25_11:1(a)","primary":"P1-LG-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:1(b)","primary":"P1-LG-04","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:2(a)","primary":"P1-CM-12","cross":[],"confidence":"high","note":""}
-{"id":"9618_s25_11:2(b)(i)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":""}
-{"id":"9618_s25_11:2(b)(ii)","primary":"P1-IR-14","cross":["P1-CM-12"],"confidence":"high","note":""}
+{"id":"9618_s25_11:2(b)(i)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":"adjudicated: B3"}
+{"id":"9618_s25_11:2(b)(ii)","primary":"P1-IR-14","cross":["P1-CM-12"],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_s25_11:2(c)","primary":"P1-CM-09","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:3(a)","primary":"P1-IR-07","cross":["P1-IR-12"],"confidence":"high","note":"术语两分归 IR-07，8 位颜色数一分归 IR-12。"}
 {"id":"9618_s25_11:3(b)(i)","primary":"P1-IR-06","cross":[],"confidence":"high","note":""}
@@ -348,7 +348,7 @@
 {"id":"9618_s25_11:5(a)","primary":"P1-DB-04","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:5(b)","primary":"P1-DB-02","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:5(c)","primary":"P1-DB-02","cross":[],"confidence":"high","note":""}
-{"id":"9618_s25_11:5(d)","primary":"P1-DB-05","cross":[],"confidence":"high","note":""}
+{"id":"9618_s25_11:5(d)","primary":"P1-DB-05","cross":["P1-DB-03"],"confidence":"high","note":"adjudicated: B4"}
 {"id":"9618_s25_11:5(e)","primary":"P1-DB-12","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:6(a)(i)","primary":"P1-HW-04","cross":[],"confidence":"high","note":""}
 {"id":"9618_s25_11:6(a)(ii)","primary":"P1-PF-05","cross":[],"confidence":"high","note":""}
@@ -698,7 +698,7 @@
 {"id":"9618_w22_13:10(b)(ii)","primary":"P1-HW-07","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_11:1(a)","primary":"P1-IR-09","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_11:1(b)","primary":"P1-IR-08","cross":["P1-IR-07"],"confidence":"high","note":"改变位深的影响两分主 IR-08，独立术语定义一分副 IR-07。"}
-{"id":"9618_w23_11:1(c)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：MS 单列带宽得分点，副 CM-12。"}
+{"id":"9618_w23_11:1(c)","primary":"P1-IR-13","cross":[],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_w23_11:2(a)","primary":"P1-CM-05","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_11:2(b)","primary":"P1-CM-05","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_11:2(c)","primary":"P1-CM-08","cross":[],"confidence":"high","note":""}
@@ -746,7 +746,7 @@
 {"id":"9618_w23_12:5(a)","primary":"P1-SP-01","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_12:5(b)","primary":"P1-SP-01","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_12:5(c)","primary":"P1-SP-02","cross":[],"confidence":"high","note":""}
-{"id":"9618_w23_12:6(a)","primary":"P1-IR-14","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：实时播放/带宽/缓冲各有独立得分点。"}
+{"id":"9618_w23_12:6(a)","primary":"P1-IR-14","cross":["P1-CM-12"],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_w23_12:6(b)","primary":"P1-IR-11","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_12:6(c)","primary":"P1-IR-12","cross":[],"confidence":"high","note":""}
 {"id":"9618_w23_12:7(a)","primary":"P1-CM-10","cross":[],"confidence":"high","note":""}
@@ -809,7 +809,7 @@
 {"id":"9618_w24_11:3(d)(ii)","primary":"P1-HW-06","cross":[],"confidence":"high","note":""}
 {"id":"9618_w24_11:4(a)(i)","primary":"P1-SS-01","cross":[],"confidence":"high","note":""}
 {"id":"9618_w24_11:4(a)(ii)","primary":"P1-SS-02","cross":[],"confidence":"high","note":""}
-{"id":"9618_w24_11:4(b)(i)","primary":"P1-IR-13","cross":["P1-CM-12"],"confidence":"high","note":"按指南 §3：MS 有带宽占用及其他传输得分点，副 CM-12。"}
+{"id":"9618_w24_11:4(b)(i)","primary":"P1-IR-13","cross":[],"confidence":"high","note":"adjudicated: B3"}
 {"id":"9618_w24_11:4(b)(ii)","primary":"P1-IR-15","cross":[],"confidence":"high","note":""}
 {"id":"9618_w24_11:4(c)","primary":"P1-SS-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_w24_11:4(d)(i)","primary":"P1-SS-07","cross":[],"confidence":"high","note":""}
@@ -965,7 +965,7 @@
 {"id":"9618_w25_13:5(b)","primary":"P1-DB-10","cross":[],"confidence":"high","note":""}
 {"id":"9618_w25_13:5(c)","primary":"P1-DB-12","cross":[],"confidence":"high","note":""}
 {"id":"9618_w25_13:5(d)","primary":"P1-DB-08","cross":[],"confidence":"high","note":""}
-{"id":"9618_w25_13:6(a)","primary":"P1-PF-09","cross":["P1-PF-12"],"confidence":"low","note":"PF-09 与 PF-12 各两行，各两分；题干只问指令执行后的 ACC，未强调按位运算，暂主 PF-09、副 PF-12。指南只给按位/移位混合表判例，未裁决本例平分。"}
+{"id":"9618_w25_13:6(a)","primary":"P1-PF-12","cross":["P1-PF-09"],"confidence":"high","note":"adjudicated: B2"}
 {"id":"9618_w25_13:6(b)","primary":"P1-PF-03","cross":[],"confidence":"high","note":""}
 {"id":"9618_w25_13:6(c)","primary":"P1-PF-07","cross":[],"confidence":"high","note":""}
 {"id":"9618_w25_13:7(a)","primary":"P1-EO-05","cross":[],"confidence":"high","note":""}
