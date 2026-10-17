@@ -28,6 +28,9 @@ def normalize_label(raw):
 
 
 def parse_mark_scheme(data: dict[str, Any]) -> list[MSBlock]:
+    # Some P4 continuation code extends 1–2pt left of the centered Question
+    # heading (s26_41 MS pp.9–12). Retain these glyphs without taking Marks.
+    left_tolerance = 4 if re.search(r'_ms_4[123]\.pdf$', data.get('pdf', '')) else 0
     blocks = []
     by_label = {}
     current = None
@@ -68,7 +71,7 @@ def parse_mark_scheme(data: dict[str, Any]) -> list[MSBlock]:
             mark_words = [w for w in group if marks_left <= w["x0"] <= marks_right and re.fullmatch(r"\d{1,2}", w["text"])]
             if mark_words and current.marks is None:
                 current.marks = int(mark_words[0]["text"])
-            answer_words = [w for w in group if question_left <= w["x0"] < answer_right and w not in label_words]
+            answer_words = [w for w in group if question_left - left_tolerance <= w["x0"] < answer_right and w not in label_words]
             if answer_words:
                 current.lines.append(layout_line(answer_words, answer_left))
     return blocks

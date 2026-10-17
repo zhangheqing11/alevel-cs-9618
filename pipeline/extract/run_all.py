@@ -125,6 +125,9 @@ def report(selected, rows_by_paper):
     lines += unknown or ["| 无 | — | — | 0 | — |"]
     if (ROOT / 'pipeline/extract/pua_report.md').exists():
         lines += ["", "T12c 已有批次的严格基线对比见 `pipeline/extract/pua_report.md`；后续批次不重写其历史统计。"]
+    p4_notes = ROOT / 'pipeline/extract/p4_notes.md'
+    if any(r['component'] == 4 for r in all_rows) and p4_notes.exists():
+        lines += ['', p4_notes.read_text(encoding='utf-8').rstrip()]
     return "\n".join(lines) + "\n"
 
 
