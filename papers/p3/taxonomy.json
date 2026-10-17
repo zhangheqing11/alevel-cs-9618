@@ -110,7 +110,7 @@
       "chapter": "DR",
       "name_zh": "声明与使用枚举类型和指针类型",
       "name_en": "Declaring and using enumerated and pointer types",
-      "summary": "按伪代码指南写 TYPE <名> = (值1, 值2, …) 定义枚举类型、TYPE <名> = ^<类型> 定义指针类型；把记录里某字段改为该枚举类型（DECLARE Gate : GateID）；给字段赋一个枚举值（不加引号）。",
+      "summary": "按伪代码指南写 TYPE <名> = (值1, 值2, …) 定义枚举类型、TYPE <名> = ^<类型> 定义指针类型；把记录里某字段改为该枚举类型（DECLARE Gate : GateID）；包括枚举 / 指针类型本身的声明与单独使用。给记录字段赋值（含赋枚举值，不加引号）一律归 DR-04。",
       "cues": [
         "Write pseudocode to create an enumerated type called …",
         "Write the pseudocode statement to declare a non-composite data type … that holds the following data",

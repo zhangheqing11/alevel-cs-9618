@@ -161,7 +161,7 @@ with open(file_name) as file:
 
 ```pseudocode
 OPENFILE InFile FOR READ
-OPENFILE OutFile FOR WRITE           // APPEND if the output file already exists
+OPENFILE OutFile FOR WRITE           // Create or overwrite; APPEND to preserve existing data and add lines
 WHILE NOT EOF(InFile)
    READFILE InFile, Line
    IF Line <> "" THEN
@@ -180,7 +180,7 @@ with open(in_file) as source, open(out_file, "w") as target:
             target.write(line + "\n")
 ```
 
-**滚动缓存：只保留最后三行**（⟦9618_s22_22:4(a)⟧ 的考点；技能标签见 D27 提议）
+**滚动缓存：只保留最后三行**（⟦9618_s22_22:4(a)⟧ 的考点；技能标签为 `shift-values`，D30、D37③已定案并回填）
 
 ```pseudocode
 LineX ← ""
@@ -269,7 +269,7 @@ while current != -1:                 # -1 is the null pointer for a 0-based list
 | 交换没有临时变量；并行数组只换一个 | 三句交换；两个数组 / 两列都换 | P2-DT-08 |
 | `FOR Line IN File`、`READFILE Line`（漏文件名） | `WHILE NOT EOF(F)` + `READFILE F, Line` | P2-DT-09 |
 | 忘了 CLOSEFILE，或写在 RETURN 之后 | 循环后、返回前关闭 | P2-DT-09、P2-DT-10 |
-| 已存在的文件用 WRITE 打开 | APPEND | P2-DT-10、P2-DT-11 |
+| 需要保留原内容并追加时却用 WRITE | 追加用 APPEND；新建或有意覆盖用 WRITE，不能只按文件是否已存在判断 | P2-DT-10、P2-DT-11 |
 | WRITEFILE 直接写数字 / 布尔值 | 先 `NUM_TO_STR`，布尔值编码成字符 | P2-DT-10、P2-DT-11 |
 | 不先检查满 / 空就入栈、出队 | 先检查，不行就返回 FALSE | P2-DT-14、P2-DT-16 |
 | 栈指针约定弄反（先存还是先加） | 照题目定义：指最后一个值 → 先加后存；指下一个空位 → 先存后加 | P2-DT-16 |

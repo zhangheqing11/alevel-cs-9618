@@ -183,34 +183,34 @@ SD 章讲一个程序“从提出需求到交付以后”的一生，考纲 12.1
 
 **在考什么**　七个模块的说明（讲解时请对照原卷 QP p.16 的表）：Mod-A 先调用 Mod-B 再调用 Mod-C；Mod-B 带参数 Par1、Par2，调用 Mod-D 或 Mod-E 之一（运行时决定），返回一个 BOOLEAN；Mod-C 带参数 Par1、Par3（Par3 按引用），反复依次调用 Mod-F、Mod-G；Mod-D 带 Par2；Mod-E 带 Par3，返回一个整数；Mod-F 带 Par3；Mod-G 带 Par3（按引用）。Draw a structure chart to show the relationship between the seven modules and the parameters passed between them. 6 分。
 
-**完整作答**（矩形写成 `[ ]`，菱形 `<>`，弧形重复箭头 `(loop)`；`↓` 传入，`↑` 返回，`⇅` BYREF）
+**完整作答**（矩形写成 `[ ]`，菱形 `<>`，弧形重复箭头 `(loop)`；`↓` 传入，`↑` 返回，`⇅` BYREF；BOOLEAN 返回箭头的箭尾画实心圆 `●`，INTEGER 返回画空心圆 `○`）
 
 ```text
                                 [ Mod-A ]
                     ____________/       \____________
                    |                                 |
-     ↓ Par1, Par2  |  ↑ (BOOLEAN)       ↓ Par1  ⇅ Par3 |
+     ↓ Par1, Par2  |  ↑● (BOOLEAN)      ↓ Par1  ⇅ Par3 |
                    |                                 |
                [ Mod-B ]                         [ Mod-C ]
                   <>                              (loop)
              _____/ \_____                    _____/ \_____
             |             |                  |             |
-     ↓ Par2 |      ↓ Par3 | ↑ (INTEGER)      | ↓ Par3      | ⇅ Par3
+     ↓ Par2 |      ↓ Par3 | ↑○ (INTEGER)     | ↓ Par3      | ⇅ Par3
             |             |                  |             |
         [ Mod-D ]     [ Mod-E ]          [ Mod-F ]     [ Mod-G ]
 ```
 
-| 连线 | 画法 |
-|:--|:--|
-| Mod-A → Mod-B（左）、Mod-A → Mod-C（右） | 先 B 后 C，Mod-A 下面不画菱形，也不画重复箭头 |
-| Mod-A → Mod-B | 向下 Par1、Par2；向上返回 BOOLEAN（空心圆数据箭头，或实心圆标志箭头） |
-| Mod-A → Mod-C | 向下 Par1；Par3 双向（BYREF） |
-| Mod-B 下方 | 菱形，引出 Mod-D、Mod-E |
-| Mod-B → Mod-D / Mod-E | Mod-D：向下 Par2；Mod-E：向下 Par3、向上返回 INTEGER |
-| Mod-C 下方 | 弧形重复箭头跨过通往 Mod-F、Mod-G 的连线（先 F 后 G） |
-| Mod-C → Mod-F / Mod-G | Mod-F：向下 Par3；Mod-G：Par3 双向（BYREF） |
+| 连线 | 画法 | MS 点 |
+|:--|:--|:--|
+| Mod-A → Mod-B（左）、Mod-A → Mod-C（右） | 先 B 后 C，Mod-A 下面不画菱形，也不画重复箭头；所有下层模块也须正确命名、连接 | MP1 |
+| Mod-A → Mod-B | 向下 Par1、Par2；向上返回 BOOLEAN，箭尾按该题 MS 画实心圆标志 | MP2 |
+| Mod-A → Mod-C | 向下 Par1；Par3 双向（BYREF） | MP3 |
+| Mod-B 下方 | 菱形，引出 Mod-D、Mod-E | MP4 |
+| Mod-B → Mod-D / Mod-E | Mod-D：向下 Par2；Mod-E：向下 Par3、向上返回 INTEGER（空心圆数据箭头） | MP6（与下层另一行合看） |
+| Mod-C 下方 | 弧形重复箭头跨过通往 Mod-F、Mod-G 的连线（先 F 后 G） | MP5 |
+| Mod-C → Mod-F / Mod-G | Mod-F：向下 Par3；Mod-G：Par3 双向（BYREF） | MP6（与下层另一行合看） |
 
-**与 MS 对齐**　MS 六点：「All modules correctly labelled and interconnected」⟦9618_s24_23:7(b)⟧；「Parameters between Mod-A and Mod-B and return value from Mod-B」⟦9618_s24_23:7(b)⟧；「Parameters between Mod-A and Mod-C」⟦9618_s24_23:7(b)⟧；「Diamond applied to Mod-B only」⟦9618_s24_23:7(b)⟧；「Iteration arrow applied to Mod-C only」⟦9618_s24_23:7(b)⟧；「All parameters at lower level and return value」⟦9618_s24_23:7(b)⟧。上表每一行恰好对应一点。
+**与 MS 对齐**　MS 六点：「All modules correctly labelled and interconnected」⟦9618_s24_23:7(b)⟧；「Parameters between Mod-A and Mod-B and return value from Mod-B」⟦9618_s24_23:7(b)⟧；「Parameters between Mod-A and Mod-C」⟦9618_s24_23:7(b)⟧；「Diamond applied to Mod-B only」⟦9618_s24_23:7(b)⟧；「Iteration arrow applied to Mod-C only」⟦9618_s24_23:7(b)⟧；「All parameters at lower level and return value」⟦9618_s24_23:7(b)⟧。上表七行说明对应六个得分点；两行下层参数共同覆盖 MP6，须合起来完整才得这一分。
 
 **英文作答句**　（本题答案即上图。）
 
@@ -428,13 +428,13 @@ ENDPROCEDURE
 
 <!-- auto:stats P2-SD-07 -->
 
-**考法**　按给定的调用或输入，逐行执行一段伪代码（或流程图），把变量与输出的每一次变化填进追踪表（4–6 分，按列或按“圈出的区域”给分）；写出最后的返回值或输出；补全执行后数组的内容；数循环执行了几次；回答某个输入下某变量被赋了什么值。代码常含：逐字符处理字符串、按输入分支计数、数组元素互相引用（下标由上一步的值算出）、链表插入、插入排序。
+**考法**　按给定的调用或输入，逐行执行一段伪代码（或流程图），按该题表格约定记录变量的赋值与输出（4–6 分，按列或按“圈出的区域”给分）；写出最后的返回值或输出；补全执行后数组的内容；数循环执行了几次；回答某个输入下某变量被赋了什么值。代码常含：逐字符处理字符串、按输入分支计数、数组元素互相引用（下标由上一步的值算出）、链表插入、插入排序。
 
 **识别信号**　Complete the trace table (below) by dry running the function / procedure / algorithm；when it is called as follows: CALL …；when the following values are input；The first row has been completed；State the value returned；Complete the diagram showing the contents of the global arrays … after the procedure has run。
 
 **解题思路**
 1. **先读题头**：调用的参数是什么（`CALL Process(2)`）、表里有哪几列、第一行是否已给出。初值行（参数、计数器、数组初值）就是 MS 的第一分。
-2. **一句一句走**，每执行一个赋值就在**对应列的新一行**写下新值；值没变就不写（留空）。按代码顺序换行，不要把同一轮里先后发生的变化挤在同一行乱填。
+2. **一句一句走**，逐条执行赋值，按题目与该题 MS 的追踪表约定记录。语句没执行才不记录该次赋值；执行后赋得相同值也不能一概省略。本卡代表题第 4、5 轮的 Index 都要再次填 2；Value 与 Total 可按该题 MS 排在同一表行，不要求每次赋值另起一整行。
 3. **循环条件每轮都重新判断**：先算条件，再决定进不进循环体；WHILE 在循环前判断，REPEAT 在循环后判断。
 4. **下标由变量算出时**（`Mix[Index]`、`Index ← (Value MOD 4) + 1`），先在草稿上算出这一轮的下标，再去读、写那个元素；数组元素被改过后，后面读到的是**新值**。
 5. **字符串**：每轮写出取到的字符（带单引号）和拼接后的完整串（带双引号）；空格用题目规定的符号（如 ∇）表示。
@@ -451,7 +451,7 @@ ENDPROCEDURE
 **易错与失分**
 - 用了数组的旧值：前一轮已经改过的元素，这一轮再读要用新值。
 - 漏了循环结束后的那一句（`Mix[1] ← Total * Index`），或多走了一轮（条件已不满足还继续）。
-- 同一个值在没有变化时重复写，导致“区域”对不上；或者把一轮里的变化写进了上一轮的行。
+- 没区分语句未执行与执行后赋得相同值，擅自省略后者；或没按本题表格约定记录，把一轮里的赋值写进了上一轮的行。
 - 字符串列忘了引号、大小写，或空格没用规定的符号表示。
 - REPEAT 循环忘了“先执行一次再判断”；FOR 循环的终值算错（终值包含在内）。
 - ER w23 9618/23 Q5 p.23：很少有人拿满 6 分，多数人拿到初值那一分后就“很快迷路”——每一步都要在草稿上写清当前的下标。
@@ -678,6 +678,7 @@ ENDCASE
 **在考什么**　函数：以一个整数为参数；值在 24 到 37（含两端）之间返回 TRUE，否则返回 FALSE。Complete the table to define a test plan to thoroughly test the operation of the function. 第一行已给（Normal、30、TRUE），4 分。
 
 **完整作答**
+
 | Type of test data | Test data value | Expected result |
 |:--|:--|:--|
 | Normal | 30 | TRUE |
@@ -685,13 +686,12 @@ ENDCASE
 | Boundary / Extreme | 37 | TRUE |
 | Abnormal (just outside the range) | 23 | FALSE |
 | Abnormal (just outside the range) | 38 | FALSE |
-| Abnormal | 99 | FALSE |
 
-**与 MS 对齐**　MS 列了 12、23、24、25、36、37、38、99 八行，「Max 4 marks」⟦9618_w24_21:5(b)(i)⟧，「One mark per row」⟦9618_w24_21:5(b)(i)⟧。上表五个新行都在 MS 里：24、37 标 Boundary / Extreme → TRUE；23、38 MS 写作 Abnormal / Boundary / Extreme → FALSE；99 标 Abnormal → FALSE。写满五行，留一行余量。
+**与 MS 对齐**　MS 列了 12、23、24、25、36、37、38、99 八行备选，「Max 4 marks」⟦9618_w24_21:5(b)(i)⟧，「One mark per row」⟦9618_w24_21:5(b)(i)⟧。QP 除已给的 Normal、30、TRUE 外只有四个空行；上表四个新行均在 MS 里：24、37 标 Boundary / Extreme → TRUE；23、38 MS 写作 Abnormal / Boundary / Extreme → FALSE。备选：Abnormal、99、FALSE，可替换一个新行，不要求另加第五行。
 
 **英文作答句**　（本题答案即上表。）
 
-**直观**　测一扇只让身高 24 到 37 的人进的门：站在门正中（30）、恰好踩线（24、37）、刚好差一点（23、38）、差得远（99），每种都试一次。
+**直观**　测一扇只让身高 24 到 37 的人进的门：正中（30）已给，再测恰好踩线（24、37）和刚好差一点（23、38），填满四个空行；差得远（99）是另一个可选测试。
 
 **下一道变式**　⟦9618_w23_22:4(b)⟧　（给 Count() 过程设计三组测试数据序列并写出目的，每组都要以 99 结尾。）
 
