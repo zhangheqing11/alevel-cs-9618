@@ -21,7 +21,7 @@
 | T26 | 审计题型卡引文 | codex | T22/T23 | ⏳ | — |
 | T25 | P2 练习文件夹（批 1 PG ✅ #24 / 批 2 DT 🔨 / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | #24 · `task/T25-p2-practice-b2` |
 | T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
-| T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | 🔨 | `task/T12d-backfill-skills` |
+| T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | ✅ | #28 |
 | T27 | 考官报告逐题摘录挂到行（`er` 字段，P1–P4 共 2938 行） | cc-G · Sonnet 5.5 high | T12 ✅ | ✅ | #26 |
 
 | T30 | P3 题型体系 + 打标签指南 + 试标（9 章 79 型） | cc-F · Opus 5.5 high | T12 P3 ✅ | ✅ | #27 |
