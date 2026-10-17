@@ -256,7 +256,7 @@ SJF 与 SRT 共同的缺点：短进程不断加入时，长作业可能一直�
 
 <!-- auto:stats P3-SY-05 -->
 
-**考法**　描述用解释器执行程序的过程，或解释解释器怎样不生成完整的翻译版本就执行程序，4 分。核验语料只考过一次，另有 2021 一例，题目与 MS 几乎一样。
+**考法**　描述用解释器执行程序的过程，或解释解释器怎样不生成完整的翻译版本就执行程序，4 分。考得少（见上方考情），但问法和 MS 几乎固定，背熟步骤链就是满分。
 
 **识别信号**　interpreter；executes a program without producing a complete translated version；the process of executing a program using an interpreter。
 
@@ -587,7 +587,7 @@ identifier ──►───┴─[letter]─┴──►──┬──┴─[
 
 <!-- auto:stats P3-SY-11 -->
 
-**考法**　①把中缀表达式写成 RPN（1–3 分）；②把 RPN 写回中缀（1–3 分，括号是关键）；③把转回的中缀代入给定数值求值（1 分）。MS 多数按片段给分：前半段一分、后半段一分。
+**考法**　①把中缀表达式写成 RPN（1–3 分）；②把 RPN 写回中缀（1–3 分，括号是关键）；③把转回的中缀代入给定数值求值（1 分）。MS 常按片段给分（如前半段一分、后半段一分）。
 
 **识别信号**　Write the infix expression in RPN；Write this RPN expression in infix form；Convert this Reverse Polish Notation (RPN) back to its original infix form；Evaluate your infix expression … when a = …。
 
