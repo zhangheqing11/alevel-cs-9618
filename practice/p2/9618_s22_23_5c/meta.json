@@ -1,0 +1,28 @@
+{
+  "id": "9618_s22_23:5(c)",
+  "kind": "past-paper",
+  "title": "输出出勤不足的员工",
+  "source": {
+    "paper": "9618_s22_23",
+    "rows": [
+      "9618_s22_23:5(c)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "count-loop",
+    "declare-variables",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Absentees"
+}

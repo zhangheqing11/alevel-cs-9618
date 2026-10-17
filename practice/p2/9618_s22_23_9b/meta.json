@@ -1,0 +1,29 @@
+{
+  "id": "9618_s22_23:9(b)",
+  "kind": "past-paper",
+  "title": "向密码表添加新网站",
+  "source": {
+    "paper": "9618_s22_23",
+    "rows": [
+      "9618_s22_23:9(b)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "boolean-return",
+    "flag-variable",
+    "linear-search",
+    "logic-ops",
+    "pre-condition-loop",
+    "procedure-call",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "AddPassword"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "9618_s24_22:8(c)",
+  "kind": "past-paper",
+  "title": "清理项目并追加到第二阶段文件",
+  "source": {
+    "paper": "9618_s24_22",
+    "rows": [
+      "9618_s24_22:8(c)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-10"
+  ],
+  "skills": [
+    "accumulator",
+    "file-append",
+    "file-close",
+    "file-open-read",
+    "file-write",
+    "loop-to-eof",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [
+    "input.txt",
+    "output.txt"
+  ],
+  "ms_verified": true,
+  "entry": "Stage_2"
+}

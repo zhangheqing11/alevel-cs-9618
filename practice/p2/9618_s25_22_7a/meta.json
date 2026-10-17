@@ -1,0 +1,29 @@
+{
+  "id": "9618_s25_22:7(a)",
+  "kind": "past-paper",
+  "title": "查找客户积分",
+  "source": {
+    "paper": "9618_s25_22",
+    "rows": [
+      "9618_s25_22:7(a)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "boolean-return",
+    "flag-variable",
+    "linear-search",
+    "module-header",
+    "pre-condition-loop",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "FindCustomer"
+}

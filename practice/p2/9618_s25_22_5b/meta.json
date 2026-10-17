@@ -1,0 +1,32 @@
+{
+  "id": "9618_s25_22:5(b)",
+  "kind": "past-paper",
+  "title": "统计每小时拍摄次数",
+  "source": {
+    "paper": "9618_s25_22",
+    "rows": [
+      "9618_s25_22:5(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-09",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "char-compare",
+    "field-extract",
+    "file-close",
+    "file-open-read",
+    "initialise-variables",
+    "loop-to-eof",
+    "output-format"
+  ],
+  "pseudocode": true,
+  "files": [
+    "TimeTaken.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

@@ -1,0 +1,3 @@
+PROCEDURE LastLines(ThisFile : STRING)
+
+ENDPROCEDURE

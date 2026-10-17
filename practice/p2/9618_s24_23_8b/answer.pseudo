@@ -1,0 +1,5 @@
+// ModInfo : global 2D array of STRING, three columns; sufficient rows.
+
+PROCEDURE FindModules(FileName : STRING)
+
+ENDPROCEDURE

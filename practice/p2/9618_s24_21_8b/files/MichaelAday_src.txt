@@ -1,0 +1,4 @@
+DECLARE X : INTEGER
+//comment
+X <- 2//tail
+OUTPUT X

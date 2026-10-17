@@ -1,0 +1,30 @@
+{
+  "id": "9618_s22_21:8(b)",
+  "kind": "past-paper",
+  "title": "在二维密码表中查找网站",
+  "source": {
+    "paper": "9618_s22_21",
+    "rows": [
+      "9618_s22_21:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "declare-variables",
+    "linear-search",
+    "logic-ops",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "FindPassword"
+}

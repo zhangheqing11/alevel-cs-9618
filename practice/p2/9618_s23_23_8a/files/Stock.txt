@@ -1,0 +1,3 @@
+0001DRGPrinter cable long
+0500ABCDescription DRG kept
+5999DRGMouse mat 320 mm

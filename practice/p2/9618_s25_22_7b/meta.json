@@ -1,0 +1,30 @@
+{
+  "id": "9618_s25_22:7(b)",
+  "kind": "past-paper",
+  "title": "输出可兑换客户及平均积分",
+  "source": {
+    "paper": "9618_s25_22",
+    "rows": [
+      "9618_s25_22:7(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "accumulator",
+    "array-2d",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "operator-precedence",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "PointsReport"
+}

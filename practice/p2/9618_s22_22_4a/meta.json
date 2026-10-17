@@ -1,0 +1,30 @@
+{
+  "id": "9618_s22_22:4(a)",
+  "kind": "past-paper",
+  "title": "输出文件最后三行",
+  "source": {
+    "paper": "9618_s22_22",
+    "rows": [
+      "9618_s22_22:4(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-09"
+  ],
+  "skills": [
+    "declare-variables",
+    "file-close",
+    "file-open-read",
+    "initialise-variables",
+    "loop-to-eof",
+    "module-header",
+    "output-format"
+  ],
+  "pseudocode": true,
+  "files": [
+    "sample.txt"
+  ],
+  "ms_verified": true,
+  "entry": "LastLines"
+}

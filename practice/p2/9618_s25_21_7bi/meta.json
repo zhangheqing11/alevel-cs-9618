@@ -1,0 +1,37 @@
+{
+  "id": "9618_s25_21:7(b)(i)",
+  "kind": "past-paper",
+  "title": "为忠诚计划追加新客户",
+  "source": {
+    "paper": "9618_s25_21",
+    "rows": [
+      "9618_s25_21:7(b)(i)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-10",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "count-loop",
+    "data-types",
+    "declare-variables",
+    "field-extract",
+    "file-append",
+    "file-close",
+    "file-open-read",
+    "loop-bounds",
+    "loop-to-eof",
+    "output-format",
+    "string-concat",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [
+    "Loyalty.txt"
+  ],
+  "ms_verified": true,
+  "entry": "AddNewCustomers"
+}

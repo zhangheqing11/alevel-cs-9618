@@ -1,0 +1,35 @@
+{
+  "id": "9618_s23_23:8(a)",
+  "kind": "past-paper",
+  "title": "替换库存供应商并计数",
+  "source": {
+    "paper": "9618_s23_23",
+    "rows": [
+      "9618_s23_23:8(a)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-10",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "field-extract",
+    "file-close",
+    "file-open-read",
+    "file-write",
+    "initialise-variables",
+    "loop-to-eof",
+    "relational-ops",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [
+    "Stock.txt"
+  ],
+  "ms_verified": true,
+  "entry": "ChangeSupp"
+}

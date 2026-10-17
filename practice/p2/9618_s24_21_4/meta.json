@@ -1,0 +1,30 @@
+{
+  "id": "9618_s24_21:4",
+  "kind": "past-paper",
+  "title": "比较奇偶下标元素总和",
+  "source": {
+    "paper": "9618_s24_21",
+    "rows": [
+      "9618_s24_21:4"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Check"
+}
