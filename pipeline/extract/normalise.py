@@ -1,4 +1,4 @@
-"""Exact Symbol/Wingdings substitutions approved in DECISIONS D26.
+"""Exact Symbol/Wingdings substitutions approved in DECISIONS D26/D29.
 
 Keep this after parsing and deduplication: glyph substitution must not change
 question boundaries, marks, flags or duplicate decisions. Unknown PUA stays put.
@@ -6,6 +6,8 @@ question boundaries, marks, flags or duplicate decisions. Unknown PUA stays put.
 D26 = dict(zip(map(chr, (0xF0AC, 0xF0DF, 0xF0B7, 0xF09F, 0xF0FC, 0xF050,
                         0xF0B1, 0xF0B4, 0xF0A1, 0xF03C, 0xF03E, 0xF02D, 0xF020)),
                ('←', '←', '•', '•', '✓', '✓', '±', '×', '○', '<', '>', '−', ' ')))
+# D29 extends the approved D26 table after source-page adjudication.
+D26.update({'\uf0f0': '⇨', '\uf0a5': '∞'})
 TRANSLATION = str.maketrans(D26)
 TEXT_FIELDS = ('stem', 'stem_ctx', 'ms_text')
 
