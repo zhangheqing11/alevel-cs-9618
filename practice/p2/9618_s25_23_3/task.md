@@ -21,6 +21,8 @@ A programmer has been asked to create a module RollDice() to simulate multiple r
 
 ## Python 接口
 
+输出约定：每个点数各 print 一行，行内只有点数、不附说明；平均值仅返回，不再 print。
+
 入口：`RollDice(NoOfTimes)`。每次点数各输出一行，返回 REAL 对应 Python float；不要求特定随机序列。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。
