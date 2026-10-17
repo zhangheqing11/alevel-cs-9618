@@ -817,9 +817,9 @@
 | `9618_w25_43:3(b)(iv)` | 13 / 39 | 1 | QP: Test your program. Take a screenshot of the output(s). Save your program. Copy and paste the screenshot(s) into part 3(b)(iv) in the evidence document. / MS: 1 mark for output x=0 y=1 x=x+y y++ Example | 一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准 |
 | `9618_w25_43:1(a)(iii)` | 3 / 9 | 3 | QP: The table shows the code and value of five board objects. The table has the variable identifier where each of the objects are stored. Variable Code         Value identifier Object1          "A"                  2 Object2          "B"                  3 Object3          "C"        / MS: 1 mark each • Creating one instance of BoardObject and storing in correct variable … • … with correct parameters • Remaining four created correctly and stored Example program code Java BoardObject Object1 = new BoardObject("A",2); BoardObject Object2 = new Boa | 一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准 |
 
-## D26 归一与表外私用区字符
+## D26/D29 归一与表外私用区字符
 
-stem / stem_ctx / ms_text 在结构对齐和判重之后按 D26 归一。表外字符原样保留，不推断含义；以下逐行列出位置。
+stem / stem_ctx / ms_text 在结构对齐和判重之后按 D26/D29 归一。表外字符原样保留，不推断含义；以下逐行列出位置。
 P3 对浮点格子、栈状态图和布尔表达式上划线另作保守 figure 标记；文字层不能替代其原页。
 
 | 行 | 字段 | 字符 | 次数 | QP / MS 页 |
