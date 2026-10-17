@@ -1,0 +1,1905 @@
+{
+  "baseline": "8a748c4789da86d01531cd41c01458f00e5bd2b1",
+  "reviewer": "codex-1",
+  "method": "人工逐卡读全部正文；每个代表题直接读同卷QP/MS PDF原页文本；图、电路、阴影、圈选、下划线另看渲染。引文语境使用对应行完整ms_text复核，问题回原页。非逐页全查全部变式/刷题清单。",
+  "source_sha256": {
+    "papers/p1/front.md": "8f9d5a6a0f35fc880c924b44e066f587bafb7d76f0886209f7a564cd1aa97276",
+    "papers/p1/cards/CM.md": "e45ea4d7c716f351047c710b5e0ec73da63a94c49d28b13b7bcb60326fb2f099",
+    "papers/p1/cards/DB.md": "b53be7604cbdf40c29790c909c92e6f1972e7821015783563971d9e2b86e842a",
+    "papers/p1/cards/EO.md": "36b4d9aa47622d77ba646abdd5e12eedb06c7eb62fb4f2a2d6688194f7e06259",
+    "papers/p1/cards/HW.md": "9cbe4085d309c851f30c8e10aeebf62118c37487bb6788f1393ed7ad7eda8257",
+    "papers/p1/cards/IR.md": "ee1d9d0727eb45f1a22d00d0b0c555180ae22eb2d8ab6291fd35414074c6a492",
+    "papers/p1/cards/LG.md": "a4380a323c5bb729bb5e9adc7f6f5f919f12cafb47725ef1a60b10f3106acf08",
+    "papers/p1/cards/PF.md": "ee01ba911f9b3651946a66bbbf9d8b457c9c86ff7da73b10722be07c82c471e1",
+    "papers/p1/cards/SP.md": "35df2def7aaf91eb1c103441ddc5dce9b845caea0cf5d2f381afd803ade86685",
+    "papers/p1/cards/SS.md": "bb2cd12d53c2eb6c6a15a2d4c1c7b35efcdd1e3613da56a218c9feaf49609cd9",
+    "papers/p1/core/CM.md": "dd420531b1ef50d191940e1cdd3f1af355d9bc353d195e78b91bec9edc550066",
+    "papers/p1/core/DB.md": "0570dbb3087584bbf054183741a87361d11b3636a3b14f1f1f04ce714f5adeb4",
+    "papers/p1/core/EO.md": "06b8efcbc788e0ebbaae3d009f03ba7c7825fded858eba3b4918d88a70005314",
+    "papers/p1/core/HW.md": "1e431cc0c5414ce9647a76cfe6c4919b02fbdf69286783f7f1b3e6f6fb98f5ff",
+    "papers/p1/core/IR.md": "d6c4a595bd14baef7c0d63d2a145cf258e5183673bf78fdc9ef8ffd16c6cd5ca",
+    "papers/p1/core/LG.md": "73f15f5b911d6be5657093261615289b7634916fabef624e4be22846b07df17e",
+    "papers/p1/core/PF.md": "865d5c12f921799102da5db591ceb601a696532cac12dfd076b021beca443ed6",
+    "papers/p1/core/SP.md": "71b789c4ad835df4a936c00169055a1e4537e1c4a9fa4b9bcdcede57d7752206",
+    "papers/p1/core/SS.md": "ad26fbd4ff3daef01492d68f8ce234f84fe396204a75e875365d9485c5ab7234",
+    "papers/p1/back.md": "e05e4c486ebc4f59a68fdb24dbdea7432619e228668107a65560d3c1df9bda21"
+  },
+  "cards": [
+    {
+      "card": "P1-CM-01",
+      "representative": "9618_s23_13:2(a)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-02",
+      "representative": "9618_s25_13:3(c)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-03",
+      "representative": "9618_s25_12:6(d)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F01"
+      ]
+    },
+    {
+      "card": "P1-CM-04",
+      "representative": "9618_w25_12:5(c)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-05",
+      "representative": "9618_w22_12:10(b)(ii)",
+      "qp_pages": [
+        17
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-06",
+      "representative": "9618_s23_13:2(d)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-07",
+      "representative": "9618_w22_11:8",
+      "qp_pages": [
+        19
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-08",
+      "representative": "9618_s24_13:5(a)(ii)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-09",
+      "representative": "9618_w25_11:7(c)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-10",
+      "representative": "9618_s25_12:6(c)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-11",
+      "representative": "9618_w23_12:7(b)(iii)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-CM-12",
+      "representative": "9618_s25_11:2(a)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-01",
+      "representative": "9618_w24_11:2(a)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-02",
+      "representative": "9618_s23_13:4(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F08"
+      ]
+    },
+    {
+      "card": "P1-DB-03",
+      "representative": "9618_w24_12:6(b)(i)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-04",
+      "representative": "9618_w22_11:4(a)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F07"
+      ]
+    },
+    {
+      "card": "P1-DB-05",
+      "representative": "9618_w22_11:4(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F04",
+        "F05"
+      ]
+    },
+    {
+      "card": "P1-DB-06",
+      "representative": "9618_s23_13:4(c)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-07",
+      "representative": "9618_s24_11:6(b)",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-08",
+      "representative": "9618_w23_12:2(b)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-09",
+      "representative": "9618_w25_11:2(d)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-10",
+      "representative": "9618_s24_13:4(b)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-11",
+      "representative": "9618_w25_11:2(c)(ii)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-12",
+      "representative": "9618_s25_13:6(c)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-DB-13",
+      "representative": "9618_s25_13:6(b)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-EO-01",
+      "representative": "9618_w23_13:6(b)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-EO-02",
+      "representative": "9618_w24_12:5(a)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-EO-03",
+      "representative": "9618_s23_13:5(b)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F10"
+      ]
+    },
+    {
+      "card": "P1-EO-04",
+      "representative": "9618_w24_11:6",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-EO-05",
+      "representative": "9618_w25_11:8(c)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        13
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F02"
+      ]
+    },
+    {
+      "card": "P1-HW-01",
+      "representative": "9618_w22_12:3(c)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-02",
+      "representative": "9618_w25_11:6(c)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-03",
+      "representative": "9618_s22_11:2(a)(ii)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-04",
+      "representative": "9618_s23_11:4(b)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-05",
+      "representative": "9618_s24_13:7(d)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-06",
+      "representative": "9618_w24_13:2(b)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-07",
+      "representative": "9618_w22_13:10(b)(ii)",
+      "qp_pages": [
+        18
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-08",
+      "representative": "9618_w24_13:3",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-HW-09",
+      "representative": "9618_s24_13:7(a)",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-01",
+      "representative": "9618_s24_13:1(a)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F13"
+      ]
+    },
+    {
+      "card": "P1-IR-02",
+      "representative": "9618_s24_12:7(c)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-03",
+      "representative": "9618_w24_13:8(b)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-04",
+      "representative": "9618_w23_12:3(c)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-05",
+      "representative": "9618_s24_12:7(b)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-06",
+      "representative": "9618_w22_11:1(c)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-07",
+      "representative": "9618_s24_12:2(d)(i)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-08",
+      "representative": "9618_s25_13:1(a)(ii)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-09",
+      "representative": "9618_w24_12:7(b)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-10",
+      "representative": "9618_s23_13:3(c)(i)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-11",
+      "representative": "9618_s23_13:3(c)(ii)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-12",
+      "representative": "9618_w23_12:6(c)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-13",
+      "representative": "9618_s23_11:1(c)(i)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-14",
+      "representative": "9618_w23_12:6(a)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-IR-15",
+      "representative": "9618_w24_11:4(b)(ii)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-01",
+      "representative": "9618_s24_12:1(a)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-02",
+      "representative": "9618_w23_13:4(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-03",
+      "representative": "9618_s22_13:7(a)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-04",
+      "representative": "9618_w22_13:5(b)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-05",
+      "representative": "9618_w25_11:3(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-LG-06",
+      "representative": "9618_w22_12:3(a)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-01",
+      "representative": "9618_s23_13:7(b)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-02",
+      "representative": "9618_w24_12:3(a)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F03"
+      ]
+    },
+    {
+      "card": "P1-PF-03",
+      "representative": "9618_w23_13:9(b)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-04",
+      "representative": "9618_s23_11:6",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-05",
+      "representative": "9618_w25_12:3(c)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-06",
+      "representative": "9618_w24_12:3(b)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        4
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-07",
+      "representative": "9618_w23_12:9(a)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-08",
+      "representative": "9618_s25_13:5(a)(ii)",
+      "qp_pages": [
+        10,
+        11,
+        12
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F11"
+      ]
+    },
+    {
+      "card": "P1-PF-09",
+      "representative": "9618_s24_12:5(a)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-10",
+      "representative": "9618_s25_11:8(a)",
+      "qp_pages": [
+        14,
+        15
+      ],
+      "ms_pages": [
+        12
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F12"
+      ]
+    },
+    {
+      "card": "P1-PF-11",
+      "representative": "9618_w24_13:8(c)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        8
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F09"
+      ]
+    },
+    {
+      "card": "P1-PF-12",
+      "representative": "9618_s24_11:4(b)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-PF-13",
+      "representative": "9618_w24_12:8(b)(ii)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text+render",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-01",
+      "representative": "9618_s22_12:4(a)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-02",
+      "representative": "9618_s22_11:3(b)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        5
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-03",
+      "representative": "9618_s24_11:5(c)(i)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-04",
+      "representative": "9618_s25_11:7(a)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-05",
+      "representative": "9618_s25_11:7(b)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-06",
+      "representative": "9618_s22_13:5(b)(ii)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        7
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SP-07",
+      "representative": "9618_s24_13:7(f)(i)",
+      "qp_pages": [
+        16
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": [
+        "F06"
+      ]
+    },
+    {
+      "card": "P1-SP-08",
+      "representative": "9618_s22_11:4(d)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-01",
+      "representative": "9618_s24_12:6",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-02",
+      "representative": "9618_s22_13:4(b)(i)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-03",
+      "representative": "9618_s23_12:7(a)(ii)",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        9
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-04",
+      "representative": "9618_s25_13:3(a)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        6
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-05",
+      "representative": "9618_w25_12:10(a)",
+      "qp_pages": [
+        15
+      ],
+      "ms_pages": [
+        11
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-06",
+      "representative": "9618_w22_12:1(b)(ii)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        3
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    },
+    {
+      "card": "P1-SS-07",
+      "representative": "9618_s23_12:7(c)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        10
+      ],
+      "review": "text",
+      "items": {
+        "quotes": "reviewed",
+        "representative": "reviewed",
+        "picks": "script-pass",
+        "counts": "reviewed",
+        "page_hints": "reviewed",
+        "concepts": "reviewed",
+        "python": "not-applicable"
+      },
+      "findings": []
+    }
+  ]
+}
