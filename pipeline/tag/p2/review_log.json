@@ -1,0 +1,249 @@
+{
+  "9618_s21_21": {
+    "stage": "blind",
+    "rows": 20,
+    "qp_pages_viewed": [
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      14,
+      16,
+      19,
+      20,
+      21
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s21_22": {
+    "stage": "blind",
+    "rows": 22,
+    "qp_pages_viewed": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      10,
+      13,
+      14
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s22_21": {
+    "stage": "blind",
+    "rows": 20,
+    "qp_pages_viewed": [
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      16,
+      17
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s22_22": {
+    "stage": "blind",
+    "rows": 19,
+    "qp_pages_viewed": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      15,
+      16,
+      18
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s21_23": {
+    "stage": "blind-copy",
+    "rows": 20,
+    "copied_from": "9618_s21_21",
+    "method": "D21: every stem and ms_text whitespace-normalised equality checked; copied tags and markpoints."
+  },
+  "9618_s22_23": {
+    "stage": "blind",
+    "rows": 24,
+    "qp_pages_viewed": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      18
+    ],
+    "method": "Read each stem/context and its own MS; visually inspected contact sheets of original QP pages."
+  },
+  "9618_s23_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s23_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s23_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s24_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      10
+    ]
+  },
+  "9618_s24_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      5
+    ]
+  },
+  "9618_s24_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      7
+    ],
+    "ms_pages_viewed": [
+      6
+    ]
+  },
+  "9618_s25_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      4
+    ]
+  },
+  "9618_s25_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s25_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4,
+    "ms_pages_viewed": [
+      11
+    ]
+  },
+  "9618_s26_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_s26_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_s26_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w21_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4,
+    "ms_pages_viewed": [
+      10
+    ]
+  },
+  "9618_w21_23": {
+    "stage": "blind",
+    "copied_from": "9618_w21_21",
+    "evidence": "All stem and ms_text whitespace-normalized equality verified (D21)"
+  },
+  "9618_w21_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      5
+    ],
+    "ms_pages_viewed": [
+      4
+    ]
+  },
+  "9618_w22_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_w22_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "extra_qp_pages_viewed": [
+      8
+    ]
+  },
+  "9618_w22_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_w23_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w23_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w23_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w24_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "ms_pages_viewed": [
+      5
+    ]
+  },
+  "9618_w24_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w24_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3
+  },
+  "9618_w25_21": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4
+  },
+  "9618_w25_22": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 3,
+    "ms_pages_viewed": [
+      8
+    ]
+  },
+  "9618_w25_23": {
+    "stage": "blind",
+    "qp_contact_sheets_viewed": 4,
+    "ms_pages_viewed": [
+      7
+    ]
+  }
+}
