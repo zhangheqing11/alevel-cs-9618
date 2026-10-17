@@ -155,6 +155,6 @@ F04/F05 在审计给出的两个选项中执行 D40 指定的词条改名方案�
 
 ## 交付环境
 
-主 checkout 的 `.git` 为只读，本次在 `/tmp/alevel-cs-T26c-git` 的独立 worktree `/tmp/alevel-cs-T26c` 执行。终端访问 GitHub 失败（`Could not resolve host: github.com`）；通过 GitHub 连接器复核远端 main 仍为上述基线。若终端 push/gh 仍不可用，使用同一连接器提交已校验内容并创建 PR；PR 不合并。
+主 checkout 的 `.git` 为只读，本次在 `/tmp/alevel-cs-T26c-git` 的独立 worktree `/tmp/alevel-cs-T26c` 执行。终端访问 GitHub 失败（`Could not resolve host: github.com`）；通过 GitHub 连接器复核远端 main 仍为上述基线。终端 push 与 gh 均失败后，已用连接器发布同名分支并创建 PR #36（https://github.com/zhangheqing11/alevel-cs-9618/pull/36），未合并。前三次远端提交的 tree SHA 均与本地对应提交完全一致。
 
 需要总控决定：无新增内容裁决；浏览器页面级视觉复核尚未完成，已以构建后 SVG 的直接渲染和结构检查代验。
