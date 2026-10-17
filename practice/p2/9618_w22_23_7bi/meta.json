@@ -1,0 +1,31 @@
+{
+  "id": "9618_w22_23:7(b)(i)",
+  "kind": "past-paper",
+  "title": "添加错误条目并维持有序",
+  "source": {
+    "paper": "9618_w22_23",
+    "rows": [
+      "9618_w22_23:7(b)(i)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "flag-variable",
+    "linear-search",
+    "logic-ops",
+    "operator-precedence",
+    "parallel-arrays",
+    "pre-condition-loop",
+    "procedure-call",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "AddError"
+}

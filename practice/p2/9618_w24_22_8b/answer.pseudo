@@ -1,0 +1,5 @@
+// DECLARE Character : ARRAY[1:45] OF CharacterType
+
+PROCEDURE Save()
+
+ENDPROCEDURE

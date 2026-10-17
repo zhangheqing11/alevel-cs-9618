@@ -1,0 +1,34 @@
+{
+  "id": "9618_s24_21:8(b)",
+  "kind": "past-paper",
+  "title": "删除项目注释并生成第一阶段文件",
+  "source": {
+    "paper": "9618_s24_21",
+    "rows": [
+      "9618_s24_21:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-10",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "file-close",
+    "file-open-read",
+    "file-write",
+    "loop-to-eof",
+    "procedure-call",
+    "relational-ops",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [
+    "MichaelAday_src.txt"
+  ],
+  "ms_verified": true,
+  "entry": "Stage_1"
+}

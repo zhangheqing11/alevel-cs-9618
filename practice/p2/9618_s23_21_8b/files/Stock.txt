@@ -1,0 +1,3 @@
+0003ABCDEPrinter cable long
+0500FGHIJMouse mat large
+5999ABCDEUSB drive 32 GB

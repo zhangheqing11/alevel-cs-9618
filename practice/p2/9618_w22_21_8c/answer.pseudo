@@ -1,0 +1,3 @@
+PROCEDURE CountErrors(ThisFile : STRING, MaxErrors : INTEGER)
+
+ENDPROCEDURE

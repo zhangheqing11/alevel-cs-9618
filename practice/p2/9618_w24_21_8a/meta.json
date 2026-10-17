@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_21:8(a)",
+  "kind": "past-paper",
+  "title": "判断分数是否接近等级边界",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:8(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "boolean-return",
+    "flag-variable",
+    "logic-ops",
+    "loop-bounds",
+    "operator-precedence",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CheckMark"
+}

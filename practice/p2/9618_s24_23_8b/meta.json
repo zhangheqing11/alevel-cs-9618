@@ -1,0 +1,33 @@
+{
+  "id": "9618_s24_23:8(b)",
+  "kind": "past-paper",
+  "title": "从项目文件提取模块信息",
+  "source": {
+    "paper": "9618_s24_23",
+    "rows": [
+      "9618_s24_23:8(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-09",
+    "P2-DT-06"
+  ],
+  "skills": [
+    "accumulator",
+    "array-2d",
+    "array-index",
+    "file-close",
+    "file-open-read",
+    "loop-to-eof",
+    "procedure-call",
+    "relational-ops",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [
+    "project.txt"
+  ],
+  "ms_verified": true,
+  "entry": "FindModules"
+}

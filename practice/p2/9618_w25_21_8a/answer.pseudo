@@ -1,0 +1,5 @@
+// Loan : global ARRAY[1:5000] of the given loan record.
+
+PROCEDURE OKToBorrow(ThisStudentID : STRING)
+
+ENDPROCEDURE

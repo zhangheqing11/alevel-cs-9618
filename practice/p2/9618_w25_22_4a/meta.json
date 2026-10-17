@@ -1,0 +1,27 @@
+{
+  "id": "9618_w25_22:4(a)",
+  "kind": "past-paper",
+  "title": "声明并清空合法分数查表",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:4(a)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "count-loop",
+    "declare-array",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

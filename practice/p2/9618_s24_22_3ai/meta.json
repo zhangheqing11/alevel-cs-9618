@@ -1,0 +1,23 @@
+{
+  "id": "9618_s24_22:3(a)(i)",
+  "kind": "past-paper",
+  "title": "声明生产组件记录",
+  "source": {
+    "paper": "9618_s24_22",
+    "rows": [
+      "9618_s24_22:3(a)(i)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-DT-02"
+  ],
+  "skills": [
+    "data-types",
+    "record-type"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Component"
+}

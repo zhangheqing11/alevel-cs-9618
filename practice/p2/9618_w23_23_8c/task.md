@@ -75,6 +75,8 @@ Two new modules are defined, which will allow two users to exchange messages.
 
 ## Python 接口
 
+输出约定：每次从 GetData() 收到的数据原样 print 一行（包括收到的 Bye）；不额外输出标签、发送回显或提示行。用户输入提示若有须放 input() 中。
+
 入口：`Chat(Destination,Port)`。GetData 与 Transmit 已给，测试替换为消息队列；数据严格等于大小写敏感的 Bye 才结束。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。

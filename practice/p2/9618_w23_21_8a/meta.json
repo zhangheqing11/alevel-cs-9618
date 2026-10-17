@@ -1,0 +1,29 @@
+{
+  "id": "9618_w23_21:8(a)",
+  "kind": "past-paper",
+  "title": "逐行封装消息发送文件",
+  "source": {
+    "paper": "9618_w23_21",
+    "rows": [
+      "9618_w23_21:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-09",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "file-close",
+    "file-open-read",
+    "loop-to-eof",
+    "procedure-call",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [
+    "message.txt"
+  ],
+  "ms_verified": true,
+  "entry": "SendFile"
+}

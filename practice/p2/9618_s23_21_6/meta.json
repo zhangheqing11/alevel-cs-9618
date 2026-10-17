@@ -1,0 +1,33 @@
+{
+  "id": "9618_s23_21:6",
+  "kind": "past-paper",
+  "title": "混合六路采样数据",
+  "source": {
+    "paper": "9618_s23_21",
+    "rows": [
+      "9618_s23_21:6"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "accumulator",
+    "array-2d",
+    "array-index",
+    "count-loop",
+    "declare-variables",
+    "div-mod",
+    "initialise-variables",
+    "loop-bounds",
+    "nested-loops",
+    "operator-precedence",
+    "relational-ops",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Mix"
+}

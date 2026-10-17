@@ -1,0 +1,3 @@
+PROCEDURE CreateFiles(NameRoot : STRING, NumFiles : INTEGER)
+
+ENDPROCEDURE

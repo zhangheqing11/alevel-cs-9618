@@ -1,0 +1,31 @@
+{
+  "id": "9618_w25_23:4",
+  "kind": "past-paper",
+  "title": "将逗号分隔的三位数存入数组",
+  "source": {
+    "paper": "9618_w25_23",
+    "rows": [
+      "9618_w25_23:4"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-05",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "array-index",
+    "declare-variables",
+    "field-extract",
+    "logic-ops",
+    "loop-bounds",
+    "pre-condition-loop",
+    "string-functions",
+    "string-index",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Store"
+}

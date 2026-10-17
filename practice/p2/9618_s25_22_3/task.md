@@ -16,6 +16,8 @@ An algorithm is designed to generate and output two unique random integers. Each
 
 ## Python 接口
 
+输出约定：每行只输出一个随机整数，不附说明或汇总文字；满足条件时第三个整数另占一行。
+
 入口：`main()`。每个随机整数输出一行，使用标准库 random。测试检查范围、不重复与第三数条件，不限定随机序列。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。

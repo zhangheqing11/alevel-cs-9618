@@ -1,0 +1,4 @@
+// DECLARE List : ARRAY[1:200] OF Node
+// DECLARE HeadPointer : INTEGER
+
+// Draw the QP flowchart first; translate its algorithm below.

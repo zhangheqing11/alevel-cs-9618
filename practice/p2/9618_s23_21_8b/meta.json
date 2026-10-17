@@ -1,0 +1,34 @@
+{
+  "id": "9618_s23_21:8(b)",
+  "kind": "past-paper",
+  "title": "检查库存中是否已有货号",
+  "source": {
+    "paper": "9618_s23_21",
+    "rows": [
+      "9618_s23_21:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-09",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boolean-return",
+    "field-extract",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "linear-search",
+    "logic-ops",
+    "loop-to-eof",
+    "relational-ops",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [
+    "Stock.txt"
+  ],
+  "ms_verified": true,
+  "entry": "CheckNewItem"
+}

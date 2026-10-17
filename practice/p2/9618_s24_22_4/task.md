@@ -29,6 +29,8 @@ A triangle has sides of length A, B and C.
 
 ## Python 接口
 
+输出约定：只 print 一行判断结果，不另 print 输入提示；输入提示必须放在 input() 中。
+
 入口：`IsRA()`。为统一自动核对，消息使用英文且含 right，否定消息含 not / isn't / no；不限定完整句子。提示写进 input()，伪代码提示语人工核对（D13）。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。

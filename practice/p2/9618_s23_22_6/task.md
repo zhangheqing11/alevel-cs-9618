@@ -55,6 +55,8 @@ The pseudocode OUTPUT command starts each output on a new line. For example, the
 
 ## Python 接口
 
+输出约定：只输出题给的数字方阵，每个方阵行占一行，不加标题或说明文字。
+
 入口：`Square(Dim)`。每行使用 print 一次；无字符间隔空格。QP 表格改用逐个参数的等宽输出块转写，保留原示例内容。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。

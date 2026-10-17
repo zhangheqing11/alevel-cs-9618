@@ -31,6 +31,8 @@ A new procedure MyOutput() will take a string and a Boolean parameter.
 
 ## Python 接口
 
+输出约定：每次输出时将完整缓冲串原样 print 为一行，保留串中的空格，不添加前缀、后缀或额外说明；不输出的调用不产生任何输出。
+
 入口：`MyOutput(NewString,EOL)`。溢出分支按本题 MS：先输出旧缓冲，保存 NewString；这一分支不再处理 EOL。非溢出时追加后按 EOL 决定输出并清空。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。

@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_22:8(a)",
+  "kind": "past-paper",
+  "title": "为玩家分配空闲角色",
+  "source": {
+    "paper": "9618_w24_22",
+    "rows": [
+      "9618_w24_22:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "flag-variable",
+    "linear-search",
+    "logic-ops",
+    "loop-bounds",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Assign"
+}

@@ -1,0 +1,5 @@
+// DECLARE Staff : ARRAY[1:500] OF Employee
+
+PROCEDURE Absentees()
+
+ENDPROCEDURE

@@ -1,0 +1,34 @@
+{
+  "id": "9618_w22_21:8(c)",
+  "kind": "past-paper",
+  "title": "累计语法错误并在超限时停止",
+  "source": {
+    "paper": "9618_w22_21",
+    "rows": [
+      "9618_w22_21:8(c)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-09"
+  ],
+  "skills": [
+    "accumulator",
+    "data-types",
+    "declare-variables",
+    "file-open-read",
+    "initialise-variables",
+    "logic-ops",
+    "loop-to-eof",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [
+    "project.txt"
+  ],
+  "ms_verified": true,
+  "entry": "CountErrors"
+}

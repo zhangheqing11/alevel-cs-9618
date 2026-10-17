@@ -1,0 +1,28 @@
+{
+  "id": "9618_w25_23:8(a)",
+  "kind": "past-paper",
+  "title": "报告某次借阅是否已归还",
+  "source": {
+    "paper": "9618_w25_23",
+    "rows": [
+      "9618_w25_23:8(a)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "linear-search",
+    "logic-ops",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "LoanStatus"
+}

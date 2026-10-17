@@ -1,0 +1,32 @@
+{
+  "id": "9618_s22_22:8(b)",
+  "kind": "past-paper",
+  "title": "只报告首组重复密码",
+  "source": {
+    "paper": "9618_s22_22",
+    "rows": [
+      "9618_s22_22:8(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "char-compare",
+    "flag-variable",
+    "logic-ops",
+    "loop-bounds",
+    "nested-loops",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "relational-ops",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "SearchDuplicates"
+}

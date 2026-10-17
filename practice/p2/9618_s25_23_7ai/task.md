@@ -32,7 +32,7 @@ Write pseudocode for module UpdateVisit()
 
 ## Python 接口
 
-入口：`UpdateVisit(LoyaltyPoints,LastVisitDate)`。参数顺序按 QP 模块表：积分、日期（MS 范例顺序相反）。两个 BYREF 参数用单元素 list 表示；修改 [0] 使调用者可见。日期用 datetime.date，TODAY 可由测试替换。不额外比较年份：QP 只要求同月。
+入口：`UpdateVisit(LoyaltyPoints,LastVisitDate)`。参数顺序按 QP 模块表：积分、日期（MS 范例顺序相反）。两个 BYREF 参数用单元素 list 表示；修改 [0] 使调用者可见。日期用 datetime.date，TODAY 可由测试替换。测试只覆盖同一年内的同月与不同月；跨年同月是否加四分在 QP 未定义，依 D31 不测。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。
 

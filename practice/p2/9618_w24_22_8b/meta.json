@@ -1,0 +1,31 @@
+{
+  "id": "9618_w24_22:8(b)",
+  "kind": "past-paper",
+  "title": "将角色记录保存为文本",
+  "source": {
+    "paper": "9618_w24_22",
+    "rows": [
+      "9618_w24_22:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-10",
+    "P2-DT-07",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "array-of-records",
+    "data-types",
+    "declare-variables",
+    "file-close",
+    "file-write",
+    "loop-bounds",
+    "string-concat",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Save"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "9618_s25_21:6(b)",
+  "kind": "past-paper",
+  "title": "按速度对传感器读数冒泡排序",
+  "source": {
+    "paper": "9618_s25_21",
+    "rows": [
+      "9618_s25_21:6(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-08",
+    "P2-DT-06"
+  ],
+  "skills": [
+    "array-2d",
+    "bubble-sort",
+    "declare-variables",
+    "flag-variable",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "nested-loops",
+    "post-condition-loop"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Sort"
+}

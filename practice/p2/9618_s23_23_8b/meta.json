@@ -1,0 +1,31 @@
+{
+  "id": "9618_s23_23:8(b)",
+  "kind": "past-paper",
+  "title": "按供应商输出库存报表",
+  "source": {
+    "paper": "9618_s23_23",
+    "rows": [
+      "9618_s23_23:8(b)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-DT-09",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "field-extract",
+    "file-open-read",
+    "initialise-variables",
+    "loop-to-eof",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [
+    "Stock.txt"
+  ],
+  "ms_verified": true,
+  "entry": "Report_1"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "9618_w25_21:8(b)",
+  "kind": "past-paper",
+  "title": "归还指定学生的指定图书",
+  "source": {
+    "paper": "9618_w25_21",
+    "rows": [
+      "9618_w25_21:8(b)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "array-of-records",
+    "boolean-return",
+    "linear-search",
+    "logic-ops",
+    "loop-bounds"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "ReturnBook"
+}

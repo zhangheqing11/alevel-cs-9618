@@ -1,0 +1,30 @@
+{
+  "id": "9618_w25_23:8(b)",
+  "kind": "past-paper",
+  "title": "统计导师学生当前借阅总数",
+  "source": {
+    "paper": "9618_w25_23",
+    "rows": [
+      "9618_w25_23:8(b)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-07",
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-records",
+    "data-types",
+    "field-extract",
+    "initialise-variables",
+    "logic-ops",
+    "loop-bounds",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "LoansPerTutor"
+}

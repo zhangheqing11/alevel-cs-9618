@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_22:6(a)",
+  "kind": "past-paper",
+  "title": "随机选择两种馅料与面包",
+  "source": {
+    "paper": "9618_w24_22",
+    "rows": [
+      "9618_w24_22:6(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-05",
+    "P2-PG-09"
+  ],
+  "skills": [
+    "array-index",
+    "div-mod",
+    "output-format",
+    "post-condition-loop",
+    "random-numbers",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Special"
+}

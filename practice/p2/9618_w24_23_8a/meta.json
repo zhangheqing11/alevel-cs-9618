@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_23:8(a)",
+  "kind": "past-paper",
+  "title": "统计玩家某角色数量与总技能",
+  "source": {
+    "paper": "9618_w24_23",
+    "rows": [
+      "9618_w24_23:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-DT-07"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-records",
+    "data-types",
+    "initialise-variables",
+    "loop-bounds",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Count"
+}

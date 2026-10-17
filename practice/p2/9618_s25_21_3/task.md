@@ -23,6 +23,8 @@ A student has been asked to create a simple guessing game program. This program 
 
 ## Python 接口
 
+输出约定：每次猜测仅 print 一行相应反馈，不额外 print 欢迎语或汇总；提示放 input() 内。
+
 入口：`main()`。使用 random；输出每次比较结果各一行（英文 high/large/big、low/small、correct/success/found/right 之一表达相应含义），提示放 input() 内。测试依反馈检查终止于目标，不依赖某个固定随机答案。
 
 骨架中标注为“provided”的辅助模块来自题目给定契约，不属于本小问作答；保留它们即可。未给参数名时采用该题 MS 范例的名字。题目没有模块名时，`main` 是本练习的 Python 调用入口，伪代码仍按原题写算法。
