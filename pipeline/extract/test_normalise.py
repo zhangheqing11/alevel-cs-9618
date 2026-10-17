@@ -33,3 +33,8 @@ def test_comparison_rejects_unrelated_changes():
         verify_line(before, after.replace('"marks": 1', '"marks": 2'))
     with pytest.raises(ValueError, match='literal value'):
         verify_line(before, after.replace('"x"', '"\\u0078"'))
+
+
+def test_d29_adjudicated_step_arrow_and_infinity():
+    assert normalise_text('Step 1\uf0f0Step 2; distance=\uf0a5') == 'Step 1⇨Step 2; distance=∞'
+    assert normalise_text('\ue001') == '\ue001'

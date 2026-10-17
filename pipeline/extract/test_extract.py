@@ -106,3 +106,12 @@ def test_p2_ms_keeps_both_schemes_for_same_question():
     assert "Mark Schme One" in block.text
     assert "Mark Scheme Two" in block.text
     assert "RETURN Plaintext" in block.text
+
+
+def test_p3_rpn_stack_grid_requires_original_figure():
+    from align import align_rows
+    from run_all import load_inventory
+    record = next(r for r in load_inventory() if r['paper'] == '9618_s24_31')
+    rows = align_rows(record, split_question_paper(source(record['qp'])), parse_mark_scheme(source(record['ms'])))
+    row = next(r for r in rows if r['q'] == '5(c)')
+    assert row['has_figure'] and 'figure' in row['flags']
