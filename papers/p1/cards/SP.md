@@ -366,7 +366,7 @@ Parity    0 0 0 1 1 1 0 1
 
 第 3 列与 Byte B 交叉的那一位（0）出错，原值应为 1。
 
-4. 奇偶校验的局限：两位同时翻转时奇偶不变，查不出来。
+4. 奇偶校验的局限：**同一字节内偶数个位翻转**，该字节的奇偶性不变，可能绕过单字节奇偶检查。块校验还检查各列：同一行的两列各翻转一位时，行奇偶虽不变，两列的奇偶都会改变，仍能发现错误；不能把“两位必漏检”套到块校验。
 
 **得分表述**（引自对应 MS）
 - 「Double entry: Enter the registration number twice and the computer compares to check they are the same」⟦9618_s23_13:4(d)(ii)⟧

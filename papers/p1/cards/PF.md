@@ -460,7 +460,7 @@
 
 #### 代表题精讲　⟦9618_s25_13:5(a)(ii)⟧
 
-**在考什么**　Complete the table by identifying and describing two modes of addressing that are not used in the program in part (a). 4 分：每种“名称 1 + 对应描述 1”。MS 接受 Direct、Indirect、Indexed 中的任意两种（讲解时请对照原卷 QP p.11–12 的指令表与 part (a) 的程序，确认程序里用了哪些方式）。
+**在考什么**　Complete the table by identifying and describing two modes of addressing that are not used in the program in part (a). 4 分：每种“名称 1 + 对应描述 1”。MS 接受 Direct、Indirect、Indexed 中的任意两种（讲解时请对照原卷 QP p.10 的指令表与 part (a) 的程序、p.11 的跟踪表及 p.12 的设问，确认程序里用了哪些方式）。
 
 **完整作答**
 
@@ -594,7 +594,7 @@
 
 注意 209（`DEC ACC`）从未执行，所以表里没有 209 这一行。
 
-**与 MS 对齐**　MS 的行与上表一致：200 → 8，201 → 9，202 → [83] = 9，203 → 10，204，206 → 9，207 → 19，208，210 → [81] = 19；按阴影分 4 段各 1 分。
+**与 MS 对齐**　上表保留完整执行过程；MS 的表省略了不改数据的 205、211 两行，按 MS 的阴影分组核对数值。MS 列出的行是：200 → 8，201 → 9，202 → [83] = 9，203 → 10，204，206 → 9，207 → 19，208，210 → [81] = 19；阴影分 4 段各 1 分。
 
 **英文作答句**　（跟踪题无文字作答。）
 

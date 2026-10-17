@@ -28,9 +28,9 @@
 | First Normal Form (1NF) | 「No repeating groups or repeating attributes」⟦9618_s22_13:6(c)⟧ | 没有重复的属性组，每个字段只存一个值 | 一格一个值 | P1-DB-05 |
 | Atomic data | 「Ensure each field is atomic」⟦9618_w23_12:2(c)⟧ | 字段的值不可再分（姓与名分开存） | 不把一串课程挤进一格 | P1-DB-05、P1-DB-06 |
 | Second Normal Form (2NF) | 「no partial key dependencies」⟦9618_w22_11:4(b)⟧ | 在 1NF 基础上，每个非键属性依赖整个主键 | 不能只看复合键的一半 | P1-DB-05 |
-| Partial dependency | 「Each field is fully dependent on the corresponding primary key // no partial dependencies」⟦9618_s22_11:4(b)⟧ | 非键属性只依赖复合主键的一部分（违反 2NF） | 学生名只由学号决定，与考试无关 | P1-DB-05 |
+| No partial dependencies（2NF 条件） | 「Each field is fully dependent on the corresponding primary key // no partial dependencies」⟦9618_s22_11:4(b)⟧ | 不存在部分依赖：每个非键属性依赖整个主键，而非复合主键的一部分 | 若复合主键是学号与考试号，就不能把只由学号决定的学生名留在这张表 | P1-DB-05 |
 | Third Normal Form (3NF) | 「All attributes must be fully dependent on the primary key and no other attributes」⟦9618_s22_13:6(c)⟧ | 在 2NF 基础上，非键属性只依赖主键，不依赖其他非键属性 | the key, the whole key, nothing but the key | P1-DB-05 |
-| Non-key (transitive) dependency | 「no non-key dependencies // no transitive dependencies」⟦9618_w22_11:4(b)⟧ | 非键属性由另一个非键属性决定（违反 3NF） | 售价由品种决定，不由批次决定 | P1-DB-05、P1-DB-06 |
+| No non-key / transitive dependencies（3NF 条件） | 「no non-key dependencies // no transitive dependencies」⟦9618_w22_11:4(b)⟧ | 不存在非键（传递）依赖：非键属性不依赖其他非键属性 | 若售价只由品种决定，就把品种与售价另存一表，不留在以批次为主键的表中 | P1-DB-05、P1-DB-06 |
 | DBMS | Software that creates, manages and controls access to a database.（非 MS 原句） | 建立、管理数据库并控制对它的访问的软件 | 数据库的管家 | P1-DB-07 |
 | Data dictionary | 「Stores metadata about the database」⟦9618_w21_12:6(b)⟧ | 存放数据库元数据的地方：表名、字段名、类型、校验规则、键、关系 | 图书馆目录卡 | P1-DB-07 |
 | Metadata | 「Data about the data in the database // data about the structure of the database // metadata for a database」⟦9618_s23_11:2(a)(i)⟧ | 关于数据的数据，描述数据的结构与特征 | 照片的拍摄时间、尺寸信息 | P1-DB-07 |

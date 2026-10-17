@@ -14,7 +14,7 @@
 6. **算大小**（IR-12）：把 4、5 的“每个单位几位 × 有多少单位”乘起来，再换单位。
 7. **压缩**（IR-13 至 IR-15）：为什么压（IR-13）→ 选有损还是无损（IR-14）→ 具体怎么压（IR-15）。
 
-计算题占这一章一半的分值，全部手算（禁用计算器），所以每道计算题都要写出 working：MS 普遍“1 mark for working, 1 mark for answer”，答案错了 working 仍可能得分。
+本章有多类计算题，全部手算（禁用计算器），所以每道计算题都要写出 working：MS 普遍“1 mark for working, 1 mark for answer”，答案错了 working 仍可能得分。
 
 ### 题型树
 <!-- auto:type-tree -->
