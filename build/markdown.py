@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Iterable, Mapping
 from urllib.parse import quote
 
-from .stats import rows_for_type
+from .stats import COMMAND_LABELS, rows_for_type
 
 
 ROW_REF = re.compile(r"⟦([^⟧\s]+)⟧")
@@ -156,7 +156,9 @@ def _one_line_stats(code: str, stats: Mapping[str, Mapping]) -> str:
     value = stats.get(code)
     if not value:
         return f"> **考情**　★☆☆　{code}：暂无核验语料统计。"
-    distribution = ", ".join(f"{key} {count}" for key, count in value.get("command_distribution", {}).items()) or "暂无设问分布"
+    counts = value.get("command_distribution", {})
+    distribution = "、".join(f"{label} {counts[key]}" for key, label in COMMAND_LABELS.items()
+                             if counts.get(key)) or "暂无设问分布"
     return (
         f"> **考情**　{value.get('stars', '★☆☆')}　{value.get('questions', 0)} 小问 / "
         f"{value.get('marks', 0)} 分；{value.get('paper_count', 0)} 卷、{value.get('session_count', 0)} 考季；"
