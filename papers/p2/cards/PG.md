@@ -329,6 +329,7 @@ ENDIF
 - Python 有 `elif`，可以写成平的 `if / elif / else`；伪代码没有 ELSIF，只能嵌套。这是两种语言最容易串的地方。
 - Python 3.10 起也有 `match … case`，`case _:` 对应 OTHERWISE。
 - 先过阶梯 **L02 E01**（CASE 范围子句 ↔ if/elif）和 **L02 E05**（把嵌套 IF 改写成 CASE 的干跑题）。
+- 真题练习（伪代码 + Python 自动测试）：代表题 `practice/p2/9618_s22_21_6b/`，变式 `practice/p2/9618_w22_22_5/`，用 `make try EX=practice/p2/9618_s22_21_6b` 测。真题练习的 Python 入口沿用原题模块名（如 `Replace()`，不是上面的 snake_case 名字），以该练习的 task.md 为准；QP 与 MS 范例在边界上不一致时，测试按 QP 判（决策 D31）。
 
 ```python
 if my_switch == 1:
@@ -759,6 +760,7 @@ Max 6，写满 7 点留一分余量。MS 范例用一句 `DECLARE COdd, CEven, T
 **同题 Python 版要点**
 - “先读一次 + 循环最后再读”的结构 Python 照搬；Python 的 `input()` 返回字符串，要 `int(…)`；提示语写在 `input("…")` 里（决策 D13）。
 - 奇偶判断 `MOD` ↔ `%`。先过阶梯 **L03 E02**（哨兵值求平均：WHILE + 预读，正是本题的结构）；随机数写法见 **L01** 对照卡第 7 节（`INT(RAND(6)) + 1` ↔ `random.randint(1, 6)`）。
+- 真题练习（伪代码 + Python 自动测试）：代表题 `practice/p2/9618_w23_22_4a/`，变式 `practice/p2/9618_s25_21_3/`，用 `make try EX=practice/p2/9618_w23_22_4a` 测。真题练习的 Python 入口沿用原题模块名（如 `Replace()`，不是上面的 snake_case 名字），以该练习的 task.md 为准；QP 与 MS 范例在边界上不一致时，测试按 QP 判（决策 D31）。
 
 ```python
 def count() -> None:
@@ -908,6 +910,7 @@ Max 6。MS 范例用 `WHILE ThisNum <> 0` 倒着乘；MP4 写明“loop for This
 - `FOR Count ← 1 TO ThisNum` ↔ `for count in range(1, this_num + 1):`；`range` 不含终点，要加 1。
 - 不要用 `math.factorial()`：题目考的是循环相乘本身。
 - 先过阶梯 **L04 E05**（素数模块：在函数里循环、判断、返回）与 **L03 E06**（用 DIV / MOD 逐位处理，对应校验位一类变式）。
+- 真题练习（伪代码 + Python 自动测试）：代表题 `practice/p2/9618_s22_23_6a/`，变式 `practice/p2/9618_w25_21_6b/`，用 `make try EX=practice/p2/9618_s22_23_6a` 测。真题练习的 Python 入口沿用原题模块名（如 `Replace()`，不是上面的 snake_case 名字），以该练习的 task.md 为准；QP 与 MS 范例在边界上不一致时，测试按 QP 判（决策 D31）。
 
 ```python
 def factorial(this_num: int) -> int:
@@ -1106,6 +1109,7 @@ MS 范例的函数头印成了 `Function Replace(OldString : STRING, Char1, Char
 - `MID(S, Index, 1)` ↔ `s[index - 1]`（或直接 `for index in range(len(s))` 用 `s[index]`）；`LENGTH` ↔ `len`；`&` ↔ `+`。
 - 不要用 `old_string.replace(char1, char2)`：一行就完成了，但题目考的是逐字符算法。
 - 先过阶梯 **L05 E01**（用切片实现 LEFT / RIGHT / MID）、**L05 E03**（逐字符循环统计）、**L05 E04**（去首尾空格：长度表达式不差一，对应子模板 C）；格式检查类再做 **L09 E04**。
+- 真题练习（伪代码 + Python 自动测试）：代表题 `practice/p2/9618_s23_21_4/`，变式 `practice/p2/9618_s22_22_6/`，用 `make try EX=practice/p2/9618_s23_21_4` 测。真题练习的 Python 入口沿用原题模块名（如 `Replace()`，不是上面的 snake_case 名字），以该练习的 task.md 为准；QP 与 MS 范例在边界上不一致时，测试按 QP 判（决策 D31）。
 
 ```python
 def replace(old_string: str, char1: str, char2: str) -> str:
@@ -1243,6 +1247,7 @@ Max 7。验算 2022 年：3 月 1 日是星期二，星期日是 6、13、20 日
 - `DAYINDEX(d)` ↔ `d.isoweekday() % 7 + 1`（Python 的 `isoweekday()` 星期一 = 1 … 星期日 = 7）。
 - Python 没有后测循环，`REPEAT … UNTIL` 改写成 `while` + 条件（或 `while True` + `break`）。
 - 先过阶梯 **L05 E06**（日期函数：插页 ↔ `datetime.date`）。
+- 真题练习（伪代码 + Python 自动测试）：代表题 `practice/p2/9618_w24_23_6/`，变式 `practice/p2/9618_s25_23_7ai/`，用 `make try EX=practice/p2/9618_w24_23_6` 测。真题练习的 Python 入口沿用原题模块名（如 `Replace()`，不是上面的 snake_case 名字），以该练习的 task.md 为准；QP 与 MS 范例在边界上不一致时，测试按 QP 判（决策 D31）。
 
 ```python
 from datetime import date
