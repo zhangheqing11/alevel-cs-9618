@@ -141,15 +141,43 @@
 **在考什么**　总部办公室：4 台有线计算机、1 台服务器、2 台打印机、1 台中心交换机、1 台提供互联网接入点的设备，组成星型网络。Draw the topology. Label all devices. 4 分（讲解时请对照原卷 QP p.12 的作图区与 MS p.11 的示例图）。
 
 **完整作答**　交换机放在中心，其余每台设备各用一条线直连交换机：
-```
-            Computer 1   Computer 2
-                  \         /
-  Printer 1 ----   SWITCH   ---- Server
-                  /   |   \
-     Printer 2  Computer 3  Computer 4
-                      |
-              Router (internet)
-```
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-labelledby="cm03-star-title" style="width:100%;max-width:680px;height:auto">
+  <title id="cm03-star-title">星型网络：四台计算机、两台打印机、服务器及路由器分别直连中心交换机</title>
+  <g stroke="#333" stroke-width="2">
+    <line x1="85" y1="55" x2="340" y2="150" />
+    <line x1="255" y1="55" x2="340" y2="150" />
+    <line x1="425" y1="55" x2="340" y2="150" />
+    <line x1="595" y1="55" x2="340" y2="150" />
+    <line x1="85" y1="245" x2="340" y2="150" />
+    <line x1="255" y1="245" x2="340" y2="150" />
+    <line x1="425" y1="245" x2="340" y2="150" />
+    <line x1="595" y1="245" x2="340" y2="150" />
+  </g>
+  <g fill="white" stroke="#333" stroke-width="2">
+    <rect x="15" y="10" width="140" height="45" />
+    <rect x="185" y="10" width="140" height="45" />
+    <rect x="355" y="10" width="140" height="45" />
+    <rect x="525" y="10" width="140" height="45" />
+    <rect x="280" y="125" width="120" height="50" />
+    <rect x="15" y="245" width="140" height="45" />
+    <rect x="185" y="245" width="140" height="45" />
+    <rect x="355" y="245" width="140" height="45" />
+    <rect x="525" y="245" width="140" height="45" />
+  </g>
+  <g fill="#111" font-family="sans-serif" font-size="15" text-anchor="middle">
+    <text x="85" y="38">Computer 1</text>
+    <text x="255" y="38">Computer 2</text>
+    <text x="425" y="38">Computer 3</text>
+    <text x="595" y="38">Computer 4</text>
+    <text x="340" y="156">SWITCH</text>
+    <text x="85" y="273">Printer 1</text>
+    <text x="255" y="273">Printer 2</text>
+    <text x="425" y="273">Server</text>
+    <text x="595" y="273">Router (internet)</text>
+  </g>
+</svg>
+
 （打印机也可以接在服务器或某台计算机上；路由器/调制解调器可以接在交换机或服务器上——MS 都接受。）
 
 **与 MS 对齐**　①“Server directly connected to the switch”；②“Four labelled computers all connected directly to the switch”；③“Two printers each directly connected to the switch / server / a computer”；④“Router / modem directly connected to the switch / server for internet access”。四个设备组各 1 分，标注是②的一部分。

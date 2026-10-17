@@ -16,7 +16,7 @@
 | Memory Address Register (MAR) | 「holds address in memory from which data will be read / to which data will be written」⟦9618_w22_13:4(a)(i)⟧ | 存放将要读/写的内存单元的地址 | 正要去的柜子号 | P1-PF-02、P1-PF-03 |
 | Memory Data Register (MDR) | 「holds the data/instructions which has been read from or is to be written to the address in the MAR」⟦9618_w22_13:4(a)(i)⟧ | 存放从 MAR 所指地址读出、或将写入该地址的数据/指令 | 刚从柜子里取出（或要放进去）的东西 | P1-PF-02、P1-PF-03 |
 | Current Instruction Register (CIR) | 「holds the instruction currently being decoded and/or executed」⟦9618_w23_11:5(a)⟧ | 存放当前正在译码/执行的指令 | 正在读的那一页 | P1-PF-02、P1-PF-03 |
-| Accumulator (ACC) | 「holds the result of a calculation」⟦9618_w25_11:6(a)⟧ | 存放算术与逻辑运算（中间）结果的通用寄存器 | 计算器的显示屏 | P1-PF-02、P1-PF-09 |
+| Accumulator (ACC) | 「holds the result of a calculation」⟦9618_w25_11:6(a)⟧ | 存放算术与逻辑运算（中间）结果的专用寄存器 | 计算器的显示屏 | P1-PF-02、P1-PF-09 |
 | Index Register (IX) | 「to store a value that is added to an address to give another address」⟦9618_w22_11:5(b)(i)⟧ | 存放一个数，与操作数相加形成实际地址（变址寻址） | “从这里往后数几格” | P1-PF-02、P1-PF-08 |
 | Status Register (SR) | 「To store the value of flags/bits」⟦9618_w24_11:8(a)⟧ | 存放标志位（进位、溢出、零、负、中断等），运算后被置位/清零，可被检查以改变执行顺序 | 仪表盘上的指示灯 | P1-PF-02 |
 | General vs special purpose register | 「Special purpose registers are specialised for a specific use, whereas general purpose registers are used for any purpose」⟦9618_w23_13:9(a)(ii)⟧ | 专用寄存器各有指定用途、保存程序执行状态；通用寄存器可由程序员用于任何用途 | 专用工具与万用托盘 | P1-PF-02 |
@@ -40,7 +40,7 @@
 | Indexed addressing | 「The address of the data is formed by adding the contents of the Index Register (IX) to the operand」⟦9618_s25_13:5(a)(ii)⟧ | 操作数加上 IX 的内容才是数据的地址 | “从 20 号柜往后数 IX 格” | P1-PF-08、P1-PF-09 |
 | Relative addressing | 「because all (target) addresses can be specified by the base address + offset」⟦9618_w22_13:6(a)(ii)⟧ | 地址写成“基地址 + 偏移量”，使代码可以装到内存任何位置（可重定位） | “从我站的地方往前走 3 步” | P1-PF-08 |
 | Trace table | 「1 mark for each set of highlighted rows」⟦9618_w22_11:6(a)(i)⟧ | 逐条记录指令执行后 ACC、IX、内存与输出变化的表，只写变化的值 | 给 CPU 写日记 | P1-PF-10 |
-| Logical shift | 「A logical shift moves all bits to the right and inserts zeros in the appropriate leftmost bits」⟦9618_w24_13:8(c)⟧ | 所有位整体移动，移出的丢弃，空位补 0；左移 n 位 ×2ⁿ，右移 n 位 ÷2ⁿ（无符号） | 队伍挪座位，空座坐“0” | P1-PF-11 |
+| Logical shift | 「A logical shift moves all bits to the right and inserts zeros in the appropriate leftmost bits」⟦9618_w24_13:8(c)⟧ | 所有位整体移动，移出的丢弃，空位补 0；对无符号数，左移 n 位仅在未丢失有效位时等于 ×2ⁿ，右移 n 位等于 ÷2ⁿ 后向下取整 | 队伍挪座位，空座坐“0” | P1-PF-11 |
 | Arithmetic shift | 「An arithmetic shift moves all bits to the right but copies the sign bit into the Most Significant Bit (MSB)」⟦9618_w24_13:8(c)⟧ | 右移时左端复制符号位，保持补码数的正负 | 空座由排头的分身补上 | P1-PF-11 |
 | Cyclic shift | Bits shifted out of one end are inserted at the other end.（非 MS 原句） | 循环移位：移出一端的位从另一端补回，不丢位 | 转盘 | P1-PF-11 |
 | Bit masking | 「A bit manipulation operation is required to access/mask only the LSB and clear all the others」⟦9618_w24_12:8(b)(ii)⟧ | 用掩码与 AND（清零/测试）、OR（置 1）、XOR（取反）只改变或只读取指定的位 | 镂空模板 | P1-PF-12、P1-PF-13 |

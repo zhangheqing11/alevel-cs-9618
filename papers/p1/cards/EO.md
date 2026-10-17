@@ -132,8 +132,10 @@
 | 费用 | 购买才能用 | 先免费试用，之后可能要付费 | 通常免费（也可收费） | 不一定免费（free = 自由，不是免费） |
 | 源代码 | 不给 | 不给 | 随程序提供 | 随程序提供 |
 | 能否修改 | 不能（合法地） | 不能 | 能 | 能 |
-| 能否再发布 | 不能 | 试用版可以传播 | 能（在同样的许可条件下） | 能（在同样的自由下） |
+| 能否再发布 | 不能 | 试用版可以传播 | 能，遵守具体许可证条款 | 能，遵守具体许可证条款 |
 | 特点 | 受版权保护，常有支持与更新、测试充分 | 试用期或功能受限；受版权保护 | 鼓励协作、用户报告并修复错误 | 强调用户的自由：运行、研究、修改、分享 |
+
+只有采用要求保留相同许可或自由的 copyleft 许可证时，修改版再发布才受相应要求约束；不能把这种要求推广到所有开源或自由软件许可证。
 
 2. **按情境选**：要卖钱、不想被改 → commercial（或想先让人试玩 → shareware）；要让别人改、再发布 → OSI 或 FSF；情境说“源代码可被企业修改、企业付钱买维护”→ 开源（程序员靠维护和更新赚钱）。
 3. **论证**每点写“许可的特征 → 对这个情境的好处”：用户必须付费 → 程序员有收入；受版权保护 → 用户不能合法修改 → 程序员掌控产品、可对盗版采取法律行动。
@@ -256,16 +258,25 @@
 
 #### 代表题精讲　⟦9618_w25_11:8(c)⟧
 
-**在考什么**　Describe two social impacts of students using Artificial Intelligence (AI) to complete their homework. 4 分，两个影响各写“影响 + 展开”。
+**在考什么**　Describe two social impacts of students using Artificial Intelligence (AI) to complete their homework. 4 分；按学习与人际交流两项影响组织答案，覆盖 4 个独立 MS bullet，同一 bullet 内的 `//` 是替代表述，不累计给分。
 
 **完整作答**
-- 影响 1：学生用 AI 走捷径，可能错过培养推理和解决问题的能力——实际上什么也没学到，某些技能会退化。
+- 影响 1（学习）：学生用 AI 走捷径，可能错过培养推理和解决问题能力的机会；AI 的答案也可能不正确，导致学生接触错误信息。
 - 影响 2：过度依赖 AI 会减少协作、团队合作和面对面交流的机会，对学生的沟通能力不利；屏幕时间增加、更孤立，可能加重焦虑或孤独。
-- （也可写：AI 的答案不一定正确，造成错误信息；凸显数字鸿沟——有的学生用不上这些技术；正面的：获得额外帮助的学生可能学得更好。）
+- （其他可选要点：凸显数字鸿沟——有的学生用不上这些技术；正面的：获得额外帮助的学生可能学得更好。）
 
-**与 MS 对齐**　影响 1 ←“If students use AI to shortcut learning, they may miss out on developing reasoning and problem-solving skills // Students may not be learning anything // It could lead to a decline in specific skills”；影响 2 ←“It could have negative impacts on student communication // heavy reliance on AI may limit opportunities for collaboration, teamwork, and face-to-face communication”“Increased screen time and isolation could contribute to anxiety or loneliness”。MS 每个要点 1 分、封顶 4 分，两个影响各写两个独立要点最稳。
+**与 MS 对齐**　MS p.13 每个 bullet 1 分、封顶 4 分；上面的两项影响覆盖以下 4 个独立 bullet：
 
-**英文作答句**　If students use AI to shortcut their homework, they may miss out on developing reasoning and problem-solving skills, which could lead to a decline in specific skills. Heavy reliance on AI may also limit opportunities for collaboration, teamwork and face-to-face communication, and the increased screen time and isolation could contribute to anxiety or loneliness.
+| 作答位置 | 对应 MS 原文 | 分值 |
+|:--|:--|:-:|
+| 影响 1：错过能力培养 | 「If students use AI to shortcut learning, they may miss out on developing reasoning and problem-solving skills」⟦9618_w25_11:8(c)⟧ | 1 |
+| 影响 1：错误答案造成错误信息 | 「The AI answer might not be correct leading to mis-information」⟦9618_w25_11:8(c)⟧ | 1 |
+| 影响 2：交流与协作减少 | 「heavy reliance on AI may limit opportunities for collaboration, teamwork, and face-to-face communication」⟦9618_w25_11:8(c)⟧ | 1 |
+| 影响 2：焦虑或孤独 | 「Increased screen time and isolation could contribute to anxiety or loneliness」⟦9618_w25_11:8(c)⟧ | 1 |
+
+第一行所在 bullet 中的 not learning / decline in skills 是替代表述，不能另计分。
+
+**英文作答句**　1. If students use AI to shortcut their homework, they may miss out on developing reasoning and problem-solving skills. AI answers may also be incorrect, leading to misinformation. 2. Heavy reliance on AI may limit opportunities for collaboration, teamwork and face-to-face communication. Increased screen time and isolation could contribute to anxiety or loneliness.
 
 **直观**　AI 写作业像请人代跑步：成绩单上看着不错，腿上的肌肉却没长出来。
 

@@ -12,7 +12,7 @@
 | Software licence | A legal agreement that defines the rights and terms of use of the software.（非 MS 原句） | 规定用户可以怎样使用、复制、修改、分发软件的法律协议 | 租房合同 | P1-EO-03 |
 | Commercial licence | 「The program is usually sold for a fee」⟦9618_s25_12:3(c)(i)⟧ | 付费购买才能使用，不提供源代码，不能合法修改或分享 | 在书店买书 | P1-EO-03 |
 | Shareware | 「Gives the user a trial period / limited functionality before a payment/sign up may be required」⟦9618_w25_12:2(a)⟧ | 先免费试用（时间或功能受限），之后可能要付费；不给源代码 | 超市试吃 | P1-EO-03 |
-| Open Source Initiative (OSI) | 「Allows program source code to be examined」⟦9618_w24_12:5(b)(i)⟧ | 随程序提供源代码，允许修改并在同样许可下再发布 | 公开的菜谱 | P1-EO-03 |
+| Open Source Initiative (OSI) | 「Allows program source code to be examined」⟦9618_w24_12:5(b)(i)⟧ | 随程序提供源代码，允许修改和再发布，须遵守具体许可证条款；要求保留相同许可的限制取决于所用的 copyleft 许可证 | 公开的菜谱 | P1-EO-03 |
 | Free Software Foundation (FSF) | 「The software is free of restrictions」⟦9618_w25_12:10(b)⟧ | 强调用户运行、研究、修改、分享软件的自由；不一定免费 | “自由”的 free，不是“免费”的 free | P1-EO-03 |
 | Artificial Intelligence (AI) | Computer systems that perform tasks normally needing human intelligence, such as recognising images or speech and making decisions.（非 MS 原句） | 让计算机完成识别、理解、决策等通常需要人类智能的任务 | 会“看”会“听”会“猜”的程序 | P1-EO-04 |
 | Image recognition | 「to identify features/characteristics/items in an image」⟦9618_s22_12:8⟧ | 分析图像像素，找出其中的特征或物体 | 在照片里认出猫 | P1-EO-04 |
