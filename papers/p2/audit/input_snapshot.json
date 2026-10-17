@@ -1,0 +1,15 @@
+{
+  "base_commit": "8a748c4789da86d01531cd41c01458f00e5bd2b1",
+  "files": {
+    "papers/p2/cards/AD.md": "2c739bf811a8e1e68b870eb632004f9a8f1eb51f4a9e8a4f59809b01a61eeb86",
+    "papers/p2/cards/DT.md": "b1ab974091fc858332e02356b0020b88f0ec8e3133fb51bcc4060a114f6bd5e8",
+    "papers/p2/cards/PG.md": "565eefced81b0723c3c4ed67205cb1c01b7b9f0504067b73de593cd937636d61",
+    "papers/p2/cards/SD.md": "faef9ff09b314ca6430928aa98e9c54b362ad7832bb070dbccdc29d4ace3da45",
+    "papers/p2/core/AD.md": "e93321972f5659122571597c8a55c8b8d0f6d7e613ea28d5053b53f641f2c3ed",
+    "papers/p2/core/DT.md": "d0bfcfd9065f177bd509d7167740a1f8fd0d9171167744cda2dee0872acd4326",
+    "papers/p2/core/PG.md": "91f989c5aee08d46f7ba2239be7a938293169e99e9b188ce2fbf1278875e1927",
+    "papers/p2/core/SD.md": "6a1178e8548357bf447aea3fd36723ea51efacb2ed73c09b0f08f57f2af56c83",
+    "papers/p2/front.md": "7c9f7caa9f8b1b39a6b3f0c3cff8a08c84214f44e8810ae440a66ac8d53db1f0",
+    "papers/p2/back.md": "df922851da112d5b3ea8f4a6325c916ea48928ab3324381c9f5b3e246087b86f"
+  }
+}
