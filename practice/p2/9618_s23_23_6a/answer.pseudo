@@ -1,0 +1,3 @@
+PROCEDURE Select(Start, End : INTEGER)
+
+ENDPROCEDURE

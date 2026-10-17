@@ -1,0 +1,31 @@
+{
+  "id": "9618_s25_23:5",
+  "kind": "past-paper",
+  "title": "添加偶校验位",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:5"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "char-compare",
+    "char-loop",
+    "div-mod",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Parity"
+}

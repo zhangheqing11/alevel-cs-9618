@@ -1,0 +1,28 @@
+{
+  "id": "9618_w24_22:2(a)",
+  "kind": "past-paper",
+  "title": "遮盖卡号并保留末四位",
+  "source": {
+    "paper": "9618_w24_22",
+    "rows": [
+      "9618_w24_22:2(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "count-loop",
+    "declare-variables",
+    "loop-bounds",
+    "module-header",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Conceal"
+}

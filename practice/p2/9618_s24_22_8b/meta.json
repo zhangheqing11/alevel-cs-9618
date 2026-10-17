@@ -1,0 +1,27 @@
+{
+  "id": "9618_s24_22:8(b)",
+  "kind": "past-paper",
+  "title": "删除行首空格",
+  "source": {
+    "paper": "9618_s24_22",
+    "rows": [
+      "9618_s24_22:8(b)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "char-compare",
+    "char-loop",
+    "linear-search",
+    "loop-bounds",
+    "return-value",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "DeleteSpaces"
+}

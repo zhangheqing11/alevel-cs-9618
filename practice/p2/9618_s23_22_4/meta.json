@@ -1,0 +1,30 @@
+{
+  "id": "9618_s23_22:4",
+  "kind": "past-paper",
+  "title": "统计指定字符出现次数",
+  "source": {
+    "paper": "9618_s23_22",
+    "rows": [
+      "9618_s23_22:4"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "char-compare",
+    "char-loop",
+    "data-types",
+    "declare-variables",
+    "loop-bounds",
+    "module-header",
+    "return-value",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GetNum"
+}

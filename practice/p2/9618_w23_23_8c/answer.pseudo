@@ -1,0 +1,5 @@
+// DECLARE MyID : STRING
+
+PROCEDURE Chat(Destination : STRING, Port : INTEGER)
+
+ENDPROCEDURE

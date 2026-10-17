@@ -1,0 +1,26 @@
+{
+  "id": "9618_w23_21:8(d)",
+  "kind": "past-paper",
+  "title": "提取带 STX/ETX 消息字段",
+  "source": {
+    "paper": "9618_w23_21",
+    "rows": [
+      "9618_w23_21:8(d)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "case-of",
+    "field-extract",
+    "input-validation",
+    "return-value",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "GetField"
+}

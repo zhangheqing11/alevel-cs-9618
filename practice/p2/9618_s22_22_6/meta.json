@@ -1,0 +1,32 @@
+{
+  "id": "9618_s22_22:6",
+  "kind": "past-paper",
+  "title": "解析逗号分隔整数",
+  "source": {
+    "paper": "9618_s22_22",
+    "rows": [
+      "9618_s22_22:6"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "char-loop",
+    "declare-variables",
+    "field-extract",
+    "initialise-variables",
+    "loop-bounds",
+    "operator-precedence",
+    "output-format",
+    "string-concat",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Parse"
+}

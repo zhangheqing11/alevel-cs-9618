@@ -1,0 +1,29 @@
+{
+  "id": "9618_s23_21:4",
+  "kind": "past-paper",
+  "title": "替换所有指定字符",
+  "source": {
+    "paper": "9618_s23_21",
+    "rows": [
+      "9618_s23_21:4"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "char-compare",
+    "char-loop",
+    "declare-variables",
+    "loop-bounds",
+    "module-header",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Replace"
+}

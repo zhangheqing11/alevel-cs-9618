@@ -1,0 +1,27 @@
+{
+  "id": "9618_w22_23:6(b)",
+  "kind": "past-paper",
+  "title": "判断重量接收、拒绝或复检",
+  "source": {
+    "paper": "9618_w22_23",
+    "rows": [
+      "9618_w22_23:6(b)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "declare-variables",
+    "logic-ops",
+    "module-header",
+    "nested-if",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Status"
+}

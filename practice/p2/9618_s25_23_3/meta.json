@@ -1,0 +1,31 @@
+{
+  "id": "9618_s25_23:3",
+  "kind": "past-paper",
+  "title": "投骰子的输出与平均数",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:3"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-09"
+  ],
+  "skills": [
+    "accumulator",
+    "count-loop",
+    "data-types",
+    "declare-variables",
+    "div-mod",
+    "initialise-variables",
+    "loop-bounds",
+    "output-format",
+    "random-numbers",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "RollDice"
+}

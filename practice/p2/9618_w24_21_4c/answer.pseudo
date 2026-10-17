@@ -1,0 +1,3 @@
+FUNCTION Evaluate(NumStr1, NumStr2 : STRING) RETURNS Result
+
+ENDFUNCTION

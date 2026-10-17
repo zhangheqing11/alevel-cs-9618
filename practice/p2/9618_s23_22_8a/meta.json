@@ -1,0 +1,28 @@
+{
+  "id": "9618_s23_22:8(a)",
+  "kind": "past-paper",
+  "title": "验证库存信息行",
+  "source": {
+    "paper": "9618_s23_22",
+    "rows": [
+      "9618_s23_22:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boolean-return",
+    "char-compare",
+    "field-extract",
+    "logic-ops",
+    "procedure-call",
+    "relational-ops",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CheckInfo"
+}

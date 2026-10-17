@@ -1,0 +1,26 @@
+{
+  "id": "9618_w24_21:2",
+  "kind": "past-paper",
+  "title": "24 小时制时钟进位",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:2"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "accumulator",
+    "initialise-variables",
+    "nested-if",
+    "procedure-call",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Tick"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "9618_s25_23:7(b)(ii)",
+  "kind": "past-paper",
+  "title": "把 DDMMYYYY 转为日期",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:7(b)(ii)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "date-functions",
+    "field-extract",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

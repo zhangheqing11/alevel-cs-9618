@@ -1,0 +1,25 @@
+{
+  "id": "9618_s22_22:7(a)",
+  "kind": "past-paper",
+  "title": "实现 MID 字符串函数",
+  "source": {
+    "paper": "9618_s22_22",
+    "rows": [
+      "9618_s22_22:7(a)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "module-header",
+    "return-value",
+    "string-functions",
+    "string-index"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "MID"
+}

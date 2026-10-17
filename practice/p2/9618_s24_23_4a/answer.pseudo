@@ -1,0 +1,5 @@
+// DECLARE TotalA, TotalB : REAL
+
+PROCEDURE TwoParts()
+
+ENDPROCEDURE

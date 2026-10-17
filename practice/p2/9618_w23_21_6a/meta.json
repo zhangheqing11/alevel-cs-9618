@@ -1,0 +1,29 @@
+{
+  "id": "9618_w23_21:6(a)",
+  "kind": "past-paper",
+  "title": "带长度限制的行输出缓冲",
+  "source": {
+    "paper": "9618_w23_21",
+    "rows": [
+      "9618_w23_21:6(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "assign-value",
+    "initialise-variables",
+    "module-header",
+    "nested-if",
+    "output-format",
+    "relational-ops",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "MyOutput"
+}
