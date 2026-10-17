@@ -21,6 +21,14 @@ def main():
  skills={t['tag'] for t in json.loads((ROOT/'papers/p2/skill_tags.json').read_text())['tags']}
  assert set(tags)<=set(rows) and set(points)<=set(tags)
  if not args.partial:assert set(tags)==set(rows),('missing labels',set(rows)-set(tags))
+ if not args.partial:
+  always={'AD04','AD05','AD06','DT05','DT06','DT07','DT09','DT10','PG09','PG10','PG11','PG12'}
+  conditional={'DT02','DT08','DT16','PG04','PG07','SD12'}
+  candidates={rid for rid,row in rows.items() if row['marks']>=4 and tags[rid]['primary'].replace('P2-','').replace('-','') in always|conditional}
+  exemptions=unique(HERE/'split_exemptions.jsonl')
+  assert candidates-set(points)==set(exemptions),('unaudited split exclusions',candidates-set(points)-set(exemptions))
+  assert all(e['reason'] for e in exemptions.values())
+  assert sum(t['confidence']=='low' for t in tags.values())/len(tags)<0.1
  for rid,tag in tags.items():
   assert set(tag)=={'id','primary','cross','confidence','note'},rid
   assert tag['primary'] in types and all(t in types for t in tag['cross']),rid

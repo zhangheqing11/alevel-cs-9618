@@ -7,8 +7,8 @@ def rows(paper):return [json.loads(s) for s in (R/f'corpus/rows/p2/{paper}.jsonl
 def numbered(row):
  lines=row['ms_text'].splitlines();heads=[]
  for i,line in enumerate(lines):
-  match=re.match(r'^\s*(?:MP\s*)?(\d{1,2})[.)]?\s+(.+)',line)
-  if match and not re.match(r'marks?\b',match[2],re.I):heads.append((i,int(match[1]),match[2]))
+  match=re.match(r'^\s*(?:MP\s*)?(\d{1,2})(?:[.)]\s*|\s+)(.+)',line)
+  if match and not match[2].startswith(':') and not re.match(r'marks?\b',match[2],re.I):heads.append((i,int(match[1]),match[2]))
  candidates=[]
  for pos,(i,n,body) in enumerate(heads):
   if n!=1:continue
@@ -23,7 +23,7 @@ def numbered(row):
   end=run[k+1][0] if k+1<len(run) else len(lines)
   content=[body]
   for line in lines[i+1:end]:
-   if re.match(r'^\s*(?:(?-i:PROCEDURE|FUNCTION)\b|Note\b|Max\b|Example\b|Alternative\b|VARIATION\b|Mark Scheme\b|Solution (?:Two|Three|Four)\b|The [‘\x27]|Mark as|Marks? awarded|One mark|1 mark)',line,re.I):break
+   if re.match(r'^\s*(?:(?-i:PROCEDURE|FUNCTION)\b|Note\b|Max\b|Example\b|Alternative\b|VARIATION\b|Mark Scheme\b|Solution (?:Two|Three|Four|using)\b|The [‘\x27]|Mark as|Marks? awarded|One mark|1 mark)',line,re.I):break
    content.append(line)
   result.append(norm(' '.join(content)))
  return result

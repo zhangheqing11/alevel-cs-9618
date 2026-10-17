@@ -1,0 +1,12 @@
+{
+  "stage": "all 721 rows independently annotated before opening either pilot file",
+  "tags": 721,
+  "split_rows": 185,
+  "points": 1196,
+  "files": {
+    "p2_tags.jsonl": "cc8a27fe86ddeea4f60a83add272b6617e80fb9f8e68f670c579afdb16a1dbbf",
+    "p2_markpoints.jsonl": "61d686d7e791d9d06abed8bab6d2b904f1f4dbc1901f7121ab91b8b26c88e390",
+    "split_exemptions.jsonl": "f25195f8b5643e9337aa21318173886bcda905951729646696702425474f2847",
+    "review_log.json": "0c3180ae0b002b24f3b71e102eb4116e6da74977c653643e3112292cec710ae2"
+  }
+}

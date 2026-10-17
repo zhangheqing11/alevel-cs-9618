@@ -531,3 +531,191 @@
 {"id": "9618_w22_23:7(a)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_w22_23:7(b)(i)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_w22_23:7(b)(ii)", "primary": "P2-AD-06", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:1(a)", "primary": "P2-SD-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:1(b)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:1(c)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:1(d)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:2(a)", "primary": "P2-AD-06", "cross": ["P2-PG-09"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:2(b)", "primary": "P2-PG-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:3(a)", "primary": "P2-DT-13", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:3(b)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "DT-16 但作答是文字补空算法步骤，非代码或流程图，依 §8.1 不拆。"}
+{"id": "9618_w23_21:4(a)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:4(b)", "primary": "P2-DT-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:5(a)", "primary": "P2-SD-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:5(b)(i)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:5(b)(ii)", "primary": "P2-SD-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:6(a)", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "技能词表缺：普通变量赋值，MP5 暂取 initialise-variables 最近项。"}
+{"id": "9618_w23_21:6(b)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:7", "primary": "P2-SD-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:8(a)", "primary": "P2-DT-09", "cross": ["P2-PG-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:8(b)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:8(c)(i)", "primary": "P2-DT-11", "cross": [], "confidence": "low", "note": "无合适题型：网络消息字段最小长度导致不能传输空行，非写代码、非文件内部格式；最近归 DT-11 文件传输格式限制，待设计工位裁决。"}
+{"id": "9618_w23_21:8(c)(ii)", "primary": "P2-SD-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_21:8(d)", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:1(a)", "primary": "P2-AD-03", "cross": ["P2-DT-01"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:1(b)", "primary": "P2-PG-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:1(c)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:2(a)", "primary": "P2-AD-04", "cross": ["P2-PG-09"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:2(b)", "primary": "P2-PG-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:3(a)", "primary": "P2-DT-15", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:3(b)", "primary": "P2-DT-15", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:4(a)", "primary": "P2-PG-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:4(b)", "primary": "P2-SD-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:5", "primary": "P2-SD-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:6(a)", "primary": "P2-DT-10", "cross": ["P2-PG-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:6(b)(i)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:6(b)(ii)", "primary": "P2-PG-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:6(b)(iii)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:7(a)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:7(b)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:8(a)", "primary": "P2-DT-06", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：逐行使用选择语句检查路由表；只拆第一套循环搜索清单。"}
+{"id": "9618_w23_22:8(b)", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "StackMsg 已给定，本模块不实现数组栈；提取消息字段及判断长度在场，按 §3 定 PG-11。"}
+{"id": "9618_w23_22:8(c)(i)", "primary": "P2-DT-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_22:8(c)(ii)", "primary": "P2-DT-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:1(a)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:1(b)", "primary": "P2-PG-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:1(c)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:1(d)", "primary": "P2-SD-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:2(a)", "primary": "P2-AD-04", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:2(b)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:2(c)", "primary": "P2-DT-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:3(a)", "primary": "P2-DT-14", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:3(b)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "用文字补全数组队列的入队步骤，DT-16 但非代码/流程图，依 §8.1 不拆。"}
+{"id": "9618_w23_23:4(a)", "primary": "P2-PG-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:4(b)", "primary": "P2-PG-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:5", "primary": "P2-SD-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:6", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:7(a)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:7(b)(i)", "primary": "P2-DT-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:7(b)(ii)", "primary": "P2-PG-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:8(a)", "primary": "P2-DT-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:8(b)", "primary": "P2-SD-08", "cross": ["P2-SD-12"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w23_23:8(c)", "primary": "P2-PG-09", "cross": [], "confidence": "high", "note": "按 §3 两点阈值，消息拼接只有 MP7 一点；本题主体是循环收发并输入，归 PG-09，不按单个拼接点归 PG-11。"}
+{"id": "9618_w23_23:8(d)", "primary": "P2-SD-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:1(a)", "primary": "P2-SD-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:1(b)(i)", "primary": "P2-PG-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:1(b)(ii)", "primary": "P2-PG-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:1(c)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:1(d)", "primary": "P2-PG-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:2", "primary": "P2-PG-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:3(a)", "primary": "P2-AD-06", "cross": ["P2-DT-09"], "confidence": "high", "note": "已看 MS p5：仅第 1、2、3、7 步加粗部分计分，其他步骤为题干已给内容；只拆这四个独立计分点。"}
+{"id": "9618_w24_21:3(b)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:3(c)", "primary": "P2-SD-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:4(a)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:4(b)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:4(c)", "primary": "P2-PG-10", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:5(a)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:5(b)(i)", "primary": "P2-SD-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:5(b)(ii)", "primary": "P2-SD-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:6(a)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:6(b)", "primary": "P2-DT-05", "cross": ["P2-PG-12"], "confidence": "high", "note": "按 §3 数点：DaysInMonth 数组读取/越界比较/回拨分别承担 MP4–6，日期函数承担 MP2/8；一维数组优先为主，日期为副。"}
+{"id": "9618_w24_21:7(a)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:7(b)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:8(a)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：CASE 按五组分数边界选择；只拆第一套遍历数组清单。"}
+{"id": "9618_w24_21:8(b)", "primary": "P2-DT-10", "cross": ["P2-DT-06"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_21:8(c)", "primary": "P2-SD-12", "cross": ["P2-DT-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:1(a)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:1(b)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:1(c)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:1(d)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:2(a)", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：不用循环，以固定星号字符串和 LEFT 函数构造遮盖结果；只拆第一套循环清单。"}
+{"id": "9618_w24_22:2(b)(i)", "primary": "P2-DT-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:2(b)(ii)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:3(a)(i)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:3(a)(ii)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:3(b)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "MS 按下划线/按行给分，未拆：完整代码后只有 One mark per gap，没有逐点文字。"}
+{"id": "9618_w24_22:4", "primary": "P2-PG-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:5(a)", "primary": "P2-SD-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:5(b)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:5(c)", "primary": "P2-PG-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:6(a)", "primary": "P2-DT-05", "cross": ["P2-PG-09"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:6(b)", "primary": "P2-SD-12", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:7(a)", "primary": "P2-AD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:7(b)", "primary": "P2-AD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:7(c)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:7(d)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:8(a)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:8(b)", "primary": "P2-DT-10", "cross": ["P2-DT-07", "P2-PG-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:8(c)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_22:8(d)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:1(a)", "primary": "P2-PG-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:1(b)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:1(c)", "primary": "P2-PG-02", "cross": ["P2-SD-06"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:2(a)", "primary": "P2-PG-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:2(b)", "primary": "P2-PG-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:3(a)(i)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:3(a)(ii)", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:3(b)", "primary": "P2-DT-16", "cross": ["P2-DT-07"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:3(c)", "primary": "P2-AD-06", "cross": ["P2-DT-16", "P2-DT-07"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:4(a)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "MS 按下划线/按行给分，未拆：完整代码只有 One mark per highlighted part，没有逐点文字。"}
+{"id": "9618_w24_23:4(b)(i)", "primary": "P2-AD-06", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:4(b)(ii)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：遍历 Check 并使用 CASE/选择结构判断范围；只拆第一套 GB 遍历清单。"}
+{"id": "9618_w24_23:5(a)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:5(b)", "primary": "P2-SD-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:6", "primary": "P2-PG-12", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：无需逐日循环，依据 3 月 1 日的星期直接计算；只拆第一套循环清单。"}
+{"id": "9618_w24_23:7(a)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:7(b)", "primary": "P2-AD-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:8(a)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:8(b)", "primary": "P2-DT-09", "cross": ["P2-DT-07"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w24_23:8(c)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:1(a)", "primary": "P2-PG-03", "cross": ["P2-PG-12"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:1(b)", "primary": "P2-SD-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:1(c)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:2", "primary": "P2-AD-04", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:3(a)(i)", "primary": "P2-DT-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:3(a)(ii)", "primary": "P2-DT-03", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:3(b)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:4(a)", "primary": "P2-DT-05", "cross": ["P2-PG-09"], "confidence": "high", "note": "MS 另有替代计分清单：FOR 循环配合 BREAK；只拆第一套条件循环清单。"}
+{"id": "9618_w25_21:4(b)(i)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:4(b)(ii)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:5(a)(i)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:5(a)(ii)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:5(a)(iii)", "primary": "P2-SD-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:5(b)(i)", "primary": "P2-PG-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:5(b)(ii)", "primary": "P2-PG-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:6(a)", "primary": "P2-SD-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:6(b)", "primary": "P2-PG-10", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：用 MOD 和 DIV 分离数字；只拆第一套转字符串清单。按 §2.5 和 §7.6 主题型仍是整数校验位运算 PG-10。"}
+{"id": "9618_w25_21:7(a)", "primary": "P2-SD-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:7(b)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:8(a)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "依 §8.2.5：MS 编号仅 6 个而总分 7，第 5 点两条独立 ... 子行分别拆分，原第 6 点顺延为第 7 点。"}
+{"id": "9618_w25_21:8(b)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:8(c)", "primary": "P2-SD-12", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:1(a)", "primary": "P2-PG-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:1(b)", "primary": "P2-DT-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:1(c)", "primary": "P2-PG-02", "cross": ["P2-SD-06"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:2", "primary": "P2-AD-04", "cross": ["P2-DT-05", "P2-PG-09"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:3(a)", "primary": "P2-AD-06", "cross": ["P2-DT-10", "P2-DT-09"], "confidence": "high", "note": "已看 MS p8：MP3 合并步骤 3–5 的三次读取，步骤 9 已给不计分。原 ms_text 把 MP3 印在步骤 4 左侧，真源 text 保留这一内嵌标签与步骤号，确保原文子串；不把三次读取错拆成三分。"}
+{"id": "9618_w25_22:3(b)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:3(c)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:4(a)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:4(b)", "primary": "P2-DT-05", "cross": [], "confidence": "high", "note": "MS 按下划线/按行给分，未拆：仅按 boldened gaps 计分，无逐点文字清单。"}
+{"id": "9618_w25_22:4(c)", "primary": "P2-AD-06", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:5(a)", "primary": "P2-SD-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:5(b)", "primary": "P2-SD-09", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:6", "primary": "P2-PG-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:7(a)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:7(b)", "primary": "P2-PG-07", "cross": [], "confidence": "high", "note": "MS 按下划线/按行给分，未拆。"}
+{"id": "9618_w25_22:8(a)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:8(b)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:8(c)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_22:8(d)", "primary": "P2-SD-12", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:1(a)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:1(b)(i)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:1(b)(ii)", "primary": "P2-PG-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:1(c)", "primary": "P2-PG-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:2(a)", "primary": "P2-AD-06", "cross": ["P2-DT-10", "P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:2(b)", "primary": "P2-PG-01", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:3", "primary": "P2-DT-16", "cross": [], "confidence": "high", "note": "已看 MS p7：MP1 仅描述两个 Exists 赋值，MP2–5 只指向代码加粗部分，无逐点文字；MS 按下划线/按行给分，未拆。D17 的 PopData 类型名当变量笔误原样保留，教学应使用 ThisPop。"}
+{"id": "9618_w25_23:4", "primary": "P2-DT-05", "cross": ["P2-PG-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:5(a)", "primary": "P2-SD-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:5(b)(i)", "primary": "P2-PG-08", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:5(b)(ii)", "primary": "P2-PG-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:6(a)", "primary": "P2-SD-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:6(b)", "primary": "P2-PG-10", "cross": [], "confidence": "high", "note": "MS 另有替代计分清单：用 MOD/DIV 做整数运算；只拆第一套转字符串清单，按 §2.5 本质为整数校验位运算 PG-10。"}
+{"id": "9618_w25_23:7(a)", "primary": "P2-SD-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:7(b)", "primary": "P2-SD-03", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:8(a)", "primary": "P2-DT-07", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:8(b)", "primary": "P2-DT-07", "cross": ["P2-PG-11"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:8(c)(i)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:8(c)(ii)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_23:8(c)(iii)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
