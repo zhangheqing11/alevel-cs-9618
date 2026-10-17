@@ -121,3 +121,15 @@ T12c（分支 task/T12c-pua-normalise）：按 docs/DECISIONS.md D26 的对照�
 
 只改 tasks/scope.json 里 T25 允许的路径。交付：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T25 → push → gh pr create --base main --title "T25 batch 2: P2 practice (DT)"。PR 描述同批 1：数量、选题口径、对照原页情况、接口约定、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T25.md 并提交。
 ```
+
+## codex-1 · T12e P3 重复行补 equivalent_of（D35；排在 T12d 之后、P4 之前）
+
+```
+T12e（从最新 origin/main 开分支 task/T12e-p3-equivalents，scope 用 T12）：按 docs/DECISIONS.md D35，给 P3 里 119 行与同季 _31 卷同题号逐字相同的行补 equivalent_of（指向 _31 的行 id），做法同 D21：写进 pipeline/extract/overrides.json，再用 run_all.py 重出 rows，不要手改 jsonl。
+1) 先用脚本列出候选：P3 中 paper 不是 _31、equivalent_of 为空、且 stem、stem_ctx、ms_text 压缩空白后与同季 _31 同 q 行完全相同的行（总控复核为 119 行：s21_32 14、s21_33 14、w21_32 15、s22_33 9、s23_33 15、s24_33 12、w22_33 14、w23_33 10、w24_33 16）。
+2) 对每个 has_figure 行，渲染两卷对应 QP 页（qp_page）的题目区域比对图形是否相同（像素哈希或逐页目视；结果写进报告）；图形不同或拿不准的行不补，列进报告「需要总控决定」。
+3) 重跑后确认：只有这些行的 equivalent_of 变化，其余字段逐字节不变；types、markpoints、er 等下游字段原样保留（run_all.py 已把它们列为下游字段，务必验证）；P1/P2 rows 无变化。
+4) 报告写进 corpus/extract_report.md 的新小节（每卷补了几行、跳过几行及原因）。
+交付：make check-all → make check-scope TASK=T12 → push → gh pr create --base main --title "T12e: link duplicated P3 rows (equivalent_of)"。不要合并。
+提醒：T27 已合并，rows 现在有 er 字段；你改 pipeline/extract、pipeline/tag 时必须保留 er（D33）。之后的 P4 抽取同样从最新 main 单独开分支、单独 PR。
+```

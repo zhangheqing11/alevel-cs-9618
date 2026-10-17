@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "extends": "papers/p2/skill_tags.json",
+  "tags": [
+    {
+      "tag": "random-file",
+      "group": "file",
+      "name_zh": "随机文件存取",
+      "desc": "用 OPENFILE … FOR RANDOM 打开随机文件，SEEK 把文件指针移到记录位置，GETRECORD 读出、PUTRECORD 写入一条记录（记录常为用户定义类型），按位置循环查找或插入。",
+      "example_ms": "SEEK \"StockList.dat\", Location — 9618_s25_33:11"
+    },
+    {
+      "tag": "user-defined-type",
+      "group": "record",
+      "name_zh": "定义与使用用户定义类型",
+      "desc": "用 TYPE 定义枚举 (值, …)、指针 ^类型、集合 SET OF … 与 DEFINE …，并把这些类型用作记录字段或变量的类型。",
+      "example_ms": "DECLARE AircraftType as Aircraft (correct data type from part 4(a)) — 9618_w22_32:4(b)"
+    }
+  ]
+}
