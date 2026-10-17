@@ -56,6 +56,14 @@ SPECIFIC = 'Comments on specific questions'
 # Reported under "需要总控决定" in corpus/er_report.md; entries carry "er_header".
 HEADING_FIXUPS = {('w23', '9618/33', 1): '9618/31'}
 
+# A label the ER prints twice in one question where the second block plainly belongs to another
+# part. Keyed by (paper, printed label of the repeated block); the repeated (second) block gets the
+# corrected label and carries "er_label_printed". Decision: 总控 on PR #26 (T27).
+# 9618_s24_22 Q1: the second "(b)" (PDF p.17) is about how to record the variable choices
+# ("store them in an array/record/file", "comments") = part 1(c), the only 2-mark part left uncommented;
+# the ER has no other block for 1(c).
+LABEL_FIXUPS = {('9618_s24_22', '1(b)'): '1(c)'}
+
 
 class ERError(Exception):
     pass
@@ -281,7 +289,13 @@ def parse_paper(suffix: str, lines, paper_id: str, anomalies):
                 if others:
                     item['shared_with'] = others
                 if entry.get('duplicate'):
-                    item['duplicate_label'] = True
+                    fixed = LABEL_FIXUPS.get((paper_id, label))
+                    if fixed:
+                        item['label'] = fixed
+                        item['er_label_printed'] = label
+                        anomalies.append(f'{context}: second block printed as {label} stored as {fixed} (LABEL_FIXUPS)')
+                    else:
+                        item['duplicate_label'] = True
                 out.append(item)
     return out
 

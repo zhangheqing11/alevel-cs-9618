@@ -20,29 +20,24 @@ ROOT = A.ROOT
 OUT = ROOT / 'corpus' / 'er_report.md'
 SPOT = Path(__file__).resolve().parent / 'spotcheck.json'
 
-DECISIONS = [
-    '`9618_w23_er.pdf` prints the heading **Paper 9618/33** twice (PDF pp. 25 and 31). The first block sits '
-    'between 23 and 32, i.e. in the 31 slot, and its text is word-for-word identical to the real 33 block; '
-    'QP/MS 31 and 33 also carry identical questions and mark schemes. Treated as 31 (`HEADING_FIXUPS` in '
-    '`extract_er.py`, entries carry `er_header: "9618/33"`). Please confirm, or drop the fix-up and 31 loses its ER.',
-    '`9618_s24_er.pdf`, Paper 22, Question 1 has the label **(b)** twice (PDF p. 17). The second block ("Few full '
-    'mark answers; many candidates gained one of the two marks available ... store them in an array/record/file") '
-    'matches the two-mark part 1(c) (documenting variable choices), so it is almost certainly a typo for (c). '
-    'Not attached (flagged `duplicate_label`); `9618_s24_22:1(c)` therefore has no `er`. Say if it should be attached to 1(c).',
-    '`9618_s25_er.pdf`, Paper 42, Question 3 has **(d)(ii)** twice (PDF p. 46); P4 rows do not exist yet, so '
-    'nothing is lost now, but the second block (probably (d)(iii)) is flagged `duplicate_label`.',
-    'Where the ER comments on a finer label than the row (rows not split there): `9618_s23_22` ER 6(a) vs row 6, '
-    '`9618_w24_23` ER 6(a) vs row 6, `9618_w24_22` ER 1(b)(i) vs row 1(b). Not attached (no guessing). In all three '
-    'the ER gives a single sub-label, so attaching it to the row would be unambiguous: say if a rule "row has no '
-    'children and the ER has exactly one finer label for it -> attach" is wanted.',
-    'The task rule drops a question-level or part-level comment from rows that have their own, more specific '
-    'comment (listed below as `superseded`). Their content (e.g. w25_21 Q5 "All parts of Question 5 required candidates '
-    'to analyse a block of code") stays in `corpus/er/*.jsonl` only; say if the skill should also see it.',
-    'Several ER blocks comment on two sub-parts at once, e.g. "(ii)(iii)" in `9618_s24_42` Q1 (P4). Stored once per label '
-    'with `shared_with`; none occur in P1–P3.',
-    '`apply_p2.py` (T28) rebuilds each row line with `", "` separators and appends its owned fields last; `apply_er.py` '
-    'only inserts `,"er":"..."` in compact style and replaces/removes only that field, so both can be re-run in any order. '
-    'codex-1 must keep `er` out of the fields it rewrites (the `run_all.py` downstream list already includes it).',
+RULINGS = [
+    '**w23 的重复 `Paper 9618/33`** — 认可，保持 `HEADING_FIXUPS`。依据：`9618_w23_er.pdf` 在 p.25 与 p.31 各印一个 '
+    '`Paper 9618/33` 标题，全文没有 31 的标题；第一块位于 23 与 32 之间（31 的位置）；两块文字逐字相同；QP/MS 31 与 33 '
+    '题目、MS 完全相同。条目带 `er_header:"9618/33"`。',
+    '**`9618_s24_22` Q1 第二个 (b)（p.17）→ 1(c)** — 按总控裁决挂到 1(c)，用 `LABEL_FIXUPS`（`extract_er.py`）实现，条目带 '
+    '`er_label_printed:"1(b)"`。依据：该块写“怎样记录变量”（store them in an array/record/file、comments），行 1(c) 是 2 分的“记录变量设计”，'
+    '同卷 ER 里没有别的块对应 1(c)。',
+    '**ER 比行更细**（`s23_22` 6(a)↔行 6、`w24_23` 6(a)↔行 6、`w24_22` 1(b)(i)↔行 1(b)）— 按总控裁决放行：行没有子行、'
+    'ER 在该行下只有唯一一个更细标签时，挂上并加前缀 `[ER 6(a)]`（规则见 `apply_er.py` 文件头注释，测试 `test_single_finer_label_*`）。'
+    '有两个以上更细标签的不挂，仍列在下面的“ER 比行更细”。',
+    '**上级总评只留在 `corpus/er/`** — 认可：行有本级评论时不挂上级总评，5 条见“被更细的本级评论取代”。',
+    '**其他脚本重写行时保留 `er`** — 认可：`apply_p2.py` 用 `", "` 分隔并把自己的字段挪到末尾，`apply_er.py` 紧凑插入 `,"er":…` '
+    '并只替换/删除该字段，互不干扰；codex-1 改 pipeline/extract、pipeline/tag 时保留 `er`。',
+]
+
+TODO = [
+    '`9618_s25_er.pdf` Paper 42 Question 3 的 **(d)(ii) 印了两次**（p.46，第二块疑为 (d)(iii)）：P4 行尚未入库，暂保持 `duplicate_label`、不挂。'
+    'P4 行入库后对照题面决定是否加 `LABEL_FIXUPS`。',
 ]
 
 
@@ -66,8 +61,8 @@ def main():
     lines = ['# T27 · 考官报告摘录挂载报告', '',
              '由 `pipeline/er/report_er.py` 生成（读 `corpus/er/*.jsonl` 与 `corpus/rows/`）。ER 只用于「易错与失分」，不是给分依据。', '']
     tot = defaultdict(int)
-    table = ['| 卷 | ER 条数 | 行数 | 挂上 | 其中本级 | 其中上级回退 | 无 ER 的行 | 未用的 ER 标签 |',
-             '|:--|--:|--:|--:|--:|--:|--:|--:|']
+    table = ['| 卷 | ER 条数 | 行数 | 挂上 | 其中本级 | 上级回退 | 单一更细标签 | 无 ER 的行 | 未用的 ER 标签 |',
+             '|:--|--:|--:|--:|--:|--:|--:|--:|--:|']
     for p in papers:
         st = stats.get(p)
         n_er = len(by_paper.get(p, {})) + sum(1 for d in duplicates if d['paper'] == p)
@@ -75,16 +70,17 @@ def main():
         att = st['attached'] if st else 0
         own = st['own'] if st else 0
         inh = st['inherited'] if st else 0
+        fin = st['finer'] if st else 0
         noer = st['no_er'] if st else 0
         unused = len(um_by.get(p, []))
-        table.append(f'| {p} | {n_er} | {rows if st else "—"} | {att} | {own} | {inh} | {noer if st else "—"} | {unused} |')
-        for k, v in (('er', n_er), ('rows', rows), ('att', att), ('own', own), ('inh', inh), ('noer', noer)):
+        table.append(f'| {p} | {n_er} | {rows if st else "—"} | {att} | {own} | {inh} | {fin} | {noer if st else "—"} | {unused} |')
+        for k, v in (('er', n_er), ('rows', rows), ('att', att), ('own', own), ('inh', inh), ('fin', fin), ('noer', noer)):
             tot[k] += v
     p123 = [s for p, s in stats.items() if not p.split('_')[1].startswith('s26')]
     rows_cov = sum(s['rows'] for s in p123)
     att_cov = sum(s['attached'] for s in p123)
     lines += ['## 总览', '',
-              f'- 行总数 {tot["rows"]}，挂上 `er` {tot["att"]}（本级 {tot["own"]}、上级回退 {tot["inh"]}），无 ER {tot["noer"]}。',
+              f'- 行总数 {tot["rows"]}，挂上 `er` {tot["att"]}（本级 {tot["own"]}、上级回退 {tot["inh"]}、单一更细标签 {tot["fin"]}），无 ER {tot["noer"]}。',
               f'- 排除 s26（尚无 ER）后覆盖率：{att_cov}/{rows_cov} = {100 * att_cov / rows_cov:.1f}%（其中 s21_31 的 27 行因 ER 只有「考生太少、不出报告」一句而没有）。',
               '- P4（`9618_*_4x`）的 ER 已抽取入 `corpus/er/`，行尚未入库，`apply_er.py` 在 P4 行出现后重跑即可。',
               '', *table, '']
@@ -152,8 +148,10 @@ def main():
               '- 标签序列自检（`(b)` 后只能接更大的字母，罗马数字只能递增）拒绝了 3 处并按文本保留或另存：'
               '`9618_s22_23` Q9 行首的 “(a).”（句末引用，保留为文本）；`9618_s24_22` Q1 与 `9618_s25_42` Q3 的重复标签（见下）。',
               '- `9618_s21_31`、`9618_s21_41` 的 ER 只有「考生人数太少，不出报告」一句，只存 `_general`。', '',
-              '## 需要总控决定', '']
-    lines += [f'{i}. {d}' for i, d in enumerate(DECISIONS, 1)]
+              '## 总控裁决（PR #26，已执行）', '']
+    lines += [f'{i}. {d}' for i, d in enumerate(RULINGS, 1)]
+    lines += ['', '## 待办', '']
+    lines += [f'- {t}' for t in TODO]
     text = '\n'.join(lines) + '\n'
     if args.check:
         if not OUT.exists() or OUT.read_text(encoding='utf-8') != text:

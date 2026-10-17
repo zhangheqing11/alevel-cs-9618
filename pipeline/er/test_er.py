@@ -129,6 +129,30 @@ def test_nearest_enclosing_label_with_scope_prefix():
     assert A.excerpt_for('6(d)', labels_) == (None, None)
 
 
+def test_single_finer_label_is_attached_with_er_prefix():
+    rows = {'6', '7(a)', '7(b)'}
+    one = {'6(a)': dict(text='Only part.')}
+    assert A.excerpt_for('6', one, rows) == ('[ER 6(a)] Only part.', '6(a)')
+    two = {'6(a)': dict(text='A.'), '6(b)': dict(text='B.')}
+    assert A.excerpt_for('6', two, rows) == (None, None)             # ambiguous: never guessed
+    assert A.excerpt_for('6', one, {'6', '6(a)(i)'}) == (None, None)  # row has sub-rows: no rule
+    assert A.excerpt_for('7(a)', one, rows) == (None, None)
+
+
+def test_label_fixup_relabels_second_block_and_keeps_printed_label():
+    anomalies = []
+    lines = [(1, 'Question 1'), (1, '(a)'), (1, 'A.'), (1, '(b)'), (1, 'B.'), (2, '(b)'), (2, 'C.')]
+    key = ('9618_s24_22', '1(b)')
+    E.LABEL_FIXUPS[key] = '1(c)'
+    try:
+        out = E.parse_paper('9618/22', [(1, 'Key messages'), (1, 'k')] + lines, '9618_s24_22', anomalies)
+    finally:
+        del E.LABEL_FIXUPS[key]
+    by = {e['label']: e for e in out}
+    assert by['1(c)']['text'] == 'C.' and by['1(c)']['er_label_printed'] == '1(b)'
+    assert by['1(b)']['text'] == 'B.' and 'duplicate_label' not in by['1(c)']
+
+
 # ---------------------------------------------------------------- row rewriting
 
 def test_merge_line_only_touches_er_and_keeps_every_other_byte():

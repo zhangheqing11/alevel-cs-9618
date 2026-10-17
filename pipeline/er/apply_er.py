@@ -12,9 +12,11 @@ Matching (task T27):
   * a row whose `q` equals an ER label gets that label's text;
   * otherwise the nearest enclosing label ("6(c)" for 6(c)(ii), then "6") is used and the
     text is prefixed with its scope, e.g. "[Q6(c)] ...";
-  * a finer ER label than any row (ER says 6(a)(i), rows stop at 6(a)) is never guessed onto
-    a row; comments flagged duplicate_label are not attached either. Both are listed by
-    `unmatched()` for corpus/er_report.md.
+  * (总控 ruling on PR #26) when a row has no own or enclosing label, no sub-rows, and the ER has
+    exactly one label below it (ER says 6(a), rows stop at 6), that single finer comment is
+    attached with the prefix "[ER 6(a)]". Two or more finer labels are never guessed onto the row;
+    comments flagged duplicate_label are not attached either. Both are listed by `unmatched()`
+    for corpus/er_report.md.
 """
 from __future__ import annotations
 
@@ -129,13 +131,21 @@ def ancestors(q: str):
     return out
 
 
-def excerpt_for(q: str, labels: dict[str, dict]):
-    """-> (text, label_used) or (None, None)."""
+def excerpt_for(q: str, labels: dict[str, dict], row_qs=None):
+    """-> (text, label_used) or (None, None).
+
+    row_qs: all row q's of the paper; used to check the "row has no sub-rows" condition of the
+    single-finer-label rule (None skips the check).
+    """
     for i, label in enumerate(ancestors(q)):
         entry = labels.get(label)
         if entry:
             text = entry['text'] if i == 0 else f'[Q{label}] {entry["text"]}'
             return text, label
+    if row_qs is None or not any(q in ancestors(r)[1:] for r in row_qs):
+        finer = [l for l in labels if q in ancestors(l)[1:]]
+        if len(finer) == 1:
+            return f'[ER {finer[0]}] {labels[finer[0]]["text"]}', finer[0]
     return None, None
 
 
@@ -159,7 +169,8 @@ def plan(root: Path = ROOT):
         lines = raw.splitlines(keepends=True)
         paper = path.stem
         labels = by_paper.get(paper, {})
-        st = stats.setdefault(paper, dict(rows=0, attached=0, own=0, inherited=0, no_er=0, rows_file=str(path.relative_to(root))))
+        st = stats.setdefault(paper, dict(rows=0, attached=0, own=0, inherited=0, finer=0, no_er=0, rows_file=str(path.relative_to(root))))
+        row_qs = {json.loads(l)['q'] for l in lines if l.strip()}
         out = []
         for line in lines:
             if not line.strip():
@@ -168,13 +179,15 @@ def plan(root: Path = ROOT):
             row = json.loads(line, object_pairs_hook=_unique)
             if row['paper'] != paper:
                 raise ValueError(f'{path}: row {row["id"]} belongs to {row["paper"]}')
-            text, label = excerpt_for(row['q'], labels)
+            text, label = excerpt_for(row['q'], labels, row_qs)
             st['rows'] += 1
             if text is None:
                 st['no_er'] += 1
             else:
                 st['attached'] += 1
-                st['own' if label == row['q'] else 'inherited'] += 1
+                kind = ('own' if label == row['q'] else
+                        'finer' if row['q'] in ancestors(label)[1:] else 'inherited')
+                st[kind] += 1
                 used[paper].add(label)
             out.append(merge_line(line, text))
         new = ''.join(out)
