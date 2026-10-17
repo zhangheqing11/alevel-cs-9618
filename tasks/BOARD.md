@@ -9,18 +9,19 @@
 | T10 | Python 阶梯设计（批 1 ✅ #3 / 批 2 ✅ #4 / 批 3 ✅ #7） | cc-A | T00 | ✅ | #3 #4 #7 |
 | T11 | 教学 skill（已装到 ~/.claude/skills） | cc-B | T00 | ✅ | #2 |
 | T13 | 构建器 | codex-2 | T00 | ✅ | #1 |
-| T12 | 抽文本、拆小问（P1 ✅ #6 → P2 ✅ #8 → P3 → P4） | codex-1 | T01 | 🔨 | `task/T12-extract-rows` |
+| T12 | 抽文本、拆小问（P1 ✅ #6 → P2 ✅ #8 → P3 👀 #22 待 rebase → P4） | codex-1 | T01 | 🔨 | #22 |
 | T14 | 阶梯练习 + 伪代码审计（批 1 ✅ #5 / 批 2 ✅ #9 / 批 3 ✅ #11） | codex-2 | T10 ✅ | ✅ | `task/T14-ladder-exercises` |
 | T20 | P1 题型体系 + 打标签指南 + 试标 | cc-C | T12 P1 ✅ | ✅ | #10 |
 | T22 | P1 题型卡 + 核心概念表（批 A ✅ #15 / 批 B ✅ #16 / 批 C ✅ #17） | cc 云端 · Opus 5.5 high | T24 ✅ | ✅ | #15 #16 #17 |
 | T21 | P2 题型体系 + 技能标签词表 + 拆分规则 + 试标 | cc-D | T12 P2 ✅ | ✅ | #12 |
 | T10b | 阶梯修正：D22 §6 回填 P2 题型码、D24 全局数组、D25 不依赖短路 | cc-A | T21 ✅ | ✅ | #13 |
 | T28 | P2 全量打标签 + 拆得分点 | codex-2 | T21 ✅ | ✅ | #18 |
-| T23 | P2 题型卡 + 伪代码↔Python 对照（批 A：AD/DT 🔨，批 B：PG/SD） | cc 云端 · Opus 5.5 high | T28 ✅ | 🔨 | — |
+| T23 | P2 题型卡 + 伪代码↔Python 对照（批 A ✅ #23，批 B：PG/SD + back ⏳） | cc 云端 · Opus 5.5 high | T28 ✅ | 🔨 | #23 |
 | T24 | P1 全量打标签 | codex-1 | T20 ✅ | ✅ | #14 |
 | T26 | 审计题型卡引文 | codex | T22/T23 | ⏳ | — |
 | T25 | P2 练习文件夹（批 1 PG / 批 2 DT / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | `task/T25-p2-practice-b*` |
-| T12c | 私用区字符归一（D26），然后 T12 P3/P4 | codex-1 | T28 ✅ | 🔨 | `task/T12c-pua-normalise` |
+| T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
+| T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | 🔨 | `task/T12d-backfill-skills` |
 | T27 | 考官报告摘录挂到行 | codex | T12 | ⏳ | — |
 
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。

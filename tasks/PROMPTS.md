@@ -91,3 +91,12 @@ T12c（分支 task/T12c-pua-normalise）：按 docs/DECISIONS.md D26 的对照�
 ```
 继续 T12：抽取 P3 与 P4 的最细小问，P3 先、P4 后，各一个 PR，做法与 P1/P2 相同（tasks/T12-extract-rows.md、schemas/corpus-format.md，分值守恒、每卷抽查 5 行、报告写进 corpus/extract_report.md）。抽取文本按 D26 的私用区对照表归一（T12c 的归一步骤直接复用）。P4 注意：MS 并列 Java/VB/Python 三种范例，全部保留在 ms_text；题目引用的源文件在 sources/pastpapers/9618_<季><yy>_sf_<卷号>/。从最新 origin/main 开分支 task/T12-extract-p3（之后 task/T12-extract-p4）。交付：make check → make check-scope TASK=T12 → push → gh pr create --base main。不要合并 PR。
 ```
+
+## codex-1 · rebase #22 + D29 新字符，然后 T12d 标签回填（#21、#23 已合并）
+
+```
+两件事，按顺序做，不要合并 PR：
+1) PR #22（分支 task/T12-extract-p3）：#21 已合并进 main，你的分支与 main 在 corpus/extract_report.md、pipeline/extract/run_all.py、tasks/progress/T12.md 冲突。git fetch origin && git rebase origin/main，以 main 上 T12c 的归一代码为准解决冲突（不要保留两份实现）。再按 docs/DECISIONS.md D29 把 U+F0F0→「⇨」、U+F0A5→「∞」加进 pipeline/extract 的归一对照表（tools/check.py 已加），补一条回归测试，重跑 P3，确认 P3 已无表外私用区字符、P1/P2 rows 无变化，更新报告。make check-all → make check-scope TASK=T12 → git push --force-with-lease（只推你自己的分支）→ 在 PR #22 留言说明已 rebase。
+2) T12d（从最新 origin/main 开分支 task/T12d-backfill-skills）：按 D30 在 pipeline/tag/p2/p2_markpoints.jsonl 回填两个新技能标签（已在 papers/p2/skill_tags.json v1.1）：9618_w21_22:6(d) MP6、9618_w23_21:6(a) MP5 → assign-value；9618_s22_22:4(a) MP5、MP6 → shift-values；都替换掉暂用的 initialise-variables。用 pipeline/tag/p2/apply_p2.py 重新套进 corpus/rows/p2/，重出 corpus/tag_report_p2.md。另外用关键词（assign、shuffle、shift、move up/down、rotate 等）扫一遍全部 P2 得分点，把疑似也该用这两个标签的列进 PR「需要总控决定」，不要自己改。make check-all → make check-scope TASK=T12 → push → gh pr create --base main --title "T12d: backfill D30 skill tags"。
+之后 P4 抽取照旧从最新 main 单独开分支、单独 PR。
+```

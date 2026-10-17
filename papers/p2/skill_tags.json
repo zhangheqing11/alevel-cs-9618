@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "tags": [
     {
       "tag": "trace-dry-run",
@@ -508,6 +508,20 @@
       "group": "p4",
       "name_zh": "照抄题目标识符",
       "desc": "P4 中一律使用题目指定的变量、数组、模块名（P4）。"
+    },
+    {
+      "tag": "assign-value",
+      "group": "data",
+      "name_zh": "普通赋值",
+      "desc": "用 ← 把表达式的结果、函数返回值或另一个变量的值存进指定变量（不是赋初值，也不是累加）；MS 常写作 “… and assign NewString to MyString”“Assign calculated values to …”。",
+      "example_ms": "Assign calculated values to CentreRow and CentreCol — 9618_w21_22:6(d)"
+    },
+    {
+      "tag": "shift-values",
+      "group": "algorithm",
+      "name_zh": "滚动缓存 / 数组移位",
+      "desc": "只保留最近 n 个值：每读进一个新值，旧值依次前移（LineX ← LineY、LineY ← LineZ、LineZ ← 新值）；或把数组元素整体前移 / 后移一位，腾出或补上位置。移位顺序错一步就会覆盖数据。",
+      "example_ms": "Correctly shuffle LineX, LineY and LineZ in a loop — 9618_s22_22:4(a)"
     }
   ]
 }

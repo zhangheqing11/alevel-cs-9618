@@ -73,6 +73,7 @@ PUA_MAP = {
     "": " ", "": "−", "": "<", "": ">", "": "✓",
     "": "•", "": "○", "": "←", "": "±", "": "×",
     "": "•", "": "←", "": "✓",
+    "\uf0f0": "⇨", "\uf0a5": "∞",  # D29: Wingdings arrow, Symbol infinity (P3)
 }
 PUA_TABLE = str.maketrans(PUA_MAP)
 

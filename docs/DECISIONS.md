@@ -69,3 +69,10 @@
 |:--|:--|:--|:--|
 | D27 | T28 | 技能词表缺「普通变量赋值」「滚动缓存/数组移位」：由 T23 设计工位提出新标签，总控合并后由 codex 回填 `skill_tags.json` 与相关 markpoints。`9618_w21_22:2(a)`（MS 按流程图框给分、框内文字未抽取）按 §8.2.9 例外不拆。 | T28 报告 |
 | D28 | 学生 | 云端额度余 $70（2026-10-17）：P2 题型卡分 2 批在云端做（预计约 $20），其余保留给最终的 Fable 5.1 审查。 | D19 |
+
+## 2026-10-17 · T23 批 A / T12 P3 审查
+
+| # | 来源 | 决定 | 依据 |
+|:--|:--|:--|:--|
+| D29 | T12 P3（#22） | 扩充 D26 对照表：U+F0F0（Wingdings）→`⇨`，U+F0A5（Symbol）→`∞`。`tools/check.py` 已加入；codex-1 在抽取归一步骤里同样加入，并重跑 P3（P1/P2 无这两个字符）。 | 渲染原页核对：s24/31 MS p.4（补码换算步骤之间的箭头）、w25/33 MS p.12（Dijkstra「其余结点设为 ∞」） |
+| D30 | T23 批 A（#23） | 采纳 D27 的两个新技能标签，已写入 `papers/p2/skill_tags.json`（v1.1）：`assign-value`（data，普通赋值）、`shift-values`（algorithm，滚动缓存 / 数组移位）。回填由 codex-1 在 `pipeline/tag/p2/p2_markpoints.jsonl` 做后重新套用：`9618_w21_22:6(d)` MP6、`9618_w23_21:6(a)` MP5 → `assign-value`；`9618_s22_22:4(a)` MP5、MP6 → `shift-values`（均替换现在暂用的 `initialise-variables`）。其他疑似行只列进 PR 由总控裁决，不自行改。 | T23 PR #23 提议；逐条看过四个得分点原文 |
