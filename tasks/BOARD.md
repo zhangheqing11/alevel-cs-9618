@@ -19,7 +19,7 @@
 | T23 | P2 题型卡 + 伪代码↔Python 对照（批 A ✅ #23，批 B：PG/SD + back 🔨 本地 cc-E） | 批 A 云端 · 批 B 本地 cc-E | T28 ✅ | 🔨 | #23 |
 | T24 | P1 全量打标签 | codex-1 | T20 ✅ | ✅ | #14 |
 | T26 | 审计题型卡引文 | codex | T22/T23 | ⏳ | — |
-| T25 | P2 练习文件夹（批 1 PG / 批 2 DT / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | `task/T25-p2-practice-b*` |
+| T25 | P2 练习文件夹（批 1 PG ✅ #24 / 批 2 DT 🔨 / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | #24 · `task/T25-p2-practice-b2` |
 | T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
 | T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | 🔨 | `task/T12d-backfill-skills` |
 | T27 | 考官报告摘录挂到行 | codex | T12 | ⏳ | — |

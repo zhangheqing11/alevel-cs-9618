@@ -100,3 +100,24 @@ T12c（分支 task/T12c-pua-normalise）：按 docs/DECISIONS.md D26 的对照�
 2) T12d（从最新 origin/main 开分支 task/T12d-backfill-skills）：按 D30 在 pipeline/tag/p2/p2_markpoints.jsonl 回填两个新技能标签（已在 papers/p2/skill_tags.json v1.1）：9618_w21_22:6(d) MP6、9618_w23_21:6(a) MP5 → assign-value；9618_s22_22:4(a) MP5、MP6 → shift-values；都替换掉暂用的 initialise-variables。用 pipeline/tag/p2/apply_p2.py 重新套进 corpus/rows/p2/，重出 corpus/tag_report_p2.md。另外用关键词（assign、shuffle、shift、move up/down、rotate 等）扫一遍全部 P2 得分点，把疑似也该用这两个标签的列进 PR「需要总控决定」，不要自己改。make check-all → make check-scope TASK=T12 → push → gh pr create --base main --title "T12d: backfill D30 skill tags"。
 之后 P4 抽取照旧从最新 main 单独开分支、单独 PR。
 ```
+
+## codex-2 · T25 批 2（#24 已合并：DT 题型 + 两处修正）
+
+```
+你是执行工位 codex-2，继续任务 T25（P2 真题练习文件夹），做批 2（主题型 P2-DT-*：一维/二维数组、记录数组、冒泡排序、读写文本文件、栈/队列/链表的数组实现）。批 1 已合并为 PR #24，写法、目录结构与人工核对清单照批 1 原样沿用。
+先读 AGENTS.md、docs/DECISIONS.md（D1、D2、D10、D11、D24、D25、D26、D29、D30，以及新的 D31）、tasks/T25-p2-practice.md、tasks/progress/T25.md（从记录的下一步继续）、schemas/exercise-format.md；阶梯 L06–L08、L10 的练习是数组、文件、记录、栈队列、链表的现成写法参考。
+从最新 origin/main 开分支 task/T25-p2-practice-b2。题干、数组/记录定义、文件格式与示例一律对照 QP 原页转写（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/）。
+
+本批要点：
+- 选题口径同批 1：有 markpoints、2022–25、非 extension、主题型 P2-DT-*，一行一个练习，不跳过符合条件的行；清单写进 practice/p2/batch2_manifest.json 与 README-batch2.md。
+- 全局数组按 D24/D10：Python 里用题目给定上下界的真实 list（1 起下标用占位元素或在 task.md 写明换算），题目给的全局数组、记录类型、常量放进 starter.py 的 provided 部分；不得用内置 sort、index、in 代替题目要求的查找/排序算法（测试要能抓到）。
+- 读文件题：按 QP 描述的格式在 files/ 下做样例数据文件（D11：逐字、注明最后一行是否换行），用 run_script 或 candidate_path 在临时目录运行；写文件题检查生成文件的内容；空文件、只有一行等边界要测。
+- 栈/队列/链表题：指针变量、空闲表、满/空判断按 QP 的全局变量定义；测试检查调用后的数组与指针状态。
+- D31：QP 与 MS 范例在边界上不一致时，测试按 QP、人工清单按 MS 得分点，并在「Python 接口」写明；QP 未定义的边界不要测，或先在 task.md 写明约定。
+
+顺手修批 1 的两处（同一个 PR，单独一个提交 "T25: fix batch 1 over-specified tests"）：
+1. practice/p2/9618_s25_23_7ai：删掉把 2024-03 与 2025-03 当作同月的那个测试用例（QP 未定义是否要求同年，D31），保留同月 / 不同月两类；若 mutant 因此不再被抓到，换一个用例或改 mutant。
+2. practice/p2/9618_w24_23_2a：「Python 接口」写明“循环结束后只 print 一行，内容只有总和这个数，不带说明文字”（与测试一致）；并检查批 1 其他用 output_lines 的练习是否都写清了确切输出格式，没写清的一并补上。
+
+只改 tasks/scope.json 里 T25 允许的路径。交付：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T25 → push → gh pr create --base main --title "T25 batch 2: P2 practice (DT)"。PR 描述同批 1：数量、选题口径、对照原页情况、接口约定、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T25.md 并提交。
+```
