@@ -1,0 +1,24 @@
+{
+  "id": "9618_s22_21:6(b)",
+  "kind": "past-paper",
+  "title": "把 CASE 改写为 IF",
+  "source": {
+    "paper": "9618_s22_21",
+    "rows": [
+      "9618_s22_21:6(b)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-PG-04"
+  ],
+  "skills": [
+    "initialise-variables",
+    "nested-if",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

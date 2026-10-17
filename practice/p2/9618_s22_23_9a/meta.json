@@ -1,0 +1,31 @@
+{
+  "id": "9618_s22_23:9(a)",
+  "kind": "past-paper",
+  "title": "生成分组且组内不重复的密码",
+  "source": {
+    "paper": "9618_s22_23",
+    "rows": [
+      "9618_s22_23:9(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "count-loop",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "nested-loops",
+    "post-condition-loop",
+    "procedure-call",
+    "return-value",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Generate"
+}

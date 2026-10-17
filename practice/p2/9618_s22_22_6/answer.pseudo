@@ -1,0 +1,3 @@
+PROCEDURE Parse(InString : STRING)
+
+ENDPROCEDURE

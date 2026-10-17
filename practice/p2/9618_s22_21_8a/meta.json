@@ -1,0 +1,26 @@
+{
+  "id": "9618_s22_21:8(a)",
+  "kind": "past-paper",
+  "title": "生成随机字母或数字",
+  "source": {
+    "paper": "9618_s22_21",
+    "rows": [
+      "9618_s22_21:8(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-09"
+  ],
+  "skills": [
+    "case-of",
+    "char-code",
+    "char-compare",
+    "random-numbers",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "RandomChar"
+}
