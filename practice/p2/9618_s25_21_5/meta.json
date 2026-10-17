@@ -1,0 +1,26 @@
+{
+  "id": "9618_s25_21:5",
+  "kind": "past-paper",
+  "title": "借助队列反转栈的现有元素",
+  "source": {
+    "paper": "9618_s25_21",
+    "rows": [
+      "9618_s25_21:5"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-13",
+    "P2-DT-14"
+  ],
+  "skills": [
+    "pre-condition-loop",
+    "queue-array",
+    "stack-array"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

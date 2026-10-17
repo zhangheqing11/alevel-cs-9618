@@ -1,0 +1,29 @@
+{
+  "id": "9618_w25_22:3(a)",
+  "kind": "past-paper",
+  "title": "将三行会员信息重组为一行",
+  "source": {
+    "paper": "9618_w25_22",
+    "rows": [
+      "9618_w25_22:3(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-10",
+    "P2-DT-09"
+  ],
+  "skills": [
+    "file-open-read",
+    "file-write",
+    "loop-to-eof",
+    "string-concat"
+  ],
+  "pseudocode": false,
+  "files": [
+    "OldFile.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

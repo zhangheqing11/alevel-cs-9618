@@ -1,0 +1,30 @@
+{
+  "id": "9618_w22_23:3",
+  "kind": "past-paper",
+  "title": "分别累计正数与负数",
+  "source": {
+    "paper": "9618_w22_23",
+    "rows": [
+      "9618_w22_23:3"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-PG-09"
+  ],
+  "skills": [
+    "accumulator",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "input-prompt",
+    "output-format",
+    "relational-ops",
+    "sentinel-loop"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

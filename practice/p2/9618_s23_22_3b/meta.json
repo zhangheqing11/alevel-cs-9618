@@ -1,0 +1,29 @@
+{
+  "id": "9618_s23_22:3(b)",
+  "kind": "past-paper",
+  "title": "将文件逐行加入队列",
+  "source": {
+    "paper": "9618_s23_22",
+    "rows": [
+      "9618_s23_22:3(b)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-09"
+  ],
+  "skills": [
+    "boolean-return",
+    "file-open-read",
+    "logic-ops",
+    "loop-to-eof",
+    "procedure-call"
+  ],
+  "pseudocode": false,
+  "files": [
+    "queue.txt"
+  ],
+  "ms_verified": true,
+  "entry": "FileToQueue"
+}

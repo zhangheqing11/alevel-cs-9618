@@ -1,0 +1,31 @@
+{
+  "id": "9618_w22_22:2(a)(i)",
+  "kind": "past-paper",
+  "title": "追加需要学习支持的学生名单",
+  "source": {
+    "paper": "9618_w22_22",
+    "rows": [
+      "9618_w22_22:2(a)(i)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-10",
+    "P2-PG-09"
+  ],
+  "skills": [
+    "count-loop",
+    "file-append",
+    "file-close",
+    "input-prompt",
+    "loop-bounds",
+    "relational-ops"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Support_List.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "9618_s25_23:4(a)",
+  "kind": "past-paper",
+  "title": "输出周销量超过500的周号",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:4(a)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06"
+  ],
+  "skills": [
+    "accumulator",
+    "file-close",
+    "file-open-read",
+    "initialise-variables",
+    "loop-to-eof",
+    "output-format",
+    "relational-ops",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Sales.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

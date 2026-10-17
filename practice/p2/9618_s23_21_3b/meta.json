@@ -1,0 +1,29 @@
+{
+  "id": "9618_s23_21:3(b)",
+  "kind": "past-paper",
+  "title": "按消费金额计算积分",
+  "source": {
+    "paper": "9618_s23_21",
+    "rows": [
+      "9618_s23_21:3(b)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-PG-10"
+  ],
+  "skills": [
+    "declare-variables",
+    "input-prompt",
+    "nested-if",
+    "operator-precedence",
+    "output-format",
+    "relational-ops",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

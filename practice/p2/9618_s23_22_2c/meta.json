@@ -1,0 +1,28 @@
+{
+  "id": "9618_s23_22:2(c)",
+  "kind": "past-paper",
+  "title": "由生日输出星期名",
+  "source": {
+    "paper": "9618_s23_22",
+    "rows": [
+      "9618_s23_22:2(c)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "data-types",
+    "date-functions",
+    "declare-array",
+    "loop-bounds",
+    "output-format"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

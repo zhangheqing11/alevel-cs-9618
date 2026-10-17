@@ -1,0 +1,26 @@
+{
+  "id": "9618_s24_22:2(b)",
+  "kind": "past-paper",
+  "title": "流程图中的状态轮询与端口重置",
+  "source": {
+    "paper": "9618_s24_22",
+    "rows": [
+      "9618_s24_22:2(b)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-05"
+  ],
+  "skills": [
+    "flowchart-to-pseudocode",
+    "loop-bounds",
+    "nested-loops",
+    "pre-condition-loop",
+    "procedure-call"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

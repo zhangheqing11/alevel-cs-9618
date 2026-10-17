@@ -1,0 +1,32 @@
+{
+  "id": "9618_w25_23:2(a)",
+  "kind": "past-paper",
+  "title": "把非空数组元素追加到现有文件",
+  "source": {
+    "paper": "9618_w25_23",
+    "rows": [
+      "9618_w25_23:2(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-10",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "file-append",
+    "file-close",
+    "initialise-variables",
+    "loop-bounds",
+    "relational-ops"
+  ],
+  "pseudocode": false,
+  "files": [
+    "data.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}

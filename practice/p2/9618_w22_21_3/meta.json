@@ -1,0 +1,30 @@
+{
+  "id": "9618_w22_21:3",
+  "kind": "past-paper",
+  "title": "扫描200个整数并输出最大值",
+  "source": {
+    "paper": "9618_w22_21",
+    "rows": [
+      "9618_w22_21:3"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-05"
+  ],
+  "skills": [
+    "array-index",
+    "data-types",
+    "declare-variables",
+    "initialise-variables",
+    "loop-bounds",
+    "max-min",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

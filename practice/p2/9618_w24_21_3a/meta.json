@@ -1,0 +1,27 @@
+{
+  "id": "9618_w24_21:3(a)",
+  "kind": "past-paper",
+  "title": "补全输出文件最后三行的文字步骤",
+  "source": {
+    "paper": "9618_w24_21",
+    "rows": [
+      "9618_w24_21:3(a)"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-AD-06",
+    "P2-DT-09"
+  ],
+  "skills": [
+    "file-close",
+    "file-open-read",
+    "loop-to-eof"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Result.txt"
+  ],
+  "ms_verified": true,
+  "entry": "main"
+}
