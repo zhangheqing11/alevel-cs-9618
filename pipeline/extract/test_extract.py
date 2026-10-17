@@ -115,3 +115,18 @@ def test_p3_rpn_stack_grid_requires_original_figure():
     rows = align_rows(record, split_question_paper(source(record['qp'])), parse_mark_scheme(source(record['ms'])))
     row = next(r for r in rows if r['q'] == '5(c)')
     assert row['has_figure'] and 'figure' in row['flags']
+
+
+def test_p4_2026_code_left_edge_and_all_language_headings_survive():
+    block = ms('9618_s26_ms_41.pdf', '1(b)')
+    assert all(language in block.text for language in ('Python', 'VB.NET', 'Java'))
+    block = ms('9618_s26_ms_41.pdf', '1(c)(i)')
+    assert block.text.count('for(Integer') == 2
+
+
+def test_p4_screenshot_leaf_is_flagged_as_figure():
+    from align import align_rows
+    from run_all import load_inventory
+    record = next(r for r in load_inventory() if r['paper'] == '9618_s26_43')
+    rows = align_rows(record, split_question_paper(source(record['qp'])), parse_mark_scheme(source(record['ms'])))
+    assert next(r for r in rows if r['q'] == '2(d)(ii)')['has_figure']

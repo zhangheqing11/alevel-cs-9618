@@ -71,6 +71,8 @@ def align_rows(
                 r'floating.point|mantissa|sum.of.products|Boolean.*expression|'
                 r'De Morgan|changing contents of the stack|mark per ring',
                 stem + '\n' + stem_ctx + '\n' + ms_text, re.I))
+        if int(record['component']) == 4:
+            has_figure |= bool(re.search(r'screenshot', stem + '\n' + ms_text, re.I))
         if has_figure:
             flags.append("figure")
         qn_match = re.match(r"(\d+)", label)

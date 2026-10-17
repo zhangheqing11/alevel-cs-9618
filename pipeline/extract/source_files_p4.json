@@ -1,0 +1,644 @@
+[
+  {
+    "paper": "9618_s21_41",
+    "sf": "9618_s21_sf_41",
+    "files": [
+      {
+        "path": "06_9618_41_Confidential Source Files June 2021/06_9618_41_Confidential Source Files June 2021/TreasureChestData.txt",
+        "bytes": 80,
+        "sha256": "34492c5448d83881d2bfa19ff5437d314bee3c24d058e572a3ee2f8d8a3c1ad4"
+      },
+      {
+        "path": "06_9618_41_Confidential Source Files June 2021/06_9618_41_Confidential Source Files June 2021/evidence.doc",
+        "bytes": 55808,
+        "sha256": "dfa344a99312a78e9c8776350ed829ecbaa3aa1cc5852be926d6da72d0a30a56"
+      },
+      {
+        "path": "06_9618_41_Confidential Source Files June 2021/Conducting Cambridge AS A Level Computer Science (9618) practical test June 2021.pdf",
+        "bytes": 176956,
+        "sha256": "4412180f02b3d1d93cbfc5550fedb43bd82c2f25bd8926d0f99f42ac53115a11"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s21_42",
+    "sf": "9618_s21_sf_42",
+    "files": [
+      {
+        "path": "06_9618_42_Confidential Source Files June 2021/06_9618_42_Confidential Source Files June 2021/TreasureChestData.txt",
+        "bytes": 80,
+        "sha256": "34492c5448d83881d2bfa19ff5437d314bee3c24d058e572a3ee2f8d8a3c1ad4"
+      },
+      {
+        "path": "06_9618_42_Confidential Source Files June 2021/06_9618_42_Confidential Source Files June 2021/evidence.doc",
+        "bytes": 55808,
+        "sha256": "ee66830a7c1a8546047c7f3aa309433e6ef84aa78bda842238f9f3fd3d360207"
+      },
+      {
+        "path": "06_9618_42_Confidential Source Files June 2021/Conducting Cambridge AS A Level Computer Science (9618) practical test June 2021.pdf",
+        "bytes": 176956,
+        "sha256": "4412180f02b3d1d93cbfc5550fedb43bd82c2f25bd8926d0f99f42ac53115a11"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s21_43",
+    "sf": "9618_s21_sf_43",
+    "files": [
+      {
+        "path": "06_9618_43_Confidential Source Files June 2021/06_9618_43_Confidential Source Files June 2021/TreasureChestData.txt",
+        "bytes": 80,
+        "sha256": "34492c5448d83881d2bfa19ff5437d314bee3c24d058e572a3ee2f8d8a3c1ad4"
+      },
+      {
+        "path": "06_9618_43_Confidential Source Files June 2021/06_9618_43_Confidential Source Files June 2021/evidence.doc",
+        "bytes": 55808,
+        "sha256": "8610008434c033bfc9dcd8fb606f27ce0bb54589bddcded6927b3aa9f6f38178"
+      },
+      {
+        "path": "06_9618_43_Confidential Source Files June 2021/Conducting Cambridge AS A Level Computer Science (9618) practical test June 2021.pdf",
+        "bytes": 176956,
+        "sha256": "4412180f02b3d1d93cbfc5550fedb43bd82c2f25bd8926d0f99f42ac53115a11"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s22_41",
+    "sf": "9618_s22_sf_41",
+    "files": [
+      {
+        "path": "06_9618_41_Confidential Source Files June 2022/HighScore.txt",
+        "bytes": 109,
+        "sha256": "df01ab58ab0f085bfbb4a8f80d8e80406de487ed059df33830bc9cc0decc5270"
+      },
+      {
+        "path": "06_9618_41_Confidential Source Files June 2022/evidence.doc",
+        "bytes": 60928,
+        "sha256": "1888992f59efc906efa567367f1925df0187d0e49d4c9fb77221745d103df435"
+      },
+      {
+        "path": "9618 Practical test instructions June 2022.pdf",
+        "bytes": 177140,
+        "sha256": "871d931355509b7044903a06d5eaa470ddb9430646083240d70ed08f370da9fb"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s22_42",
+    "sf": "9618_s22_sf_42",
+    "files": [
+      {
+        "path": "06_9618_42_Confidential Source Files June 2022/CardValues.txt",
+        "bytes": 296,
+        "sha256": "15615efefcf39ca97e8599eeff965f3bd7f49c12d4bb268101588e83f954dd34"
+      },
+      {
+        "path": "06_9618_42_Confidential Source Files June 2022/evidence.doc",
+        "bytes": 56320,
+        "sha256": "c50078a94b0131fbc7ee5fe0c4145070252c1749d2945e8c89b30a1606377364"
+      },
+      {
+        "path": "9618 Practical test instructions June 2022.pdf",
+        "bytes": 177140,
+        "sha256": "871d931355509b7044903a06d5eaa470ddb9430646083240d70ed08f370da9fb"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s22_43",
+    "sf": "9618_s22_sf_43",
+    "files": [
+      {
+        "path": "06_9618_43_Confidential Source Files June 2022/HighScore.txt",
+        "bytes": 109,
+        "sha256": "df01ab58ab0f085bfbb4a8f80d8e80406de487ed059df33830bc9cc0decc5270"
+      },
+      {
+        "path": "06_9618_43_Confidential Source Files June 2022/evidence.doc",
+        "bytes": 61440,
+        "sha256": "d350f2cfbbbf20118c8102ed3c7b7bee88ed56406adbbdfc85de458df39b691f"
+      },
+      {
+        "path": "9618 Practical test instructions June 2022.pdf",
+        "bytes": 177140,
+        "sha256": "871d931355509b7044903a06d5eaa470ddb9430646083240d70ed08f370da9fb"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s23_41",
+    "sf": "9618_s23_sf_41",
+    "files": [
+      {
+        "path": "06_9618_41_2023_source files/AnimalData.txt",
+        "bytes": 60,
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "path": "06_9618_41_2023_source files/ColourData.txt",
+        "bytes": 66,
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "path": "06_9618_41_2023_source files/Data.txt",
+        "bytes": 89,
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      },
+      {
+        "path": "06_9618_41_2023_source files/evidence.doc",
+        "bytes": 72192,
+        "sha256": "70bbbda4ea16a71da91e018086a9f8440409c2a91ebf1dfaa624f1afc17feb00"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s23_42",
+    "sf": "9618_s23_sf_42",
+    "files": [
+      {
+        "path": "06_9618_42_2023_source_files/Employees.txt",
+        "bytes": 267,
+        "sha256": "cda0503674054a10e52636cece18af00875678b38667e03e345ecf006dc1b983"
+      },
+      {
+        "path": "06_9618_42_2023_source_files/HoursWeek1.txt",
+        "bytes": 102,
+        "sha256": "cd81e133cdf64309f21483eb30df32d8360de5b8784a6be74747011e7ac5681c"
+      },
+      {
+        "path": "06_9618_42_2023_source_files/evidence.doc",
+        "bytes": 64000,
+        "sha256": "4ff124f8b4e9d9ce9d3dfdcd334b9823caa82ab89534cbd31ada5e43af720f52"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s23_43",
+    "sf": "9618_s23_sf_43",
+    "files": [
+      {
+        "path": "06_9618_43_2023_source files/AnimalData.txt",
+        "bytes": 60,
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "path": "06_9618_43_2023_source files/ColourData.txt",
+        "bytes": 66,
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "path": "06_9618_43_2023_source files/Data.txt",
+        "bytes": 89,
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      },
+      {
+        "path": "06_9618_43_2023_source files/evidence.doc",
+        "bytes": 72704,
+        "sha256": "d8bd4b8054ea347c91110a0ef3b41a71050c6ab3d5e271611d690cc7247d012b"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s24_41",
+    "sf": "9618_s24_sf_41",
+    "files": [
+      {
+        "path": "Trees.txt",
+        "bytes": 224,
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 71168,
+        "sha256": "97cf9aa568c49265639d611a8fba5ae6ce3d5837d9d4ae662b311a2d7d6d2cf7"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s24_42",
+    "sf": "9618_s24_sf_42",
+    "files": [
+      {
+        "path": "Easy.txt",
+        "bytes": 79,
+        "sha256": "a70412a68fe5ebebd7e5e94a7de486f718213bdb47d97103f159f9cc30e11497"
+      },
+      {
+        "path": "Hard.txt",
+        "bytes": 570,
+        "sha256": "774cee18b5abd92155c5550baf4a7787c6c29ff7cc7186c7d00287b95fcbbf13"
+      },
+      {
+        "path": "Medium.txt",
+        "bytes": 273,
+        "sha256": "8e665d58bc9c9ec87e301da29c5e15dffc29648cab7a8435497843fb41fdc07a"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 71680,
+        "sha256": "3488fc48c6362bbf54e99d14ccffb2018196a2431201acf10bb3cf39bf309ac0"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s24_43",
+    "sf": "9618_s24_sf_43",
+    "files": [
+      {
+        "path": "Trees.txt",
+        "bytes": 224,
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 71168,
+        "sha256": "92541bc9c2fa8f19d7e79e04b676d18be6f2d1283c222d8b45a94d47478ad3e8"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s25_41",
+    "sf": "9618_s25_sf_41",
+    "files": [
+      {
+        "path": "Blue.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "Green.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "Orange.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "Pink.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "Red.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "TheData.txt",
+        "bytes": 674,
+        "sha256": "d8e5431c47d57241d14f05dc1fec736f71fca7557556f293e75a4d4a2f2beb24"
+      },
+      {
+        "path": "Yellow.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 64000,
+        "sha256": "f6b4e98c697a9382d58f96eb33024ff8266a935507a8a6d4ed6602489583b7fd"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s25_42",
+    "sf": "9618_s25_sf_42",
+    "files": [
+      {
+        "path": "HashData.txt",
+        "bytes": 2326,
+        "sha256": "4c25e6d9c4b975d826d4d4aec5acba8c64535d54a654a8209c31a61c57d87c2f"
+      },
+      {
+        "path": "SecondStack.txt",
+        "bytes": 26,
+        "sha256": "c8115e35b133ccea75bcf10e2f3184970c3619982ec25459f68a129827f59e16"
+      },
+      {
+        "path": "StackData.txt",
+        "bytes": 26,
+        "sha256": "ea1c31f3a9ec7c5489c6e13b5749d869d295a92943bfdc42cf69376a04ba6c3b"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 72192,
+        "sha256": "5df9d5e243d1abbc643aafb799f89357dc6ed6989ba05bd32eb63a598e08f61d"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s25_43",
+    "sf": "9618_s25_sf_43",
+    "files": [
+      {
+        "path": "QueueData.txt",
+        "bytes": 174,
+        "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 65536,
+        "sha256": "6cff0ffc7b3b86e289ae5869a3deab3c53e76711b2b35eac0e372911128149ab"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s26_41",
+    "sf": "9618_s26_sf_41",
+    "files": [
+      {
+        "path": "Toys.txt",
+        "bytes": 461,
+        "sha256": "a1c687d06e83db9201dda0d2b20fde8228662e57b4c288b4c9c3b987f5c3c851"
+      },
+      {
+        "path": "evidence.docx",
+        "bytes": 23175,
+        "sha256": "965055a6c70aae634881896c2e72ddc3e84b3a25ec6bdd6ce01a954dd5b9e8eb"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s26_42",
+    "sf": "9618_s26_sf_42",
+    "files": [
+      {
+        "path": "AvatarFile.txt",
+        "bytes": 578,
+        "sha256": "eebff227ced42e6bc7889f21f96ce60b02353a25c8ffcac0301d29653919d10c"
+      },
+      {
+        "path": "evidence.docx",
+        "bytes": 23268,
+        "sha256": "fc1135fb582e272c9effcc0779ff263a7a45cbc3ab9451bae1b810bab647976f"
+      }
+    ]
+  },
+  {
+    "paper": "9618_s26_43",
+    "sf": "9618_s26_sf_43",
+    "files": [
+      {
+        "path": "Characters.txt",
+        "bytes": 345,
+        "sha256": "ba841af1e45f199dd07edaea998f823720b0f0fd3ab32921bc57ae7f3cf1713a"
+      },
+      {
+        "path": "evidence.docx",
+        "bytes": 23610,
+        "sha256": "ebff1fd913e4c29d331d82fa1150d7ee43af252ec4382316b08a4f5f57248716"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w21_41",
+    "sf": "9618_w21_sf_41",
+    "files": [
+      {
+        "path": "11_9618_41_Confidential Source Files November 2021/11_9618_41_Confidential Source Files November 2021/Pictures.txt",
+        "bytes": 512,
+        "sha256": "c88b00fae320883c93f10a12604ca2f1952516af18d77e9159e55c1fbde4f35b"
+      },
+      {
+        "path": "11_9618_41_Confidential Source Files November 2021/11_9618_41_Confidential Source Files November 2021/evidence.doc",
+        "bytes": 57344,
+        "sha256": "464b2b2338f748e1109a07c1ce154ead5ab1eb4da748ab4c16a705a480732cad"
+      },
+      {
+        "path": "11_9618_41_Confidential Source Files November 2021/Conducting_Conducting Cambridge AS & A Level Computer Science (9618) practical test November 2021.pdf",
+        "bytes": 167264,
+        "sha256": "e0e00555fed2cb288777c6b176aa1cc2cd27011545b95a79dc950ce380a6b093"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w21_42",
+    "sf": "9618_w21_sf_42",
+    "files": [
+      {
+        "path": "11_9618_42_Confidential Source Files November 2021/11_9618_42_Confidential Source Files November 2021/Pictures.txt",
+        "bytes": 512,
+        "sha256": "c88b00fae320883c93f10a12604ca2f1952516af18d77e9159e55c1fbde4f35b"
+      },
+      {
+        "path": "11_9618_42_Confidential Source Files November 2021/11_9618_42_Confidential Source Files November 2021/evidence.doc",
+        "bytes": 56832,
+        "sha256": "469d9c129fc0a77885e77f457196944ddf6e0f45221cf8c873b039a240690e04"
+      },
+      {
+        "path": "11_9618_42_Confidential Source Files November 2021/Conducting Cambridge AS & A Level Computer Science (9618) practical test November 2021.pdf",
+        "bytes": 167264,
+        "sha256": "e0e00555fed2cb288777c6b176aa1cc2cd27011545b95a79dc950ce380a6b093"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w22_41",
+    "sf": "9618_w22_sf_41",
+    "files": [
+      {
+        "path": "11_9618_41_Confidential Source Files November 2022/IntegerData.txt",
+        "bytes": 391,
+        "sha256": "109ddf3b50460af6ef63a32c7db2403b017e5dd918fad76495c915451d12f86d"
+      },
+      {
+        "path": "11_9618_41_Confidential Source Files November 2022/evidence.doc",
+        "bytes": 57344,
+        "sha256": "35ba7e845b64d4c6169846a52a7cd067bcf8841350d176abc0834729c516d129"
+      },
+      {
+        "path": "9618_Computer_Science_practical_test_instructions_November_2022.pdf",
+        "bytes": 193491,
+        "sha256": "96d692c720a69a3628a7e7a2fd02646ae9ffc5c77abc8e00ac7fd2257b6bdbf0"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w22_42",
+    "sf": "9618_w22_sf_42",
+    "files": [
+      {
+        "path": "11_9618_42_Confidential Source Files November 2022/Characters.txt",
+        "bytes": 140,
+        "sha256": "e479919bb358a1d206c9901abfbb53b4b76d600be8635311148bb39f3be9ba07"
+      },
+      {
+        "path": "11_9618_42_Confidential Source Files November 2022/evidence.doc",
+        "bytes": 60416,
+        "sha256": "a21625be565203fdd2b904faaa409496740a53ba4799461d36eb5c6d7179348d"
+      },
+      {
+        "path": "9618_Computer_Science_practical_test_instructions_November_2022.pdf",
+        "bytes": 193491,
+        "sha256": "96d692c720a69a3628a7e7a2fd02646ae9ffc5c77abc8e00ac7fd2257b6bdbf0"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w22_43",
+    "sf": "9618_w22_sf_43",
+    "files": [
+      {
+        "path": "11_9618_43_Confidential Source Files November 2022/IntegerData.txt",
+        "bytes": 391,
+        "sha256": "109ddf3b50460af6ef63a32c7db2403b017e5dd918fad76495c915451d12f86d"
+      },
+      {
+        "path": "11_9618_43_Confidential Source Files November 2022/evidence.doc",
+        "bytes": 57344,
+        "sha256": "9f98831451fb2694709cbd20492bf09e7c626a7d601034d0806ac9ade64eab87"
+      },
+      {
+        "path": "9618_Computer_Science_practical_test_instructions_November_2022.pdf",
+        "bytes": 193491,
+        "sha256": "96d692c720a69a3628a7e7a2fd02646ae9ffc5c77abc8e00ac7fd2257b6bdbf0"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w23_41",
+    "sf": "9618_w23_sf_41",
+    "files": [
+      {
+        "path": "11_9618_41_SourceFiles/QueueData.txt",
+        "bytes": 136,
+        "sha256": "9b4b28747275120bd9c4de28aeab68e1363a1eee3312cb2c99023b94390ce972"
+      },
+      {
+        "path": "11_9618_41_SourceFiles/evidence.doc",
+        "bytes": 73728,
+        "sha256": "d6c134d0ab5ffc50b405db67385646ba0aef0ad1aad9803e3d63dd8bc2a039e6"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w23_42",
+    "sf": "9618_w23_sf_42",
+    "files": [
+      {
+        "path": "11_9618_42_SourceFiles/StackData.txt",
+        "bytes": 298,
+        "sha256": "eb72f3638b6437f63f4dda83943f4882f6c12f96a8f59cfde9909a1f199d09e1"
+      },
+      {
+        "path": "11_9618_42_SourceFiles/evidence.doc",
+        "bytes": 73216,
+        "sha256": "c3771b70216a6a11cd2cf924fd6bdc9ba6079122f49c2bfb584606fe0e395109"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w23_43",
+    "sf": "9618_w23_sf_43",
+    "files": [
+      {
+        "path": "11_9618_43_SourceFiles/QueueData.txt",
+        "bytes": 136,
+        "sha256": "9b4b28747275120bd9c4de28aeab68e1363a1eee3312cb2c99023b94390ce972"
+      },
+      {
+        "path": "11_9618_43_SourceFiles/evidence.doc",
+        "bytes": 73728,
+        "sha256": "ab208d5f70fdab1c421875cb0ef2029599350fc9ee22befe40fc017ebe13349a"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w24_41",
+    "sf": "9618_w24_sf_41",
+    "files": [
+      {
+        "path": "11_9618_41_Confidential Source Files November 2024/Source files/Data.txt",
+        "bytes": 333,
+        "sha256": "11de7ca3386dbb247af40dae432a048f3082b640b6494f5c0ddaf0b860b5e659"
+      },
+      {
+        "path": "11_9618_41_Confidential Source Files November 2024/Source files/evidence.doc",
+        "bytes": 73728,
+        "sha256": "a1f17382795ec7e90f7a4b3fd88f18d84b90ef1df6e229bb86a806b9d3f4dc26"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w24_42",
+    "sf": "9618_w24_sf_42",
+    "files": [
+      {
+        "path": "Source files/HighScoreTable.txt",
+        "bytes": 89,
+        "sha256": "d93b28d1e74024d672692655e3bc0c9a988a4ef1010aae9f54dd4b24f87635d7"
+      },
+      {
+        "path": "Source files/evidence.doc",
+        "bytes": 71680,
+        "sha256": "e6e26d4b46db590aa1da12f9f92a4a68e620503eebde13bda587924d20477f40"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w24_43",
+    "sf": "9618_w24_sf_43",
+    "files": [
+      {
+        "path": "11_9618_43_Confidential Source Files November 2024/Source files/Data.txt",
+        "bytes": 333,
+        "sha256": "11de7ca3386dbb247af40dae432a048f3082b640b6494f5c0ddaf0b860b5e659"
+      },
+      {
+        "path": "11_9618_43_Confidential Source Files November 2024/Source files/evidence.doc",
+        "bytes": 74240,
+        "sha256": "7c473bb91143a236c4d2a72d37ea12483520d0da50a33c411cff31acf7220c88"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w25_41",
+    "sf": "9618_w25_sf_41",
+    "files": [
+      {
+        "path": "HashTableData.txt",
+        "bytes": 2554,
+        "sha256": "922b71fc41586e22993821383b1f017610ee23da881b8eb2756cae0f95cb6617"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 69120,
+        "sha256": "4b5c92d9903c4eec10649d150b0e619157053bfa657905c4fb88f27dbbb38f97"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w25_42",
+    "sf": "9618_w25_sf_42",
+    "files": [
+      {
+        "path": "TreeData.txt",
+        "bytes": 142,
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 63488,
+        "sha256": "3a40225dc2afe590f243bb48f2e666c6cba2a3d9ce2ca345ddf9d6cf83f4e432"
+      }
+    ]
+  },
+  {
+    "paper": "9618_w25_43",
+    "sf": "9618_w25_sf_43",
+    "files": [
+      {
+        "path": "BinaryData.txt",
+        "bytes": 67,
+        "sha256": "b01a6bdb86b953c8acb8f3c84ed1d85d7250010a9456ca3ae9efea24cd509ded"
+      },
+      {
+        "path": "evidence.doc",
+        "bytes": 70144,
+        "sha256": "d95dea63affca4ab5c0facb050b7c4473039e87f0ec95f153db338e15b247507"
+      }
+    ]
+  }
+]

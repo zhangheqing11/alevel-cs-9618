@@ -113,8 +113,8 @@ def report(selected, rows_by_paper):
                 observation = observation.replace("|", "\\|").replace("\n", " ")
                 result = audit["result"]
             lines.append(f"| `{row['id']}` | {row['qp_page']} / {row['ms_page']} | {row['marks']} | {observation} | {result} |")
-    lines += ["", "## D26 归一与表外私用区字符", "",
-              "stem / stem_ctx / ms_text 在结构对齐和判重之后按 D26 归一。表外字符原样保留，不推断含义；以下逐行列出位置。",
+    lines += ["", "## D26/D29 归一与表外私用区字符", "",
+              "stem / stem_ctx / ms_text 在结构对齐和判重之后按 D26/D29 归一。表外字符原样保留，不推断含义；以下逐行列出位置。",
               "P3 对浮点格子、栈状态图和布尔表达式上划线另作保守 figure 标记；文字层不能替代其原页。", "",
               "| 行 | 字段 | 字符 | 次数 | QP / MS 页 |", "|---|---|---|---:|---|"]
     unknown = []
@@ -125,6 +125,9 @@ def report(selected, rows_by_paper):
     lines += unknown or ["| 无 | — | — | 0 | — |"]
     if (ROOT / 'pipeline/extract/pua_report.md').exists():
         lines += ["", "T12c 已有批次的严格基线对比见 `pipeline/extract/pua_report.md`；后续批次不重写其历史统计。"]
+    p4_notes = ROOT / 'pipeline/extract/p4_notes.md'
+    if any(r['component'] == 4 for r in all_rows) and p4_notes.exists():
+        lines += ['', p4_notes.read_text(encoding='utf-8').rstrip()]
     return "\n".join(lines) + "\n"
 
 
