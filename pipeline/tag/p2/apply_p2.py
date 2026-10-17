@@ -13,6 +13,15 @@ def read_jsonl(path):
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def index_records(records):
+    result = {}
+    for row in records:
+        if row['id'] in result:
+            raise ValueError('duplicate annotation id: ' + row['id'])
+        result[row['id']] = row
+    return result
+
+
 def annotated_line(line, tags, points):
     row = json.loads(line)
     rid = row["id"]
@@ -50,8 +59,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="check whether the merge is current without writing")
     args = parser.parse_args()
-    tags = {row["id"]: row for row in read_jsonl(HERE / "p2_tags.jsonl")}
-    points = {row["id"]: row for row in read_jsonl(HERE / "p2_markpoints.jsonl")}
+    tags = index_records(read_jsonl(HERE / "p2_tags.jsonl"))
+    points = index_records(read_jsonl(HERE / "p2_markpoints.jsonl"))
     row_ids = {row["id"] for path in (ROOT / "corpus/rows/p2").glob("*.jsonl") for row in read_jsonl(path)}
     if set(tags) != row_ids or not set(points) <= row_ids:
         raise ValueError("annotation ids must cover precisely the P2 corpus")

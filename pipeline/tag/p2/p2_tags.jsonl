@@ -220,7 +220,7 @@
 {"id": "9618_s24_22:2(a)", "primary": "P2-AD-04", "cross": ["P2-PG-10"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_s24_22:2(b)", "primary": "P2-AD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_s24_22:3(a)(i)", "primary": "P2-DT-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
-{"id": "9618_s24_22:3(a)(ii)", "primary": "P2-DT-03", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_s24_22:3(a)(ii)", "primary": "P2-DT-03", "cross": ["P2-DT-02"], "confidence": "high", "note": "复核本题 MS 原页：数组声明及 OF 记录类型分别下划线、各得一分；主 DT-03，依 §4 独立一分记副 DT-02。与 pilot 副题型不同，保留独立判断。"}
 {"id": "9618_s24_22:3(b)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_s24_22:4", "primary": "P2-PG-10", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_s24_22:5(a)(i)", "primary": "P2-SD-06", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
@@ -663,7 +663,7 @@
 {"id": "9618_w25_21:1(c)", "primary": "P2-SD-05", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_w25_21:2", "primary": "P2-AD-04", "cross": ["P2-DT-05"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_w25_21:3(a)(i)", "primary": "P2-DT-02", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
-{"id": "9618_w25_21:3(a)(ii)", "primary": "P2-DT-03", "cross": ["P2-DT-02"], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
+{"id": "9618_w25_21:3(a)(ii)", "primary": "P2-DT-03", "cross": ["P2-DT-02"], "confidence": "high", "note": "复核本题 MS 原页：数组声明及 OF 记录类型分别下划线、各得一分；主 DT-03，依 §4 独立一分记副 DT-02。与 pilot 副题型不同，保留独立判断。"}
 {"id": "9618_w25_21:3(b)", "primary": "P2-DT-04", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
 {"id": "9618_w25_21:4(a)", "primary": "P2-DT-05", "cross": ["P2-PG-09"], "confidence": "high", "note": "MS 另有替代计分清单：FOR 循环配合 BREAK；只拆第一套条件循环清单。"}
 {"id": "9618_w25_21:4(b)(i)", "primary": "P2-DT-11", "cross": [], "confidence": "high", "note": "按题干产出及指南 §2、§7 定主题型；副题型按 §4 阈值。"}
