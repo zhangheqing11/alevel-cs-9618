@@ -36,7 +36,7 @@ RULINGS = [
 ]
 
 TODO = [
-    '`9618_s25_er.pdf` Paper 42 Question 3 的 **(d)(ii) 印了两次**（p.46，第二块疑为 (d)(iii)）：P4 行尚未入库，暂保持 `duplicate_label`、不挂。'
+    '`9618_s25_er.pdf` Paper 42 Question 3 的 **(d)(ii) 印了两次**（p.46）：第二块讲“生成显示更新值的正确输出”，即 3(d)(iii)（测试截图）；总控裁决按 `LABEL_FIXUPS` 挂到 3(d)(iii)（D33）。'
     'P4 行入库后对照题面决定是否加 `LABEL_FIXUPS`。',
 ]
 
@@ -82,7 +82,7 @@ def main():
     lines += ['## 总览', '',
               f'- 行总数 {tot["rows"]}，挂上 `er` {tot["att"]}（本级 {tot["own"]}、上级回退 {tot["inh"]}、单一更细标签 {tot["fin"]}），无 ER {tot["noer"]}。',
               f'- 排除 s26（尚无 ER）后覆盖率：{att_cov}/{rows_cov} = {100 * att_cov / rows_cov:.1f}%（其中 s21_31 的 27 行因 ER 只有「考生太少、不出报告」一句而没有）。',
-              '- P4（`9618_*_4x`）的 ER 已抽取入 `corpus/er/`，行尚未入库，`apply_er.py` 在 P4 行出现后重跑即可。',
+              '- P4（`9618_*_4x`）行已入库（T12 #29），`apply_er.py` 已在全部 P1–P4 行上重跑。',
               '', *table, '']
 
     lines += ['## 没有挂上 ER 的行（P1–P3，不含 s26）', '']

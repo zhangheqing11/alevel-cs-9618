@@ -62,7 +62,9 @@ HEADING_FIXUPS = {('w23', '9618/33', 1): '9618/31'}
 # 9618_s24_22 Q1: the second "(b)" (PDF p.17) is about how to record the variable choices
 # ("store them in an array/record/file", "comments") = part 1(c), the only 2-mark part left uncommented;
 # the ER has no other block for 1(c).
-LABEL_FIXUPS = {('9618_s24_22', '1(b)'): '1(c)'}
+# 9618_s25_42 Q3: the second "(d)(ii)" (PDF p.46) is about generating the correct outputs showing the
+# updated values = part 3(d)(iii) (test and screenshot); decision: 总控 after P4 rows landed (D33).
+LABEL_FIXUPS = {('9618_s24_22', '1(b)'): '1(c)', ('9618_s25_42', '3(d)(ii)'): '3(d)(iii)'}
 
 
 class ERError(Exception):

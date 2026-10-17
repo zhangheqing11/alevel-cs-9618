@@ -4,9 +4,9 @@
 
 ## 总览
 
-- 行总数 2558，挂上 `er` 2285（本级 2282、上级回退 0、单一更细标签 3），无 ER 273。
-- 排除 s26（尚无 ER）后覆盖率：2285/2313 = 98.8%（其中 s21_31 的 27 行因 ER 只有「考生太少、不出报告」一句而没有）。
-- P4（`9618_*_4x`）的 ER 已抽取入 `corpus/er/`，行尚未入库，`apply_er.py` 在 P4 行出现后重跑即可。
+- 行总数 3302，挂上 `er` 2938（本级 2935、上级回退 0、单一更细标签 3），无 ER 364。
+- 排除 s26（尚无 ER）后覆盖率：2938/2985 = 98.4%（其中 s21_31 的 27 行因 ER 只有「考生太少、不出报告」一句而没有）。
+- P4（`9618_*_4x`）行已入库（T12 #29），`apply_er.py` 已在全部 P1–P4 行上重跑。
 
 | 卷 | ER 条数 | 行数 | 挂上 | 其中本级 | 上级回退 | 单一更细标签 | 无 ER 的行 | 未用的 ER 标签 |
 |:--|--:|--:|--:|--:|--:|--:|--:|--:|
@@ -108,54 +108,103 @@
 | 9618_s26_31 | 0 | 28 | 0 | 0 | 0 | 0 | 28 | 0 |
 | 9618_s26_32 | 0 | 26 | 0 | 0 | 0 | 0 | 26 | 0 |
 | 9618_s26_33 | 0 | 26 | 0 | 0 | 0 | 0 | 26 | 0 |
-| 9618_s21_41 | 0 | — | 0 | 0 | 0 | 0 | — | 0 |
-| 9618_s21_42 | 19 | — | 0 | 0 | 0 | 0 | — | 19 |
-| 9618_s21_43 | 19 | — | 0 | 0 | 0 | 0 | — | 19 |
-| 9618_w21_41 | 21 | — | 0 | 0 | 0 | 0 | — | 21 |
-| 9618_w21_42 | 21 | — | 0 | 0 | 0 | 0 | — | 21 |
-| 9618_s22_41 | 26 | — | 0 | 0 | 0 | 0 | — | 26 |
-| 9618_s22_42 | 22 | — | 0 | 0 | 0 | 0 | — | 22 |
-| 9618_s22_43 | 26 | — | 0 | 0 | 0 | 0 | — | 26 |
-| 9618_w22_41 | 24 | — | 0 | 0 | 0 | 0 | — | 24 |
-| 9618_w22_42 | 25 | — | 0 | 0 | 0 | 0 | — | 25 |
-| 9618_w22_43 | 24 | — | 0 | 0 | 0 | 0 | — | 24 |
-| 9618_s23_41 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_s23_42 | 25 | — | 0 | 0 | 0 | 0 | — | 25 |
-| 9618_s23_43 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_w23_41 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_w23_42 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_w23_43 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_s24_41 | 28 | — | 0 | 0 | 0 | 0 | — | 28 |
-| 9618_s24_42 | 29 | — | 0 | 0 | 0 | 0 | — | 29 |
-| 9618_s24_43 | 28 | — | 0 | 0 | 0 | 0 | — | 28 |
-| 9618_w24_41 | 26 | — | 0 | 0 | 0 | 0 | — | 26 |
-| 9618_w24_42 | 24 | — | 0 | 0 | 0 | 0 | — | 24 |
-| 9618_w24_43 | 26 | — | 0 | 0 | 0 | 0 | — | 26 |
-| 9618_s25_41 | 22 | — | 0 | 0 | 0 | 0 | — | 22 |
-| 9618_s25_42 | 25 | — | 0 | 0 | 0 | 0 | — | 25 |
-| 9618_s25_43 | 23 | — | 0 | 0 | 0 | 0 | — | 23 |
-| 9618_w25_41 | 24 | — | 0 | 0 | 0 | 0 | — | 24 |
-| 9618_w25_42 | 21 | — | 0 | 0 | 0 | 0 | — | 21 |
-| 9618_w25_43 | 25 | — | 0 | 0 | 0 | 0 | — | 25 |
+| 9618_s21_41 | 0 | 19 | 0 | 0 | 0 | 0 | 19 | 0 |
+| 9618_s21_42 | 19 | 19 | 19 | 19 | 0 | 0 | 0 | 0 |
+| 9618_s21_43 | 19 | 19 | 19 | 19 | 0 | 0 | 0 | 0 |
+| 9618_w21_41 | 21 | 21 | 21 | 21 | 0 | 0 | 0 | 0 |
+| 9618_w21_42 | 21 | 21 | 21 | 21 | 0 | 0 | 0 | 0 |
+| 9618_s22_41 | 26 | 23 | 23 | 23 | 0 | 0 | 0 | 3 |
+| 9618_s22_42 | 22 | 19 | 19 | 19 | 0 | 0 | 0 | 3 |
+| 9618_s22_43 | 26 | 23 | 23 | 23 | 0 | 0 | 0 | 3 |
+| 9618_w22_41 | 24 | 21 | 21 | 21 | 0 | 0 | 0 | 3 |
+| 9618_w22_42 | 25 | 22 | 22 | 22 | 0 | 0 | 0 | 3 |
+| 9618_w22_43 | 24 | 21 | 21 | 21 | 0 | 0 | 0 | 3 |
+| 9618_s23_41 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_s23_42 | 25 | 22 | 22 | 22 | 0 | 0 | 0 | 3 |
+| 9618_s23_43 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_w23_41 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_w23_42 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_w23_43 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_s24_41 | 28 | 25 | 25 | 25 | 0 | 0 | 0 | 3 |
+| 9618_s24_42 | 29 | 26 | 26 | 26 | 0 | 0 | 0 | 3 |
+| 9618_s24_43 | 28 | 25 | 25 | 25 | 0 | 0 | 0 | 3 |
+| 9618_w24_41 | 26 | 26 | 26 | 26 | 0 | 0 | 0 | 0 |
+| 9618_w24_42 | 24 | 24 | 24 | 24 | 0 | 0 | 0 | 0 |
+| 9618_w24_43 | 26 | 26 | 26 | 26 | 0 | 0 | 0 | 0 |
+| 9618_s25_41 | 22 | 22 | 22 | 22 | 0 | 0 | 0 | 0 |
+| 9618_s25_42 | 25 | 25 | 25 | 25 | 0 | 0 | 0 | 0 |
+| 9618_s25_43 | 23 | 23 | 23 | 23 | 0 | 0 | 0 | 0 |
+| 9618_w25_41 | 24 | 24 | 24 | 24 | 0 | 0 | 0 | 0 |
+| 9618_w25_42 | 21 | 21 | 21 | 21 | 0 | 0 | 0 | 0 |
+| 9618_w25_43 | 25 | 25 | 25 | 25 | 0 | 0 | 0 | 0 |
+| 9618_s26_41 | 0 | 23 | 0 | 0 | 0 | 0 | 23 | 0 |
+| 9618_s26_42 | 0 | 24 | 0 | 0 | 0 | 0 | 24 | 0 |
+| 9618_s26_43 | 0 | 25 | 0 | 0 | 0 | 0 | 25 | 0 |
 
 ## 没有挂上 ER 的行（P1–P3，不含 s26）
 
 - `9618_w25_23`：1 行（8(b)）— ER 里没有 8(b) 或其上级标签
 - `9618_s21_31`：27 行（全部）— ER 无报告：There were too few candidates for a meaningful report to be produced.
+- `9618_s21_41`：19 行（全部）— ER 无报告：There were too few candidates for a meaningful report to be produced.
 
-- s26 的 6 个 P1–P3 卷共 245 行：该考季尚无 ER，不写 `er`。
+- s26 的 6 个 P1–P3 卷共 317 行：该考季尚无 ER，不写 `er`。
 
 ## 未用的 ER 标签
 
-### P4：行尚未入库（697）
+### P4：行尚未入库（0）
 
-9618_s21_42（19）、9618_s21_43（19）、9618_s22_41（26）、9618_s22_42（22）、9618_s22_43（26）、9618_s23_41（29）、9618_s23_42（25）、9618_s23_43（29）、9618_s24_41（28）、9618_s24_42（29）、9618_s24_43（28）、9618_s25_41（22）、9618_s25_42（24）、9618_s25_43（23）、9618_w21_41（21）、9618_w21_42（21）、9618_w22_41（24）、9618_w22_42（25）、9618_w22_43（24）、9618_w23_41（29）、9618_w23_42（29）、9618_w23_43（29）、9618_w24_41（26）、9618_w24_42（24）、9618_w24_43（26）、9618_w25_41（24）、9618_w25_42（21）、9618_w25_43（25）
+（无）
 
-### 被更细的本级评论取代（按任务规则不挂）（5）
+### 被更细的本级评论取代（按任务规则不挂）（50）
 
 - `9618_s22_21` 4（ER p.13）：every row below it has its own comment: 4(a), 4(b)。“Abstract data types are one of the topics covered on paper 2 for the n…”
+- `9618_s22_41` 1（ER p.35）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii), 1(e)(i), 1(e)(ii), 1(e)(iii), 1(e)(iv), 1(f)。“This question required candidates to read data from a file, sort it an…”
+- `9618_s22_41` 2（ER p.36）：every row below it has its own comment: 2(a), 2(b), 2(c), 2(d), 2(e), 2(f), 2(g)(i), 2(g)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_s22_41` 3（ER p.37）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d)(i), 3(d)(ii)。“This question required candidates to create and manipulate a queue dat…”
+- `9618_s22_42` 1（ER p.38）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii), 1(e)(i), 1(e)(ii)。“This question required candidates to create and manipulate a stack dat…”
+- `9618_s22_42` 2（ER p.39）：every row below it has its own comment: 2(a), 2(b)(i), 2(b)(ii), 2(b)(iii), 2(c)(i), 2(c)(ii)。“This question required candidates to use sorting algorithms to manipul…”
+- `9618_s22_42` 3（ER p.40）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d), 3(e)(i), 3(e)(ii)。“This question focused on object-oriented programming.…”
+- `9618_s22_43` 1（ER p.41）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii), 1(e)(i), 1(e)(ii), 1(e)(iii), 1(e)(iv), 1(f)。“This question required candidates to read data from a file, sort it an…”
+- `9618_s22_43` 2（ER p.42）：every row below it has its own comment: 2(a), 2(b), 2(c), 2(d), 2(e), 2(f), 2(g)(i), 2(g)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_s22_43` 3（ER p.43）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d)(i), 3(d)(ii)。“This question required candidates to create and manipulate a queue dat…”
 - `9618_s23_21` 7(b)（ER p.15）：every row below it has its own comment: 7(b)(i), 7(b)(ii)。“Both parts of this question carry on the theme of decomposition and fo…”
+- `9618_s23_41` 1（ER p.37）：every row below it has its own comment: 1(a)(i), 1(a)(ii), 1(b)(i), 1(b)(ii), 1(b)(iii), 1(c), 1(d)(i), 1(d)(ii)。“This question required candidates to read data from a text file into a…”
+- `9618_s23_41` 2（ER p.38）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(a)(iv), 2(b)(i), 2(b)(ii), 2(c), 2(d)(i), 2(d)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_s23_41` 3（ER p.39）：every row below it has its own comment: 3(a), 3(b)(i), 3(b)(ii), 3(b)(iii), 3(b)(iv), 3(b)(v), 3(c), 3(d)(i), 3(d)(ii)。“This question required candidates to implement two stacks using an arr…”
+- `9618_s23_42` 1（ER p.41）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii)。“This question required candidates to create, populate and manipulate a…”
+- `9618_s23_42` 2（ER p.42）：every row below it has its own comment: 2(a), 2(b), 2(c), 2(d), 2(e), 2(f)(i), 2(f)(ii)。“This question required candidate to set up a record structure and then…”
+- `9618_s23_42` 3（ER p.43）：every row below it has its own comment: 3(a)(i), 3(a)(ii), 3(a)(iii), 3(a)(iv), 3(b)(i), 3(b)(ii), 3(c), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_s23_43` 1（ER p.45）：every row below it has its own comment: 1(a)(i), 1(a)(ii), 1(b)(i), 1(b)(ii), 1(b)(iii), 1(c), 1(d)(i), 1(d)(ii)。“This question required candidates to read data from a text file into a…”
+- `9618_s23_43` 2（ER p.46）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(a)(iv), 2(b)(i), 2(b)(ii), 2(c), 2(d)(i), 2(d)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_s23_43` 3（ER p.47）：every row below it has its own comment: 3(a), 3(b)(i), 3(b)(ii), 3(b)(iii), 3(b)(iv), 3(b)(v), 3(c), 3(d)(i), 3(d)(ii)。“This question required candidates to implement two stacks using an arr…”
+- `9618_s24_41` 1（ER p.38）：every row below it has its own comment: 1(a), 1(b), 1(c)(i), 1(c)(ii), 1(d)(i), 1(d)(ii), 1(d)(iii), 1(e)(i), 1(e)(ii), 1(e)(iii)。“This question required candidates to input data into an array and then…”
+- `9618_s24_41` 2（ER p.39）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(b), 2(c), 2(d)(i), 2(d)(ii), 2(e)(i), 2(e)(ii), 2(e)(iii)。“This question required candidates to write a program using Object-Orie…”
+- `9618_s24_41` 3（ER p.41）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d)(i), 3(d)(ii), 3(d)(iii)。“This question required candidates to create a queue data structure wit…”
+- `9618_s24_42` 1（ER p.42）：every row below it has its own comment: 1(a), 1(b), 1(c)(i), 1(c)(ii), 1(d)(i), 1(d)(ii), 1(d)(iii)。“This question required candidates to read string data from a text file…”
+- `9618_s24_42` 2（ER p.43）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b)(i), 2(b)(ii), 2(b)(iii), 2(c)(i), 2(c)(ii), 2(c)(iii)。“This question required candidates to use Object-Oriented Programming (…”
+- `9618_s24_42` 3（ER p.44）：every row below it has its own comment: 3(a), 3(b)(i), 3(b)(ii), 3(b)(iii), 3(c)(i), 3(c)(ii), 3(c)(iii), 3(d)(i), 3(d)(ii), 3(d)(iii)。“This question required candidates to manipulate an array of integer da…”
+- `9618_s24_43` 1（ER p.46）：every row below it has its own comment: 1(a), 1(b), 1(c)(i), 1(c)(ii), 1(d)(i), 1(d)(ii), 1(d)(iii), 1(e)(i), 1(e)(ii), 1(e)(iii)。“This question required candidates to input data into an array and then…”
+- `9618_s24_43` 2（ER p.47）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(b), 2(c), 2(d)(i), 2(d)(ii), 2(e)(i), 2(e)(ii), 2(e)(iii)。“This question required candidates to write a program using Object-Orie…”
+- `9618_s24_43` 3（ER p.49）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d)(i), 3(d)(ii), 3(d)(iii)。“This question required candidates to create a queue data structure wit…”
+- `9618_w22_41` 1（ER p.43）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii), 1(e)。“This question required candidates to read data from a file, search the…”
+- `9618_w22_41` 2（ER p.44）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b)(i), 2(b)(ii), 2(b)(iii), 2(c)(i), 2(c)(ii), 2(c)(iii)。“This question required candidates to produce a program using object-or…”
+- `9618_w22_41` 3（ER p.45）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to create a binary tree that matched…”
+- `9618_w22_42` 1（ER p.47）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d), 1(e), 1(f), 1(g)(i), 1(g)(ii)。“This question required candidates to store data in an array and then s…”
+- `9618_w22_42` 2（ER p.48）：every row below it has its own comment: 2(a), 2(b), 2(c), 2(d), 2(e), 2(f), 2(g)(i), 2(g)(ii)。“This question required candidates to produce a program using object-or…”
+- `9618_w22_42` 3（ER p.49）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to create and manipulate a queue dat…”
+- `9618_w22_43` 1（ER p.51）：every row below it has its own comment: 1(a), 1(b), 1(c), 1(d)(i), 1(d)(ii), 1(e)。“This question required candidates to read data from a file, search the…”
+- `9618_w22_43` 2（ER p.52）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b)(i), 2(b)(ii), 2(b)(iii), 2(c)(i), 2(c)(ii), 2(c)(iii)。“This question required candidates to produce a program using object-or…”
+- `9618_w22_43` 3（ER p.53）：every row below it has its own comment: 3(a), 3(b), 3(c), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to create a binary tree that matched…”
 - `9618_w23_22` 3（ER p.17）：every row below it has its own comment: 3(a), 3(b)。“This question required candidates to understand how a linked list is i…”
+- `9618_w23_41` 1（ER p.34）：every row below it has its own comment: 1(a)(i), 1(a)(ii), 1(a)(iii), 1(b)(i), 1(b)(ii), 1(b)(iii)。“This question required candidates to write iterative and recursive fun…”
+- `9618_w23_41` 2（ER p.35）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b), 2(c)(i), 2(c)(ii), 2(c)(iii), 2(d), 2(e)(i), 2(e)(ii)。“This question required candidates to create a linear queue and read da…”
+- `9618_w23_41` 3（ER p.36）：every row below it has its own comment: 3(a)(i), 3(a)(ii), 3(a)(iii), 3(a)(iv), 3(b), 3(c)(i), 3(c)(ii), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to use object-oriented programming t…”
+- `9618_w23_42` 1（ER p.39）：every row below it has its own comment: 1(a)(i), 1(a)(ii), 1(b)(i), 1(b)(ii), 1(c), 1(d)(i), 1(d)(ii)。“This question required candidates to program a stack using a 1D array …”
+- `9618_w23_42` 2（ER p.40）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b)(i), 2(b)(ii), 2(b)(iii)。“This question required candidates to understand how to convert a pseud…”
+- `9618_w23_42` 3（ER p.41）：every row below it has its own comment: 3(a)(i), 3(a)(ii), 3(a)(iii), 3(a)(iv), 3(a)(v), 3(b)(i), 3(b)(ii), 3(b)(iii), 3(c)(i), 3(c)(ii), 3(d)(i), 3(d)(ii), 3(d)(iii)。“This question required candidates to use object-oriented programming.…”
+- `9618_w23_43` 1（ER p.43）：every row below it has its own comment: 1(a)(i), 1(a)(ii), 1(a)(iii), 1(b)(i), 1(b)(ii), 1(b)(iii)。“This question required candidates to write iterative and recursive fun…”
+- `9618_w23_43` 2（ER p.44）：every row below it has its own comment: 2(a)(i), 2(a)(ii), 2(a)(iii), 2(b), 2(c)(i), 2(c)(ii), 2(c)(iii), 2(d), 2(e)(i), 2(e)(ii)。“This question required candidates to create a linear queue and read da…”
+- `9618_w23_43` 3（ER p.45）：every row below it has its own comment: 3(a)(i), 3(a)(ii), 3(a)(iii), 3(a)(iv), 3(b), 3(c)(i), 3(c)(ii), 3(d), 3(e)(i), 3(e)(ii)。“This question required candidates to use object-oriented programming t…”
 - `9618_w24_23` 3（ER p.26）：every row below it has its own comment: 3(a)(i), 3(a)(ii), 3(b), 3(c)。“This question is assessing the candidates understanding of the use of …”
 - `9618_w25_21` 5（ER p.19）：every row below it has its own comment: 5(a)(i), 5(a)(ii), 5(a)(iii), 5(b)(i), 5(b)(ii)。“All parts of Question 5 required candidates to analyse a block of code…”
 
@@ -167,9 +216,9 @@
 
 （无）
 
-### ER 重复标签（1）
+### ER 重复标签（0）
 
-- `9618_s25_42` 3(d)(ii)（ER p.46）：ER prints this label twice; second block not attached。“Candidates were often able to generate the correct outputs for the pro…”
+（无）
 
 ## 抽查记录
 
@@ -214,4 +263,4 @@
 
 ## 待办
 
-- `9618_s25_er.pdf` Paper 42 Question 3 的 **(d)(ii) 印了两次**（p.46，第二块疑为 (d)(iii)）：P4 行尚未入库，暂保持 `duplicate_label`、不挂。P4 行入库后对照题面决定是否加 `LABEL_FIXUPS`。
+- `9618_s25_er.pdf` Paper 42 Question 3 的 **(d)(ii) 印了两次**（p.46）：第二块讲“生成显示更新值的正确输出”，即 3(d)(iii)（测试截图）；总控裁决按 `LABEL_FIXUPS` 挂到 3(d)(iii)（D33）。P4 行入库后对照题面决定是否加 `LABEL_FIXUPS`。
