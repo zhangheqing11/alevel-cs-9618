@@ -120,7 +120,7 @@ def report(selected, rows_by_paper):
     unknown = []
     for row in all_rows:
         for key in ('stem', 'stem_ctx', 'ms_text'):
-            for char in sorted(set(c for c in row[key] if '\ue000' <= c <= '\uf8ff')):
+            for char in sorted(set(c for c in row[key] if c not in D26 and '\ue000' <= c <= '\uf8ff')):
                 unknown.append(f"| `{row['id']}` | {key} | U+{ord(char):04X} | {row[key].count(char)} | {row['qp_page']} / {row['ms_page']} |")
     lines += unknown or ["| 无 | — | — | 0 | — |"]
     if (ROOT / 'pipeline/extract/pua_report.md').exists():
