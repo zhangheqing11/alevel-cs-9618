@@ -7,6 +7,7 @@
         "record-type"
       ],
       [
+        "record-type",
         "data-types"
       ],
       [
@@ -36,7 +37,8 @@
       ],
       [
         "pre-condition-loop",
-        "insertion-sort"
+        "insertion-sort",
+        "nested-loops"
       ],
       [
         "insertion-sort",
@@ -45,7 +47,7 @@
       ],
       [
         "insertion-sort",
-        "accumulator"
+        "array-index"
       ],
       [
         "insertion-sort",
@@ -171,6 +173,7 @@
         "record-type"
       ],
       [
+        "record-type",
         "data-types"
       ]
     ]
@@ -247,6 +250,7 @@
         "record-type"
       ],
       [
+        "record-type",
         "data-types"
       ]
     ]
@@ -509,8 +513,9 @@
         "assign-value"
       ],
       [
+        "insertion-sort",
         "pre-condition-loop",
-        "insertion-sort"
+        "nested-loops"
       ],
       [
         "relational-ops",
@@ -522,7 +527,7 @@
       ],
       [
         "insertion-sort",
-        "accumulator"
+        "array-index"
       ],
       [
         "insertion-sort"
@@ -548,7 +553,8 @@
       ],
       [
         "pre-condition-loop",
-        "insertion-sort"
+        "insertion-sort",
+        "nested-loops"
       ],
       [
         "insertion-sort",
@@ -556,8 +562,8 @@
         "parallel-arrays"
       ],
       [
-        "accumulator",
-        "insertion-sort"
+        "insertion-sort",
+        "array-index"
       ],
       [
         "insertion-sort",
@@ -742,13 +748,15 @@
         "record-type"
       ],
       [
+        "record-type",
         "data-types"
       ],
       [
         "data-types"
       ],
       [
-        "user-defined-type"
+        "user-defined-type",
+        "data-types"
       ]
     ]
   },

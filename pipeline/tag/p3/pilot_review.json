@@ -1,0 +1,102 @@
+{
+  "primary_disagreements": [],
+  "cross_disagreements": [],
+  "split_disagreements": [],
+  "skill_decisions": [
+    {
+      "id": "9618_w22_32:4(b)",
+      "n": 2,
+      "page": 6,
+      "decision": "补 record-type：MS 明确要求两条 DECLARE 字段声明及 STRING 类型，指南 §8.3 同时覆盖声明与类型。"
+    },
+    {
+      "id": "9618_w22_32:4(b)",
+      "n": 4,
+      "page": 6,
+      "decision": "补 data-types：除使用枚举类型外，MS 明说 correct data type from part 4(a)。"
+    },
+    {
+      "id": "9618_w22_32:11(b)",
+      "n": 4,
+      "page": 16,
+      "decision": "保留 linked-list、relational-ops：Pointer/Found 存的是结点位置（整数），不是 BOOLEAN 标志；此行判断空指针/找到位置，按具体操作标注。"
+    },
+    {
+      "id": "9618_s24_31:3(b)",
+      "n": 2,
+      "page": 6,
+      "decision": "补 record-type：每两个完整字段声明一分，同时要求声明写法和字段类型。"
+    },
+    {
+      "id": "9618_s25_33:11",
+      "n": 5,
+      "page": 14,
+      "decision": "保留 flag-variable、relational-ops：读取 Stored 标志并显式比较 FALSE，两项均直接出现在该行。"
+    },
+    {
+      "id": "9618_s25_33:12(b)",
+      "n": 2,
+      "page": 15,
+      "decision": "补 nested-loops：MS 的 inner loop 嵌套在题给 FOR 中，同时保留 pre-condition-loop 与 insertion-sort。"
+    },
+    {
+      "id": "9618_s25_33:12(b)",
+      "n": 5,
+      "page": 15,
+      "decision": "改为 insertion-sort、array-index：Position 是用于移位的插入下标，不是累计个数或总和；MS 范例 Position ← Position – 1。"
+    }
+  ],
+  "consistent_followups": [
+    {
+      "id": "9618_s23_32:6(a)",
+      "n": 2,
+      "skills": [
+        "record-type",
+        "data-types"
+      ]
+    },
+    {
+      "id": "9618_s21_31:2(c)",
+      "n": 2,
+      "skills": [
+        "record-type",
+        "data-types"
+      ]
+    },
+    {
+      "id": "9618_s21_31:8(b)",
+      "n": 4,
+      "skills": [
+        "pre-condition-loop",
+        "insertion-sort",
+        "nested-loops"
+      ]
+    },
+    {
+      "id": "9618_s21_31:8(b)",
+      "n": 6,
+      "skills": [
+        "insertion-sort",
+        "array-index"
+      ]
+    },
+    {
+      "id": "9618_s26_31:10(a)",
+      "n": 4,
+      "skills": [
+        "pre-condition-loop",
+        "insertion-sort",
+        "nested-loops"
+      ]
+    },
+    {
+      "id": "9618_s26_31:10(a)",
+      "n": 6,
+      "skills": [
+        "insertion-sort",
+        "array-index"
+      ]
+    }
+  ],
+  "note": "所有技能集合分歧均在冻结快照提交之后，重新目视该题自己的 MS 原页核对。仅技能改变，主题型与切分不变。"
+}
