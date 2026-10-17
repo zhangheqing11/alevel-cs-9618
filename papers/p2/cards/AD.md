@@ -415,7 +415,7 @@ while not flag:
     flag = get_stat()
 ```
 
-**下一道变式**　⟦9618_w22_22:4(a)⟧　（流程图里有数组元素与 IF…ELSE，循环从 Index = 4 到 6；讲解时请对照原卷 QP p.9。）
+**下一道变式**　⟦9618_w22_22:4(a)⟧　（流程图里有数组元素与 IF…ELSE，循环从 Index = 4 到 6；讲解时请对照原卷 QP p.8 的流程图，p.9 为作答要求。）
 
 <!-- auto:drills P2-AD-05 -->
 
@@ -433,7 +433,7 @@ while not flag:
 3. **说清位置**：in the loop、after the loop、before the loop；循环的结束条件写完整（until the end of the file is reached / until the value 0 is input / 200 times）。
 4. **用题目给的名字**：数组名、文件名、变量名照抄（Data、Sales.txt、Max）；可以说“the loop counter”“the array index”。
 5. **补全步骤题**：每个空填一个具体的东西（文件名、模式、变量名、条件），不要填“the file”“the data”这样的空话。
-6. **分数 = 步骤数**：MS 常列 6–8 点、Max 5；写满每一步，宁多勿少。
+6. **按该题计分清单覆盖逻辑步骤**：得分点数、作答步骤数可以大于分值，按 MS 的 Max 封顶；题干指定几步时按指定格式作答。本卡代表题列 7 点、Max 5，不能把 5 分当成只能写 5 步。
 
 **步骤模板**（代替伪代码模板；英文句型，按题目替换名字）
 

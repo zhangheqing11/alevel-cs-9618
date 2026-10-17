@@ -136,7 +136,9 @@ Item[1].Reject ← FALSE             // element of an array of records
 | 得分点（MS 常见写法） | 题数 | 技能标签 |
 |:--|--:|:--|
 | `TYPE <名>` 与 `ENDTYPE` 一分（题目已给 TYPE 行时只看 ENDTYPE） | 5 | `record-type` |
-| 字段按组给分：每 1–2 个字段名与类型都对得 1 分 | 6 | `record-type`、`data-types` |
+| 按 MS 指定字段组计分，一组可含多个字段，组内字段名与类型都要正确 | 6 | `record-type`、`data-types` |
+
+例如 ⟦9618_s22_23:5(a)(i)⟧ 的 MS 把 EmployeeNumber、Name、Department 三个字段合为 1 分，并非固定每 1–2 个字段一分。
 
 **易错与失分**
 - 写成 `TYPE Component = …`、`RECORD … END`、`ENDRECORD`：结构分丢。
@@ -555,7 +557,7 @@ ENDPROCEDURE
 | 7 | Sum points and Increment Count in a loop | `Sum ← …`、`Count ← …` | `array-2d`、`accumulator` |
 | 8 | Calculate and output average with an appropriate message | 循环后 `/` 求平均并输出 | `operator-precedence`、`output-format` |
 
-MS 范例写的是 `WHILE Loyalty[Index, 1] <> 99999 AND Index <= 1000`，同样给分；但它在 Index = 1001 时要靠短路才不越界，本手册按 D25 用标志变量。
+MS 范例写的是 `WHILE Loyalty[Index, 1] <> 99999 AND Index <= 1000`；按该题 MS 给分，不改其计分清单。但 Index = 1001 时，即使按从左到右短路求值，左侧数组访问也已越界，右侧边界检查不能保护它。指南未保证 AND 短路，本手册按 D25 保留先检查边界、再访问数组的标志变量方案。
 
 **直观**　从表头往下一行行读，读到“空行记号”或读到底就停；每读一行做两件事：够 11 分就念出 ID，并把积分记进总账。
 
@@ -656,7 +658,7 @@ ENDFUNCTION
 
 **易错与失分**
 - 写成 `Loan.StudentID[Index]` 或 `Loan[Index, StudentID]`。
-- 字段名改了大小写或拼写（`StudentId`）：照题目表格抄。
+- 字段名拼写改成了另一个名字（如 `StudentNumber`）：照题目表格抄。建议大小写也保持一致，但指南 §2.3 规定标识符不区分大小写，`StudentId` 与 `StudentID` 仅大小写不同，不能据此认定为不同字段或当然扣分。
 - 布尔字段写成字符串比较 `= "TRUE"`。
 - 两个计数器只初始化一个；或计数写在 IF 外面（每条记录都加）。
 - efficient 题用 FOR 跑完全部元素：找到后还在循环，丢“terminate”那一分。
@@ -954,7 +956,7 @@ def check_file(this_file: str) -> bool:
     return False
 ```
 
-**下一道变式**　⟦9618_s22_22:4(a)⟧　（换成“滚动缓存”：读到文件尾，只用 LineX、LineY、LineZ 三个变量保留最后三行，循环里每读一行就把三者依次前移。这一技能在技能词表里暂缺，见 D27。）
+**下一道变式**　⟦9618_s22_22:4(a)⟧　（换成“滚动缓存”：读到文件尾，只用 LineX、LineY、LineZ 三个变量保留最后三行，循环里每读一行就把三者依次前移。技能标签为 `shift-values`，已按 D30、D37③回填。）
 
 <!-- auto:drills P2-DT-09 -->
 
@@ -967,7 +969,7 @@ def check_file(this_file: str) -> bool:
 **识别信号**　copies each line from the input file to the existing output file；create a new file / creates a new file NewStock.txt；A new module will store the contents of the … array in a text file；write … to the file；form a string from each record with fields separated by the character …；does not write blank lines。
 
 **解题思路**
-1. **定模式**：新建文件 → `WRITE`（原内容清空）；加到已存在文件的末尾 → `APPEND`；读来源文件 → `READ`。同一时刻一个文件只用一种模式；要先读后追加，就先 `CLOSEFILE` 再用新模式打开。
+1. **定模式**：新建或有意覆盖文件 → `WRITE`（原内容清空）；需要保留原内容并在末尾追加 → `APPEND`；读来源文件 → `READ`。同一时刻一个文件只用一种模式；要先读后追加，就先 `CLOSEFILE` 再用新模式打开。
 2. **复制 / 过滤骨架**：两个文件都打开 → `WHILE NOT EOF(输入)` → `READFILE 输入, Line` → 处理 → 满足条件才 `WRITEFILE 输出, Line` → 循环后两个都关闭。
 3. **数组 → 文件骨架**：打开输出文件 → `FOR` 全部元素 → 跳过未用元素 → 拼成一行 → `WRITEFILE` → 关闭。
 4. **写之前转成字符串**：`NUM_TO_STR(…)` 处理数字；布尔值先编码成字符（如 `'T'` / `'F'`）；多个字段用 `&` 和分隔符拼成一行。
@@ -982,7 +984,7 @@ PROCEDURE CopyFile(InFile : STRING, OutFile : STRING)
    DECLARE Count : INTEGER
    Count ← 0
    OPENFILE InFile FOR READ
-   OPENFILE OutFile FOR APPEND               // WRITE for a new file, APPEND for an existing one
+   OPENFILE OutFile FOR APPEND               // Preserve existing data; WRITE to create or overwrite
    WHILE NOT EOF(InFile)
       READFILE InFile, Line
       IF Line <> "" THEN
@@ -1035,7 +1037,7 @@ ENDPROCEDURE
 每道写文件题都有的一分：**模式正确地打开 + 之后关闭**（两个文件时两个都要）。
 
 **易错与失分**
-- “existing output file”还用 WRITE：原有内容被清空；用 APPEND。
+- 题目要求保留原内容并追加时却用 WRITE：原有内容被清空；应用 APPEND。文件已存在本身不决定模式，若要求覆盖仍用 WRITE；本卡代表题按其 MS 用 APPEND。
 - 读文件与写文件用同一个名字同时打开两次（先读后追加要先关闭）。
 - `WRITEFILE` 写数字或布尔值：先 `NUM_TO_STR`，布尔值先编码成字符或字符串。
 - 拼行用 `+` 或逗号（`WRITEFILE F, A, B`）：用 `&` 拼成一个字符串再写。
@@ -1121,8 +1123,8 @@ def stage_2(f1: str, f2: str) -> None:
 2. **模式**：只读 → READ；新建 / 覆盖 → WRITE；在已有内容后面加 → APPEND。不能用 WRITE 的理由：会覆盖已有数据。
 3. **写入前**：文本文件只存字符串 → 数字用 `NUM_TO_STR`、布尔值编码成字符 / 字符串。
 4. **一行多项的两种格式**：
-   - **分隔符**：选一个**不会出现在数据里**的字符（如 '^'、'\'），字段之间插入它；读回时按它拆分。
-   - **定长 / 长度前缀**：把某个字段的长度转成**固定位数的字符串**放在行首，再接上数据；读回时先取长度再取子串。数据可能包含任何字符时只能用这种。
+   - **分隔符**：逐个分隔符拆全部字段时，选一个不会出现在待拆字段里的字符；若只拆成前后两项，也可选一个不会出现在第一项里的字符，只在首次出现处拆分，后面整段作为第二项。
+   - **定长 / 长度前缀**：把某个字段的长度转成**固定位数的字符串**放在行首，再接上数据；读回时先取长度再取子串。所有待分隔字段都可含任意字符、无法排除分隔符时，可用长度前缀避免歧义；仅一个字段可含任意字符不代表必须放弃分隔符。
 5. **利弊**：一行一条记录 → 文件操作次数少，但拼接 / 拆分算法更复杂；一项一行 → 读写简单，但文件访问次数多。补前导零定长 → 文件变大。
 
 **得分表述**（引自对应 MS）
@@ -1135,8 +1137,8 @@ def stage_2(f1: str, f2: str) -> None:
 
 **易错与失分**
 - 好处只写“easier”“more secure”：要写永久保存 / 不受大小限制。
-- 选的分隔符是逗号、空格、字母或数字：它们很可能出现在数据里。
-- 数据“可以包含任何字符”时还答分隔符：任何分隔符都可能撞上，要用长度前缀。
+- 选分隔符时没检查字段的字符范围：逗号、空格、字母或数字能否使用，要看该题限制；本卡代表题的 MS 明确允许域名后的空格。
+- 把一个字段可含任意字符误当成所有字段都无法排除分隔符。本题域名不能含空格，只寻找域名后的第一个空格；密码中再出现空格不影响拆分。若所有待分隔字段均无可排除字符，才不能直接靠这种分隔符方案消除歧义。
 - 长度前缀没说“固定位数”：读回时不知道长度本身占几位。
 - 模式题答成 `OPEN` / `INPUT`：答 READ、WRITE、APPEND 之一。
 
@@ -1152,7 +1154,7 @@ def stage_2(f1: str, f2: str) -> None:
 
 **英文作答句**　Convert the length of the domain name to a string of fixed length, for example three digits. Concatenate this string with the domain name and the encrypted password to form a single string. Write this string as one line of the file.
 
-**直观**　分隔符像在两件货物之间插一块隔板；长度前缀像在箱子上先写“前面这件长 15 厘米”。货物本身什么形状都有可能时，只能用后一种。
+**直观**　分隔符像在两件货物之间插一块隔板；只要第一件里不会出现隔板，找到第一块就能分开，第二件里再有隔板也不影响。长度前缀像在箱子上先写“前面这件长 15 厘米”，按长度取出即可。
 
 **下一道变式**　⟦9618_w25_22:3(c)⟧　（两个新加密项可含任何字符、最长 99：怎样在已有的 '\' 分隔格式后面存它们。）
 
@@ -1277,7 +1279,7 @@ def stage_2(f1: str, f2: str) -> None:
 2. **入队**：①检查队列不满；②EoQ 前进一格（到数组末尾就绕回第一格）；③把数据存进 EoQ 指的位置；④（有计数器时）NumItems 加 1。
 3. **出队**：①检查队列不空；②取出 FoQ 指的值；③FoQ 前进一格（必要时绕回）；④NumItems 减 1。
 4. **绕回**：位置 0–9 的队列，EoQ 在 9 时下一格是 0；位置 1–8 的，在 8 时下一格是 1。
-5. **数据项个数**：从 FoQ 数到 EoQ（跨过末尾就加上绕回的那段）；FoQ = EoQ 表示**只有一个**数据项。
+5. **数据项个数**：仅在 FoQ 指首项、EoQ 指末项且队列非空的约定下，从 FoQ 数到 EoQ（跨过末尾就加上绕回的那段），两者相等表示只有一个数据项。空 / 满状态须结合该题初值、计数器或留空位规则判断，不能只看指针是否相等。
 
 **得分表述**（引自对应 MS）
 - 「Check that the queue is not full」⟦9618_s23_22:3(a)(i)⟧
@@ -1285,7 +1287,7 @@ def stage_2(f1: str, f2: str) -> None:
 - 「EoQ pointer will move to point to location 0」⟦9618_s23_22:3(a)(i)⟧
 - 「Check: There are items in the array // The queue is not empty」⟦9618_w22_23:4(b)(i)⟧
 - 「FoQ value matches index with D3」⟦9618_w23_23:3(a)⟧
-- 「There is only one data item in the queue」⟦9618_w21_21:3(a)(iii)⟧
+- 「There is only one data item in the queue」⟦9618_w21_21:3(a)(iii)⟧（限该题 FoQ 指首项、EoQ 指末项的非空队列情境，不是所有队列的相等判据。）
 
 **易错与失分**
 - 漏了“先检查不满 / 不空”这一分。
@@ -1532,6 +1534,6 @@ def push(this_value: float) -> bool:
 | DT-04 vs DT-11 vs DT-12 | 内存里的结构（数组、记录）→ DT-04；文件或文件里的格式 → DT-11；栈 / 队列 / 链表 → DT-12 | 选的是什么 |
 | DT-12 vs DT-13 / 14 / 15 | 特征、识别、选择 → DT-12；在状态图上做操作 → DT-13（栈）/ DT-14（队列）/ DT-15（链表） | describe features 还是 complete the diagram |
 | DT-14 vs DT-16 | 描述入队出队及满 / 空检查 → DT-14；描述实现队列要声明与初始化什么、写 AddTo 代码 → DT-16 | operations / check 还是 declaration / initialisation / pseudocode |
-| WRITE vs APPEND | 新建或覆盖 → WRITE；在已有文件末尾加 → APPEND | new file 还是existing file |
+| WRITE vs APPEND | 新建或覆盖 → WRITE；保留原内容并在末尾追加 → APPEND | 是否需要保留原内容 |
 | 栈指针的两种约定 | 指最后一个值（空栈 0，先加 1 再存）/ 指下一个空位（空栈 1，先存再加 1） | 题干怎样定义指针 |
 | LIFO vs FIFO | 栈：后进先出；队列：先进先出 | stack 还是 queue |
