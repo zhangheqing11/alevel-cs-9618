@@ -1,0 +1,28 @@
+{
+  "id": "9618_s25_23:7(b)(i)",
+  "kind": "past-paper",
+  "title": "周一访问的积分奖励",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:7(b)(i)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "accumulator",
+    "date-functions",
+    "field-extract",
+    "procedure-call",
+    "return-value",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "MondayCheck"
+}

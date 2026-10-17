@@ -1,0 +1,28 @@
+{
+  "id": "9618_s25_22:3",
+  "kind": "past-paper",
+  "title": "不重复随机数与条件第三数",
+  "source": {
+    "paper": "9618_s25_22",
+    "rows": [
+      "9618_s25_22:3"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-PG-09"
+  ],
+  "skills": [
+    "declare-variables",
+    "div-mod",
+    "logic-ops",
+    "output-format",
+    "post-condition-loop",
+    "random-numbers",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

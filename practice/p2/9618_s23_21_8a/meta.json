@@ -1,0 +1,28 @@
+{
+  "id": "9618_s23_21:8(a)",
+  "kind": "past-paper",
+  "title": "验证新的供应商代码",
+  "source": {
+    "paper": "9618_s23_21",
+    "rows": [
+      "9618_s23_21:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boolean-return",
+    "char-compare",
+    "char-loop",
+    "loop-bounds",
+    "procedure-call",
+    "relational-ops",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "IsNewSupp"
+}

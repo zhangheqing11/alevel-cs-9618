@@ -1,0 +1,25 @@
+{
+  "id": "9618_w22_23:5(a)(i)",
+  "kind": "past-paper",
+  "title": "拆解固定宽度库存字段",
+  "source": {
+    "paper": "9618_w22_23",
+    "rows": [
+      "9618_w22_23:5(a)(i)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "byval-byref",
+    "field-extract",
+    "module-header",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Unpack"
+}

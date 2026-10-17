@@ -1,0 +1,26 @@
+{
+  "id": "9618_s24_21:6(a)",
+  "kind": "past-paper",
+  "title": "用坐标判断直角三角形",
+  "source": {
+    "paper": "9618_s24_21",
+    "rows": [
+      "9618_s24_21:6(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "boolean-return",
+    "logic-ops",
+    "nested-if",
+    "operator-precedence",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "IsRA"
+}

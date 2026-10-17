@@ -1,0 +1,31 @@
+{
+  "id": "9618_w22_21:7(a)(i)",
+  "kind": "past-paper",
+  "title": "计算单运算符表达式",
+  "source": {
+    "paper": "9618_w22_21",
+    "rows": [
+      "9618_w22_21:7(a)(i)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11",
+    "P2-PG-10"
+  ],
+  "skills": [
+    "case-of",
+    "char-loop",
+    "declare-variables",
+    "field-extract",
+    "linear-search",
+    "operator-precedence",
+    "output-format",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Calculate"
+}

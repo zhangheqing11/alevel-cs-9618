@@ -1,0 +1,26 @@
+{
+  "id": "9618_s23_22:6",
+  "kind": "past-paper",
+  "title": "输出空心数字方阵",
+  "source": {
+    "paper": "9618_s23_22",
+    "rows": [
+      "9618_s23_22:6"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "boundary-values",
+    "count-loop",
+    "module-header",
+    "output-format",
+    "string-concat"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Square"
+}

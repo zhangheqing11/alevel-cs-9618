@@ -1,0 +1,23 @@
+{
+  "id": "9618_w22_22:5",
+  "kind": "past-paper",
+  "title": "把嵌套选择改写为四个独立 IF",
+  "source": {
+    "paper": "9618_w22_22",
+    "rows": [
+      "9618_w22_22:5"
+    ]
+  },
+  "marks": 4,
+  "types": [
+    "P2-PG-04"
+  ],
+  "skills": [
+    "logic-ops",
+    "nested-if"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "main"
+}

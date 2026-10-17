@@ -1,0 +1,5 @@
+// DECLARE LastVisitDateString : STRING
+// DECLARE DayInt, MonthInt, YearInt : INTEGER
+// DECLARE LastVisitDate : DATE
+
+

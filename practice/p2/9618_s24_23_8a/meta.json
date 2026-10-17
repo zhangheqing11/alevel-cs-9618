@@ -1,0 +1,27 @@
+{
+  "id": "9618_s24_23:8(a)",
+  "kind": "past-paper",
+  "title": "识别伪代码模块头",
+  "source": {
+    "paper": "9618_s24_23",
+    "rows": [
+      "9618_s24_23:8(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "char-compare",
+    "module-header",
+    "relational-ops",
+    "return-value",
+    "string-concat",
+    "string-functions"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "Header"
+}

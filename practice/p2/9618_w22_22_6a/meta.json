@@ -1,0 +1,30 @@
+{
+  "id": "9618_w22_22:6(a)",
+  "kind": "past-paper",
+  "title": "识别阶乘的底数",
+  "source": {
+    "paper": "9618_w22_22",
+    "rows": [
+      "9618_w22_22:6(a)"
+    ]
+  },
+  "marks": 7,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "accumulator",
+    "declare-variables",
+    "flag-variable",
+    "initialise-variables",
+    "logic-ops",
+    "module-header",
+    "pre-condition-loop",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "FindBaseNumber"
+}

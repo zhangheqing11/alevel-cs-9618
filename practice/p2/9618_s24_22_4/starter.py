@@ -1,0 +1,2 @@
+def IsRA():
+    raise NotImplementedError

@@ -1,0 +1,29 @@
+{
+  "id": "9618_s24_22:4",
+  "kind": "past-paper",
+  "title": "输入三边并判断直角三角形",
+  "source": {
+    "paper": "9618_s24_22",
+    "rows": [
+      "9618_s24_22:4"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "declare-variables",
+    "input-prompt",
+    "logic-ops",
+    "module-header",
+    "nested-if",
+    "operator-precedence",
+    "output-format",
+    "relational-ops"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "IsRA"
+}

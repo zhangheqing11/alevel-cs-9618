@@ -1,0 +1,28 @@
+{
+  "id": "9618_s24_21:8(a)",
+  "kind": "past-paper",
+  "title": "删除双斜线注释",
+  "source": {
+    "paper": "9618_s24_21",
+    "rows": [
+      "9618_s24_21:8(a)"
+    ]
+  },
+  "marks": 8,
+  "types": [
+    "P2-PG-11"
+  ],
+  "skills": [
+    "char-compare",
+    "char-loop",
+    "linear-search",
+    "loop-bounds",
+    "return-value",
+    "string-functions",
+    "string-index"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "DeleteComment"
+}

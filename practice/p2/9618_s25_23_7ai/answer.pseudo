@@ -1,0 +1,3 @@
+PROCEDURE UpdateVisit(BYREF LoyaltyPoints : INTEGER, BYREF LastVisitDate : DATE)
+
+ENDPROCEDURE

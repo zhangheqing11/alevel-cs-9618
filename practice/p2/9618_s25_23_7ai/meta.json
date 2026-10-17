@@ -1,0 +1,26 @@
+{
+  "id": "9618_s25_23:7(a)(i)",
+  "kind": "past-paper",
+  "title": "按访问月份更新积分和日期",
+  "source": {
+    "paper": "9618_s25_23",
+    "rows": [
+      "9618_s25_23:7(a)(i)"
+    ]
+  },
+  "marks": 5,
+  "types": [
+    "P2-PG-12"
+  ],
+  "skills": [
+    "accumulator",
+    "byval-byref",
+    "date-functions",
+    "module-header",
+    "nested-if"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "UpdateVisit"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "9618_s25_21:7(a)",
+  "kind": "past-paper",
+  "title": "咖啡积分兑换",
+  "source": {
+    "paper": "9618_s25_21",
+    "rows": [
+      "9618_s25_21:7(a)"
+    ]
+  },
+  "marks": 6,
+  "types": [
+    "P2-PG-10"
+  ],
+  "skills": [
+    "accumulator",
+    "module-header",
+    "operator-precedence",
+    "output-format",
+    "pre-condition-loop",
+    "return-value"
+  ],
+  "pseudocode": true,
+  "files": [],
+  "ms_verified": true,
+  "entry": "CustomerOrder"
+}
