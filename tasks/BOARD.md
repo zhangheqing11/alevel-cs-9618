@@ -9,7 +9,7 @@
 | T10 | Python 阶梯设计（批 1 ✅ #3 / 批 2 ✅ #4 / 批 3 ✅ #7） | cc-A | T00 | ✅ | #3 #4 #7 |
 | T11 | 教学 skill（已装到 ~/.claude/skills） | cc-B | T00 | ✅ | #2 |
 | T13 | 构建器 | codex-2 | T00 | ✅ | #1 |
-| T12 | 抽文本、拆小问（P1 ✅ #6 → P2 ✅ #8 → P3 👀 #22 待 rebase → P4） | codex-1 | T01 | 🔨 | #22 |
+| T12 | 抽文本、拆小问（P1 ✅ #6 → P2 ✅ #8 → P3 ✅ #22 → P4） | codex-1 | T01 | 🔨 | #22 |
 | T14 | 阶梯练习 + 伪代码审计（批 1 ✅ #5 / 批 2 ✅ #9 / 批 3 ✅ #11） | codex-2 | T10 ✅ | ✅ | `task/T14-ladder-exercises` |
 | T20 | P1 题型体系 + 打标签指南 + 试标 | cc-C | T12 P1 ✅ | ✅ | #10 |
 | T22 | P1 题型卡 + 核心概念表（批 A ✅ #15 / 批 B ✅ #16 / 批 C ✅ #17） | cc 云端 · Opus 5.5 high | T24 ✅ | ✅ | #15 #16 #17 |
@@ -22,6 +22,7 @@
 | T25 | P2 练习文件夹（批 1 PG ✅ #24 / 批 2 DT 🔨 / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | #24 · `task/T25-p2-practice-b2` |
 | T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
 | T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | 🔨 | `task/T12d-backfill-skills` |
-| T27 | 考官报告摘录挂到行 | codex | T12 | ⏳ | — |
+| T27 | 考官报告逐题摘录挂到行（`er` 字段） | cc · Sonnet 5.5 high | T12 P1–P3 ✅ | 🔨 | `task/T27-er-excerpts` |
 
+| T30 | P3 题型体系 + 打标签指南 + 试标 | cc · Opus 5.5 high | T12 P3 ✅ | 🔨 | `task/T30-p3-taxonomy` |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。

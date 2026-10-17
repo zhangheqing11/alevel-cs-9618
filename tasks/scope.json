@@ -99,5 +99,21 @@
     "allow": [
       "practice/p2/**"
     ]
+  },
+  "T30": {
+    "allow": [
+      "papers/p3/taxonomy.json",
+      "papers/p3/tagging-guide.md",
+      "papers/p3/pilot_tags.csv",
+      "papers/p3/pilot_markpoints.jsonl"
+    ]
+  },
+  "T27": {
+    "allow": [
+      "pipeline/er/**",
+      "corpus/er/**",
+      "corpus/er_report.md",
+      "corpus/rows/**"
+    ]
   }
 }
