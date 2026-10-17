@@ -22,7 +22,10 @@
 | T25 | P2 练习文件夹（批 1 PG ✅ #24 / 批 2 DT 🔨 / 批 3 AD） | codex-2 | T28 ✅ | 🔨 | #24 · `task/T25-p2-practice-b2` |
 | T12c | 私用区字符归一（D26） | codex-1 | T28 ✅ | ✅ | #21 |
 | T12d | D30 新技能标签回填（P2 得分点） | codex-1 | T23 批 A ✅ | 🔨 | `task/T12d-backfill-skills` |
-| T27 | 考官报告逐题摘录挂到行（`er` 字段） | cc · Sonnet 5.5 high | T12 P1–P3 ✅ | 🔨 | `task/T27-er-excerpts` |
+| T27 | 考官报告逐题摘录挂到行（`er` 字段，覆盖 98.8%） | cc-G · Sonnet 5.5 high | T12 P1–P3 ✅ | ✅ | #26 |
 
-| T30 | P3 题型体系 + 打标签指南 + 试标 | cc · Opus 5.5 high | T12 P3 ✅ | 🔨 | `task/T30-p3-taxonomy` |
+| T30 | P3 题型体系 + 打标签指南 + 试标（9 章 79 型） | cc-F · Opus 5.5 high | T12 P3 ✅ | ✅ | #27 |
+| T12e | P3 重复行补 `equivalent_of`（D35） | codex-1 | T30 ✅ | ⏳ | `task/T12e-p3-equivalents` |
+| T31 | P3 全量打标签 + 拆得分点 | 待定 | T30 ✅ | ⏳ | — |
+| T32 | P3 题型卡 + 核心概念表 | cc · Opus | T31 | ⏳ | — |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
