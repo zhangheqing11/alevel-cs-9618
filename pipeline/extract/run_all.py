@@ -17,6 +17,7 @@ from typing import Any
 
 from align import align_rows
 from dedupe import dedupe
+from normalise import normalise_row
 from parse_ms import parse_mark_scheme
 from pdf_text import DEFAULT_CACHE_ROOT, DEFAULT_SOURCE_ROOT, extract_pdf, source_path
 from split_qp import split_question_paper
@@ -45,7 +46,9 @@ def _sample(rows: list[dict[str, Any]], paper: str) -> list[dict[str, Any]]:
 
 
 def row_hash(row):
-    return hashlib.sha256(json.dumps(row, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    base = {k: v for k, v in row.items() if k not in
+            {'types', 'tag_confidence', 'tag_note', 'markpoints', 'ms_max', 'er'}}
+    return hashlib.sha256(json.dumps(base, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 
 def report(selected, rows_by_paper):
@@ -141,6 +144,10 @@ def run(components: set[int]) -> int:
                 row.update(override["fields"])
         rows_by_paper[record["paper"]] = rows
     dedupe(rows_by_paper)
+    # Normalize only after structural decisions, including duplicate links.
+    for rows in rows_by_paper.values():
+        for row in rows:
+            normalise_row(row)
     # Dedupe changes are intentionally written after all rows are present.
     for record in records:
         write_jsonl(ROOT / "corpus" / "rows" / f"p{record['component']}" / f"{record['paper']}.jsonl", rows_by_paper[record["paper"]])

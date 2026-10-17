@@ -190,9 +190,10 @@
     "ms_excerpt": "1 mark per correct row Statement AND NAND NOR XOR OR The output is 1 only when  both inputs are 1 The output is 1 only when  both inputs are different The out",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "17379eb81213a407b87a3c90ee5a0b1e095a08fc4957ffb0d8953e88b1997604",
+    "row_sha256": "255e8eabb05af10d61eed2de690bd402d1c832ef2e19871faf0d3cc8fb990aaf",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s21_13:6(b)",
@@ -220,9 +221,10 @@
     "ms_excerpt": "1 mark Relationship Tick () one-to-one one-to-many many-to-many ",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "1b194828d1ff88c51aadf269c3b06eb2c5011e122949740984d40915566b6bb2",
+    "row_sha256": "b8c22bccc956761efd0199c868839d031995dccdfffa85798ac19686a7de34be",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_11:6(c)(i)",
@@ -265,9 +267,10 @@
     "ms_excerpt": "1 mark per bullet point to max 3 for validation e.g.  range check to make sure it is between 0 and max marks  presence check to make sure a mark is entered  ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "273134ba84e9423a52924a84ff4cd823fc613d87e60d74d07759ec25c674aa1c",
+    "row_sha256": "1d5838fecf50e39f77305199957d25a915f770ad98cd85b3c6c24c2d1e41aef6",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_11:1(d)",
@@ -295,9 +298,10 @@
     "ms_excerpt": "1 mark per bullet point to max 3  PROM can be set once, EPROM and EEPROM can be overwritten multiple times.  EPROM needs to be removed from device EEPROM can ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "637ff9397aafbbe1c9c95dc088800601cbd28f8460b25186fd8e3fb282e51527",
+    "row_sha256": "7e486d07a47db545d9574ff45a6e245dda4afb8942ee499cd1586a4e691cc787",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_12:5(a)",
@@ -340,9 +344,10 @@
     "ms_excerpt": "1 mark per point  Correct conversion to binary 01111111 (127) and 00001100 (12)  Working e.g. turning 01111111 into two's complement 10000001  Answer: 1000 1",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "2b481f401f5c0b33a9163d11340a556127d589546ac88676357b2c051ee14b87",
+    "row_sha256": "982c8a26a9495d4741d6a1be0e60c7cae9a8e5d7c6f5085267f6aa89f218d2da",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_12:2(c)",
@@ -355,9 +360,10 @@
     "ms_excerpt": "1 mark for all correct ticks Statement True False The screen always has five different layers  A processor determines the horizontal and  vertical coordinates",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "528a9ca4e691cbebf63ba9f0259c987db528b6641e57049895f44428263f678f",
+    "row_sha256": "051443a13fd1c33c22afa2bcfb5848c8a165ebe114584f884513868a0ee6b557",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_12:1(b)(i)",
@@ -400,9 +406,10 @@
     "ms_excerpt": "1 mark each from: Public e.g.  Computing services offered by 3rd party provider over the public Internet  Public is open/available to anyone with the appropri",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "22e2391dbea698da81f88fc9fdceaf58a54ee0cc683d5b7abc1bfa3f343faecd",
+    "row_sha256": "6ba66d63099e754870694f81f3326c84b7e5e8af2d4936d524077d89e2c7a49b",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_13:2(b)",
@@ -415,9 +422,10 @@
     "ms_excerpt": "1 mark per point to max 5  Check for interrupt at start/end of an F-E cycle  Priority is checked  If lower priority than current process continue with F-E cy",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "f1591488c07ac4f02b2d24145d41e9a629364fb43594b1e22d1acaae02ae0c07",
+    "row_sha256": "2c1be15c5f0f5965e895312c9f46f65f3a596c1fafb7020e7158c14022c73549",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_13:2(a)",
@@ -430,9 +438,10 @@
     "ms_excerpt": "1 mark for each correct description Step Description PC  [PC] + 1 Address in PC is incremented MDR  [[MAR]] The data in the address held in the MAR is copied ",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "7b6a8aa0fd2ecf40ad8868d28bb1a18bfab50535965c9dfe8e694c28bd4093c7",
+    "row_sha256": "01fcfcac455fbc6b8fe3e274bbe032653404556fe0261b107738cd6b56bf9482",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s22_13:5(b)(iii)",
@@ -445,9 +454,10 @@
     "ms_excerpt": "1 mark per bullet point to max 2  Validation checks data is reasonable/within bounds it does not check that accurate data has been entered  Verification check",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "d286c2390139e79322b87ab085e79f297fe367f95d195e04bc389af046dff542",
+    "row_sha256": "e33ae75e11fb288629f0c8643bfad52ffb9c7ef9d15ea49471366dde4a8ef1ed",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_11:3(c)",
@@ -460,9 +470,10 @@
     "ms_excerpt": "1 mark each to max 3  Rearranges blocks of individual files (on the HDD) so they are contiguous // moves the free space together  Accessing each file is faste",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "b198f07d34e3342a75681b31db37ef37a820b00820e9bde7f28a05c0109c73a6",
+    "row_sha256": "f152190863ab2426abac77e3476724c208bdaccdd956f41517e1e8fdf77ecc20",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_11:3(d)(iv)",
@@ -490,9 +501,10 @@
     "ms_excerpt": "1 mark for reason, 1mark for application/justification  The computer will have a large number of read/write operations because it is working all the time  .. ",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "96f573671b9980e6369474bdb0db078ef2304ecfc7a9b7cf4f6567821249b66c",
+    "row_sha256": "eb97c463947696c312f0a0f9415a88c87f83925b75ca7f6755b624c7da065636",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_11:6",
@@ -505,9 +517,10 @@
     "ms_excerpt": "1 mark each to max 5  An interrupt flag is raised in the (interrupt) register  At the end of the current FE cycle // at the start of the next FE cycle  The s",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "cc4be84cf423d7dd69cd8aba0df3e3eebf266814e7b11062a9a24804720134ed",
+    "row_sha256": "5c026bc50bc1550273d0fe9d3189bd00e4cce94a9b65ce82aa96aada9c186a66",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_11:1(a)",
@@ -550,9 +563,10 @@
     "ms_excerpt": "1 mark for a correct answer  1 bit is transferred at a time  Can be synchronous or asynchronous  USB-3 is full duplex and earlier versions are half-duplex",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "f344ddcef818780d7685051e800c7d1c44784c2c34e2d8eccdc73d4d28ccf72d",
+    "row_sha256": "1f16e368d01cb54c23ec45b6e0898ab7059695ebf97dc1fc9be4a9bd9e6bcb0f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_12:6(a)",
@@ -595,9 +609,10 @@
     "ms_excerpt": "1 mark each to max 2  To help users to set-up / configure / analyse / optimise / maintain the computer ...  ... by for example, making memory allocation more ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "42813b33aa8a21897b3eed700d64d583acf46f396c0ef598c9869d05502abc65",
+    "row_sha256": "dbf40a63e41005384cdc8daa82806792817c7ed398272e86122ef4779026fcb1",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_13:3(c)(i)",
@@ -610,9 +625,10 @@
     "ms_excerpt": "1 mark each  The amplitude is recorded a set number of times a second  Each (instance of an) amplitude is given a corresponding binary number  The binary ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "ac6852798b5b3664afb4c8472b2249264bb92cee164e18bb3e709f6a113c838d",
+    "row_sha256": "574291674067ca250d8fd4c96c22a5072381c251947ab018eb7ff58ec447741a",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_13:7(b)",
@@ -625,9 +641,10 @@
     "ms_excerpt": "1 mark each to max 4  The system clock gives out timing signals  … which are sent on the control bus  …to synchronise the other system components  The C",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "86ac7fc5ee4829a6debda71ebbd30ede55b7cf2420ebea3d56bfee1f3b8ae7f1",
+    "row_sha256": "69870bf20ba4bcaa8e158d755939d898e1ee60a4ae79ce71a4e3bd8e325db893",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_13:1(b)",
@@ -655,9 +672,10 @@
     "ms_excerpt": "1 mark each to max 3  The compiler produces an executable file  ... so the user cannot access / edit / sell the code  ... and users do not need the transl",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "002f089d0875f6d2de5e9dd44652a9f0574cfc82a33afc87913206bf143d0cab",
+    "row_sha256": "247f8bba7b8c581ac6b35f3364bcc37293b39c2b7a99c9fa367553132f08de1f",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s23_13:3(a)",
@@ -670,9 +688,10 @@
     "ms_excerpt": "1 mark for each term  Resistive  Circuit  Capacitive  Change  Coordinates A resistive touchscreen has two layers. When the user touches the screen, th",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "5c61af0e69ede524b1f831d4835a584c87b8a93e7e90a220a13faef58d3cc62a",
+    "row_sha256": "5062e62b303dd7468a5a8e99b6a9093c4f2fbe409aec068aacd75f56970ad03d",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_11:2(c)(iii)",
@@ -790,9 +809,10 @@
     "ms_excerpt": "1 mark each to max 4 Max 3 marks for each management task: Memory management: Max 3 marks  Stores data from all currently running programs concurrently in RAM ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "db84d64c466d596011f0879404305ee46a82166cc1c7d547e34a2ad9d2ded79f",
+    "row_sha256": "bf72b43741d8f93db9ca3ac7c2cf209ce98bcc04bd5e8d9bd0d15964cd976dc0",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_12:4(b)",
@@ -805,9 +825,10 @@
     "ms_excerpt": "1 mark each:  Creating table EXAM with opening and closing brackets  All fields with appropriate data types and commas at end of lines  ExamID as primary key",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "b9fa449c114b32c41f70e2dd78b1db7ee13ed4b5d56ff2ba846f22a9b5470dc2",
+    "row_sha256": "f08d11a5a6ca5d65d9db06767d45a122010446f6a532992e4ef0f0c03c0e16fd",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_12:4(a)",
@@ -835,9 +856,10 @@
     "ms_excerpt": "1 mark each for:  Selecting COUNT of an attribute in PERFORMANCE table with suitable name  FROM clause  Joining tables  Grouping by the title and selecting ",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "8d55fd6442fca7ef8346f346d7b18b235e61d242beadbe435e0c4f92b1baf9bf",
+    "row_sha256": "d7f5a0376bb57b2fecea419e8785355f3932b5109366faac369acb5d2603ada4",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_13:2(b)(ii)",
@@ -850,9 +872,10 @@
     "ms_excerpt": "1 mark each:  Identifies consecutive repeating pixels of the same colour  Stores the colour /pattern and the number of times it repeats",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "21ebd884386e487d5a513f7f07c8ee1bc1872507f9263f078d13282688765b2e",
+    "row_sha256": "b8229ead7d37e297eb4d082f5550050fed6fe7f8b884d5a447c8f1ac34087bd1",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_13:1(b)",
@@ -880,9 +903,10 @@
     "ms_excerpt": "1 mark each to max 3: e.g.  Not reliant on a third party  … gives greater control over security/privacy  … gives greater control over backup  Storage can be",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "da51ce8290dcb5b0a7240686d6da1f9f73da6b6cd4ffddef61d1580f7d851b8a",
+    "row_sha256": "3a36e4af21edab9ba96838dab98b419e1e96f50dc3ba8248a61bf522392c1292",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s24_13:7(f)(ii)",
@@ -895,9 +919,10 @@
     "ms_excerpt": "1 mark each to max 2:  Encodes/scrambles data  ... so if it is intercepted it cannot be understood  Algorithm/key is required to decode the data",
     "figure": false,
     "result": "一致（题号、起句/关键数据、分值、页码、同题 MS 起句）",
-    "row_sha256": "e2817cea33bc3468a39eecb823a4ea4444dd73f3b13659834f1b37a1d1ae16b1",
+    "row_sha256": "5c0a8c37d0cf75e1ebb9d684d3ecc6aaf18c397edcb90f465f3ac4d11154015c",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s25_11:2(b)(ii)",
@@ -1090,9 +1115,10 @@
     "ms_excerpt": "1 mark each • MAR  [PC] and PC  [PC] + 1 • MDR  [[MAR]] • CIR  [MDR] • Correct order • For example: • MAR  [PC] • PC  [PC] + 1 • MDR  [[MAR]] • CIR  [MD",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "3bd72a0e5a6f566c1b5390275ab8ea243c9115f7406f31c485e80ceaeff0b70c",
+    "row_sha256": "50866181452f5f513ed42bb5a36eedd26c29c1bfdbb3f2cb10c439ab17ffa785",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_s25_13:6(c)",
@@ -1435,9 +1461,10 @@
     "ms_excerpt": "1 mark for 1 tick in the correct place 2 marks for all 3 ticks correct Normalisation stage Task 0NF to 1NF to 2NF to 1NF 2NF 3NF Remove any partial key dependen",
     "figure": true,
     "result": "一致；图表/代码布局已看原页，文字不代替图形",
-    "row_sha256": "c9bb7901c3483ec300853e5e12086a801d463bb33df7802d0fb894540e2f1b0d",
+    "row_sha256": "621cc306f4327804dbcb55a04fde1643df2262a46a0bab62efa99ec8855d53a3",
     "reviewer": "codex-1",
-    "review_date": "2026-10-16"
+    "review_date": "2026-10-16",
+    "normalisation": "D26 mechanical substitutions only; baseline field comparison verified; original PDF review date unchanged"
   },
   {
     "id": "9618_w21_12:8(b)(iii)",
