@@ -184,7 +184,12 @@ def plan(root: Path = ROOT):
 
 
 def unmatched(root: Path = ROOT, stats=None, used=None):
-    """ER labels that reached no row -> [(paper, label, reason, entry)]"""
+    """ER labels that reached no row -> [dict(paper, label, kind, reason, entry)].
+
+    kinds: no_rows (paper not extracted yet), superseded (every row below the label has its
+    own, more specific comment, so the broader comment is not used), finer_than_row (ER is
+    finer than the row that exists), no_such_row, duplicate (ER prints the label twice).
+    """
     by_paper, duplicates, generals = load_er(root)
     if stats is None or used is None:
         _, stats, used = plan(root)
@@ -194,25 +199,28 @@ def unmatched(root: Path = ROOT, stats=None, used=None):
             if line.strip():
                 rows_by_paper[path.stem].add(json.loads(line)['q'])
     out = []
+
+    def add(entry, kind, reason):
+        out.append(dict(paper=entry['paper'], label=entry['label'], kind=kind, reason=reason, entry=entry))
+
     for paper, labels in sorted(by_paper.items()):
         rows = rows_by_paper.get(paper)
         for label, entry in labels.items():
             if label in used.get(paper, set()):
                 continue
             if rows is None:
-                reason = 'no rows for this paper in corpus/rows (not extracted yet)'
+                add(entry, 'no_rows', 'no rows for this paper in corpus/rows yet')
+                continue
+            below = sorted(q for q in rows if label in ancestors(q)[1:])
+            coarse = [a for a in ancestors(label)[1:] if a in rows]
+            if below:
+                add(entry, 'superseded', 'every row below it has its own comment: ' + ', '.join(below))
+            elif coarse:
+                add(entry, 'finer_than_row', f'ER is finer than row {coarse[0]} (rows are not split there)')
             else:
-                children = sorted(q for q in rows if label in ancestors(q)[1:])
-                if children:  # cannot happen: a parent label always reaches its leaf rows
-                    reason = 'covered only by more specific ER labels: ' + ', '.join(children)
-                elif any(label in ancestors(x)[1:] for x in labels if x != label) and not any(
-                        r == label for r in rows):
-                    reason = 'ER label is finer than any row; no row to carry it'
-                else:
-                    reason = 'no row with this question number (ER label finer than rows, or ER typo)'
-            out.append((paper, label, reason, entry))
+                add(entry, 'no_such_row', 'no row with this question number')
     for entry in duplicates:
-        out.append((entry['paper'], entry['label'], 'ER prints this label twice; second block not attached', entry))
+        add(entry, 'duplicate', 'ER prints this label twice; second block not attached')
     return out
 
 
