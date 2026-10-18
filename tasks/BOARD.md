@@ -32,6 +32,6 @@
 | T31 | P3 全量打标签 + 拆得分点（跨模型盲标一致 100%） | codex-1 | T30 ✅ | ✅ | #32 |
 | T32 | P3 题型卡 + 核心概念表（批 A DR/CI/HV/BL + front · 批 B SY/SC/AI · 批 C CT/FP + back，并行） | cc-H / cc-I / cc-J · Opus 5.5 high | T31 ✅ | 🔨 | `task/T32{A,B,C}-p3-cards` |
 | T33 | P4 题型体系 + 技能标签 + 指南 + 试标 + 练习约定草案 | cc-K · Opus 5.5 high | T12 P4 ✅ | 🔨 | `task/T33-p4-taxonomy` |
-| T40 | 分数线表（10 季 component / option） | codex-1 | — | 🔨 | `task/T40-grade-thresholds` |
-| T41 | 整卷模考批改包生成器（s26 + 估分） | codex-2 | T40（估分部分） | 🔨 | `task/T41-mock-kit` |
+| T40 | 分数线表（10 季 component 120 行 / option 156 行） | codex-1 | — | ✅ | #38 |
+| T41 | 整卷模考批改包生成器（s26 + 估分；已接 T40 真实分数线） | codex-2 | T40（估分部分） | ✅ | #39 |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
