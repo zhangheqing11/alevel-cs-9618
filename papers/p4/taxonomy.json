@@ -1,0 +1,868 @@
+{
+  "component": 4,
+  "version": "1.0",
+  "chapters": [
+    {
+      "code": "PR",
+      "name_zh": "输入、字符串与计算",
+      "name_en": "Input, strings and calculation",
+      "syllabus": [
+        "11.1",
+        "11.2",
+        "20.1"
+      ]
+    },
+    {
+      "code": "AR",
+      "name_zh": "数组与记录",
+      "name_en": "Arrays and records",
+      "syllabus": [
+        "10.1",
+        "10.2",
+        "11.2"
+      ]
+    },
+    {
+      "code": "FL",
+      "name_zh": "文本文件与异常处理",
+      "name_en": "Text files and exception handling",
+      "syllabus": [
+        "10.3",
+        "20.2"
+      ]
+    },
+    {
+      "code": "SR",
+      "name_zh": "查找与排序",
+      "name_en": "Searching and sorting",
+      "syllabus": [
+        "19.1"
+      ]
+    },
+    {
+      "code": "RC",
+      "name_zh": "递归",
+      "name_en": "Recursion",
+      "syllabus": [
+        "19.2"
+      ]
+    },
+    {
+      "code": "SQ",
+      "name_zh": "栈与队列",
+      "name_en": "Stacks and queues",
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "LT",
+      "name_zh": "链表、二叉树与哈希表",
+      "name_en": "Linked lists, binary trees and hash tables",
+      "syllabus": [
+        "10.4",
+        "13.2",
+        "19.1"
+      ]
+    },
+    {
+      "code": "OP",
+      "name_zh": "面向对象编程",
+      "name_en": "Object-oriented programming",
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "MP",
+      "name_zh": "主程序与测试证据",
+      "name_en": "Main program and test evidence",
+      "syllabus": [
+        "11.3",
+        "12.3"
+      ]
+    }
+  ],
+  "types": [
+    {
+      "code": "P4-PR-01",
+      "chapter": "PR",
+      "name_zh": "键盘输入与输入校验",
+      "name_en": "Input with validation",
+      "summary": "用 input() 读入一个或几个值并转成要求的类型（int / float / 大小写统一），循环直到合法（范围、长度、取值列表、未被选过）；在模块里或主程序里，得分点主要落在提示、读入、转换、校验循环上的小问。",
+      "cues": [
+        "prompts the user to input … reads the input and validates it is between 1 and 20 (inclusive)",
+        "The number input must be a whole number between 1 and 100 inclusive",
+        "repeatedly take a row position as input until it is between 0 and 9 inclusive",
+        "takes the difficulty level as input until it is valid",
+        "ask the user to input a 3-character player name and an integer score that must be between 1 and 100 000 inclusive"
+      ],
+      "not": [
+        "P4-MP-02：输入只是数据来源、每个值交给某模块处理并按返回值输出，没有校验循环 → MP-02",
+        "P4-SR-01：读入后在数组里逐个比较查找或计数，查找部分 ≥ 2 分 → SR-01（本题型进 cross）",
+        "P2-PG-09：P2 是写伪代码（INPUT / REPEAT UNTIL）；P4 上机写 Python → 本题型"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P4-PR-02",
+      "chapter": "PR",
+      "name_zh": "字符串处理",
+      "name_en": "String processing",
+      "summary": "对字符串参数或输入做逐字符处理、比较、拆分、拼接与大小写转换：数元音、逐字符比较两个串的字母顺序、按分号或逗号拆成数组、游程压缩（数据不是靠出队取得时）、校验位（取前几位字符计算）、把属性拼成规定格式的字符串。",
+      "cues": [
+        "takes a string as a parameter and counts the number of lower-case vowels",
+        "compares each string, one character at a time, to identify which string comes first alphabetically",
+        "splits a string parameter into four individual lines of code",
+        "uses the check digit to validate each input"
+      ],
+      "not": [
+        "P4-OP-03：类的方法把属性拼成字符串返回（Description()、GetPosition()）→ OP-03，本题型不进 cross（拼接只是方法体）",
+        "P4-AR-04：把整个数组拼成一行输出或返回（FormatArray()、ReturnAllData()）→ AR-04",
+        "P4-SQ-04：被处理的数据靠循环调用 Dequeue / Pop 取得（9618_w25_43:2(e) 出队后做游程压缩）→ SQ-04，字符串处理 ≥ 2 分时本题型进 cross",
+        "P4-RC-02：要求把逐字符的迭代算法改写成递归 → RC-02",
+        "P2-PG-11：P2 用插页函数 MID / LENGTH 写伪代码；P4 用 Python 切片与字符串方法上机写 → 本题型"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P4-PR-03",
+      "chapter": "PR",
+      "name_zh": "数值计算与分支逻辑",
+      "name_en": "Calculation and selection logic",
+      "summary": "按题给公式或规则计算并返回、输出结果：多分支判断（按次数给分、按方向改坐标、按颜色加分）、百分比与平均值、取整、整除与余数、求因数之和；常为独立函数或过程，也可能在主程序里。",
+      "cues": [
+        "If the number of attempts is 1, it returns the value of points",
+        "The chance of a horse jumping a fence without knocking it down is calculated as follows",
+        "If ‘A’ is input, the character moves left (x coordinate minus 1)",
+        "calculate and output the average chance of success",
+        "totals all the divisors of its integer parameter and returns this total"
+      ],
+      "not": [
+        "P4-OP-03：计算写在类的方法里、用的是对象属性 → OP-03",
+        "P4-PR-02：计算对象是字符串的字符（校验位、逐位处理）→ PR-02",
+        "P4-RC-01：题目要求递归实现计算 → RC-01"
+      ],
+      "syllabus": [
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P4-AR-01",
+      "chapter": "AR",
+      "name_zh": "声明一维数组并存入数据",
+      "name_en": "Declare and populate a 1D array",
+      "summary": "声明全局或局部一维数组（注明元素个数与类型，D10），并存入题给数据、空值 / –1、或指定范围的（不重复）随机数；也包括同时声明的计数变量（NumberItems）。不含栈、队列、链表、二叉树、哈希表自己的数组与指针（归各自题型）。",
+      "cues": [
+        "Write program code to declare the global 1D array … with space for 15 string elements",
+        "declare the global 1D array, arrayData, with ten elements • initialise arrayData in the main program using the data values shown",
+        "The array is declared and initialised local to the main program",
+        "store 20 unique random numbers between 0 and 100 (inclusive) in the array"
+      ],
+      "not": [
+        "P4-SQ-01 / P4-SQ-02 / P4-SQ-03：声明的是栈或队列的数组与指针 → 对应的栈 / 队列题型",
+        "P4-LT-01 / P4-LT-03 / P4-LT-05：链表、二叉树、哈希表的数组与指针 → 对应题型",
+        "P4-AR-02：二维数组 → AR-02",
+        "P4-AR-03：数组元素是记录（要先声明记录类型）→ AR-03"
+      ],
+      "syllabus": [
+        "10.2"
+      ]
+    },
+    {
+      "code": "P4-AR-02",
+      "chapter": "AR",
+      "name_zh": "二维数组",
+      "name_en": "2D arrays",
+      "summary": "声明二维数组（行 × 列、元素类型），用嵌套循环赋初值（–1、随机数、文件读入），按行列访问与修改；数据本身是表（作业号与优先级、玩家 ID / 关卡 / 分数）。",
+      "cues": [
+        "The main program declares a 2D array of 10 by 10 integer elements",
+        "The program stores the jobs in a global 2D array",
+        "The data about the players and their scores is stored in a 2D array of strings",
+        "The first dimension of the array has seven elements: one for each player"
+      ],
+      "not": [
+        "P4-AR-04：模块只把二维数组按行列格式输出（9618_s22_42:2(b)(ii)）→ AR-04",
+        "P4-LT-01 / P4-LT-03：二维数组用来存链表（数据 + 指针）或二叉树（左指针 / 数据 / 右指针）→ LT-01 / LT-03",
+        "P4-LT-05：二维数组是哈希表 → LT-05",
+        "P4-SR-03 / P4-SR-04：要求对二维数组排序 → 对应排序题型（本题型进 cross）",
+        "P4-OP-06：二维数组是类的属性、元素是对象（Board 的 TheBoard）→ OP-06"
+      ],
+      "syllabus": [
+        "10.2"
+      ]
+    },
+    {
+      "code": "P4-AR-03",
+      "chapter": "AR",
+      "name_zh": "记录结构",
+      "name_en": "Record structures",
+      "summary": "按题给伪代码 TYPE 或字段说明声明记录（Python 用只有属性的 class，属性注释写类型）；建一条记录并给字段赋值（含“空记录”：字段全为 –1 / 空串），存进记录数组。",
+      "cues": [
+        "Write program code to declare the record type node",
+        "Write program code to declare a record structure, SaleData, to store the data about each sale",
+        "If your programming language does not support record structures, a class can be declared instead",
+        "An empty record has the integer –1 stored in each field"
+      ],
+      "not": [
+        "P4-OP-01：题目说用 OOP 声明类（私有属性、构造方法）→ OP-01",
+        "P4-SQ-02 / P4-SQ-03：声明的是记录数组形式的队列（数组 + 指针）→ 对应队列题型",
+        "P4-FL-02：从文件读入后建记录 → FL-02",
+        "P3-DR-03：P3 是在纸上写 TYPE … ENDTYPE；P4 上机写 → 本题型"
+      ],
+      "syllabus": [
+        "10.1"
+      ]
+    },
+    {
+      "code": "P4-AR-04",
+      "chapter": "AR",
+      "name_zh": "按格式输出数组内容",
+      "name_en": "Output or format array contents",
+      "summary": "按下标顺序遍历数组（一维、二维、记录或对象数组），按题给格式输出：同一行空格分隔、每项一行、二维数组按行列成网格、带说明文字；或把所有元素拼成一个字符串返回。不跟随指针。",
+      "cues": [
+        "outputs the contents of the array in the order they are stored. The items are printed on the same line",
+        "outputs each job number and priority on a line, for example: 123 priority 1",
+        "Write a procedure to output all 10 elements in the stack and the value of StackPointer",
+        "outputs the left pointer, the data and the right pointer for each node … in the order they are saved in the array",
+        "The values should be output as a 2D grid, with values in rows and columns"
+      ],
+      "not": [
+        "P4-LT-01：沿指针从头结点走到空指针输出 → LT-01",
+        "P4-LT-04：中序 / 后序遍历二叉树 → LT-04",
+        "P4-AR-05：输出前要先按条件挑选 → AR-05"
+      ],
+      "syllabus": [
+        "10.2",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P4-AR-05",
+      "chapter": "AR",
+      "name_zh": "数组的统计与筛选",
+      "name_en": "Array statistics and filtering",
+      "summary": "遍历数组（常为记录或对象数组，用 getter 取属性）做统计或筛选：最大 / 最小（最长 / 最短）、合计与百分比、按一个或多个条件挑出元素存进新数组或输出、没有符合时输出提示。",
+      "cues": [
+        "finds and outputs the longest string in the array of strings • finds and outputs the shortest string",
+        "After the procedure has output the list of trees that meet all the requirements",
+        "create a new array with only the characters that meet both of the criteria",
+        "finds and outputs the largest number that was in the stack",
+        "outputs the percentage of answers the user entered from the array"
+      ],
+      "not": [
+        "P4-SR-01：只和一个目标值逐个比较（找位置、是否存在、出现次数）→ SR-01",
+        "P4-SQ-04：数据靠 Pop / Dequeue 逐个取出再统计 → SQ-04（本题型进 cross）",
+        "P2-DT-05 / P2-DT-07：P2 写伪代码；P4 上机写 → 本题型"
+      ],
+      "syllabus": [
+        "10.2",
+        "11.2"
+      ]
+    },
+    {
+      "code": "P4-FL-01",
+      "chapter": "FL",
+      "name_zh": "读文本文件到数组或 ADT",
+      "name_en": "Read a text file into an array or ADT",
+      "summary": "以读模式打开题给文件（文件名可来自参数或输入），循环到文件尾或固定次数，每行读一项（去换行、转类型），存入数组或调用 Push / Enqueue / AddNode 放进 ADT，关闭文件；按题目要求用 try / except 处理文件不存在。",
+      "cues": [
+        "The procedure ReadFile() must read in the numbers from the text file and store each one in the array. Use appropriate exception handling",
+        "reads the animal names from the file AnimalData.txt • uses PushAnimal() to insert each name onto the stack",
+        "opens the file QueueData.txt • reads in each line from the text file",
+        "takes a file name as a parameter • opens the file and reads in the data"
+      ],
+      "not": [
+        "P4-FL-02：每行要拆成几个字段，或几行合成一条记录 / 一个对象 → FL-02",
+        "P4-SQ-04：读进栈或队列后还要用 Pop / Dequeue 做处理且该部分 ≥ 2 分 → 本题型为主，SQ-04 进 cross",
+        "P3-FP-10：P3 写随机文件伪代码（SEEK、GETRECORD）→ P3"
+      ],
+      "syllabus": [
+        "10.3",
+        "20.2"
+      ]
+    },
+    {
+      "code": "P4-FL-02",
+      "chapter": "FL",
+      "name_zh": "读文件拆字段并建记录或对象",
+      "name_en": "Read a file into records or objects",
+      "summary": "读文件时每行按逗号 / 空格拆成字段，或每 n 行合成一组，转换类型后建记录或实例化对象（必要时按字段决定建父类还是子类对象），存入数组并返回或计数；含打开、循环到 EOF、关闭与异常处理。",
+      "cues": [
+        "The text file Trees.txt stores data about 9 trees. The data in the file is stored in the format: Tree name,Height growth each year",
+        "The text file Pictures.txt stores the data for the pictures in the order: description, width, height, colour",
+        "Each row contains three integer numbers separated by commas",
+        "creates a new record of type ToyRecord for each toy read from the file"
+      ],
+      "not": [
+        "P4-FL-01：每行就是数组的一项，不拆字段、不建对象 → FL-01",
+        "P4-OP-07：数据由题目直接给出（不读文件）而在主程序里创建对象 → OP-07",
+        "P4-LT-05：读出记录后调用 InsertIntoHash 等散列插入且该部分 ≥ 2 分 → 本题型为主，LT-05 进 cross"
+      ],
+      "syllabus": [
+        "10.1",
+        "10.3",
+        "20.2"
+      ]
+    },
+    {
+      "code": "P4-FL-03",
+      "chapter": "FL",
+      "name_zh": "写入或追加文本文件",
+      "name_en": "Write or append to a text file",
+      "summary": "以写（新建 / 覆盖）或追加模式打开文件，遍历数组 / 记录 / 二叉树结点，把各项拼成一行（逗号分隔、换行）写入，关闭文件；常要求异常处理。截图时文件名要可见（见 MP-03）。",
+      "cues": [
+        "stores the new top ten player names and scores in a text file called NewHighScore.txt",
+        "opens the text file with the filename that is passed as a parameter • appends each item of data",
+        "creates and opens the file SelectedToys.txt to write",
+        "stores the content of TreeArray in a new text file with the filename Tree.txt"
+      ],
+      "not": [
+        "P4-FL-01 / P4-FL-02：只读不写 → FL-01 / FL-02",
+        "P2-DT-10：P2 写 OPENFILE … FOR WRITE 伪代码；P4 上机写 → 本题型"
+      ],
+      "syllabus": [
+        "10.3",
+        "20.2"
+      ]
+    },
+    {
+      "code": "P4-SR-01",
+      "chapter": "SR",
+      "name_zh": "线性查找与计数",
+      "name_en": "Linear search and counting",
+      "summary": "在数组里逐个与一个目标值比较：返回是否找到（True / False）、返回位置（找不到返回 –1）、或数出出现次数；目标值常来自参数或经校验的输入。不能用 in、index()、count() 代劳（D10）。",
+      "cues": [
+        "performs a linear search on arrayData to find the parameter value. It returns True if it was found",
+        "counts and returns the number of times the search value is found in the array",
+        "The function then returns the number of times the number input appears in the array",
+        "counts and outputs the number of times the input is stored in DataArray"
+      ],
+      "not": [
+        "P4-AR-05：比较条件不是“等于一个目标值”（多条件、范围、最值）→ AR-05",
+        "P4-SR-02：数据有序、取中点折半 → SR-02",
+        "P3-CT-02：P3 在纸上写或补全查找伪代码 → P3；P4 上机写 → 本题型"
+      ],
+      "syllabus": [
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-SR-02",
+      "chapter": "SR",
+      "name_zh": "二分查找（迭代或递归）",
+      "name_en": "Binary search (iterative or recursive)",
+      "summary": "在已排序数组上设上下界、取中点（整除）、比较后移动上界或下界，找到返回下标、找不到返回 –1；迭代版用条件循环，递归版以 First > Last 为基本情况、用 Middle ± 1 递归调用。",
+      "cues": [
+        "Write program code for the iterative function BinarySearch()",
+        "Write program code for the recursive function BinarySearch()",
+        "The function Search() performs a binary search to find ItemToFind in DataArray",
+        "The recursive function RecursiveBinarySearch() takes four parameters"
+      ],
+      "not": [
+        "P4-SR-01：逐个比较、不折半 → SR-01",
+        "P4-RC-01：递归版的基本情况与递归调用 ≥ 2 分 → 本题型为主，RC-01 进 cross",
+        "P3-CT-02：P3 写伪代码 → P3"
+      ],
+      "syllabus": [
+        "19.1",
+        "19.2"
+      ]
+    },
+    {
+      "code": "P4-SR-03",
+      "chapter": "SR",
+      "name_zh": "冒泡排序",
+      "name_en": "Bubble sort",
+      "summary": "用嵌套循环比较相邻元素并交换（临时变量），按升序 / 降序、按字符串首字母或长度、按记录某字段或二维数组某一维排序；可要求“无交换即停止”的高效版本，或按题给伪代码补全语句后写成程序。不能用 sort() 代劳。",
+      "cues": [
+        "implement the bubble sort algorithm … You must not use any built-in sorting functions",
+        "The following bubble sort pseudocode algorithm sorts the data in theArray into descending numerical order. There are five incomplete statements",
+        "The bubble sort needs to be efficient and stop iterating as soon as",
+        "sorts the data into ascending order using a bubble sort • returns the sorted array"
+      ],
+      "not": [
+        "P4-SR-04：取出元素、把较大元素后移再插入 → SR-04",
+        "P2-DT-08：P2 写伪代码 → P2；P3-CT-03：P3 写或补全排序伪代码 → P3"
+      ],
+      "syllabus": [
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-SR-04",
+      "chapter": "SR",
+      "name_zh": "插入排序",
+      "name_en": "Insertion sort",
+      "summary": "逐个取出元素，与左侧已排序部分比较、把较大元素后移、插回空位；按升序、按字符串、按记录 / 二维数组的某个字段（可多关键字）排序；含把递归版插入排序改写为迭代版，或照伪代码写递归版。",
+      "cues": [
+        "sorts the data in the array into ascending numerical order using an insertion sort",
+        "the array is sorted into ascending numerical order of priority using an insertion sort",
+        "The following recursive pseudocode function sorts the array into ascending order using an insertion sort",
+        "IterativeInsertion()to perform the same processes as RecursiveInsertion()but using iteration instead of recursion"
+      ],
+      "not": [
+        "P4-SR-03：相邻比较交换 → SR-03",
+        "P4-RC-02：递归 ↔ 迭代改写的对象是插入排序时，主题型仍为本题型，RC-02 进 cross",
+        "P3-CT-03：P3 写伪代码 → P3"
+      ],
+      "syllabus": [
+        "19.1",
+        "19.2"
+      ]
+    },
+    {
+      "code": "P4-RC-01",
+      "chapter": "RC",
+      "name_zh": "按描述或伪代码写递归子程序",
+      "name_en": "Write a recursive subroutine",
+      "summary": "按文字算法或题给伪代码写递归函数 / 过程：基本情况及其返回值、带缩小参数的递归调用、用递归返回值组合结果（求和、计数、乘除）、按要求输出参数；主程序用指定参数调用并输出返回值。",
+      "cues": [
+        "Study the following pseudocode for a recursive function … Write program code to declare the function Unknown()",
+        "A recursive function RecursiveCount() takes three parameters",
+        "Write program code for RecursiveValue()",
+        "returns 1 added to the return value from a recursive call (passing the array without the first element)"
+      ],
+      "not": [
+        "P4-RC-02：题目给的是迭代版、要求改写成递归（或反过来）→ RC-02",
+        "P4-SR-02 / P4-SR-04 / P4-LT-04：递归的是二分查找、插入排序、二叉树查找或遍历 → 对应题型（本题型按 ≥ 2 分进 cross）",
+        "P3-CT-12：P3 是追踪递归填表 → P3"
+      ],
+      "syllabus": [
+        "19.2"
+      ]
+    },
+    {
+      "code": "P4-RC-02",
+      "chapter": "RC",
+      "name_zh": "迭代与递归互相改写",
+      "name_en": "Rewrite iteration as recursion or vice versa",
+      "summary": "题目给出一个迭代（或递归）函数，要求写出功能相同的递归（或迭代）版本：找出循环变量对应的参数与基本情况，或把递归调用展开成循环并保留输出与返回值。",
+      "cues": [
+        "Rewrite the function Unknown() as an iterative function, IterativeUnknown()",
+        "Rewrite the function IterativeVowels() as a recursive function with the identifier RecursiveVowels()",
+        "The following iterative pseudocode function calculates the total … Rewrite the function as a recursive function using program code"
+      ],
+      "not": [
+        "P4-RC-01：没有要求从另一种写法改写，只按描述 / 伪代码写递归 → RC-01",
+        "P4-SR-04：改写对象是插入排序 → SR-04（本题型进 cross）"
+      ],
+      "syllabus": [
+        "19.2"
+      ]
+    },
+    {
+      "code": "P4-SQ-01",
+      "chapter": "SQ",
+      "name_zh": "数组实现栈",
+      "name_en": "Stack in an array",
+      "summary": "声明栈数组（大小、类型、初值）与栈顶指针（指向栈顶元素，初值 –1；或指向下一空位，初值 0），写 Push（判满 → 返回失败值，否则移动指针并存入、返回成功值）与 Pop（判空 → 返回题给空值，否则取出并移动指针）；照题目给的指针约定与返回值。",
+      "cues": [
+        "The stack can store up to 10 integer elements. A 1D array StackData is used to store the stack globally",
+        "The function Push() takes an integer parameter and returns FALSE if the stack is full",
+        "The function Pop() returns the next item from the stack. The function returns \"–1\" if the stack is empty",
+        "Study the pseudocode function PushAnimal()"
+      ],
+      "not": [
+        "P4-SQ-04：调用 Push / Pop 去完成别的处理（计算、分类、配对输出）→ SQ-04",
+        "P4-AR-04：只按下标顺序输出栈数组与指针 → AR-04",
+        "P2-DT-16 / P3-CT-06：P2、P3 写伪代码 → P2 / P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-SQ-02",
+      "chapter": "SQ",
+      "name_zh": "数组实现线性队列",
+      "name_en": "Linear queue in an array",
+      "summary": "声明队列数组与队首、队尾指针（常为 –1；或队尾指向下一空位，初值 0），写 Enqueue（判满、第一次入队时把队首设为 0、移动队尾并存入、返回 TRUE / FALSE）与 Dequeue（判空返回题给值，否则取队首元素并后移队首）；含用记录结构包住数组与指针的队列。",
+      "cues": [
+        "A program uses a linear queue to store up to 100 integers",
+        "The queue is stored as a global 1D array, QueueData, of string values … QueueHead to −1 and QueueTail to −1",
+        "If the queue is not full, it inserts the parameter in the queue, updates the appropriate pointer(s) and returns TRUE",
+        "A linear queue data structure is designed using a record structure"
+      ],
+      "not": [
+        "P4-SQ-03：队尾到数组末尾后回到 0、用 NumberItems 判满判空 → SQ-03",
+        "P4-SQ-04：调用 Enqueue / Dequeue 去完成别的处理 → SQ-04",
+        "P2-DT-16 / P3-CT-07：伪代码 → P2 / P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-SQ-03",
+      "chapter": "SQ",
+      "name_zh": "数组实现循环队列",
+      "name_en": "Circular queue in an array",
+      "summary": "声明循环队列数组、Head / Tail 指针与 NumberOfItems；Enqueue 判满（个数 = 容量）、存入后 Tail 加 1 并在越界时回到 0、个数加 1；Dequeue 判空、取出 Head 元素后 Head 加 1 并回绕、个数减 1；元素可以是记录。",
+      "cues": [
+        "A program uses a circular queue to store strings",
+        "store the data about the sales in a circular queue data structure",
+        "The function Enqueue is written in pseudocode … there are five incomplete statements",
+        "A program stores positive integers in a circular queue"
+      ],
+      "not": [
+        "P4-SQ-02：没有回绕（线性队列）→ SQ-02",
+        "P4-SQ-04：调用 Enqueue / Dequeue 做别的处理 → SQ-04",
+        "P3-CT-07：伪代码 → P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-SQ-04",
+      "chapter": "SQ",
+      "name_zh": "用栈或队列的操作完成处理",
+      "name_en": "Process data using stack or queue operations",
+      "summary": "在过程或函数里反复调用已写好的 Push / Pop / Enqueue / Dequeue 完成任务：分类入两个栈、出栈直到空并计算（表达式求值、最大最小）、两个栈配对出栈（缺一方时放回）、出队并统计到记录数组、出队做压缩；关注返回值的检查与循环结束条件。",
+      "cues": [
+        "pops the next item from both Animal and Colour • outputs the colour and animal on one line",
+        "pops each integer from the stack until the stack is empty • finds and outputs the largest number",
+        "uses Dequeue() to remove an ID from the queue • checks whether a RecordData with the returned ID exists in Records",
+        "The values stored in the stack are used to perform mathematical operations",
+        "If the parameter is a vowel, it is pushed onto StackVowel",
+        "The compression algorithm counts the number of times each binary digit appears consecutively"
+      ],
+      "not": [
+        "P4-SQ-01 / P4-SQ-02 / P4-SQ-03：写的是 Push / Pop / Enqueue / Dequeue 本身 → 对应题型",
+        "P4-MP-02：主程序把一串输入或给定数据逐个交给 Push / Enqueue 并按返回值输出 → MP-02",
+        "P4-FL-01：读文件逐行入栈 / 入队，文件部分在场 → FL-01（本题型按 ≥ 2 分进 cross）"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-LT-01",
+      "chapter": "LT",
+      "name_zh": "链表：声明初始化与遍历",
+      "name_en": "Linked list: set up and traverse",
+      "summary": "用记录数组、二维数组（数据 + 指针）或结点对象建链表：声明并按题给表初始化数据、指针、起始指针与空闲表指针；从起始指针沿指针走到 –1 / None，按链表顺序输出或拼成字符串（含遍历空闲表）。",
+      "cues": [
+        "An unordered linked list uses a 1D array to store the data … initialise it with the data shown in the table",
+        "A 2D array is used to store the linked list, LinkedList",
+        "The procedure starts with the first node in the linked list and follows the pointers until it has reached the end",
+        "The method Traverse() concatenates the integer data from the nodes in the linked list, starting with the node stored in HeadNode"
+      ],
+      "not": [
+        "P4-LT-02：要插入或删除结点、改指针 → LT-02",
+        "P4-AR-04：按下标顺序输出数组、不跟随指针 → AR-04",
+        "P3-CT-08：P3 在图上或伪代码里改指针 → P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-LT-02",
+      "chapter": "LT",
+      "name_zh": "链表：插入与删除结点",
+      "name_en": "Linked list: insert and delete",
+      "summary": "判满（空闲表指针为 –1）或判空；从空闲表取结点存数据，插到表头或沿指针找到表尾再接上，更新起始指针与空闲表指针；删除时找到目标结点并让前驱跳过它、把结点还给空闲表；对象实现时用 SetNextNode / GetNextNode 改引用。",
+      "cues": [
+        "Write program code for the function addNode()",
+        "Each data item is inserted at the front of the linked list",
+        "The method RemoveNode() takes an integer parameter to search for and remove from the linked list",
+        "Write program code for AddItem()"
+      ],
+      "not": [
+        "P4-LT-01：只建表或遍历输出 → LT-01",
+        "P3-CT-08：P3 → P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-LT-03",
+      "chapter": "LT",
+      "name_zh": "二叉树：声明初始化与插入",
+      "name_en": "Binary tree: set up and insert",
+      "summary": "用二维数组（左指针 / 数据 / 右指针）、结点对象数组或结点对象引用建有序二叉树：初始化所有结点与根指针、空闲结点指针；插入时判满、空树放根，否则从根比较、小于走左大于走右直到空指针，存入空闲结点并更新父结点指针。",
+      "cues": [
+        "The binary tree is stored as a global array with the identifier TreeArray. The left pointer, the data and the right pointer of each node are initialised to –1",
+        "The procedure AddNode() adds a new node to the array ArrayNodes",
+        "The method InsertNode()takes a Node object, NewNode, as a parameter and inserts it into the array Tree",
+        "The method Insert() takes a node as a parameter and then searches the tree to find the position to insert the new node"
+      ],
+      "not": [
+        "P4-LT-04：在树上查找或遍历 → LT-04",
+        "P4-OP-01：只声明 Node 类与构造方法 → OP-01",
+        "P3-CT-09：P3 画结点图、填存储表、补全伪代码 → P3"
+      ],
+      "syllabus": [
+        "10.4",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-LT-04",
+      "chapter": "LT",
+      "name_zh": "二叉树：查找与遍历",
+      "name_en": "Binary tree: search and traverse",
+      "summary": "在二叉树上递归或迭代查找某值并返回结点下标（找不到 –1）；递归中序 / 后序遍历（判断左右指针非空才递归，访问顺序正确）并输出数据；主程序用根指针或根结点调用。",
+      "cues": [
+        "Write a recursive procedure, InOrder(), to perform an in-order traversal on the tree held in ArrayNodes",
+        "A post order traversal performs the following operation: • visit the left node • visit the right node • output the root",
+        "The following recursive pseudocode function searches the binary tree for a given value",
+        "The recursive procedure OutputInOrder() outputs the data stored in the binary tree in ascending numerical order"
+      ],
+      "not": [
+        "P4-LT-03：插入结点 → LT-03",
+        "P4-AR-04：按存储顺序输出每个结点的三项 → AR-04",
+        "P3-CT-09 / P3-CT-12：P3 → P3"
+      ],
+      "syllabus": [
+        "19.1",
+        "19.2"
+      ]
+    },
+    {
+      "code": "P4-LT-05",
+      "chapter": "LT",
+      "name_zh": "哈希表",
+      "name_en": "Hash tables",
+      "summary": "声明哈希表数组（一维记录数组或二维数组）与溢出区并初始化为空记录；写散列函数（Key MOD n）；插入时算散列值，该位置空则存入，否则放进溢出区或同一行的下一个空位；按散列值查找记录并处理找不到。",
+      "cues": [
+        "Each data item is stored in a specific index of the array that is calculated using an algorithm",
+        "The hash value is calculated from the key field using the formula: Key MOD 200",
+        "checks if the hash value index in",
+        "searches the hash table for the record with the matching key"
+      ],
+      "not": [
+        "P4-FL-02：从文件读出记录再调用插入 → FL-02（本题型按 ≥ 2 分进 cross）",
+        "P3-DR-08：P3 手算散列值、说明冲突处理 → P3"
+      ],
+      "syllabus": [
+        "13.2",
+        "19.1"
+      ]
+    },
+    {
+      "code": "P4-OP-01",
+      "chapter": "OP",
+      "name_zh": "声明类：私有属性与构造方法",
+      "name_en": "Declare a class with private attributes and a constructor",
+      "summary": "按类图写 class：属性全部私有（Python 用 self.__名，注释写类型），构造方法按题给参数个数与顺序给属性赋值，未作参数的属性赋题给初值（0、100、–1、None、空数组）；“Do not declare the other methods”。",
+      "cues": [
+        "Write program code to declare the class Vehicle. All attributes must be private. You only need to declare the class and its constructor",
+        "If you are writing in Python, include attribute declarations using comments",
+        "The constructor takes the name of the defence item and the balloon’s colour as parameters and sets these to the attributes. The health is initialised to 100",
+        "Use your programming language appropriate constructor"
+      ],
+      "not": [
+        "P4-OP-04：类继承自另一个类（调用父类构造）→ OP-04",
+        "P4-OP-06：属性是另一类的对象数组、构造方法里建好这个数组 → OP-06",
+        "P4-AR-03：题目说“记录结构”、无私有与构造要求 → AR-03",
+        "P3-FP-06：P3 用伪代码 CLASS … ENDCLASS → P3"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-02",
+      "chapter": "OP",
+      "name_zh": "getter 与 setter",
+      "name_en": "Getters and setters",
+      "summary": "为私有属性写 get 方法（无参数、返回属性）与 set 方法（带参数、赋给属性，不返回）；含 set 方法里先加上参数再把结果限制在题给范围内。MS 常为“1 个方法头 + 返回 + 其余几个正确”。",
+      "cues": [
+        "The get methods GetTreeName(), GetGrowth(), GetMaxHeight(), GetMaxWidth() and GetEvergreen() each return the relevant attribute",
+        "Write program code for the set methods SetCurrentSpeed() and SetHorizontalPosition()",
+        "The method SetDescription() takes a new description as a parameter, and writes this value to the appropriate attribute",
+        "If the new value exceeds 10 000, it is limited to 10 000"
+      ],
+      "not": [
+        "P4-OP-03：方法除了取值赋值还有计算、判断或拼字符串（不是 Get / Set 名称的）→ OP-03",
+        "P3-FP-04：P3 只考 getter / setter 术语 → P3"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-03",
+      "chapter": "OP",
+      "name_zh": "写类的其他方法",
+      "name_en": "Other instance methods",
+      "summary": "写类里按属性计算、判断或更新的方法：改变属性值（加减、按百分比增加）、返回 TRUE / FALSE 的检查、返回计算结果（年龄、得分、合计）、按方向参数改坐标、把属性拼成规定格式的字符串返回。",
+      "cues": [
+        "The object’s method ChangeHealth() takes an integer number as a parameter and adds this to the health attribute",
+        "The method ReturnAge() calculates and returns the age of the character in years as an integer",
+        "The method Description() creates and returns a string of the animal’s data in the format",
+        "The method Move() takes a string parameter: \"up\", \"down\", \"left\" or \"right\""
+      ],
+      "not": [
+        "P4-OP-05：方法在子类里重写父类同名方法 → OP-05",
+        "P4-OP-06：方法存取容器类里的对象数组（GetCard、AddTrain、SetObject）→ OP-06",
+        "P4-LT-02 / P4-LT-03 / P4-LT-04：方法实现链表、二叉树的插入删除遍历 → 对应 LT 题型"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-04",
+      "chapter": "OP",
+      "name_zh": "继承：声明子类",
+      "name_en": "Inheritance: declare a subclass",
+      "summary": "声明继承父类的子类（class 子类(父类)）：新增私有属性、构造方法参数含父类所需的值，用 super().__init__(…) 调用父类构造，再给子类属性赋参数或初值；有时同时写一个子类新方法。",
+      "cues": [
+        "Write program code to declare the class Helicopter. You only need to declare the class and its constructor",
+        "Write program code to declare the class Parrot, its constructor and the method ChangeNumberWords()",
+        "Write program code to declare the class MagicCharacter and its constructor",
+        "The class MagicCharacter inherits from the class Character"
+      ],
+      "not": [
+        "P4-OP-01：没有父类 → OP-01",
+        "P4-OP-05：只写子类重写的方法 → OP-05",
+        "P3-FP-05：P3 补全类图（继承箭头）→ P3"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-05",
+      "chapter": "OP",
+      "name_zh": "重写父类方法（多态）",
+      "name_en": "Override a parent method (polymorphism)",
+      "summary": "在子类里重写父类同名方法：按子类规则改写处理（多加竖直位移、改变增幅、改返回字符串），需要时调用父类版本（super().方法()）；含按对象实际类型给出不同输出。",
+      "cues": [
+        "The Helicopter method IncreaseSpeed() overrides the method from the parent class",
+        "The method Learn() overrides the parent class method and increases the intelligence depending on the character’s element",
+        "The method Description() in the class Parrot creates and returns a string",
+        "If the vehicle is a helicopter, it also outputs the vertical position"
+      ],
+      "not": [
+        "P4-OP-03：方法写在没有父类的类里 → OP-03",
+        "P4-OP-04：声明子类与构造 → OP-04"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-06",
+      "chapter": "OP",
+      "name_zh": "包含：容器类",
+      "name_en": "Containment: container classes",
+      "summary": "声明以另一类对象（或其数组、二维数组）为属性的类，在构造方法里建好对象数组；写存取这些对象的方法：按下标取出对象、放入对象、判断有无空位后加入、遍历对象拼出描述字符串、按行输出各对象的属性。",
+      "cues": [
+        "Write program code to declare the class Hand, its attributes and constructor",
+        "The method AddTrain() takes a Train parameter",
+        "The method GetObject() takes a row number and column number as parameters. The method returns the BoardObject",
+        "The method InitialiseData() takes an array of type TheObject as a parameter"
+      ],
+      "not": [
+        "P4-OP-01：属性都是基本类型或基本类型数组 → OP-01",
+        "P4-LT-03：容器类是用结点数组实现的二叉树、方法在做插入 → LT-03"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-OP-07",
+      "chapter": "OP",
+      "name_zh": "创建对象并调用方法",
+      "name_en": "Instantiate objects and call methods",
+      "summary": "在主程序（或函数）里用构造方法与题给数据实例化对象、存进变量或对象数组，然后调用对象的方法（改属性、计算），用 getter 取值并输出；含声明“类型为某类”的对象数组。",
+      "cues": [
+        "Write program code to declare an instance of Train for each of the four trains",
+        "Write program code to create a new instance of Character with the identifier FirstCharacter",
+        "Write program code to declare an array of type Picture with 100 elements",
+        "Write program code to call the method Learn() for the character created in part 3(b)(i). Output the name, age and intelligence"
+      ],
+      "not": [
+        "P4-FL-02：对象的数据来自文件 → FL-02",
+        "P4-AR-05：遍历对象数组按条件挑选 → AR-05",
+        "P4-MP-01：只调用普通模块并输出返回值，不实例化 → MP-01"
+      ],
+      "syllabus": [
+        "20.1"
+      ]
+    },
+    {
+      "code": "P4-MP-01",
+      "chapter": "MP",
+      "name_zh": "主程序：调用模块并输出结果",
+      "name_en": "Main program: call modules and output results",
+      "summary": "在主程序里按题目顺序调用已写好的过程与函数，保存或直接使用返回值（含返回的数组），按返回值输出适当信息，在调用前后各输出一次数组；也包括在一个模块里加一句调用另一个模块。",
+      "cues": [
+        "Write program code for the main program",
+        "Amend the main program by writing program code to call procedures InsertionSort() and PrintArray()",
+        "call ReadData() and store the returned array in HighScores • output \"Before\"",
+        "The procedure ReadWords()calls Play()after the data in the file has been read"
+      ],
+      "not": [
+        "P4-MP-02：循环把一串输入或给定数据逐个交给模块 → MP-02",
+        "P4-OP-07：主程序的得分点主要是实例化对象、调用对象方法 → OP-07",
+        "P4-PR-01：主程序的得分点主要是输入校验 → PR-01"
+      ],
+      "syllabus": [
+        "11.3"
+      ]
+    },
+    {
+      "code": "P4-MP-02",
+      "chapter": "MP",
+      "name_zh": "主程序：循环输入并逐个调用",
+      "name_en": "Main program: loop over inputs and call a module",
+      "summary": "主程序读入定量的输入（或使用题给的一串数据、1 到 n 的整数），每个值调用一次 Push / Enqueue / AddNode / 插入模块，检查返回值并输出成功或失败信息；之后再调用输出或删除模块。",
+      "cues": [
+        "allow the user to enter 11 numbers and attempt to add these to the stack • output an appropriate message",
+        "take as input 11 string values from the user • use the Enqueue() function to add each element to the queue",
+        "attempts to store each of the integers 1 to 25 (inclusive) in the queue in ascending numerical order using Enqueue()",
+        "take 10 integers as input • store each input in the binary tree in the order they are entered"
+      ],
+      "not": [
+        "P4-MP-01：每个模块只调用一次或固定几次、没有逐个处理的循环 → MP-01",
+        "P4-PR-01：输入要校验到合法、校验 ≥ 2 分 → PR-01",
+        "P4-SQ-04：写在模块里、用 ADT 操作做处理 → SQ-04"
+      ],
+      "syllabus": [
+        "11.3"
+      ]
+    },
+    {
+      "code": "P4-MP-03",
+      "chapter": "MP",
+      "name_zh": "运行测试并截图",
+      "name_en": "Run tests and screenshot the evidence",
+      "summary": "按题目给的输入顺序（含应被拒的无效输入）运行程序，截图显示输入与输出；或截图文本文件的内容并让文件名可见。得分只看截图里的内容是否与正确程序一致（MS 列出期望输出），一般每个测试 1 分。",
+      "cues": [
+        "Test your program. Take a screenshot of the output(s)",
+        "Test your program by inputting the following data in the order given",
+        "Take one screenshot of the text file the program produces with the contents and filename clearly visible",
+        "Take a screenshot to show the output of the procedure"
+      ],
+      "not": [
+        "P4-MP-01 / P4-MP-02：同一小问还要写或改代码、得分点给的是代码 → 按代码定题型",
+        "P2-SD-10：P2 是在纸上设计测试数据 → P2"
+      ],
+      "syllabus": [
+        "12.3"
+      ]
+    }
+  ]
+}
