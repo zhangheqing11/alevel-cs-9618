@@ -216,3 +216,34 @@ D39 的 P3 部分：papers/p3/tagging-guide.md §7 加“同票时主题型取�
 从最新 origin/main 开分支 task/T41-mock-kit。产出 pipeline/mock/make_mock.py（生成 output/mock/<卷 id>/ 的 marking.md、marking.html、score.csv；output/ 不入库）、score_mock.py（汇总、按题型/技能统计失分、估等级、输出可贴进学习记录的摘要）、test_mock.py、README.md。不复制题干（学生看原卷），不显示代表题答案；ER 摘录明确标“仅供易错参考，不是给分依据”。需要 make mock 目标时写进「需要总控决定」，不要改 Makefile。
 只改 tasks/scope.json 里 T41 允许的路径与 tasks/progress/T41.md。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T41 → python3 -m pytest pipeline/mock → push → gh pr create --base main --title "T41: mock exam marking kit"。PR 里贴一份 marking.md 开头片段与 12 份 s26 卷的生成清单。不要合并 PR。停下前更新 tasks/progress/T41.md 并提交。
 ```
+
+## codex-1 · T12f P4 重复行补 equivalent_of + 回写 P3 裁决（新开 Codex 会话）
+
+```
+你是执行工位 codex-1，负责任务 T12f：①按 docs/DECISIONS.md D42 ③，给 P4 里 162 行与同季 _41 卷逐字相同的行补 equivalent_of；②按 D41 ⑤ 给 9618_s24_33:10(b) 补 equivalent_of（指向 9618_s24_31:10(b)）；③按 D41 ④ 把 papers/p3/adjudication.csv 的 5 行裁决回写进 pipeline/tag/p3/p3_tags.jsonl。
+先读 AGENTS.md、docs/DECISIONS.md（D21、D33、D35、D41、D42）、tasks/T12f-p4-equivalents.md（任务卡：分布表、做法、产出、完成标准，严格照做）。做法照 T12e（#31）：pipeline/extract/p3_equivalents.py 的 scan → 人工审阅清单 → apply → verify，泛化到 P4 时不要改变 P3 的行为。若 tasks/progress/T12f.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T12f-p4-equivalents。每个候选行渲染两卷 QP 原页比对图形（PDF 与 P4 源文件目录在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读），结论写进 pipeline/extract/p4_equivalents_review.json；图形或源文件不同、拿不准的行不补，列进「需要总控决定」。只写 overrides.json，再用 run_all.py 重出 rows，不要手改 jsonl；P3 那 5 行改 p3_tags.jsonl 后跑 apply_p3.py。
+用脚本证明只有该变的字段变了：types、markpoints、ms_max、er 等下游字段原样保留（D33），P1/P2 rows 无变化。报告写进 corpus/extract_report.md 的新小节「T12f」。
+只改 tasks/scope.json 里 T12f 允许的路径与 tasks/progress/T12f.md。交付：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T12f → apply_p2.py / apply_p3.py / pipeline/er/apply_er.py 的 --check 都 0 改动 → push → gh pr create --base main --title "T12f: link duplicated P4 rows + write back P3 adjudication"。不要合并 PR。停下前更新 tasks/progress/T12f.md 并提交。
+```
+
+## codex-2 · T34 P4 全量打标签 + 拆得分点（新开 Codex 会话；可与 T12f 同时开）
+
+```
+你是执行工位 codex-2，负责任务 T34：按 papers/p4/tagging-guide.md 给 P4 全部 744 行打题型标签，并按指南 §8 拆得分点。这是跨模型盲标：P4 的题型体系与试标由 Claude（T33）设计，你要独立标出结果，再与试标比一致率。
+先读 AGENTS.md、docs/DECISIONS.md（D2、D8、D21、D26、D29、D33、D35、D42）、tasks/T34-p4-tagging.md（任务卡：做法、产出、完成标准都在里面，严格照做）、papers/p4/taxonomy.json、papers/p4/tagging-guide.md、papers/p4/skill_tags.json（extends P2 词表）、schemas/row.schema.json；做法照抄 P3 的 T31（pipeline/tag/p3/ 是现成范本）。若 tasks/progress/T34.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T34-p4-tagging。先盲标全部 744 行（不先看 papers/p4/pilot_*），盲标快照存 pipeline/tag/p4/blind/；再对照 pilot 复核分歧。看图题、截图格回到原页（rows.py render，PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读）。
+D42：拆分门槛 ≥ 2 分；只从 MS 开头的语言无关清单切，Java / VB.NET / Python / 伪代码范例不拆；与同季 _41 逐字相同的 162 行（codex-1 的 T12f 正在补 equivalent_of）和已有 equivalent_of 的行，照抄 _41 对应行的标签与得分点。行里已有 er 字段，apply 必须逐字保留（D33）。
+T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的版本，重跑 apply_p4.py，再重跑全部检查。
+只改 tasks/scope.json 里 T34 允许的路径；P2 / P3 的 apply 脚本不要改（需要泛化就写进「需要总控决定」）。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T34 → apply_p4.py --check、pipeline/tag/p3/apply_p3.py --check、pipeline/er/apply_er.py --check 都 0 改动 → push → gh pr create --base main --title "T34: tag P4 rows + split markpoints"。不要合并 PR。停下前更新 tasks/progress/T34.md 并提交。
+```
+
+## codex（任一工位）· T36 审计 P3 题型手册（跨模型交叉审计；新开 Codex 会话，可与 T12f / T34 同时开）
+
+```
+你是执行工位，负责任务 T36：逐张审计 P3 题型手册（79 张卡，章：DR、CI、HV、BL、SY、SC、AI、CT、FP），只出报告，不改卡片。手册由 Claude 设计工位写成，你是另一家模型的交叉审计。
+先读 AGENTS.md（尤其 §5 证据规则）、docs/DECISIONS.md（D1、D2、D10、D25、D26、D29、D33–D35、D37、D39、D40、D41）、tasks/T36-p3-audit.md（任务卡：T26 的 7 项 + P3 特有 5 项、产出格式、完成标准，严格照做）、tasks/T26-card-audit.md（审计项与 findings 字段）、schemas/card-format.md、papers/p3/tagging-guide.md。若 tasks/progress/T36.md 存在，从它记录的下一步继续。
+从最新 origin/main 开分支 task/T36-p3-audit。审计范围：papers/p3/front.md、cards/*.md、core/*.md、back.md；先 make build 看 output/p3/ 的成品。每张卡的代表题必须对照该题 QP 与 MS 原页（PDF 在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读；用 rows.py render 或 pymupdf / pdftotext）。ms_text 会丢布尔表达式的横线、浮点数的上标和图的连线：卡里凡涉及这些的地方，一律看原页渲染图核对，BL 表达式再用真值表验算；Dijkstra、A*、RPN、追踪表按 QP 的图 / 数据重算。D41 已定的例外（变式替代、w24/31 7(d)(ii) 笔误、范围类型）不算问题。
+可以先写脚本做机械检查（选题规则、计数重算、页码引用、伪代码 lint、Python 片段运行、真值表），放在 papers/p3/audit/（T26 的 papers/p1/audit/、papers/p2/audit/ 脚本可复制改用），再逐张人工核对。产出：papers/p3/audit/T36-findings.jsonl、papers/p3/audit/T36-report.md（引用行号写纯文本行 id，不用 ⟦⟧；引 MS 用 “”，不用「」）。
+只改 tasks/scope.json 里 T36 允许的路径（papers/p3/audit/**）与 tasks/progress/T36.md；不要改卡片、概念表、corpus、practice。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T36 → push → gh pr create --base main --title "T36: audit P3 handbook"。PR 描述：审计卡数、问题数（按 severity）、最严重的 5 条、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T36.md 并提交。
+```

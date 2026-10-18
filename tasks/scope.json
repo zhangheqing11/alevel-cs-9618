@@ -206,5 +206,26 @@
     "allow": [
       "pipeline/mock/**"
     ]
+  },
+  "T12f": {
+    "allow": [
+      "pipeline/extract/**",
+      "corpus/rows/p3/**",
+      "corpus/rows/p4/**",
+      "corpus/extract_report.md",
+      "pipeline/tag/p3/p3_tags.jsonl"
+    ]
+  },
+  "T34": {
+    "allow": [
+      "pipeline/tag/p4/**",
+      "corpus/rows/p4/**",
+      "corpus/tag_report_p4.md"
+    ]
+  },
+  "T36": {
+    "allow": [
+      "papers/p3/audit/**"
+    ]
   }
 }
