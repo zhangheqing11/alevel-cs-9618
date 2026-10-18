@@ -32,9 +32,9 @@
 | T31 | P3 全量打标签 + 拆得分点（跨模型盲标一致 100%） | codex-1 | T30 ✅ | ✅ | #32 |
 | T32 | P3 题型卡 + 核心概念表（批 A DR/CI/HV/BL + front ✅ #41 · 批 B SY/SC/AI ✅ #40 · 批 C CT/FP + back ✅ #43；79 型齐） | cc-H / cc-I / cc-J · Opus 5.5 high | T31 ✅ | ✅ | #40 #41 #43 |
 | T33 | P4 题型体系（9 章 36 型）+ 技能标签 + 指南 + 试标 + 练习约定草案 | cc-K · Opus 5.5 high | T12 P4 ✅ | ✅ | #42 |
-| T12f | P4 重复行补 `equivalent_of`（162 行，D42 ③）+ `9618_s24_33:10(b)`（D41 ⑤）+ 回写 P3 裁决 5 行（D41 ④） | codex-1 | T33 ✅ | ⏳ | `task/T12f-p4-equivalents` |
-| T34 | P4 全量打标签 + 拆得分点（744 行，跨模型盲标，门槛 ≥ 2 分 D42 ①） | codex-2 | T33 ✅（T12f 合并后 rebase 重跑 apply） | ⏳ | `task/T34-p4-tagging` |
-| T36 | 审计 P3 题型手册（79 张卡，跨模型交叉审计） | codex（新会话） | T32 ✅ | ⏳ | `task/T36-p3-audit` |
+| T12f | P4 重复行补 `equivalent_of`（162 行，D42 ③）+ `9618_s24_33:10(b)`（D41 ⑤）+ 回写 P3 裁决 5 行（D41 ④） | 子智能体 · Sonnet 5.5 high（codex 到期代做） | T33 ✅ | 🔨 | `task/T12f-p4-equivalents` |
+| T34 | P4 全量打标签 + 拆得分点（744 行，跨模型盲标，门槛 ≥ 2 分 D42 ①） | 子智能体 · Opus 5.5 high（codex 到期代做） | T33 ✅（T12f 合并后 rebase 重跑 apply） | 🔨 | `task/T34-p4-tagging` |
+| T36 | 审计 P3 题型手册（79 张卡，跨模型交叉审计） | 子智能体 · Opus 5.5 high（codex 到期代做，非跨模型） | T32 ✅ | 🔨 | `task/T36-p3-audit` |
 | T40 | 分数线表（10 季 component 120 行 / option 156 行） | codex-1 | — | ✅ | #38 |
 | T41 | 整卷模考批改包生成器（s26 + 估分；已接 T40 真实分数线） | codex-2 | T40（估分部分） | ✅ | #39 |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
