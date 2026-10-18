@@ -1,0 +1,6 @@
+id,primary,cross,reason
+9618_s21_31:3(a),P3-SY-04,P3-SY-03;P3-SY-02,裁决规则 C1（同票取先出现者，D39①）：五条连线中 Paging、Virtual memory 两分归 SY-04，Interrupt handling、Scheduling 两分归 SY-03，Multi-tasking 一分归 SY-02。SY-04 与 SY-03 同票，按题干 OS term 列表在同票题型中先出现的 Paging（第 2 项，先于第 3 项 Interrupt handling）取主题型 SY-04，SY-03、SY-02 进 cross。核对 QP p.5 / MS p.5。维持 T31 的标签，置信度改 high。
+9618_s21_32:3(a),P3-SY-04,P3-SY-03;P3-SY-02,裁决规则 C1（同票取先出现者，D39①）：equivalent_of 9618_s21_31:3(a)，与原行同题同 MS，标签随原行。维持 T31 的标签，置信度改 high。
+9618_s21_33:3(a),P3-SY-04,P3-SY-03;P3-SY-02,裁决规则 C1（同票取先出现者，D39①）：equivalent_of 9618_s21_31:3(a)，与原行同题同 MS，标签随原行。维持 T31 的标签，置信度改 high。
+9618_s22_32:1(b)(iii),P3-DR-04,,裁决规则 C2（记录字段赋值归 DR-04，D39②）：题目要求写语句把枚举值 house 赋给记录变量 BuildingRegister 的字段 BuildingGroup，MS 为 BuildingRegister.BuildingGroup ← house；产出是记录字段赋值，不是声明或单独使用枚举类型，归 DR-04（DR-02 只管枚举 / 指针类型本身的声明与单独使用）。维持 T31 的标签，置信度 high。
+9618_s22_32:8(a),P3-CT-02,,裁决规则 C3（MS 只给填空片段时按 QP 留空行逐行拆，D39③）：MS p.8 只列四条填空答案片段，与 QP p.11 四个留空行一一对应拆为四个得分点，text 照录 MS 片段、不拼出 MS 没有的整行。题型 CT-02 不变，切分维持 T31，置信度 high。
