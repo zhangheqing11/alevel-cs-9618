@@ -730,5 +730,983 @@
       "equivalent_of": "9618_w24_31:9(b)"
     },
     "reason": "D35：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）。含父级图示的 QP 正文区域逐像素相同。 证据见 p3_equivalents_review.json。"
+  },
+  "9618_s21_42:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:1(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:2(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:2(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:2(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(c)(iv)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(iv)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_42:3(c)(v)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(v)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:1(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:1(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:2(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:2(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:2(c)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:2(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(c)(iv)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(iv)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s21_43:3(c)(v)": {
+    "fields": {
+      "equivalent_of": "9618_s21_41:3(c)(v)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(e)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(e)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:1(e)(iv)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:1(e)(iv)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:2(e)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:2(e)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:2(f)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:2(f)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:2(g)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:2(g)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:3(c)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:3(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:3(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:3(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s22_43:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s22_41:3(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(a)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(a)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:2(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:2(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:3(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:3(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:3(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:3(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s23_43:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s23_41:3(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_33:10(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_31:10(b)"
+    },
+    "reason": "D41 ⑤：MS 逐字相同，题干只差 `←` 的抽取位置；QP 原页核对图形相同。并排查看原 QP p.10：两卷 10(b) 的 DECLARE 七行、NotInList 之前与 WHILE ... AND ... 的空格行、三处作答空行（IF ... THEN、IF TopOfList >= EndOfList 之下、IF ToFind > Names[CurrentItem] 之下）、ELSE 分支 EndOfList ← CurrentItem - 1、末尾 IF Found 输出及分值 [5] 全部相同；仅竖直间距不同，s24_33 页首多条码。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:1(e)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:1(e)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:2(e)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:2(e)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(c)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_s24_43:3(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_s24_41:3(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:2(d)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:2(d)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。并排查看原 QP p.5：(c) SetDescription、(d) 声明 Picture 数组、(e) ReadData() 六条要求与示例（Flowers / 45 / 50 / black）、(f) 主程序的文字、代码框与分值相同；仅每行竖直位置差 1–2 px，逐字相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:2(e)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:2(e)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。并排查看原 QP p.5：(c) SetDescription、(d) 声明 Picture 数组、(e) ReadData() 六条要求与示例（Flowers / 45 / 50 / black）、(f) 主程序的文字、代码框与分值相同；仅每行竖直位置差 1–2 px，逐字相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:2(g)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:2(g)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。并排查看原 QP p.5：(c) SetDescription、(d) 声明 Picture 数组、(e) ReadData() 六条要求与示例（Flowers / 45 / 50 / black）、(f) 主程序的文字、代码框与分值相同；仅每行竖直位置差 1–2 px，逐字相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:2(h)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:2(h)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。并排查看原 QP p.5：(c) SetDescription、(d) 声明 Picture 数组、(e) ReadData() 六条要求与示例（Flowers / 45 / 50 / black）、(f) 主程序的文字、代码框与分值相同；仅每行竖直位置差 1–2 px，逐字相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(c)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。本行自己的页（p.8、p.10、p.11）逐像素相同。大题范围内 p.9 有像素差，经并排查看仅是 3(b) 的 AddNode() 伪代码末尾 OUTPUT \"Tree is full\" 与 OUTPUT(\"Tree is full\") 写法不同（3(b) 本身因此未被列为候选）；3(c)–3(e) 不引用该行，不影响本行。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。本行自己的页（p.8、p.10、p.11）逐像素相同。大题范围内 p.9 有像素差，经并排查看仅是 3(b) 的 AddNode() 伪代码末尾 OUTPUT \"Tree is full\" 与 OUTPUT(\"Tree is full\") 写法不同（3(b) 本身因此未被列为候选）；3(c)–3(e) 不引用该行，不影响本行。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。本行自己的页（p.8、p.10、p.11）逐像素相同。大题范围内 p.9 有像素差，经并排查看仅是 3(b) 的 AddNode() 伪代码末尾 OUTPUT \"Tree is full\" 与 OUTPUT(\"Tree is full\") 写法不同（3(b) 本身因此未被列为候选）；3(c)–3(e) 不引用该行，不影响本行。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。本行自己的页（p.8、p.10、p.11）逐像素相同。大题范围内 p.9 有像素差，经并排查看仅是 3(b) 的 AddNode() 伪代码末尾 OUTPUT \"Tree is full\" 与 OUTPUT(\"Tree is full\") 写法不同（3(b) 本身因此未被列为候选）；3(c)–3(e) 不引用该行，不影响本行。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w21_42:3(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w21_41:3(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（visual）；源文件目录数据文件相同。本行自己的页（p.8、p.10、p.11）逐像素相同。大题范围内 p.9 有像素差，经并排查看仅是 3(b) 的 AddNode() 伪代码末尾 OUTPUT \"Tree is full\" 与 OUTPUT(\"Tree is full\") 写法不同（3(b) 本身因此未被列为候选）；3(c)–3(e) 不引用该行，不影响本行。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:1(b)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:1(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:1(c)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:1(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:1(e)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:1(e)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(a)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(a)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(a)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(a)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:2(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:2(c)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(c)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(c)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(d)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(d)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w22_43:3(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w22_41:3(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(a)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(a)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(a)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(a)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:1(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:1(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(a)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(a)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(a)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(a)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(a)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(a)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(b)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(c)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(d)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(d)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:2(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:2(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:3(a)(iv)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:3(a)(iv)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:3(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:3(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:3(e)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:3(e)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w23_43:3(e)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w23_41:3(e)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(b)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(b)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:1(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:1(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:2(b)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:2(b)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:2(b)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:2(b)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:2(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:2(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:2(d)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:2(d)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:2(e)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:2(e)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(a)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(a)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(b)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(b)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(c)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(c)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(c)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(c)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(c)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(c)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(d)(i)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(d)(i)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(d)(ii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(d)(ii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
+  },
+  "9618_w24_43:3(d)(iii)": {
+    "fields": {
+      "equivalent_of": "9618_w24_41:3(d)(iii)"
+    },
+    "reason": "D42 ③：题干、上下文、同题 MS 压缩空白相同；QP 图形已核验（pixel-sha256）；源文件目录数据文件相同。含父级情景的 QP 正文区域逐像素相同。 证据见 p4_equivalents_review.json。"
   }
 }

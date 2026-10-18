@@ -89,13 +89,19 @@
     "ms_excerpt": "1 mark per bullet point • Array with identifier arrayData • correct 10 data items added Example code: Visual Basic Dim arrayData(9) As Integer Sub Main() arrayData(0) = 10 arrayData(1) = 5 arrayData(2) = 6 arrayData(3) = 7 arrayData(4) = 1 arrayData(5) = 12 ar",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "d44adfcc3eb69705f5599c8799623e2bf26a528c41cc0ecb96f247ae08f44d5c",
+    "row_sha256": "ed8362bdf22dc4f02611197ad4f2dd4bfe5a2ff59cceb70d5b250560a32c59c6",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       14,
       15
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "d44adfcc3eb69705f5599c8799623e2bf26a528c41cc0ecb96f247ae08f44d5c",
+      "equivalent_of": "9618_s21_41:2(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_42:3(c)(v)",
@@ -108,9 +114,15 @@
     "ms_excerpt": "1 mark per screenshot • Screenshot: outputting 2*2 entering 4 outputting 10 • Screenshot: outputting 3000+4000 entering an incorrect value entering 7000 outputting 9",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "8cb406b7e89c8dcaff293cf10d02330adf78d00d1ee85c018f6af4772c1ec905",
+    "row_sha256": "7c087207b7b2aea64ce7763d2a4a13db1ef48a454a8529291ee1d96f345f72d5",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "8cb406b7e89c8dcaff293cf10d02330adf78d00d1ee85c018f6af4772c1ec905",
+      "equivalent_of": "9618_s21_41:3(c)(v)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_42:2(b)(iii)",
@@ -123,9 +135,15 @@
     "ms_excerpt": "1 mark for screenshot showing input and output for number found 1 mark for screenshot showing input and output for number not found",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "095b890af8d9ef7f26a3cb4867bdc4600a18a5f08b654f4067ae496d3943444d",
+    "row_sha256": "8bad502e212d157165e78bc41e4abc65b3cdaee9c1e5fe645108759227828fb3",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "095b890af8d9ef7f26a3cb4867bdc4600a18a5f08b654f4067ae496d3943444d",
+      "equivalent_of": "9618_s21_41:2(b)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_42:1(b)",
@@ -138,13 +156,19 @@
     "ms_excerpt": "1 mark per bullet point • Declaring array named linkedList with data type node • Assigning all nodes correctly as record/object nodes … • …with correct values stored • declaring startPointer as 0, emptyList as 5 Example code: Visual Basic Dim linkedList(9) As ",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "9c74ba5e1f9978f59de08ac1b1bccf8359e2c806ac47c3b9315bb0a01dec1f26",
+    "row_sha256": "862c4a0af050a0ca1dcbbf03e9a1b04ea660fd405c915dcb97b97b44714381ea",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       5,
       6
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "9c74ba5e1f9978f59de08ac1b1bccf8359e2c806ac47c3b9315bb0a01dec1f26",
+      "equivalent_of": "9618_s21_41:1(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_42:2(b)(ii)",
@@ -157,13 +181,19 @@
     "ms_excerpt": "1 mark per bullet point to max 4 • Taking value as input… • …checking/casting to Integer • Calling linearSearch and sending input as parameter • Storing and checking return value… • …outputting appropriate message if found and if not found Example code: Visual",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "1dd43596c063e37380261959289af5c2d85a03cce83099b590b771ec7b54cef8",
+    "row_sha256": "63c5cba9063683ece747fb3e75661aef2bd5df8b06f2af72b9341277b0c3e3a8",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       17,
       18
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "1dd43596c063e37380261959289af5c2d85a03cce83099b590b771ec7b54cef8",
+      "equivalent_of": "9618_s21_41:2(b)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_43:2(b)(i)",
@@ -176,13 +206,19 @@
     "ms_excerpt": "1 mark per bullet point • function linearSearch with correct identifier • …taking integer search value as a parameter • Searching 10 times/through all array elements … • …comparing each element to search value • returning True if found • returning False if not",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "d36423b21d73e5a0f28831701aee0b523c6c6ad5a8005d7aa0bc5296cc273c4a",
+    "row_sha256": "532a18c217358912aa2840fa22f587cea47d033e0859f89fff0db1558c9b9162",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       15,
       16
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "d36423b21d73e5a0f28831701aee0b523c6c6ad5a8005d7aa0bc5296cc273c4a",
+      "equivalent_of": "9618_s21_41:2(b)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_43:1(b)",
@@ -195,13 +231,19 @@
     "ms_excerpt": "1 mark per bullet point • Declaring array named linkedList with data type node • Assigning all nodes correctly as record/object nodes … • …with correct values stored • declaring startPointer as 0, emptyList as 5 Example code: Visual Basic Dim linkedList(9) As ",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "af30da863add803de7d5a686abd93c9eb93ccbcf3eb108e935aa1ed2e35c5f78",
+    "row_sha256": "4a1a7b98af6196fea0f2556ccd7f888e963d6227194e0d3d6cc1ce865367a98d",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       5,
       6
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "af30da863add803de7d5a686abd93c9eb93ccbcf3eb108e935aa1ed2e35c5f78",
+      "equivalent_of": "9618_s21_41:1(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_43:3(a)",
@@ -214,13 +256,19 @@
     "ms_excerpt": "1 mark per bullet point • Class named treasureChest and end • Question declared as string as a class attribute • Answer declared as integer as a class attribute • Points declared as integer as a class attribute • All 3 attributes are private Example code: Visu",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "3b3754e9be83144c23cd71b73e2870b4753cdbad75f372a3def88ee58d3a8735",
+    "row_sha256": "4529108032fd031f7dce7395506e80a3d446c43440ba901003ebf01dea576ff6",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       21,
       22
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "3b3754e9be83144c23cd71b73e2870b4753cdbad75f372a3def88ee58d3a8735",
+      "equivalent_of": "9618_s21_41:3(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_43:1(d)(iii)",
@@ -233,9 +281,15 @@
     "ms_excerpt": "1 mark for screenshot showing : • Linked list output • 5 input • Message saying Successfully added or equivalent • Linked list output with 5 at the end. Example: 1 5 2 6 56 7 5 (being input) 1 5 2 6 56 7 5",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "6010cfdbcba30383bfdeb3e5dc0ed084f92bc1014b922962d01dbe2d5a258266",
+    "row_sha256": "8f6d023db81af9a4c5a515a7f7ca2313d5746b05a4fa3047000b47a95e97b00d",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "6010cfdbcba30383bfdeb3e5dc0ed084f92bc1014b922962d01dbe2d5a258266",
+      "equivalent_of": "9618_s21_41:1(d)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s21_43:1(a)",
@@ -248,9 +302,15 @@
     "ms_excerpt": "1 mark per bullet point • Declaring record/class with name node… • …declaring data and next node (both as Integers) Example code: Visual Basic Structure node Dim Data As Integer Dim nextNode As Integer End Structure Python class node: def __init__(self, theDat",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "75e2907ee1d2ae9fb9ad9bd8b0af4eee77ec10c965f66c18c7bd952deb24b616",
+    "row_sha256": "c44bdb690c4da5dd16b5ebf6e41fe145cf76495fb3b0270179c29e2c17a22ee6",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "75e2907ee1d2ae9fb9ad9bd8b0af4eee77ec10c965f66c18c7bd952deb24b616",
+      "equivalent_of": "9618_s21_41:1(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_41:2(c)",
@@ -438,13 +498,19 @@
     "ms_excerpt": "1 mark per mark point to max 6 • Function header and end • checking if queue is empty … • … returning False • If not empty accessing and returning item at head pointer • … incrementing head pointer … • … changing head pointer to 0 if it's more than 9 after inc",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "23270efc9dd22b9852c2a2c62c85bae6aa21251a7eb5f86eb143929e23feabf0",
+    "row_sha256": "ff4c54abc0f5cb41293dc96919400f33aa13889c3fe4ca2bda677387c8efd36c",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       30,
       31
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "23270efc9dd22b9852c2a2c62c85bae6aa21251a7eb5f86eb143929e23feabf0",
+      "equivalent_of": "9618_s22_41:3(c)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_43:1(d)(ii)",
@@ -457,9 +523,15 @@
     "ms_excerpt": "1 mark for screenshot showing the 10 names and scores from the file (and one extra blank space may, or may not be included) e.g.",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "ff5546cec5960df8249a02602e353ef9e95537ba250974a17cf9cb8f11cffee3",
+    "row_sha256": "03c44db4fbb585db9805d229d02bcb23ebfe52bc521a842c3252e2d67f6502d1",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "ff5546cec5960df8249a02602e353ef9e95537ba250974a17cf9cb8f11cffee3",
+      "equivalent_of": "9618_s22_41:1(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_43:1(b)",
@@ -491,9 +563,15 @@
     "ms_excerpt": "1 mark per mark point • take as input defence method and colour (2 strings) • instantiating new balloon object with identifier Balloon1 … • … with both input values as parameters Example program code: Java public static void main(String[] args){ Scanner scanne",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "48f226d773402616cead086bbf7bc27ca0ced657844374af17c101c3a68128f4",
+    "row_sha256": "19dafeaf4cab01232204202bdc73fc1a034ccc24586ef81e9167ef74f76586af",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "48f226d773402616cead086bbf7bc27ca0ced657844374af17c101c3a68128f4",
+      "equivalent_of": "9618_s22_41:2(e)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s22_43:1(e)(i)",
@@ -506,13 +584,19 @@
     "ms_excerpt": "1 mark per mark point • Read in a username and score • Validate username input (3-characters, or just selecting the first 3 characters if there are definitely 3 characters) • Validate score input (integer (cast) between 1 and 100 000 inclusive) Example program",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "8bb47f340985eb9531bff8202e20ffcec49ff2c72c1a9a989bb4835e8b9f4427",
+    "row_sha256": "c55c879f7c40ed375986dc0a9994a97da8351c336a0dd4554bec4763d06bbadd",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       10,
       11
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "8bb47f340985eb9531bff8202e20ffcec49ff2c72c1a9a989bb4835e8b9f4427",
+      "equivalent_of": "9618_s22_41:1(e)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_41:1(d)(i)",
@@ -752,9 +836,15 @@
     "ms_excerpt": "1 mark for output e.g.",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "e3964918dd2705df35470fcb3912fadd5a0f8a9e0d407ef5981f94cce1441c5b",
+    "row_sha256": "d04c1140b82f3306ff2599d81cc1fd19f624bb36c3193e6f75377fdcf09b8e50",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "e3964918dd2705df35470fcb3912fadd5a0f8a9e0d407ef5981f94cce1441c5b",
+      "equivalent_of": "9618_s23_41:3(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s23_43:1(b)(i)",
@@ -767,9 +857,15 @@
     "ms_excerpt": "1 mark each • Procedure header (and close where appropriate) with (at least) one (integer array) parameter • Outputting all (25) array elements … • …on one line Example program code: Java public static void PrintArray(Integer[] DataArray){ String OutputData; f",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "cca2949a675ee733e335e2d6e352c25012dbaa78da22d9e7af52845ab2098876",
+    "row_sha256": "3cbc6878cb9efbb18d1e56de22dfbedf79ba1f1f981e5c21e069da259526aeb3",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "cca2949a675ee733e335e2d6e352c25012dbaa78da22d9e7af52845ab2098876",
+      "equivalent_of": "9618_s23_41:1(b)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_41:2(e)(iii)",
@@ -944,7 +1040,7 @@
     "ms_excerpt": "1 mark each to max 6 • StoreItems header (function/procedure and end where appropriate) and takes 10 inputs • Input is split and first 6 characters used in calculation (as integers) … • … multiplication by 1 and 3 alternately, adding to total, dividing by 10, ",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "12381155f8d4f9b1d7b0e5d9fa3a8a07080269c8f9551af7f46b74827b395dd4",
+    "row_sha256": "70f10757da16520783073feb8fd5c667450c27ccca22d5bd54cdff336a994702",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
@@ -952,7 +1048,13 @@
       34,
       35,
       36
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "12381155f8d4f9b1d7b0e5d9fa3a8a07080269c8f9551af7f46b74827b395dd4",
+      "equivalent_of": "9618_s24_41:3(d)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_43:3(b)",
@@ -965,13 +1067,19 @@
     "ms_excerpt": "1 mark each • Function header (and end) taking one parameter and returns a Boolean value in all instances • Checks if queue is full and returns FALSE • (If not full) Inserts data item to QueueTail + 1 and increments QueueTail and returns TRUE • Assigns QueueHe",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "0636a3d04acdbb8fda491b624aeca33b98339926849236dba78943fbefd80373",
+    "row_sha256": "55f2dfe54ffa64d760f9b0f727ca823e40484f74f33c089204069ecdff82b8bb",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       30,
       31
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "0636a3d04acdbb8fda491b624aeca33b98339926849236dba78943fbefd80373",
+      "equivalent_of": "9618_s24_41:3(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_43:1(d)(ii)",
@@ -984,9 +1092,15 @@
     "ms_excerpt": "1 mark for calling BubbleSort() and outputting array contents after e.g. VB.NET BubbleSort() For X = 0 To NumberStored - 1 Console.WriteLine(DataStored(X)) Next e.g. Java BubbleSort(); for(Integer X = 0; X < NumberItems; X++){ System.out.println(DataStored[X])",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "2af25635cf204c3b57e64cc6a40c9ce3163ab82e44115c7e5d28bcbb0fa62301",
+    "row_sha256": "40e4afe6676d555a492d1301fbede77b8ca17766d94b385de867909ed4b329ad",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "2af25635cf204c3b57e64cc6a40c9ce3163ab82e44115c7e5d28bcbb0fa62301",
+      "equivalent_of": "9618_s24_41:1(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_43:1(e)(iii)",
@@ -999,9 +1113,15 @@
     "ms_excerpt": "1 mark for each test e.g. Test 1 – Accept found in index 16 Test 2",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "d58e08063387c45877291254980bd6d43d233300c3739568ae5e45ad2979712e",
+    "row_sha256": "96b1e9c2b195bc241040e8635159720526cec9f42964e46a6b716aada62a4cbb",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "d58e08063387c45877291254980bd6d43d233300c3739568ae5e45ad2979712e",
+      "equivalent_of": "9618_s24_41:1(e)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s24_43:3(d)(iii)",
@@ -1014,9 +1134,15 @@
     "ms_excerpt": "1 mark each • Data input of 10 values and output a message saying there are 4 invalid items • 999999 output e.g.",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "feefa828562340b1a53354c2b55f6f81cfef2377071ce420391fd3f2cb01ae88",
+    "row_sha256": "5913a60afc232529788cd672ef12c4432403c44df52331713e842ecd25c91ddc",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "feefa828562340b1a53354c2b55f6f81cfef2377071ce420391fd3f2cb01ae88",
+      "equivalent_of": "9618_s24_41:3(d)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_s25_41:1(e)(ii)",
@@ -1628,9 +1754,15 @@
     "ms_excerpt": "Calling function 3 times with correct Data and outputting Example program code: Python print(\"10 and 15\") print(str(IterativeUnknown(10, 15))) print(\"10 and 10\") print(str(IterativeUnknown(10, 10))) print(\"15 and 10\") print(str(IterativeUnknown(15, 10))) VB.NE",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "b44c4979c9ede04a94b5fcf0f1f253138ec58023f751779d0f3257572501cc0e",
+    "row_sha256": "8fe305e7c1ad7f1b76efcd77dcd523881029b5822742347108dcbbb44c971b0e",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "b44c4979c9ede04a94b5fcf0f1f253138ec58023f751779d0f3257572501cc0e",
+      "equivalent_of": "9618_w21_41:1(d)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w21_42:2(h)",
@@ -1643,9 +1775,15 @@
     "ms_excerpt": "1 mark for screenshot showing output for BLACK, 100, 100 1 mark for showing no outputs for silver, 25, 25 Input the Frame colour BLACK Input the Maximum Width 100 Input the Maximum Height 100 Matches Frames shown flowers 45 50 people 20 20 landscape 30 45 land",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "2ba7d1e6768b4d01d4194445a0fb7e5ef0279600f7c1a7011fb958cf208d0e36",
+    "row_sha256": "4203d594404f1923bd1c14be772cee749e62043702dca7c47a3f28b8a9ddc89c",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "2ba7d1e6768b4d01d4194445a0fb7e5ef0279600f7c1a7011fb958cf208d0e36",
+      "equivalent_of": "9618_w21_41:2(h)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w21_42:1(b)(i)",
@@ -1658,9 +1796,15 @@
     "ms_excerpt": "1 mark per bullet point • Suitable output identifying parameters for each call • All three correct function calls … • …outputting the return value for each call Example program code: Python print(\"10 and 15\") print(str(Unknown(10, 15))) print(\"10 and 10\") prin",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "95de6ae606f13521c42b97d3d42455fb441bc460f6e51e3e357f6d50541aead7",
+    "row_sha256": "5e851496b76206c92c9ed2c5af411eb89dd16f693adf00ea888fea1aa5b1d7e6",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "95de6ae606f13521c42b97d3d42455fb441bc460f6e51e3e357f6d50541aead7",
+      "equivalent_of": "9618_w21_41:1(b)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w21_42:2(a)",
@@ -1692,9 +1836,15 @@
     "ms_excerpt": "1 mark for screenshot showing the following output: 1 10 2 9 5 3 4 15 6 5 8 8 7 12 −1 −1 6 −1 −1 20 −1 −1 11 −1 −1 9 −1 −1 4 −1",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "8e2b7be1a5283387719ce1f27d6aa2515538c51d551c32a28ea0830ec552f887",
+    "row_sha256": "db28f74f376e5084decca00442a94331189574e839b899cddb717d4b21b7dc10",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "8e2b7be1a5283387719ce1f27d6aa2515538c51d551c32a28ea0830ec552f887",
+      "equivalent_of": "9618_w21_41:3(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_41:3(a)",
@@ -1877,9 +2027,15 @@
     "ms_excerpt": "1 mark per point: • Declaring (global) 2D array ArrayNodes • looping through all 20 × 3 elements of array … • …. storing −1 in each element Example program code: Java public static Integer[][] ArrayNodes = new Integer[20][3]; for(Integer X = 0; X<20; X++){ for",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "7307f5238b6c408738f68735627cfa164401f32e64e1d375d795adf6ee6e8dcf",
+    "row_sha256": "9505f0f59b581aa00f28f23774965df21c30a68bb0d3c30a01f509a8bff1129e",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "7307f5238b6c408738f68735627cfa164401f32e64e1d375d795adf6ee6e8dcf",
+      "equivalent_of": "9618_w22_41:3(a)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_43:2(a)(i)",
@@ -1892,13 +2048,19 @@
     "ms_excerpt": "1 mark per point: • class Card declaration (and end where appropriate) • Private attributes declared Number as integer and Colour as string • constructor header (and end where appropriate)… • …taking 2 parameters • assigning parameters to attributes Example pr",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "fa4f238201bf96c08c894a387ac6eb110d045cbcb027f6677162316b92308fd1",
+    "row_sha256": "a2152be25398eaba2645a41d85c1dc33b26583c2db60e82a547f59106c51f961",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       8,
       9
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "fa4f238201bf96c08c894a387ac6eb110d045cbcb027f6677162316b92308fd1",
+      "equivalent_of": "9618_w22_41:2(a)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_43:1(d)(ii)",
@@ -1911,9 +2073,15 @@
     "ms_excerpt": "Screenshot showing 61 input and 2 output, e.g.",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "b9533c3301815e2586d3430b4627c3d46cdbdef367bad71d0a0dacef78057d84",
+    "row_sha256": "dded11ee0b38a525a29f832fc357601ea4c8d46780f504024fc228ebbf1a7c63",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "b9533c3301815e2586d3430b4627c3d46cdbdef367bad71d0a0dacef78057d84",
+      "equivalent_of": "9618_w22_41:1(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_43:2(b)(iii)",
@@ -1926,9 +2094,15 @@
     "ms_excerpt": "1 mark per point: • 2 variables (player 1 and player 2) of type Hand • using constructor and sending the correct variables as parameters Example program code: Python Player1 = Hand(OneRed, TwoRed, ThreeRed, FourRed, OneYellow) Player2 = Hand(TwoYellow, ThreeYe",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "fffd0d5492e923c1db99d86619ab225ebc43fccc3b2385c8e6652621f28b4112",
+    "row_sha256": "c6dea4400dedc25ed6df56d455e829c0b52a9063ccdc7eb582aa384e314976f2",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "fffd0d5492e923c1db99d86619ab225ebc43fccc3b2385c8e6652621f28b4112",
+      "equivalent_of": "9618_w22_41:2(b)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w22_43:3(e)(ii)",
@@ -1941,9 +2115,15 @@
     "ms_excerpt": "Screenshot with result as shown, for example:",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "8ca900bb84d4c7789dec520f50455f201780cf275401c285f9ecfdcbd6a3e3d1",
+    "row_sha256": "4f449f24eb5c1e0d9d430bc569daa6c7d763f58f3139ab57a2dbc85c4956ba49",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "8ca900bb84d4c7789dec520f50455f201780cf275401c285f9ecfdcbd6a3e3d1",
+      "equivalent_of": "9618_w22_41:3(e)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w23_41:3(a)(iii)",
@@ -2137,14 +2317,20 @@
     "ms_excerpt": "One mark each to max 5 • Function header (and end where appropriate) taking one string parameter • Calculating length of parameter string • Looping correct number of times • Checking the first character against all vowels • Accessing the remainder of the strin",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "bfd776097284cd2a1f7e40f354d33f16382dc84dddad942125b4ab701f4eefd6",
+    "row_sha256": "d669c7f4de5fa8b0c83c2c3db3bda26c09db12274935f2b09386741ceda6d805",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       4,
       5,
       6
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "bfd776097284cd2a1f7e40f354d33f16382dc84dddad942125b4ab701f4eefd6",
+      "equivalent_of": "9618_w23_41:1(a)(i)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w23_43:3(a)(ii)",
@@ -2172,13 +2358,19 @@
     "ms_excerpt": "One mark each • Procedure Enqueue() header (and close where appropriate) with one (string) parameter • Checking if queue is full and outputting suitable message • … otherwise inserting parameter to next space • … increment TailPointer and set HeadPointer to 0 ",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "5ddf795f1350d6c2c54cc00bc8cc5340ea1a2885113cf60d907012e6e1d8df02",
+    "row_sha256": "98c307805b3a9efa9d064883c7a7605513eedebe446e959923cce2b6948c8e24",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       10,
       11
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "5ddf795f1350d6c2c54cc00bc8cc5340ea1a2885113cf60d907012e6e1d8df02",
+      "equivalent_of": "9618_w23_41:2(a)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w23_43:2(b)",
@@ -2191,13 +2383,19 @@
     "ms_excerpt": "One mark each to max 6 • Procedure header ReadData() with no parameters • Opening file … • … and closing file • Looping until EOF/set amount • Reading in each value • … calling Enqueue() with each value • Use of exception handling with appropriate output Examp",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "0472753653ac60bde01cf0ec382d0d3c11d5cbadf5c3c8eab970646d801c1fe3",
+    "row_sha256": "a52a5fb2f304fb59c02a8e4d25a896683858d57f1f5bf8ff7f245eeeb3c244ea",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       14,
       15
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "0472753653ac60bde01cf0ec382d0d3c11d5cbadf5c3c8eab970646d801c1fe3",
+      "equivalent_of": "9618_w23_41:2(b)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_41:3(d)(i)",
@@ -2392,9 +2590,15 @@
     "ms_excerpt": "1 mark for calling InsertData() then OutputLinkedList() Python InsertData() OutputLinkedList() VB.NET InsertData() OutputLinkedList() Java InsertData(); OutputLinkedList();",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "3fae9876f4964d393b14142548ff27fe677fe889810250246dfad278fc9e5724",
+    "row_sha256": "781dc3b94c7d09a9a678efd264ff4cad9fe6316a2820c42ca0fb7635c01d8c33",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "3fae9876f4964d393b14142548ff27fe677fe889810250246dfad278fc9e5724",
+      "equivalent_of": "9618_w24_41:3(c)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_43:1(b)(iii)",
@@ -2407,9 +2611,15 @@
     "ms_excerpt": "1 mark for output showing all colours in one string e.g.",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "e561f2ebc086799d1f85d3f215b6b6b6b1f71fb53fb460bae00d53222deb83d5",
+    "row_sha256": "21dab63a82c36d26730f0d2cb5054107e4db2ce5709dcdb45ad2dce0de6dc1f1",
     "reviewer": "codex-1",
-    "review_date": "2026-10-17"
+    "review_date": "2026-10-17",
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "e561f2ebc086799d1f85d3f215b6b6b6b1f71fb53fb460bae00d53222deb83d5",
+      "equivalent_of": "9618_w24_41:1(b)(iii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_43:3(d)(ii)",
@@ -2422,13 +2632,19 @@
     "ms_excerpt": "1 mark for calling RemoveData(5), outputting \"After\", calling OutputLinkedList() Python LinkedList = [] FirstNode = -1 FirstEmpty = 0 for x in range(0, 19): LinkedList.append([-1, x + 1]) InsertData() OutputLinkedList() RemoveData(5) print(\"After\") OutputLinke",
     "figure": true,
     "result": "一致（题号、起句/关键数据、分值、QP/MS 页码及同题 MS）；已看 QP/MS 原页；代码与截图排版以原页为准",
-    "row_sha256": "6a0101a27fed13abbaf494502f640378499361f10f35a00d80cb80b7de1e99bc",
+    "row_sha256": "7741fbee3538a346448d7e1ddf63e1f35620f030068728d0a5e34b8e3c40955f",
     "reviewer": "codex-1",
     "review_date": "2026-10-17",
     "ms_reviewed_pages": [
       36,
       37
-    ]
+    ],
+    "equivalence_update": {
+      "decision": "D42 ③",
+      "baseline_row_sha256": "6a0101a27fed13abbaf494502f640378499361f10f35a00d80cb80b7de1e99bc",
+      "equivalent_of": "9618_w24_41:3(d)(ii)",
+      "note": "Link-only change verified; original PDF excerpts and review date unchanged."
+    }
   },
   {
     "id": "9618_w24_43:2(a)(i)",
