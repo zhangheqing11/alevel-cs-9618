@@ -1,0 +1,43 @@
+1(a) SQ-02 # 队列的数组与指针声明（指南 §7 第 14 条）
+ = declare-array,global-scope,data-types | initialise-variables | queue-array,global-scope,initialise-variables
+1(b) SQ-02
+ = module-header | queue-array | boolean-return | queue-array,array-index | queue-array | queue-array
+1(c) SQ-02
+ = module-header,return-value | queue-array | return-value | queue-array,return-value | queue-array
+1(d) FL-01 # 读文件逐行入队（指南 §7 第 1 条），调用 Enqueue 并报满属通用点
+ = module-header,file-open-read,file-close | loop-to-eof | file-open-read,type-conversion,strip-newline | procedure-call | procedure-call,output-format | exception-handling,output-format
+1(e)(i) SQ-04 # 主程序出队直到返回 –1 并累加（指南 §7 第 2 条）
+ = procedure-call | procedure-call,return-value | sentinel-loop | accumulator | output-format
+1(e)(ii) MP-03
+2(a) AR-01
+2(b) SR-04
+ = module-header,return-value | count-loop | insertion-sort,relational-ops | insertion-sort,shift-values | insertion-sort,array-index
+2(c) AR-04
+ = module-header,count-loop | output-format
+2(d)(i) MP-01
+ = procedure-call,return-value | procedure-call
+2(d)(ii) MP-03
+2(e) SR-02 # 清单把循环与递归写成同一点，不加 RC-01（指南 §4）
+ = module-header | binary-search,pre-condition-loop,recursion | binary-search,div-mod | binary-search,relational-ops | return-value | binary-search
+2(f)(i) MP-02
+ = procedure-call | output-format,nested-if
+2(f)(ii) MP-03
+3(a)(i) OP-01
+ = class-definition | data-types,object-reference | constructor | constructor,object-reference
+3(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+3(a)(iii) OP-02
+ = getter-setter,object-reference | getter-setter
+3(b)(i) OP-01 # 只有一个结点引用属性的链表类（指南 §7 第 7 条）
+ = class-definition,constructor | object-reference,initialise-variables
+3(b)(ii) LT-02 # 对象链表的表头插入（指南 §7 第 8 条）
+ = module-header | object-instantiation | method-call,object-reference,linked-list | object-reference,linked-list
+3(b)(iii) LT-01
+ = module-header,return-value | object-reference,linked-list,method-call | string-concat
+3(b)(iv) LT-02
+ = module-header,boolean-return | object-reference,boolean-return | relational-ops,boolean-return | object-reference,linked-list | object-reference,linked-list,pre-condition-loop | object-reference,linked-list,boolean-return | boolean-return
+3(c)(i) OP-07
+ t Creating new LinkedList object || Calling InsertNode() five times with correct data in correct order || Calling RemoveNode(30) and calling Traverse() and store/output the return value, before RemoveNode() and after
+ = object-instantiation | method-call | method-call,output-format
+3(c)(ii) MP-03
+ = test-output | test-output

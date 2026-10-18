@@ -1,0 +1,42 @@
+1(a) SQ-03 # 循环队列（1(b) 回绕、NumberItems）的数组与指针声明（指南 §7 第 14 条）
+ = declare-array,global-scope,initialise-variables | queue-array,global-scope,initialise-variables
+1(b) SQ-03
+ = module-header,boolean-return | queue-array,boolean-return | queue-array | queue-array | queue-array | queue-array,array-index,boolean-return
+1(c) MP-02 # MS 第 2 个圆点含两个「…」得分点（原页 p.12，3 分对 3 点），拆成两条
+ t Calling Enqueue() with 1 to 25 (inclusive) in order || … storing/using return value in selection || …outputting Successful with integer and outputting Unsuccessful with integer correctly
+ = procedure-call,count-loop | procedure-call,return-value,nested-if | output-format
+1(d) SQ-03
+ = module-header,queue-array,return-value | queue-array,return-value | queue-array | queue-array | queue-array | queue-array
+1(e)(i) MP-01
+ = procedure-call | output-format,return-value
+1(e)(ii) MP-03
+2(a) FL-01
+ = module-header | input-prompt | file-open-read,file-close | loop-to-eof | file-open-read | strip-newline,array-index | return-value | exception-handling,output-format
+2(b) AR-05 # 按颜色把每项分进 6 个数组：遍历、按条件挑选、存进新数组 3 分；拆字段只 1 分
+ = module-header | declare-array | count-loop | field-extract,string-functions | relational-ops,nested-if | array-index,type-conversion
+2(c) FL-03
+ = module-header,file-append,file-close | count-loop | file-append | file-write,string-concat | exception-handling,output-format
+2(d) MP-01
+ = procedure-call | procedure-call
+2(e)(i) MP-01
+ = procedure-call | return-value | procedure-call
+2(e)(ii) MP-03
+ = test-input-sequence | screenshot-file
+3(a)(i) OP-01
+ = class-definition | constructor | data-types,object-reference | constructor,object-reference
+3(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+3(a)(iii) OP-02
+ = getter-setter,object-reference | getter-setter | getter-setter
+3(b) OP-07
+ = object-instantiation | object-instantiation
+3(c)(i) OP-01 # 树类只有一个结点引用属性 FirstNode（类比指南 §7 第 7 条的链表类）
+ = class-definition,constructor | object-reference,constructor
+3(c)(ii) OP-02
+3(c)(iii) LT-03
+ = module-header | binary-tree,object-reference,relational-ops | object-reference,binary-tree | binary-tree,object-reference,relational-ops | object-reference,binary-tree | pre-condition-loop,binary-tree,recursion
+3(d) LT-04
+ = module-header,recursion | recursion,object-reference | output-format,method-call | recursion,object-reference | binary-tree
+3(e)(i) OP-07
+ = object-instantiation | method-call | procedure-call,method-call
+3(e)(ii) MP-03

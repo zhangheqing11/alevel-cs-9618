@@ -1,0 +1,41 @@
+1(a) AR-01
+ = declare-array,data-types | initialise-variables
+1(b)(i) AR-05
+ = module-header | count-loop | max-min,string-functions | max-min,string-functions | output-format
+1(b)(ii) MP-01
+1(b)(iii) MP-03
+1(c)(i) SR-04
+ = module-header | count-loop | insertion-sort,shift-values | char-compare,relational-ops | return-value,insertion-sort
+1(c)(ii) AR-04 # 排序前后各输出一次数组内容 2 分；调用一次是通用点
+ = output-format,count-loop | procedure-call,return-value | output-format,count-loop
+1(c)(iii) MP-03
+2(a)(i) OP-01
+ = encapsulation,data-types | class-definition | constructor | constructor
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(a)(iii) OP-03
+ = module-header,boolean-return | logic-ops,relational-ops,boolean-return
+2(b)(i) FL-02
+ = module-header,exception-handling,output-format | file-open-read,file-close | loop-to-eof | file-open-read | field-extract | object-instantiation,type-conversion | array-of-objects,global-scope
+2(b)(ii) MP-01
+2(c)(i) AR-05 +PR-01 # 遍历对象数组、按 MeetCriteria() 返回值挑出存进新数组为主；两个输入的校验 2 分进 cross
+ = module-header,input-prompt | input-validation,logic-ops | count-loop,array-of-objects | method-call,boolean-return | method-call | array-of-objects,global-scope
+2(c)(ii) AR-04 # 遍历符合条件的对象数组并按格式输出
+ = procedure-call | accumulator,output-format | count-loop,array-of-objects | output-format | method-call,getter-setter
+2(d)(i) MP-03
+2(d)(ii) MP-03
+3(a) LT-01
+ = array-2d,declare-array,global-scope | linked-list,initialise-variables | linked-list,initialise-variables | array-2d,initialise-variables | array-2d,array-index
+3(b)(i) LT-01
+ = module-header,linked-list | linked-list | output-format,array-2d | linked-list,pre-condition-loop
+3(b)(ii) LT-01 # 沿空闲表指针输出
+ = module-header,linked-list | linked-list,output-format | pre-condition-loop,linked-list
+3(b)(iii) MP-01
+ = output-format,procedure-call | output-format,procedure-call
+3(b)(iv) MP-03
+ = test-output | test-output
+3(c)(i) LT-02
+ = module-header | linked-list | output-format | linked-list,array-2d | linked-list | linked-list | linked-list,pre-condition-loop | linked-list | linked-list
+3(c)(ii) MP-01
+ = procedure-call | procedure-call,output-format
+3(c)(iii) MP-03

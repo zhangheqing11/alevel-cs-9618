@@ -1,0 +1,45 @@
+1(a)(i) AR-01
+1(a)(ii) FL-01
+ = file-open-read | loop-to-eof | file-open-read,array-index | exception-handling,output-format | file-close
+1(b)(i) AR-04
+ = module-header | count-loop,loop-bounds | output-format
+1(b)(ii) MP-01
+1(b)(iii) MP-03
+1(c) SR-01
+ = module-header | linear-search,accumulator | return-value
+1(d)(i) PR-01 # 输入并校验 2 分在场，调用与输出是通用点（指南 §7 第 5 条）
+ = input-prompt | input-validation,relational-ops | procedure-call,return-value | output-format
+1(d)(ii) MP-03
+2(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor | constructor,initialise-variables
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(a)(iii) OP-02
+ = getter-setter | getter-setter | getter-setter
+2(a)(iv) OP-03
+ = module-header,assign-value | relational-ops,nested-if | assign-value
+2(b)(i) OP-04
+ = inheritance,class-definition | encapsulation,data-types | constructor | inheritance | constructor,initialise-variables
+2(b)(ii) OP-05
+ = polymorphism,module-header | assign-value | relational-ops,nested-if | inheritance,polymorphism
+2(c) OP-05 # taxonomy OP-05 cue: If the vehicle is a helicopter, it also outputs the vertical position
+ = module-header,output-format,method-call | polymorphism | output-format,method-call
+2(d)(i) OP-07
+ = object-instantiation | object-instantiation | method-call | method-call | procedure-call,method-call
+2(d)(ii) MP-03
+3(a) SQ-01 # 两个栈的数组与栈顶指针声明（指南 §7 第 14 条）
+ = declare-array,global-scope,data-types | declare-array,global-scope | stack-array,initialise-variables
+3(b)(i) SQ-01
+ = module-header,stack-array,boolean-return | stack-array,array-index | stack-array,boolean-return
+3(b)(ii) SQ-01
+ = module-header,stack-array,return-value | stack-array,return-value | stack-array
+3(b)(iii) FL-01 # 读文件逐行入栈（指南 §7 第 1 条）
+ = module-header,file-open-read | loop-to-eof | procedure-call,file-open-read | file-close | exception-handling,output-format
+3(b)(iv) SQ-01
+ = stack-array,module-header | stack-array,module-header
+3(b)(v) FL-01
+ = file-open-read,loop-to-eof,exception-handling | procedure-call
+3(c) SQ-04
+ = module-header,procedure-call,output-format | nested-if,output-format | procedure-call,stack-array | nested-if,output-format | procedure-call,stack-array
+3(d)(i) MP-01
+3(d)(ii) MP-03
