@@ -1,7 +1,7 @@
 id,primary,cross,confidence,note
 9618_s23_42:1(a),P4-AR-01,,high,
 9618_s23_42:1(b),P4-AR-01,,high,
-9618_s23_42:1(c),P4-SR-03,,high,MS 按补全语句给分（1 mark for each completed statement），按指南 §8.2 第 9 条不拆
+9618_s23_42:1(c),P4-SR-03,,high,补全题干伪代码的 4 个语句 + 2 个圆点：计数点作一条 4 分（指南 §8.2 第 7 条）
 9618_s23_42:1(d)(i),P4-AR-04,,high,调用 1 分 + 遍历输出 2 分：AR-04 在场，优先于 MP-01（§3）
 9618_s23_42:1(d)(ii),P4-MP-03,,high,1 分截图，不拆
 9618_s23_42:2(a),P4-AR-03,,high,

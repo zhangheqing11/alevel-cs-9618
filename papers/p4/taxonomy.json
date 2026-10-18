@@ -113,17 +113,17 @@
       "chapter": "PR",
       "name_zh": "字符串处理",
       "name_en": "String processing",
-      "summary": "对字符串参数或输入做逐字符处理、比较、拆分、拼接与大小写转换：数元音、逐字符比较两个串的字母顺序、按分号或逗号拆成数组、游程压缩、校验位（取前几位字符计算）、把属性拼成规定格式的字符串。",
+      "summary": "对字符串参数或输入做逐字符处理、比较、拆分、拼接与大小写转换：数元音、逐字符比较两个串的字母顺序、按分号或逗号拆成数组、游程压缩（数据不是靠出队取得时）、校验位（取前几位字符计算）、把属性拼成规定格式的字符串。",
       "cues": [
         "takes a string as a parameter and counts the number of lower-case vowels",
         "compares each string, one character at a time, to identify which string comes first alphabetically",
         "splits a string parameter into four individual lines of code",
-        "The compression algorithm counts the number of times each binary digit appears consecutively",
         "uses the check digit to validate each input"
       ],
       "not": [
         "P4-OP-03：类的方法把属性拼成字符串返回（Description()、GetPosition()）→ OP-03，本题型不进 cross（拼接只是方法体）",
         "P4-AR-04：把整个数组拼成一行输出或返回（FormatArray()、ReturnAllData()）→ AR-04",
+        "P4-SQ-04：被处理的数据靠循环调用 Dequeue / Pop 取得（9618_w25_43:2(e) 出队后做游程压缩）→ SQ-04，字符串处理 ≥ 2 分时本题型进 cross",
         "P4-RC-02：要求把逐字符的迭代算法改写成递归 → RC-02",
         "P2-PG-11：P2 用插页函数 MID / LENGTH 写伪代码；P4 用 Python 切片与字符串方法上机写 → 本题型"
       ],
@@ -182,14 +182,15 @@
       "chapter": "AR",
       "name_zh": "二维数组",
       "name_en": "2D arrays",
-      "summary": "声明二维数组（行 × 列、元素类型），用嵌套循环赋初值（–1、随机数、文件读入），按行列访问、修改与按网格输出；数据本身是表（作业号与优先级、玩家 ID / 关卡 / 分数）。",
+      "summary": "声明二维数组（行 × 列、元素类型），用嵌套循环赋初值（–1、随机数、文件读入），按行列访问与修改；数据本身是表（作业号与优先级、玩家 ID / 关卡 / 分数）。",
       "cues": [
         "The main program declares a 2D array of 10 by 10 integer elements",
         "The program stores the jobs in a global 2D array",
         "The data about the players and their scores is stored in a 2D array of strings",
-        "The values should be output as a 2D grid, with values in rows and columns"
+        "The first dimension of the array has seven elements: one for each player"
       ],
       "not": [
+        "P4-AR-04：模块只把二维数组按行列格式输出（9618_s22_42:2(b)(ii)）→ AR-04",
         "P4-LT-01 / P4-LT-03：二维数组用来存链表（数据 + 指针）或二叉树（左指针 / 数据 / 右指针）→ LT-01 / LT-03",
         "P4-LT-05：二维数组是哈希表 → LT-05",
         "P4-SR-03 / P4-SR-04：要求对二维数组排序 → 对应排序题型（本题型进 cross）",
@@ -226,12 +227,13 @@
       "chapter": "AR",
       "name_zh": "按格式输出数组内容",
       "name_en": "Output or format array contents",
-      "summary": "按下标顺序遍历数组（一维、二维、记录或对象数组），按题给格式输出：同一行空格分隔、每项一行、带说明文字；或把所有元素拼成一个字符串返回。不跟随指针。",
+      "summary": "按下标顺序遍历数组（一维、二维、记录或对象数组），按题给格式输出：同一行空格分隔、每项一行、二维数组按行列成网格、带说明文字；或把所有元素拼成一个字符串返回。不跟随指针。",
       "cues": [
         "outputs the contents of the array in the order they are stored. The items are printed on the same line",
         "outputs each job number and priority on a line, for example: 123 priority 1",
         "Write a procedure to output all 10 elements in the stack and the value of StackPointer",
-        "outputs the left pointer, the data and the right pointer for each node … in the order they are saved in the array"
+        "outputs the left pointer, the data and the right pointer for each node … in the order they are saved in the array",
+        "The values should be output as a 2D grid, with values in rows and columns"
       ],
       "not": [
         "P4-LT-01：沿指针从头结点走到空指针输出 → LT-01",
@@ -534,7 +536,8 @@
         "pops each integer from the stack until the stack is empty • finds and outputs the largest number",
         "uses Dequeue() to remove an ID from the queue • checks whether a RecordData with the returned ID exists in Records",
         "The values stored in the stack are used to perform mathematical operations",
-        "If the parameter is a vowel, it is pushed onto StackVowel"
+        "If the parameter is a vowel, it is pushed onto StackVowel",
+        "The compression algorithm counts the number of times each binary digit appears consecutively"
       ],
       "not": [
         "P4-SQ-01 / P4-SQ-02 / P4-SQ-03：写的是 Push / Pop / Enqueue / Dequeue 本身 → 对应题型",
