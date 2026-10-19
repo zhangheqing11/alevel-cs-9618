@@ -178,6 +178,81 @@ H4 = dict(Home=14, A=10, B=7, C=9, D=6, E=3, F=3, School=0)
 cost, path, rows = astar(G4, H4, 'Home', 'School')
 check('AI-04 w21/31 9(b) path Home-A-E-F-School cost 11', path == ['Home', 'A', 'E', 'F', 'School'] and cost == 11)
 
+# ------------------------------------------------------------------ CT: binary search as printed in 9618_s24_31:10(b)
+
+
+def s24_31_binary_search(names, to_find):
+    """Line-by-line translation of QP p.10 + MS p.12 (card CT.md lines 205-239). names is 1-based (index 0 unused).
+    Returns (found, position, indices_read)."""
+    top, end = 1, len(names) - 1
+    found, not_in_list, read = False, False, []
+    while not found and not not_in_list:
+        cur = (top + end) // 2
+        read.append(cur)
+        if cur < 1:
+            return found, cur, read          # Names[0] would be read: outside ARRAY[1:n]
+        if to_find == names[cur]:
+            found = True
+        elif top >= end:
+            not_in_list = True
+        elif to_find > names[cur]:
+            top = cur + 1
+        else:
+            end = cur - 1
+    return found, cur, read
+
+
+NAMES = [None] + [f'N{i:06d}' for i in range(1, 100001)]
+ok_all = all(s24_31_binary_search(NAMES, NAMES[i])[:2] == (True, i) for i in (1, 2, 3, 50000, 99999, 100000))
+check('CT-02 s24/31 10(b) MS algorithm finds present items', ok_all)
+_, pos, read = s24_31_binary_search(NAMES, 'A')        # smaller than every name
+check('CT-02 s24/31 10(b) MS algorithm reads index 0 for an item below Names[1] (finding)', 0 in read)
+_, pos, read = s24_31_binary_search(NAMES, 'Z')        # larger than every name
+check('CT-02 s24/31 10(b) MS algorithm stays in range for an item above Names[n]', max(read) <= 100000)
+
+
+def card_binary_search(names, item):
+    """CT.md template lines 136-155 (WHILE Low <= High)."""
+    low, high = 1, len(names) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if names[mid] == item:
+            return mid
+        if names[mid] < item:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+
+check('CT-02 card template binary search correct on present / absent items',
+      all(card_binary_search(NAMES, NAMES[i]) == i for i in (1, 7, 100000))
+      and card_binary_search(NAMES, 'A') == -1 and card_binary_search(NAMES, 'Z') == -1)
+
+
+def card_insertion_sort(a):
+    """CT.md lines 350-367 (flag version), 1-based list a[1..n]."""
+    for index in range(2, len(a)):
+        value, position, keep = a[index], index - 1, True
+        while keep:
+            if position < 1:
+                keep = False
+            elif a[position] > value:
+                a[position + 1] = a[position]
+                position -= 1
+            else:
+                keep = False
+        a[position + 1] = value
+    return a
+
+
+rnd2 = random.Random(9618)
+ok = True
+for _ in range(200):
+    data = [rnd2.randint(-50, 50) for _ in range(rnd2.randint(1, 30))]
+    ok &= card_insertion_sort([None] + data)[1:] == sorted(data)
+check('CT-03 card insertion sort (flag version) sorts 200 random arrays', ok)
+
 if __name__ == '__main__':
     import sys
     extra = sys.argv[1:]
