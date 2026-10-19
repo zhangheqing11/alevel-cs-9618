@@ -1,0 +1,1948 @@
+{
+  "audit": "T36",
+  "base": "a9bb0d8",
+  "cards": [
+    {
+      "card": "P3-DR-01",
+      "representative": "9618_w23_31:3",
+      "variation": "9618_s24_31:3(a)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-02",
+      "representative": "9618_w25_31:1(b)(i)",
+      "variation": "9618_s23_31:4(b)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-03",
+      "representative": "9618_s25_31:1(b)",
+      "variation": "9618_s24_31:3(b)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          4
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": [
+        "F01"
+      ]
+    },
+    {
+      "card": "P3-DR-04",
+      "representative": "9618_w22_32:4(c)(ii)",
+      "variation": "9618_w22_31:3(d)(ii)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": [
+        "F03"
+      ]
+    },
+    {
+      "card": "P3-DR-05",
+      "representative": "9618_s24_32:3(b)",
+      "variation": "9618_w24_31:6(b)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-06",
+      "representative": "9618_w23_31:4(a)",
+      "variation": "9618_w24_32:2(a)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          2
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-07",
+      "representative": "9618_s24_31:4(b)",
+      "variation": "9618_s24_32:7(b)(i)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-08",
+      "representative": "9618_s23_31:3(b)",
+      "variation": "9618_w23_32:3(b)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-09",
+      "representative": "9618_w24_31:1(b)",
+      "variation": "9618_w25_32:2(a)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          7
+        ]
+      },
+      "rendered": [
+        "9618_w24_31 MS p.4"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": [
+        "F02"
+      ]
+    },
+    {
+      "card": "P3-DR-10",
+      "representative": "9618_s24_31:1(b)",
+      "variation": "9618_w24_31:1(a)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          2
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [
+        "9618_w24_31 MS p.4"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-11",
+      "representative": "9618_w22_31:1(c)(ii)",
+      "variation": "9618_s25_31:2(a)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          7
+        ]
+      },
+      "rendered": [
+        "9618_s25_33 MS p.7"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-DR-12",
+      "representative": "9618_s23_32:1(b)",
+      "variation": "9618_w25_33:2(a)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          7
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-01",
+      "representative": "9618_s25_32:3(b)",
+      "variation": "9618_w24_31:4",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          4
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-02",
+      "representative": "9618_w22_31:2",
+      "variation": "9618_s25_33:4(a)",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          6
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-03",
+      "representative": "9618_w25_33:4",
+      "variation": "9618_w22_32:3(c)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-04",
+      "representative": "9618_w25_32:3(b)",
+      "variation": "9618_s24_32:2(c)",
+      "qp_pages": [
+        4
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": [
+        "F04"
+      ]
+    },
+    {
+      "card": "P3-CI-05",
+      "representative": "9618_w24_31:3(a)",
+      "variation": "9618_s25_32:4",
+      "qp_pages": [
+        3
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          4
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-06",
+      "representative": "9618_w24_32:1(a)",
+      "variation": "9618_s25_33:4(b)",
+      "qp_pages": [
+        2
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          6
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CI-07",
+      "representative": "9618_s22_31:3",
+      "variation": "9618_w25_32:4(b)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          4
+        ],
+        "ms": [
+          10
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-HV-01",
+      "representative": "9618_s22_31:4(a)",
+      "variation": "9618_w24_31:2",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [
+        "9618_w22_31 MS p.11"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-HV-02",
+      "representative": "9618_s23_32:8(b)",
+      "variation": "9618_s24_31:11(b)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          14
+        ]
+      },
+      "rendered": [
+        "9618_s23_32 MS p.9"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-HV-03",
+      "representative": "9618_s22_32:5",
+      "variation": "9618_w23_32:10",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-HV-04",
+      "representative": "9618_s23_31:8",
+      "variation": null,
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": null,
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-HV-05",
+      "representative": "9618_w22_32:5",
+      "variation": "9618_s24_32:9(b)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          12
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-01",
+      "representative": "9618_s24_31:6(a)",
+      "variation": "9618_w25_31:6(a)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          6
+        ],
+        "ms": [
+          10
+        ]
+      },
+      "rendered": [
+        "9618_s24_31 QP p.6",
+        "9618_s24_31 MS p.9",
+        "9618_w25_31 QP p.6",
+        "9618_w23_32 QP p.6"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-02",
+      "representative": "9618_s22_32:6(b)(ii)",
+      "variation": null,
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": null,
+      "rendered": [
+        "9618_s22_32 QP p.9",
+        "9618_s22_32 MS p.7",
+        "9618_s21_31 QP p.9",
+        "9618_s21_31 MS p.8"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-03",
+      "representative": "9618_w22_32:8(a)",
+      "variation": null,
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        10
+      ],
+      "variation_pages": null,
+      "rendered": [
+        "9618_w22_32 QP p.7",
+        "9618_w22_32 MS p.10",
+        "9618_w22_32 MS p.11"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-04",
+      "representative": "9618_w24_31:7(a)",
+      "variation": "9618_s23_32:9(a)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [
+        "9618_w24_31 QP p.6",
+        "9618_w24_31 MS p.8",
+        "9618_s23_32 QP p.10",
+        "9618_s23_32 MS p.9"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-05",
+      "representative": "9618_s23_31:7(a)",
+      "variation": "9618_w24_32:6(b)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [
+        "9618_s23_31 QP p.8",
+        "9618_s23_31 MS p.6",
+        "9618_w24_32 QP p.6",
+        "9618_w24_32 QP p.7"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": [
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "card": "P3-BL-06",
+      "representative": "9618_w24_31:7(c)",
+      "variation": "9618_w25_31:6(b)(ii)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [
+        "9618_w24_31 QP p.7",
+        "9618_w24_31 MS p.9",
+        "9618_w24_31 MS p.10",
+        "9618_w25_31 QP p.7",
+        "9618_w25_31 MS p.11"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-BL-07",
+      "representative": "9618_w22_32:8(c)",
+      "variation": "9618_w23_31:6(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [
+        "9618_w22_32 QP p.7",
+        "9618_w22_32 MS p.12",
+        "9618_w23_31 QP p.7",
+        "9618_w23_31 MS p.5",
+        "9618_s23_31 MS p.7",
+        "9618_w24_31 MS p.10"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": [
+        "F05"
+      ]
+    },
+    {
+      "card": "P3-SY-01",
+      "representative": "9618_w25_31:4(b)",
+      "variation": "9618_w23_31:7(a)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-02",
+      "representative": "9618_w25_32:5(b)",
+      "variation": "9618_w23_31:7(c)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        10
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-03",
+      "representative": "9618_s25_33:6(b)",
+      "variation": "9618_s25_32:5(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-04",
+      "representative": "9618_w22_31:8(a)",
+      "variation": "9618_w24_31:8(b)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        10
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-05",
+      "representative": "9618_s25_31:6",
+      "variation": "9618_s21_31:3(b)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-06",
+      "representative": "9618_s25_32:8",
+      "variation": "9618_s25_33:8",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [
+        "9618_w22_31 MS p.7"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-07",
+      "representative": "9618_s23_31:6(a)",
+      "variation": "9618_w24_32:7(a)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [
+        "9618_s23_31 QP p.6",
+        "9618_s23_31 QP p.7",
+        "9618_s23_31 MS p.5"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-08",
+      "representative": "9618_s25_31:7(b)",
+      "variation": "9618_s23_32:3(b)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          5
+        ]
+      },
+      "rendered": [
+        "9618_s25_31 QP p.8",
+        "9618_s25_31 QP p.9",
+        "9618_s25_31 MS p.12"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-09",
+      "representative": "9618_s23_31:6(c)",
+      "variation": "9618_w24_31:10(b)(i)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          13
+        ]
+      },
+      "rendered": [
+        "9618_s23_31 QP p.6",
+        "9618_s23_31 QP p.7",
+        "9618_s23_31 MS p.6"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-10",
+      "representative": "9618_w23_31:9(b)",
+      "variation": "9618_s22_31:5(b)(ii)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          7
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-11",
+      "representative": "9618_s24_31:5(a)",
+      "variation": "9618_w25_31:8(b)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          12
+        ]
+      },
+      "rendered": [
+        "9618_s24_31 QP p.5",
+        "9618_s24_31 MS p.7"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SY-12",
+      "representative": "9618_w25_32:8(c)",
+      "variation": "9618_s24_31:5(c)",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        14
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [
+        "9618_w25_32 QP p.8",
+        "9618_w25_32 MS p.14",
+        "9618_s24_31 MS p.8"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-SC-01",
+      "representative": "9618_s23_32:5(b)",
+      "variation": "9618_w22_31:6(a)",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          6
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [
+        "9618_w22_31 QP p.6"
+      ],
+      "method": "text",
+      "findings": [
+        "F08"
+      ]
+    },
+    {
+      "card": "P3-SC-02",
+      "representative": "9618_s24_32:4",
+      "variation": "9618_w25_32:7(b)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        5
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          13
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SC-03",
+      "representative": "9618_s23_31:9(b)",
+      "variation": "9618_s23_32:5(a)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          6
+        ],
+        "ms": [
+          6
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SC-04",
+      "representative": "9618_s25_33:7",
+      "variation": "9618_s25_32:10",
+      "qp_pages": [
+        8
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          10
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SC-05",
+      "representative": "9618_w22_32:6(b)",
+      "variation": "9618_w25_33:9",
+      "qp_pages": [
+        6
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          12
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-SC-06",
+      "representative": "9618_w22_31:6(c)",
+      "variation": "9618_s22_32:7(b)(i)",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-01",
+      "representative": "9618_s25_32:6(a)",
+      "variation": "9618_s25_31:10(a)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          13
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-02",
+      "representative": "9618_s25_33:10(b)",
+      "variation": "9618_s23_31:2(b)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        13
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-03",
+      "representative": "9618_w23_32:8",
+      "variation": "9618_w25_33:8",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        6
+      ],
+      "variation_pages": {
+        "qp": [
+          7
+        ],
+        "ms": [
+          12
+        ]
+      },
+      "rendered": [
+        "9618_w23_32 QP p.7",
+        "9618_w23_32 MS p.6",
+        "9618_w25_33 QP p.7"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-04",
+      "representative": "9618_s23_32:10(b)",
+      "variation": "9618_w21_31:9(b)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [
+        "9618_s23_32 QP p.12",
+        "9618_s23_32 MS p.11",
+        "9618_w21_31 QP p.12",
+        "9618_w21_31 MS p.9"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": [
+        "F09"
+      ]
+    },
+    {
+      "card": "P3-AI-05",
+      "representative": "9618_s25_32:6(b)",
+      "variation": "9618_s24_32:11",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          14
+        ]
+      },
+      "rendered": [
+        "9618_s23_31 MS p.3"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-06",
+      "representative": "9618_w25_31:7(b)",
+      "variation": "9618_w23_31:12",
+      "qp_pages": [
+        7
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          14
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-AI-07",
+      "representative": "9618_w25_32:9(b)",
+      "variation": "9618_w21_31:9(a)(ii)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        15
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-01",
+      "representative": "9618_s22_32:8(b)(ii)",
+      "variation": "9618_s24_32:8(b)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-02",
+      "representative": "9618_s24_31:10(b)",
+      "variation": "9618_s24_32:8(a)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          10
+        ]
+      },
+      "rendered": [
+        "9618_s24_31 QP p.10",
+        "9618_s24_31 MS p.12"
+      ],
+      "extra_text": [
+        "9618_s24_31 MS p.13"
+      ],
+      "method": "text+render",
+      "findings": [
+        "F10"
+      ]
+    },
+    {
+      "card": "P3-CT-03",
+      "representative": "9618_s25_33:12(b)",
+      "variation": "9618_s21_31:8(b)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        15
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-04",
+      "representative": "9618_s22_32:8(c)",
+      "variation": "9618_w22_31:12(b)(ii)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        9
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          15
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-05",
+      "representative": "9618_w23_31:10(c)",
+      "variation": "9618_s23_31:11(c)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-06",
+      "representative": "9618_w23_31:10(b)",
+      "variation": "9618_w25_32:12(a)(i)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          17
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": [
+        "F11"
+      ]
+    },
+    {
+      "card": "P3-CT-07",
+      "representative": "9618_s23_32:11(a)(ii)",
+      "variation": "9618_s23_31:11(a)",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-08",
+      "representative": "9618_w22_32:11(b)",
+      "variation": "9618_w22_32:11(a)",
+      "qp_pages": [
+        11
+      ],
+      "ms_pages": [
+        16
+      ],
+      "variation_pages": {
+        "qp": [
+          10
+        ],
+        "ms": [
+          15
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-09",
+      "representative": "9618_w24_31:11(a)",
+      "variation": "9618_s25_31:4(a)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        15
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [
+        "9618_w24_31 QP p.12",
+        "9618_w24_31 QP p.13",
+        "9618_w24_31 MS p.15",
+        "9618_w24_31 MS p.16",
+        "9618_w24_31 MS p.17"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-10",
+      "representative": "9618_w25_31:9(b)",
+      "variation": "9618_s23_31:12(a)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        14
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-11",
+      "representative": "9618_w23_32:9(c)",
+      "variation": "9618_w25_32:12(b)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        7
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          17
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-CT-12",
+      "representative": "9618_s23_31:12(b)",
+      "variation": "9618_s25_33:13",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        10
+      ],
+      "variation_pages": {
+        "qp": [
+          16
+        ],
+        "ms": [
+          16
+        ]
+      },
+      "rendered": [
+        "9618_s23_31 QP p.12",
+        "9618_s23_31 MS p.10"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-01",
+      "representative": "9618_s21_31:9(c)",
+      "variation": "9618_w21_31:2",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        10
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-02",
+      "representative": "9618_s22_31:9(a)",
+      "variation": "9618_w25_31:11(b)",
+      "qp_pages": [
+        14
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          15
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-03",
+      "representative": "9618_w25_32:11",
+      "variation": "9618_s22_31:9(b)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        16
+      ],
+      "variation_pages": {
+        "qp": [
+          15
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [],
+      "extra_text": [
+        "9618_w25_32 QP p.11"
+      ],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-04",
+      "representative": "9618_w22_31:11(a)",
+      "variation": "9618_w22_32:10(a)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          13
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-05",
+      "representative": "9618_s25_31:11(a)",
+      "variation": "9618_w24_31:9(b)",
+      "qp_pages": [
+        12
+      ],
+      "ms_pages": [
+        14
+      ],
+      "variation_pages": {
+        "qp": [
+          9
+        ],
+        "ms": [
+          12
+        ]
+      },
+      "rendered": [
+        "9618_s25_31 QP p.12"
+      ],
+      "extra_text": [],
+      "method": "text+render",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-06",
+      "representative": "9618_w22_31:11(b)",
+      "variation": "9618_s22_32:1(c)(i)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        13
+      ],
+      "variation_pages": {
+        "qp": [
+          3
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [
+        "9618_w22_31 QP p.10"
+      ],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-07",
+      "representative": "9618_w23_32:11(a)",
+      "variation": "9618_s24_31:8(a)",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        8
+      ],
+      "variation_pages": {
+        "qp": [
+          8
+        ],
+        "ms": [
+          11
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-08",
+      "representative": "9618_s22_32:2(c)",
+      "variation": "9618_s22_31:2(c)(ii)",
+      "qp_pages": [
+        5
+      ],
+      "ms_pages": [
+        4
+      ],
+      "variation_pages": {
+        "qp": [
+          5
+        ],
+        "ms": [
+          4
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": [
+        "F12"
+      ]
+    },
+    {
+      "card": "P3-FP-09",
+      "representative": "9618_s24_31:8(c)",
+      "variation": "9618_w23_32:11(c)",
+      "qp_pages": [
+        9
+      ],
+      "ms_pages": [
+        11
+      ],
+      "variation_pages": {
+        "qp": [
+          11
+        ],
+        "ms": [
+          8
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-10",
+      "representative": "9618_s25_32:13",
+      "variation": "9618_w23_32:12(b)",
+      "qp_pages": [
+        13
+      ],
+      "ms_pages": [
+        12
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    },
+    {
+      "card": "P3-FP-11",
+      "representative": "9618_w25_31:10",
+      "variation": "9618_s22_32:9",
+      "qp_pages": [
+        10
+      ],
+      "ms_pages": [
+        14
+      ],
+      "variation_pages": {
+        "qp": [
+          12
+        ],
+        "ms": [
+          9
+        ]
+      },
+      "rendered": [],
+      "extra_text": [],
+      "method": "text",
+      "findings": []
+    }
+  ],
+  "source_sha256": {
+    "papers/p3/front.md": "5a81201baa8e9c581b1f159534840b7e1e792a10a0cb54e67a29e84bb1149eb1",
+    "papers/p3/back.md": "95443d9e3800d5473085174074ba2aa4a0116d798af63dddb31dc0b7aabad81c",
+    "papers/p3/cards/AI.md": "fa4c457bdaa8020e140425bdb494571267aca45cacb5a0314323e1e4d2af10e3",
+    "papers/p3/cards/BL.md": "687c5f99a0abe4e6626cd157dcfea03df68344c4cd6816a937c63faf21a1b2b9",
+    "papers/p3/cards/CI.md": "c29ec860e094ce3cbb71921627738b4d44cc74521b165f8cdaf2b2b69c25ed27",
+    "papers/p3/cards/CT.md": "06f24a12af63894335cf653b886cd32593c36d3eb900592531df88ba9877c4db",
+    "papers/p3/cards/DR.md": "2c76eb8f5029ae13af9d0db3dfabf3cf47f6cef03f618a3017a5cba907d9bed1",
+    "papers/p3/cards/FP.md": "c374e5b4eb6757903441d6edb7b8922dfd1b494f595a1814e6593b1bef43c5b3",
+    "papers/p3/cards/HV.md": "af0c0c8a4a80a797d5f44bdcc4921342219566feeb014473a2ae328580de8679",
+    "papers/p3/cards/SC.md": "a00d8142d2f4dfe18bdbf5221f2416d018f00853f08f551b51cb22a2d94381e8",
+    "papers/p3/cards/SY.md": "578eb94e3285b792e730d20039e6b4b89eb62473474943a43898eee4671ce606",
+    "papers/p3/core/AI.md": "75e557a3608a7c9a05670e00aa9eb06647187e48b2845ee5c5ae707fbdbfb236",
+    "papers/p3/core/BL.md": "64beced7dcd16939319b264c4a01063fb2b3a7ec9c531527ef8940ad66c951c4",
+    "papers/p3/core/CI.md": "c3262ef86a62c190e92146c4b7cfbc4cb56fac9b5296ad07b44d4528db895c7e",
+    "papers/p3/core/CT.md": "03cd12b91bc532ad997f5d45bc3a71dd0e4346c4d372be0876d0be24a018af75",
+    "papers/p3/core/DR.md": "0ccfaad11ebcfec4c69969d5523ad1d3bbb738b1154f9de6929f6579d38d3346",
+    "papers/p3/core/FP.md": "469b95d5361f6d76fd1f36112153d4bcff0f98dba3f071bbed4a3490b4f47002",
+    "papers/p3/core/HV.md": "6f996174d7951cd1f8869d228c579bb9fc06d7f4b432ee15718a4180cfa0feeb",
+    "papers/p3/core/SC.md": "3680558bc8c3a7a52a7fa9d9fefdd0f41d6d7722a061ce72eeab698344151987",
+    "papers/p3/core/SY.md": "15077d28f5e657d4a163dbffacf8fefb5ea7e12171fafce31d811a415d9eb78c"
+  }
+}
