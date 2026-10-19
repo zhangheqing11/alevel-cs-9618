@@ -93,6 +93,91 @@ check('DR-11 s25/31 2(a) 0.00000011010111', fp_value('0110101110', '111010') == 
 check('DR-11 8+8 largest = 127/128 * 2^127', fp_value('01111111', '01111111') == Fraction(127, 128) * 2 ** 127)
 check('DR-12 s23/32 1(b) needs 13 bits', len('0' + '101011111001') == 13)
 
+# ------------------------------------------------------------------ Dijkstra / A* (AI)
+
+
+def graph(edges):
+    g = {}
+    for a, b, w in edges:
+        g.setdefault(a, {})[b] = w
+        g.setdefault(b, {})[a] = w
+    return g
+
+
+def dijkstra(g, s):
+    dist, done, order = {n: float('inf') for n in g}, set(), []
+    dist[s] = 0
+    while len(done) < len(g):
+        u = min((n for n in g if n not in done), key=lambda n: dist[n])
+        done.add(u)
+        order.append((u, dist[u]))
+        for v, w in g[u].items():
+            if v not in done and dist[u] + w < dist[v]:
+                dist[v] = dist[u] + w
+    return dist, order
+
+
+# 9618_w23_32:8, edges read from QP p.7 (render); card AI.md lines 167-182, MS p.6 answers
+G1 = graph([('S', 'A', 8), ('S', 'F', 10), ('A', 'B', 4), ('B', 'C', 8), ('B', 'D', 2), ('D', 'E', 2),
+            ('C', 'E', 3), ('C', 'F', 9), ('E', 'F', 7)])
+d, order = dijkstra(G1, 'S')
+check('AI-03 w23/32 8 answers = MS p.6 (8,12,19,14,16,10)',
+      [d[k] for k in 'ABCDEF'] == [8, 12, 19, 14, 16, 10])
+check('AI-03 w23/32 8 visit order = card table (S,A,F,B,D,E,C)', [n for n, _ in order] == list('SAFBDEC'))
+# 9618_w25_33:8, edges read from QP p.7 (render); MS p.12 answers
+G2 = graph([('S', 'T', 6), ('S', 'Y', 22), ('T', 'V', 4), ('V', 'W', 3), ('V', 'X', 9), ('W', 'X', 5),
+            ('X', 'Y', 3), ('X', 'Z', 10), ('Y', 'Z', 8)])
+d, _ = dijkstra(G2, 'S')
+check('AI-03 w25/33 8 answers = MS p.12 (6,10,13,18,21,28)', [d[k] for k in 'TVWXYZ'] == [6, 10, 13, 18, 21, 28])
+check('AI-03 card line 192: Y via T,V,W,X = 21 < 22', 6 + 4 + 3 + 5 + 3 == 21 < 22)
+
+
+def astar(g, h, s, t):
+    """Textbook A*: expand the open node with the smallest f; ties broken by smaller h, then insertion order."""
+    gs, parent, rows, closed = {s: 0}, {s: None}, [(s, s, 0)], set()
+    cnt = itertools.count()
+    heap = [(h[s], h[s], next(cnt), s)]
+    while heap:
+        f, _, _, u = heapq.heappop(heap)
+        if u in closed:
+            continue
+        if u == t:
+            break
+        closed.add(u)
+        for v, w in g[u].items():
+            if v in closed:
+                continue
+            ng = gs[u] + w
+            if ng < gs.get(v, float('inf')):
+                gs[v], parent[v] = ng, u
+                rows.append((u, v, ng))
+                heapq.heappush(heap, (ng + h[v], h[v], next(cnt), v))
+    path, n = [], t
+    while n:
+        path.append(n)
+        n = parent[n]
+    return gs[t], path[::-1], rows
+
+
+# 9618_s23_32:10(b), graph and h read from QP p.12 (render); card AI.md lines 227-243, MS p.11
+G3 = graph([('Begin', 'A', 5), ('Begin', 'B', 6), ('Begin', 'C', 5), ('Begin', 'D', 4), ('A', 'E', 6), ('A', 'End', 8),
+            ('B', 'End', 7), ('C', 'G', 2), ('D', 'G', 6), ('E', 'F', 7), ('F', 'End', 1), ('F', 'G', 4), ('G', 'End', 7)])
+H3 = dict(Begin=12, A=8, B=7, C=7, D=11, E=8, F=1, G=5, End=0)
+cost, path, rows = astar(G3, H3, 'Begin', 'End')
+check('AI-04 s23/32 10(b) path Begin-C-G-F-End cost 12', path == ['Begin', 'C', 'G', 'F', 'End'] and cost == 12)
+card_rows = [('Begin', 'Begin', 0), ('Begin', 'A', 5), ('Begin', 'B', 6), ('Begin', 'C', 5), ('Begin', 'D', 4),
+             ('C', 'G', 7), ('G', 'F', 11), ('G', 'End', 14), ('F', 'End', 12)]
+check('AI-04 s23/32 10(b) table rows = card = MS p.11, except F->E', [r for r in rows if r[:2] != ('F', 'E')] == card_rows)
+# the card's own step 4 (AI.md:208) would also write F -> E (g 18, f 26): E had no g yet; MS and card omit it
+check('AI-04 s23/32 template step 4 also yields row F->E g=18 (finding: card does not explain the omission)',
+      ('F', 'E', 18) in rows)
+# 9618_w21_31:9(b) (variation), graph and h read from QP p.12 (render); MS p.9 final path
+G4 = graph([('Home', 'A', 1), ('Home', 'B', 5), ('Home', 'C', 4), ('A', 'B', 3), ('A', 'E', 6), ('B', 'D', 2),
+            ('B', 'School', 7), ('C', 'D', 6), ('D', 'School', 2), ('E', 'F', 1), ('E', 'School', 5), ('F', 'School', 3)])
+H4 = dict(Home=14, A=10, B=7, C=9, D=6, E=3, F=3, School=0)
+cost, path, rows = astar(G4, H4, 'Home', 'School')
+check('AI-04 w21/31 9(b) path Home-A-E-F-School cost 11', path == ['Home', 'A', 'E', 'F', 'School'] and cost == 11)
+
 if __name__ == '__main__':
     import sys
     extra = sys.argv[1:]
