@@ -25,3 +25,13 @@
 6. **确定性**：不依赖网络、时间、随机数（需要随机时固定种子或注入）。单个练习的测试总时长 < 5 秒。
 7. **Python 版本**：标准库 only，兼容 Python 3.12+。
 8. 阶梯练习 `meta.kind = "ladder"`、`id = "L05/E03"`、`source = null`；改编自公开课的写 `adapted_from`。
+
+## P4 真题练习（D42 ④；细则见 `papers/p4/practice-notes.md`）
+
+与上面的通用规则不同或补充的地方：
+
+1. **一道大题一个练习**：目录 `practice/p4/<卷>_q<题号>/`；`meta.id` 取该大题第一行（如 `9618_s25_43:1(a)`），`source.rows` 列出大题全部行，`marks` = 各行分值之和；`pseudocode: false`；`entry: "main"`。与同季 `_41` 整卷相同的 `_43` 卷不另做练习。
+2. **骨架例外**：`starter.py` 不预写声明、类与模块头（它们本身是得分点），只给各小问的分节注释（`# ---- 1(a) ----` + 一句英文要求摘要）和末尾的主程序入口 `if __name__ == "__main__":`。主程序必须写在这个入口下，`sol` 导入时才不会运行到 `input()`。
+3. **数据文件**：`files/` 里的 `.txt` 从官方源文件**逐字节复制**（CRLF、末行不换行都保留），sha256 与 `pipeline/extract/source_files_p4.json` 一致；题目要求程序新建的文件不放进 `files/`。`make try` 首次运行会把 `files/` 复制到 `attempts/<练习>/`，学生可以直接 `python solution.py`。
+4. **测试**：函数型测试读数据文件前调 `tools/testkit.use_files(monkeypatch, tmp_path, exercise_dir / "files")`；截图格换成 `run_script(..., files_dir=…)` 的输出断言（按 MS 列出的值做子序列 / 行内包含匹配，不测提示语，D13 / D31）。测试名带小问号（`test_1b_…`），学生可用 `make try EX=… K=1b` 一问一问地测。
+5. **`task.md` 必有证据文档对照表**：每个证据格 → 行 id → 每个得分点是自动测（测试名）还是人工核对。

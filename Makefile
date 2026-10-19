@@ -19,5 +19,5 @@ check-scope:      ## make check-scope TASK=T12
 build:            ## regenerate output/ (implemented by T13)
 	@if [ -f build/build.py ]; then $(PY) build/build.py all; else echo "build/build.py not implemented yet (T13)"; fi
 
-try:              ## make try EX=practice/p2/<exercise>
-	$(PY) tools/try.py "$(EX)"
+try:              ## make try EX=practice/p2/<exercise> [K=1b]
+	$(PY) tools/try.py "$(EX)" "$(K)"

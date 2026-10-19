@@ -62,3 +62,19 @@ def feed_input(monkeypatch, *answers: str) -> None:
         return queue.pop(0)
 
     monkeypatch.setattr(builtins, "input", fake_input)
+
+
+def use_files(monkeypatch, tmp_path, files_dir) -> pathlib.Path:
+    """Copy <exercise>/files into tmp_path and chdir there, for function-style tests
+    whose code opens data files by relative name (P4: "QueueData.txt").
+
+    Call it before invoking the function under test; returns the working directory
+    so the test can read files the program wrote:
+        work = use_files(monkeypatch, tmp_path, exercise_dir / "files")
+        sol.ReadData(); assert (work / "Out.txt").read_text() == ...
+    """
+    src = pathlib.Path(files_dir)
+    if src.is_dir():
+        shutil.copytree(src, tmp_path, dirs_exist_ok=True)
+    monkeypatch.chdir(tmp_path)
+    return pathlib.Path(tmp_path)
