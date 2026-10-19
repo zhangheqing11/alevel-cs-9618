@@ -1,0 +1,42 @@
+{
+  "id": "9618_s23_42:1(a)",
+  "kind": "past-paper",
+  "title": "动物名数组：按首字母降序冒泡排序",
+  "source": {
+    "paper": "9618_s23_42",
+    "rows": [
+      "9618_s23_42:1(a)",
+      "9618_s23_42:1(b)",
+      "9618_s23_42:1(c)",
+      "9618_s23_42:1(d)(i)",
+      "9618_s23_42:1(d)(ii)"
+    ]
+  },
+  "marks": 14,
+  "types": [
+    "P4-AR-01",
+    "P4-SR-03",
+    "P4-AR-04",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "bubble-sort",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "loop-bounds",
+    "output-format",
+    "p4-identifiers",
+    "procedure-call",
+    "string-functions",
+    "string-index",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

@@ -425,10 +425,100 @@
         "1(b)/1(c): MS Java example loops to length - 1 (last element skipped, also visible in the MS p.11 screenshot); tests follow QP and include the last element"
       ],
       "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10."
+    },
+    {
+      "directory": "practice/p4/9618_s23_42_q1",
+      "id": "9618_s23_42:1(a)",
+      "paper": "9618_s23_42",
+      "marks": 14,
+      "auto_marks": 14.0,
+      "manual_marks": 0.0,
+      "auto_share": 1.0,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-03",
+        "P4-AR-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_42:1(a)",
+          "marks": 2,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_42:1(b)",
+          "marks": 2,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_42:1(c)",
+          "marks": 6,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 6
+        },
+        {
+          "id": "9618_s23_42:1(d)(i)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s23_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 6,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        8,
+        10
+      ],
+      "qp_over_ms": [
+        "1(c): QP pseudocode inner loop FOR Y <- 0 TO ArrayLength - X - 1 (inclusive) would index Animals[10]; tests check only the sorted result, MS Python range() form passes",
+        "1(a): MS Python example is only `global Animals #comment`; per D10 (1) the test requires a real 10-element module-level list"
+      ],
+      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile)."
     }
   ],
-  "count": 3,
-  "marks": 70,
-  "auto_marks": 61.1,
+  "count": 4,
+  "marks": 84,
+  "auto_marks": 75.1,
   "manual_marks": 8.9
 }
