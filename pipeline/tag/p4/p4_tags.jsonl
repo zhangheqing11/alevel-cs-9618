@@ -61,7 +61,7 @@
 {"id": "9618_s22_41:1(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_41:1(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_41:1(e)(i)", "primary": "P4-PR-01", "cross": [], "confidence": "high", "note": ""}
-{"id": "9618_s22_41:1(e)(ii)", "primary": "P4-SR-04", "cross": [], "confidence": "low", "note": "无合适题型：把一个新值插进已排好序的数组（找位置、后移、插入），最接近插入排序的内层一步"}
+{"id": "9618_s22_41:1(e)(ii)", "primary": "P4-SR-04", "cross": [], "confidence": "high", "note": "D43 ⑤：往有序数组里插入一个值（找位置、后移、插入）→ SR-04"}
 {"id": "9618_s22_41:1(e)(iii)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_41:1(e)(iv)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_41:1(f)", "primary": "P4-FL-03", "cross": [], "confidence": "high", "note": ""}
@@ -103,7 +103,7 @@
 {"id": "9618_s22_43:1(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_43:1(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_43:1(e)(i)", "primary": "P4-PR-01", "cross": [], "confidence": "high", "note": ""}
-{"id": "9618_s22_43:1(e)(ii)", "primary": "P4-SR-04", "cross": [], "confidence": "low", "note": "无合适题型：把一个新值插进已排好序的数组（找位置、后移、插入），最接近插入排序的内层一步"}
+{"id": "9618_s22_43:1(e)(ii)", "primary": "P4-SR-04", "cross": [], "confidence": "high", "note": "D43 ⑤：往有序数组里插入一个值（找位置、后移、插入）→ SR-04"}
 {"id": "9618_s22_43:1(e)(iii)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_43:1(e)(iv)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s22_43:1(f)", "primary": "P4-FL-03", "cross": [], "confidence": "high", "note": ""}
@@ -211,7 +211,7 @@
 {"id": "9618_s24_41:2(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:2(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": "MS 第 4 个圆点下另起一行、没有圆点的「… when all true … appending object in new array」是独立得分点（原页 p.23，「to max 6」共 7 点）"}
-{"id": "9618_s24_41:2(e)(ii)", "primary": "P4-PR-03", "cross": [], "confidence": "low", "note": "第 2 点同时含在对象数组里找到这棵树（SR-01）与计算年数（PR-03），清单不可分；按题干主要要求取 PR-03"}
+{"id": "9618_s24_41:2(e)(ii)", "primary": "P4-PR-03", "cross": ["P4-SR-01"], "confidence": "high", "note": "D43 ⑤：输入、在对象数组里找到这棵树、计算年数 → PR-03，cross 加 SR-01"}
 {"id": "9618_s24_41:2(e)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:3(a)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:3(b)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
@@ -262,7 +262,7 @@
 {"id": "9618_s24_43:2(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:2(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": "MS 第 4 个圆点下另起一行、没有圆点的「… when all true … appending object in new array」是独立得分点（原页 p.23，「to max 6」共 7 点）"}
-{"id": "9618_s24_43:2(e)(ii)", "primary": "P4-PR-03", "cross": [], "confidence": "low", "note": "第 2 点同时含在对象数组里找到这棵树（SR-01）与计算年数（PR-03），清单不可分；按题干主要要求取 PR-03"}
+{"id": "9618_s24_43:2(e)(ii)", "primary": "P4-PR-03", "cross": ["P4-SR-01"], "confidence": "high", "note": "D43 ⑤：输入、在对象数组里找到这棵树、计算年数 → PR-03，cross 加 SR-01"}
 {"id": "9618_s24_43:2(e)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:3(a)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:3(b)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
@@ -738,7 +738,7 @@
 {"id": "9618_w25_43:3(a)(i)", "primary": "P4-RC-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_w25_43:3(a)(ii)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_w25_43:3(a)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
-{"id": "9618_w25_43:3(b)(i)", "primary": "P4-PR-02", "cross": [], "confidence": "low", "note": "无合适题型：只把题给字符串存进主程序的局部变量（为 3(b)(ii) 的拆分作准备），取最接近的 PR-02"}
+{"id": "9618_w25_43:3(b)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": "D43 ⑤：主程序只把题给字符串存进局部变量，1 分通用点，没有任何结构在场（指南 §3 第 5 条）"}
 {"id": "9618_w25_43:3(b)(ii)", "primary": "P4-PR-02", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_w25_43:3(b)(iii)", "primary": "P4-AR-04", "cross": [], "confidence": "high", "note": "调用一次是通用点；逐行输出返回数组占一半（指南 §3 第 3 条）"}
 {"id": "9618_w25_43:3(b)(iv)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}

@@ -64,8 +64,12 @@ def main():
     unused = sorted(p4new - set(skills))
     out += ["", f"共用到 {len(skills)} 个标签；P4 新标签未用到的：{', '.join(unused) or '无'}。", ""]
 
-    out += ["## 4. low 清单", "", "| 行 | 主题型 | 原因 |", "|:--|:--|:--|"]
-    out += [f"| {r} | {tags[r]['primary']} | {tags[r]['note']} |" for r in low]
+    out += ["## 4. low 清单", ""]
+    if low:
+        out += ["| 行 | 主题型 | 原因 |", "|:--|:--|:--|"]
+        out += [f"| {r} | {tags[r]['primary']} | {tags[r]['note']} |" for r in low]
+    else:
+        out.append("无（原 low 的 3 个独立判定及其 2 行重复已按 D43 ⑤ 定案为 high，见第 9 节）。")
     out.append("")
 
     c = pilot_compare.compare()

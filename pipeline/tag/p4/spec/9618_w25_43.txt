@@ -36,7 +36,7 @@
 3(a)(ii) MP-01
  = initialise-variables,declare-array | procedure-call | output-format
 3(a)(iii) MP-03
-3(b)(i) PR-02 low # 无合适题型：只把题给字符串存进主程序的局部变量（为 3(b)(ii) 的拆分作准备），取最接近的 PR-02
+3(b)(i) MP-01 # D43 ⑤：主程序只把题给字符串存进局部变量，1 分通用点，没有任何结构在场（指南 §3 第 5 条）
 3(b)(ii) PR-02
  = module-header | char-loop,loop-bounds | char-compare | string-concat | declare-array,array-index | return-value
 3(b)(iii) AR-04 # 调用一次是通用点；逐行输出返回数组占一半（指南 §3 第 3 条）

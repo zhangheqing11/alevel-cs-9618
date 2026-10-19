@@ -9,7 +9,7 @@
 1(d)(ii) MP-03
 1(e)(i) PR-01
  = input-prompt | input-validation,string-functions | input-validation,type-conversion,relational-ops
-1(e)(ii) SR-04 low # 无合适题型：把一个新值插进已排好序的数组（找位置、后移、插入），最接近插入排序的内层一步
+1(e)(ii) SR-04 # D43 ⑤：往有序数组里插入一个值（找位置、后移、插入）→ SR-04
  = module-header | count-loop,loop-bounds | relational-ops,insertion-sort | shift-values,parallel-arrays | parallel-arrays,array-index
 1(e)(iii) MP-01
  = procedure-call | procedure-call,output-format
