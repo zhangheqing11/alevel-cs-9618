@@ -18,7 +18,7 @@
 | SMTP | 「Push protocol / for sending / uploading emails」⟦9618_w24_32:5(a)⟧ | 发送电子邮件的协议（电脑 → 邮件服务器、服务器 → 服务器） | 寄信窗口 | P3-CI-03 |
 | POP3 | 「a protocol used to retrieve/receive emails from a mail server to a computer」⟦9618_w25_33:4⟧ | 从邮件服务器取回邮件到电脑的协议（pull） | 取信：信拿回家 | P3-CI-03 |
 | IMAP | 「allows users to access/read their emails from any device without removing the message from the mail server // synchronises emails on any device」⟦9618_w25_32:3(a)⟧ | 在任何设备上访问邮件、邮件留在服务器上、各设备同步的接收协议 | 取信：只在邮局里看，信不拿走 | P3-CI-03 |
-| BitTorrent | 「BitTorrent [1] a communication protocol used for peer-to-peer file sharing」⟦9618_w25_33:4⟧ | 点对点文件共享协议：文件分块，各 peer 互相下载、上传 | 大家互相复印一本书的不同页 | P3-CI-04、P3-CI-03 |
+| BitTorrent | 「a communication protocol used for peer-to-peer file sharing」⟦9618_w25_33:4⟧ | 点对点文件共享协议：文件分块，各 peer 互相下载、上传 | 大家互相复印一本书的不同页 | P3-CI-04、P3-CI-03 |
 | Torrent file | 「The torrent (descriptor file) contains metadata about the file to be shared」⟦9618_w25_32:3(b)⟧ | 描述要共享文件的元数据的小文件，下载者先取得它 | 书的目录卡 | P3-CI-04 |
 | Tracker | 「A tracker acts like a server that holds all the data about all the computers connected to it / the swarm」⟦9618_w25_32:3(b)⟧ | 记录哪些计算机（swarm）参与共享的服务器式角色，不传文件本身 | 名单管理员 | P3-CI-04 |
 | Seed | 「A peer who has a complete file and is sharing it is a seed」⟦9618_w25_32:3(b)⟧ | 拥有完整文件并在共享的 peer | 有整本书、愿意借给别人的人 | P3-CI-04 |

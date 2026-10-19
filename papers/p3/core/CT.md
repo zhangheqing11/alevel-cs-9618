@@ -37,7 +37,7 @@
 | 术语 | 英文得分句 | 中文定义 | 直观理解 | 相关题型 |
 |:--|:--|:--|:--|:--|
 | Base pointer | 「Points to the bottom of the stack」⟦9618_w23_32:9(a)(i)⟧ | 存栈底那一格下标的整数变量 | 盘子摞的底座 | P3-CT-06 |
-| Top pointer | 「Points to the top of the stack」⟦9618_w23_32:9(a)(i)⟧ | 存栈顶下标的整数变量；本型语料里指向最后放入的值，空栈时比底指针小 1 | 插在最上面盘子上的小旗 | P3-CT-06 |
+| Top pointer | 「Points to the top of the stack」⟦9618_w23_32:9(a)(i)⟧ | 存栈顶下标的整数变量；本型语料里空栈时 Top 的取值各题不同（如 w25/33 MS 接受 –1、0、1），按该题题干约定；多数题让它指向最后放入的值，空栈时比底指针小 1 | 插在最上面盘子上的小旗 | P3-CT-06 |
 | Front pointer | 「Points to the first term of the queue」⟦9618_s23_32:11(a)(i)⟧ | 存队首（最早加入的那个值）下标的整数变量 | 队伍最前面的人 | P3-CT-07 |
 | Rear pointer | 「Points to the last term of the queue」⟦9618_s23_32:11(a)(i)⟧ | 存队尾（最后加入的那个值）下标的整数变量 | 队伍最后面的人 | P3-CT-07 |
 | Queue length | 「Indicates the number of items in the queue」⟦9618_s23_32:11(a)(i)⟧ | 队中元素个数；入队加 1、出队减 1，用来判满判空 | 场内车数 | P3-CT-07 |

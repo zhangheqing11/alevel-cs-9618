@@ -49,9 +49,11 @@ D41_EXCEPTIONS = {
     ('P3-FP-01', 'variation'): 'extension',
     ('P3-CT-08', 'variation'): 'same-paper',
     ('P3-HV-04', 'variation'): 'none',
-    ('P3-BL-02', 'variation'): 'none',
+    ('P3-BL-02', 'variation'): 'extension',   # D44 (3): 9618_s21_31:7(c) promoted (was 'none' under D41)
     ('P3-BL-03', 'variation'): 'none',
 }
+# D44 (2): AI-07 keeps 9618_w21_31:9(a)(ii) although its primary type is AI-06 (the card says so).
+ACCEPTED_PRIMARY_MISMATCH = {('P3-AI-07', 'variation')}
 
 
 def cards():
@@ -107,7 +109,7 @@ def pick_check(c):
             failures.append(f'{role}: s26 row (D1)')
         if r.get('equivalent_of'):
             failures.append(f'{role}: equivalent_of {r["equivalent_of"]}')
-        if r['types']['primary'] != c['card']:
+        if r['types']['primary'] != c['card'] and (c['card'], role) not in ACCEPTED_PRIMARY_MISMATCH:
             failures.append(f'{role}: primary is {r["types"]["primary"]}')
         if r.get('extension') or not 2022 <= r['year'] <= 2025:
             if exc != 'extension':
