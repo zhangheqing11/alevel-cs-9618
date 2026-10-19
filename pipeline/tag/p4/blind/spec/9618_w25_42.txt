@@ -1,0 +1,40 @@
+1(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor,initialise-variables
+1(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value
+1(a)(iii) OP-03 # 名叫 Get 但要把属性拼成规定格式的字符串（OP-02 not）
+ = module-header,return-value | string-concat,type-conversion | return-value
+1(a)(iv) OP-03
+ = module-header | operator-precedence | nested-if | nested-if,assign-value | nested-if,assign-value
+1(b) OP-07
+ = object-instantiation | object-instantiation | object-instantiation
+1(c)(i) OP-07 +PR-01 # 调用 Move()、传参、用 getter 3 分与输入校验 3 分同分，按指南 §3 优先级取 OP-07
+ = output-format,method-call | input-prompt | input-validation,logic-ops | input-validation,pre-condition-loop | method-call | method-call | output-format | method-call,getter-setter
+1(c)(ii) MP-03
+ = test-input-sequence,test-output | test-input-sequence,test-output | test-input-sequence,test-output
+2(a) AR-01 # 20 个不重复随机数（指南 §7 第 14 条）
+ = declare-array | random-numbers | random-numbers,linear-search
+2(b) AR-04
+ = module-header | count-loop,output-format | output-format
+2(c) SR-03
+ = module-header,return-value | count-loop,bubble-sort | nested-loops,bubble-sort | relational-ops,bubble-sort | loop-bounds
+2(d)(i) MP-01
+ = procedure-call | procedure-call,return-value | output-format,procedure-call
+2(d)(ii) MP-03
+2(e) SR-02 +RC-01 # 递归调用两点自成清单（指南 §4 表）
+ = module-header,recursion | binary-search,div-mod | binary-search,relational-ops,return-value | recursion,binary-search | recursion,binary-search | recursion,return-value
+2(f)(i) MP-01
+ = input-prompt,type-conversion | procedure-call,return-value | nested-if,output-format
+2(f)(ii) MP-03
+ t screenshot showing smallest number in array input and found message with index 0 and screenshot showing highest number in array input and found message with index 19 || screenshot showing a number not in the array input and an output of "Not found"
+ = test-input-sequence,test-output | test-input-sequence,test-output
+3(a) LT-03
+ = array-2d,declare-array,global-scope | initialise-variables,nested-loops | binary-tree,initialise-variables
+3(b) LT-03
+ = module-header,binary-tree | binary-tree,output-format | binary-tree,nested-if | binary-tree,relational-ops | binary-tree | binary-tree | binary-tree,pre-condition-loop | binary-tree | binary-tree
+3(c) FL-01 # 主程序读文件逐行插入二叉树（每行一项存进 ADT）
+ = file-open-read,file-close | loop-to-eof | file-open-read,type-conversion | procedure-call | exception-handling,output-format
+3(d) FL-03
+ = module-header,exception-handling,output-format | file-write,file-close | count-loop,array-2d | string-concat,type-conversion | file-write
+3(e)(i) MP-01
+3(e)(ii) MP-03

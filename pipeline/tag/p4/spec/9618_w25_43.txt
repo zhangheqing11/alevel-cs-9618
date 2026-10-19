@@ -1,0 +1,44 @@
+1(a)(i) OP-01
+ = class-definition | data-types | constructor | constructor | constructor
+1(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+1(a)(iii) OP-07
+ = object-instantiation,p4-identifiers | object-instantiation | object-instantiation
+1(b)(i) OP-06 # 二维数组是类的属性、元素是对象（taxonomy AR-02 not）
+ = class-definition | constructor | containment,array-2d,array-of-objects | object-instantiation,nested-loops,initialise-variables
+1(b)(ii) OP-06
+ = module-header,getter-setter | return-value,array-2d
+1(b)(iii) OP-06
+ = module-header,getter-setter | array-2d,array-of-objects
+1(b)(iv) OP-06 # 按行输出容器里各对象的属性
+ = module-header,method-call | nested-loops,array-2d | output-format
+1(c)(i) OP-07
+ = object-instantiation | method-call | method-call
+1(c)(ii) MP-03
+1(d)(i) OP-07 # 调用 GetObject() 并检查返回对象 2 分为主；两个坐标的输入校验合成 1 分，不进 cross
+ = input-validation,relational-ops | method-call | method-call,nested-if | output-format,nested-if
+1(d)(ii) MP-03
+2(a) SQ-02 # 无回绕（2(c) 以 QueueHead > QueueTail 判空），按指南 §7 第 3 条归线性队列
+ = declare-array,global-scope,initialise-variables | queue-array,initialise-variables
+2(b) SQ-02
+ = module-header,queue-array,boolean-return | queue-array,array-index | queue-array | queue-array | boolean-return
+2(c) SQ-02
+ = module-header,queue-array,return-value | return-value,queue-array | queue-array
+2(d) FL-01 # 读文件逐行入队
+ = module-header | file-open-read,file-close | loop-to-eof | file-open-read | procedure-call | exception-handling,output-format
+2(e) SQ-04 +PR-02 # 出队后游程压缩（指南 §7 第 2 条）
+ = module-header,global-scope | procedure-call,return-value | sentinel-loop | char-compare,relational-ops | accumulator | string-concat,type-conversion
+2(f)(i) MP-01
+ = procedure-call | output-format
+2(f)(ii) MP-03
+3(a)(i) RC-01
+ = module-header | recursion,return-value | relational-ops,array-index | recursion,return-value | recursion,return-value | recursion,array-index
+3(a)(ii) MP-01
+ = initialise-variables,declare-array | procedure-call | output-format
+3(a)(iii) MP-03
+3(b)(i) MP-01 # D43 ⑤：主程序只把题给字符串存进局部变量，1 分通用点，没有任何结构在场（指南 §3 第 5 条）
+3(b)(ii) PR-02
+ = module-header | char-loop,loop-bounds | char-compare | string-concat | declare-array,array-index | return-value
+3(b)(iii) AR-04 # 调用一次是通用点；逐行输出返回数组占一半（指南 §3 第 3 条）
+ = procedure-call,return-value | count-loop,output-format
+3(b)(iv) MP-03

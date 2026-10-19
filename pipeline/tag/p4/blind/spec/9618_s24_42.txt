@@ -1,0 +1,43 @@
+1(a) FL-01
+ = module-header | file-open-read | exception-handling,output-format | file-open-read,loop-to-eof | array-index,global-scope | strip-newline | accumulator | file-close
+1(b) MP-01 # 提示、输入、按输入选文件名并调用一次：只有 1 分是分支，无结构在场
+ = input-prompt | input-prompt,assign-value | string-concat,nested-if | procedure-call
+1(c)(i) SR-01 # 每个输入与数组里的答案逐个比较、找到则清空并计数；MS 第 3 个圆点下另起一行、没有圆点的「… outputs if the word input is found …」是独立得分点（原页 p.8，「Loops MPs 2–5」印证共 6 点）
+ t Procedure start (and end) outputting the main word and the number of answers. No parameters || Takes word as input and compares input to each answer in array but not the main word (index 0) … || … replaces correct answer with a null value (e.g. "", null) || … outputs if the word input is found and if the word input is not found || … counts the number of answers found || Loops MPs 2–5 until user requests to stop (enters "no")
+ = module-header,output-format | linear-search,input-prompt | linear-search,assign-value | output-format,nested-if | accumulator | sentinel-loop
+1(c)(ii) AR-05 # taxonomy AR-05 cue: outputs the percentage of answers the user entered from the array
+ = operator-precedence,output-format | count-loop,relational-ops | output-format
+1(d)(i) MP-01
+1(d)(ii) MP-03
+1(d)(iii) MP-03
+2(a)(i) OP-01 # 只声明 Node 类与构造方法（LT-03 not）
+ = class-definition | data-types | constructor | constructor,initialise-variables
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(a)(iii) OP-02
+ = getter-setter | getter-setter | getter-setter
+2(b)(i) LT-03 # 树类的结点对象数组与根指针声明、初始化（指南 §3 表：二叉树的声明 → LT）
+ = class-definition | containment,array-of-objects,data-types | constructor,binary-tree,initialise-variables | constructor,object-instantiation,array-of-objects
+2(b)(ii) LT-03
+ = module-header | binary-tree,nested-if | binary-tree,array-of-objects | binary-tree,method-call,relational-ops | binary-tree,relational-ops | binary-tree,pre-condition-loop | binary-tree,method-call
+2(b)(iii) AR-04
+ = module-header,nested-if,output-format | count-loop,loop-bounds | output-format | method-call,getter-setter
+2(c)(i) OP-07
+2(c)(ii) OP-07 # 建 Node 对象并对 TheTree 调用 InsertNode、OutputTree，无返回值检查
+ = object-instantiation | method-call | object-instantiation,method-call | method-call
+2(c)(iii) MP-03
+3(a) AR-01
+3(b)(i) SR-04 +RC-01 # 照伪代码写递归插入排序；递归调用与基本情况各成一点（指南 §7 第 9 条）
+ = module-header,recursion | recursion,return-value | pre-condition-loop,insertion-sort | translate-pseudocode,insertion-sort
+3(b)(ii) AR-04 # 主程序：调用一次是通用点；输出返回数组每个元素占一半（指南 §3 第 3 条）
+ = procedure-call | output-format,count-loop
+3(b)(iii) MP-03
+3(c)(i) SR-04 +RC-02 # 递归插入排序改写为迭代（指南 §7 第 9 条）
+ = module-header,return-value | pre-condition-loop,insertion-sort | nested-loops,insertion-sort | insertion-sort,relational-ops
+3(c)(ii) MP-01
+3(c)(iii) MP-03
+3(d)(i) SR-02 +RC-01 # 递归二分查找：基本情况与两个递归调用各自成点（指南 §4 表）
+ = module-header,recursion | recursion,relational-ops | return-value | binary-search,div-mod | binary-search,relational-ops,return-value | recursion,binary-search | recursion,binary-search
+3(d)(ii) MP-01
+ = procedure-call | nested-if,output-format
+3(d)(iii) MP-03

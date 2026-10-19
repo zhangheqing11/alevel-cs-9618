@@ -1,0 +1,45 @@
+1(a) FL-01
+ = module-header | declare-array,data-types | file-open-read,file-close | loop-to-eof,file-open-read | array-index | return-value | exception-handling,output-format
+1(b)(i) AR-04 # 把整个数组拼成一行（指南 §7 第 12 条）
+ = module-header | count-loop,string-concat,return-value
+1(b)(ii) MP-01
+ = procedure-call,return-value | procedure-call | output-format
+1(b)(iii) MP-03
+1(c) PR-02
+ = module-header,return-value | char-loop,string-index | char-compare,return-value | char-compare,return-value
+1(d)(i) SR-03
+ = module-header,return-value | procedure-call,bubble-sort | bubble-sort,nested-loops
+1(d)(ii) MP-01
+ = procedure-call,return-value | procedure-call,output-format
+1(d)(iii) MP-03
+2(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(b)(i) OP-07
+ = object-instantiation | array-of-objects | object-instantiation,array-of-objects | output-format | method-call,getter-setter
+2(b)(ii) MP-03
+2(c)(i) OP-01 # 两个 getter 合成 1 分，不加 OP-02（指南 §4）
+ = class-definition | encapsulation,data-types | constructor | getter-setter,return-value
+2(c)(ii) PR-01 +OP-07 # 输入与两个范围校验 3 分、声明 Fence 数组与实例化存入 2 分（指南 §3 例）
+ = declare-array,array-of-objects | input-prompt,count-loop | object-instantiation,array-of-objects | input-validation,relational-ops | input-validation,relational-ops
+2(d) OP-03 # 计算写在类的方法里、用对象属性（指南 §7 第 13 条）
+ = module-header,return-value | relational-ops,nested-if | nested-if,operator-precedence | return-value,data-types | encapsulation
+2(e)(i) OP-07
+ = method-call,nested-loops | method-call,getter-setter | output-format
+2(e)(ii) AR-05
+ = accumulator,operator-precedence,output-format | max-min,output-format
+2(e)(iii) MP-03
+ = test-input-sequence,test-output | test-output
+3(a) LT-01
+ = array-2d,declare-array,linked-list | linked-list,global-scope,initialise-variables
+3(b) LT-02
+ = module-header,input-prompt | linked-list | linked-list | linked-list,array-2d | linked-list | linked-list | linked-list
+3(c)(i) LT-01
+ = module-header,linked-list,output-format | linked-list,pre-condition-loop,output-format
+3(c)(ii) MP-01
+3(c)(iii) MP-03
+3(d)(i) LT-02
+ = module-header | linked-list,relational-ops | linked-list | linked-list,pre-condition-loop | relational-ops,linear-search | linked-list | linked-list | linked-list
+3(d)(ii) MP-01
+3(d)(iii) MP-03

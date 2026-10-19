@@ -1,0 +1,44 @@
+1(a) AR-01
+ = declare-array,global-scope,p4-identifiers | declare-array,data-types
+1(b) FL-02 # 每两行（名字、分数）合成一个玩家（指南 §7 第 4 条：每 n 行合成一组）
+ = module-header | file-open-read | loop-to-eof,count-loop | read-line-groups | parallel-arrays,type-conversion | file-close | exception-handling | exception-handling,output-format
+1(c) AR-04
+ = module-header | count-loop,loop-bounds | output-format,parallel-arrays
+1(d)(i) MP-01
+ = procedure-call | procedure-call
+1(d)(ii) MP-03
+1(e)(i) PR-01
+ = input-prompt | input-validation,string-functions | input-validation,type-conversion,relational-ops
+1(e)(ii) SR-04 # D43 ⑤：往有序数组里插入一个值（找位置、后移、插入）→ SR-04
+ = module-header | count-loop,loop-bounds | relational-ops,insertion-sort | shift-values,parallel-arrays | parallel-arrays,array-index
+1(e)(iii) MP-01
+ = procedure-call | procedure-call,output-format
+1(e)(iv) MP-03
+1(f) FL-03
+ = module-header,file-write | file-close | count-loop,loop-bounds | file-write,type-conversion | exception-handling,output-format
+2(a) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor | constructor,initialise-variables
+2(b) OP-02
+ = getter-setter | getter-setter,return-value
+2(c) OP-03 # taxonomy OP-03 cue: ChangeHealth() adds parameter to health
+ = module-header | assign-value
+2(d) OP-03
+ = module-header,relational-ops | boolean-return
+2(e) OP-07
+ = input-prompt | object-instantiation,p4-identifiers | object-instantiation
+2(f) OP-07 # 函数里对参数对象调用 ChangeHealth、GetDefenceItem、CheckHealth 并按返回值输出
+ = module-header | input-prompt,type-conversion | method-call | method-call | output-format,method-call | method-call,getter-setter | method-call | output-format,nested-if | output-format,nested-if | return-value
+2(g)(i) MP-01
+ = procedure-call | procedure-call,assign-value
+2(g)(ii) MP-03
+3(a) SQ-03
+ = queue-array,initialise-variables | declare-array,queue-array
+3(b) SQ-03 # 补全伪代码 Enqueue：计数句与两行 1 mark for 各一条（指南 §8.2 第 8 条）
+ t 1 mark per complete statement (5) || 1 mark for function heading and end, dealing with ByRef || 1 mark for remainder of function correct and following the logic
+ w 5,1,1
+ = translate-pseudocode,queue-array | module-header,byval-byref | translate-pseudocode,queue-array
+3(c) SQ-03
+ = module-header | queue-array | return-value | queue-array,return-value | queue-array | queue-array | queue-array
+3(d)(i) MP-02
+ = input-prompt,count-loop | procedure-call | output-format | procedure-call | output-format
+3(d)(ii) MP-03

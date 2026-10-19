@@ -1,0 +1,44 @@
+1(a) AR-01
+ = declare-array,global-scope,p4-identifiers | declare-array,data-types
+1(b) AR-01
+ = initialise-variables,array-index | initialise-variables
+1(c) SR-03 # 补全伪代码：计数句「to MAX 4」作一条（指南 §8.2 第 7 条）
+ t 1 mark for each completed statement to MAX 4 || Use of appropriate string functions to access e.g. MID and length || Remainder of procedure correct and following example
+ w 4,1,1
+ = translate-pseudocode,bubble-sort | string-functions,string-index | translate-pseudocode,bubble-sort
+1(d)(i) AR-04 # 调用一次是通用点；遍历并逐行输出 2 分
+ = procedure-call | count-loop,loop-bounds | output-format
+1(d)(ii) MP-03
+2(a) AR-03 # 题目说 record structure（指南 §7 第 6 条）
+ = record-type,class-definition | record-type,data-types
+2(b) SQ-03 +AR-03 # 循环队列数组与指针；建空记录并填满数组 2 分
+ = declare-array,global-scope,array-of-records | queue-array,global-scope,initialise-variables | record-type,object-instantiation | array-of-records,initialise-variables
+2(c) SQ-03
+ = module-header | queue-array | return-value | queue-array,array-of-records | queue-array | queue-array,return-value
+2(d) SQ-03
+ = module-header | queue-array | return-value,record-type | queue-array,return-value | queue-array | queue-array
+2(e) MP-01 # 输入、建记录 1 分、调用 Enqueue 一次并输出成败：通用点（指南 §7 第 1 条）
+ = module-header | input-prompt,type-conversion | object-instantiation,record-type | procedure-call,return-value | output-format
+2(f)(i) MP-01 # 按顺序调用 EnterRecord、Dequeue（一次）与输出
+ = procedure-call,count-loop | procedure-call,return-value | nested-if,output-format | procedure-call | count-loop,output-format,array-of-records
+2(f)(ii) MP-03
+3(a)(i) OP-01
+ = class-definition | data-types,declare-array | constructor | constructor | constructor,initialise-variables
+3(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value
+3(a)(iii) OP-03 # 名叫 SetPay 但要计算再存入（指南 §7 第 7 条）
+ = module-header | assign-value | array-index
+3(a)(iv) OP-03
+ = module-header,return-value | accumulator,count-loop
+3(b)(i) OP-04
+ = inheritance,class-definition | constructor | inheritance | constructor,data-types
+3(b)(ii) OP-05
+ = polymorphism,module-header | operator-precedence | inheritance,polymorphism
+3(c) FL-02 # 多行一组、按有无奖金字段实例化 Manager 或 Employee（指南 §7 第 4 条）
+ t Opening file Employees.txt to read and closing file in an appropriate place || Exception handling with appropriate output for opening the file || Looping to EOF / 8 times || (Attempting to) Read in all lines from the file for each employee || Instantiating and storing an object of type Manager (not Employee) when bonus is included... || …with correct read in values || (otherwise) instantiating and storing an object of type Employee … || .. with correct read in values
+ = file-open-read,file-close | exception-handling,output-format | loop-to-eof | read-line-groups | object-instantiation,inheritance,nested-if | object-instantiation,type-conversion | object-instantiation,array-of-objects | object-instantiation,type-conversion
+3(d) FL-01 +SR-01 # 读文件逐行更新已有对象：文件 3 分、查员工号 2 分（指南 §3 例）
+ = module-header,file-open-read,file-close | exception-handling,output-format | loop-to-eof | linear-search | method-call,getter-setter | method-call
+3(e)(i) OP-07 # 调用一次 EnterHours 是通用点；用 GetTotalPay、GetEmployeeNumber 输出占非头得分点一半
+ = procedure-call,count-loop | method-call,output-format
+3(e)(ii) MP-03

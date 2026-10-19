@@ -1,0 +1,48 @@
+1(a)(i) PR-02
+ = module-header | string-functions | count-loop,loop-bounds | char-compare,logic-ops | string-index,string-functions | translate-pseudocode,accumulator
+1(a)(ii) MP-01
+ = procedure-call | output-format
+1(a)(iii) MP-03
+1(b)(i) RC-02 # 迭代改写为递归（指南 §7 第 9 条）；元音判断只 1 分，不加 PR-02
+ = recursion | module-header | recursion,return-value | string-index,char-compare | recursion,return-value | recursion
+1(b)(ii) MP-01
+1(b)(iii) MP-03
+2(a)(i) SQ-02
+ = declare-array,global-scope,data-types | queue-array,initialise-variables
+2(a)(ii) SQ-02
+ = module-header | queue-array,output-format | queue-array,array-index | queue-array
+2(a)(iii) SQ-02
+ = module-header | queue-array | output-format,return-value | queue-array | return-value,queue-array
+2(b) FL-01 # 读文件逐行入队
+ = module-header | file-open-read | file-close | loop-to-eof | file-open-read | procedure-call | exception-handling,output-format
+2(c)(i) AR-03
+ = record-type,class-definition | record-type,data-types
+2(c)(ii) AR-03 # 记录数组与计数变量的声明
+ = declare-array,array-of-records,global-scope | global-scope,initialise-variables
+2(c)(iii) SQ-04 +AR-03 # 出队后统计到记录数组（指南 §7 第 2 条）；新建记录并赋 ID 与 Total 两处 2 分进 cross；圆点下的伪代码行不抄（指南 §8.2 第 3 条）
+ t Incrementing NumberRecords each time (twice) a new record is added || Procedure header (and end) and using Dequeue() and storing/using return value || Checking if NumberRecords is 0 and creating a new record with ID and total as 1: || Looping through all array elements to find matching ID and incrementing total if found || Adding new record if record is not found, storing ID and total as 1
+ = accumulator,array-of-records | module-header,procedure-call,return-value | nested-if,array-of-records | linear-search,array-of-records | flag-variable,array-of-records
+2(d) AR-04
+2(e)(i) MP-01 # 按顺序调用 ReadData、TotalData（循环重复调用、不传数据）与 OutputRecords
+ = procedure-call | count-loop,procedure-call
+2(e)(ii) MP-03
+3(a)(i) OP-01
+ = class-definition | data-types | constructor | constructor
+3(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+3(a)(iii) OP-02 # 把参数加到属性上再限制在范围内仍是 setter（指南 §7 第 7 条）
+ = getter-setter | getter-setter,assign-value | relational-ops,nested-if | getter-setter
+3(a)(iv) OP-03
+ = module-header | nested-if,relational-ops | method-call,getter-setter | method-call
+3(b) OP-07
+ = object-instantiation,p4-identifiers | object-instantiation
+3(c)(i) OP-04
+ = inheritance,class-definition | constructor | inheritance,constructor
+3(c)(ii) OP-05
+ = polymorphism,module-header | method-call,nested-if
+3(d) OP-07
+3(e)(i) OP-07 +PR-01 # 调用 Move() 与用 getter 输出 2 分、两个输入的校验 2 分同分，按指南 §3 优先级取 OP-07
+ = input-prompt | input-validation,logic-ops | method-call | output-format | method-call,getter-setter
+3(e)(ii) MP-03 # 只有「One mark for each test」一句，作一条 2 分
+ w 2
+ = test-input-sequence,test-output

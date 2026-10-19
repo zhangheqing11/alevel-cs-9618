@@ -1,0 +1,4 @@
+3(b) LT-03 # 补全伪代码 AddNode()：计数句作一条（指南 §8.2 第 7 条）；与 9618_w21_41:3(b) 的 MS 逐字相同、题干只差 OUTPUT 括号，按同样处理
+ t 1 mark for each completed statement to Max 6 || Function/procedure declaration either : taking parameters by reference returning the three amended values (Python) using global instead || remainder of function/procedure matches the pseudocode
+ w 6,1,1
+ = translate-pseudocode,binary-tree | module-header,byval-byref,global-scope | translate-pseudocode,binary-tree

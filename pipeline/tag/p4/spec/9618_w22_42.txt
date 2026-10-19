@@ -1,0 +1,39 @@
+1(a) AR-02
+ = array-2d,declare-array,global-scope | array-2d,declare-array | global-scope,declare-variables,data-types
+1(b) AR-02
+ = module-header,initialise-variables | nested-loops,array-2d | initialise-variables,array-2d
+1(c) AR-02 # 存进二维数组的下一空行（按行列访问与修改）
+ = module-header | relational-ops | output-format | array-2d,array-index | accumulator | output-format
+1(d) MP-01
+ = procedure-call | procedure-call
+1(e) SR-04 # 按第二维优先级插入排序（指南 §7 第 15 条）
+ = module-header | count-loop,insertion-sort | nested-loops,insertion-sort | array-2d,relational-ops | insertion-sort,shift-values,array-2d
+1(f) AR-04
+ = module-header,count-loop | output-format,array-2d | output-format,string-concat
+1(g)(i) MP-01
+1(g)(ii) MP-03
+2(a) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor
+2(b) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(c) OP-03
+ = module-header | assign-value
+2(d) FL-02 # 每 3 行建一个 Character 对象
+ = array-of-objects,declare-array | file-open-read | loop-to-eof | read-line-groups | object-instantiation,type-conversion | array-of-objects | file-close | exception-handling | exception-handling,output-format
+2(e) SR-01 +PR-01 # 在对象数组里找名字并记下标 2 分为主；输入、统一大小写、找不到就重输进 cross（taxonomy PR-01 not 第 2 条）
+ = input-prompt | string-functions | linear-search,count-loop,array-of-objects | input-validation,pre-condition-loop | array-index,linear-search | method-call,getter-setter
+2(f) PR-03 +PR-01 # 按方向字母多分支改坐标 4 分、输入校验 2 分（指南 §7 第 13 条）
+ = input-prompt | input-validation,logic-ops | method-call | nested-if | nested-if | nested-if | nested-if
+2(g)(i) OP-07 # 用 getter 取名字与坐标输出，占非头得分点一半
+ = output-format,string-concat | method-call,getter-setter
+2(g)(ii) MP-03
+3(a) SQ-02
+ = declare-array,global-scope,data-types | queue-array,initialise-variables | queue-array,initialise-variables
+3(b) SQ-02
+ = module-header | queue-array,boolean-return | queue-array,array-index | queue-array | boolean-return | queue-array
+3(c) MP-02
+ = count-loop | procedure-call | procedure-call,return-value | output-format,flag-variable
+3(d) RC-02
+ = module-header | recursion,relational-ops | recursion,return-value | recursion,accumulator | recursion | return-value
+3(e)(i) MP-01
+3(e)(ii) MP-03

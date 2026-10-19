@@ -1,0 +1,48 @@
+1(a) SQ-01
+ = declare-array,global-scope,initialise-variables | stack-array,global-scope,initialise-variables
+1(b) SQ-01
+ = module-header,boolean-return | stack-array,boolean-return | stack-array | stack-array,array-index,boolean-return
+1(c) SQ-01
+ = module-header,return-value | stack-array,return-value | stack-array,return-value | stack-array
+1(d) MP-02 # 循环生成随机数逐个 Push 并按返回值输出；MS 第 3 个圆点含两个「…」得分点（4 分对 4 点），拆成两条
+ t Looping 40 times || Generating random number between 0 and 1000 inclusive inside the loop || Calling Push() with each random number and storing/using return value … || … if return value is FALSE output Stack full and breaking out of loop
+ = count-loop | random-numbers | procedure-call,return-value | output-format,flag-variable
+1(e) SQ-04 +AR-05 # 出栈直到空再求最大最小（taxonomy AR-05 not：数据靠 Pop 取出再统计 → SQ-04，AR-05 进 cross）
+ = module-header,output-format | procedure-call,sentinel-loop | max-min,output-format | max-min,output-format
+1(f)(i) MP-01
+1(f)(ii) MP-03
+2(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(b) OP-07
+ = object-instantiation | object-instantiation
+2(c)(i) OP-06 # Station 的属性含 Train 对象数组，构造方法里建空数组
+ = class-definition,encapsulation,data-types | constructor | constructor,containment,initialise-variables
+2(c)(ii) OP-06
+ = module-header,array-of-objects | relational-ops,boolean-return | array-of-objects,array-index | accumulator,boolean-return
+2(c)(iii) OP-06 # 遍历容器里的 Train 对象拼出描述字符串
+ = module-header,return-value | nested-if,return-value | count-loop,array-of-objects | method-call,getter-setter | string-concat | string-concat,return-value
+2(d)(i) OP-07
+ = object-instantiation | object-instantiation
+2(d)(ii) OP-07
+ = method-call | method-call | output-format,boolean-return | method-call,output-format
+2(d)(iii) MP-03
+ = test-output | test-output
+3(a) OP-01 # 题目说 class 并写构造方法（属性公有），得分点都在类头与构造方法
+ = class-definition,constructor | constructor
+3(b) LT-05 # 哈希表二维数组声明与初始化
+ = array-2d,declare-array,array-of-objects | module-header,nested-loops,initialise-variables
+3(c) LT-05
+ = module-header,return-value | div-mod,hash-table
+3(d) LT-05 # MS 第 3 个圆点含两个「…」得分点（4 分对 4 点），拆成两条
+ t Procedure header (and end) taking one Record parameter || Calling Hash() using key from parameter and storing/using return value || Accessing HashTable[return][0] and storing parameter if no collision … || … if collision: iterating through 2nd dimension to find empty index and store parameter in that position
+ = module-header | procedure-call,hash-table | hash-table,array-2d | hash-table,linear-search
+3(e) FL-02 # 调用 InsertData 只占 1 分，不加 LT-05
+ = module-header,file-open-read,file-close | loop-to-eof | field-extract | object-instantiation,type-conversion | procedure-call | exception-handling,output-format
+3(f) LT-05
+ = module-header,return-value | procedure-call,hash-table | hash-table,linear-search | return-value | return-value,hash-table
+3(g)(i) MP-02
+ = procedure-call | input-prompt,count-loop | procedure-call,output-format
+3(g)(ii) MP-03
+ = test-input-sequence,test-output | test-input-sequence,test-output

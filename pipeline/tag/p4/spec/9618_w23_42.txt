@@ -1,0 +1,45 @@
+1(a)(i) SQ-01 # 两个栈的数组声明（指南 §7 第 14 条）
+ = declare-array,global-scope,data-types | declare-array
+1(a)(ii) SQ-01
+1(b)(i) SQ-04 +SQ-01 # 按元音 / 辅音 Push 进不同的栈（taxonomy SQ-04 cue）；判满、存入、移动指针 3 分是 Push 本身，进 cross
+ = module-header | char-compare,logic-ops | stack-array,output-format | stack-array,array-index | stack-array | stack-array,nested-if
+1(b)(ii) FL-01
+ = module-header | file-open-read,file-close | loop-to-eof | file-open-read | procedure-call | exception-handling,output-format
+1(c) SQ-01
+ = module-header | stack-array,return-value | stack-array | stack-array,return-value | stack-array
+1(d)(i) SQ-04 # 主程序循环按选择调用 PopVowel / PopConsonant 取 5 个字母（指南 §7 第 5 条）
+ = procedure-call | pre-condition-loop,accumulator | input-prompt | nested-if,procedure-call | return-value,string-concat | output-format,nested-if | output-format
+1(d)(ii) MP-03
+2(a)(i) PR-03
+ = module-header | count-loop,loop-bounds | div-mod | return-value | translate-pseudocode,accumulator
+2(a)(ii) MP-01
+ = procedure-call | output-format
+2(a)(iii) MP-03
+2(b)(i) RC-01 # 补全递归伪代码：计数句「One mark for each gap (5)」作一条（指南 §8.2 第 7 条）
+ t One mark for each gap (5) || One mark for recursive calls both accurate and in correct places || One mark for remainder of function with nothing superfluous
+ w 5,1,1
+ = translate-pseudocode,recursion,div-mod | recursion | translate-pseudocode,recursion
+2(b)(ii) MP-01
+2(b)(iii) MP-03
+3(a)(i) OP-01
+ = class-definition | data-types | constructor | constructor | constructor
+3(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+3(a)(iii) OP-02
+ = getter-setter | getter-setter
+3(a)(iv) OP-03
+3(a)(v) OP-03
+ = module-header,return-value | date-functions,operator-precedence
+3(b)(i) OP-07
+ = object-instantiation,p4-identifiers | object-instantiation
+3(b)(ii) OP-07
+ = method-call | method-call,output-format | method-call,getter-setter,output-format
+3(b)(iii) MP-03
+3(c)(i) OP-04
+ = inheritance,class-definition | data-types | constructor | inheritance | constructor
+3(c)(ii) OP-05
+ = polymorphism,module-header | nested-if | operator-precedence,assign-value
+3(d)(i) OP-07
+ = object-instantiation | object-instantiation
+3(d)(ii) OP-07
+3(d)(iii) MP-03

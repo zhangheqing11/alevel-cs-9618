@@ -1,0 +1,35 @@
+1(a) AR-03 # taxonomy AR-03 cue: declare the record type node
+ = record-type | record-type,data-types
+1(b) LT-01 # 按题给表初始化链表（记录数组 + 起始与空闲指针）
+ = declare-array,array-of-records | array-of-records,object-instantiation | linked-list,array-of-records | linked-list,initialise-variables
+1(c)(i) LT-01
+ = module-header | module-header | linked-list,pre-condition-loop | linked-list,output-format | linked-list | array-of-records
+1(c)(ii) MP-03
+1(d)(i) LT-02
+ = module-header | input-prompt,type-conversion | linked-list | boolean-return | linked-list,array-of-records | linked-list,pre-condition-loop | linked-list | linked-list | boolean-return
+1(d)(ii) MP-01
+ = procedure-call,return-value | output-format | procedure-call
+1(d)(iii) MP-03
+2(a) AR-01
+ = declare-array,p4-identifiers | initialise-variables
+2(b)(i) SR-01
+ = module-header,p4-identifiers | module-header | loop-bounds,count-loop | linear-search,relational-ops | boolean-return | boolean-return
+2(b)(ii) MP-01 # 输入一个值（无校验循环）、调用并按返回值输出，全是通用点
+ = input-prompt | type-conversion | procedure-call | procedure-call,return-value | output-format
+2(b)(iii) MP-03
+ = test-input-sequence,test-output | test-input-sequence,test-output
+2(c) SR-03 # 补全伪代码，MS 逐空给圆点，按圆点拆
+ = translate-pseudocode,bubble-sort,loop-bounds | translate-pseudocode,bubble-sort,loop-bounds | translate-pseudocode,relational-ops | translate-pseudocode,bubble-sort,array-index | translate-pseudocode,bubble-sort | translate-pseudocode,bubble-sort
+3(a) OP-01
+ = class-definition | class-definition,data-types | class-definition,data-types | class-definition,data-types | encapsulation
+3(b) FL-02
+ = module-header,p4-identifiers | array-of-objects,declare-array | file-open-read | loop-to-eof | read-line-groups | object-instantiation | object-instantiation | array-of-objects | read-line-groups,loop-bounds | exception-handling | exception-handling,output-format | file-close
+3(c)(i) OP-02
+3(c)(ii) OP-03
+ = module-header,boolean-return | relational-ops | boolean-return
+3(c)(iii) OP-03
+ = module-header,return-value | nested-if,return-value | div-mod,nested-if | div-mod,logic-ops | nested-if,return-value
+3(c)(iv) OP-07 +PR-01 # 调用对象方法 4 分（getQuestion、checkAnswer、getPoints）为主；输入并校验 1–5 占 2 分
+ = procedure-call | input-prompt | input-validation,relational-ops | method-call,array-of-objects | input-prompt | method-call | pre-condition-loop | accumulator | method-call | output-format | method-call,array-of-objects
+3(c)(v) MP-03
+ = test-input-sequence,test-output | test-input-sequence,test-output
