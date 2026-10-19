@@ -169,6 +169,9 @@ def report(selected, rows_by_paper):
     if (ROOT / "pipeline/extract/p3_equivalents_review.json").exists():
         from p3_equivalents import report_section
         lines += report_section(rows_by_paper)
+    if (ROOT / "pipeline/extract/p4_equivalents_review.json").exists():
+        from p4_equivalents import report_section as p4_report_section
+        lines += p4_report_section(rows_by_paper)
     return "\n".join(lines) + "\n"
 
 
