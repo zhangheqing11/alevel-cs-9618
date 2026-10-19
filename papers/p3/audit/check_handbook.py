@@ -273,6 +273,50 @@ def quotes(chapter):
             print(f'{p.name}:{line}\t{m[2]}\t[{r.get("types", {}).get("primary")}] {m[1]}')
 
 
+def verify_pages():
+    """For every representative and variation row: read the QP / MS page(s) named by the row straight from the PDF
+    and check that each substantial line of the corpus stem / ms_text is on those pages (whitespace and private-use
+    glyphs ignored). This ties the corpus text the audit compared against back to the original pages."""
+    def norm(s):
+        return re.sub(r'[^0-9a-z]', '', s.lower())   # letters and digits only: bullets, arrows, layout ignored
+    report, missing_total = [], 0
+    for c in cards():
+        for role in ('representative', 'variation'):
+            rid = c[role]
+            if rid not in ROWS:
+                continue
+            r = ROWS[rid]
+            pages = {k: norm(source_text(r, k)) for k in ('qp', 'ms')}
+            miss = []
+            for kind, field in (('qp', 'stem'), ('ms', 'ms_text')):
+                for line in r[field].splitlines():
+                    line = re.sub(r'\.{4,}', '', line).strip()
+                    if len(norm(line)) >= 15 and norm(line) not in pages[kind]:
+                        miss.append((kind, line[:70]))
+            missing_total += len(miss)
+            report.append((c['card'], role, rid, pages_of(r, 'qp'), pages_of(r, 'ms'), miss))
+    for card, role, rid, qp, ms, miss in report:
+        flag = 'ok' if not miss else f'{len(miss)} line(s) not found'
+        print(f'{card} {role:14s} {rid:24s} QP p.{qp} MS p.{ms}: {flag}')
+        for kind, line in miss[:3]:
+            print(f'      {kind}: {line}')
+    print('rows checked:', len(report), 'unmatched lines:', missing_total)
+
+
+def cross_quotes():
+    """MS quotes in a chapter's card/core file whose row has a primary type from another chapter (review aid)."""
+    n = 0
+    for chapter in CHAPTERS:
+        for p in (ROOT / f'papers/p3/cards/{chapter}.md', ROOT / f'papers/p3/core/{chapter}.md'):
+            text = p.read_text()
+            for m in re.finditer(r'「([^」]+)」' + REF, text):
+                t = ROWS[m[2]]['types']['primary']
+                if t.split('-')[1] != chapter:
+                    n += 1
+                    print(f'{p.relative_to(ROOT)}:{text[:m.start()].count(chr(10)) + 1}\t{m[2]} [{t}] {m[1][:90]}')
+    print('cross-chapter quotes:', n)
+
+
 def render(rid, ms=False, dpi=110):
     import pymupdf
     r = ROWS[rid]
@@ -330,6 +374,8 @@ def main():
     ap.add_argument('--end', type=int, default=99)
     ap.add_argument('--var', action='store_true', help='with --packet: also print the variation row pages')
     ap.add_argument('--quotes')
+    ap.add_argument('--cross-quotes', action='store_true')
+    ap.add_argument('--verify-pages', action='store_true')
     ap.add_argument('--render')
     ap.add_argument('--ms', action='store_true')
     ap.add_argument('--dpi', type=int, default=110)
@@ -349,6 +395,10 @@ def main():
             print('ER:', r.get('er') or '')
     elif a.render:
         print('\n'.join(render(a.render, a.ms, a.dpi)))
+    elif a.verify_pages:
+        verify_pages()
+    elif a.cross_quotes:
+        cross_quotes()
     elif a.quotes:
         quotes(a.quotes)
     elif a.stats:
