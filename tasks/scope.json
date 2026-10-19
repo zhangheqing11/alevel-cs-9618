@@ -220,7 +220,8 @@
     "allow": [
       "pipeline/tag/p4/**",
       "corpus/rows/p4/**",
-      "corpus/tag_report_p4.md"
+      "corpus/tag_report_p4.md",
+      "papers/p4/tagging-guide.md"
     ]
   },
   "T36": {
