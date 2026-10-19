@@ -1,0 +1,57 @@
+{
+  "id": "9618_w22_41:1(a)",
+  "kind": "past-paper",
+  "title": "整数文件：读入、计数与冒泡排序",
+  "source": {
+    "paper": "9618_w22_41",
+    "rows": [
+      "9618_w22_41:1(a)",
+      "9618_w22_41:1(b)",
+      "9618_w22_41:1(c)",
+      "9618_w22_41:1(d)(i)",
+      "9618_w22_41:1(d)(ii)",
+      "9618_w22_41:1(e)"
+    ]
+  },
+  "marks": 23,
+  "types": [
+    "P4-AR-01",
+    "P4-FL-01",
+    "P4-SR-01",
+    "P4-PR-01",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-SR-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "bubble-sort",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "global-scope",
+    "initialise-variables",
+    "input-prompt",
+    "input-validation",
+    "linear-search",
+    "loop-bounds",
+    "loop-to-eof",
+    "module-header",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "IntegerData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}
