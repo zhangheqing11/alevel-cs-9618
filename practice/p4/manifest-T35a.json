@@ -515,10 +515,167 @@
         "1(a): MS Python example is only `global Animals #comment`; per D10 (1) the test requires a real 10-element module-level list"
       ],
       "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile)."
+    },
+    {
+      "directory": "practice/p4/9618_s24_41_q1",
+      "id": "9618_s24_41:1(a)",
+      "paper": "9618_s24_41",
+      "marks": 27,
+      "auto_marks": 25.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.926,
+      "types": [
+        "P4-AR-01",
+        "P4-PR-01",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-SR-03",
+        "P4-MP-01",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_41:1(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(b)",
+          "marks": 5,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s24_41:1(c)(i)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s24_41:1(c)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s24_41:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s24_41:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(e)(i)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5
+        },
+        {
+          "id": "9618_s24_41:1(e)(ii)",
+          "marks": 3,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_41:1(e)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 11,
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        7,
+        9,
+        13
+      ],
+      "qp_over_ms": [
+        "1(a): MS Python example is only `global DataStored #integer`; per D10 (1) the test requires a real 20-element module-level list",
+        "1(e)(iii): MS accepts index 16 (whole 20-slot array sorted); test accepts 1 or 16"
+      ],
+      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped."
     }
   ],
-  "count": 4,
-  "marks": 84,
-  "auto_marks": 75.1,
-  "manual_marks": 8.9
+  "count": 5,
+  "marks": 111,
+  "auto_marks": 100.1,
+  "manual_marks": 10.9
 }
