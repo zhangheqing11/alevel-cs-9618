@@ -228,5 +228,14 @@
     "allow": [
       "papers/p3/audit/**"
     ]
+  },
+  "T36b": {
+    "allow": [
+      "papers/p3/cards/**",
+      "papers/p3/core/**",
+      "papers/p3/front.md",
+      "papers/p3/back.md",
+      "papers/p3/audit/**"
+    ]
   }
 }
