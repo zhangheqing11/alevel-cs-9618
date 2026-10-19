@@ -177,10 +177,119 @@
         "1(f): MS example writes to \" NewHighScore.txt\" (leading space) and closes inside the loop; tests use the QP file name"
       ],
       "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens."
+    },
+    {
+      "directory": "practice/p4/9618_s22_42_q2",
+      "id": "9618_s22_42:2(a)",
+      "paper": "9618_s22_42",
+      "marks": 23,
+      "auto_marks": 22.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.957,
+      "types": [
+        "P4-AR-02",
+        "P4-SR-03",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_42:2(a)",
+          "marks": 4,
+          "primary": "P4-AR-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s22_42:2(b)(i)",
+          "marks": 5,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5
+        },
+        {
+          "id": "9618_s22_42:2(b)(ii)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_42:2(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s22_42:2(c)(i)",
+          "marks": 8,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 8
+        },
+        {
+          "id": "9618_s22_42:2(c)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        }
+      ],
+      "files": [],
+      "mutants": 4,
+      "tests": 9,
+      "qp_pages_checked": [
+        4,
+        5,
+        6
+      ],
+      "ms_pages_checked": [
+        21,
+        22,
+        24
+      ],
+      "qp_over_ms": [
+        "2(c)(i): MS Python example tests `if Upper >= 0`; reference follows the QP `IF Upper >= Lower`",
+        "2(c): the QP Mid formula (Lower + (Upper - 1)) DIV 2 recurses forever for some positions; tests use only cases the faithful translation answers correctly (standard formula also passes)"
+      ],
+      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties."
     }
   ],
-  "count": 1,
-  "marks": 29,
-  "auto_marks": 23.9,
-  "manual_marks": 5.1
+  "count": 2,
+  "marks": 52,
+  "auto_marks": 45.9,
+  "manual_marks": 6.1
 }
