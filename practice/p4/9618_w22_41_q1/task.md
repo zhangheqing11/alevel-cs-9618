@@ -80,7 +80,7 @@ A source file is used to answer Question 1. The file is called IntegerData.txt
 | Part 1(d)(ii) | 9618_w22_41:1(d)(ii) | 1 | 截图 | `test_1d_screenshot_input_61_outputs_2` · 输入 61、输出 2 | 截图清晰、能看到输入的 61 |
 | Part 1(e) | 9618_w22_41:1(e) | 4 | 代码 | `test_1e_bubblesort_sorts_and_prints_official_data` · MP1–MP4；`test_1e_bubblesort_reverse_order` · MP2–MP4；`test_1e_main_calls_bubblesort` · MP1 | MP1 过程头；确实是冒泡排序（外层 / 内层循环、相邻比较与交换），没有用 `sort()` |
 
-分值估算：自动测 21 分，只能人工核对 2 分（1(b) MP1、1(c) MP1 的头部）。
+得分点 24 个（1(b) 7 点封顶 6 分）：行为可自动测 23 个，只能人工核对 1 个（1(b) MP1 过程头）。其余点里的「头部 / 措辞 / 类型注释」部分仍按下面的清单人工看。
 
 ## 人工核对清单
 
