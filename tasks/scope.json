@@ -237,5 +237,123 @@
       "papers/p3/back.md",
       "papers/p3/audit/**"
     ]
+  },
+  "T35a": {
+    "allow": [
+      "practice/p4/9618_s22_41_q1/**",
+      "practice/p4/9618_s22_42_q2/**",
+      "practice/p4/9618_s23_41_q1/**",
+      "practice/p4/9618_s23_42_q1/**",
+      "practice/p4/9618_s24_41_q1/**",
+      "practice/p4/9618_s24_42_q1/**",
+      "practice/p4/9618_s24_42_q3/**",
+      "practice/p4/9618_s25_41_q2/**",
+      "practice/p4/9618_s25_43_q2/**",
+      "practice/p4/manifest-T35a.json",
+      "practice/p4/README-T35a.md"
+    ]
+  },
+  "T35b": {
+    "allow": [
+      "practice/p4/9618_w22_41_q1/**",
+      "practice/p4/9618_w22_42_q1/**",
+      "practice/p4/9618_w23_41_q1/**",
+      "practice/p4/9618_w23_42_q2/**",
+      "practice/p4/9618_w24_41_q1/**",
+      "practice/p4/9618_w24_42_q3/**",
+      "practice/p4/9618_w25_42_q2/**",
+      "practice/p4/9618_w25_43_q3/**",
+      "practice/p4/manifest-T35b.json",
+      "practice/p4/README-T35b.md"
+    ]
+  },
+  "T35c": {
+    "allow": [
+      "practice/p4/9618_s22_41_q3/**",
+      "practice/p4/9618_s22_42_q1/**",
+      "practice/p4/9618_s23_41_q3/**",
+      "practice/p4/9618_s23_42_q2/**",
+      "practice/p4/9618_s24_41_q3/**",
+      "practice/p4/9618_s25_41_q1/**",
+      "practice/p4/9618_s25_42_q1/**",
+      "practice/p4/9618_s25_42_q2/**",
+      "practice/p4/9618_s25_43_q1/**",
+      "practice/p4/9618_w22_41_q3/**",
+      "practice/p4/manifest-T35c.json",
+      "practice/p4/README-T35c.md"
+    ]
+  },
+  "T35d": {
+    "allow": [
+      "practice/p4/9618_w22_42_q3/**",
+      "practice/p4/9618_w23_41_q2/**",
+      "practice/p4/9618_w23_42_q1/**",
+      "practice/p4/9618_w24_41_q3/**",
+      "practice/p4/9618_w24_42_q2/**",
+      "practice/p4/9618_w25_41_q1/**",
+      "practice/p4/9618_w25_41_q3/**",
+      "practice/p4/9618_w25_42_q3/**",
+      "practice/p4/9618_w25_43_q2/**",
+      "practice/p4/manifest-T35d.json",
+      "practice/p4/README-T35d.md"
+    ]
+  },
+  "T35e": {
+    "allow": [
+      "practice/p4/9618_s22_41_q2/**",
+      "practice/p4/9618_s22_42_q3/**",
+      "practice/p4/9618_s23_41_q2/**",
+      "practice/p4/9618_s23_42_q3/**",
+      "practice/p4/9618_s24_41_q2/**",
+      "practice/p4/9618_s24_42_q2/**",
+      "practice/p4/9618_s25_41_q3/**",
+      "practice/p4/9618_s25_42_q3/**",
+      "practice/p4/9618_s25_43_q3/**",
+      "practice/p4/manifest-T35e.json",
+      "practice/p4/README-T35e.md"
+    ]
+  },
+  "T35f": {
+    "allow": [
+      "practice/p4/9618_w22_41_q2/**",
+      "practice/p4/9618_w22_42_q2/**",
+      "practice/p4/9618_w23_41_q3/**",
+      "practice/p4/9618_w23_42_q3/**",
+      "practice/p4/9618_w24_41_q2/**",
+      "practice/p4/9618_w24_42_q1/**",
+      "practice/p4/9618_w25_41_q2/**",
+      "practice/p4/9618_w25_42_q1/**",
+      "practice/p4/9618_w25_43_q1/**",
+      "practice/p4/manifest-T35f.json",
+      "practice/p4/README-T35f.md"
+    ]
+  },
+  "T37A": {
+    "allow": [
+      "papers/p4/front.md",
+      "papers/p4/cards/PR.md",
+      "papers/p4/cards/AR.md",
+      "papers/p4/cards/FL.md",
+      "papers/p4/cards/SR.md",
+      "papers/p4/cards/RC.md",
+      "papers/p4/core/PR.md",
+      "papers/p4/core/AR.md",
+      "papers/p4/core/FL.md",
+      "papers/p4/core/SR.md",
+      "papers/p4/core/RC.md"
+    ]
+  },
+  "T37B": {
+    "allow": [
+      "papers/p4/back.md",
+      "papers/p4/cards/SQ.md",
+      "papers/p4/cards/LT.md",
+      "papers/p4/cards/OP.md",
+      "papers/p4/cards/MP.md",
+      "papers/p4/core/SQ.md",
+      "papers/p4/core/LT.md",
+      "papers/p4/core/OP.md",
+      "papers/p4/core/MP.md"
+    ]
   }
 }
