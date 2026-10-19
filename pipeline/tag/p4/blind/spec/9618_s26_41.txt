@@ -1,0 +1,40 @@
+1(a) SQ-02 # 线性队列（无回绕，1(d) 以 HeadPointer > TailPointer 判空）的数组与指针声明
+ = declare-array,global-scope,data-types | queue-array,global-scope,initialise-variables | initialise-variables,declare-array
+1(b) SQ-02
+ = module-header | queue-array | boolean-return | queue-array,array-index | queue-array | boolean-return | queue-array
+1(c)(i) MP-02
+ = input-prompt,count-loop | procedure-call | procedure-call,return-value | output-format,nested-if | output-format
+1(c)(ii) MP-03
+1(d) SQ-02
+ = module-header | queue-array,logic-ops | return-value | queue-array,array-index | return-value | queue-array
+1(e)(i) MP-02 # 逐个输入入队，再固定调用 Dequeue 4 次输出；不是用出队结果做处理
+ = input-prompt,count-loop,procedure-call | procedure-call,count-loop | output-format
+1(e)(ii) MP-03
+2(a) AR-03
+ = record-type | record-type,data-types
+2(b)(i) FL-02
+ = module-header,return-value | exception-handling,output-format | file-open-read | file-close | loop-to-eof | field-extract,strip-newline | object-instantiation,record-type | array-of-records
+2(b)(ii) AR-04
+ = module-header | count-loop | output-format,array-of-records
+2(b)(iii) MP-01
+ = declare-array,array-of-records | procedure-call,return-value | procedure-call
+2(b)(iv) MP-03
+2(c)(i) AR-05 +PR-01 # 按难度筛选进新数组 2 分与输入校验 2 分同分，按指南 §3 优先级取 AR-05
+ = module-header,return-value | input-prompt | input-validation | count-loop,array-of-records,relational-ops | array-of-records
+2(c)(ii) FL-03
+ = module-header,file-write,file-close | count-loop,string-concat | file-write | exception-handling,output-format
+2(c)(iii) MP-01
+ = procedure-call,return-value | procedure-call
+2(c)(iv) MP-03
+3(a)(i) OP-01
+ = class-definition | constructor | constructor | constructor
+3(a)(ii) OP-06 # Path 的属性是 TheObject 对象数组，构造方法里建好
+ = class-definition,containment,array-of-objects | constructor | constructor,array-of-objects,object-instantiation | getter-setter,return-value
+3(a)(iii) OP-06
+ = module-header,array-of-objects | relational-ops,boolean-return | array-of-objects,boolean-return
+3(a)(iv) OP-06 # 遍历容器里的对象拼出字符串
+ = module-header,return-value | string-concat,method-call,array-of-objects
+3(a)(v) OP-06
+3(b)(i) OP-07
+ = object-instantiation | object-instantiation | array-of-objects | object-instantiation | method-call | method-call,output-format
+3(b)(ii) MP-03

@@ -28,8 +28,9 @@
  t Calling ReadData() and storing/using return value (as array of type Tree) … || … calling PrintTrees() with first object in returned array as parameter
  = procedure-call,return-value | procedure-call,array-of-objects
 2(d)(ii) MP-03
-2(e)(i) AR-05
- = module-header,input-prompt | count-loop,array-of-objects | relational-ops,logic-ops,method-call | logic-ops,array-of-objects | procedure-call | flag-variable,output-format
+2(e)(i) AR-05 # MS 第 4 个圆点下另起一行、没有圆点的「… when all true … appending object in new array」是独立得分点（原页 p.23，「to max 6」共 7 点）
+ t Procedure header (and close) taking array of Tree objects as a parameter and reading evergreen, max height and max width once as input from the user || Looping through each array object … || … comparing each width input >= MaxWidth, height input >= MaxHeight || … comparing each evergreen input with Evergreen || … when all true (all requirements met) - appending object in new array || Calling PrintTrees() with each valid object || Outputting suitable message if no trees appropriate
+ = module-header,input-prompt | count-loop,array-of-objects | relational-ops,logic-ops,method-call | relational-ops,method-call | logic-ops,array-of-objects | procedure-call | flag-variable,output-format
 2(e)(ii) PR-03 low # 第 2 点同时含在对象数组里找到这棵树（SR-01）与计算年数（PR-03），清单不可分；按题干主要要求取 PR-03
  = input-prompt,type-conversion | linear-search,operator-precedence,output-format
 2(e)(iii) MP-03

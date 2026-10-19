@@ -210,7 +210,7 @@
 {"id": "9618_s24_41:2(c)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": "独立过程：用 getter 取对象属性并按是否常绿输出（OP-07 summary：用 getter 取值并输出）"}
 {"id": "9618_s24_41:2(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:2(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
-{"id": "9618_s24_41:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_s24_41:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": "MS 第 4 个圆点下另起一行、没有圆点的「… when all true … appending object in new array」是独立得分点（原页 p.23，「to max 6」共 7 点）"}
 {"id": "9618_s24_41:2(e)(ii)", "primary": "P4-PR-03", "cross": [], "confidence": "low", "note": "第 2 点同时含在对象数组里找到这棵树（SR-01）与计算年数（PR-03），清单不可分；按题干主要要求取 PR-03"}
 {"id": "9618_s24_41:2(e)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_41:3(a)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
@@ -261,7 +261,7 @@
 {"id": "9618_s24_43:2(c)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": "独立过程：用 getter 取对象属性并按是否常绿输出（OP-07 summary：用 getter 取值并输出）"}
 {"id": "9618_s24_43:2(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:2(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
-{"id": "9618_s24_43:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_s24_43:2(e)(i)", "primary": "P4-AR-05", "cross": [], "confidence": "high", "note": "MS 第 4 个圆点下另起一行、没有圆点的「… when all true … appending object in new array」是独立得分点（原页 p.23，「to max 6」共 7 点）"}
 {"id": "9618_s24_43:2(e)(ii)", "primary": "P4-PR-03", "cross": [], "confidence": "low", "note": "第 2 点同时含在对象数组里找到这棵树（SR-01）与计算年数（PR-03），清单不可分；按题干主要要求取 PR-03"}
 {"id": "9618_s24_43:2(e)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s24_43:3(a)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
@@ -672,3 +672,73 @@
 {"id": "9618_w24_43:3(d)(i)", "primary": "P4-LT-02", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_w24_43:3(d)(ii)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_w24_43:3(d)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:1(a)", "primary": "P4-SQ-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:1(b)", "primary": "P4-SQ-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:1(c)", "primary": "P4-SQ-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:1(d)", "primary": "P4-MP-02", "cross": [], "confidence": "high", "note": "循环生成随机数逐个 Push 并按返回值输出；MS 第 3 个圆点含两个「…」得分点（4 分对 4 点），拆成两条"}
+{"id": "9618_w25_41:1(e)", "primary": "P4-SQ-04", "cross": ["P4-AR-05"], "confidence": "high", "note": "出栈直到空再求最大最小（taxonomy AR-05 not：数据靠 Pop 取出再统计 → SQ-04，AR-05 进 cross）"}
+{"id": "9618_w25_41:1(f)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:1(f)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(a)(i)", "primary": "P4-OP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(a)(ii)", "primary": "P4-OP-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(b)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(c)(i)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": "Station 的属性含 Train 对象数组，构造方法里建空数组"}
+{"id": "9618_w25_41:2(c)(ii)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(c)(iii)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": "遍历容器里的 Train 对象拼出描述字符串"}
+{"id": "9618_w25_41:2(d)(i)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(d)(ii)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:2(d)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:3(a)", "primary": "P4-OP-01", "cross": [], "confidence": "high", "note": "题目说 class 并写构造方法（属性公有），得分点都在类头与构造方法"}
+{"id": "9618_w25_41:3(b)", "primary": "P4-LT-05", "cross": [], "confidence": "high", "note": "哈希表二维数组声明与初始化"}
+{"id": "9618_w25_41:3(c)", "primary": "P4-LT-05", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:3(d)", "primary": "P4-LT-05", "cross": [], "confidence": "high", "note": "MS 第 3 个圆点含两个「…」得分点（4 分对 4 点），拆成两条"}
+{"id": "9618_w25_41:3(e)", "primary": "P4-FL-02", "cross": [], "confidence": "high", "note": "调用 InsertData 只占 1 分，不加 LT-05"}
+{"id": "9618_w25_41:3(f)", "primary": "P4-LT-05", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:3(g)(i)", "primary": "P4-MP-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_41:3(g)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:1(a)(i)", "primary": "P4-OP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:1(a)(ii)", "primary": "P4-OP-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:1(a)(iii)", "primary": "P4-OP-03", "cross": [], "confidence": "high", "note": "名叫 Get 但要把属性拼成规定格式的字符串（OP-02 not）"}
+{"id": "9618_w25_42:1(a)(iv)", "primary": "P4-OP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:1(b)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:1(c)(i)", "primary": "P4-OP-07", "cross": ["P4-PR-01"], "confidence": "high", "note": "调用 Move()、传参、用 getter 3 分与输入校验 3 分同分，按指南 §3 优先级取 OP-07"}
+{"id": "9618_w25_42:1(c)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(a)", "primary": "P4-AR-01", "cross": [], "confidence": "high", "note": "20 个不重复随机数（指南 §7 第 14 条）"}
+{"id": "9618_w25_42:2(b)", "primary": "P4-AR-04", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(c)", "primary": "P4-SR-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(d)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(e)", "primary": "P4-SR-02", "cross": ["P4-RC-01"], "confidence": "high", "note": "递归调用两点自成清单（指南 §4 表）"}
+{"id": "9618_w25_42:2(f)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:2(f)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:3(a)", "primary": "P4-LT-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:3(b)", "primary": "P4-LT-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:3(c)", "primary": "P4-FL-01", "cross": [], "confidence": "high", "note": "主程序读文件逐行插入二叉树（每行一项存进 ADT）"}
+{"id": "9618_w25_42:3(d)", "primary": "P4-FL-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:3(e)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_42:3(e)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(a)(i)", "primary": "P4-OP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(a)(ii)", "primary": "P4-OP-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(a)(iii)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(b)(i)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": "二维数组是类的属性、元素是对象（taxonomy AR-02 not）"}
+{"id": "9618_w25_43:1(b)(ii)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(b)(iii)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(b)(iv)", "primary": "P4-OP-06", "cross": [], "confidence": "high", "note": "按行输出容器里各对象的属性"}
+{"id": "9618_w25_43:1(c)(i)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(c)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:1(d)(i)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": "调用 GetObject() 并检查返回对象 2 分为主；两个坐标的输入校验合成 1 分，不进 cross"}
+{"id": "9618_w25_43:1(d)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:2(a)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": "无回绕（2(c) 以 QueueHead > QueueTail 判空），按指南 §7 第 3 条归线性队列"}
+{"id": "9618_w25_43:2(b)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:2(c)", "primary": "P4-SQ-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:2(d)", "primary": "P4-FL-01", "cross": [], "confidence": "high", "note": "读文件逐行入队"}
+{"id": "9618_w25_43:2(e)", "primary": "P4-SQ-04", "cross": ["P4-PR-02"], "confidence": "high", "note": "出队后游程压缩（指南 §7 第 2 条）"}
+{"id": "9618_w25_43:2(f)(i)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:2(f)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:3(a)(i)", "primary": "P4-RC-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:3(a)(ii)", "primary": "P4-MP-01", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:3(a)(iii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:3(b)(i)", "primary": "P4-PR-02", "cross": [], "confidence": "low", "note": "无合适题型：只把题给字符串存进主程序的局部变量（为 3(b)(ii) 的拆分作准备），取最接近的 PR-02"}
+{"id": "9618_w25_43:3(b)(ii)", "primary": "P4-PR-02", "cross": [], "confidence": "high", "note": ""}
+{"id": "9618_w25_43:3(b)(iii)", "primary": "P4-AR-04", "cross": [], "confidence": "high", "note": "调用一次是通用点；逐行输出返回数组占一半（指南 §3 第 3 条）"}
+{"id": "9618_w25_43:3(b)(iv)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}

@@ -1,0 +1,48 @@
+1(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor
+1(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+1(b)(i) OP-07
+1(b)(ii) OP-07
+ = object-instantiation | array-of-objects | object-instantiation,array-of-objects
+1(c) OP-01 # 一个 getter 只占 1 分，不加 OP-02
+ = class-definition | encapsulation,data-types | constructor | getter-setter,return-value
+1(d) OP-03
+ = module-header | nested-if | relational-ops,return-value | nested-if,return-value | encapsulation
+1(e)(i) OP-07
+ = object-instantiation | object-instantiation
+1(e)(ii) PR-03 +OP-07 # 比较两个返回值、计分、输出胜者 / 平局 4 分；调用 CalculateScore 与 getter 2 分进 cross
+ = count-loop,array-of-objects | method-call | relational-ops,nested-if | accumulator,output-format | output-format,nested-if | nested-if,relational-ops,output-format | method-call,getter-setter
+1(e)(iii) MP-03
+2(a) AR-03 # 题目说 record structure（指南 §7 第 6 条点名本行）
+ = record-type,class-definition | record-type,declare-array | record-type,data-types
+2(b) SQ-02 # 建队列记录并初始化指针与数组（ADT 的声明归 SQ，指南 §7 第 14 条）
+ = object-instantiation,record-type | queue-array,initialise-variables | initialise-variables,count-loop
+2(c) SQ-02 # 补全伪代码：计数句作一条（指南 §8.2 第 7、8 条）；用记录包住的队列，无回绕（指南 §7 第 3 条）
+ t 1 mark for each completed statement to max 3 || 1 mark for correct values returned in correct places || 1 mark for function header taking (at least) one parameter and the rest of function correct and using the record/class data structure accurately.
+ w 3,1,1
+ = translate-pseudocode,queue-array | return-value | module-header,translate-pseudocode,record-type
+2(d) AR-04 # 从队首到队尾拼成一个字符串返回（taxonomy PR-02 not：ReturnAllData → AR-04）
+ = module-header,count-loop | loop-bounds,queue-array | string-concat,return-value
+2(e)(i) MP-02 # 校验只占 1 分
+ = count-loop,input-prompt | procedure-call,return-value | input-validation | output-format,nested-if | procedure-call,output-format
+2(e)(ii) MP-03
+ = test-input-sequence,test-output | test-output
+2(f) SQ-02
+ = module-header,return-value | queue-array,return-value | queue-array,return-value | queue-array
+2(g)(i) MP-01
+ = procedure-call,return-value | nested-if,output-format | procedure-call
+2(g)(ii) MP-03
+3(a) AR-02
+ = array-2d,declare-array,data-types | initialise-variables,nested-loops
+3(b) FL-02 # 每 3 项一组存进二维数组的一行（指南 §7 第 4 条）
+ = module-header,return-value | file-open-read,file-close | loop-to-eof | read-line-groups,array-2d | exception-handling,output-format
+3(c) AR-04
+ = module-header,count-loop,array-2d | output-format
+3(d) SR-03 # 二维数组按两个关键字冒泡（指南 §7 第 15 条）
+ = module-header,return-value | relational-ops,bubble-sort,array-2d | logic-ops,bubble-sort | nested-loops,bubble-sort
+3(e)(i) MP-01
+ = procedure-call,return-value | output-format,procedure-call
+3(e)(ii) MP-03 # MS 没有圆点，两行各对应 1 分（2 分），按行拆
+ t Output showing ‘Before’ and players and scores in correct format before sorting || Output showing ‘After’ players and scores in correct order and format after sorting
+ = test-output | test-output

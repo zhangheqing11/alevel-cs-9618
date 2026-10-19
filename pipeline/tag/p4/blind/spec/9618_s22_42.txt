@@ -1,0 +1,37 @@
+1(a) SQ-01 # 栈的数组与指针声明（指南 §7 第 14 条）
+ = declare-array,global-scope,stack-array | declare-array,data-types | stack-array,initialise-variables
+1(b) AR-04 # taxonomy AR-04 cue: output all 10 elements in the stack and StackPointer
+ = module-header | output-format | count-loop,output-format
+1(c) SQ-01
+ = module-header | stack-array | boolean-return | stack-array,array-index | stack-array | boolean-return
+1(d)(i) MP-02
+ = input-prompt,count-loop | procedure-call | output-format | output-format | procedure-call
+1(d)(ii) MP-03
+1(e)(i) SQ-01
+ = module-header,return-value | stack-array,return-value | stack-array,array-index | stack-array | return-value
+1(e)(ii) MP-03 # 题干兼要加两次 Pop 调用，但 MS 两分都给输出内容（指南 §6 截图行）
+ = test-output | test-output
+2(a) AR-02
+ = declare-array,array-2d | array-2d,data-types | nested-loops,initialise-variables | random-numbers
+2(b)(i) SR-03 # 二维数组冒泡（指南 §7 第 15 条）
+ = nested-loops,bubble-sort,array-2d | nested-loops,bubble-sort | bubble-sort,loop-bounds | bubble-sort,relational-ops | bubble-sort,array-2d
+2(b)(ii) AR-04
+ = module-header | nested-loops,output-format,array-2d | procedure-call
+2(b)(iii) MP-03
+2(c)(i) SR-02 # 补全递归二分查找：计数句作一条（指南 §8.2 第 7 条）；递归调用未自成 ≥ 2 点，不加 RC-01
+ t 1 mark for each completed statement (6) || function declaration taking appropriate parameters and recursive calls || remainder of the function is accurate including appropriate DIV operator.
+ w 6,1,1
+ = translate-pseudocode,binary-search,recursion | module-header,recursion | binary-search,div-mod,translate-pseudocode
+2(c)(ii) MP-03
+ = test-output | test-output
+3(a) OP-01
+ = class-definition | data-types | encapsulation | constructor | constructor
+3(b) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+3(c) FL-02
+ = array-of-objects,declare-array | file-open-read | loop-to-eof | read-line-groups | object-instantiation | object-instantiation,type-conversion | array-of-objects | exception-handling | exception-handling,output-format | file-close
+3(d) PR-01 # 输入下标并校验范围、未被选过（PR-01 summary 含「未被选过」）
+ = flag-variable,declare-array | module-header,return-value | input-prompt,type-conversion | input-validation,relational-ops | array-index | flag-variable,array-index | input-validation,pre-condition-loop | return-value | flag-variable,assign-value
+3(e)(i) OP-07
+ = array-of-objects,declare-array | procedure-call,count-loop | array-of-objects,array-index | output-format,array-of-objects | method-call,getter-setter
+3(e)(ii) MP-03

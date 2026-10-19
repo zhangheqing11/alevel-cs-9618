@@ -1,0 +1,47 @@
+1(a) SQ-01
+ = declare-array,global-scope,initialise-variables | stack-array,global-scope,initialise-variables
+1(b) SQ-01
+ = module-header | stack-array,return-value | stack-array | stack-array,array-index,return-value
+1(c) SQ-01
+ = module-header,return-value | stack-array,return-value | stack-array | stack-array,return-value
+1(d) FL-01 # 读文件逐行入栈（指南 §7 第 1 条）
+ = module-header | file-open-read,file-close | loop-to-eof,file-open-read | procedure-call | procedure-call,output-format | exception-handling,output-format
+1(e) SQ-04 +PR-03 # 出栈直到空并计算（taxonomy SQ-04 cue）；按运算符选择并计算 ≥ 2 分进 cross
+ = module-header | pre-condition-loop,stack-array | procedure-call,return-value | flag-variable,nested-if | nested-if,relational-ops | operator-precedence,type-conversion | accumulator,return-value
+1(f)(i) MP-01
+ = input-prompt,procedure-call | procedure-call,output-format
+1(f)(ii) MP-03
+ = test-input-sequence,test-output | test-input-sequence,test-output
+2(a) AR-03
+ = record-type,class-definition | record-type,data-types
+2(b)(i) LT-05 # 哈希表与溢出区数组声明（指南 §7 第 14 条）
+2(b)(ii) LT-05 # 把哈希表与溢出区初始化为空记录
+ = module-header,count-loop,array-of-records | record-type,initialise-variables
+2(c) LT-05
+ = module-header,return-value | div-mod,hash-table
+2(d) LT-05
+ = module-header,record-type | procedure-call,hash-table | hash-table,array-of-records | hash-table | hash-table,linear-search | hash-table,flag-variable
+2(e) FL-02 # 调用 InsertIntoHash 只占 1 分，不加 LT-05（指南 §4）
+ = module-header,file-open-read,file-close | loop-to-eof | field-extract | object-instantiation,record-type,type-conversion | procedure-call | exception-handling,output-format
+2(f)(i) AR-05 # 遍历溢出区、只输出非空记录的键（输出前按条件挑选）
+ = module-header,count-loop | nested-if,output-format,array-of-records
+2(f)(ii) MP-01
+2(f)(iii) MP-03
+3(a)(i) OP-01
+ = class-definition | data-types | constructor | constructor
+3(a)(ii) OP-03
+ = module-header | string-concat,type-conversion | return-value
+3(b)(i) OP-04
+ = inheritance,class-definition | constructor,inheritance | constructor,data-types | module-header,assign-value
+3(b)(ii) OP-05
+ = polymorphism,module-header | string-concat,return-value
+3(c)(i) OP-04
+ = inheritance,class-definition | constructor,inheritance | constructor,data-types | module-header,assign-value
+3(c)(ii) OP-05
+ = polymorphism,module-header | string-concat,return-value
+3(d)(i) OP-07
+ = object-instantiation | object-instantiation,inheritance
+3(d)(ii) OP-07
+ = method-call | method-call | method-call,output-format,polymorphism
+3(d)(iii) MP-03
+ = test-output | test-output

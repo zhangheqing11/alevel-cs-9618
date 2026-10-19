@@ -1,0 +1,41 @@
+1(a) AR-01
+ = declare-array,global-scope,data-types | declare-array
+1(b) FL-01 # MS 分两段计分：5 点 + 异常处理 2 点，合成 7 条，ms_max 6
+ = module-header | file-open-read | loop-to-eof,count-loop | file-open-read,type-conversion,array-index | file-close | exception-handling | exception-handling,output-format
+1(c) SR-01 +PR-01 # 遍历比较计数 3 分、校验 2 分（指南 §3 例）
+ = module-header,input-prompt | type-conversion,input-validation | input-validation,relational-ops | count-loop,loop-bounds | linear-search,relational-ops | accumulator,initialise-variables | return-value
+1(d)(i) MP-01
+ = procedure-call | procedure-call,return-value | output-format
+1(d)(ii) MP-03
+1(e) SR-03
+ = module-header,output-format,procedure-call | count-loop,bubble-sort | nested-loops,bubble-sort | bubble-sort,relational-ops
+2(a)(i) OP-01
+ = class-definition | encapsulation,data-types | constructor | constructor | constructor
+2(a)(ii) OP-02
+ = getter-setter | getter-setter,return-value | getter-setter
+2(a)(iii) OP-07
+ = object-instantiation | object-instantiation
+2(b)(i) OP-06 # 属性是 Card 对象数组（指南 §7 第 7 条）
+ = class-definition | encapsulation,data-types | containment,array-of-objects,declare-array | constructor | constructor,array-of-objects | constructor,initialise-variables
+2(b)(ii) OP-06 # taxonomy OP-06：按下标取出容器里的对象
+ = module-header,getter-setter | return-value,array-of-objects
+2(b)(iii) OP-07
+ = object-instantiation | object-instantiation
+2(c)(i) PR-03 # 按颜色加分并加上牌面数（PR-03 summary：按颜色加分）；遍历与 getter 各 1 分
+ = module-header,initialise-variables | count-loop,array-of-objects | nested-if,accumulator | accumulator | method-call | return-value
+2(c)(ii) PR-03 # 两次调用是通用点；比较两个返回值并输出胜者或平局 2 分
+ = procedure-call | procedure-call | nested-if,relational-ops,output-format | nested-if,output-format
+2(c)(iii) MP-03
+3(a) LT-03 # 二叉树的二维数组声明与初始化（指南 §7 第 14 条）
+ = array-2d,declare-array,global-scope | nested-loops,array-2d | initialise-variables
+3(b) LT-03 # 按题给表存入结点并初始化根指针、空闲指针
+ = array-2d,initialise-variables | binary-tree,initialise-variables
+3(c) LT-04 # 补全递归查找：计数句作一条（指南 §8.2 第 7 条）
+ t 1 mark for each completed statement (4) || 1 mark for remainder of function correct
+ w 4,1
+ = translate-pseudocode,binary-tree,recursion | translate-pseudocode,recursion,binary-tree
+3(d) LT-04
+ = module-header,recursion | binary-tree,relational-ops | recursion,binary-tree | binary-tree,relational-ops | recursion,binary-tree | output-format,array-2d | binary-tree,recursion
+3(e)(i) MP-01
+ = procedure-call | nested-if,output-format | procedure-call
+3(e)(ii) MP-03
