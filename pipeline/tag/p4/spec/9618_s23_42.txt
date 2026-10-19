@@ -39,6 +39,6 @@
  = file-open-read,file-close | exception-handling,output-format | loop-to-eof | read-line-groups | object-instantiation,inheritance,nested-if | object-instantiation,type-conversion | object-instantiation,array-of-objects | object-instantiation,type-conversion
 3(d) FL-01 +SR-01 # 读文件逐行更新已有对象：文件 3 分、查员工号 2 分（指南 §3 例）
  = module-header,file-open-read,file-close | exception-handling,output-format | loop-to-eof | linear-search | method-call,getter-setter | method-call
-3(e)(i) OP-07 # 调用一次 EnterHours 是通用点；用 GetTotalPay、GetEmployeeNumber 输出占非头得分点一半
+3(e)(i) AR-04 # 对照 pilot 复核后改：两点都是遍历对象数组并逐个输出（getter 只是取值手段），按下标顺序输出数组 → AR-04；盲标曾按 §3 同分优先级取 OP-07
  = procedure-call,count-loop | method-call,output-format
 3(e)(ii) MP-03

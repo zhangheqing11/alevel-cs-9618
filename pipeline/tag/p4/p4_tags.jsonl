@@ -166,7 +166,7 @@
 {"id": "9618_s23_42:3(b)(ii)", "primary": "P4-OP-05", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s23_42:3(c)", "primary": "P4-FL-02", "cross": [], "confidence": "high", "note": "多行一组、按有无奖金字段实例化 Manager 或 Employee（指南 §7 第 4 条）"}
 {"id": "9618_s23_42:3(d)", "primary": "P4-FL-01", "cross": ["P4-SR-01"], "confidence": "high", "note": "读文件逐行更新已有对象：文件 3 分、查员工号 2 分（指南 §3 例）"}
-{"id": "9618_s23_42:3(e)(i)", "primary": "P4-OP-07", "cross": [], "confidence": "high", "note": "调用一次 EnterHours 是通用点；用 GetTotalPay、GetEmployeeNumber 输出占非头得分点一半"}
+{"id": "9618_s23_42:3(e)(i)", "primary": "P4-AR-04", "cross": [], "confidence": "high", "note": "对照 pilot 复核后改：两点都是遍历对象数组并逐个输出（getter 只是取值手段），按下标顺序输出数组 → AR-04；盲标曾按 §3 同分优先级取 OP-07"}
 {"id": "9618_s23_42:3(e)(ii)", "primary": "P4-MP-03", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s23_43:1(a)(i)", "primary": "P4-AR-01", "cross": [], "confidence": "high", "note": ""}
 {"id": "9618_s23_43:1(a)(ii)", "primary": "P4-FL-01", "cross": [], "confidence": "high", "note": ""}
