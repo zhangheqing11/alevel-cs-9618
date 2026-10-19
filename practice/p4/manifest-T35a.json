@@ -286,10 +286,149 @@
         "2(c): the QP Mid formula (Lower + (Upper - 1)) DIV 2 recurses forever for some positions; tests use only cases the faithful translation answers correctly (standard formula also passes)"
       ],
       "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties."
+    },
+    {
+      "directory": "practice/p4/9618_s23_41_q1",
+      "id": "9618_s23_41:1(a)(i)",
+      "paper": "9618_s23_41",
+      "marks": 18,
+      "auto_marks": 15.2,
+      "manual_marks": 2.8,
+      "auto_share": 0.844,
+      "types": [
+        "P4-AR-01",
+        "P4-FL-01",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-SR-01",
+        "P4-PR-01"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_41:1(a)(i)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(a)(ii)",
+          "marks": 4,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            5
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_s23_41:1(b)(i)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_41:1(b)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(c)",
+          "marks": 3,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_41:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s23_41:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Data.txt",
+          "bytes": 89,
+          "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/Data.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 5,
+      "tests": 10,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        8,
+        11
+      ],
+      "qp_over_ms": [
+        "1(b)/1(c): MS Java example loops to length - 1 (last element skipped, also visible in the MS p.11 screenshot); tests follow QP and include the last element"
+      ],
+      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10."
     }
   ],
-  "count": 2,
-  "marks": 52,
-  "auto_marks": 45.9,
-  "manual_marks": 6.1
+  "count": 3,
+  "marks": 70,
+  "auto_marks": 61.1,
+  "manual_marks": 8.9
 }
