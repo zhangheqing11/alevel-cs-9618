@@ -672,10 +672,164 @@
         "1(e)(iii): MS accepts index 16 (whole 20-slot array sorted); test accepts 1 or 16"
       ],
       "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped."
+    },
+    {
+      "directory": "practice/p4/9618_s24_42_q1",
+      "id": "9618_s24_42:1(a)",
+      "paper": "9618_s24_42",
+      "marks": 22,
+      "auto_marks": 19.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.864,
+      "types": [
+        "P4-FL-01",
+        "P4-MP-01",
+        "P4-SR-01",
+        "P4-AR-05",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_42:1(a)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1,
+            8
+          ],
+          "auto_marks": 4.5
+        },
+        {
+          "id": "9618_s24_42:1(b)",
+          "marks": 4,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_42:1(c)(i)",
+          "marks": 6,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.5
+        },
+        {
+          "id": "9618_s24_42:1(c)(ii)",
+          "marks": 3,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_42:1(d)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_42:1(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Easy.txt",
+          "bytes": 79,
+          "sha256": "a70412a68fe5ebebd7e5e94a7de486f718213bdb47d97103f159f9cc30e11497",
+          "source": "9618_s24_sf_42/Easy.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "Medium.txt",
+          "bytes": 273,
+          "sha256": "8e665d58bc9c9ec87e301da29c5e15dffc29648cab7a8435497843fb41fdc07a",
+          "source": "9618_s24_sf_42/Medium.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "Hard.txt",
+          "bytes": 570,
+          "sha256": "774cee18b5abd92155c5550baf4a7787c6c29ff7cc7186c7d00287b95fcbbf13",
+          "source": "9618_s24_sf_42/Hard.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 5,
+      "tests": 16,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        13,
+        14
+      ],
+      "qp_over_ms": [
+        "1(a)/1(c): MS Python example sets NumberWords = len(WordArray) (main word included) and then mixes NumberWords-1 and NumberWords+1; QP and MS MP7 say NumberWords counts answers only, reference and tests follow QP",
+        "1(d)(iii): MS p.14 screenshot shows an extra debug line (97); tests check only the values the MS lists"
+      ],
+      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens."
     }
   ],
-  "count": 5,
-  "marks": 111,
-  "auto_marks": 100.1,
-  "manual_marks": 10.9
+  "count": 6,
+  "marks": 133,
+  "auto_marks": 119.1,
+  "manual_marks": 13.9
 }

@@ -1,0 +1,55 @@
+{
+  "id": "9618_s24_42:1(a)",
+  "kind": "past-paper",
+  "title": "猜词游戏：读词表文件、输入猜词、统计百分比",
+  "source": {
+    "paper": "9618_s24_42",
+    "rows": [
+      "9618_s24_42:1(a)",
+      "9618_s24_42:1(b)",
+      "9618_s24_42:1(c)(i)",
+      "9618_s24_42:1(c)(ii)",
+      "9618_s24_42:1(d)(i)",
+      "9618_s24_42:1(d)(ii)",
+      "9618_s24_42:1(d)(iii)"
+    ]
+  },
+  "marks": 22,
+  "types": [
+    "P4-FL-01",
+    "P4-MP-01",
+    "P4-SR-01",
+    "P4-AR-05",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "assign-value",
+    "count-loop",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "global-scope",
+    "input-prompt",
+    "linear-search",
+    "loop-to-eof",
+    "module-header",
+    "nested-if",
+    "operator-precedence",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "sentinel-loop",
+    "string-concat",
+    "strip-newline"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Easy.txt",
+    "Medium.txt",
+    "Hard.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}
