@@ -1,0 +1,47 @@
+{
+  "id": "9618_s24_41:3(a)",
+  "kind": "past-paper",
+  "title": "线性队列与校验位",
+  "source": {
+    "paper": "9618_s24_41",
+    "rows": [
+      "9618_s24_41:3(a)",
+      "9618_s24_41:3(b)",
+      "9618_s24_41:3(c)",
+      "9618_s24_41:3(d)(i)",
+      "9618_s24_41:3(d)(ii)",
+      "9618_s24_41:3(d)(iii)"
+    ]
+  },
+  "marks": 17,
+  "types": [
+    "P4-SQ-02",
+    "P4-PR-02",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "boolean-return",
+    "char-compare",
+    "count-loop",
+    "div-mod",
+    "input-prompt",
+    "module-header",
+    "operator-precedence",
+    "output-format",
+    "procedure-call",
+    "queue-array",
+    "return-value",
+    "string-functions",
+    "string-index",
+    "test-input-sequence",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
