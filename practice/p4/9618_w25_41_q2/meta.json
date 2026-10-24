@@ -1,0 +1,54 @@
+{
+  "id": "9618_w25_41:2(a)(i)",
+  "kind": "past-paper",
+  "title": "Train 与 Station：对象容器与容量",
+  "source": {
+    "paper": "9618_w25_41",
+    "rows": [
+      "9618_w25_41:2(a)(i)",
+      "9618_w25_41:2(a)(ii)",
+      "9618_w25_41:2(b)",
+      "9618_w25_41:2(c)(i)",
+      "9618_w25_41:2(c)(ii)",
+      "9618_w25_41:2(c)(iii)",
+      "9618_w25_41:2(d)(i)",
+      "9618_w25_41:2(d)(ii)",
+      "9618_w25_41:2(d)(iii)"
+    ]
+  },
+  "marks": 30,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-OP-06",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "array-of-objects",
+    "boolean-return",
+    "class-definition",
+    "constructor",
+    "containment",
+    "count-loop",
+    "data-types",
+    "encapsulation",
+    "getter-setter",
+    "initialise-variables",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "relational-ops",
+    "return-value",
+    "string-concat",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

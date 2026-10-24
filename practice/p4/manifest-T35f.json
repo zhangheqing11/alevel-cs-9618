@@ -1033,10 +1033,168 @@
       "mutants": 2,
       "manual_marks": 4.8,
       "auto_share": 0.8345
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q2",
+      "id": "9618_w25_41:2(a)(i)",
+      "paper": "9618_w25_41",
+      "marks": 30,
+      "auto_marks": 27.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-06",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:2(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(b)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(iii)",
+          "marks": 6,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ms_pages_checked": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "qp_over_ms": [
+        "构造方法、getter 按 QP / MS Python 顺序。无数据文件。QP `Trains[0:9]` 与 D10 要求真实 10 格 list；MS p.19 Python 用空 list 后 append，参考解改为 `[None] * 10`，AddTrain 按 NumberTrains 下标存。这里 empty array 指尚未存列车，不是容量为零。GetTrains 返回字符串（不是 print），QP 明确了行格式和空站消息，测试核对格式；允许末尾空行或行末空格。MS p.25 截图：Station is full 一次，STH 两列车 12ADV/134、33ART/20，NTH 为21VBC/24。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 3.0,
+      "auto_share": 0.9
     }
   ],
-  "marks": 186,
-  "auto_marks": 157.4222,
-  "manual_marks": 28.5778,
-  "count": 6
+  "marks": 216,
+  "auto_marks": 184.4222,
+  "manual_marks": 31.5778,
+  "count": 7
 }
