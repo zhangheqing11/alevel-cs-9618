@@ -1,0 +1,116 @@
+{
+  "subbatch": "T35d",
+  "exercises": [
+    {
+      "directory": "practice/p4/9618_w22_42_q3",
+      "id": "9618_w22_42:3(a)",
+      "paper": "9618_w22_42",
+      "marks": 21,
+      "auto_marks": 19.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.9048,
+      "types": [
+        "P4-SQ-02",
+        "P4-MP-02",
+        "P4-RC-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_42:3(a)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w22_42:3(b)",
+          "marks": 6,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:3(c)",
+          "marks": 4,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w22_42:3(d)",
+          "marks": 6,
+          "primary": "P4-RC-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:3(e)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w22_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 4,
+      "qp_pages_checked": [
+        8,
+        9
+      ],
+      "ms_pages_checked": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "qp_over_ms": "- MS p.21 的 Python 范例漏 `global HeadPointer`，首次入队会引发 UnboundLocalError；参考解补齐。\n- 3(c) QP 要求所有入队都成功才输出 Successful；参考解累计失败标志。MS p.22 范例只保留最后一次返回值；给定空队列装入 20 项时没有输出差异。\n- QP/MS 原页的赋值箭头转写为 `←`；递归参数采用上述明确约定。",
+      "notes": "语料点号按本题 MS 圆点顺序；未拆得分点的 1 分行以 whole 表示。"
+    }
+  ]
+}
