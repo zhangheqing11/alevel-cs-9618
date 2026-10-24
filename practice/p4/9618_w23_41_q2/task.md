@@ -193,7 +193,7 @@
 | Part 2(c)(ii) | 9618_w23_41:2(c)(ii) | 2 | 代码 | `test_2a_i_globals` · MP1、MP2 | — |
 | Part 2(c)(iii) | 9618_w23_41:2(c)(iii) | 5 | 代码 | `test_2c_iii_total_first_existing_and_new` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 2(d) | 9618_w23_41:2(d) | 1 | 代码 | `test_2d_output_records` · MPwhole | — |
-| Part 2(e)(i) | 9618_w23_41:2(e)(i) | 2 | 代码 | `test_2e_ii_screenshot_totals` · MP1、MP2 | — |
+| Part 2(e)(i) | 9618_w23_41:2(e)(i) | 2 | 代码 | `test_2e_ii_screenshot_totals` · MP1、MP2；`test_2e_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 2(e)(ii) | 9618_w23_41:2(e)(ii) | 1 | 截图 | `test_2e_ii_screenshot_totals` · MPwhole | — |
 
 ## 人工核对清单
@@ -217,3 +217,7 @@
 - MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。
 
 2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。
+
+## T38c2 · D46 验证补充
+
+补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。没有容量 min/恰好冲突。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

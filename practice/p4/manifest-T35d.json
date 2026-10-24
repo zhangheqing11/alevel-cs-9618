@@ -123,9 +123,9 @@
       "id": "9618_w23_41:2(a)(i)",
       "paper": "9618_w23_41",
       "marks": 29,
-      "auto_marks": 23.4857,
-      "manual_marks": 5.5143,
-      "auto_share": 0.8099,
+      "auto_marks": 23.485714,
+      "manual_marks": 5.514286,
+      "auto_share": 0.809852,
       "types": [
         "P4-SQ-02",
         "P4-FL-01",
@@ -248,7 +248,10 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "tests": [
+            "test_2e_main_call_chain"
+          ]
         },
         {
           "id": "9618_w23_41:2(e)(ii)",
@@ -272,8 +275,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         4,
         5,
@@ -299,7 +302,7 @@
         24
       ],
       "qp_over_ms": "- MS pp.9、17 的 Python 范例为空 list（且 p.17 把 NumberRecords 声明写进注释），按 D10 ① 改为 50 格数组和独立的 NumberRecords 赋值。\n- MS p.21 `TotalData` 的末行 NumberRecords += 1 多缩进一级；参考解对照 QP p.6 修正。\n- MS p.24 把 `OutputRecords()` 缩进在 while 内，导致重复输出中间结果；参考解按 QP p.7 在全部汇总后输出一次。\n- MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。",
-      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。"
+      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。 T38c2：补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。没有容量 min/恰好冲突。"
     },
     {
       "directory": "practice/p4/9618_w23_42_q1",

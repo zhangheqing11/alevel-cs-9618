@@ -1,6 +1,6 @@
 """w23/41 Q2: linear queue, file and records (exact matching MS)."""
 import re
-from testkit import run_script, use_files
+from testkit import run_script, run_script_traced, use_files
 
 EXPECTED = [('1234', 1), ('1568', 1), ('9512', 2), ('4567', 4), ('8512', 6),
             ('4125', 3), ('9651', 1), ('4851', 1), ('2520', 2), ('3265', 1), ('8966', 1)]
@@ -110,3 +110,26 @@ def test_2e_ii_screenshot_totals(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     pairs = re.findall(r'ID\s+(\d+)\s+Total\s+(\d+)', result.stdout)
     assert [(i, int(n)) for i, n in pairs] == EXPECTED
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_2e_main_call_chain(candidate_path, exercise_dir):
+    """9618_w23_41:2(e)(i) MP1-MP2 (QP p.7/MS p.23): ReadData first, each TotalData, OutputRecords last."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('ReadData', 'TotalData', 'OutputRecords')]
+    assert names == ['ReadData'] + ['TotalData'] * 23 + ['OutputRecords']
+    data = (exercise_dir / 'files/QueueData.txt').read_text().splitlines()
+    assert [c.result for c in r.called('Dequeue')] == data
+    pairs = re.findall(r'ID\s+(\d+)\s+Total\s+(\d+)', r.stdout)
+    assert [(i, int(n)) for i, n in pairs] == EXPECTED
+

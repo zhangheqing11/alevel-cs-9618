@@ -133,3 +133,14 @@ F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData �
 - 等价正确 A：主程序额外输出带题号说明；B：提取 `main()` 并作所列输出/循环改写。两版均通过。
 - 参考解：6 passed in 0.23s；全部 4 个 mutant 各至少一测失败。
 - 自动/人工：19.000000/2.000000 分，90.48% → 90.48%。
+
+## 9618_w23_41_q2
+
+补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。没有容量 min/恰好冲突。
+
+- 调用观测：`test_2e_main_call_chain`。
+- 原页：该题同卷 QP / MS（本次复核页见后续正文；原 T35 页清单保留于 manifest）。
+- hollow-main：1 failed, 8 passed in 2.29s，已被拒绝。
+- 等价正确 A：主程序额外输出带题号说明；B：提取 `main()` 并作所列输出/循环改写。两版均通过。
+- 参考解：9 passed in 0.13s；全部 4 个 mutant 各至少一测失败。
+- 自动/人工：23.485714/5.514286 分，80.99% → 80.99%。
