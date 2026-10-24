@@ -75,7 +75,7 @@ The animal's name is Copper, it makes a Neigh, its size is 10 and its intelligen
 
 ## 原件差异与需要总控决定
 
-1. **w25/42 Q1 第 4 次截图错配鸟名**：QP p.5 明确 Macaw 向东 60 分钟；MS p.17 截图却把 X=556.0 写在 Cockatiel 行，Macaw 留 500.0。MS p.12 的调用点、p.16 的 E 分支按所选对象调用 Move，56 km/h × 1h 对应 Macaw 的 556.0。本卡按 QP / 语言无关得分点与 MS 程序逻辑写，明确标注该截图差异（D31），未宣称第 4 次与错误截图完全一致。需要总控决定：是否把此原件差异加入共享 D45 缺陷清单；本任务不改 docs/。
+1. **w25/42 Q1 第 4 次截图（已撤回）**：执行时据抽取文字判断 MS p.17 把 X=556.0 标在 Cockatiel 行；总控按 220 dpi 渲染原页复核，截图实为 Cockatiel X = 500.0、Macaw X = 556.0，与 QP 和本卡运行结果一致，**不是原件缺陷**，不加入 D45；卡片的“原件差异”说明已删除。
 2. s25/42 MS p.40 的 Territory / SetTerritory 简写与 QP p.11、MS p.41 代码不同；p.42 Python 范例的 `it's territory is` 与 QP 指定 `. Its territory is ` 不同。本卡说明并按 QP 完整名称/格式实现；实际输出与 MS p.45 截图一致。无需改变 schema 或语料。
 3. F05–F09 属于 T38c 范围；本任务未修练习测试，卡片明确代码调用与截图结果须分别核对。
 
