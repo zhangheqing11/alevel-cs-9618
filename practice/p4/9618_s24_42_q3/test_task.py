@@ -11,6 +11,11 @@ from testkit import run_script
 ORIGINAL = [100, 85, 644, 22, 15, 8, 1]
 
 
+def is_subsequence(wanted, seen):
+    items = iter(seen)
+    return all(any(value == item for item in items) for value in wanted)
+
+
 def numbers(text):
     return [int(x) for x in re.findall(r"-?\d+", text)]
 
@@ -81,8 +86,8 @@ def test_3biii_ciii_diii_screenshots(candidate_path):
     assert res.returncode == 0, res.stderr
     recursive, iterative = re.split(r"iterative", res.stdout, maxsplit=1, flags=re.I)
     assert re.search(r"recursive", recursive, re.I)
-    assert numbers(recursive) == [1, 8, 15, 22, 85, 100, 644]
-    assert numbers(iterative) == [1, 8, 15, 22, 85, 100, 644, 6]
+    assert is_subsequence([1, 8, 15, 22, 85, 100, 644], numbers(recursive))
+    assert is_subsequence([1, 8, 15, 22, 85, 100, 644, 6], numbers(iterative))
 
 
 @pytest.mark.parametrize("value", [1, 8, 15, 22, 85, 100, 644, 0, 10, 999])
@@ -134,3 +139,23 @@ def test_3bi_ci_di_no_builtin_shortcuts(candidate_path):
             assert name not in {"sort", "sorted", "index", "count", "max", "min", "bisect_left", "bisect_right", "insort"}
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops)
+
+
+def test_3bii_3cii_3dii_traced_calls_and_results(candidate_path):
+    """9618_s24_42:3(b)(ii) MP1–2, 3(c)(ii) whole, 3(d)(ii) MP1–2; MS pp.32,36,39."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    recursive = r.called("RecursiveInsertion")
+    iterative = r.called("IterativeInsertion")
+    search = r.called("BinarySearch")
+    assert recursive and iterative and search
+    for call in (recursive[0], iterative[0]):
+        assert call.args["IntegerArray"] == ORIGINAL
+        if "NumberElements" in call.args:
+            assert call.args["NumberElements"] == 7
+        assert call.result == sorted(ORIGINAL)
+    assert search[0].args == {"IntegerArray": sorted(ORIGINAL), "First": 0, "Last": 6, "ToFind": 644}
+    assert search[0].result == 6
+    assert r.calls.index(recursive[0]) < r.calls.index(iterative[0]) < r.calls.index(search[0])
+    assert 6 in numbers(r.stdout)

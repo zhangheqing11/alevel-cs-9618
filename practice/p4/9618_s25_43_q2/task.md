@@ -105,10 +105,10 @@ Test your program.
 | Part 2(a) | 9618_s25_43:2(a) | 1 | 代码 | `test_2a_di_fi_main_call_sequence` · whole（原始 14 整数顺序） | 数组局部于主程序；INTEGER、大小 14 注释 |
 | Part 2(b) | 9618_s25_43:2(b) | 5 | 代码 | `test_2b_insertion_sort` · MP1–MP5；`test_2b_e_no_builtin_shortcuts` | MP1 函数头；确为插入排序（不可换成冒泡等） |
 | Part 2(c) | 9618_s25_43:2(c) | 2 | 代码 | `test_2c_output_format` · MP1–MP2 | MP1 过程头 |
-| Part 2(d)(i) | 9618_s25_43:2(d)(i) | 2 | 代码 | `test_2a_di_fi_main_call_sequence`、`test_2dii_screenshot_unsorted_then_sorted` · MP1–MP2 | — |
+| Part 2(d)(i) | 9618_s25_43:2(d)(i) | 2 | 代码 | `test_2a_di_fi_main_call_sequence`、`test_2dii_screenshot_unsorted_then_sorted` · MP1–MP2；`test_2di_2fi_traced_results` · 实际调用、参数与数据链（D46） | — |
 | Part 2(d)(ii) | 9618_s25_43:2(d)(ii) | 1 | 截图 | `test_2dii_screenshot_unsorted_then_sorted` · whole | 截图清晰 |
 | Part 2(e) | 9618_s25_43:2(e) | 6 | 代码 | `test_2e_search_found_and_missing` · MP2–MP6；`test_2e_search_halves_interval` · MP3–MP6；`test_2b_e_no_builtin_shortcuts` | MP1 函数头 |
-| Part 2(f)(i) | 9618_s25_43:2(f)(i) | 2 | 代码 | `test_2a_di_fi_main_call_sequence` · MP1；`test_2fii_screenshot_locations` · MP2 | appropriate message 语义 |
+| Part 2(f)(i) | 9618_s25_43:2(f)(i) | 2 | 代码 | `test_2a_di_fi_main_call_sequence` · MP1；`test_2fii_screenshot_locations` · MP2；`test_2di_2fi_traced_results` · 实际调用、参数与数据链（D46） | appropriate message 语义 |
 | Part 2(f)(ii) | 9618_s25_43:2(f)(ii) | 1 | 截图 | `test_2fii_screenshot_locations` · whole（0、13、12，第四次未找到） | 截图清晰 |
 
 ## 人工核对清单
@@ -122,3 +122,11 @@ Test your program.
 ## 原页核验与编号对照
 
 QP 4, 5, 6 页；MS 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32 页已查看渲染图；Python 缩进依据原页。各行 MS 圆点顺序与语料 n 对应，无另印不同点号。可选点超过行分值时按点分值比例折算，仅用于覆盖统计，不取代实际批改。
+
+### T38c1 · D46 调用与输出核验
+
+既有 profiler 已检查原始数组、调用顺序和四个搜索参数；补测 InsertionSort 返回数组传给 OutputArray、搜索调用及返回结果。QP 明确数组同行且空格分隔，保留该格式；允许函数/主程序额外说明行。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：OutputArray 增加含数字说明行，数组仍同行空格分隔。自动测规定内容与格式，允许额外说明；未增加自动分值。

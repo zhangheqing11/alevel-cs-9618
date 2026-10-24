@@ -177,3 +177,26 @@ def test_1d_iii_screenshot_hard(candidate_path, exercise_dir):
     missed = [w for w in words if w not in ("fine", "fined", "idea")]
     assert all(w in toks for w in missed)
     assert not {"fine", "fined", "idea"} & set(toks)
+
+
+def test_1b_1di_traced_main(candidate_path, exercise_dir):
+    """9618_s24_42:1(b) MP4; 1(d)(i) whole; MS pp.6,12: choice filename and ReadWords -> Play."""
+    from testkit import run_script_traced
+    for choice, filename in (("easy", "Easy.txt"), ("medium", "Medium.txt"), ("hard", "Hard.txt")):
+        r = run_script_traced(candidate_path, stdin=choice + "\nno\n", files_dir=exercise_dir / "files")
+        assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
+        reads, plays = r.called("ReadWords"), r.called("Play")
+        assert reads and plays
+        assert list(reads[0].args.values()) == [filename]
+        assert positions[id(reads[0])] < positions[id(plays[0])]
+        assert answers(exercise_dir, filename)[0] in r.stdout
+
+
+def test_1di_readwords_calls_play_after_loading(sol, monkeypatch, tmp_path, exercise_dir):
+    """9618_s24_42:1(d)(i) whole; QP p.3: ReadWords itself calls Play after loading."""
+    use_files(monkeypatch, tmp_path, exercise_dir / "files")
+    seen = []
+    monkeypatch.setattr(sol, "Play", lambda: seen.append((list(sol.WordArray), sol.NumberWords)))
+    sol.ReadWords("Easy.txt")
+    assert seen and seen[0][0][:15] == ["house"] + EASY and seen[0][1] == 14

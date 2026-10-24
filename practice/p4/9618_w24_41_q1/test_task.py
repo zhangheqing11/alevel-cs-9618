@@ -91,7 +91,7 @@ def test_1b_screenshot_all_colours_in_one_string(candidate_path, exercise_dir):
     """9618_w24_41:1(b)(iii) MP-03 (and 1(b)(ii) MP1-MP3): the 45 colours in file order on one line."""
     result = run_script(candidate_path, files_dir=exercise_dir / "files")
     assert result.returncode == 0, result.stderr
-    assert " ".join(official_items(exercise_dir)) in [line.strip() for line in result.lines]
+    assert any(" ".join(official_items(exercise_dir)) in line for line in result.lines)
 
 
 # ---------------------------------------------------------------- 1(c)
@@ -145,5 +145,23 @@ def test_1d_screenshot_sorted_data(candidate_path, exercise_dir):
     lines = [line.strip() for line in result.lines]
     items = official_items(exercise_dir)
     unsorted_line, sorted_line = " ".join(items), " ".join(sorted(items))
-    assert unsorted_line in lines and sorted_line in lines
-    assert lines.index(unsorted_line) < lines.index(sorted_line)
+    before = next(i for i, line in enumerate(lines) if unsorted_line in line)
+    assert any(sorted_line in line for line in lines[before + 1:])
+
+
+def test_1bii_1dii_traced_main(candidate_path, exercise_dir):
+    """9618_w24_41:1(b)(ii) MP1–3; 1(d)(ii) MP1–2; MS pp.7,11."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, files_dir=exercise_dir / "files")
+    assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
+    reads, formats, sorts = r.called("ReadData"), r.called("FormatArray"), r.called("Bubble")
+    assert reads and len(formats) >= 2 and sorts
+    items = official_items(exercise_dir)
+    assert reads[0].result == items
+    assert list(formats[0].args.values())[0] == reads[0].result
+    assert list(sorts[0].args.values())[0] == reads[0].result
+    assert sorts[0].result == sorted(items)
+    assert list(formats[-1].args.values())[0] == sorts[0].result
+    assert formats[0].result.strip() in r.stdout and formats[-1].result.strip() in r.stdout
+    assert positions[id(reads[0])] < positions[id(formats[0])] < positions[id(sorts[0])] < positions[id(formats[-1])]

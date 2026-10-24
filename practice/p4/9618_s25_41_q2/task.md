@@ -101,8 +101,8 @@ Test your program. Input the text "TheData.txt" when prompted.
 | Part 2(a) | 9618_s25_41:2(a) | 7 | 代码 | `test_2a_read_official_file`、`test_2a_unknown_line_count` · MP2、MP4–MP7；`test_2a_missing_file` · MP8 | MP1 函数头；MP3 打开与关闭位置；提示语适当 |
 | Part 2(b) | 9618_s25_41:2(b) | 6 | 代码 | `test_2b_d_split_six_integer_arrays`、`test_2b_d_split_official_and_empty_groups` · MP2–MP6 | MP1 函数头；六个数组声明与类型注释 |
 | Part 2(c) | 9618_s25_41:2(c) | 5 | 代码 | `test_2c_append_new_lines` · MP1–MP4；`test_2c_open_error`、`test_2c_write_error` · MP5 | MP1 函数头、文件关闭位置；try 覆盖所有读写；消息语义 |
-| Part 2(d) | 9618_s25_41:2(d) | 2 | 代码 | `test_2b_d_split_six_integer_arrays`、`test_2b_d_split_official_and_empty_groups` · MP1–MP2 | — |
-| Part 2(e)(i) | 9618_s25_41:2(e)(i) | 3 | 代码 | `test_2ei_eii_screenshot_files` · MP1–MP3（完整链 ReadData → SplitData → 文件） | 调用 ReadData 与 SplitData，而非在主程序重写逻辑 |
+| Part 2(d) | 9618_s25_41:2(d) | 2 | 代码 | `test_2b_d_split_six_integer_arrays`、`test_2b_d_split_official_and_empty_groups` · MP1–MP2；`test_2d_2ei_traced_main` · 实际调用、参数与数据链（D46） | — |
+| Part 2(e)(i) | 9618_s25_41:2(e)(i) | 3 | 代码 | `test_2ei_eii_screenshot_files` · MP1–MP3（完整链 ReadData → SplitData → 文件）；`test_2d_2ei_traced_main` · 实际调用、参数与数据链（D46） | 调用 ReadData 与 SplitData，而非在主程序重写逻辑 |
 | Part 2(e)(ii) | 9618_s25_41:2(e)(ii) | 2 | 截图 | `test_2ei_eii_screenshot_files` · MP1（文件名输入、提示存在）、MP2（Red.txt 内容） | 截图显示输入 TheData.txt、文件名与红色数据同屏可见、截图清晰 |
 
 ## 人工核对清单
@@ -116,3 +116,9 @@ Test your program. Input the text "TheData.txt" when prompted.
 ## 原页核验与编号对照
 
 QP 4, 5 页；MS 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 页已查看渲染图；Python 缩进依据原页。各行 MS 圆点顺序与语料 n 对应，无另印不同点号。可选点超过行分值时按点分值比例折算，仅用于覆盖统计，不取代实际批改。
+
+### T38c1 · D46 调用与输出核验
+
+补测主程序 ReadData → SplitData → 六次 StoreData 的调用、返回数组与参数及实际文件内容，另用三行 Other.txt 验证真实数据链。已有函数型替身测试继续验证六色调用。文件名同屏和截图清晰度仍人工。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。

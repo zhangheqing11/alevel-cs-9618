@@ -125,12 +125,35 @@ def test_1e_iii_screenshot_test_1_found(candidate_path):
     """9618_s24_41:1(e)(ii) MP1-MP3 and 9618_s24_41:1(e)(iii) MP1 (test 1): 2 is found at index 1 (MS accepts 16)."""
     res = run(candidate_path, 5, 1, 6, 2, 8, 10, 2)
     assert res.returncode == 0, res.stderr[-500:]
-    last = re.findall(r"-?\d+", res.stdout)[-1]
-    assert int(last) in (1, 16), f"last value output should be the index of 2, got {last}"
+    assert any(value in (1, 16) for value in search_result_numbers(res.stdout))
 
 
 def test_1e_iii_screenshot_test_2_not_found(candidate_path):
     """9618_s24_41:1(e)(iii) MP1 (test 2): 7 is not found, -1 output."""
     res = run(candidate_path, 5, 1, 6, 2, 8, 10, 7)
     assert res.returncode == 0, res.stderr[-500:]
-    assert re.findall(r"-?\d+", res.stdout)[-1] == "-1"
+    assert -1 in search_result_numbers(res.stdout)
+
+
+def test_1ci_1dii_1eii_traced_main(candidate_path):
+    """9618_s24_41:1(c)(i) MP1; 1(d)(ii) whole; 1(e)(ii) MP2–3; MS pp.6,9,12."""
+    from testkit import run_script_traced
+    for value in (2, 7):
+        r = run_script_traced(candidate_path, stdin=f"5\n1\n6\n2\n8\n10\n{value}\n")
+        assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
+        initial, sort, searches = r.called("Initialise"), r.called("BubbleSort"), r.called("BinarySearch")
+        assert initial and sort and searches
+        assert positions[id(initial[0])] < positions[id(sort[0])] < positions[id(searches[0])]
+        assert searches[0].args == {"DataToFind": value}
+        assert searches[0].result in ((1, 16) if value == 2 else (-1,))
+        assert searches[0].result in [int(x) for x in re.findall(r"-?\d+", r.stdout)]
+
+
+def search_result_numbers(stdout):
+    """QP p.5/MS p.13: inspect the result after the sorted five values; allow later labels."""
+    values = int_stream(stdout)
+    wanted = [1, 2, 6, 8, 10]
+    end = next(i + len(wanted) for i in range(len(values) - len(wanted) + 1)
+               if values[i:i + len(wanted)] == wanted)
+    return values[end:]

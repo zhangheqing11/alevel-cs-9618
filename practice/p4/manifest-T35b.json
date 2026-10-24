@@ -110,7 +110,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 6,
+      "mutants": 7,
       "qp_pages_checked": [
         2,
         3
@@ -127,7 +127,7 @@
         "1(e): MS main prints the array; QP and MP1 require BubbleSort itself to output the sorted array.",
         "1(b): ineffective rstrip without assignment replaced by conversion of the read line."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w22_42_q1",
@@ -245,7 +245,7 @@
         }
       ],
       "files": [],
-      "mutants": 6,
+      "mutants": 7,
       "qp_pages_checked": [
         2,
         3,
@@ -264,7 +264,7 @@
       "qp_over_ms": [
         "1(a)-1(b): MS only comments the Jobs declaration then appends rows; D10 requires a real 100 x 2 list first, so Initialise assigns in place."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w23_41_q1",
@@ -356,7 +356,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "qp_pages_checked": [
         2,
         3
@@ -369,7 +369,7 @@
         8
       ],
       "qp_over_ms": [],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w23_42_q2",
@@ -457,7 +457,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "qp_pages_checked": [
         6,
         7,
@@ -471,7 +471,7 @@
         21
       ],
       "qp_over_ms": [],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w24_41_q1",
@@ -599,7 +599,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 8,
+      "mutants": 9,
       "qp_pages_checked": [
         2,
         3,
@@ -617,7 +617,7 @@
         11
       ],
       "qp_over_ms": [],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w24_42_q3",
@@ -719,7 +719,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 9,
+      "mutants": 10,
       "qp_pages_checked": [
         12,
         13,
@@ -739,7 +739,7 @@
       "qp_over_ms": [
         "3(e)(ii): MS screenshot says got to level; QP 3(c) specifies reached level, which the tests use."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w25_42_q2",
@@ -860,7 +860,7 @@
         }
       ],
       "files": [],
-      "mutants": 8,
+      "mutants": 9,
       "qp_pages_checked": [
         6,
         7,
@@ -878,7 +878,7 @@
         26
       ],
       "qp_over_ms": [],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w25_43_q3",
@@ -983,7 +983,7 @@
         }
       ],
       "files": [],
-      "mutants": 8,
+      "mutants": 9,
       "qp_pages_checked": [
         12,
         13
@@ -1001,7 +1001,7 @@
       "qp_over_ms": [
         "3(b)(iii): MS MP1 says array as argument; QP and all MS language examples pass the string from 3(b)(i)."
       ],
-      "notes": "All listed QP/MS rendered pages viewed in this continuation; no question data files. MS parameter order accepted via keyword arguments."
+      "notes": "All listed QP/MS rendered pages viewed in this continuation; no question data files. MS parameter order accepted via keyword arguments. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     }
   ],
   "coverage_method": "Marks weighted by markpoints[].marks, proportionally scaled to the row marks where optional points exceed the cap; unnumbered one-mark rows use whole. Pure headers and pure structural points are manual; mixed points with tested behaviour are auto, with remaining aspects on the manual checklist.",

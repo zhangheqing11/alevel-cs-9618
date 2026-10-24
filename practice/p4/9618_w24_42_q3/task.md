@@ -117,7 +117,7 @@
 | Part 3(b) | 9618_w24_42:3(b) | 5 | 代码 | `test_3b_readdata_returns_7_players_of_3_strings` · MP1、MP3–MP4；`test_3b_readdata_closes_file` · MP2；`test_3b_missing_file_is_handled` · MP5 | MP1 函数头；MP2 关闭的位置；MP5 所有文件操作都在 `try` 里 |
 | Part 3(c) | 9618_w24_42:3(c) | 2 | 代码 | `test_3c_output_format_in_array_order` · MP1–MP2 | MP1 过程头带二维数组参数 |
 | Part 3(d) | 9618_w24_42:3(d) | 4 | 代码 | `test_3d_sortscores_official_data` · MP1–MP4；`test_3d_sortscores_qp_example_from_reverse` · MP2–MP4；`test_3d_sortscores_compares_numbers_not_text` · MP3 | MP1 函数头；确实是冒泡排序 |
-| Part 3(e)(i) | 9618_w24_42:3(e)(i) | 2 | 代码 | `test_3e_screenshot_before_and_after` · MP1–MP2 | 返回值存回 `HighScores` |
+| Part 3(e)(i) | 9618_w24_42:3(e)(i) | 2 | 代码 | `test_3e_screenshot_before_and_after` · MP1–MP2；`test_3ei_traced_main` · 实际调用、参数与数据链（D46） | 返回值存回 `HighScores` |
 | Part 3(e)(ii) | 9618_w24_42:3(e)(ii) | 2 | 截图 | `test_3e_screenshot_before_and_after` · MP1（Before + 原顺序）、MP2（After + 排好序） | 截图清晰 |
 
 得分点分值 17：行为可自动测 17，没有只能人工核对的点（各点里的函数头、注释、位置部分仍按下面的清单看）。
@@ -130,3 +130,11 @@
 - [ ] 3(d)：`def SortScores(HighScores):` 返回排好的数组；先比关卡、关卡相同再比分数，整行交换；外层、内层循环正确。
 - [ ] 3(e)(i)：六步顺序与题目一致。
 - [ ] 3(e)(ii) 截图：`Before` 与 7 行原顺序；`After` 与 `JGHF 5 22`、`RFOO 5 20`、`KWQW 4 20`、`MMND 4 18`、`XXHD 3 19`、`QWSD 3 15`、`GHEH 3 10`。
+
+### T38c1 · D46 调用与输出核验
+
+发现另一个 min 容量误拒：MS p.31 声明 min 7×3，旧 test_3a 只接受恰好 7×3。改查至少 7 行且至少 3 列，声明中所有格为空；不要求读取函数任意扩容。整段截图严格相等改为 Before/七条原顺序/After/七条排序结果的有序子序列，规定的单条句式保留。补测 ReadData → OutputHighScores → SortScores → OutputHighScores；HighScores 接收返回值仍人工。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：每条玩家信息按相邻两行输出，规定句式与字段顺序不变。自动测规定内容与格式，允许额外说明；未增加自动分值。

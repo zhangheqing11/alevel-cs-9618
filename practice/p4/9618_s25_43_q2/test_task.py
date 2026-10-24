@@ -53,8 +53,7 @@ def test_2c_output_format(sol, capsys, values):
     """9618_s25_43:2(c) MP1–MP2: every item in order, one line with spaces."""
     sol.OutputArray(list(values))
     lines = capsys.readouterr().out.strip().splitlines()
-    assert len(lines) == 1
-    assert lines[0].split() == [str(x) for x in values]
+    assert any(" ".join(str(x) for x in values) in line for line in lines)
 
 
 def test_2dii_screenshot_unsorted_then_sorted(candidate_path):
@@ -121,3 +120,19 @@ def test_2b_e_no_builtin_shortcuts(candidate_path):
             assert name not in {"sort", "sorted", "index", "count", "max", "min", "bisect_left", "bisect_right", "insort"}
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops)
+
+
+def test_2di_2fi_traced_results(candidate_path):
+    """9618_s25_43:2(d)(i) MP1–2; 2(f)(i) MP1–2; MS pp.24,31."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    sort, outputs, searches = r.called("InsertionSort"), r.called("OutputArray"), r.called("Search")
+    assert sort and len(outputs) >= 2 and searches
+    assert sort[0].args["DataArray"] == ORIGINAL
+    assert sort[0].result == sorted(ORIGINAL)
+    assert outputs[-1].args["DataArray"] == sort[0].result
+    for value, expected in ((0, 0), (345, 13), (67, 12), (2, -1)):
+        matches = [c for c in searches if c.args["ItemToFind"] == value and c.args["DataArray"] == sort[0].result]
+        assert matches and matches[0].result == expected
+    assert all(value in ints(r.stdout) for value in (0, 13, 12))

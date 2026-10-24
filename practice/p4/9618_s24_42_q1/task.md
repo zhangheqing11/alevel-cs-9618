@@ -99,10 +99,10 @@ Hard.txt
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s24_42:1(a) | 6 | 代码 | `test_1a_read_words_main_word_answers_and_count` · MP2、MP4–MP7；`test_1a_missing_file_handled` · MP3 | MP1 过程头带字符串参数；MP8 关闭文件（max 6） |
-| Part 1(b) | 9618_s24_42:1(b) | 4 | 代码 | `test_1b_choice_selects_file` · MP2–MP4 | MP1 提示语合适 |
+| Part 1(b) | 9618_s24_42:1(b) | 4 | 代码 | `test_1b_choice_selects_file` · MP2–MP4；`test_1di_readwords_calls_play_after_loading`、`test_1b_1di_traced_main` · 实际调用、参数与数据链（D46） | MP1 提示语合适 |
 | Part 1(c)(i) | 9618_s24_42:1(c)(i) | 6 | 代码 | `test_1c_i_outputs_main_word_and_number_of_answers` · MP1；`test_1c_i_found_and_not_found_messages` · MP2、MP4；`test_1c_i_correct_answer_replaced_with_null` · MP3；`test_1c_i_main_word_is_not_an_answer` · MP2；`test_1c_ii_percentage_counts_each_answer_once` · MP3、MP5；各 `play` 测试以 `no` 结束 · MP6 | MP1 过程头无参数 |
 | Part 1(c)(ii) | 9618_s24_42:1(c)(ii) | 3 | 代码 | `test_1c_ii_percentage_counts_each_answer_once`、`test_1c_ii_all_found_is_100_percent` · MP1；`test_1c_ii_outputs_answers_not_entered` · MP2–MP3 | — |
-| Part 1(d)(i) | 9618_s24_42:1(d)(i) | 1 | 代码 | `test_1b_choice_selects_file` · 读完文件后调用 Play() | — |
+| Part 1(d)(i) | 9618_s24_42:1(d)(i) | 1 | 代码 | `test_1b_choice_selects_file` · 读完文件后调用 Play()；`test_1di_readwords_calls_play_after_loading`、`test_1b_1di_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(d)(ii) | 9618_s24_42:1(d)(ii) | 1 | 截图 | `test_1d_ii_screenshot_easy` · house、14、7.14 %、其余 13 个答案（MS p.13 样例） | 截图里看得到四个输入 |
 | Part 1(d)(iii) | 9618_s24_42:1(d)(iii) | 1 | 截图 | `test_1d_iii_screenshot_hard` · fainted、97、3.09 %、其余 94 个答案（MS p.14 样例） | 截图里看得到五个输入 |
 
@@ -119,3 +119,9 @@ Hard.txt
 - MS 的 Python 范例 `ReadWords` 用 `NumberWords = len(WordArray)`（把主词也算进去），于是 `Play` 里要写 `NumberWords-1` 输出个数，而 `range(1, NumberWords+1)` 又会越界。QP 与 MS MP7 都说 `NumberWords` 是答案个数（不含主词），参考解与测试按 QP（D31）。
 - MS p.14 的截图里程序多输出了一行 `97`（调试输出）；测试只查 MS 列出的值。
 - 1(d)(i)–(iii) 是 1 分行，语料不拆得分点；其余行语料 `markpoints[].n` 就是 MS 圆点顺序（1(c)(i) 原页 MP3 与 MP4 两个圆点写在一起，语料按两条记）。
+
+### T38c1 · D46 调用与输出核验
+
+原选择测试只看主词与答案数，补测三个文件名传参以及 ReadWords 后真实 Play 调用。再以 ReadWords 的 Play 替身记录已加载数组与计数，真正验证由 ReadWords 内部在读完数据后调用。输出百分比与未答词本来已按内容匹配，无新增容量限制。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。

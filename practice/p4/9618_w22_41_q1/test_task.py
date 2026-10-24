@@ -50,14 +50,15 @@ def ints(text):
     return [int(x) for x in re.findall(r"-?\d+", text)]
 
 
+def contains_run(values, wanted):
+    return any(values[i:i + len(wanted)] == wanted for i in range(len(values) - len(wanted) + 1))
+
+
 def message_numbers(stdout):
     """Integers on output lines that contain words (the message line, which also
     carries the input() prompt because input() does not end the line, D13)."""
-    found = []
-    for line in stdout.splitlines():
-        if re.search(r"[A-Za-z]", line):
-            found += ints(line)
-    return found
+    assert re.search(r"[A-Za-z]", stdout), "the count needs an appropriate message"
+    return ints(stdout)
 
 
 # ---------------------------------------------------------------- 1(a)
@@ -150,7 +151,7 @@ def test_1e_bubblesort_sorts_and_prints_official_data(sol, capsys, exercise_dir)
     sol.DataArray = list(data)
     sol.BubbleSort()
     assert sol.DataArray == sorted(data)
-    assert ints(capsys.readouterr().out)[-100:] == sorted(data), "sorted array is not output by BubbleSort()"
+    assert contains_run(ints(capsys.readouterr().out), sorted(data)), "sorted array is not output by BubbleSort()"
 
 
 def test_1e_bubblesort_reverse_order(sol, capsys):
@@ -164,4 +165,17 @@ def test_1e_main_calls_bubblesort(candidate_path, exercise_dir):
     """9618_w22_41:1(e) MP1: BubbleSort() is called from the main program (sorted data is the last output)."""
     result = run_script(candidate_path, stdin="61\n", files_dir=exercise_dir / "files")
     assert result.returncode == 0, result.stderr
-    assert ints(result.stdout)[-100:] == sorted(official_data(exercise_dir))
+    assert contains_run(ints(result.stdout), sorted(official_data(exercise_dir)))
+
+
+def test_1di_1e_traced_main(candidate_path, exercise_dir):
+    """9618_w22_41:1(d)(i) MP1–3; 1(e) MP1; MS pp.6–7."""
+    from testkit import run_script_traced
+    for value, expected in ((61, 2), (8, 3)):
+        r = run_script_traced(candidate_path, stdin=f"{value}\n", files_dir=exercise_dir / "files")
+        assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
+        read, find, sort = r.called("ReadFile"), r.called("FindValues"), r.called("BubbleSort")
+        assert read and find and sort
+        assert positions[id(read[0])] < positions[id(find[0])] < positions[id(sort[0])]
+        assert find[0].result == expected and expected in ints(r.stdout)

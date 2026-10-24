@@ -84,3 +84,17 @@ def test_2b_screenshot_outputs_93(candidate_path):
     result = run_script(candidate_path)
     assert result.returncode == 0, result.stderr
     assert is_subsequence([18, 93], ints(result.stdout))
+
+
+def test_2aii_2bii_traced_main(candidate_path):
+    """9618_w23_42:2(a)(ii) MP1–2; 2(b)(ii) whole; MS pp.18,21."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
+    iterative, recursive = r.called("IterativeCalculate"), r.called("RecursiveValue")
+    assert iterative and recursive
+    assert iterative[0].args == {"Number": 10} and iterative[0].result == 18
+    assert recursive[0].args == {"Number": 50, "ToFind": 50} and recursive[0].result == 93
+    assert positions[id(iterative[0])] < positions[id(recursive[0])]
+    assert is_subsequence([iterative[0].result, recursive[0].result], ints(r.stdout))

@@ -90,7 +90,7 @@
 | Part 1(a) | 9618_s23_42:1(a) | 2 | 代码 | `test_1a_global_array_animals_10_elements` · MP1–MP2 | MP2 注释写明 STRING |
 | Part 1(b) | 9618_s23_42:1(b) | 2 | 代码 | `test_1b_ten_names_stored_in_order` · MP1–MP2 | — |
 | Part 1(c) | 9618_s23_42:1(c) | 6 | 代码 | `test_1c_sorts_given_animals_descending`、`test_1c_already_sorted_and_reversed` · MP1（四个空）、MP3；`test_1c_only_first_character_compared` · MP2 | MP1 四个空逐句对照 QP；MP3 其余部分照伪代码（`translate-pseudocode`） |
-| Part 1(d)(i) | 9618_s23_42:1(d)(i) | 3 | 代码 | `test_1d_ii_screenshot_sorted_names` · MP1–MP3；`test_1b_ten_names_stored_in_order` · MP1（调用 SortDescending） | — |
+| Part 1(d)(i) | 9618_s23_42:1(d)(i) | 3 | 代码 | `test_1d_ii_screenshot_sorted_names` · MP1–MP3；`test_1b_ten_names_stored_in_order` · MP1（调用 SortDescending）；`test_1di_traced_sort` · 实际调用、参数与数据链（D46） | — |
 | Part 1(d)(ii) | 9618_s23_42:1(d)(ii) | 1 | 截图 | `test_1d_ii_screenshot_sorted_names` · whale … bird 每行一个（MS p.10 样例） | 截图清晰 |
 
 ## 人工核对清单
@@ -103,3 +103,11 @@
 
 - QP 伪代码内层循环上界含 `ArrayLength - X - 1`，照写会让 `Animals[Y + 1]` 越界；MS 的 Python 范例用不含上界的 `range`。测试只查排序结果（D31）。
 - MS 1(c) 语料把「1 mark for each completed statement to MAX 4」记为 MP1（4 分），两个圆点记为 MP2、MP3；其余行语料 `markpoints[].n` 就是圆点顺序。
+
+### T38c1 · D46 调用与输出核验
+
+已有 profiler 真正观测 SortDescending 及排序前十个名字，新增标准 run_script_traced 检查并保留。输出原先要求十条相邻行，改成逐行有序子序列以容许额外说明；每个动物单独一行仍由 QP 规定。十格容量明确，保留。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：每行动物名前加文字标签，仍每动物一行。自动测规定内容与格式，允许额外说明；未增加自动分值。

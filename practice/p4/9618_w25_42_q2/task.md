@@ -106,10 +106,10 @@
 | Part 2(a) | 9618_w25_42:2(a) | 3 | 代码 | `test_2a_twenty_unique_random_integers_0_to_100` · MP1–MP3 | 数组局部于主程序；注释写明类型与大小 |
 | Part 2(b) | 9618_w25_42:2(b) | 3 | 代码 | `test_2b_printarray_single_line_with_spaces` · MP2–MP3 | MP1 过程头带数组参数 |
 | Part 2(c) | 9618_w25_42:2(c) | 5 | 代码 | `test_2c_bubblesort_any_length` · MP1–MP5；`test_2c_no_inbuilt_sort` · MP2–MP4 | MP1 函数头；确实是冒泡排序（外层、内层循环、相邻交换） |
-| Part 2(d)(i) | 9618_w25_42:2(d)(i) | 3 | 代码 | `test_2d_screenshot_unsorted_sorted_line_then_sorted` · MP1–MP3 | 用 `BubbleSort()` 的返回值 |
+| Part 2(d)(i) | 9618_w25_42:2(d)(i) | 3 | 代码 | `test_2d_screenshot_unsorted_sorted_line_then_sorted` · MP1–MP3；`test_2di_2fi_traced_main` · 实际调用、参数与数据链（D46） | 用 `BubbleSort()` 的返回值 |
 | Part 2(d)(ii) | 9618_w25_42:2(d)(ii) | 1 | 截图 | `test_2d_screenshot_unsorted_sorted_line_then_sorted` · 未排序 20 个、`Sorted`、同一批数升序 | 截图清晰 |
 | Part 2(e) | 9618_w25_42:2(e) | 6 | 代码 | `test_2e_finds_every_index` · MP2–MP5；`test_2e_returns_minus_one_when_not_found` · MP6；`test_2e_is_recursive_and_halves` · MP1–MP2、MP4–MP5 | MP1 函数头四个参数 |
-| Part 2(f)(i) | 9618_w25_42:2(f)(i) | 3 | 代码 | `test_2f_screenshot_smallest_largest_missing` · MP1–MP3 | 提示语；调用参数是排好的数组、0、19 |
+| Part 2(f)(i) | 9618_w25_42:2(f)(i) | 3 | 代码 | `test_2f_screenshot_smallest_largest_missing` · MP1–MP3；`test_2di_2fi_traced_main` · 实际调用、参数与数据链（D46） | 提示语；调用参数是排好的数组、0、19 |
 | Part 2(f)(ii) | 9618_w25_42:2(f)(ii) | 2 | 截图 | `test_2f_screenshot_smallest_largest_missing` · MP1（最小值→0、最大值→19）、MP2（不在数组→Not found） | 三张截图都在、输入可见 |
 
 得分点分值 26：行为可自动测 25，只能人工核对 1（2(b) MP1 过程头）。
@@ -123,3 +123,11 @@
 - [ ] 2(e)：四个参数；求中点；相等返回下标；中点值偏大递归到 `Middle - 1`，偏小递归到 `Middle + 1`；下界超过上界返回 –1。
 - [ ] 2(f)(i)：提示并输入整数；`RecursiveBinarySearch(SortedArray, 0, 19, DataToFind)`；按返回值输出 `Not found` 或 `Found at position` 与下标。
 - [ ] 截图格：2(d)(ii) 一张；2(f)(ii) 三张（最小值、最大值、不在数组里的数）。
+
+### T38c1 · D46 调用与输出核验
+
+增加随机数组 PrintArray → BubbleSort → PrintArray → RecursiveBinarySearch 的真实调用及返回数组传递检查。取消 Sorted 标题必须整行且紧邻两次数组的限制；Found at position 与下标允许相邻换行。单行数组空格格式仍是 QP 明确要求，额外说明行允许。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：PrintArray 增加数字说明行；Sorted 后也加说明，找到消息与下标分行。自动测规定内容与格式，允许额外说明；未增加自动分值。

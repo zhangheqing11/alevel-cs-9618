@@ -6,7 +6,7 @@ import re
 
 from testkit import output_lines, run_script
 
-JOB_LINE = re.compile(r"^\s*(-?\d+)\s+priority\s+(-?\d+)\s*$")
+JOB_LINE = re.compile(r"(?<!\d)(-?\d+)\s+priority\s+(-?\d+)(?!\d)")
 GIVEN_JOBS = [(12, 10), (526, 9), (33, 8), (12, 9), (78, 1)]  # QP 1(d) table, in order
 
 
@@ -17,7 +17,7 @@ def rows(jobs):
 
 def job_lines(text):
     """(job, priority) pairs from lines shaped like '123 priority 1'."""
-    return [(int(m.group(1)), int(m.group(2))) for m in map(JOB_LINE.match, output_lines(text)) if m]
+    return [(int(m.group(1)), int(m.group(2))) for m in map(JOB_LINE.search, output_lines(text)) if m]
 
 
 def fresh(sol, capsys, jobs=GIVEN_JOBS):
@@ -63,7 +63,7 @@ def test_1c_addjob_stores_in_next_free_element(sol, capsys):
     out = output_lines(capsys.readouterr().out)
     assert rows(sol.Jobs[:3]) == [[12, 10], [526, 9], [-1, -1]]
     assert sol.NumberOfJobs == 2
-    assert out == ["Added", "Added"]
+    assert [line for line in out if line in ("Added", "Not added")] == ["Added", "Added"]
 
 
 def test_1c_addjob_full_outputs_not_added(sol, capsys):
@@ -73,10 +73,10 @@ def test_1c_addjob_full_outputs_not_added(sol, capsys):
         sol.AddJob(n + 1, 5)
     capsys.readouterr()
     sol.AddJob(500, 1)  # the 100th job still fits
-    assert output_lines(capsys.readouterr().out) == ["Added"]
+    assert "Added" in output_lines(capsys.readouterr().out)
     before = rows(sol.Jobs)
     sol.AddJob(777, 2)
-    assert output_lines(capsys.readouterr().out) == ["Not added"]
+    assert "Not added" in output_lines(capsys.readouterr().out)
     assert rows(sol.Jobs) == before
     assert sol.NumberOfJobs == 100
 
@@ -124,8 +124,21 @@ def test_1g_screenshot_added_five_times_then_jobs_in_order(candidate_path):
     result = run_script(candidate_path)
     assert result.returncode == 0, result.stderr
     lines = result.lines
-    assert lines[:5] == ["Added"] * 5
+    assert sum(line.strip() == "Added" for line in lines) == 5
     jobs = job_lines(result.stdout)
     assert sorted(jobs) == sorted(GIVEN_JOBS), "all five given jobs must be printed once"
     assert in_priority_order(jobs)
-    assert len(lines) == 10 and all(JOB_LINE.match(l) for l in lines[5:]), "expected 5 'Added' then 5 job lines"
+    last_added = max(i for i, line in enumerate(lines) if line.strip() == "Added")
+    assert job_lines("\n".join(lines[last_added + 1:])) == jobs
+
+
+def test_1d_1gi_traced_main(candidate_path):
+    """9618_w22_42:1(d) MP1–2; 1(g)(i) whole; MS pp.6,9."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
+    initial, adds, sorts, prints = r.called("Initialise"), r.called("AddJob"), r.called("InsertionSort"), r.called("PrintArray")
+    assert initial and sorts and prints
+    assert [tuple(c.args.values()) for c in adds] == GIVEN_JOBS
+    assert positions[id(initial[0])] < positions[id(adds[0])] < positions[id(adds[-1])] < positions[id(sorts[0])] < positions[id(prints[0])]

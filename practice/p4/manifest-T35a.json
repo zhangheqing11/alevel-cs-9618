@@ -8,7 +8,7 @@
       "marks": 29,
       "auto_marks": 23.9,
       "manual_marks": 5.1,
-      "auto_share": 0.824,
+      "auto_share": 0.824138,
       "types": [
         "P4-AR-01",
         "P4-FL-02",
@@ -158,7 +158,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 15,
       "qp_pages_checked": [
         2,
@@ -176,16 +176,16 @@
         "1(e)(ii): MS Python example breaks after one shift; reference and tests follow QP (whole list moves down)",
         "1(f): MS example writes to \" NewHighScore.txt\" (leading space) and closes inside the loop; tests use the QP file name"
       ],
-      "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens."
+      "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s22_42_q2",
       "id": "9618_s22_42:2(a)",
       "paper": "9618_s22_42",
       "marks": 23,
-      "auto_marks": 22.0,
-      "manual_marks": 1.0,
-      "auto_share": 0.957,
+      "auto_marks": 22,
+      "manual_marks": 1,
+      "auto_share": 0.956522,
       "types": [
         "P4-AR-02",
         "P4-SR-03",
@@ -269,7 +269,7 @@
         }
       ],
       "files": [],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 9,
       "qp_pages_checked": [
         4,
@@ -285,7 +285,7 @@
         "2(c)(i): MS Python example tests `if Upper >= 0`; reference follows the QP `IF Upper >= Lower`",
         "2(c): the QP Mid formula (Lower + (Upper - 1)) DIV 2 recurses forever for some positions; tests use only cases the faithful translation answers correctly (standard formula also passes)"
       ],
-      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties."
+      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s23_41_q1",
@@ -294,7 +294,7 @@
       "marks": 18,
       "auto_marks": 15.2,
       "manual_marks": 2.8,
-      "auto_share": 0.844,
+      "auto_share": 0.844444,
       "types": [
         "P4-AR-01",
         "P4-FL-01",
@@ -411,7 +411,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 10,
       "qp_pages_checked": [
         2,
@@ -424,15 +424,15 @@
       "qp_over_ms": [
         "1(b)/1(c): MS Java example loops to length - 1 (last element skipped, also visible in the MS p.11 screenshot); tests follow QP and include the last element"
       ],
-      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10."
+      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s23_42_q1",
       "id": "9618_s23_42:1(a)",
       "paper": "9618_s23_42",
       "marks": 14,
-      "auto_marks": 14.0,
-      "manual_marks": 0.0,
+      "auto_marks": 14,
+      "manual_marks": 0,
       "auto_share": 1.0,
       "types": [
         "P4-AR-01",
@@ -499,7 +499,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 6,
       "qp_pages_checked": [
         2,
@@ -514,16 +514,16 @@
         "1(c): QP pseudocode inner loop FOR Y <- 0 TO ArrayLength - X - 1 (inclusive) would index Animals[10]; tests check only the sorted result, MS Python range() form passes",
         "1(a): MS Python example is only `global Animals #comment`; per D10 (1) the test requires a real 10-element module-level list"
       ],
-      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile)."
+      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile). T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_41_q1",
       "id": "9618_s24_41:1(a)",
       "paper": "9618_s24_41",
       "marks": 27,
-      "auto_marks": 25.0,
-      "manual_marks": 2.0,
-      "auto_share": 0.926,
+      "auto_marks": 25,
+      "manual_marks": 2,
+      "auto_share": 0.925926,
       "types": [
         "P4-AR-01",
         "P4-PR-01",
@@ -654,7 +654,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 11,
       "qp_pages_checked": [
         2,
@@ -671,7 +671,7 @@
         "1(a): MS Python example is only `global DataStored #integer`; per D10 (1) the test requires a real 20-element module-level list",
         "1(e)(iii): MS accepts index 16 (whole 20-slot array sorted); test accepts 1 or 16"
       ],
-      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped."
+      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_42_q1",
@@ -680,7 +680,7 @@
       "marks": 22,
       "auto_marks": 19.5,
       "manual_marks": 2.5,
-      "auto_share": 0.886,
+      "auto_share": 0.886364,
       "types": [
         "P4-FL-01",
         "P4-MP-01",
@@ -808,7 +808,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 16,
       "qp_pages_checked": [
         2,
@@ -823,7 +823,7 @@
         "1(a)/1(c): MS Python example sets NumberWords = len(WordArray) (main word included) and then mixes NumberWords-1 and NumberWords+1; QP and MS MP7 say NumberWords counts answers only, reference and tests follow QP",
         "1(d)(iii): MS p.14 screenshot shows an extra debug line (97); tests check only the values the MS lists"
       ],
-      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens."
+      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_42_q3",
@@ -832,7 +832,7 @@
       "marks": 23,
       "auto_marks": 22.0,
       "manual_marks": 1.0,
-      "auto_share": 0.957,
+      "auto_share": 0.956522,
       "types": [
         "P4-AR-01",
         "P4-SR-04",
@@ -961,7 +961,7 @@
         }
       ],
       "files": [],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 7,
       "qp_pages_checked": [
         10,
@@ -989,7 +989,7 @@
         "3(c)(ii)：QP 要求 original initialised array；MS p.36 直接复用已被递归排序改变的 NumberArray。参考解给两个排序各传副本，测试检查两次入口数组都为原始顺序。",
         "3(b)(i) 原卷使用无界 ARRAY[] 参数；此处忠实转写，属 QP 原文，不作为 D24 教学新写法。测试不要求输出数组采用 Python 列表格式或逐行输出。"
       ],
-      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。"
+      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s25_41_q2",
@@ -1155,7 +1155,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 9,
       "qp_pages_checked": [
         4,
@@ -1181,7 +1181,7 @@
         "2(b)/2(c)：MS p.21 将 SplitLine[0] 字符串加入数组，p.26 直接 write(Item)；QP 明确数组存 integer，参考解先 int()，写时 str()。",
         "未知/损坏颜色和文件缺失时的返回数组内容 QP 未定义，测试不替题目规定；文件不存在须有异常消息。输出措辞不固定。官方空色文件一并复制，追加测试不覆写已有行。"
       ],
-      "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。"
+      "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s25_43_q2",
@@ -1296,7 +1296,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 8,
       "qp_pages_checked": [
         4,
@@ -1324,11 +1324,11 @@
         "本题 Python MS 范例与 QP 无需作行为修正。2(c) 的 Java / VB 范例跳过值 −1，QP 要求输出每个元素，本练习一律按 QP 输出所有元素（含负整数）。允许迭代或递归二分查找，排序须为插入排序。",
         "截图测试按 MS p.25 / p.32 的数值与顺序断言，不固定说明文字；单行空格格式只在 QP 明确要求的 OutputArray 中检查。"
       ],
-      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。"
+      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     }
   ],
-  "count": 6,
-  "marks": 133,
-  "auto_marks": 119.1,
-  "manual_marks": 13.9
+  "count": 9,
+  "marks": 201,
+  "auto_marks": 182.85,
+  "manual_marks": 18.15
 }

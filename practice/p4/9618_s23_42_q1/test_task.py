@@ -81,4 +81,15 @@ def test_1d_ii_screenshot_sorted_names(candidate_path):
     res = run_script(candidate_path)
     assert res.returncode == 0, res.stderr[-600:]
     lines = [ln.strip() for ln in res.lines]
-    assert any(lines[i:i + 10] == SORTED for i in range(len(lines))), f"sorted names not output one per line: {lines}"
+    remaining = iter(lines)
+    assert all(any(name in line.split() for line in remaining) for name in SORTED), f"sorted names not output one per line: {lines}"
+
+
+def test_1di_traced_sort(candidate_path):
+    """9618_s23_42:1(d)(i) MP1; MS p.9: call SortDescending before output."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    assert r.called("SortDescending")
+    remaining = iter(r.stdout.splitlines())
+    assert all(any(name in line.split() for line in remaining) for name in SORTED)

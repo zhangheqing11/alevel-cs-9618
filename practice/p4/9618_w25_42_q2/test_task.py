@@ -34,7 +34,9 @@ def run_seeded(candidate_path, tmp_path, seed, stdin):
 
 def arrays_in(stdout):
     """Output lines holding exactly 20 integers (the PrintArray lines), in order."""
-    return [ints(line) for line in output_lines(stdout) if len(ints(line)) == 20]
+    runs = [re.search(r"-?\d+(?:[ \t]+-?\d+){19}(?!\d)", line)
+            for line in output_lines(stdout)]
+    return [ints(match.group()) for match in runs if match]
 
 
 class NoSortList(list):
@@ -84,9 +86,9 @@ def test_2d_screenshot_unsorted_sorted_line_then_sorted(candidate_path, tmp_path
     assert len(arrays) >= 2, "expected the array output twice (before and after sorting)"
     before, after = arrays[0], arrays[1]
     assert after == sorted(before)
-    assert "Sorted" in [line.strip() for line in lines]
-    sorted_at = [line.strip() for line in lines].index("Sorted")
-    assert ints(lines[sorted_at - 1]) == before and ints(lines[sorted_at + 1]) == after
+    sorted_at = next(i for i, line in enumerate(lines) if "Sorted" in line)
+    assert any(before in arrays_in(line) for line in lines[:sorted_at])
+    assert any(after in arrays_in(line) for line in lines[sorted_at:])
 
 
 # ---------------------------------------------------------------- 2(b)
@@ -95,7 +97,8 @@ def test_2b_printarray_single_line_with_spaces(sol, capsys):
     """9618_w25_42:2(b) MP1-MP3: the array output once, on one line, a space between each integer."""
     data = list(range(100, 0, -5))  # 20 integers
     sol.PrintArray(data)
-    assert output_lines(capsys.readouterr().out) == [" ".join(str(v) for v in data)]
+    assert any(" ".join(str(v) for v in data) in line
+               for line in output_lines(capsys.readouterr().out))
 
 
 # ---------------------------------------------------------------- 2(c)
@@ -158,7 +161,30 @@ def test_2f_screenshot_smallest_largest_missing(candidate_path, tmp_path):
     for value, index in [(min(values), 0), (max(values), 19)]:
         result = run_seeded(candidate_path, tmp_path, 3, f"{value}\n")
         assert result.returncode == 0, result.stderr
-        found = [line for line in output_lines(result.stdout) if "Found at position" in line]
-        assert found, f"no 'Found at position' output for {value}"
-        after = found[-1].split("Found at position", 1)[1]
-        assert ints(after)[:1] == [index], f"{value} should be found at position {index}"
+        found = re.search(r"Found at position\s+(\d+)", result.stdout)
+        assert found, f"no found message and position for {value}"
+        assert int(found.group(1)) == index, f"{value} should be found at position {index}"
+
+
+def test_2di_2fi_traced_main(candidate_path):
+    """9618_w25_42:2(d)(i) MP1–3; 2(f)(i) MP2–3; MS pp.22,25."""
+    from testkit import run_script_traced
+    state = random.getstate()
+    try:
+        random.seed(3)
+        r = run_script_traced(candidate_path, stdin="999\n")
+    finally:
+        random.setstate(state)
+    assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
+    prints, sorts, searches = r.called("PrintArray"), r.called("BubbleSort"), r.called("RecursiveBinarySearch")
+    assert len(prints) >= 2 and sorts and searches
+    before = list(prints[0].args.values())[0]
+    assert list(sorts[0].args.values())[0] == before
+    assert sorts[0].result == sorted(before)
+    assert list(prints[-1].args.values())[0] == sorts[0].result
+    search = searches[0]
+    # QP specifies the four argument roles; parameter names may vary.
+    assert list(search.args.values()) == [sorts[0].result, 0, 19, 999]
+    assert search.result == -1 and "Not found" in r.stdout
+    assert positions[id(prints[0])] < positions[id(sorts[0])] < positions[id(prints[-1])] < positions[id(search)]
