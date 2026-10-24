@@ -150,7 +150,7 @@
 | Part 3(b) | 9618_s24_41:3(b) | 4 | 代码 | `test_3b_enqueue_linear_full` · MP1、MP2、MP3、MP4；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 3(c) | 9618_s24_41:3(c) | 3 | 代码 | `test_3c_dequeue_fifo_and_empty_string` · MP1、MP2、MP3 | — |
 | Part 3(d)(i) | 9618_s24_41:3(d)(i) | 6 | 代码 | `test_3d_storeitems_official_sequence`、`test_3d_x_and_numeric_checks_at_full_queue` · MP1、MP2、MP3、MP4、MP5、MP6、MP7、MP8 | — |
-| Part 3(d)(ii) | 9618_s24_41:3(d)(ii) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_empty_message` · 整行 | — |
+| Part 3(d)(ii) | 9618_s24_41:3(d)(ii) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_empty_message` · 整行；`test_3d_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 3(d)(iii) | 9618_s24_41:3(d)(iii) | 2 | 截图 | `test_3d_screenshot` · MP1、MP2 | — |
 
 自动测分值 17.000000，人工核对分值 0.000000，自动占比 100.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
@@ -165,3 +165,7 @@
 ## 原页、编号与差异记录
 
 已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int("X")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。
+
+## T38c2 · D46 验证补充
+
+补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

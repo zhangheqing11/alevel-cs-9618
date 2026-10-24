@@ -758,7 +758,8 @@
           "manual_marks": 0.0,
           "tests": [
             "test_3d_screenshot",
-            "test_3d_main_empty_message"
+            "test_3d_main_empty_message",
+            "test_3d_main_call_chain"
           ]
         },
         {
@@ -778,8 +779,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 8,
+      "mutants": 3,
+      "tests": 9,
       "qp_pages_checked": [
         11,
         12,
@@ -797,7 +798,7 @@
         37,
         38
       ],
-      "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。"
+      "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。 T38c2：补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。"
     },
     {
       "directory": "practice/p4/9618_s25_41_q1",
