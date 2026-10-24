@@ -1,0 +1,1 @@
+{"file": "papers/p4/cards/AR.md", "line": 533, "card": "P4-AR-03", "kind": "other", "severity": "nit", "row": "9618_w24_42:2(a)", "evidence": "QP p.8 的字段名为 Headpointer、Tailpointer，MS p.18–19 为 HeadPointer、TailPointer。卡的完整代码使用后者，说明却称本作答照 QP 抄；运行不受影响。", "suggestion": "改为明确本作答统一采用 MS 的 HeadPointer、TailPointer，并说明 QP 大小写不一致；不要声称代码使用 QP 的拼法。"}
