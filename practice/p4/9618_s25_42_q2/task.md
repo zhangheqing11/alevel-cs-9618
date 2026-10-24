@@ -153,7 +153,7 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a) | 9618_s25_42:2(a) | 2 | 代码 | — | MP1、MP2 |
-| Part 2(b)(i) | 9618_s25_42:2(b)(i) | 1 | 代码 | `test_2b_arrays_and_initialise` · 整行 | — |
+| Part 2(b)(i) | 9618_s25_42:2(b)(i) | 1 | 代码 | `test_2b_arrays_and_initialise` · 整行；`test_2b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 2(b)(ii) | 9618_s25_42:2(b)(ii) | 2 | 代码 | `test_2b_arrays_and_initialise` · MP1、MP2 | — |
 | Part 2(c) | 9618_s25_42:2(c) | 2 | 代码 | `test_2c_hash` · MP1、MP2 | — |
 | Part 2(d) | 9618_s25_42:2(d) | 6 | 代码 | `test_2d_insert_and_collisions`、`test_2d_last_spare_slot` · MP2、MP3、MP4、MP5、MP6 | MP1 |

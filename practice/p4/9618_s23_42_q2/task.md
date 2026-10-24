@@ -128,7 +128,7 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a) | 9618_s23_42:2(a) | 2 | 代码 | `test_2a_record` · MP2 | MP1 |
-| Part 2(b) | 9618_s23_42:2(b) | 4 | 代码 | `test_2b_initial_state` · MP1、MP2、MP3、MP4 | — |
+| Part 2(b) | 9618_s23_42:2(b) | 4 | 代码 | `test_2b_initial_state` · MP1、MP2、MP3、MP4；`test_2b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 2(c) | 9618_s23_42:2(c) | 6 | 代码 | `test_2c_enqueue_full_wrap` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 2(d) | 9618_s23_42:2(d) | 6 | 代码 | `test_2d_dequeue_empty_fifo_reuse` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 2(e) | 9618_s23_42:2(e) | 5 | 代码 | `test_2e_enter_record_stored_and_full` · MP2、MP3、MP4、MP5 | MP1 |

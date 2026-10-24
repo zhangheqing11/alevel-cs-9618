@@ -109,7 +109,7 @@ ENDFUNCTION
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s22_41:3(a) | 2 | 代码 | `test_3a_initial_state` · MP1、MP2 | — |
-| Part 3(b) | 9618_s22_41:3(b) | 7 | 代码 | `test_3b_enqueue_full_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP1 | MP2、MP3 |
+| Part 3(b) | 9618_s22_41:3(b) | 7 | 代码 | `test_3b_enqueue_full_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP1；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | MP2、MP3 |
 | Part 3(c) | 9618_s22_41:3(c) | 6 | 代码 | `test_3c_dequeue_fifo_empty_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1 |
 | Part 3(d)(i) | 9618_s22_41:3(d)(i) | 5 | 代码 | `test_3d_screenshot` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 3(d)(ii) | 9618_s22_41:3(d)(ii) | 1 | 截图 | `test_3d_screenshot` · 整行 | — |

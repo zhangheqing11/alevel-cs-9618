@@ -1,23 +1,23 @@
 # ---- 2(a) ----
-# Implement this part using the question identifiers.
+# Declare the SaleData record structure.
 
 # ---- 2(b) ----
-# Implement this part using the question identifiers.
+# Declare five empty sale records and zero queue pointers/count.
 
 # ---- 2(c) ----
-# Implement this part using the question identifiers.
+# Implement Enqueue with full detection and tail wraparound.
 
 # ---- 2(d) ----
-# Implement this part using the question identifiers.
+# Implement Dequeue with an empty-record return and head wraparound.
 
 # ---- 2(e) ----
-# Implement this part using the question identifiers.
+# Input a sale record and report whether it was stored.
 
 # ---- 2(f)(i) ----
-# Implement this part using the question identifiers.
+# Enter six records, dequeue once, re-enter LLP and output all array records.
 
 # ---- 2(f)(ii) ----
-# Capture the required test output.
+# Capture the output from the prescribed record sequence.
 
 # ---- main program ----
 if __name__ == "__main__":

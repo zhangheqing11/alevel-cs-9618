@@ -121,6 +121,15 @@
         (iii)   Test the program with the following inputs in the order given:
 
                     999999X
+                    1251484
+                    5500212
+                    0033585
+                    9845788
+                    6666666
+                    3258746
+                    8111022
+                    7568557
+                    0012353
 
 
                 Take a screenshot of the output(s).
@@ -138,7 +147,7 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s24_41:3(a) | 1 | 代码 | `test_3a_initial_state` · 整行 | — |
-| Part 3(b) | 9618_s24_41:3(b) | 4 | 代码 | `test_3b_enqueue_linear_full` · MP1、MP2、MP3、MP4 | — |
+| Part 3(b) | 9618_s24_41:3(b) | 4 | 代码 | `test_3b_enqueue_linear_full` · MP1、MP2、MP3、MP4；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 3(c) | 9618_s24_41:3(c) | 3 | 代码 | `test_3c_dequeue_fifo_and_empty_string` · MP1、MP2、MP3 | — |
 | Part 3(d)(i) | 9618_s24_41:3(d)(i) | 6 | 代码 | `test_3d_storeitems_official_sequence`、`test_3d_x_and_numeric_checks_at_full_queue` · MP1、MP2、MP3、MP4、MP5、MP6、MP7、MP8 | — |
 | Part 3(d)(ii) | 9618_s24_41:3(d)(ii) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_empty_message` · 整行 | — |

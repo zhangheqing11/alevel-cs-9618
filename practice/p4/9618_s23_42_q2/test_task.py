@@ -66,3 +66,18 @@ def test_2f_screenshot(candidate_path):
     assert re.findall(r'Stored|Full', r.stdout) == ['Stored'] * 5 + ['Full', 'Stored']
     pairs = [(a, int(b)) for a, b in re.findall(r'\b(ADF|OOP|BXW|XXZ|HQR|LLP)\s+(-?\d+)\b', r.stdout)]
     assert pairs == [('ADF', 10), ('LLP', 3), ('OOP', 1), ('BXW', 5), ('XXZ', 22), ('HQR', 6)]
+
+
+def test_2b_no_algorithm_shortcuts(candidate_path):
+    """9618_s23_42:2(b) MP1 (D10): required algorithm cannot be delegated to built-ins."""
+    import ast
+    tree = ast.parse(candidate_path.read_text(encoding='utf-8'))
+    forbidden = {'sort', 'sorted', 'index', 'count', 'max', 'min'}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            name = node.func.id if isinstance(node.func, ast.Name) else (
+                node.func.attr if isinstance(node.func, ast.Attribute) else '')
+            assert name not in forbidden, f'D10: implement the algorithm without {name}()'
+        if isinstance(node, ast.Compare):
+            assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
+                'D10: implement search with pointers/comparisons rather than membership'

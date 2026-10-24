@@ -1,20 +1,20 @@
 # ---- 1(a) ----
-# Implement this part using the question identifiers.
+# Declare twenty -1 queue entries, both pointers and item count.
 
 # ---- 1(b) ----
-# Implement this part using the question identifiers.
+# Implement Enqueue for the circular queue.
 
 # ---- 1(c) ----
-# Implement this part using the question identifiers.
+# Attempt to enqueue integers 1 through 25 and report each outcome.
 
 # ---- 1(d) ----
-# Implement this part using the question identifiers.
+# Implement Dequeue including pointer reset when the queue becomes empty.
 
 # ---- 1(e)(i) ----
-# Implement this part using the question identifiers.
+# Dequeue twice and output both return values.
 
 # ---- 1(e)(ii) ----
-# Capture the required test output.
+# Capture the successful and unsuccessful additions and both dequeues.
 
 # ---- main program ----
 if __name__ == "__main__":

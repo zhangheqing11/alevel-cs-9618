@@ -45,7 +45,8 @@
           "manual_marks": 2.0,
           "tests": [
             "test_3b_enqueue_full_and_wrap",
-            "test_3bc_reuse_slots_after_dequeue"
+            "test_3bc_reuse_slots_after_dequeue",
+            "test_3b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -105,7 +106,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 5,
+      "tests": 6,
       "qp_pages_checked": [
         8,
         9,
@@ -188,7 +189,8 @@
           "auto_marks": 5.0,
           "manual_marks": 1.0,
           "tests": [
-            "test_1c_push_boundary"
+            "test_1c_push_boundary",
+            "test_1b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -259,7 +261,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 6,
+      "tests": 7,
       "qp_pages_checked": [
         2,
         3
@@ -322,7 +324,8 @@
           "auto_marks": 3.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_3b_stack_capacity_lifo_and_reuse"
+            "test_3b_stack_capacity_lifo_and_reuse",
+            "test_3b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -462,7 +465,7 @@
         }
       ],
       "mutants": 2,
-      "tests": 8,
+      "tests": 9,
       "qp_pages_checked": [
         8,
         9,
@@ -530,7 +533,8 @@
           "auto_marks": 4.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_2b_initial_state"
+            "test_2b_initial_state",
+            "test_2b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -627,7 +631,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 6,
+      "tests": 7,
       "qp_pages_checked": [
         5,
         6,
@@ -692,7 +696,8 @@
           "auto_marks": 4.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_3b_enqueue_linear_full"
+            "test_3b_enqueue_linear_full",
+            "test_3b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -766,7 +771,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 7,
+      "tests": 8,
       "qp_pages_checked": [
         11,
         12,
@@ -833,7 +838,8 @@
           "manual_marks": 0.0,
           "tests": [
             "test_1b_enqueue_full",
-            "test_1bd_wrap_partial_dequeue_and_refill"
+            "test_1bd_wrap_partial_dequeue_and_refill",
+            "test_1b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -904,7 +910,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 5,
+      "tests": 6,
       "qp_pages_checked": [
         2,
         3
@@ -971,7 +977,8 @@
           "auto_marks": 3.0,
           "manual_marks": 1.0,
           "tests": [
-            "test_1b_push_full"
+            "test_1b_push_full",
+            "test_1b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -1085,7 +1092,7 @@
         }
       ],
       "mutants": 2,
-      "tests": 7,
+      "tests": 8,
       "qp_pages_checked": [
         2,
         3,
@@ -1151,7 +1158,8 @@
           "auto_marks": 1.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_2b_arrays_and_initialise"
+            "test_2b_arrays_and_initialise",
+            "test_2b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -1282,7 +1290,7 @@
         }
       ],
       "mutants": 2,
-      "tests": 9,
+      "tests": 10,
       "qp_pages_checked": [
         6,
         7,
@@ -1354,7 +1362,8 @@
           "auto_marks": 5.0,
           "manual_marks": 1.0,
           "tests": [
-            "test_1b_enqueue_full"
+            "test_1b_enqueue_full",
+            "test_1b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -1442,7 +1451,7 @@
         }
       ],
       "mutants": 2,
-      "tests": 7,
+      "tests": 8,
       "qp_pages_checked": [
         2,
         3
@@ -1507,7 +1516,8 @@
           "auto_marks": 2.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_3b_preset_and_pointers"
+            "test_3b_preset_and_pointers",
+            "test_3b_no_algorithm_shortcuts"
           ]
         },
         {
@@ -1581,7 +1591,7 @@
       ],
       "files": [],
       "mutants": 2,
-      "tests": 7,
+      "tests": 8,
       "qp_pages_checked": [
         8,
         9,

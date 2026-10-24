@@ -1,17 +1,17 @@
 # ---- 3(a) ----
-# Implement this part using the question identifiers.
+# Declare the circular queue, both zero pointers and item count.
 
 # ---- 3(b) ----
-# Implement this part using the question identifiers.
+# Complete the five statements and implement Enqueue with retained pointer updates.
 
 # ---- 3(c) ----
-# Implement this part using the question identifiers.
+# Implement Dequeue with empty detection and head wraparound.
 
 # ---- 3(d)(i) ----
-# Implement this part using the question identifiers.
+# Input eleven strings, report each addition and dequeue twice.
 
 # ---- 3(d)(ii) ----
-# Capture the required test output.
+# Capture the output for inputs A through K.
 
 # ---- main program ----
 if __name__ == "__main__":

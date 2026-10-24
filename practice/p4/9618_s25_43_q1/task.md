@@ -122,7 +122,7 @@ One source file is used to answer Question 1. The file is called QueueData.txt
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s25_43:1(a) | 3 | 代码 | `test_1a_initial_state` · MP1、MP2、MP3 | — |
-| Part 1(b) | 9618_s25_43:1(b) | 6 | 代码 | `test_1b_enqueue_full` · MP2、MP3、MP4、MP5、MP6 | MP1 |
+| Part 1(b) | 9618_s25_43:1(b) | 6 | 代码 | `test_1b_enqueue_full` · MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
 | Part 1(c) | 9618_s25_43:1(c) | 5 | 代码 | `test_1c_dequeue_fifo_empty` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 1(d) | 9618_s25_43:1(d) | 6 | 代码 | `test_1d_official_file`、`test_1d_unknown_length_overflow_and_missing` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 1(e)(i) | 9618_s25_43:1(e)(i) | 5 | 代码 | `test_1e_screenshot`、`test_1e_main_uses_dequeue_until_sentinel` · MP1、MP2、MP3、MP4、MP5 | — |

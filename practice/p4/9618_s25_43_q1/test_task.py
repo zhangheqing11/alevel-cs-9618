@@ -83,3 +83,18 @@ def test_1e_main_uses_dequeue_until_sentinel(candidate_path, tmp_path, exercise_
     )
     r = run_script(wrapper, files_dir=exercise_dir / 'files')
     assert r.returncode == 0, r.stderr
+
+
+def test_1b_no_algorithm_shortcuts(candidate_path):
+    """9618_s25_43:1(b) MP2 (D10): required algorithm cannot be delegated to built-ins."""
+    import ast
+    tree = ast.parse(candidate_path.read_text(encoding='utf-8'))
+    forbidden = {'sort', 'sorted', 'index', 'count', 'max', 'min'}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            name = node.func.id if isinstance(node.func, ast.Name) else (
+                node.func.attr if isinstance(node.func, ast.Attribute) else '')
+            assert name not in forbidden, f'D10: implement the algorithm without {name}()'
+        if isinstance(node, ast.Compare):
+            assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
+                'D10: implement search with pointers/comparisons rather than membership'

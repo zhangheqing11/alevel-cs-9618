@@ -40,9 +40,9 @@
 
                    ELSE
 
-                       Animal[AnimalTopPointer]               DataToPush
+                       Animal[AnimalTopPointer] ← DataToPush
 
-                       AnimalTopPointer          AnimalTopPointer + 1
+                       AnimalTopPointer ← AnimalTopPointer + 1
 
                        RETURN TRUE
 
@@ -69,9 +69,9 @@
 
                     ELSE
 
-                       ReturnData          Animal[AnimalTopPointer - 1]
+                       ReturnData ← Animal[AnimalTopPointer - 1]
 
-                       AnimalTopPointer            AnimalTopPointer - 1
+                       AnimalTopPointer ← AnimalTopPointer - 1
 
                        RETURN ReturnData
 
@@ -174,7 +174,7 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s23_41:3(a) | 3 | 代码 | `test_3a_declarations` · MP1、MP2、MP3 | — |
-| Part 3(b)(i) | 9618_s23_41:3(b)(i) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2、MP3 | — |
+| Part 3(b)(i) | 9618_s23_41:3(b)(i) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2、MP3；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 3(b)(ii) | 9618_s23_41:3(b)(ii) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2、MP3 | — |
 | Part 3(b)(iii) | 9618_s23_41:3(b)(iii) | 5 | 代码 | `test_3b_read_files`、`test_3b_missing_file` · MP1、MP2、MP3、MP5 | MP4 |
 | Part 3(b)(iv) | 9618_s23_41:3(b)(iv) | 2 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2 | — |

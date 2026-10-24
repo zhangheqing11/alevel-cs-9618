@@ -1,29 +1,29 @@
 # ---- 2(a) ----
-# Implement this part using the question identifiers.
+# Declare the NewRecord structure with three integer fields.
 
 # ---- 2(b)(i) ----
-# Implement this part using the question identifiers.
+# Declare the two global arrays with capacities 200 and 100.
 
 # ---- 2(b)(ii) ----
-# Implement this part using the question identifiers.
+# Fill both arrays with empty records containing -1 in every field.
 
 # ---- 2(c) ----
-# Implement this part using the question identifiers.
+# Calculate and return the hash value using modulo 200.
 
 # ---- 2(d) ----
-# Implement this part using the question identifiers.
+# Insert at the hash index or the next free overflow slot.
 
 # ---- 2(e) ----
-# Implement this part using the question identifiers.
+# Read CSV records from HashData.txt and pass each to InsertIntoHash.
 
 # ---- 2(f)(i) ----
-# Implement this part using the question identifiers.
+# Output keys from the occupied records in Spare.
 
 # ---- 2(f)(ii) ----
-# Implement this part using the question identifiers.
+# Initialise the arrays, create the hash table and print Spare.
 
 # ---- 2(f)(iii) ----
-# Capture the required test output.
+# Capture the output of the overflow keys.
 
 # ---- main program ----
 if __name__ == "__main__":

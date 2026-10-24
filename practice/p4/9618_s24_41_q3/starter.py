@@ -1,20 +1,20 @@
 # ---- 3(a) ----
-# Implement this part using the question identifiers.
+# Declare twenty null string slots and initialise both pointers to -1.
 
 # ---- 3(b) ----
-# Implement this part using the question identifiers.
+# Implement Enqueue for a linear queue.
 
 # ---- 3(c) ----
-# Implement this part using the question identifiers.
+# Implement Dequeue with the string sentinel false.
 
 # ---- 3(d)(i) ----
-# Implement this part using the question identifiers.
+# Validate ten check-digit strings and enqueue their first six characters.
 
 # ---- 3(d)(ii) ----
-# Implement this part using the question identifiers.
+# Call StoreItems and output one dequeue result or an empty-queue message.
 
 # ---- 3(d)(iii) ----
-# Capture the required test output.
+# Capture the result of the prescribed ten inputs.
 
 # ---- main program ----
 if __name__ == "__main__":

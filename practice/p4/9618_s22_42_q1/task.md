@@ -108,7 +108,7 @@ A source file is used to answer Question 3. The file is called CardValues.txt
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s22_42:1(a) | 3 | 代码 | `test_1a_declarations` · MP1、MP2、MP3 | — |
 | Part 1(b) | 9618_s22_42:1(b) | 3 | 代码 | `test_1b_printarray` · MP2、MP3 | MP1 |
-| Part 1(c) | 9618_s22_42:1(c) | 6 | 代码 | `test_1c_push_boundary` · MP2、MP3、MP4、MP5、MP6 | MP1 |
+| Part 1(c) | 9618_s22_42:1(c) | 6 | 代码 | `test_1c_push_boundary` · MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
 | Part 1(d)(i) | 9618_s22_42:1(d)(i) | 5 | 代码 | `test_1d_screenshot` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 1(d)(ii) | 9618_s22_42:1(d)(ii) | 1 | 截图 | `test_1d_screenshot` · 整行 | — |
 | Part 1(e)(i) | 9618_s22_42:1(e)(i) | 5 | 代码 | `test_1e_pop_lifo_empty_reuse` · MP1、MP2、MP3、MP4、MP5 | — |

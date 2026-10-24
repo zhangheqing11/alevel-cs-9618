@@ -1,20 +1,20 @@
 # ---- 3(a) ----
-# Implement this part using the question identifiers.
+# Declare the 20 by 3 node array and initialise all entries to -1.
 
 # ---- 3(b) ----
-# Implement this part using the question identifiers.
+# Store the six given nodes and initialise FreeNode and RootPointer.
 
 # ---- 3(c) ----
-# Implement this part using the question identifiers.
+# Complete and implement the recursive tree-search pseudocode.
 
 # ---- 3(d) ----
-# Implement this part using the question identifiers.
+# Implement recursive left-right-root postorder traversal.
 
 # ---- 3(e)(i) ----
-# Implement this part using the question identifiers.
+# Search for 15, report the result and traverse the tree.
 
 # ---- 3(e)(ii) ----
-# Capture the required test output.
+# Capture the search result and postorder output.
 
 # ---- main program ----
 if __name__ == "__main__":

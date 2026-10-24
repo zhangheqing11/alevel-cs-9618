@@ -54,3 +54,18 @@ def test_1ce_screenshot(candidate_path):
         assert match and int(match[1]) == i
         assert match[2] == ('Successful' if i <= 20 else 'Unsuccessful')
     assert re.search(r'\b1\b', lines[-2]) and re.search(r'\b2\b', lines[-1])
+
+
+def test_1b_no_algorithm_shortcuts(candidate_path):
+    """9618_s25_41:1(b) MP1 (D10): required algorithm cannot be delegated to built-ins."""
+    import ast
+    tree = ast.parse(candidate_path.read_text(encoding='utf-8'))
+    forbidden = {'sort', 'sorted', 'index', 'count', 'max', 'min'}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            name = node.func.id if isinstance(node.func, ast.Name) else (
+                node.func.attr if isinstance(node.func, ast.Attribute) else '')
+            assert name not in forbidden, f'D10: implement the algorithm without {name}()'
+        if isinstance(node, ast.Compare):
+            assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
+                'D10: implement search with pointers/comparisons rather than membership'

@@ -1,23 +1,23 @@
 # ---- 1(a) ----
-# Implement this part using the question identifiers.
+# Declare StackData and initialise the next-free pointer to zero.
 
 # ---- 1(b) ----
-# Implement this part using the question identifiers.
+# Write a procedure to output all ten slots and the pointer.
 
 # ---- 1(c) ----
-# Implement this part using the question identifiers.
+# Implement Push with full-stack detection and a Boolean return.
 
 # ---- 1(d)(i) ----
-# Implement this part using the question identifiers.
+# Attempt eleven pushes, report their outcomes and output the stack.
 
 # ---- 1(d)(ii) ----
-# Capture the required test output.
+# Capture the output for inputs 11 through 21.
 
 # ---- 1(e)(i) ----
-# Implement this part using the question identifiers.
+# Implement Pop with an empty-stack return of -1.
 
 # ---- 1(e)(ii) ----
-# Capture the required test output.
+# Pop twice, output the updated stack and capture the result.
 
 # ---- main program ----
 if __name__ == "__main__":

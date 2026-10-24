@@ -1,29 +1,29 @@
 # ---- 3(a) ----
-# Implement this part using the question identifiers.
+# Declare the animal and colour stacks and their next-free pointers.
 
 # ---- 3(b)(i) ----
-# Implement this part using the question identifiers.
+# Translate PushAnimal from the given pseudocode.
 
 # ---- 3(b)(ii) ----
-# Implement this part using the question identifiers.
+# Translate PopAnimal from the given pseudocode.
 
 # ---- 3(b)(iii) ----
-# Implement this part using the question identifiers.
+# Read AnimalData.txt using PushAnimal and handle a missing file.
 
 # ---- 3(b)(iv) ----
-# Implement this part using the question identifiers.
+# Implement PushColour and PopColour for the colour stack.
 
 # ---- 3(b)(v) ----
-# Implement this part using the question identifiers.
+# Extend ReadData to load ColourData.txt using PushColour.
 
 # ---- 3(c) ----
-# Implement this part using the question identifiers.
+# Pop a matching pair, or restore the unmatched item and report the missing kind.
 
 # ---- 3(d)(i) ----
-# Implement this part using the question identifiers.
+# Read both files and call OutputItem four times.
 
 # ---- 3(d)(ii) ----
-# Capture the required test output.
+# Capture the four output pairs.
 
 # ---- main program ----
 if __name__ == "__main__":

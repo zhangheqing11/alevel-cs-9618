@@ -130,11 +130,13 @@
 
          For example, in the following tree, the output would be: 3     9   25   60   50
 
+                         50
+                        /  \
+                       25   60
+                      /  \
+                     3    9
 
-
-                                            25                     60
-                                      3                   9
-         An outline of the PostOrder() procedure is:
+        An outline of the PostOrder() procedure is:
 
          •     If left node is not empty, make a recursive call with the left node as the root.
          •     If right node is not empty, make a recursive call with the right node as the root.
@@ -177,7 +179,7 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_w22_41:3(a) | 3 | 代码 | `test_3a_array_shape_and_unused_nodes` · MP1、MP3 | MP2 |
-| Part 3(b) | 9618_w22_41:3(b) | 2 | 代码 | `test_3b_preset_and_pointers` · MP1、MP2 | — |
+| Part 3(b) | 9618_w22_41:3(b) | 2 | 代码 | `test_3b_preset_and_pointers` · MP1、MP2；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 3(c) | 9618_w22_41:3(c) | 5 | 代码 | `test_3c_search_both_branches`、`test_3c_search_recursive_and_null_data` · MP1 | MP2 |
 | Part 3(d) | 9618_w22_41:3(d) | 7 | 代码 | `test_3d_postorder_recursive`、`test_3d_postorder_different_tree` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
 | Part 3(e)(i) | 9618_w22_41:3(e)(i) | 3 | 代码 | `test_3e_screenshot` · MP1、MP2、MP3 | — |

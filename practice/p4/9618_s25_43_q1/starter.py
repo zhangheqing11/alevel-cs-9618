@@ -1,20 +1,20 @@
 # ---- 1(a) ----
-# Implement this part using the question identifiers.
+# Declare fifty integer queue entries and both pointers initialised to -1.
 
 # ---- 1(b) ----
-# Implement this part using the question identifiers.
+# Implement Enqueue for a fifty-slot linear queue.
 
 # ---- 1(c) ----
-# Implement this part using the question identifiers.
+# Implement Dequeue with integer -1 for an empty queue.
 
 # ---- 1(d) ----
-# Implement this part using the question identifiers.
+# Read all integers from QueueData.txt and report overflow/file errors.
 
 # ---- 1(e)(i) ----
-# Implement this part using the question identifiers.
+# Create the queue and sum values obtained by repeated Dequeue calls.
 
 # ---- 1(e)(ii) ----
-# Capture the required test output.
+# Capture the final total.
 
 # ---- main program ----
 if __name__ == "__main__":

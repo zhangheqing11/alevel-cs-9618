@@ -101,3 +101,18 @@ def test_2f_screenshot(candidate_path, exercise_dir):
     r = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert r.returncode == 0, r.stderr
     assert [int(x) for x in re.findall(r'-?\d+', r.stdout)] == MS_SPARE
+
+
+def test_2b_no_algorithm_shortcuts(candidate_path):
+    """9618_s25_42:2(b)(i) MPwhole (D10): required algorithm cannot be delegated to built-ins."""
+    import ast
+    tree = ast.parse(candidate_path.read_text(encoding='utf-8'))
+    forbidden = {'sort', 'sorted', 'index', 'count', 'max', 'min'}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            name = node.func.id if isinstance(node.func, ast.Name) else (
+                node.func.attr if isinstance(node.func, ast.Attribute) else '')
+            assert name not in forbidden, f'D10: implement the algorithm without {name}()'
+        if isinstance(node, ast.Compare):
+            assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
+                'D10: implement search with pointers/comparisons rather than membership'
