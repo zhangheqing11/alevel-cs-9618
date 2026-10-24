@@ -1,4 +1,4 @@
-# Mutant: 9618_w25_43:3(b)(ii) MP6 (string-concat) - each element keeps its semi-colon.
+# Mutant: 9618_w25_43:3(b)(ii) MP6 (return-value) - each element keeps its semi-colon.
 # Reference solution for 9618_w25_43 Question 3 (Question3_N25).
 # Follows the MS Python examples (MS p.33-38), including the MS parameter order
 # RecursiveCount(DataToFind, ArrayCopy, NumberElements); the QP lists the

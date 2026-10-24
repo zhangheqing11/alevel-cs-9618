@@ -62,7 +62,7 @@
 
 ## 验证与已知限制
 
-第 8 题按交接步骤 10 单独运行参考解：16 项通过（0.06 秒）；8 个 mutant 各至少失败一项。全子批共 55 个 mutant；最终 rebase 后的 `make check-all` 与范围检查结果记录在 `tasks/progress/T35b.md` 和 PR 描述。
+第 8 题按交接步骤 10 单独运行参考解：16 项通过（0.06 秒）；8 个 mutant 各至少失败一项。全子批共 55 个 mutant；最终 rebase 后 `make check-all` 全绿（198 个练习全部执行，参考解全过、每个 mutant 至少一项失败）；`make check-scope TASK=T35b`、`git diff --check` 均通过，详细结果记录在 `tasks/progress/T35b.md` 和 PR 描述。
 
 自动测试不能证明所有人工清单项，包括注释、完整算法结构、提示措辞、截图可读性、输出确实使用返回值而非硬编码。学习时须结合本题 MS 逐项核对。
 

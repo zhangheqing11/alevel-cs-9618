@@ -1,4 +1,4 @@
-# Mutant: 9618_w25_43:3(a)(i) MP1 (recursion) - counted with a loop, no recursive call.
+# Mutant: 9618_w25_43:3(a)(i) MP4-MP6 (recursion) - counted with a loop, no recursive call.
 # Reference solution for 9618_w25_43 Question 3 (Question3_N25).
 # Follows the MS Python examples (MS p.33-38), including the MS parameter order
 # RecursiveCount(DataToFind, ArrayCopy, NumberElements); the QP lists the
