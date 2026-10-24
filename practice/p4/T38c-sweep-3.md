@@ -158,3 +158,18 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 9 passed in 0.09s
 
 自动分 23.0 → 22.0；占比 74.19% → 70.97%。
+
+## 9618_w22_42_q2
+
+主程序调用点原只匹配坐标；补实际 ChangePosition 参数与三个 getter。QP 给出消息格式，保留 X/Y 标识，允许相邻行。另四方向另测。
+
+本轮逐行核对本题配对 MS（11, 12, 13, 14, 15, 16, 17, 18, 19, 20 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：4 failed, 6 passed in 0.33s；修后与等价改写：
+
+- mutant_1.py: 5 failed, 6 passed in 0.44s
+- mutant_2.py: 9 failed, 2 passed in 0.68s
+- mutant_hollow_main.py: 5 failed, 6 passed in 0.33s
+- solution.py: 11 passed in 0.30s
+- equivalent_banner.py: 11 passed in 0.32s
+- equivalent_footer.py: 11 passed in 0.26s
+
+自动分 26.2222 → 26.2222；占比 84.59% → 84.59%。

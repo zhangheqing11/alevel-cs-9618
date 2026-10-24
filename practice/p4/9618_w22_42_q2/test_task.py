@@ -48,11 +48,25 @@ def test_2e_f_g_moves(candidate_path,exercise_dir,move,x,y):
     """9618_w22_42:2(e) MP1-MP6; 9618_w22_42:2(f) MP1-MP7; 9618_w22_42:2(g)(i) MP1-MP2."""
     r=run_script(candidate_path,stdin=f'THOMAS\nQUI\nX\n{move}\n',files_dir=exercise_dir/'files')
     assert r.returncode==0,r.stderr
-    assert re.search(r'qui.*X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout,re.I)
+    assert re.search(r'qui.*X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout,re.I | re.S)
 
 
 def test_2gii_screenshot(candidate_path,exercise_dir):
     """9618_w22_42:2(g)(ii) whole: THOMAS, qui, X, A -> Qui, 83, 9 (MS p.20)."""
     r=run_script(candidate_path,stdin='THOMAS\nqui\nX\nA\n',files_dir=exercise_dir/'files')
     assert r.returncode==0,r.stderr
-    assert re.search(r'qui.*83.*9',r.stdout,re.I)
+    assert re.search(r'qui.*83.*9',r.stdout,re.I | re.S)
+
+
+def test_2main_call_chain(candidate_path, exercise_dir):
+    """9618_w22_42:2(f) MS p.18; 9618_w22_42:2(g)(i) MS p.19: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='THOMAS\nqui\nX\nA\n', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    changes = r.called("ChangePosition")
+    assert len(changes) == 1 and list(changes[0].args.values()) == [-1,0]
+    for name in ("GetName","GetX","GetY"):
+        assert r.called(name)
+    assert str(r.called("GetX")[-1].result) in r.stdout
+    assert str(r.called("GetY")[-1].result) in r.stdout

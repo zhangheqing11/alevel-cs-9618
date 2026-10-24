@@ -317,8 +317,8 @@
       "qp_over_ms": [
         "类方法按 QP 命名，无需另加读文件函数。主程序数组名称不限，测试在 main 命名空间检查包含 10 个 Character 的 list。MS p.16 Python 只 lower 输入、没有 lower 存储姓名，无法找到 Qui；参考解双方 lower，实现 MS 的大小写点并通过 QP 指定 qui 测试。MS p.19 的 Python 输出 CharacterName 却从未赋输入，参考解输出对象 GetName()。MS p.20 截图为 X = 83、Y = 9；QP p.7 的格式示例 Y = 0 只是示例格式，不是该次输入的结果。缺文件之后如何继续 QP 未定义，测试只核对捕获异常和消息。"
       ],
-      "tests": 7,
-      "mutants": 2,
+      "tests": 11,
+      "mutants": 3,
       "manual_marks": 4.7778,
       "auto_share": 0.8459
     },
