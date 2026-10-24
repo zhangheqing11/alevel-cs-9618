@@ -331,7 +331,7 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
 ```
 
-### codex · T39 教学 skill 更新到全四卷（新开 Codex 会话）
+### ~~codex · T39 教学 skill 更新到全四卷~~（作废：学生指定改由 Claude Opus 子智能体做，不要发给 Codex）
 
 ```
 你是执行工位，负责 T39：把教学 skill skill/cie-9618-cs-tutor/ 更新到能教全四卷（P3、P4 手册与 P4 上机练习）、能带整卷模考（批改包 + 分数线估分），并生成 ledger/P3.csv、ledger/P4.csv。skill 是给 Claude 学习会话看的说明书，保持原口吻，不改教学协议本身。先读 AGENTS.md、docs/DECISIONS.md（D1、D2、D31、D32、D33、D37、D38、D44、D45）、tasks/T39-skill-update.md（任务卡：现状、9 项改动、完成标准）、tasks/handoff/README.md 与 **tasks/handoff/T39-skill.md（交接文档：执行方案）**；改之前先读 pipeline/mock/README.md、corpus/thresholds/README.md、papers/p4/practice-notes.md、schemas/exercise-format.md、schemas/ledger-format.md、tools/try.py，命令以它们为准。
