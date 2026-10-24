@@ -6,9 +6,9 @@
 |:--|:--|:--|
 | [T35-practice.md](T35-practice.md) | T35a–f P4 真题练习（54 道大题） | ✅ 已合并（#48、#49、#52–#55） |
 | [T37-cards.md](T37-cards.md) | T37A / T37B P4 题型卡 | ✅ 已合并（#50、#51） |
-| [T38-audit.md](T38-audit.md) | T38 审计 P4 手册 + 抽查 6 道练习 | ✅ 交付 #57 |
-| [T38-fixes.md](T38-fixes.md) | T38b 改 P4 卡（含 OP 换题）；T38c1–3 排查 54 道 P4 练习 | 待开（4 个会话可并行） |
-| [T39-skill.md](T39-skill.md) | T39 教学 skill 重构到全四卷 + P3 / P4 记录表 | Claude Opus 子智能体已交付 #56 |
+| [T38-audit.md](T38-audit.md) | T38 审计 P4 手册 + 抽查 6 道练习 | ✅ 已合并 #57 |
+| [T38-fixes.md](T38-fixes.md) | T38b 改 P4 卡（含 OP 换题）；T38c1–3 排查 54 道 P4 练习 | 已派发（T38b、T38c1–3 四个 Codex 会话） |
+| [T39-skill.md](T39-skill.md) | T39 教学 skill 重构到全四卷 + P3 / P4 记录表 | ✅ 已合并 #56（D47） |
 
 ## 通用约定（所有交接任务）
 
