@@ -1585,7 +1585,8 @@
           "auto_marks": 3.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_3e_screenshot"
+            "test_3e_screenshot",
+            "test_3e_main_call_chain"
           ]
         },
         {
@@ -1604,8 +1605,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 8,
+      "mutants": 3,
+      "tests": 9,
       "qp_pages_checked": [
         8,
         9,
@@ -1622,7 +1623,7 @@
         22,
         23
       ],
-      "notes": "已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。"
+      "notes": "已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。 T38c2：补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。"
     }
   ]
 }

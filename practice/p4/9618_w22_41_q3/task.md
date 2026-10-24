@@ -182,7 +182,7 @@
 | Part 3(b) | 9618_w22_41:3(b) | 2 | 代码 | `test_3b_preset_and_pointers` · MP1、MP2；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 3(c) | 9618_w22_41:3(c) | 5 | 代码 | `test_3c_search_both_branches`、`test_3c_search_recursive_and_null_data` · MP1 | MP2 |
 | Part 3(d) | 9618_w22_41:3(d) | 7 | 代码 | `test_3d_postorder_recursive`、`test_3d_postorder_different_tree` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
-| Part 3(e)(i) | 9618_w22_41:3(e)(i) | 3 | 代码 | `test_3e_screenshot` · MP1、MP2、MP3 | — |
+| Part 3(e)(i) | 9618_w22_41:3(e)(i) | 3 | 代码 | `test_3e_screenshot` · MP1、MP2、MP3；`test_3e_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 3(e)(ii) | 9618_w22_41:3(e)(ii) | 1 | 截图 | `test_3e_screenshot` · 整行 | — |
 
 自动测分值 19.000000，人工核对分值 2.000000，自动占比 90.48%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
@@ -198,3 +198,7 @@
 ## 原页、编号与差异记录
 
 已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。
+
+## T38c2 · D46 验证补充
+
+补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
