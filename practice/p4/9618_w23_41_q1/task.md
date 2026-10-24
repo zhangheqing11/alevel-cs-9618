@@ -93,10 +93,10 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a)(i) | 9618_w23_41:1(a)(i) | 5 | 代码 | `test_1a_iterativevowels_counts` · MP2–MP6；`test_1a_iterativevowels_is_not_recursive` · MP6 | MP1 函数头；MP6 结构与给定伪代码一致、没有多余步骤 |
-| Part 1(a)(ii) | 9618_w23_41:1(a)(ii) | 2 | 代码 | `test_1a_screenshot_house_outputs_3` · MP1–MP2 | 调用的参数是 `"house"` |
+| Part 1(a)(ii) | 9618_w23_41:1(a)(ii) | 2 | 代码 | `test_1a_screenshot_house_outputs_3` · MP1–MP2；`test_1aii_1bii_traced_main` · 实际调用、参数与数据链（D46） | 调用的参数是 `"house"` |
 | Part 1(a)(iii) | 9618_w23_41:1(a)(iii) | 1 | 截图 | `test_1a_screenshot_house_outputs_3` · 输出 3 | 截图清晰 |
 | Part 1(b)(i) | 9618_w23_41:1(b)(i) | 6 | 代码 | `test_1b_recursivevowels_counts` · MP3–MP6；`test_1b_recursivevowels_is_recursive` · MP1、MP5–MP6 | MP2 函数头（一个字符串参数） |
-| Part 1(b)(ii) | 9618_w23_41:1(b)(ii) | 1 | 代码 | `test_1b_screenshot_imagine_outputs_4` · 调用并输出 | 调用的是递归版、参数 `"imagine"` |
+| Part 1(b)(ii) | 9618_w23_41:1(b)(ii) | 1 | 代码 | `test_1b_screenshot_imagine_outputs_4` · 调用并输出；`test_1aii_1bii_traced_main` · 实际调用、参数与数据链（D46） | 调用的是递归版、参数 `"imagine"` |
 | Part 1(b)(iii) | 9618_w23_41:1(b)(iii) | 1 | 截图 | `test_1b_screenshot_imagine_outputs_4` · 输出 4 | 截图清晰 |
 
 得分点 17 个：行为可自动测 15 个，只能人工核对 2 个（1(a)(i) MP1、1(b)(i) MP2 的函数头）。
@@ -108,3 +108,9 @@
 - [ ] 1(b)(i) MP2：`def RecursiveVowels(Value):` 一个字符串参数；MP3：基本情况是长度为 0 时返回 0。
 - [ ] 1(a)(ii)、1(b)(ii)：主程序里分别用 `"house"`、`"imagine"` 调用并输出返回值。
 - [ ] 截图格：1(a)(iii) 显示 3；1(b)(iii) 显示 4。
+
+### T38c1 · D46 调用与输出核验
+
+原主程序只查 3、4 输出，补测迭代版 house、递归版 imagine 的实际调用、参数、返回值与顺序。已有输出子序列不限制说明数字，无容量问题。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
