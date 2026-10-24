@@ -162,7 +162,7 @@ HV 对应考纲 15.1，是一章纯“描述题”：没有计算，只有一张
 2. MISD（Multiple Instruction Single Data）：许多处理器各自执行不同的指令，作用于同一个数据集。
 3. MIMD（Multiple Instruction Multiple Data）：许多处理器各自执行不同的指令，作用于不同的数据集。
 
-**与 MS 对齐**　MS 每行“名称 (1) + 描述 (1)”：SIMD「many/array processors execute the same instruction using different data sets」、MISD「many processors (using different instructions) use the same data set」、MIMD「many processors (using different instructions) using different data sets」——三行各 2 分。描述必须同时说清“指令同 / 异”和“数据同 / 异”，并说出是“many processors”。
+**与 MS 对齐**　MS 每行“名称 (1) + 描述 (1)”：SIMD「many/array processors execute the same instruction using different data sets」⟦9618_s22_32:5⟧、MISD「many processors (using different instructions) use the same data set」⟦9618_s22_32:5⟧、MIMD「many processors (using different instructions) using different data sets」⟦9618_s22_32:5⟧——三行各 2 分。描述必须同时说清“指令同 / 异”和“数据同 / 异”，并说出是“many processors”。
 
 **英文作答句**　SIMD (Single Instruction Multiple Data): many / array processors execute the same instruction using different data sets. MISD (Multiple Instruction Single Data): many processors, using different instructions, use the same data set. MIMD (Multiple Instruction Multiple Data): many processors, using different instructions, use different data sets.
 

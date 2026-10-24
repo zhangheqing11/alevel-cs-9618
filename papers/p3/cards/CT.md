@@ -523,7 +523,7 @@ NEXT Index
 **识别信号**　A stack is to be set up / implemented using the information in the table；Write the pseudocode for the required declarations；Write pseudocode for a procedure to initialise the top and bottom pointers；Complete the pseudocode function Pop() / the procedure to add a data item onto the stack；Write pseudocode to input a new data item and add it to the stack using Push()。
 
 **解题思路**
-1. **先定约定**：本型语料里空栈时 Top 的取值各题不同（如 w25/33 MS 接受 –1、0、1），按该题题干约定。多数题（w23 两卷、w25_31 / w25_32、2021 扩展卷）Top 指向**栈顶那个值**（最后放进去的），空栈时 Top = Base − 1（Base 为 1 → Top 为 0；Base 为 0 → Top 为 −1）；⟦9618_w25_33:10(b)⟧ 的 MS 对初值写的是「Top pointer with appropriate value (–1, 0, 1)」，范例用 `Base ← 0`、`Top ← 0`。题目没有约定时，自己选一种，并在 Push / Pop 里保持一致（下面的模板用 Top = Base − 1）。P2-DT-16 有的题让指针指向“下一个空位”，那时顺序相反——读题时先确认。
+1. **先定约定**：本型语料里空栈时 Top 的取值各题不同（如 w25/33 MS 接受 –1、0、1），按该题题干约定。多数题（w23 两卷、w25_31 / w25_32、2021 扩展卷）Top 指向**栈顶那个值**（最后放进去的），空栈时 Top = Base − 1（Base 为 1 → Top 为 0；Base 为 0 → Top 为 −1）；⟦9618_w25_33:10(b)⟧ 的 MS 对初值写的是「Top pointer with appropriate value (–1, 0, 1)」⟦9618_w25_33:10(b)⟧，范例用 `Base ← 0`、`Top ← 0`。题目没有约定时，自己选一种，并在 Push / Pop 里保持一致（下面的模板用 Top = Base − 1）。P2-DT-16 有的题让指针指向“下一个空位”，那时顺序相反——读题时先确认。
 2. **声明**：`CONSTANT Capacity = 25`（常量用 `=`，不用 `←`，不写类型）；两个指针 `DECLARE … : INTEGER`；数组 `DECLARE Stack : ARRAY[1:25] OF REAL`（元素类型照表）。
 3. **Push（入栈）**：先判**满**（1 起数组 `Top < Max`；0 起数组 `Top < Max - 1`）→ 先 `Top ← Top + 1` → 再 `Stack[Top] ← NewItem`；满了按题目要求输出提示或返回 FALSE。
 4. **Pop（出栈）**：先判**空**（`Top >= Base`，或 `Top > -1`）→ 先取值 `Item ← Stack[Top]` → 再 `Top ← Top - 1` → 循环 / 判断结束后 `RETURN Item`。函数头 `FUNCTION Pop() RETURNS REAL`（类型 = 数组元素类型）。
