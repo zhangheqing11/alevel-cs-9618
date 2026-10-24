@@ -1,0 +1,50 @@
+{
+  "id": "9618_s25_41:3(a)(i)",
+  "kind": "past-paper",
+  "title": "Node reference tree and recursive traversal",
+  "source": {
+    "paper": "9618_s25_41",
+    "rows": [
+      "9618_s25_41:3(a)(i)",
+      "9618_s25_41:3(a)(ii)",
+      "9618_s25_41:3(a)(iii)",
+      "9618_s25_41:3(b)",
+      "9618_s25_41:3(c)(i)",
+      "9618_s25_41:3(c)(ii)",
+      "9618_s25_41:3(c)(iii)",
+      "9618_s25_41:3(d)",
+      "9618_s25_41:3(e)(i)",
+      "9618_s25_41:3(e)(ii)"
+    ]
+  },
+  "marks": 30,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-LT-03",
+    "P4-LT-04",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "binary-tree",
+    "class-definition",
+    "constructor",
+    "data-types",
+    "getter-setter",
+    "method-call",
+    "module-header",
+    "object-instantiation",
+    "object-reference",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "recursion",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

@@ -988,10 +988,182 @@
       "qp_over_ms": [
         "接口照 QP 的 `Node(Data)`、`TreeClass()` 及 get/set/InsertNode/OutputTree 名称。MS 2(a)(i) 得分点称属性 public，但 Python 范例为私有；测试接受公有或私有，只按 getter/setter 行为与题给指针约定核对。MS p.23 原页的 NumberNodes 增量实际在左右分支之外（抽文本会丢缩进），参考解保持。该算法对重复值 / 满树行为 QP 未定义，测试只插入不同整数且不超过 20 个，不额外规定溢出返回值。2(b)(ii) 7 个可选点最多 6 分。无数据文件，不复制本卷其他题的文件。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s25_41_q3",
+      "id": "9618_s25_41:3(a)(i)",
+      "paper": "9618_s25_41",
+      "marks": 30,
+      "auto_marks": 23.0,
+      "manual_marks": 7.0,
+      "auto_share": 0.7667,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-LT-03",
+        "P4-LT-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_41:3(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            4
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_41:3(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_41:3(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_41:3(b)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_41:3(c)(i)",
+          "marks": 2,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_41:3(c)(ii)",
+          "marks": 1,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_41:3(c)(iii)",
+          "marks": 6,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_41:3(d)",
+          "marks": 5,
+          "primary": "P4-LT-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_41:3(e)(i)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s25_41:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 6,
+      "qp_pages_checked": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "ms_pages_checked": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "qp_over_ms": [
+        "接口照 QP 的 Node / Tree、get/set、Insert、全局递归过程 `OutputInOrder(RootNode)`；null 用 None，不用整数下标。构造 Tree 时已有根对象，不额外规定空树构造。QP 明确相等值走右，所以包含重复值插入测试。Insert 可迭代或递归；OutputInOrder 必须递归，测试包装全局过程统计非空结点调用次数。MS p.31 的属性及 __init__ 下划线在抽文本中丢失，已看原页后照正确 Python 写法转写；没有据抽取乱码认定官方笔误。无数据文件。"
+      ]
     }
   ],
-  "count": 6,
-  "marks": 178,
-  "auto_marks": 146.642857,
-  "manual_marks": 31.357143
+  "count": 7,
+  "marks": 208,
+  "auto_marks": 169.642857,
+  "manual_marks": 38.357143
 }
