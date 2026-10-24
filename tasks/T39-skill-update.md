@@ -19,7 +19,7 @@
 5. **整卷模考流程**（新小节）：s26 的 12 份卷只用于考前限时模考（D1；s26 的 MS 原句可出现在讲解里，D44 ①）。流程：确认卷别与时长 → `python3 pipeline/mock/make_mock.py <卷 id>` 生成批改包（`output/mock/<卷>/marking.md|html`、`score.csv`）→ 学生限时作答（看原卷 QP）→ 学生按批改包自批、填 `score.csv`，学习会话复核每个丢分点 → `python3 pipeline/mock/score_mock.py <score.csv>` 汇总与估等级（`corpus/thresholds/`，学生对应的 option 见其 README）→ 把失分题型 / 技能写进 ledger 与交接。只读 `pipeline/mock/README.md` 的实际用法，命令以它为准。
 6. **`references/syllabus-map.md`**：补考纲 13–20 节 → P3 / P4 章节与题型码（取自 `papers/p3|p4/taxonomy.json` 的 `syllabus` 字段，用脚本生成表格）。
 7. **`references/few-shots.md`**：补两个短示范——P3 写代码题按 MP 批改一例、P4 一个小问的“自动测通过 + 人工清单”批改一例（行与原文取自真实语料；MS 原文用该题自己的 MS）。
-8. **学习记录表**：照 `ledger/P2.csv` 的格式（`schemas/ledger-format.md`，`utf-8-sig`，13 列）生成 `ledger/P3.csv`（79 型）与 `ledger/P4.csv`（36 型）：`类型`、`名称`、`章节`（“码 中文章名”）、`优先级`（星级取 `output/p3|p4/index.json`，先 `python3 build/build.py p3 p4`）、`状态=未学`，其余空。写一个可重复运行的生成脚本放在 `skill/cie-9618-cs-tutor/scripts/`（如 `init_ledger.py P3`，已存在的表不覆盖，除非 `--force`）。
+8. **学习记录表**：照 `ledger/P2.csv` 的格式（`schemas/ledger-format.md`，`utf-8-sig`，13 列）生成 `ledger/P3.csv`（79 型）与 `ledger/P4.csv`（36 型）：`类型`、`名称`、`章节`（“码 中文章名”）、`优先级`（星级取 `output/p3|p4/index.json`，先 `python3 build/build.py all`）、`状态=未学`，其余空。写一个可重复运行的生成脚本放在 `skill/cie-9618-cs-tutor/scripts/`（如 `init_ledger.py P3`，已存在的表不覆盖，除非 `--force`）。
 9. 过时处：全文检查与现状不符的说法（例如“P3 / P4 尚未就绪”、只提 P1 / P2 的列举、旧决策号），逐一改正。
 
 ## 允许写的路径

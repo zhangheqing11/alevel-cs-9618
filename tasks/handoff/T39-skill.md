@@ -4,7 +4,7 @@
 
 ## 执行方案
 
-1. **建 worktree**（交接 README §1，新分支 `task/T39-skill-update`）；`python3 build/build.py p1 p2 p3 p4` 生成 `output/`（ledger 星级要用 `index.json`）。
+1. **建 worktree**（交接 README §1，新分支 `task/T39-skill-update`）；`python3 build/build.py all` 生成 `output/`（ledger 星级要用 `index.json`）。
 2. **通读现有 skill**：`SKILL.md` 全文与 `references/*.md`，列出所有只提 P1 / P2、或与现状不符的句子（任务卡第 9 项），写进进度日志当清单。
 3. **核对事实来源**（改 skill 之前先读这些，命令以它们为准）：`pipeline/mock/README.md`（模考包用法）、`corpus/thresholds/README.md`（学生对应的 option、加权）、`papers/p4/practice-notes.md` 与 `schemas/exercise-format.md` 末节（P4 练习约定）、`tools/try.py`（`K=`）、`docs/DECISIONS.md` D1、D2、D31、D32、D33、D37、D38、D44、D45。
 4. **改 `SKILL.md`**（任务卡第 1–5 项）：资源表、P3 流程、P4 流程、批改纪律补充、整卷模考小节。新增内容尽量放进已有小节，或在相应位置加小节；不重排原有结构。
