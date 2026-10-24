@@ -1,0 +1,45 @@
+{
+  "id": "9618_w25_43:3(a)(i)",
+  "kind": "past-paper",
+  "title": "递归计数与不用内置函数拆分字符串",
+  "source": {
+    "paper": "9618_w25_43",
+    "rows": [
+      "9618_w25_43:3(a)(i)",
+      "9618_w25_43:3(a)(ii)",
+      "9618_w25_43:3(a)(iii)",
+      "9618_w25_43:3(b)(i)",
+      "9618_w25_43:3(b)(ii)",
+      "9618_w25_43:3(b)(iii)",
+      "9618_w25_43:3(b)(iv)"
+    ]
+  },
+  "marks": 20,
+  "types": [
+    "P4-RC-01",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-PR-02",
+    "P4-AR-04"
+  ],
+  "skills": [
+    "array-index",
+    "char-compare",
+    "char-loop",
+    "count-loop",
+    "declare-array",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "recursion",
+    "relational-ops",
+    "return-value",
+    "string-concat"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
