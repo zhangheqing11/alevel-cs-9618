@@ -1,0 +1,54 @@
+{
+  "id": "9618_w25_43:2(a)",
+  "kind": "past-paper",
+  "title": "线性队列与二进制游程压缩",
+  "source": {
+    "paper": "9618_w25_43",
+    "rows": [
+      "9618_w25_43:2(a)",
+      "9618_w25_43:2(b)",
+      "9618_w25_43:2(c)",
+      "9618_w25_43:2(d)",
+      "9618_w25_43:2(e)",
+      "9618_w25_43:2(f)(i)",
+      "9618_w25_43:2(f)(ii)"
+    ]
+  },
+  "marks": 24,
+  "types": [
+    "P4-SQ-02",
+    "P4-FL-01",
+    "P4-SQ-04",
+    "P4-PR-02",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "queue-array",
+    "module-header",
+    "boolean-return",
+    "array-index",
+    "return-value",
+    "file-open-read",
+    "file-close",
+    "loop-to-eof",
+    "procedure-call",
+    "exception-handling",
+    "output-format",
+    "sentinel-loop",
+    "char-compare",
+    "relational-ops",
+    "accumulator",
+    "string-concat",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "BinaryData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

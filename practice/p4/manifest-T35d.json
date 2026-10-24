@@ -1141,6 +1141,148 @@
       ],
       "qp_over_ms": "- Python AddNode 范例与 QP 一致，参考解保留其插入逻辑。\n- MS pp.35–36 Java/Python 写文件用追加模式，QP 只要求 new text file 且首次未提供；参考解用 w 创建文件，测试只检查首次写入，不裁决 QP 未要求的重复导出策略。\n- 3(d) 异常测试让 Tree.txt 路径成为目录，真实触发打开错误，不要求某种 try/except 写法。",
       "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_43_q2",
+      "id": "9618_w25_43:2(a)",
+      "paper": "9618_w25_43",
+      "marks": 24,
+      "auto_marks": 22.3333,
+      "manual_marks": 1.6667,
+      "auto_share": 0.9306,
+      "types": [
+        "P4-SQ-02",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-PR-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_43:2(a)",
+          "marks": 2,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:2(b)",
+          "marks": 5,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w25_43:2(c)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:2(d)",
+          "marks": 5,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 3.333333
+        },
+        {
+          "id": "9618_w25_43:2(e)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w25_43:2(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "BinaryData.txt",
+          "bytes": 67,
+          "sha256": "b01a6bdb86b953c8acb8f3c84ed1d85d7250010a9456ca3ae9efea24cd509ded",
+          "source": "9618_w25_sf_43/BinaryData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "qp_over_ms": "- MS p.21 Python 初始化多缩进一级，p.23 Enqueue 条件混入 `{` 且缺冒号；参考解修正为合法 Python。\n- MS p.27 ReadData 漏异常处理；参考解补上其 MP6 要求，源文件内容不改。\n- MS p.29 Compress 外循环为 `while NumberItems > 0 and First != \"False\"`：First 已经保存一个出队项，队列余量为 0 不代表 First 无效。该范例会漏掉单项输入及最后仅 1 项的游程。参考解/测试按 QP p.10 完整压缩，外循环只检查 First 不是字符串 False（D31）；原 MS 得分点仍保留。\n- 官方文件压缩结果仍为 MS p.31 的 19051306；附加 `1` → `11`、`01` → `0111` 等边界抓取上述缺陷。",
+      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。"
     }
   ]
 }
