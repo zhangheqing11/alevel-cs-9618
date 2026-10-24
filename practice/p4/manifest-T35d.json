@@ -893,9 +893,9 @@
       "id": "9618_w25_41:3(a)",
       "paper": "9618_w25_41",
       "marks": 25,
-      "auto_marks": 22.1667,
-      "manual_marks": 2.8333,
-      "auto_share": 0.8867,
+      "auto_marks": 22.166667,
+      "manual_marks": 2.833333,
+      "auto_share": 0.886667,
       "types": [
         "P4-OP-01",
         "P4-LT-05",
@@ -992,7 +992,10 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "tests": [
+            "test_3g_main_call_chain"
+          ]
         },
         {
           "id": "9618_w25_41:3(g)(ii)",
@@ -1017,8 +1020,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         9,
         10,
@@ -1039,7 +1042,7 @@
         36
       ],
       "qp_over_ms": "- MS p.30 Python InsertData 缺成功后的 break/return，会把一个记录写满该桶；参考解按 QP p.10 的“下一空格”要求，在写入一次后退出。\n- MS p.32 ReadData 先把 Line.strip() 赋给 Data，下一行却又用 Line.split() 覆盖，保留换行；参考解对去掉行尾后的文本 split。同时补上 MS MP6 的文件异常处理（范例漏写不等于该点不要求）。\n- HashTable 按 D10 ① 在导入时已有真实 100×10 格；InitialiseHashTable 再填空记录，不只声明空 list。\n- MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。",
-      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。"
+      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。 T38c2：补测 InitialiseHashTable → ReadData → 五次 GetRecord 的整数参数与有序返回字符串；原有输出已允许额外说明，容量为 QP 明定，无放宽项（QP p.12/MS pp.35–36）。"
     },
     {
       "directory": "practice/p4/9618_w25_42_q3",

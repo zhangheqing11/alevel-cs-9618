@@ -1,5 +1,6 @@
+import re
 """w25/41 Q3: hashed records with ten collision slots per bucket."""
-from testkit import output_lines, run_script, use_files
+from testkit import output_lines, run_script, run_script_traced, use_files
 
 
 def test_3a_public_record_constructor(sol):
@@ -107,3 +108,28 @@ def test_3g_ii_screenshot_words(candidate_path, exercise_dir):
             index += 1
         assert index < len(lines), f'missing ordered result {word}'
         index += 1
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3g_main_call_chain(candidate_path, exercise_dir):
+    """9618_w25_41:3(g)(i) MP1-MP3 (QP p.12/MS p.35): init/read, five integer GetRecord calls and actual returns."""
+    data = '528\n1128\n1828\n1062\n39\n'
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('InitialiseHashTable', 'ReadData', 'GetRecord')]
+    assert names == ['InitialiseHashTable', 'ReadData'] + ['GetRecord'] * 5
+    gets = r.called('GetRecord')
+    assert [next(iter(c.args.values())) for c in gets] == [528, 1128, 1828, 1062, 39]
+    assert [c.result for c in gets] == ['permission', 'peace', 'precedent', 'up', 'Not found']
+    position = 0
+    for c in gets:
+        position = r.stdout.index(c.result, position) + len(c.result)
+

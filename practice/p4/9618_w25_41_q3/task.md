@@ -187,7 +187,7 @@
 | Part 3(d) | 9618_w25_41:3(d) | 4 | 代码 | `test_3d_insert_collision_slots_once` · MP2、MP3、MP4 | MP1 Procedure header (and end) taking one Record parameter |
 | Part 3(e) | 9618_w25_41:3(e) | 5 | 代码 | `test_3e_reads_official_records`；`test_3e_missing_file_handled` · MP2、MP3、MP4、MP5、MP6 | MP1 Procedure header (and end), opening file and closing file (in appropriate place) |
 | Part 3(f) | 9618_w25_41:3(f) | 5 | 代码 | `test_3f_getrecord_last_collision_and_missing` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 3(g)(i) | 9618_w25_41:3(g)(i) | 3 | 代码 | `test_3g_ii_screenshot_words` · MP1、MP2、MP3 | — |
+| Part 3(g)(i) | 9618_w25_41:3(g)(i) | 3 | 代码 | `test_3g_ii_screenshot_words` · MP1、MP2、MP3；`test_3g_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 3(g)(ii) | 9618_w25_41:3(g)(ii) | 2 | 截图 | `test_3g_ii_screenshot_words` · MP1、MP2 | — |
 
 ## 人工核对清单
@@ -208,3 +208,7 @@
 - MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。
 
 3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。
+
+## T38c2 · D46 验证补充
+
+补测 InitialiseHashTable → ReadData → 五次 GetRecord 的整数参数与有序返回字符串；原有输出已允许额外说明，容量为 QP 明定，无放宽项（QP p.12/MS pp.35–36）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
