@@ -144,7 +144,7 @@ P1 出现最多的命令词依次是 Describe、Explain、Complete、Identify、
 | Draw / Complete the diagram | 画逻辑电路、E-R 图、拓扑、连线 | 该有的连接都有、没有多余的连接；连线题看清“全对才给分”还是按条给 | ⟦9618_w22_11:4(a)⟧ |
 | Tick | 每行勾一个（或一个或多个）框 | 按勾对的行数分档；带 justify 时分在理由上 | ⟦9618_w23_12:6(a)⟧ |
 | Convert / Calculate / Show your working | 进制转换、文件大小、二进制运算 | 「1 mark for working; 1 mark for answer」⟦9618_s23_11:1(b)(ii)⟧：写出过程，单位与位数按要求 | ⟦9618_s23_11:1(b)(ii)⟧ |
-| Trace | 逐条执行汇编程序、填跟踪表 | 「1 mark for each set of highlighted rows」⟦9618_w22_12:7(a)⟧：每一组行都要对，值只在改变时写 | ⟦9618_w22_12:7(a)⟧ |
+| Trace | 逐条执行汇编程序、填跟踪表 | 「1 mark for each set of highlighted rows」⟦9618_w22_12:7(a)⟧：每一组行都要对；哪些格要填按该题 MS 的表（执行了的赋值就记，值没变也记，没执行的才空着——D40），不要自己发明“只记变化” | ⟦9618_w22_12:7(a)⟧ |
 | Write（逻辑表达式） | 由电路或描述写出布尔表达式 | 按子表达式给分；括号表明运算顺序 | ⟦9618_w24_11:5(b)⟧ |
 | Write（SQL 脚本） | 写 DDL 或 DML 语句 | 一子句一分；表名、字段名照抄；字符串加引号、日期加 #（见 DB 章 SQL 速查） | ⟦9618_w25_11:2(c)(ii)⟧ |
 | Circle | 在给出的数据上圈出答案 | 只圈一个，圈清楚 | ⟦9618_w25_12:6(c)(ii)⟧ |
