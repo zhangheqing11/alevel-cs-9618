@@ -450,10 +450,209 @@
       "qp_over_ms": [
         "接口采用 QP 的 Vehicle / Helicopter 方法名，2(c) 未命名输出过程采用 MS 的对象方法 `OutputCurrentPosition()`（父、子类各一份）。`Helicopter(ID, MaxSpeed, IncreaseAmount, VerticalChange, MaxHeight)`；允许 `super()` 或显式父类调用。MS p.21 高度越界时写 `MaxHeight`，漏了 `self.__`；参考解修正为 `self.__MaxHeight`，并测试越过最大高度。MS 构造方法漏写 HorizontalPosition 的类型，补 INTEGER 注释。QP 类图的 `GetVerticalPosition()` 同时实现；它未有独立计分小问。截图只断言 MS p.25 的 60、40、120、80、6，提示文字人工核对。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s23_42_q3",
+      "id": "9618_s23_42:3(a)(i)",
+      "paper": "9618_s23_42",
+      "marks": 33,
+      "auto_marks": 27.0,
+      "manual_marks": 6.0,
+      "auto_share": 0.8182,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-04",
+        "P4-OP-05",
+        "P4-FL-02",
+        "P4-FL-01",
+        "P4-SR-01",
+        "P4-AR-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_42:3(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_42:3(a)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s23_42:3(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_42:3(a)(iv)",
+          "marks": 2,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_42:3(b)(i)",
+          "marks": 4,
+          "primary": "P4-OP-04",
+          "auto_mps": [
+            1,
+            3,
+            4
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_42:3(b)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_42:3(c)",
+          "marks": 7,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_s23_42:3(d)",
+          "marks": 4,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s23_42:3(e)(i)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "Employees.txt",
+          "bytes": 267,
+          "sha256": "cda0503674054a10e52636cece18af00875678b38667e03e345ecf006dc1b983",
+          "source": "9618_s23_sf_42/06_9618_42_2023_source_files/Employees.txt",
+          "sha256_matches_source_files_p4": true
+        },
+        {
+          "name": "HoursWeek1.txt",
+          "bytes": 102,
+          "sha256": "cd81e133cdf64309f21483eb30df32d8360de5b8784a6be74747011e7ac5681c",
+          "source": "9618_s23_sf_42/06_9618_42_2023_source_files/HoursWeek1.txt",
+          "sha256_matches_source_files_p4": true
+        }
+      ],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "ms_pages_checked": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "qp_over_ms": [
+        "构造参数采用 MS：`Employee(EmpNum, Pay, Job)` 与 `Manager(EmpNum, Pay, Job, Bonus)`。全局 `EmployeeArray` 为 8 个对象的 list；`EnterHours()` 无参数。周编号 1–52 映射 0–51，不测试 QP 未定义的无效周。MS p.35 / p.36 将 EmployeeArray 写成 Employees，p.36 `for(Y in range(0,8):` 是语法笔误；统一修正，输入 ID 保持 STRING、去行尾，完整读取工时对并关闭文件。p.30 的百分比公式照原页实现。p.37 截图顺序跟工时文件不同于 EmployeeArray；QP 未规定输出顺序，自动测核对全部 ID/总额映射，接受浮点显示差异，不强制排序。文件开关位置及调用结构人工补核。3(c) 8 个可选点最多 7 分，3(d) 6 个可选点最多 4 分。"
+      ]
     }
   ],
-  "count": 3,
-  "marks": 84,
-  "auto_marks": 68.5,
-  "manual_marks": 15.5
+  "count": 4,
+  "marks": 117,
+  "auto_marks": 95.5,
+  "manual_marks": 21.5
 }
