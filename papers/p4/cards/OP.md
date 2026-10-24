@@ -180,7 +180,7 @@ if __name__ == "__main__":
 **解题思路**
 1. getter：`def GetX(self):`，`return self.__X`。本题“no parameter”指无显式业务参数，Python 仍必须有 `self`。
 2. setter：`def SetX(self, XP):`，`self.__X = XP`；值来自参数，不在方法里另读 input。
-3. 方法缩进在原来的类里；调用时对象写在点号前，`Car.GetCurrentSpeed()`。
+3. 方法缩进在原来的类里；调用时对象写在点号前，如 `ThisNode.GetLeft()`。
 4. 返回和输出分开：getter 返回给调用者；调用者需要展示时再 print。
 5. 核对题目点名的全部方法，不能只写一个。不是每个 getter 都单独两分，按本格 MS 的分组清单给分。
 
@@ -421,7 +421,7 @@ class Bird:
 
 **易错与失分**　不能把 N/S 改成 X 或把 W 写成加法；分钟不是小时，71 km/h 飞 30 分钟应移动 35.5。Move 中不用 print 代替状态赋值，GetPosition 中不用 print 代替 return。
 
-旧代表题的限速写法另须按同题 MS 判：考官报告讨论超过上限时不再加速的写法（9618_s23_41:2(a)(iv)），但 MS p.17 第 2 点明确接受 remove increase or assign maximum，即超过时**撤销本次增量或赋最大值**都可取该点；ER 的易错描述不覆盖 MS 的接受口径。推荐模板采用赋最大值，并在所有路径上更新水平位置；不能把这条单题限速规则套到 Bird 的坐标上。
+旧代表题的限速写法另须按同题 MS 判：考官报告讨论超过上限时不再加速的写法（9618_s23_41:2(a)(iv)），但 MS p.17 第 2 点明确接受 remove increase or assign maximum，即超过时**撤销本次增量或赋最大值**都可取该点；ER 的易错描述不覆盖 MS 的接受口径。Vehicle 的推荐实现（OP-01、OP-04、OP-05 的完整作答）采用赋最大值，并在所有路径上更新水平位置；不能把这条单题限速规则套到 Bird 的坐标上。
 
 #### 代表题精讲　⟦9618_w25_42:1(a)(iv)⟧
 
