@@ -26,10 +26,8 @@ def run_seeded(candidate_path, tmp_path, seed):
 
 
 def ints(line):
-    parts = [p for p in re.split(r"[\s,;|]+", line.strip()) if p]
-    if parts and all(re.fullmatch(r"-?\d+", p) for p in parts):
-        return [int(p) for p in parts]
-    return None
+    match = re.search(r"-?\d+(?:[ \t,;|]+-?\d+){9}(?!\d)", line)
+    return [int(x) for x in re.findall(r"-?\d+", match.group())] if match else None
 
 
 def grids(res):
@@ -149,3 +147,32 @@ def test_2c_ii_screenshot_index_and_minus_1(seeded):
     values = [int(v) for ln in tail for v in re.findall(r"-?\d+", ln)]
     assert -1 in values, "no -1 output for the number that is not in the first line"
     assert any(0 <= v <= 9 for v in values), "no index 0..9 output for the number that is found"
+
+
+def test_2bii_cii_traced_main(candidate_path):
+    """9618_s22_42:2(b)(ii) MP3; 2(c)(ii) MP1–2; QP pp.5–6/MS pp.17,24."""
+    import copy
+    import random
+    from testkit import run_script_traced
+    state = random.getstate()
+    try:
+        random.seed(2022)
+        r = run_script_traced(candidate_path)
+    finally:
+        random.setstate(state)
+    assert r.error is None
+    prints = r.called("PrintArray") or r.called("Printarray")
+    searches = r.called("BinarySearch")
+    assert len(prints) >= 2 and searches
+    # testkit snapshots nested lists shallowly: copy on CALL before sorting.
+    # Values at entry/exit for the grid itself remain checked by screenshot tests.
+    assert next(i for i, c in enumerate(r.calls) if c is prints[0]) < next(i for i, c in enumerate(r.calls) if c is prints[-1]) < next(i for i, c in enumerate(r.calls) if c is searches[0])
+    seen = []
+    for c in searches:
+        if c.args["Lower"] == 0 and c.args["Upper"] == 9:
+            values = c.args["SearchArray"][0]
+            expected = next((i for i, x in enumerate(values) if x == c.args["SearchValue"]), -1)
+            assert c.result == expected
+            assert c.result in [int(x) for x in re.findall(r"-?\d+", r.stdout)]
+            seen.append(c.result)
+    assert -1 in seen and any(0 <= x <= 9 for x in seen)

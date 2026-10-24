@@ -269,7 +269,7 @@
         }
       ],
       "files": [],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 9,
       "qp_pages_checked": [
         4,
@@ -285,7 +285,7 @@
         "2(c)(i): MS Python example tests `if Upper >= 0`; reference follows the QP `IF Upper >= Lower`",
         "2(c): the QP Mid formula (Lower + (Upper - 1)) DIV 2 recurses forever for some positions; tests use only cases the faithful translation answers correctly (standard formula also passes)"
       ],
-      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties."
+      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s23_41_q1",

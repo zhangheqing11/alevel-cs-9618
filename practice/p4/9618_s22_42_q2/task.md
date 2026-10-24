@@ -107,10 +107,10 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a) | 9618_s22_42:2(a) | 4 | 代码 | `test_2a_ten_by_ten_random_1_to_100` · MP1–MP4；`test_2a_values_are_random` · MP4 | MP1 数组局部于主程序；MP2 注释写明 INTEGER（D10 ①） |
 | Part 2(b)(i) | 9618_s22_42:2(b)(i) | 5 | 代码 | `test_2b_i_bubble_sort_each_line_ascending` · MP1–MP5；`test_2b_i_no_builtin_sort`（QP 禁用内置排序） | 三重循环照伪代码（MP1 外层、MP2 第二层、MP3 内层界） |
-| Part 2(b)(ii) | 9618_s22_42:2(b)(ii) | 3 | 代码 | `test_2b_iii_screenshot_unsorted_then_sorted` · MP2–MP3（每行一整行、排序前后各调用一次） | MP1 过程头 |
+| Part 2(b)(ii) | 9618_s22_42:2(b)(ii) | 3 | 代码 | `test_2b_iii_screenshot_unsorted_then_sorted` · MP2–MP3（每行一整行、排序前后各调用一次）；`test_2bii_cii_traced_main` · 实际调用、参数与数据链（D46） | MP1 过程头 |
 | Part 2(b)(iii) | 9618_s22_42:2(b)(iii) | 1 | 截图 | `test_2b_iii_screenshot_unsorted_then_sorted` · 先未排序、后在一个维度上排好（MS p.21 样例） | 截图清晰 |
 | Part 2(c)(i) | 9618_s22_42:2(c)(i) | 8 | 代码 | `test_2c_i_finds_value_in_first_row`、`test_2c_i_not_found_returns_minus_1` · MP1（六个空：`2`、`SearchValue`、`Mid`、`Lower`、`Upper`、`-1`）、MP3；`test_2c_i_is_recursive` · MP2 | MP1 六个空逐句对照 QP；MP2 函数头参数；MP3 用整数除法 |
-| Part 2(c)(ii) | 9618_s22_42:2(c)(ii) | 2 | 截图 | `test_2c_ii_screenshot_index_and_minus_1` · MP1（找到时输出下标）、MP2（找不到输出 –1） | 截图里的两个测试数确实一个在第一行、一个不在 |
+| Part 2(c)(ii) | 9618_s22_42:2(c)(ii) | 2 | 截图 | `test_2c_ii_screenshot_index_and_minus_1` · MP1（找到时输出下标）、MP2（找不到输出 –1）；`test_2bii_cii_traced_main` · 实际调用、参数与数据链（D46） | 截图里的两个测试数确实一个在第一行、一个不在 |
 
 ## 人工核对清单
 
@@ -125,3 +125,9 @@
 - MS 的 Python 范例有笔误：2(c)(i) 把条件写成 `if Upper >= 0`（QP 是 `Upper >= Lower`）、`If` 大写；2(b)(ii) 主程序里调用 `printarray`（定义是 `Printarray`）。参考解按 QP 写，测试按 QP 的要求判（D31）。
 - QP 的 `Mid` 公式本身有缺陷（见上）：参考解照 QP 写，测试只用照 QP 能正确返回的情形，标准写法同样能过。
 - 本题 MS 用圆点列得分点，不印编号。2(c)(i) 语料把「1 mark for each completed statement (6)」记为 MP1（6 分），两个圆点记为 MP2、MP3。
+
+### T38c1 · D46 调用与输出核验
+
+增加排序前后真实 PrintArray 调用与两个 BinarySearch 的参数/返回结果观测；QP 网格每行十个值的要求保留，但允许行前有 Row 1 等标签。testkit 对二维数组仅浅拷贝，因此入场原值由现有截图前后对比验证，不以变异后的调用快照证明。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
