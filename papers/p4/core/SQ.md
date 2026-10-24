@@ -108,7 +108,9 @@ def Enqueue(RecordToAdd):         # RecordToAdd : SaleData, returns INTEGER
 | 出到空为止 | `Value ← Pop()` / `WHILE Value <> -999` / … / `Value ← Pop()` / `ENDWHILE` | `Value = Pop()` / `while Value != -999:` / … / `Value = Pop()` |
 | 调用并检查返回值 | `IF Push(Item) = FALSE THEN` / `OUTPUT "Stack full"` / `ENDIF` | `if Push(Item) == False: print("Stack full")` |
 | 只调一次 | `Result ← Dequeue()` 后用 `Result` | `Result = Dequeue()` 后用 `Result`；不要在 `if Dequeue() == …` 里再调一次 |
-| 放回 | `CALL PushAnimal(AnimalReturned)`（函数结果不用时） | `PushAnimal(AnimalReturned)` |
+| 放回 | `DECLARE Stored : BOOLEAN` / `Stored ← PushAnimal(AnimalReturned)` | `PushAnimal(AnimalReturned)` |
+
+`PushAnimal` 返回 BOOLEAN（9618_s23_41 QP p.8）；伪代码调用函数必须作为表达式的一部分，不能用 `CALL`（2027–29 指南 p.23 §8.2）。即使后续不用成功标志，也先将返回值存入 `Stored`；Python 可以直接调用并忽略返回值。
 
 Python 的 `while` 是前测循环，相当于伪代码的 `WHILE … ENDWHILE`；伪代码的后测循环 `REPEAT … UNTIL 条件` 在 Python 里写成 `while True:` … `if 条件: break`。
 

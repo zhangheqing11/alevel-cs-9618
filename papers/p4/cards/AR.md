@@ -531,7 +531,7 @@ if __name__ == "__main__":
 | 2 | … containing a 1D array of (100) integers QueueArray | `self.QueueArray = [-1] * 100` | `record-type`、`declare-array` |
 | 3 | … containing HeadPointer and TailPointer as integers | 两个 `self.` 属性，注释 INTEGER | `record-type`、`data-types` |
 
-字段名：QP p.8 印的是 `Headpointer`、`Tailpointer`（小写 p），MS 写 `HeadPointer`、`TailPointer`。本作答照 QP 抄。2(b) 的三个得分点是“新建记录”“头指针 –1、尾指针 0”“100 个元素都置 –1”，主程序三段各对一点。
+字段名：QP p.8 印的是 `Headpointer`、`Tailpointer`（小写 p），MS 写 `HeadPointer`、`TailPointer`。本作答统一采用 MS 的 `HeadPointer`、`TailPointer`；QP 与 MS 的大小写不一致，代码中须保持同一种拼法。2(b) 的三个得分点是“新建记录”“头指针 –1、尾指针 0”“100 个元素都置 –1”，主程序三段各对一点。
 
 **证据格怎么交**　2(a) 格贴整个 `class Queue`；2(b) 格贴 TheQueue = Queue()，其构造方法已设置全部初值。后续 Enqueue、ReturnAllData、Dequeue 分别进 2(c)、2(d)、2(f)；2(e)(ii) 与 2(g)(ii) 按各自数据截图，显示拒绝 −1、全部有效输入及出队结果。
 
