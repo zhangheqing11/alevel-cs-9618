@@ -1305,6 +1305,163 @@
         32
       ],
       "notes": "已看 QP pp.6–8、MS pp.19–32 全部渲染图并放大 MS p.32 截图，核对 evidence.doc 9 格。MS p.32 61个键逐项核对，官方数据重算与图一致。MS Python class Record 与 QP NewRecord 不一致，按 QP 命名；MS PrintSpare 无上界检查，全100格非空会越界，参考解补 X<100，保留按连续填入顺序输出（D31）。Initialise 采用下标赋值满足固定大小数组，不对空 list append。2(a) 两点仅声明结构/类型，分值归人工，字段值测试作辅助。2(e) 六可选点 max5。未印数字MP；语料圆点序号一致。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_43_q1",
+      "id": "9618_s25_43:1(a)",
+      "paper": "9618_s25_43",
+      "marks": 26,
+      "auto_marks": 24.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.923077,
+      "types": [
+        "P4-SQ-02",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_43:1(a)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(b)",
+          "marks": 6,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1b_enqueue_full"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(c)",
+          "marks": 5,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1c_dequeue_fifo_empty"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(d)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1d_official_file",
+            "test_1d_unknown_length_overflow_and_missing"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(e)(i)",
+          "marks": 5,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_screenshot",
+            "test_1e_main_uses_dequeue_until_sentinel"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_screenshot"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "QueueData.txt",
+          "bytes": 174,
+          "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5",
+          "source": "9618_s25_sf_43/QueueData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": "已看 QP pp.2–3、MS pp.7–18 全部渲染图，核对 evidence.doc 6 格。MS p.18 截图3059，官方文件运行一致。MS Python CreateQueue 在第一次满时 break；参考解继续读到 EOF，符合 QP 每行调用和未知行数要求，测试允许满提示一次或多次（MS MP5 明文）。MP1只考函数头与文件打开/关闭位置，归人工；MP6行为测缺文件，所有访问是否在try仍人工核对。其余采用 MS Python，无给分编号差异。"
     }
   ]
 }
