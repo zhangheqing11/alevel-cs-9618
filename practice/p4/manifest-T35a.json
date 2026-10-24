@@ -808,7 +808,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 16,
       "qp_pages_checked": [
         2,
@@ -823,7 +823,7 @@
         "1(a)/1(c): MS Python example sets NumberWords = len(WordArray) (main word included) and then mixes NumberWords-1 and NumberWords+1; QP and MS MP7 say NumberWords counts answers only, reference and tests follow QP",
         "1(d)(iii): MS p.14 screenshot shows an extra debug line (97); tests check only the values the MS lists"
       ],
-      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens."
+      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_42_q3",
