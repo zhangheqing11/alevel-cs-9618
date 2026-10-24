@@ -1,0 +1,54 @@
+{
+  "id": "9618_w25_42:2(a)",
+  "kind": "past-paper",
+  "title": "随机数组：冒泡排序与递归二分查找",
+  "source": {
+    "paper": "9618_w25_42",
+    "rows": [
+      "9618_w25_42:2(a)",
+      "9618_w25_42:2(b)",
+      "9618_w25_42:2(c)",
+      "9618_w25_42:2(d)(i)",
+      "9618_w25_42:2(d)(ii)",
+      "9618_w25_42:2(e)",
+      "9618_w25_42:2(f)(i)",
+      "9618_w25_42:2(f)(ii)"
+    ]
+  },
+  "marks": 26,
+  "types": [
+    "P4-AR-01",
+    "P4-AR-04",
+    "P4-SR-03",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-SR-02",
+    "P4-RC-01"
+  ],
+  "skills": [
+    "binary-search",
+    "bubble-sort",
+    "count-loop",
+    "declare-array",
+    "div-mod",
+    "input-prompt",
+    "linear-search",
+    "loop-bounds",
+    "module-header",
+    "nested-if",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "random-numbers",
+    "recursion",
+    "relational-ops",
+    "return-value",
+    "test-input-sequence",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

@@ -1,0 +1,39 @@
+{
+  "id": "9618_w23_42:2(a)(i)",
+  "kind": "past-paper",
+  "title": "因数和：迭代与递归填空",
+  "source": {
+    "paper": "9618_w23_42",
+    "rows": [
+      "9618_w23_42:2(a)(i)",
+      "9618_w23_42:2(a)(ii)",
+      "9618_w23_42:2(a)(iii)",
+      "9618_w23_42:2(b)(i)",
+      "9618_w23_42:2(b)(ii)",
+      "9618_w23_42:2(b)(iii)"
+    ]
+  },
+  "marks": 17,
+  "types": [
+    "P4-PR-03",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-RC-01"
+  ],
+  "skills": [
+    "accumulator",
+    "count-loop",
+    "div-mod",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "recursion",
+    "return-value",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

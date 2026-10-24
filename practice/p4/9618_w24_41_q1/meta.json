@@ -1,0 +1,53 @@
+{
+  "id": "9618_w24_41:1(a)",
+  "kind": "past-paper",
+  "title": "颜色字符串：逐字符比较与冒泡排序",
+  "source": {
+    "paper": "9618_w24_41",
+    "rows": [
+      "9618_w24_41:1(a)",
+      "9618_w24_41:1(b)(i)",
+      "9618_w24_41:1(b)(ii)",
+      "9618_w24_41:1(b)(iii)",
+      "9618_w24_41:1(c)",
+      "9618_w24_41:1(d)(i)",
+      "9618_w24_41:1(d)(ii)",
+      "9618_w24_41:1(d)(iii)"
+    ]
+  },
+  "marks": 22,
+  "types": [
+    "P4-FL-01",
+    "P4-AR-04",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-PR-02",
+    "P4-SR-03"
+  ],
+  "skills": [
+    "array-index",
+    "bubble-sort",
+    "char-compare",
+    "char-loop",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "loop-to-eof",
+    "module-header",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "return-value",
+    "string-concat",
+    "string-index"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Data.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

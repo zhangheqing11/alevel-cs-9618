@@ -1,0 +1,49 @@
+{
+  "id": "9618_w22_42:1(a)",
+  "kind": "past-paper",
+  "title": "作业优先级：二维数组与插入排序",
+  "source": {
+    "paper": "9618_w22_42",
+    "rows": [
+      "9618_w22_42:1(a)",
+      "9618_w22_42:1(b)",
+      "9618_w22_42:1(c)",
+      "9618_w22_42:1(d)",
+      "9618_w22_42:1(e)",
+      "9618_w22_42:1(f)",
+      "9618_w22_42:1(g)(i)",
+      "9618_w22_42:1(g)(ii)"
+    ]
+  },
+  "marks": 23,
+  "types": [
+    "P4-AR-02",
+    "P4-MP-01",
+    "P4-SR-04",
+    "P4-AR-04",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-2d",
+    "array-index",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "declare-variables",
+    "global-scope",
+    "initialise-variables",
+    "insertion-sort",
+    "module-header",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "shift-values",
+    "string-concat"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

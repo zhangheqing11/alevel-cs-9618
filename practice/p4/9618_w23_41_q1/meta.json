@@ -1,0 +1,42 @@
+{
+  "id": "9618_w23_41:1(a)(i)",
+  "kind": "past-paper",
+  "title": "数元音：迭代改递归",
+  "source": {
+    "paper": "9618_w23_41",
+    "rows": [
+      "9618_w23_41:1(a)(i)",
+      "9618_w23_41:1(a)(ii)",
+      "9618_w23_41:1(a)(iii)",
+      "9618_w23_41:1(b)(i)",
+      "9618_w23_41:1(b)(ii)",
+      "9618_w23_41:1(b)(iii)"
+    ]
+  },
+  "marks": 16,
+  "types": [
+    "P4-PR-02",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-RC-02"
+  ],
+  "skills": [
+    "accumulator",
+    "char-compare",
+    "count-loop",
+    "logic-ops",
+    "loop-bounds",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "recursion",
+    "return-value",
+    "string-functions",
+    "string-index",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
