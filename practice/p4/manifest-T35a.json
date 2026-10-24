@@ -1184,6 +1184,149 @@
         "未知/损坏颜色和文件缺失时的返回数组内容 QP 未定义，测试不替题目规定；文件不存在须有异常消息。输出措辞不固定。官方空色文件一并复制，追加测试不覆写已有行。"
       ],
       "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_43_q2",
+      "id": "9618_s25_43:2(a)",
+      "paper": "9618_s25_43",
+      "marks": 20,
+      "auto_marks": 19.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.95,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-04",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-SR-02",
+        "P4-MP-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_43:2(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:2(b)",
+          "marks": 5,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_43:2(c)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(d)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:2(e)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_43:2(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 8,
+      "qp_pages_checked": [
+        4,
+        5,
+        6
+      ],
+      "ms_pages_checked": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "qp_over_ms": [
+        "`InsertionSort(DataArray)` 返回升序数组；`OutputArray(DataArray)` 无返回值，按 QP 输出一行空格分隔；`Search(DataArray, ItemToFind)` 返回下标或 −1。无数据文件，不复制本卷其他题目的 QueueData.txt。",
+        "本题 Python MS 范例与 QP 无需作行为修正。2(c) 的 Java / VB 范例跳过值 −1，QP 要求输出每个元素，本练习一律按 QP 输出所有元素（含负整数）。允许迭代或递归二分查找，排序须为插入排序。",
+        "截图测试按 MS p.25 / p.32 的数值与顺序断言，不固定说明文字；单行空格格式只在 QP 明确要求的 OutputArray 中检查。"
+      ],
+      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。"
     }
   ],
   "count": 6,
