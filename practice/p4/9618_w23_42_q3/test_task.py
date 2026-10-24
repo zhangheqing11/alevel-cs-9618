@@ -74,8 +74,8 @@ def test_3diii_magic_screenshot(candidate_path):
     assert re.search(r'Light\D+5\D+90(?:\.0)?\b',r.stdout)
 
 
-def test_3main_call_chain(candidate_path, exercise_dir):
-    """9618_w23_42:3(b)(ii) MS p.29; 9618_w23_42:3(d)(ii) MS p.34: observe required calls, parameters and returned output (D46)."""
+def test_3bii_3dii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w23_42:3(b)(ii) MS p.29; 9618_w23_42:3(d)(ii) MS p.34: 3(b)(ii) MP1–MP3; 3(d)(ii) whole; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

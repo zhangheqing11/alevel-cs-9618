@@ -27,11 +27,20 @@ def test_2b_missing_file(sol,monkeypatch,tmp_path,capsys):
     assert capsys.readouterr().out.strip()
 
 @pytest.mark.parametrize("evergreen,ending",[("Yes","does not lose its leaves"),("No","loses its leaves each year")])
-def test_2c_printtrees_both_messages(sol,capsys,evergreen,ending):
+def test_2c_printtrees_both_messages(sol,capsys,monkeypatch,evergreen,ending):
     """9618_s24_41:2(c) MP1-MP4: getters, all attributes, evergreen-specific message."""
-    sol.PrintTrees(sol.Tree("Oak",20,500,300,evergreen))
+    tree = sol.Tree("Oak",20,500,300,evergreen)
+    calls = []
+    for name in ("GetTreeName","GetGrowth","GetMaxHeight","GetMaxWidth","GetEvergreen"):
+        original = getattr(tree, name)
+        def spy(original=original, name=name):
+            calls.append(name)
+            return original()
+        monkeypatch.setattr(tree, name, spy)
+    sol.PrintTrees(tree)
+    assert set(calls) == {"GetTreeName","GetGrowth","GetMaxHeight","GetMaxWidth","GetEvergreen"}
     actual=" ".join(capsys.readouterr().out.split()).rstrip(".")
-    assert actual=="Oak has a maximum height 500 a maximum width 300 and grows 20 cm a year. It "+ending
+    assert "Oak has a maximum height 500 a maximum width 300 and grows 20 cm a year. It " + ending in actual
 
 def test_2e_filter_inclusive_all_requirements_and_years(sol,monkeypatch,capsys):
     """9618_s24_41:2(e)(i) MP1-MP6; 2(e)(ii) MP1-MP2: filter AND, inclusive bounds, selected growth."""
@@ -41,7 +50,7 @@ def test_2e_filter_inclusive_all_requirements_and_years(sol,monkeypatch,capsys):
     feed_input(monkeypatch,"lose","400","200","Exact","40")
     sol.ChooseTree(trees)
     assert shown==["Exact","Small"]
-    assert re.findall(r"\d+(?:\.\d+)?",capsys.readouterr().out)[-1] in ["12","12.0"]
+    assert any(float(v) == 12 for v in re.findall(r"\d+(?:\.\d+)?",capsys.readouterr().out))
 
 def test_2e_no_suitable_trees(sol,monkeypatch,capsys):
     """9618_s24_41:2(e)(i) MP7: no match message and no request to buy from an empty list."""
@@ -53,15 +62,16 @@ def test_2d_ii_and_2e_iii_screenshots(candidate_path,exercise_dir):
     """9618_s24_41:2(d)(i) MP1-MP2; 2(d)(ii) whole; 2(e)(iii) MP1-MP2: Beech, two conifers, 3/3.75/4."""
     result=run_script(candidate_path,stdin="keep\n400\n200\nBlue Conifer\n100\n",files_dir=exercise_dir / "files")
     assert result.returncode==0,result.stderr
-    assert "Beech has a maximum height 400" in result.stdout
-    assert "Blue Conifer has a maximum height 250" in result.stdout
-    assert "Green Conifer has a maximum height 300" in result.stdout
-    tail=result.stdout.split("Green Conifer")[-1]
-    assert float(re.findall(r"\d+(?:\.\d+)?",tail)[-1]) in [3,3.75,4]
+    text = " ".join(result.stdout.split())
+    assert "Beech has a maximum height 400" in text
+    assert "Blue Conifer has a maximum height 250" in text
+    assert "Green Conifer has a maximum height 300" in text
+    tail = text.split("Green Conifer")[-1]
+    assert any(float(v) in [3,3.75,4] for v in re.findall(r"\d+(?:\.\d+)?",tail))
 
 
 def test_2d_2e_main_call_chain(candidate_path, exercise_dir):
-    """9618_s24_41:2(d)(i) MP1–MP2, 2(e)(iii) MP1; MS pp.21,28: pass returned trees onward."""
+    """9618_s24_41:2(d)(i) MP1–MP2, 2(e)(iii) MP1; MS pp.22,28: pass returned trees onward."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin="keep\n400\n200\nBlue Conifer\n100\n", files_dir=exercise_dir / "files")
     assert r.error is None, r.error

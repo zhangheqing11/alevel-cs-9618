@@ -150,9 +150,9 @@ CheckHealth()                                 If the health is 0 or less, it ret
 | Part 2(b) | 9618_s22_41:2(b) | 2 | 代码 | `test_2b_getter` · MP2 | MP1 |
 | Part 2(c) | 9618_s22_41:2(c) | 2 | 代码 | `test_2c_change_health_accumulates` · MP2 | MP1 |
 | Part 2(d) | 9618_s22_41:2(d) | 2 | 代码 | `test_2d_health_zero_boundary` · MP1, MP2 | — |
-| Part 2(e) | 9618_s22_41:2(e) | 3 | 代码 | `test_2main_call_chain` / `test_2g_ii_screenshot_shield` · MP1, MP2, MP3 | — |
+| Part 2(e) | 9618_s22_41:2(e) | 3 | 代码 | `test_2e_2gi_main_call_chain` / `test_2g_ii_screenshot_shield` · MP1, MP2, MP3 | — |
 | Part 2(f) | 9618_s22_41:2(f) | 8 | 代码 | `test_2f_defend_calls_methods_and_returns_object` · MP2, MP3, MP4, MP5, MP6, MP7, MP8, MP9, MP10 | MP1 |
-| Part 2(g)(i) | 9618_s22_41:2(g)(i) | 2 | 代码 | `test_2main_call_chain` / `test_2g_ii_screenshot_shield` · MP1,  | MP2（调用后赋值 / 返回值比较使用关系人工核对）；  |
+| Part 2(g)(i) | 9618_s22_41:2(g)(i) | 2 | 代码 | `test_2e_2gi_main_call_chain` / `test_2g_ii_screenshot_shield` · MP1,  | MP2（调用后赋值 / 返回值比较使用关系人工核对）；  |
 | Part 2(g)(ii) | 9618_s22_41:2(g)(ii) | 1 | 截图 | `test_2g_ii_screenshot_shield` · 整行 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。

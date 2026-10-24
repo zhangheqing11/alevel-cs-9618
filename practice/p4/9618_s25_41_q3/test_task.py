@@ -58,8 +58,8 @@ def contains_values(text, expected):
     return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
 
 
-def test_3main_call_chain(candidate_path, exercise_dir):
-    """9618_s25_41:3(e)(i) MS p.41: observe required calls, parameters and returned output (D46)."""
+def test_3ei_main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_41:3(e)(i) MS p.41: 3(e)(i) MP1–MP3; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

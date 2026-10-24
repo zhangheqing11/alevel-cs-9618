@@ -58,14 +58,15 @@ def test_2gii_screenshot(candidate_path,exercise_dir):
     assert re.search(r'qui.*83.*9',r.stdout,re.I | re.S)
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_w22_42:2(f) MS p.18; 9618_w22_42:2(g)(i) MS p.19: observe required calls, parameters and returned output (D46)."""
+@pytest.mark.parametrize("move,args", [("A",[-1,0]),("D",[1,0]),("W",[0,1]),("S",[0,-1])])
+def test_2f_2gi_main_call_chain(candidate_path, exercise_dir, move, args):
+    """9618_w22_42:2(f) MS p.18; 9618_w22_42:2(g)(i) MS p.19: 2(f) MP3–MP7; 2(g)(i) MP2; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
-    r = run_script_traced(candidate_path, stdin='THOMAS\nqui\nX\nA\n', files_dir=exercise_dir / "files")
+    r = run_script_traced(candidate_path, stdin=f"THOMAS\nqui\nX\n{move}\n", files_dir=exercise_dir / "files")
     assert r.error is None, r.error
 
     changes = r.called("ChangePosition")
-    assert len(changes) == 1 and list(changes[0].args.values()) == [-1,0]
+    assert len(changes) == 1 and list(changes[0].args.values()) == args
     for name in ("GetName","GetX","GetY"):
         assert r.called(name)
     assert str(r.called("GetX")[-1].result) in r.stdout

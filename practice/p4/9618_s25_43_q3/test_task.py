@@ -9,11 +9,19 @@ def test_3a_node_references(sol):
     a.SetNextNode(b)
     assert a.GetNextNode() is b
 
-def test_3b_i_ii_iii_empty_and_head_insertion(sol):
+def test_3b_i_ii_iii_empty_and_head_insertion(sol,monkeypatch):
     """9618_s25_43:3(b)(i) MP2; 3(b)(ii) MP2-MP4; 3(b)(iii) MP1-MP3: prepend and traverse."""
     linked=sol.LinkedList()
     assert linked.Traverse()==""
+    calls = []
+    original = sol.Node.SetNextNode
+    def spy(self,node):
+        calls.append(node)
+        return original(self,node)
+    monkeypatch.setattr(sol.Node,"SetNextNode",spy)
     for value in [10,20,-3]: linked.InsertNode(value)
+    assert len(calls) == 3 and calls[0] is None
+    assert [n.GetData() for n in calls[1:]] == [10,20]
     assert linked.Traverse().strip()=="-3 20 10"
 
 def test_3b_iv_empty_and_singleton(sol):
@@ -52,8 +60,8 @@ def contains_values(text, expected):
     return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
 
 
-def test_3main_call_chain(candidate_path, exercise_dir):
-    """9618_s25_43:3(c)(i) MS p.43; 9618_s25_43:3(b)(ii) MS p.37: observe required calls, parameters and returned output (D46)."""
+def test_3ci_main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_43:3(c)(i) MS p.43; 9618_s25_43:3(b)(ii) MS p.37: 3(b)(ii) MP3; 3(c)(i) MP2–MP3; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error
@@ -62,7 +70,7 @@ def test_3main_call_chain(candidate_path, exercise_dir):
     removals = r.called("RemoveNode")
     assert len(removals) == 1 and list(removals[0].args.values()) == [30]
     traversals = r.called("Traverse")
-    assert len(traversals) >= 2 and all(c.result.strip() in r.stdout for c in traversals)
+    assert len(traversals) >= 2 and all(" ".join(c.result.split()) in " ".join(r.stdout.split()) for c in traversals)
     events = [c.name.split(".")[-1] for c in r.calls if c.name.split(".")[-1] in ("Traverse","RemoveNode")]
     assert events == ["Traverse","RemoveNode","Traverse"]
     assert len(r.called("SetNextNode")) >= 5

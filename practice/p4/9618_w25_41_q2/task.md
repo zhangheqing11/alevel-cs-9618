@@ -262,7 +262,7 @@
 | Part 2(c)(ii) | 9618_w25_41:2(c)(ii) | 4 | 代码 | `test_2cii_capacity_and_storage` · MP2、MP3、MP4 | MP1 |
 | Part 2(c)(iii) | 9618_w25_41:2(c)(iii) | 6 | 代码 | `test_2ciii_empty_string`、`test_2ciii_getters_formatted_return` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
 | Part 2(d)(i) | 9618_w25_41:2(d)(i) | 2 | 代码 | `test_2b_di_main_instances` · MP1、MP2 | — |
-| Part 2(d)(ii) | 9618_w25_41:2(d)(ii) | 4 | 代码 | `test_2main_call_chain` / `test_2diii_screenshot` · MP1、MP2、MP3、MP4 | — |
+| Part 2(d)(ii) | 9618_w25_41:2(d)(ii) | 4 | 代码 | `test_2dii_main_call_chain` / `test_2diii_screenshot` · MP1、MP2、MP3、MP4 | — |
 | Part 2(d)(iii) | 9618_w25_41:2(d)(iii) | 2 | 截图 | `test_2diii_screenshot` · MP1、MP2 | — |
 
 ## 人工核对清单

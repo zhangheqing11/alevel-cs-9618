@@ -51,8 +51,8 @@ def test_1eiii_screenshot(candidate_path):
     assert re.search(r'Tarz[\s\S]*?\b4\b', r.stdout)
 
 
-def test_1main_call_chain(candidate_path, exercise_dir):
-    """9618_w24_42:1(e)(ii) MS p.13: observe required calls, parameters and returned output (D46)."""
+def test_1eii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w24_42:1(e)(ii) MS p.13: 1(e)(ii) MP2,MP7; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

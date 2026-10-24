@@ -68,8 +68,8 @@ def test_2diii_screenshot(candidate_path):
     assert r.stdout.count('Station is full')==1
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_w25_41:2(d)(ii) MS p.23: observe required calls, parameters and returned output (D46)."""
+def test_2dii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w25_41:2(d)(ii) MS p.23: 2(d)(ii) MP1–MP4; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error
@@ -79,5 +79,5 @@ def test_2main_call_chain(candidate_path, exercise_dir):
     assert [t.GetTrainIDNumber() for t in trains] == ["12ADV","33ART","9FKF","21VBC"]
     assert [c.result for c in additions] == [True,True,False,True]
     returns = r.called("GetTrains")
-    assert len(returns) == 2 and all(c.result.strip() in r.stdout for c in returns)
+    assert len(returns) == 2 and all(" ".join(c.result.split()) in " ".join(r.stdout.split()) for c in returns)
     assert "STH" in returns[0].result and "NTH" in returns[1].result

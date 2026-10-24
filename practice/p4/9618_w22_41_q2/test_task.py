@@ -72,8 +72,8 @@ def test_2ciii_screenshot_player2(candidate_path):
     assert any('2' in line for line in res.lines)
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_w22_41:2(c)(ii) MS p.15: observe required calls, parameters and returned output (D46)."""
+def test_2cii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w22_41:2(c)(ii) MS p.15: 2(c)(ii) MP1–MP2; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

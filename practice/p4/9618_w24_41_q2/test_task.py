@@ -62,7 +62,7 @@ def test_2eiii_screenshot_all_chances(candidate_path):
     """9618_w24_41:2(e)(i) MP1-MP3; 9618_w24_41:2(e)(ii) MP1-MP2; 9618_w24_41:2(e)(iii) MP1-MP2."""
     r=run_script(candidate_path,stdin=DATA);assert r.returncode==0,r.stderr
     assert has_values(r.stdout,[14.4,72,57.6,50.4,48.6,39,65,52,45.5,50.375])
-    assert any('Jet' in line and ('highest' in line.lower() or 'win' in line.lower()) for line in r.lines)
+    assert re.findall(r'\b(?:Beauty|Jet)\b', r.stdout)[-1] == 'Jet'
 
 
 def test_2eii_first_horse_can_win(candidate_path):
@@ -70,11 +70,11 @@ def test_2eii_first_horse_can_win(candidate_path):
     r=run_script(candidate_path,stdin='70\n1\n70\n1\n70\n1\n70\n1\n')
     assert r.returncode==0,r.stderr
     assert has_values(r.stdout,[72,65])
-    assert any('Beauty' in line and ('highest' in line.lower() or 'win' in line.lower()) for line in r.lines)
+    assert re.findall(r'\b(?:Beauty|Jet)\b', r.stdout)[-1] == 'Beauty'
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_w24_41:2(b)(i) MS p.14; 9618_w24_41:2(e)(i) MS p.21; 9618_w24_41:2(e)(ii) MS p.22: observe required calls, parameters and returned output (D46)."""
+def test_2bi_2ei_main_call_chain(candidate_path, exercise_dir):
+    """9618_w24_41:2(b)(i) MS p.14; 9618_w24_41:2(e)(i) MS p.21; 9618_w24_41:2(e)(ii) MS p.22: 2(b)(i) MP5; 2(e)(i) MP1–MP3; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='152\n5\n121\n1\n130\n3\n145\n4\n', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

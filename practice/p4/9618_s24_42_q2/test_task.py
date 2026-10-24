@@ -45,13 +45,22 @@ def test_2b_ii_deep_tree_twenty_nodes(sol,data):
         assert nodes[i].GetRight() == (i+1 if data[0]<data[-1] else -1)
         assert nodes[i].GetLeft() == (i+1 if data[0]>data[-1] else -1)
 
-def test_2b_iii_empty_and_populated_output(sol,capsys):
+def test_2b_iii_empty_and_populated_output(sol,capsys,monkeypatch):
     """9618_s24_42:2(b)(iii) MP1-MP4: empty message, insertion order, getters."""
     tree=sol.TreeClass();tree.OutputTree()
     assert "No nodes" in capsys.readouterr().out
     for value in [10,11,5,1,20,7,15]: tree.InsertNode(sol.Node(value))
+    calls = set()
+    for index,node in enumerate(field(tree,"Tree")[:7]):
+        for name in ("GetLeft","GetData","GetRight"):
+            original = getattr(node,name)
+            def spy(original=original,index=index,name=name):
+                calls.add((index,name))
+                return original()
+            monkeypatch.setattr(node,name,spy)
     tree.OutputTree()
     assert contains_values(capsys.readouterr().out, [v for row in EXPECTED for v in row])
+    assert calls == {(i,n) for i in range(7) for n in ("GetLeft","GetData","GetRight")}
 
 def test_2c_i_main_identifier(candidate_path,capsys):
     """9618_s24_42:2(c)(i) whole: TreeClass instance called TheTree."""
@@ -71,8 +80,8 @@ def contains_values(text, expected):
     return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_s24_42:2(c)(ii) MS p.26; 9618_s24_42:2(b)(iii) MS p.24: observe required calls, parameters and returned output (D46)."""
+def test_2cii_main_call_chain(candidate_path, exercise_dir):
+    """9618_s24_42:2(c)(ii) MS p.26; 9618_s24_42:2(b)(iii) MS p.24: 2(b)(iii) MP4; 2(c)(ii) MP2–MP4; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

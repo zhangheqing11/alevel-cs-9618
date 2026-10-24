@@ -53,8 +53,8 @@ def test_2g_ii_screenshot_shield(candidate_path, exercise_dir):
     assert len(result.lines) >= 2
 
 
-def test_2main_call_chain(candidate_path, exercise_dir):
-    """9618_s22_41:2(e) MS p.23; 9618_s22_41:2(g)(i) MS p.26: observe required calls, parameters and returned output (D46)."""
+def test_2e_2gi_main_call_chain(candidate_path, exercise_dir):
+    """9618_s22_41:2(e) MS p.23; 9618_s22_41:2(g)(i) MS p.26: 2(e) MP1–MP3; 2(g)(i) MP1; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin='Shield\nRed\n50\n', files_dir=exercise_dir / "files")
     assert r.error is None, r.error

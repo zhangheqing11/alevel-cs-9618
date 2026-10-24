@@ -26,7 +26,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 主程序原仅凭 Shield 和输出行数推断调用。补构造参数、Defend 对象参数/返回身份与方法调用；返回对象重新赋给 Balloon1 的赋值无法由 traced 观测，2(g)(i) MP2 归人工。
 
-本轮逐行核对本题配对 MS（19, 20, 21, 22, 23, 24, 25, 26 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：11 passed in 0.05s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：11 passed in 0.05s；修后与等价改写：
 
 - mutant_1.py: 1 failed, 11 passed in 0.09s
 - mutant_2.py: 4 failed, 8 passed in 0.07s
@@ -42,7 +42,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 原通过 runpy 验证 Player1 状态但没有真测 ChooseCard/getter 调用；新增四次选择返回下标与 getter 输出链。
 
-本轮逐行核对本题配对 MS（25, 27, 28, 29, 31, 32, 34, 35, 36 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：3 failed, 3 passed in 0.15s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：3 failed, 3 passed in 0.15s；修后与等价改写：
 
 - mutant_1.py: 2 failed, 5 passed in 0.14s
 - mutant_2.py: 4 failed, 3 passed in 0.11s
@@ -57,7 +57,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 整段数字相等误拒说明数字，改为按所需值顺序匹配。主程序增加父/子构造参数、两次加速与输出调用观测；构造继承补核保持人工注释。
 
-本轮逐行核对本题配对 MS（12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 7 passed in 0.05s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 7 passed in 0.05s；修后与等价改写：
 
 - mutant_1.py: 1 failed, 7 passed in 0.06s
 - mutant_2.py: 3 failed, 5 passed in 0.07s
@@ -72,7 +72,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 工资截图原将全段数字两两组装，额外说明数字会误拒。改为每个已知 ID 后查工资值，允许换行。新增 EnterHours/getter/父构造调用。
 
-本轮逐行核对本题配对 MS（23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 9 passed in 0.12s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 9 passed in 0.12s；修后与等价改写：
 
 - mutant_1.py: 3 failed, 8 passed in 0.11s
 - mutant_2.py: 4 failed, 7 passed in 0.21s
@@ -87,7 +87,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 主程序只核对数字，新增 InsertNode 七次 Node 参数顺序和 OutputTree/getter。输出数字改子序列；No nodes 允许附带说明。20 格为 QP 明确容量，保持。
 
-本轮逐行核对本题配对 MS（15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 7 passed in 0.14s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 7 passed in 0.14s；修后与等价改写：
 
 - mutant_1.py: 1 failed, 8 passed in 0.11s
 - mutant_2.py: 5 failed, 4 passed in 0.10s
@@ -102,7 +102,7 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 
 runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数顺序与 root 返回对象传递。截图/递归输出允许说明数字。
 
-本轮逐行核对本题配对 MS（30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 5 passed in 0.08s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 5 passed in 0.08s；修后与等价改写：
 
 - mutant_1.py: 6 failed, 1 passed in 0.14s
 - mutant_2.py: 2 failed, 5 passed in 0.09s
@@ -117,7 +117,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 补参数化动物构造、父构造、领地/词数更新与 Description 返回输出。QP 明确描述字符串保持；完整输出允许附加说明/相邻换行。
 
-本轮逐行核对本题配对 MS（33, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：4 passed in 0.09s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：4 passed in 0.09s；修后与等价改写：
 
 - mutant_1.py: 2 failed, 3 passed in 0.14s
 - mutant_2.py: 2 failed, 3 passed in 0.10s
@@ -132,7 +132,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 补五次 InsertNode、RemoveNode(30)、前后 Traverse 返回输出顺序与 SetNextNode；截图数字改子序列。
 
-本轮逐行核对本题配对 MS（33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44, 45 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：9 passed in 0.09s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：9 passed in 0.09s；修后与等价改写：
 
 - mutant_1.py: 1 failed, 9 passed in 0.12s
 - mutant_2.py: 3 failed, 7 passed in 0.16s
@@ -148,7 +148,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 补两次 CalculateValue 及各手牌参数、返回分数；比较使用返回值的代码关系无法仅从固定赢家证明，2(c)(ii) MP3 归人工（截图仍自动）。
 
-本轮逐行核对本题配对 MS（8, 9, 10, 11, 12, 13, 14, 15 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 7 passed in 0.18s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 7 passed in 0.18s；修后与等价改写：
 
 - mutant_1.py: 3 failed, 6 passed in 0.12s
 - mutant_2.py: 1 failed, 8 passed in 0.09s
@@ -163,7 +163,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 主程序调用点原只匹配坐标；补实际 ChangePosition 参数与三个 getter。QP 给出消息格式，保留 X/Y 标识，允许相邻行。另四方向另测。
 
-本轮逐行核对本题配对 MS（11, 12, 13, 14, 15, 16, 17, 18, 19, 20 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：4 failed, 6 passed in 0.33s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：4 failed, 6 passed in 0.33s；修后与等价改写：
 
 - mutant_1.py: 5 failed, 6 passed in 0.44s
 - mutant_2.py: 9 failed, 2 passed in 0.68s
@@ -178,7 +178,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 补 Move 的输入参数和位置 getter 真实调用；X/Y 输出允许换行；父构造原有 spy 已测。
 
-本轮逐行核对本题配对 MS（25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：2 failed, 14 passed in 0.17s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：2 failed, 14 passed in 0.17s；修后与等价改写：
 
 - mutant_1.py: 1 failed, 16 passed in 0.18s
 - mutant_2.py: 2 failed, 15 passed in 0.26s
@@ -193,7 +193,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 截图数值可由空壳伪造，补 Learn/ReturnAge/getter 及返回值输出；输出本已容许换行。
 
-本轮逐行核对本题配对 MS（22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：2 failed, 13 passed in 0.14s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：2 failed, 13 passed in 0.14s；修后与等价改写：
 
 - mutant_1.py: 7 failed, 8 passed in 0.15s
 - mutant_2.py: 5 failed, 10 passed in 0.24s
@@ -208,7 +208,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 补八次 Success 的 Fence 高度/风险参数、getter 与计算结果输出；赢家从整段输出识别，不再要求最后一行。
 
-本轮逐行核对本题配对 MS（12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：3 failed, 19 passed in 0.26s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：3 failed, 19 passed in 0.26s；修后与等价改写：
 
 - mutant_1.py: 5 failed, 18 passed in 0.24s
 - mutant_2.py: 1 failed, 22 passed in 0.18s
@@ -223,7 +223,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 新增五场两人 CalculateScore 及 getter 参数；固定数据难证明比较直接使用返回分数，MP3 归人工。赢家/总分检查允许说明和换行。
 
-本轮逐行核对本题配对 MS（4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 28 passed in 0.12s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 28 passed in 0.12s；修后与等价改写：
 
 - mutant_1.py: 4 failed, 26 passed in 0.11s
 - mutant_2.py: 1 failed, 29 passed in 0.09s
@@ -238,7 +238,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 新增 AddTrain 四次参数及成功/满站返回值、两站 GetTrains 返回输出；QP 格式保留，截图允许相邻行组合。
 
-本轮逐行核对本题配对 MS（15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 6 passed in 0.08s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：1 failed, 6 passed in 0.08s；修后与等价改写：
 
 - mutant_1.py: 3 failed, 5 passed in 0.08s
 - mutant_2.py: 4 failed, 4 passed in 0.09s
@@ -253,7 +253,7 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 
 新增 SetObject 各坐标、DisplayBoard/GetCode、输入坐标 GetObject 和返回对象 getter；QP 棋盘逐行格式保持，命中消息允许分行。
 
-本轮逐行核对本题配对 MS（7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：6 failed, 10 passed in 0.37s；修后与等价改写：
+本轮用该题自己的 MS 得分点逐项核对调用/输出分类；本轮实际原页查阅清单见末节（原 T35 的完整页表仍保留在 README）。hollow-main 修前：6 failed, 10 passed in 0.37s；修后与等价改写：
 
 - mutant_1.py: 9 failed, 8 passed in 0.57s
 - mutant_2.py: 1 failed, 16 passed in 0.36s
@@ -263,3 +263,42 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 17 passed in 0.28s
 
 自动分 22.0 → 22.0；占比 70.97% → 70.97%。
+
+## 最终自审与运行汇总
+
+新增调用测试全部包含对应小问号，供 D47 的 K= 局部掌握判断使用。w22/42 的 ChangePosition 四个分支、w23/41 的两角色调用已真测；PrintTrees / OutputTree 的 getter 调用另由单元 spy 观察。s23/41 超速测试接受本题 MS p.17 的 remove increase / assign maximum，两种速度策略都累计实际更新速度。主程序输出的说明数字、尾注与相邻换行不再决定算法正误。
+
+本轮读取全部 18 题本题配对的语料 MS 原文及已有测试；另从只读原件提取/核对主程序 QP 页面：s22/41 p.7、s22/42 p.8、s23/41 p.7、s23/42 p.12、s24/41 pp.7–10、s24/42 p.9、s25/41 p.9、s25/42 p.12、s25/43 p.10、w22/41 p.7、w22/42 p.7、w23/41 p.11、w23/42 p.13、w24/41 p.10、w24/42 p.7、w25/41 p.8、w25/42 pp.3,5、w25/43 p.8。
+
+已实际看过渲染 MS 原页：s22/41 p.26、s22/42 p.34、s23/41 pp.17,24、s23/42 pp.28,36、s24/41 pp.18,22、s24/42 p.26、s25/41 p.41、s25/42 p.44、s25/43 p.43、w22/41 p.15、w22/42 p.18、w23/41 p.35、w23/42 pp.29,30、w24/41 p.21、w24/42 p.13、w25/41 p.23、w25/42 p.12、w25/43 pp.15,17。渲染图片在 `/tmp/T38c3/`；不把“已提取/渲染”当作“已人工看图”，未列页不声称本轮重审。
+
+| 练习 | 当前用例 | mutant | 等价候选 | 参考解 / 等价候选 | 全部 mutant |
+|:--|--:|--:|--:|:--|:--|
+| 9618_s22_41_q2 | 12 | 4 | 2 | 全过 | 各至少一测失败 |
+| 9618_s22_42_q3 | 7 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s23_41_q2 | 8 | 3 | 3 | 全过 | 各至少一测失败 |
+| 9618_s23_42_q3 | 11 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s24_41_q2 | 9 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s24_42_q2 | 9 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s25_41_q3 | 7 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s25_42_q3 | 5 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_s25_43_q3 | 10 | 4 | 2 | 全过 | 各至少一测失败 |
+| 9618_w22_41_q2 | 9 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w22_42_q2 | 14 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w23_41_q3 | 18 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w23_42_q3 | 15 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w24_41_q2 | 23 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w24_42_q1 | 30 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w25_41_q2 | 8 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w25_42_q1 | 31 | 3 | 2 | 全过 | 各至少一测失败 |
+| 9618_w25_43_q1 | 17 | 3 | 2 | 全过 | 各至少一测失败 |
+
+临时候选及逐次 pytest 输出：`/tmp/T38c3/<练习>/equivalent*.py`、`*-review.log`；结构化本轮记录 `/tmp/T38c3/final-unit-runs.json`。所有候选通过共享 venv 的 `python -m pytest -q <练习>/test_task.py` 配 `CANDIDATE=<候选绝对路径>` 实际运行。通常两份候选分别在主程序增加 Question N 说明和 End of question N 尾注；F08 为 20 格容量与尾注；F09 为 species/坐标分行与 X/Y 分行；s23/41 另有撤销速度增量实现。
+
+人工分值变化：s22/41 Q2 的 2(g)(i) MP2、w22/41 Q2 的 2(c)(ii) MP3、w24/42 Q1 的 1(e)(ii) MP3 各 1 分从自动归回人工；各自 task 表与 manifest 已同步，相关返回赋值/比较使用关系由导师查看代码。调用本身已经观测，不能用固定输出倒推上述关系。其余题自动占比维持。
+
+- T35e：自动 212.6429/263（80.85%），人工 50.3571。
+- T35f：自动 217.4222/275（79.06%），人工 57.5778。
+- 总计：18 题 / 165 格 / 538 分；243 个参数化用例，56 个 mutant，其中 hollow-main 18 个；自动 430.0651/538（79.94%）。
+
+需要总控决定：无共享文件修改请求；请验收以上三处保守归人工分类。traced 不记录 self 且返回值只作浅拷贝，接收对象身份/代码赋值及因果关系仍需结合现有状态测试和人工清单，不宣称自动授予整道题的考试分数。

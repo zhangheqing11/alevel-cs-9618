@@ -315,13 +315,13 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a)(i) | 9618_w24_41:2(a)(i) | 4 | 代码 | `test_2ai_aii_horse` · MP2、MP4 | MP1、MP3 |
 | Part 2(a)(ii) | 9618_w24_41:2(a)(ii) | 3 | 代码 | `test_2ai_aii_horse` · MP2、MP3 | MP1 |
-| Part 2(b)(i) | 9618_w24_41:2(b)(i) | 5 | 代码 | `test_2main_call_chain` / `test_2bi_cii_main_arrays`、`test_2bii_screenshot_names` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 2(b)(i) | 9618_w24_41:2(b)(i) | 5 | 代码 | `test_2bi_2ei_main_call_chain` / `test_2bi_cii_main_arrays`、`test_2bii_screenshot_names` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 2(b)(ii) | 9618_w24_41:2(b)(ii) | 1 | 截图 | `test_2bii_screenshot_names` · 全行 | — |
 | Part 2(c)(i) | 9618_w24_41:2(c)(i) | 4 | 代码 | `test_2ci_fence` · MP2、MP3、MP4 | MP1 |
 | Part 2(c)(ii) | 9618_w24_41:2(c)(ii) | 5 | 代码 | `test_2bi_cii_main_arrays`、`test_2cii_validation_boundaries` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 2(d) | 9618_w24_41:2(d) | 5 | 代码 | `test_2d_success` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 2(e)(i) | 9618_w24_41:2(e)(i) | 3 | 代码 | `test_2main_call_chain` / `test_2eiii_screenshot_all_chances` · MP1、MP2、MP3 | — |
-| Part 2(e)(ii) | 9618_w24_41:2(e)(ii) | 2 | 代码 | `test_2main_call_chain` / `test_2eiii_screenshot_all_chances`、`test_2eii_first_horse_can_win` · MP1、MP2 | — |
+| Part 2(e)(i) | 9618_w24_41:2(e)(i) | 3 | 代码 | `test_2bi_2ei_main_call_chain` / `test_2eiii_screenshot_all_chances` · MP1、MP2、MP3 | — |
+| Part 2(e)(ii) | 9618_w24_41:2(e)(ii) | 2 | 代码 | `test_2bi_2ei_main_call_chain` / `test_2eiii_screenshot_all_chances`、`test_2eii_first_horse_can_win` · MP1、MP2 | — |
 | Part 2(e)(iii) | 9618_w24_41:2(e)(iii) | 2 | 截图 | `test_2eiii_screenshot_all_chances` · MP1、MP2 | — |
 
 ## 人工核对清单

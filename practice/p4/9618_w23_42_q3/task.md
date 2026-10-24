@@ -241,12 +241,12 @@
 | Part 3(a)(iv) | 9618_w23_42:3(a)(iv) | 1 | 代码 | `test_3aiv_learn` · 全行 | — |
 | Part 3(a)(v) | 9618_w23_42:3(a)(v) | 2 | 代码 | `test_3av_age_uses_2023_and_year_only` · MP1、MP2 | — |
 | Part 3(b)(i) | 9618_w23_42:3(b)(i) | 2 | 代码 | `test_3bi_di_named_instances` · MP1、MP2 | — |
-| Part 3(b)(ii) | 9618_w23_42:3(b)(ii) | 3 | 代码 | `test_3main_call_chain` / `test_3biii_royal_screenshot` · MP1、MP2、MP3 | — |
+| Part 3(b)(ii) | 9618_w23_42:3(b)(ii) | 3 | 代码 | `test_3bii_3dii_main_call_chain` / `test_3biii_royal_screenshot` · MP1、MP2、MP3 | — |
 | Part 3(b)(iii) | 9618_w23_42:3(b)(iii) | 1 | 截图 | `test_3biii_royal_screenshot` · 全行 | — |
 | Part 3(c)(i) | 9618_w23_42:3(c)(i) | 5 | 代码 | `test_3ci_parent_constructor` · MP1、MP4、MP5 | MP2、MP3 |
 | Part 3(c)(ii) | 9618_w23_42:3(c)(ii) | 3 | 代码 | `test_3cii_magic_learning` · MP1、MP2、MP3 | — |
 | Part 3(d)(i) | 9618_w23_42:3(d)(i) | 2 | 代码 | `test_3bi_di_named_instances` · MP1、MP2 | — |
-| Part 3(d)(ii) | 9618_w23_42:3(d)(ii) | 1 | 代码 | `test_3main_call_chain` / `test_3diii_magic_screenshot` · 全行 | — |
+| Part 3(d)(ii) | 9618_w23_42:3(d)(ii) | 1 | 代码 | `test_3bii_3dii_main_call_chain` / `test_3diii_magic_screenshot` · 全行 | — |
 | Part 3(d)(iii) | 9618_w23_42:3(d)(iii) | 1 | 截图 | `test_3diii_magic_screenshot` · 全行 | — |
 
 ## 人工核对清单

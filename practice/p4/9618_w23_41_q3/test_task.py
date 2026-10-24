@@ -62,14 +62,15 @@ def test_3ei_rejects_invalid_inputs(candidate_path):
     assert re.search(r'X\s*=\s*60.*Y\s*=\s*50',r.stdout, re.S)
 
 
-def test_3main_call_chain(candidate_path, exercise_dir):
-    """9618_w23_41:3(e)(i) MS p.35: observe required calls, parameters and returned output (D46)."""
+@pytest.mark.parametrize("character,direction", [("jack","right"),("karla","down")])
+def test_3ei_main_call_chain(candidate_path, exercise_dir, character, direction):
+    """9618_w23_41:3(e)(i) MS p.35: 3(e)(i) MP3,MP5; observe required calls, parameters and returned output (D46)."""
     from testkit import run_script_traced
-    r = run_script_traced(candidate_path, stdin='jack\nright\n', files_dir=exercise_dir / "files")
+    r = run_script_traced(candidate_path, stdin=f"{character}\n{direction}\n", files_dir=exercise_dir / "files")
     assert r.error is None, r.error
 
     moves = r.called("Move")
-    assert moves and all(list(c.args.values()) == ["right"] for c in moves)
+    assert moves and all(list(c.args.values()) == [direction] for c in moves)
     assert r.called("GetXPosition") and r.called("GetYPosition")
     assert str(r.called("GetXPosition")[-1].result) in r.stdout
     assert str(r.called("GetYPosition")[-1].result) in r.stdout

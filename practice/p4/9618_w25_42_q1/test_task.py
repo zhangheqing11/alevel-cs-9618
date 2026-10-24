@@ -48,8 +48,8 @@ def test_1b_main_objects(candidate_path,monkeypatch):
 def test_1cii_four_screenshots(candidate_path,choice,minutes,direction,name,x,y):
     """9618_w25_42:1(c)(i) MP1-MP2,MP5-MP8; 9618_w25_42:1(c)(ii) MP1-MP3: four MS results."""
     r=run_script(candidate_path,stdin=f'{choice}\n{minutes}\n{direction}\n');assert r.returncode==0,r.stderr
-    assert re.search(r'Cockatiel[\s\S]*?X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)
-    assert re.search(r'Macaw[\s\S]*?X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)
+    assert re.search(r'Cockatiel[\s\S]*?X\s*=\s*500(?:\.0)?[\s\S]*?Y\s*=\s*500',r.stdout)
+    assert re.search(r'Macaw[\s\S]*?X\s*=\s*500(?:\.0)?[\s\S]*?Y\s*=\s*500',r.stdout)
     matches=re.findall(re.escape(name)+r'(?:(?!Cockatiel|Macaw)[\s\S])*?X\s*=\s*(-?\d+(?:\.\d+)?)\s+Y\s*=\s*(-?\d+(?:\.\d+)?)',r.stdout)
     assert tuple(map(float,matches[-1]))==pytest.approx((x,y))
 
@@ -73,6 +73,6 @@ def test_1ci_main_call_chain(candidate_path, choice, minutes, direction):
     assert list(moves[0].args.values()) == [direction, minutes]
     positions = r.called("GetPosition")
     assert len(positions) >= 3
-    assert all(c.result in r.stdout for c in positions)
+    assert all(" ".join(c.result.split()) in " ".join(r.stdout.split()) for c in positions)
     assert next(i for i, c in enumerate(r.calls) if c is moves[0]) < next(i for i, c in enumerate(r.calls) if c is positions[-1])
     assert {c.result for c in r.called("GetSpecies")} == {"Cockatiel", "Macaw"}
