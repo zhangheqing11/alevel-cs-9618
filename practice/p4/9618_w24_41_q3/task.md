@@ -158,7 +158,7 @@
 - 全局 `LinkedList` 为 20×2 整数 list，列 0 是数据，列 1 是下一指针；`FirstNode=-1`，`FirstEmpty=0`。`InsertData()`、`OutputLinkedList()`、`RemoveData(ItemToRemove)` 使用题给名字。
 - InsertData 每次最多插入五个正整数，满时结束；测试不添加 QP 未要求的正整数输入校验。
 - 删除参数保证存在（QP 明示），不测找不到的情况。回收结点可接在空闲链头或尾；测试按链遍历核对两条链恰好覆盖 20 格，不强迫某一种合法的回收顺序。是否把回收结点数据清成 -1 不作限制（MS 头删除范例不清数据）。
-- 输出数据的换行/空格不限；主程序 After 前后应是链顺序，提示语不应自行输出额外数字。无数据文件。
+- 输出数据的换行/空格不限；主程序 After 前后应是链顺序，允许带数字的说明文字，按要求数据的顺序匹配。无数据文件。
 
 ## 证据文档对照表
 
@@ -169,10 +169,10 @@
 | Part 3(a) | 9618_w24_41:3(a) | 2 | 代码 | `test_3a_initial_free_list` · MP1、MP2 | — |
 | Part 3(b) | 9618_w24_41:3(b) | 6 | 代码 | `test_3b_insert_five_at_front`；`test_3b_full_and_recycled_nodes` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
 | Part 3(c)(i) | 9618_w24_41:3(c)(i) | 2 | 代码 | `test_3c_i_output_follows_nonsequential_pointers` · MP1、MP2 | — |
-| Part 3(c)(ii) | 9618_w24_41:3(c)(ii) | 1 | 代码 | `test_3c_iii_screenshot_reverse` · MPwhole | — |
+| Part 3(c)(ii) | 9618_w24_41:3(c)(ii) | 1 | 代码 | `test_3c_iii_screenshot_reverse` · MPwhole；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 3(c)(iii) | 9618_w24_41:3(c)(iii) | 1 | 截图 | `test_3c_iii_screenshot_reverse` · MPwhole | — |
 | Part 3(d)(i) | 9618_w24_41:3(d)(i) | 5 | 代码 | `test_3d_i_remove_head_middle_tail`；`test_3d_i_duplicate_only_first_removed`；`test_3b_full_and_recycled_nodes` · MP2、MP3、MP4、MP5、MP6、MP7、MP8 | MP1 Procedure header (and end) with parameter |
-| Part 3(d)(ii) | 9618_w24_41:3(d)(ii) | 1 | 代码 | `test_3d_iii_screenshot_after` · MPwhole | — |
+| Part 3(d)(ii) | 9618_w24_41:3(d)(ii) | 1 | 代码 | `test_3d_iii_screenshot_after` · MPwhole；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 3(d)(iii) | 9618_w24_41:3(d)(iii) | 1 | 截图 | `test_3d_iii_screenshot_after` · MPwhole | — |
 
 ## 人工核对清单
@@ -191,3 +191,11 @@
 - 同季 9618_w24_43 第 3 题与本题相同，不另建练习。
 
 3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。
+
+## T38c2 · D46 验证补充
+
+F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。
+
+## T38c2 · D46 验证补充
+
+F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。

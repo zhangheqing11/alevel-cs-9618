@@ -502,7 +502,10 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_ii_3d_ii_main_call_chain"
+          ]
         },
         {
           "id": "9618_w24_41:3(c)(iii)",
@@ -540,7 +543,10 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_ii_3d_ii_main_call_chain"
+          ]
         },
         {
           "id": "9618_w24_41:3(d)(iii)",
@@ -554,8 +560,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         12,
         13,
@@ -577,7 +583,7 @@
         37
       ],
       "qp_over_ms": "- MS p.27 Python 初始化仅 append 19 行，随后访问 LinkedList[19] 越界；参考解依 QP p.12 创建全部 20 行，最后指针 -1。\n- MS p.36 Python 主程序同样缺最后一行；VB/Java 在该处把最后指针留成 20；参考解沿用正确的 20 节点初始化。\n- MS p.31 OutputLinkedList 在空表时会访问下标 -1；参考解在遍历前检查终止值。不额外要求 QP 未涉及的空表截图。\n- 同季 9618_w24_43 第 3 题与本题相同，不另建练习。",
-      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。"
+      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。"
     },
     {
       "directory": "practice/p4/9618_w24_42_q2",
