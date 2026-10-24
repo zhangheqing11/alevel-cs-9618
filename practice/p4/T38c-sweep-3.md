@@ -318,3 +318,5 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 ```
 
 `make check-scope TASK=T38c3`、`git diff --check` 均通过；本组5个数据文件哈希与只读原件和manifest一致。代码验收提交 `6c4642e8ab3dfb6104c676e3d64bfefc21929eba`；本节仅记录结果，不改变被测代码。PR保持draft，等待总控验收；无共享修改请求。
+
+交付：[Draft PR #59](https://github.com/zhangheqing11/alevel-cs-9618/pull/59)，分支 `task/T38c3-p4-practice`，保持开放等待总控验收。
