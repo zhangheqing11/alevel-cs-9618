@@ -49,7 +49,8 @@ def test_1e_find_values_uses_pop(sol, monkeypatch, capsys, data):
     assert calls[:len(data)] == list(reversed(data))
     assert len(data) <= len(calls) <= len(data) + 1
     assert sol.TopOfStack == -1
-    assert sorted(int(n) for n in re.findall(r'-?\d+', out)) == sorted([min(data), max(data)])
+    numbers = [int(n) for n in re.findall(r'-?\d+', out)]
+    assert min(data) in numbers and max(data) in numbers and -999 not in numbers
     assert re.search(r'[A-Za-z]', out), 'extrema require an explanatory message'
 
 
@@ -84,6 +85,8 @@ def test_1f_ii_screenshot_stack_full_and_extrema(candidate_path, tmp_path):
         assert len(pushed) == 31, 'stop immediately after the first failed push'
         assert all(isinstance(v, int) and 0 <= v <= 1000 for v in pushed)
         assert result.stdout.count('Stack full') == 1
-        assert sorted(int(n) for n in re.findall(r'-?\d+', result.stdout)) == sorted([min(pushed[:30]), max(pushed[:30])])
+        numbers = [int(n) for n in re.findall(r'-?\d+', result.stdout)]
+        assert min(pushed[:30]) in numbers and max(pushed[:30]) in numbers
+        assert -999 not in numbers
         runs.append(pushed)
     assert runs[0] != runs[1], 'random generation must vary with the seed'

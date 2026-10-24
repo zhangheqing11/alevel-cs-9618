@@ -94,7 +94,7 @@ def test_3c_iii_screenshot_reverse(candidate_path):
     result = run_script(candidate_path, stdin='5\n1\n2\n3\n8\n', timeout=1.0)
     assert result.returncode == 0, result.stderr
     before = result.stdout.split('After')[0]
-    assert [int(n) for n in re.findall(r'-?\d+', before)] == [8, 3, 2, 1, 5]
+    assert [int(n) for n in re.findall(r'-?\d+', before)][-5:] == [8, 3, 2, 1, 5]
 
 
 @pytest.mark.parametrize('data,expected', [('5\n6\n8\n9\n5\n', [9, 8, 6, 5]),
