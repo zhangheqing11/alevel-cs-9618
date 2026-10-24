@@ -440,6 +440,144 @@
       ],
       "qp_over_ms": "- MS pp.4、7、11–12 采用空 list、append 和 del；按 D10 ① 改为固定 100 格数组，下标存取、仅更新指针，不删除实际格子。这不改变题目栈的有效数据。\n- MS p.16 的 Python else 实际缩进在 DataAccessed 判断下，原页没有解析文本暗示的缩进缺陷；参考解遵守相同空栈重试逻辑。\n- 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。",
       "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。"
+    },
+    {
+      "directory": "practice/p4/9618_w24_41_q3",
+      "id": "9618_w24_41:3(a)",
+      "paper": "9618_w24_41",
+      "marks": 19,
+      "auto_marks": 18.375,
+      "manual_marks": 0.625,
+      "auto_share": 0.9671,
+      "types": [
+        "P4-LT-01",
+        "P4-LT-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_41:3(a)",
+          "marks": 2,
+          "primary": "P4-LT-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:3(b)",
+          "marks": 6,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(i)",
+          "marks": 2,
+          "primary": "P4-LT-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(d)(i)",
+          "marks": 5,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.375
+        },
+        {
+          "id": "9618_w24_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "qp_over_ms": "- MS p.27 Python 初始化仅 append 19 行，随后访问 LinkedList[19] 越界；参考解依 QP p.12 创建全部 20 行，最后指针 -1。\n- MS p.36 Python 主程序同样缺最后一行；VB/Java 在该处把最后指针留成 20；参考解沿用正确的 20 节点初始化。\n- MS p.31 OutputLinkedList 在空表时会访问下标 -1；参考解在遍历前检查终止值。不额外要求 QP 未涉及的空表截图。\n- 同季 9618_w24_43 第 3 题与本题相同，不另建练习。",
+      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。"
     }
   ]
 }
