@@ -6,9 +6,9 @@
       "id": "9618_s22_41:2(a)",
       "paper": "9618_s22_41",
       "marks": 25,
-      "auto_marks": 20.2,
-      "manual_marks": 4.8,
-      "auto_share": 0.808,
+      "auto_marks": 19.2,
+      "manual_marks": 5.8,
+      "auto_share": 0.768,
       "types": [
         "P4-OP-01",
         "P4-OP-02",
@@ -105,11 +105,12 @@
           "marks": 2,
           "primary": "P4-MP-01",
           "auto_mps": [
-            1,
+            1
+          ],
+          "manual_mps": [
             2
           ],
-          "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 1.0
         },
         {
           "id": "9618_s22_41:2(g)(ii)",
@@ -123,8 +124,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 11,
+      "mutants": 4,
+      "tests": 12,
       "qp_pages_checked": [
         5,
         6,

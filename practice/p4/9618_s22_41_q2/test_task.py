@@ -51,3 +51,20 @@ def test_2g_ii_screenshot_shield(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     assert "Shield" in result.stdout
     assert len(result.lines) >= 2
+
+
+def test_2main_call_chain(candidate_path, exercise_dir):
+    """9618_s22_41:2(e) MS p.23; 9618_s22_41:2(g)(i) MS p.26: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='Shield\nRed\n50\n', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    init = r.called("Balloon.__init__")
+    assert any(list(c.args.values()) == ["Shield", "Red"] for c in init)
+    defend = r.called("Defend")
+    assert len(defend) == 1
+    balloon = list(defend[0].args.values())[0]
+    assert isinstance(balloon, type(defend[0].result)) and defend[0].result is balloon
+    assert r.called("ChangeHealth") and list(r.called("ChangeHealth")[0].args.values()) == [-50]
+    assert r.called("GetDefenceItem") and r.called("GetDefenceItem")[0].result in r.stdout
+    assert r.called("CheckHealth") and r.called("CheckHealth")[0].result is False

@@ -21,3 +21,19 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - mutant_hollow_main.py: 8 failed, 23 passed in 0.74s
 - solution.py: 31 passed in 0.55s
 - equivalent.py: 31 passed in 1.73s
+
+## 9618_s22_41_q2
+
+主程序原仅凭 Shield 和输出行数推断调用。补构造参数、Defend 对象参数/返回身份与方法调用；返回对象重新赋给 Balloon1 的赋值无法由 traced 观测，2(g)(i) MP2 归人工。
+
+本轮逐行核对本题配对 MS（19, 20, 21, 22, 23, 24, 25, 26 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：11 passed in 0.05s；修后与等价改写：
+
+- mutant_1.py: 1 failed, 11 passed in 0.09s
+- mutant_2.py: 4 failed, 8 passed in 0.07s
+- mutant_3.py: 1 failed, 11 passed in 0.07s
+- mutant_hollow_main.py: 1 failed, 11 passed in 0.07s
+- solution.py: 12 passed in 0.10s
+- equivalent_banner.py: 12 passed in 0.14s
+- equivalent_footer.py: 12 passed in 0.16s
+
+自动分 20.2 → 19.2；占比 80.80% → 76.80%。
