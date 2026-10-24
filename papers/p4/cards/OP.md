@@ -361,56 +361,50 @@ if __name__ == "__main__":
 **识别信号**　adds … to current …；cannot exceed …；calculates and stores；creates and returns a string。
 
 **解题思路**
-1. 先列状态变化的顺序：当前速度加 IncreaseAmount → 若超过 MaxSpeed 就封顶 → 用更新后的速度增加水平位置。
-2. 所有对象状态都用 `self.__…`；参数只写题目要求的，不从用户重新输入。
-3. 本模板推荐超过上限就赋最大值；但 9618_s23_41:2(a)(iv) 的 MS p.17 第 2 点也接受撤销本次增量。例如 95 加 20、上限 100，封顶为 100 或撤销增量回到 95 均在本题 MS 接受范围内。
-4. 水平位置的更新放在 if 外，未超过和超过上限的两条路径都要执行。
-5. 需要返回值的计算方法在计算完成后 return；题目只要求更新状态时不自行增加返回要求。
+1. 从类图取属性，从方法说明取业务参数；Bird.Move 接方向和分钟数，不重新输入速度。
+2. 先换算距离：`Distance = (self.__DistancePerHour / 60) * MinsFlying`。用 `/` 保留小数，不用 `//`。
+3. 方向决定改哪个坐标：N/S 改 Y，E/W 改 X；北/东加，南/西减。一次调用只改一个坐标。
+4. 方法里修改 `self.__XPosition` / `self.__YPosition`，只给局部变量赋值不会改变这只鸟的位置。
+5. Move 只更新状态；GetPosition 返回字符串，主程序负责输出。QP 明说 Move 不必验证参数，输入验证放在 main。
 
-**Python 模板**（自包含骨架；参数、初值、私有要求照具体题目）
+**Python 模板**（本题 Bird；构造、getter 与状态方法完整放在同一类中）
 
 ```python
-# ---- 2(a)(i) ----
-class Vehicle:
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
-        self.__ID = IDP                           # STRING
-        self.__MaxSpeed = MaxSpeedP               # INTEGER
-        self.__IncreaseAmount = IncreaseAmountP   # INTEGER
-        self.__CurrentSpeed = 0                   # INTEGER
-        self.__HorizontalPosition = 0             # INTEGER
+# ---- 1(a)(i) ----
+class Bird:
+    def __init__(self, pDistancePerHour, pSpecies):
+        self.__DistancePerHour = pDistancePerHour  # REAL
+        self.__Species = pSpecies                  # STRING
+        self.__XPosition = 500.0                    # REAL
+        self.__YPosition = 500.0                    # REAL
 
-    # ---- 2(a)(ii) ----
-    def GetCurrentSpeed(self):
-        return self.__CurrentSpeed
+    # ---- 1(a)(ii) ----
+    def GetSpecies(self):
+        return self.__Species
 
-    def GetIncreaseAmount(self):
-        return self.__IncreaseAmount
+    # ---- 1(a)(iii) ----
+    def GetPosition(self):
+        return "X = " + str(self.__XPosition) + " Y = " + str(self.__YPosition)
 
-    def GetMaxSpeed(self):
-        return self.__MaxSpeed
-
-    def GetHorizontalPosition(self):
-        return self.__HorizontalPosition
-
-    # ---- 2(a)(iii) ----
-    def SetCurrentSpeed(self, CSP):
-        self.__CurrentSpeed = CSP
-
-    def SetHorizontalPosition(self, HPP):
-        self.__HorizontalPosition = HPP
-
-    # ---- 2(a)(iv) ----
-    def IncreaseSpeed(self):
-        self.__CurrentSpeed = self.__CurrentSpeed + self.__IncreaseAmount
-        if self.__CurrentSpeed > self.__MaxSpeed:
-            self.__CurrentSpeed = self.__MaxSpeed
-        self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
+    # ---- 1(a)(iv) ----
+    def Move(self, Direction, MinsFlying):
+        Distance = (self.__DistancePerHour / 60) * MinsFlying
+        if Direction == "N":
+            self.__YPosition = self.__YPosition + Distance
+        elif Direction == "S":
+            self.__YPosition = self.__YPosition - Distance
+        elif Direction == "E":
+            self.__XPosition = self.__XPosition + Distance
+        elif Direction == "W":
+            self.__XPosition = self.__XPosition - Distance
 ```
 
 **得分表述**（引自对应 MS）
-- 「Method header (and close where appropriate) with no parameter and adding IncreaseAmount to CurrentSpeed」⟦9618_s23_41:2(a)(iv)⟧
-- 「Checking if MaxSpeed is exceeded and limiting to max speed (remove increase or assign maximum)」⟦9618_s23_41:2(a)(iv)⟧
-- 「Adding updated CurrentSpeed to HorizontalPosition in all cases (whether MaxSpeed is exceeded or not)」⟦9618_s23_41:2(a)(iv)⟧
+- 「Method header (and end) taking direction and minutes flying as parameters」⟦9618_w25_42:1(a)(iv)⟧
+- 「Calculation of distance using minutes flying parameter and attribute DistancePerHour」⟦9618_w25_42:1(a)(iv)⟧
+- 「Selection based on direction parameter …」⟦9618_w25_42:1(a)(iv)⟧
+- 「… north adding to YPosition and south subtracting from YPosition」⟦9618_w25_42:1(a)(iv)⟧
+- 「… east adding to XPosition and west subtracting from XPosition」⟦9618_w25_42:1(a)(iv)⟧
 
 **得分点地图**（核验语料 2022–2026s、仅主题型行、去 `equivalent_of`、每行每标签计一次；s26 只进计数。共 15 行，其中 14 行拆点；下表由 `markpoints[].skills` 统计，不是每个标签各值一分）
 
@@ -425,109 +419,102 @@ class Vehicle:
 
 读图、参数、属性与调用方向是本型自查重点；单题分值与 Max 始终回本题 MS 核对。
 
-**易错与失分**　考官报告讨论了超过上限时不再加速的写法（9618_s23_41:2(a)(iv)），但给分必须按本题 MS p.17：超过时撤销本次增量或赋最大值都可取第 2 点；ER 的易错描述不覆盖 MS 的接受口径。不要让“更新位置”也缩进到超过上限的 if 中；也不要用 `min()` 代写题目要求的比较。
+**易错与失分**　不能把 N/S 改成 X 或把 W 写成加法；分钟不是小时，71 km/h 飞 30 分钟应移动 35.5。Move 中不用 print 代替状态赋值，GetPosition 中不用 print 代替 return。
 
-#### 代表题精讲　⟦9618_s23_41:2(a)(iv)⟧
+旧代表题的限速写法另须按同题 MS 判：考官报告讨论超过上限时不再加速的写法（9618_s23_41:2(a)(iv)），但 MS p.17 第 2 点明确接受 remove increase or assign maximum，即超过时**撤销本次增量或赋最大值**都可取该点；ER 的易错描述不覆盖 MS 的接受口径。推荐模板采用赋最大值，并在所有路径上更新水平位置；不能把这条单题限速规则套到 Bird 的坐标上。
 
-**在考什么**　IncreaseSpeed() 无显式参数，按顺序改变两个属性；3 分，3 点。 整道第 2 题 QP p.4–7（p.4 Vehicle 类图，p.6 Helicopter 类图，p.7 主程序数据）；MS p.12–25。
+#### 代表题精讲　⟦9618_w25_42:1(a)(iv)⟧
 
-**完整作答**（整道第 2 题的最终程序；按代码格拆交，不能把整段程序重复贴进每一格）
+**在考什么**　Move(Direction, MinsFlying) 用对象速度算距离，再按四方向更新坐标；5 分、5 点。整题 QP p.2–5（p.2 Bird 类图与 500.0 初值，p.3 getters，p.4 Move 与两鸟实参，p.5 main、验证和四次独立测试）；MS p.6–17（Move 清单 p.9、Python 范例 p.10，截图 p.17）。本题不读源文件；TreeData.txt 属于该卷第 3 题。
+
+**完整作答**（整道第 1 题的最终程序；输入顺序是鸟号、分钟、方向；按代码格拆交）
 
 ```python
-# ---- 2(a)(i) ----
-class Vehicle:
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
-        self.__ID = IDP                           # STRING
-        self.__MaxSpeed = MaxSpeedP               # INTEGER
-        self.__IncreaseAmount = IncreaseAmountP   # INTEGER
-        self.__CurrentSpeed = 0                   # INTEGER
-        self.__HorizontalPosition = 0             # INTEGER
+# ---- 1(a)(i) ----
+class Bird:
+    def __init__(self, pDistancePerHour, pSpecies):
+        self.__DistancePerHour = pDistancePerHour  # REAL
+        self.__Species = pSpecies                  # STRING
+        self.__XPosition = 500.0                    # REAL
+        self.__YPosition = 500.0                    # REAL
 
-    # ---- 2(a)(ii) ----
-    def GetCurrentSpeed(self):
-        return self.__CurrentSpeed
+    # ---- 1(a)(ii) ----
+    def GetSpecies(self):
+        return self.__Species
 
-    def GetIncreaseAmount(self):
-        return self.__IncreaseAmount
+    # ---- 1(a)(iii) ----
+    def GetPosition(self):
+        return "X = " + str(self.__XPosition) + " Y = " + str(self.__YPosition)
 
-    def GetMaxSpeed(self):
-        return self.__MaxSpeed
-
-    def GetHorizontalPosition(self):
-        return self.__HorizontalPosition
-
-    # ---- 2(a)(iii) ----
-    def SetCurrentSpeed(self, CSP):
-        self.__CurrentSpeed = CSP
-
-    def SetHorizontalPosition(self, HPP):
-        self.__HorizontalPosition = HPP
-
-    # ---- 2(a)(iv) ----
-    def IncreaseSpeed(self):
-        self.__CurrentSpeed = self.__CurrentSpeed + self.__IncreaseAmount
-        if self.__CurrentSpeed > self.__MaxSpeed:
-            self.__CurrentSpeed = self.__MaxSpeed
-        self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
+    # ---- 1(a)(iv) ----
+    def Move(self, Direction, MinsFlying):
+        Distance = (self.__DistancePerHour / 60) * MinsFlying
+        if Direction == "N":
+            self.__YPosition = self.__YPosition + Distance
+        elif Direction == "S":
+            self.__YPosition = self.__YPosition - Distance
+        elif Direction == "E":
+            self.__XPosition = self.__XPosition + Distance
+        elif Direction == "W":
+            self.__XPosition = self.__XPosition - Distance
 
 
-# ---- 2(b)(i) ----
-class Helicopter(Vehicle):
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP, VertChangeP, MaxHeightP):
-        super().__init__(IDP, MaxSpeedP, IncreaseAmountP)
-        self.__VerticalPosition = 0               # INTEGER
-        self.__VerticalChange = VertChangeP       # INTEGER
-        self.__MaxHeight = MaxHeightP             # INTEGER
-
-    def GetVerticalPosition(self):
-        return self.__VerticalPosition
-
-    # ---- 2(b)(ii) ----
-    def IncreaseSpeed(self):
-        self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange
-        if self.__VerticalPosition > self.__MaxHeight:
-            self.__VerticalPosition = self.__MaxHeight
-        super().IncreaseSpeed()                   # update horizontal motion in every case
-
-
-# ---- 2(c) ----
-def OutputCurrentPosition(ObjectToOutput):
-    print("Current position =", ObjectToOutput.GetHorizontalPosition())
-    print("Current speed =", ObjectToOutput.GetCurrentSpeed())
-    if isinstance(ObjectToOutput, Helicopter):
-        print("Current vertical position =", ObjectToOutput.GetVerticalPosition())
-
-
-# ---- 2(d)(i) ----
 if __name__ == "__main__":
-    Car = Vehicle("Tiger", 100, 20)
-    Heli = Helicopter("Lion", 350, 40, 3, 100)
-    Car.IncreaseSpeed()
-    Car.IncreaseSpeed()
-    OutputCurrentPosition(Car)
-    print()
-    Heli.IncreaseSpeed()
-    Heli.IncreaseSpeed()
-    OutputCurrentPosition(Heli)
+    # ---- 1(b) ----
+    FirstBird = Bird(71.0, "Cockatiel")
+    SecondBird = Bird(56.0, "Macaw")
+    # ---- 1(c)(i) ----
+    print(FirstBird.GetSpecies(), "is currently at", FirstBird.GetPosition())
+    print(SecondBird.GetSpecies(), "is currently at", SecondBird.GetPosition())
+    Choice = input("Enter 1 for Cockatiel or 2 for Macaw: ")
+    while Choice != "1" and Choice != "2":
+        Choice = input("Enter 1 or 2: ")
+    while True:
+        try:
+            Time = int(input("Enter flying time in whole minutes (0 to 500): "))
+            if Time >= 0 and Time <= 500:
+                break
+        except ValueError:
+            pass
+    Direction = input("Enter direction N, S, E or W: ").upper()
+    while Direction != "N" and Direction != "S" and Direction != "E" and Direction != "W":
+        Direction = input("Enter direction N, S, E or W: ").upper()
+    if Choice == "1":
+        FirstBird.Move(Direction, Time)
+    else:
+        SecondBird.Move(Direction, Time)
+    print(FirstBird.GetSpecies(), "is currently at", FirstBird.GetPosition())
+    print(SecondBird.GetSpecies(), "is currently at", SecondBird.GetPosition())
 ```
 
-按 QP p.7 实参实际运行：汽车位置 60、速度 40；直升机位置 120、速度 80、高度 6，与 MS p.25 截图数值一致。另检查第六次汽车加速后速度仍为 100、位置为 400；直升机连续 34 次加速后高度为 100、速度为 350，触顶分支可运行。
+每个测试重新运行程序，让两鸟均从 `(500.0, 500.0)` 起飞。已按 QP p.5 实际运行四次：
 
-**与 MS 逐点对齐**（2(a)(iv)，3 分；语料 MP 编号与 MS 圆点顺序一致）
+| 测试输入（鸟号 / 分钟 / 方向） | Cockatiel 最终 X、Y | Macaw 最终 X、Y |
+|:--|:--|:--|
+| 1 / 60 / N | 500.0、571.0 | 500.0、500.0 |
+| 2 / 30 / S | 500.0、500.0 | 500.0、472.0 |
+| 1 / 30 / W | 464.5、500.0 | 500.0、500.0 |
+| 2 / 60 / E | 500.0、500.0 | 556.0、500.0 |
+
+前三次与 MS p.17 截图一致。**原件差异**：第 4 次 QP 要 Macaw 向东 60 分钟，MS p.17 截图却把 X=556.0 标在 Cockatiel、Macaw 留在 500.0；其 MS p.16 范例的 E 分支与 p.12 调用点仍按所选鸟调用 Move。本作答按 QP 与得分点更新 Macaw（D31），不照抄截图中错配的鸟名。另跑无效鸟号 0、时间 −1/501/非整数、方向 Q 后重新输入的路径均可继续到正确结果；0 与 500 分钟边界也已核对。
+
+**与 MS 逐点对齐**（1(a)(iv)，5 分；语料 MP 编号与 MS 圆点顺序一致）
 
 | 语料 MP | MS 原文 | 作答对应 | 技能标签 |
 |:--|:--|:--|:--|
-| 1 | Method header (and close where appropriate) with no parameter and adding IncreaseAmount to CurrentSpeed | 方法头和 `CurrentSpeed + IncreaseAmount` | `module-header`、`assign-value` |
-| 2 | Checking if MaxSpeed is exceeded and limiting to max speed (remove increase or assign maximum) | 比较 MaxSpeed，超过则赋 MaxSpeed | `relational-ops`、`nested-if` |
-| 3 | Adding updated CurrentSpeed to HorizontalPosition in all cases (whether MaxSpeed is exceeded or not) | if 外把更新后的速度加到 HorizontalPosition | `assign-value` |
+| 1 | Method header (and end) taking direction and minutes flying as parameters | `def Move(self, Direction, MinsFlying):` | `module-header` |
+| 2 | Calculation of distance using minutes flying parameter and attribute DistancePerHour | `(self.__DistancePerHour / 60) * MinsFlying` | `operator-precedence` |
+| 3 | Selection based on direction parameter … | if / elif 按 Direction 分支 | `nested-if` |
+| 4 | … north adding to YPosition and south subtracting from YPosition | N 加 Y，S 减 Y | `nested-if`、`assign-value` |
+| 5 | … east adding to XPosition and west subtracting from XPosition | E 加 X，W 减 X | `nested-if`、`assign-value` |
 
-**证据格怎么交**　2(a)(iv) 格交 Vehicle 内的 IncreaseSpeed 方法，保留类内缩进；本格不交 Helicopter 的同名方法。
+**证据格怎么交**　1(a)(iv) 格贴 Bird 内的 Move，能看到方法头、距离公式和四个分支；1(a)(iii) 另交返回 `X = … Y = …` 的 GetPosition；1(c)(i) 交输入验证、调用所选对象的 Move 和用 getter 输出的 main。1(c)(ii) 要四次独立测试截图，能看见输入和对应输出（MS p.17：第一测试 1 分、第二测试 1 分、第三与第四合计 1 分）；第 4 次按题干展示 Macaw 的更新值，不把截图鸟名错误当作程序目标。
 
-**直观**　一次按油门先改变速度，再按新速度向前走；限速牌只限制速度，不让车停止前进。
+**直观**　速度是每小时的路程，先换成这几分钟走了多远，再决定在平面图上向哪个方向移动。
 
-**对应练习与阶梯**　真题练习 `practice/p4/9618_s23_41_q2/`（T35 并行生成；路径用于定位，不表示练习已验收）。前置 **L12 E01**。
+**对应练习与阶梯**　真题练习 `practice/p4/9618_w25_42_q1/`；前置 **L12 E01**（对象状态与方法）、**L03 E01**（选择分支）。
 
-**下一道变式**　⟦9618_s23_42:3(a)(iii)⟧　SetPay(WeekNumber, Hours) 把小时数乘 HourlyPay，存到 `PayYear2022[WeekNumber - 1]`。名字是 Set，操作却含计算。QP p.9；MS p.26。
+**下一道变式**　⟦9618_s23_41:2(a)(iv)⟧　Vehicle.IncreaseSpeed 先加速、限制上限，再在所有路径更新水平位置；推荐超过时赋最大值，同时按本题 MS 接受撤销本次增量。QP p.4–5；MS p.17。代表题与变式来自不同卷。
 
 <!-- auto:drills P4-OP-03 -->
 
