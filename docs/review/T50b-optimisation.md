@@ -8,7 +8,7 @@
 |:--|:--|:--|:--|
 | 1 | **每卷一页考场作答方法** | `papers/p1–p4/front.md` 末尾「考场作答方法（一页）」 | 4 页 |
 | 2 | **教学 skill 的诊断与检索层** | `skill/cie-9618-cs-tutor/references/few-shots.md`（六种探针、错误转题协议、示例 6–8）；`theory.md`、`programming.md`、`handoff-template.md` 的挂钩 | 新增约 230 行 |
-| 3 | **跨卷概念主线** | `docs/guide/概念主线.md`（三条主线，每条末尾一张“推出题型”的表） | 200 行 |
+| 3 | **跨卷概念主线** | `docs/guide/concept-threads.md`（三条主线，每条末尾一张“推出题型”的表） | 200 行 |
 | 4 | **四章心智模型** | `papers/p1/cards/{HW,SS,CM,EO}.md` 核心思想末尾「心智模型」段 | 4 段 |
 | 5 | **66 张 ★★★ 卡的「迁移与卡点」块** | 四卷全部 ★★★ 卡（P1 23、P2 12、P3 21、P4 10），插在代表题精讲之后、下一道变式之前 | 66 块 |
 
@@ -45,7 +45,7 @@
 ## 3. 建议学生怎样用
 
 1. **开学前**读 P1 的「考场作答方法」一页；每次模考前重读本卷那一页，模考后把自己丢分的写法补进第 5 节的表。
-2. **每次换章**：先读 `docs/guide/概念主线.md` 里对应的那一步（1 月开 P3 前通读主线二，开 P4 前通读主线三），再读章首的核心思想（有「心智模型」的章先看它）。
+2. **每次换章**：先读 `docs/guide/concept-threads.md` 里对应的那一步（1 月开 P3 前通读主线二，开 P4 前通读主线三），再读章首的核心思想（有「心智模型」的章先看它）。
 3. **学一张 ★★★ 卡**：读完代表题精讲，先看「迁移与卡点」的前两条（卡点、考官在换什么），做变式之前再看第三条——它告诉你要换的是什么，不告诉你答案。
 4. **每次课开场**：导师会出 2–3 道上次丢分变成的 30 秒检索题，不看笔记用英文答；连续两次答对才从清单消失。
 5. **4 月冲刺**：用主线末尾的三张表自测——结构 × 动作的每一格能不能默写模板；四种问法各能说出骨架和两个题型；六处翻译能不能不看书写对。
@@ -63,7 +63,8 @@
 | # | 事项 | 建议 |
 |:--|:--|:--|
 | M1 | 分支名：云端会话被指定在 `claude/friendly-einstein-mh2pht` 上开发，任务卡写的是 `task/T50b-optimisation` | 合并时按实际分支；看板一行改名（同 T50 M6） |
-| M2 | `docs/guide/概念主线.md` 不在 `tools/check.py` 的扫描范围（它只扫 `papers/`、`ladder/`、`skill/`），本轮用脚本自查了 17 个行号、66 个题型码全部存在、文中没有 `「」` | 若以后在 docs 里写 MS 引文，把 `docs/guide` 加进 `check_markdown` 的扫描列表 |
+| M2 | `tools/check_scope.py` 对非 ASCII 文件名误报：git 默认 `core.quotepath=true`，`git diff --name-only` 把 `docs/guide/概念主线.md` 输出成带引号的八进制转义串，glob 匹配失败；`git config core.quotepath false` 后通过。本轮把文件改名为 ASCII 的 `docs/guide/concept-threads.md` 绕开（标题仍是「跨卷概念主线」） | `check_scope.py` 与 `check.py` 的 `changed_paths` 调用 git 时加 `-c core.quotepath=false`（或改用 `-z`），以后仓库里才能放中文文件名 |
+| M5 | `docs/guide/` 不在 `tools/check.py` 的引文扫描范围（它只扫 `papers/`、`ladder/`、`skill/`），本轮用脚本自查了 17 个行号、66 个题型码全部存在、文中没有 `「」` | 若以后在 docs 里写 MS 引文，把 `docs/guide` 加进 `check_markdown` 的扫描列表 |
 | M3 | SKILL.md §1 的“读什么”表没有 `docs/guide/` 的入口（SKILL.md 不在本轮范围）；已在 `theory.md` §2 开章步骤里加了指向，`programming.md` §3 与 `p4-practical.md` 的开章都引用 theory.md §2 | 总控改 SKILL.md 时可在 §1 加一行 |
 | M4 | T50 的 M1（构建器引文正则跨行吞文本）仍未改；本轮新增文字全部避开了不带 ⟦⟧ 的 `「」` | 同 T50 建议 |
 
@@ -71,8 +72,9 @@
 
 1. `T50b: add exam-method one-pagers to the four paper fronts` — `papers/p1–p4/front.md`。
 2. `T50b: teach the tutor to diagnose before explaining and to recycle errors` — `few-shots.md`（探针表、错误转题、示例 6–8）、`theory.md`、`programming.md`、`handoff-template.md`。
-3. `T50b: add cross-paper concept threads and mental models for four P1 chapters` — `docs/guide/概念主线.md`、`papers/p1/cards/{HW,SS,CM,EO}.md`。
+3. `T50b: add cross-paper concept threads and mental models for four P1 chapters` — `docs/guide/concept-threads.md`、`papers/p1/cards/{HW,SS,CM,EO}.md`。
 4. `T50b: add 迁移与卡点 blocks to the twelve ★★★ P2 cards`。
 5. `T50b: add 迁移与卡点 blocks to the 23 ★★★ P1 cards`。
 6. `T50b: add 迁移与卡点 blocks to the 21 ★★★ P3 and 10 ★★★ P4 cards`。
 7. `T50b: add review report, progress log and the guide pointer in theory.md` — 本报告、`tasks/progress/T50b.md`、`theory.md` §2 一条。
+8. `T50b: rename the concept guide to an ASCII filename` — `docs/guide/概念主线.md` → `concept-threads.md`，绕开 M2 的误报；三处引用同步。
