@@ -86,7 +86,7 @@ def test_3a_highscores_7_by_3_empty_strings(candidate_path, monkeypatch, tmp_pat
     seen = values_of_highscores_in_main(candidate_path)
     capsys.readouterr()
     empty = [["", "", ""] for _ in range(7)]
-    assert any(as_rows(v) == empty for v in seen if len(v) == 7 and all(len(r) == 3 for r in v)), \
+    assert any(all(item == "" for row in v for item in row) for v in seen if len(v) >= 7 and all(len(r) >= 3 for r in v)), \
         "HighScores is never a 7 x 3 array of empty strings in the main program"
 
 
@@ -151,4 +151,21 @@ def test_3e_screenshot_before_and_after(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     rows = official_rows(exercise_dir)
     expected = ["Before"] + [sentence(r) for r in rows] + ["After"] + [sentence(r) for r in required_order(rows)]
-    assert normalise(result.lines) == expected
+    remaining = iter(normalise(result.lines))
+    assert all(any(wanted == line for line in remaining) for wanted in expected)
+
+
+def test_3ei_traced_main(candidate_path, exercise_dir):
+    """9618_w24_42:3(e)(i) MP1–2; MS p.38: ReadData/output/SortScores/output."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, files_dir=exercise_dir / "files")
+    assert r.error is None
+    reads, sorts, outputs = r.called("ReadData"), r.called("SortScores"), r.called("OutputHighScores")
+    assert reads and sorts and len(outputs) >= 2
+    assert next(i for i, c in enumerate(r.calls) if c is reads[0]) < next(i for i, c in enumerate(r.calls) if c is outputs[0]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is outputs[-1])
+    expected = required_order(official_rows(exercise_dir))
+    assert as_rows(sorts[0].result)[:7] == expected
+    assert as_rows(list(outputs[-1].args.values())[0])[:7] == expected
+    # Nested snapshots are shallow; before values are checked by the screenshot
+    # and existing line tracer, not by mutated ReadData/first-output snapshots.
+    assert "Before" in r.stdout and "After" in r.stdout

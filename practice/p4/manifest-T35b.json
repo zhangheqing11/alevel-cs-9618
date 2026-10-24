@@ -719,7 +719,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 9,
+      "mutants": 10,
       "qp_pages_checked": [
         12,
         13,
@@ -739,7 +739,7 @@
       "qp_over_ms": [
         "3(e)(ii): MS screenshot says got to level; QP 3(c) specifies reached level, which the tests use."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w25_42_q2",
