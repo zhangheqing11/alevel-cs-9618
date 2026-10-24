@@ -147,7 +147,7 @@ BL-01 电路 → 真值表 ──► BL-04 真值表 / 电路 → 积之和（�
 - (b)(i) Half adder。
 - (b)(ii) Purpose of E：sum（两个位相加的和位）。Purpose of F：carry（进位）。
 
-**与 MS 对齐**　(a)「1 mark per correct output column」⟦9618_s22_32:6(a)⟧，E 列、F 列各 1 分；(b)(i)「Half adder」⟦9618_s22_32:6(b)(i)⟧；(b)(ii) 两个独立得分点「Purpose of E: Sum」与「Purpose of F: Carry」⟦9618_s22_32:6(b)(ii)⟧。
+**与 MS 对齐**　(a)「1 mark per correct output column」⟦9618_s22_32:6(a)⟧，E 列、F 列各 1 分；(b)(i)「Half adder」⟦9618_s22_32:6(b)(i)⟧；(b)(ii) 两个独立得分点「Purpose of E: Sum」⟦9618_s22_32:6(b)(ii)⟧ 与「Purpose of F: Carry」⟦9618_s22_32:6(b)(ii)⟧。
 
 **英文作答句**　(b)(i) Half adder. (b)(ii) E is the sum bit of A + B; F is the carry bit.
 

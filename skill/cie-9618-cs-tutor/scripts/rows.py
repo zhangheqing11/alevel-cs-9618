@@ -391,6 +391,11 @@ def cmd_ex(args, root) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    try:                                 # `rows.py find … | head` must not end in a BrokenPipeError traceback
+        import signal
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+    except (AttributeError, ValueError):
+        pass
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", help="repo root (default: nearest folder with AGENTS.md)")
     sub = ap.add_subparsers(dest="cmd", required=True)
