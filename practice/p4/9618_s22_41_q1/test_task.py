@@ -174,3 +174,16 @@ def test_1f_writes_unchanged_top_ten(sol, monkeypatch, tmp_path, exercise_dir):
     sol.WriteTopTen()
     text = (work / "NewHighScore.txt").read_text(encoding="utf-8")
     assert tokens(text) == tokens(" ".join(ORIGINAL))
+
+
+def test_1di_eiii_traced_main(candidate_path, exercise_dir):
+    """9618_s22_41:1(d)(i) MP1–2; 1(e)(iii) MP1–2; MS pp.8,15."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin="JKL\n9999\n", files_dir=exercise_dir / "files")
+    assert r.error is None
+    read, output, arrange = r.called("ReadHighScores"), r.called("OutputHighScores"), r.called("Arrange")
+    assert read and len(output) >= 2 and arrange
+    assert list(arrange[0].args.values()) == ["JKL", 9999]
+    assert next(i for i, c in enumerate(r.calls) if c is read[0]) < next(i for i, c in enumerate(r.calls) if c is output[0]) < next(i for i, c in enumerate(r.calls) if c is arrange[0]) < next(i for i, c in enumerate(r.calls) if c is output[-1])
+    assert find_block(r.stdout.splitlines(), ORIGINAL) >= 0
+    assert find_block(r.stdout.splitlines(), WITH_JKL) >= 0

@@ -158,7 +158,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 15,
       "qp_pages_checked": [
         2,
@@ -176,7 +176,7 @@
         "1(e)(ii): MS Python example breaks after one shift; reference and tests follow QP (whole list moves down)",
         "1(f): MS example writes to \" NewHighScore.txt\" (leading space) and closes inside the loop; tests use the QP file name"
       ],
-      "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens."
+      "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s22_42_q2",
