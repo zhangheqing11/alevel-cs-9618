@@ -1155,7 +1155,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 9,
       "qp_pages_checked": [
         4,
@@ -1181,7 +1181,7 @@
         "2(b)/2(c)：MS p.21 将 SplitLine[0] 字符串加入数组，p.26 直接 write(Item)；QP 明确数组存 integer，参考解先 int()，写时 str()。",
         "未知/损坏颜色和文件缺失时的返回数组内容 QP 未定义，测试不替题目规定；文件不存在须有异常消息。输出措辞不固定。官方空色文件一并复制，追加测试不覆写已有行。"
       ],
-      "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。"
+      "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s25_43_q2",

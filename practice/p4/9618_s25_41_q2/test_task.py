@@ -113,3 +113,24 @@ def test_2ei_eii_screenshot_files(candidate_path, exercise_dir):
     expected = expected_groups((exercise_dir / "files/TheData.txt").read_text().splitlines())
     for filename, values in expected.items():
         assert res.read(filename).splitlines() == [str(v) for v in values]
+
+
+def test_2d_2ei_traced_main(candidate_path, exercise_dir, tmp_path):
+    """9618_s25_41:2(d) MP1–2; 2(e)(i) MP1–3; MS pp.28–29."""
+    import shutil
+    from testkit import run_script_traced
+    files = tmp_path / "files"
+    shutil.copytree(exercise_dir / "files", files)
+    for filename, lines in (("TheData.txt", (files / "TheData.txt").read_text().splitlines()),
+                            ("Other.txt", ["17,red", "6,blue", "99,red"])):
+        (files / filename).write_text("\n".join(lines))
+        r = run_script_traced(candidate_path, stdin=filename + "\n", files_dir=files)
+        assert r.error is None
+        reads, splits, stores = r.called("ReadData"), r.called("SplitData"), r.called("StoreData")
+        assert reads and splits and len(stores) == 6
+        assert reads[0].result == lines
+        assert splits[0].args["DataArray"] == reads[0].result
+        assert next(i for i, c in enumerate(r.calls) if c is reads[0]) < next(i for i, c in enumerate(r.calls) if c is splits[0]) < next(i for i, c in enumerate(r.calls) if c is stores[0])
+        assert {c.args["FileName"]: c.args["DataToStore"] for c in stores} == expected_groups(lines)
+        for name, values in expected_groups(lines).items():
+            assert (r.workdir / name).read_text().splitlines() == [str(x) for x in values]
