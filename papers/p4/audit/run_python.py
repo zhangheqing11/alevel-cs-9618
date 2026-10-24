@@ -80,7 +80,7 @@ runpy.run_path("answer.py", run_name="__main__")
     args.out.write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
     for r in results:
         print(r['card'],r['case'],r.get('exit_code',r.get('error')),
-            repr(r.get('stdout',''))[:1000],r.get('stderr','')[-400:])
+            repr(r.get('stdout',''))[:180],r.get('stderr','')[-200:])
 
 
 if __name__=='__main__':main()

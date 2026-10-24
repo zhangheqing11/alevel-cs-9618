@@ -3,6 +3,40 @@
     "card": "P4-AR-01",
     "case": 1,
     "inputs": [
+      11
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 0\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-01",
+    "case": 2,
+    "inputs": [
+      100
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 19\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-01",
+    "case": 3,
+    "inputs": [
       101
     ],
     "source_files": [
@@ -14,9 +48,7 @@
     "exit_code": 0,
     "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Not found\n",
     "stderr": "",
-    "files": {
-      "TreeData.txt": "40\n4\n82\n8\n21\n23\n1\n34\n67\n6\n9\n10\n13\n52\n68\n2\n28\n89\n85\n66\n91\n53\n0\n15\n19\n37\n31\n35\n74\n76\n54\n22\n16\n98\n61\n48\n46\n38\n30\n39\n41\n49\n50\n36\n58\n80\n71\n18\n25\n12"
-    }
+    "files": {}
   },
   {
     "card": "P4-AR-02",
@@ -31,9 +63,7 @@
     "exit_code": 0,
     "stdout": "Added\nAdded\nAdded\nAdded\nAdded\n78 priority 1\n33 priority 8\n526 priority 9\n12 priority 9\n12 priority 10\n",
     "stderr": "",
-    "files": {
-      "Characters.txt": "Amal\n0\n2\nJess\n10\n12\nKarl\n50\n24\nWyona\n18\n6\nRohan\n1\n5\nSantana\n99\n1\nBritney\n55\n83\nRobin\n100\n75\nCain\n22\n56\nQui\n84\n9"
-    }
+    "files": {}
   },
   {
     "card": "P4-AR-03",
@@ -60,9 +90,7 @@
     "exit_code": 0,
     "stdout": "Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Invalid. Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\n10 9 8 7 6 5 4 3 2 1 \n10 is returned\n9 is returned\n8 7 6 5 4 3 2 1 \n",
     "stderr": "",
-    "files": {
-      "HighScoreTable.txt": "GHEH\n3\n10\nKWQW\n4\n20\nMMND\n4\n18\nRFOO\n5\n20\nXXHD\n3\n19\nQWSD\n3\n15\nJGHF\n5\n22"
-    }
+    "files": {}
   },
   {
     "card": "P4-AR-03",
@@ -88,9 +116,7 @@
     "exit_code": 0,
     "stdout": "Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\n10 9 8 7 6 5 4 3 2 1 \n10 is returned\n9 is returned\n8 7 6 5 4 3 2 1 \n",
     "stderr": "",
-    "files": {
-      "HighScoreTable.txt": "GHEH\n3\n10\nKWQW\n4\n20\nMMND\n4\n18\nRFOO\n5\n20\nXXHD\n3\n19\nQWSD\n3\n15\nJGHF\n5\n22"
-    }
+    "files": {}
   },
   {
     "card": "P4-AR-04",
@@ -105,9 +131,7 @@
     "exit_code": 0,
     "stdout": "37 81 70 29 32 81 75 12 62 43 \n24 20 86 13 33 39 89 72 53 96 \n52 24 25 67 27 22 71 12 79 15 \n59 56 5 51 92 11 85 86 2 89 \n96 30 43 59 8 60 56 26 11 10 \n35 51 12 75 87 63 69 86 64 64 \n19 65 43 78 32 47 49 17 11 97 \n94 76 20 29 72 72 13 100 14 48 \n87 72 73 56 93 4 58 95 2 65 \n92 92 36 53 100 43 67 78 86 59 \n12 29 32 37 43 62 70 75 81 81 \n13 20 24 33 39 53 72 86 89 96 \n12 15 22 24 25 27 52 67 71 79 \n2 5 11 51 56 59 85 86 89 92 \n8 10 11 26 30 43 56 59 60 96 \n12 35 51 63 64 64 69 75 86 87 \n11 17 19 32 43 47 49 65 78 97 \n13 14 20 29 48 72 72 76 94 100 \n2 4 56 58 65 72 73 87 93 95 \n36 43 53 59 67 78 86 92 92 100 \n0\n-1\n",
     "stderr": "",
-    "files": {
-      "CardValues.txt": "1\nred\n5\nblack\n2\nwhite\n4\nred\n9\ngreen\n6\nblack\n7\npurple\n8\nred\n9\norange\n10\nred\n1\nblack\n2\norange\n3\nyellow\n4\npurple\n5\ngreen\n6\nyellow\n7\nyellow\n8\nwhite\n9\nwhite\n10\nyellow\n1\ngrey\n2\nblue\n3\nblack\n4\nblue\n5\nblue\n6\npurple\n7\ngrey\n8\nblue\n9\nblue\n10\norange"
-    }
+    "files": {}
   },
   {
     "card": "P4-AR-05",
@@ -150,7 +174,6 @@
     "stderr": "",
     "files": {
       "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
-      "TheData.txt": "10,red\n20,green\n10,blue\n15,orange\n9,red\n22,blue\n16,green\n21,orange\n33,pink\n29,pink\n3,blue\n1,red\n30,yellow\n21,green\n93,blue\n76,red\n2,blue\n34,green\n71,orange\n9,pink\n3,pink\n4,yellow\n100,blue\n82,yellow\n38,green\n12,pink\n4,pink\n8,yellow\n29,orange\n53,blue\n71,green\n19,red\n38,red\n18,orange\n99,pink\n13,green\n34,red\n3,green\n65,blue\n221,orange\n46,red\n76,blue\n3,green\n2,orange\n76,pink\n56,pink\n34,blue\n14,red\n21,yellow\n42,green\n12,blue\n45,red\n6,blue\n5,green\n28,orange\n102,pink\n146,pink\n234,yellow\n54,blue\n34,yellow\n1,green\n53,pink\n56,pink\n67,yellow\n54,orange\n62,blue\n156,green\n37,red\n43,red\n68,orange\n46,pink\n5,green",
       "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
       "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
       "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
@@ -199,7 +222,6 @@
     "stderr": "",
     "files": {
       "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
-      "TheData.txt": "10,red\n20,green\n10,blue\n15,orange\n9,red\n22,blue\n16,green\n21,orange\n33,pink\n29,pink\n3,blue\n1,red\n30,yellow\n21,green\n93,blue\n76,red\n2,blue\n34,green\n71,orange\n9,pink\n3,pink\n4,yellow\n100,blue\n82,yellow\n38,green\n12,pink\n4,pink\n8,yellow\n29,orange\n53,blue\n71,green\n19,red\n38,red\n18,orange\n99,pink\n13,green\n34,red\n3,green\n65,blue\n221,orange\n46,red\n76,blue\n3,green\n2,orange\n76,pink\n56,pink\n34,blue\n14,red\n21,yellow\n42,green\n12,blue\n45,red\n6,blue\n5,green\n28,orange\n102,pink\n146,pink\n234,yellow\n54,blue\n34,yellow\n1,green\n53,pink\n56,pink\n67,yellow\n54,orange\n62,blue\n156,green\n37,red\n43,red\n68,orange\n46,pink\n5,green",
       "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
       "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
       "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
@@ -226,9 +248,7 @@
     "exit_code": 0,
     "stdout": "Beech has a maximum height 400 a maximum width 200 and grows 30 cm a year. It loses its leaves each year.\nEvergreen (keep/lose): Maximum height in cm: Maximum width in cm: Blue Conifer has a maximum height 250 a maximum width 50 and grows 40 cm a year. It does not lose its leaves.\nGreen Conifer has a maximum height 300 a maximum width 150 and grows 40 cm a year. It does not lose its leaves.\nEnter the name of the tree to buy: Starting height in cm: Your tree should be full height in approximately 3.75 years\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-FL-03",
@@ -271,7 +291,6 @@
     "stderr": "",
     "files": {
       "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
-      "TheData.txt": "10,red\n20,green\n10,blue\n15,orange\n9,red\n22,blue\n16,green\n21,orange\n33,pink\n29,pink\n3,blue\n1,red\n30,yellow\n21,green\n93,blue\n76,red\n2,blue\n34,green\n71,orange\n9,pink\n3,pink\n4,yellow\n100,blue\n82,yellow\n38,green\n12,pink\n4,pink\n8,yellow\n29,orange\n53,blue\n71,green\n19,red\n38,red\n18,orange\n99,pink\n13,green\n34,red\n3,green\n65,blue\n221,orange\n46,red\n76,blue\n3,green\n2,orange\n76,pink\n56,pink\n34,blue\n14,red\n21,yellow\n42,green\n12,blue\n45,red\n6,blue\n5,green\n28,orange\n102,pink\n146,pink\n234,yellow\n54,blue\n34,yellow\n1,green\n53,pink\n56,pink\n67,yellow\n54,orange\n62,blue\n156,green\n37,red\n43,red\n68,orange\n46,pink\n5,green",
       "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
       "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
       "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
@@ -298,9 +317,7 @@
     "exit_code": 0,
     "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 8\n3\n2\n1\n5\nAfter\n8\n3\n2\n1\n",
     "stderr": "",
-    "files": {
-      "Data.txt": "beige\ngreen\nscarlet\nsilver\nbronze\nslate\nyellow\norange\njade\nlavender\nmagnolia\nmagenta\nturquoise\nblack\ngrey\nrusset\nmaroon\nmango\nmint\npurple\nred\npink\nwhite\ncream\nnavy\nolive\nbrown\nviolet\ncyan\namber\naqua\nazure\ncopper\nfawn\nfuschia\ngold\nindigo\nivory\nmauve\nmulberry\npeach\nperiwinkle\nplum\nrose\nsage"
-    }
+    "files": {}
   },
   {
     "card": "P4-LT-01",
@@ -321,9 +338,7 @@
     "exit_code": 0,
     "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 5\n9\n8\n6\n5\nAfter\n9\n8\n6\n5\n",
     "stderr": "",
-    "files": {
-      "Data.txt": "beige\ngreen\nscarlet\nsilver\nbronze\nslate\nyellow\norange\njade\nlavender\nmagnolia\nmagenta\nturquoise\nblack\ngrey\nrusset\nmaroon\nmango\nmint\npurple\nred\npink\nwhite\ncream\nnavy\nolive\nbrown\nviolet\ncyan\namber\naqua\nazure\ncopper\nfawn\nfuschia\ngold\nindigo\nivory\nmauve\nmulberry\npeach\nperiwinkle\nplum\nrose\nsage"
-    }
+    "files": {}
   },
   {
     "card": "P4-LT-01",
@@ -344,9 +359,7 @@
     "exit_code": 0,
     "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 6\n5\n8\n7\n10\nAfter\n6\n8\n7\n10\n",
     "stderr": "",
-    "files": {
-      "Data.txt": "beige\ngreen\nscarlet\nsilver\nbronze\nslate\nyellow\norange\njade\nlavender\nmagnolia\nmagenta\nturquoise\nblack\ngrey\nrusset\nmaroon\nmango\nmint\npurple\nred\npink\nwhite\ncream\nnavy\nolive\nbrown\nviolet\ncyan\namber\naqua\nazure\ncopper\nfawn\nfuschia\ngold\nindigo\nivory\nmauve\nmulberry\npeach\nperiwinkle\nplum\nrose\nsage"
-    }
+    "files": {}
   },
   {
     "card": "P4-LT-03",
@@ -362,8 +375,7 @@
     "stdout": "",
     "stderr": "",
     "files": {
-      "Tree.txt": "1,40,2\n6,4,3\n8,82,17\n9,8,4\n10,21,5\n31,23,7\n22,1,15\n16,34,25\n13,67,14\n-1,6,-1\n-1,9,11\n-1,10,12\n49,13,23\n35,52,19\n-1,68,28\n-1,2,-1\n48,28,26\n18,89,20\n-1,85,-1\n21,66,-1\n-1,91,33\n-1,53,30\n-1,0,-1\n-1,15,24\n32,19,-1\n27,37,37\n38,31,-1\n-1,35,43\n46,74,29\n-1,76,45\n-1,54,34\n-1,22,-1\n-1,16,47\n-1,98,-1\n44,61,-1\n36,48,41\n40,46,-1\n-1,38,39\n-1,30,-1\n-1,39,-1\n-1,41,-1\n-1,49,42\n-1,50,-1\n-1,36,-1\n-1,58,-1\n-1,80,-1\n-1,71,-1\n-1,18,-1\n-1,25,-1\n-1,12,-1\n",
-      "TreeData.txt": "40\n4\n82\n8\n21\n23\n1\n34\n67\n6\n9\n10\n13\n52\n68\n2\n28\n89\n85\n66\n91\n53\n0\n15\n19\n37\n31\n35\n74\n76\n54\n22\n16\n98\n61\n48\n46\n38\n30\n39\n41\n49\n50\n36\n58\n80\n71\n18\n25\n12"
+      "Tree.txt": "1,40,2\n6,4,3\n8,82,17\n9,8,4\n10,21,5\n31,23,7\n22,1,15\n16,34,25\n13,67,14\n-1,6,-1\n-1,9,11\n-1,10,12\n49,13,23\n35,52,19\n-1,68,28\n-1,2,-1\n48,28,26\n18,89,20\n-1,85,-1\n21,66,-1\n-1,91,33\n-1,53,30\n-1,0,-1\n-1,15,24\n32,19,-1\n27,37,37\n38,31,-1\n-1,35,43\n46,74,29\n-1,76,45\n-1,54,34\n-1,22,-1\n-1,16,47\n-1,98,-1\n44,61,-1\n36,48,41\n40,46,-1\n-1,38,39\n-1,30,-1\n-1,39,-1\n-1,41,-1\n-1,49,42\n-1,50,-1\n-1,36,-1\n-1,58,-1\n-1,80,-1\n-1,71,-1\n-1,18,-1\n-1,25,-1\n-1,12,-1\n"
     }
   },
   {
@@ -379,9 +391,7 @@
     "exit_code": 0,
     "stdout": "Found at 1\n10\n9\n3\n15\n58\n20\n",
     "stderr": "",
-    "files": {
-      "IntegerData.txt": "64\n6\n41\n72\n49\n60\n4\n78\n70\n82\n37\n47\n59\n35\n29\n79\n100\n54\n21\n38\n36\n51\n58\n61\n84\n34\n92\n34\n25\n30\n98\n58\n40\n60\n86\n75\n52\n82\n41\n69\n23\n25\n43\n54\n99\n40\n26\n22\n61\n16\n58\n56\n59\n65\n27\n83\n49\n81\n88\n14\n69\n70\n52\n40\n85\n80\n7\n99\n50\n54\n27\n18\n13\n53\n14\n11\n8\n3\n63\n44\n8\n69\n74\n8\n73\n41\n99\n75\n33\n2\n26\n72\n94\n26\n100\n53\n73\n2\n70\n19"
-    }
+    "files": {}
   },
   {
     "card": "P4-LT-05",
@@ -404,11 +414,7 @@
     "exit_code": 0,
     "stdout": "915\n136\n415\n55\n349\n775\n846\n469\n246\n752\n8\n889\n695\n292\n417\n181\n810\n972\n781\n46\n120\n95\n378\n433\n994\n946\n586\n365\n615\n580\n128\n944\n2\n689\n962\n704\n948\n435\n195\n981\n320\n658\n831\n408\n947\n830\n88\n362\n629\n986\n31\n823\n527\n141\n905\n965\n697\n15\n24\n977\n88\n",
     "stderr": "",
-    "files": {
-      "SecondStack.txt": "20\n*\n4\n^\n3\n/\n5\n+\n1",
-      "HashData.txt": "646,12,568\n204,22,569\n824,554,5215\n429,1022,15\n817,9,56\n549,12,568\n575,444,512\n115,745,256\n761,12,4115\n336,95,8445\n31,25,20\n190,1558,652\n912,75,156\n102,68745,12\n869,152,585\n445,12,588\n641,85,634\n94,419,58341\n903,15,65874\n489,110,1582\n215,15,851\n152,76,523\n316,10,457\n726,18,5621\n672,76,8551\n383,841,235\n448,856,2123\n780,56,95164\n132,15,358\n255,855,651\n915,65,132\n35,875,312\n136,654879,5641\n227,16585,512\n769,56,695\n208,50,530\n415,95,651\n55,46,23\n799,587,14123\n338,50,5889\n349,6,38\n595,416,68\n767,68,415\n504,651,2\n296,96,123\n147,852,56\n92,608,940\n775,54,185\n584,56,841\n381,89,321\n826,1569,78361\n186,165,489\n846,841,684\n918,580,564\n469,86,905\n606,5451,1650\n233,81,2085\n748,51,5002\n607,900,605\n61,580,52\n67,540,54\n246,546,5105\n334,54811,450\n202,563,150\n919,14850,158\n625,405,5989\n410,589,9510\n577,1456,1\n688,485,506\n752,50,654\n778,8,132\n495,12,654\n221,5436,156\n744,11,654\n862,53,1698\n416,56,81\n97,15,156\n8,165,687\n889,6,684\n695,16,684\n51,132,687\n874,1549,14675\n287,75,156\n430,15641,564\n292,1548,48\n68,156,45654\n370,15185,146\n165,95,651\n417,654,489\n181,51,564\n935,541,3654\n772,156,509\n776,50,8694\n28,15460,156\n920,786,156\n243,65,87\n810,10,541\n108,80,56\n972,50,1536\n444,54,37\n781,654,156\n341,80,560\n220,4505,12\n574,5,69\n46,5,81\n194,1456,1\n162,15,4\n623,15,05\n120,544,654\n989,45,1\n95,12,54\n378,9,5\n433,65,32\n994,8,5\n249,5,69\n346,5,54\n568,54,546\n928,78,41\n946,4,3\n36,3,50\n586,5,85\n205,7,1\n840,15,546\n663,165,123\n759,5,87\n665,1,5\n79,10,5\n306,8,6\n727,15,35\n365,15,4\n871,12,98\n22,4,6\n343,2,85\n654,1,85\n615,1,4\n580,1,1\n155,87,481\n881,82,41\n128,6,5\n353,1,8\n944,25,85\n2,15,84\n275,2,15\n111,9,8\n992,4,3\n171,1,5\n122,5,7\n689,8,5\n962,5,64\n704,1,54\n948,12,51\n435,4,1\n514,6,8\n858,5,89\n954,1,5\n400,3,8\n195,5,9\n473,2,5\n981,5,8\n320,5,2\n658,12,50\n211,954,123\n682,15,123\n831,152,854\n408,841,51\n721,15,212\n766,5,8\n432,53,6\n290,135,6\n14,132,654\n947,12,95\n830,87,56\n88,867,13\n362,1,48\n105,154,8\n725,123,385\n629,54,8\n986,52,586\n537,10,15\n31,13,48\n823,468,12\n691,70,50\n527,60,52\n141,514,156\n905,123,68\n965,15,54\n697,59,51\n15,32,87\n24,89,65\n977,50,32\n88,54,87\n317,78,5416\n257,541,654654\n99,1,4\n330,75,23\n964,540,68697\n391,654,123\n939,49812,12664\n693,4561,14564",
-      "StackData.txt": "3\n+\n2\n*\n2\n^\n2\n-\n10"
-    }
+    "files": {}
   },
   {
     "card": "P4-MP-01",
@@ -442,10 +448,7 @@
     "exit_code": 0,
     "stdout": "Enter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Full\nADF 10\nEnter ID Enter quantity Stored\nLLP 3\nOOP 1\nBXW 5\nXXZ 22\nHQR 6\n",
     "stderr": "",
-    "files": {
-      "Employees.txt": "15.22\n12452\nJunior Developer\n17.80\n21548\nWeb Developer\n22.50\n02586\n5.25\nInterface Manager\n12.50\n65912\nAssistant Tester\n33.49\n42004\n2.00\nTeam Leader\n10.57\n82610\nIntern\n21.58\n51947\n10.50\nJunior Testing Manager\n31.59\n51847\n7.5\nSystem analyst\n",
-      "HoursWeek1.txt": "21548\n50.0\n12452\n48.0\n51947\n51\n82610\n47.5\n02586\n28.5\n65912\n38.0\n42004\n22.5\n51847\n10.0\n"
-    }
+    "files": {}
   },
   {
     "card": "P4-MP-02",
@@ -472,9 +475,7 @@
     "exit_code": 0,
     "stdout": "Enter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stack full\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n8\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
     "stderr": "",
-    "files": {
-      "CardValues.txt": "1\nred\n5\nblack\n2\nwhite\n4\nred\n9\ngreen\n6\nblack\n7\npurple\n8\nred\n9\norange\n10\nred\n1\nblack\n2\norange\n3\nyellow\n4\npurple\n5\ngreen\n6\nyellow\n7\nyellow\n8\nwhite\n9\nwhite\n10\nyellow\n1\ngrey\n2\nblue\n3\nblack\n4\nblue\n5\nblue\n6\npurple\n7\ngrey\n8\nblue\n9\nblue\n10\norange"
-    }
+    "files": {}
   },
   {
     "card": "P4-MP-03",
@@ -489,9 +490,7 @@
     "exit_code": 0,
     "stdout": "50 40 30 20 10\n50 40 20 10\n",
     "stderr": "",
-    "files": {
-      "QueueData.txt": "15\n8\n65\n32\n15\n4\n8\n5\n1\n265\n56\n9\n45\n12\n21\n32\n65\n98\n5\n12\n45\n62\n65\n98\n62\n21\n5\n54\n21\n56\n98\n8\n54\n45\n2\n21\n56\n564\n645\n9\n65\n32\n12\n45\n87\n54"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-01",
@@ -514,11 +513,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-02",
@@ -541,11 +536,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-03",
@@ -568,11 +559,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-04",
@@ -595,11 +582,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-05",
@@ -622,11 +605,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-06",
@@ -641,9 +620,7 @@
     "exit_code": 0,
     "stdout": "Player 2 wins\n",
     "stderr": "",
-    "files": {
-      "IntegerData.txt": "64\n6\n41\n72\n49\n60\n4\n78\n70\n82\n37\n47\n59\n35\n29\n79\n100\n54\n21\n38\n36\n51\n58\n61\n84\n34\n92\n34\n25\n30\n98\n58\n40\n60\n86\n75\n52\n82\n41\n69\n23\n25\n43\n54\n99\n40\n26\n22\n61\n16\n58\n56\n59\n65\n27\n83\n49\n81\n88\n14\n69\n70\n52\n40\n85\n80\n7\n99\n50\n54\n27\n18\n13\n53\n14\n11\n8\n3\n63\n44\n8\n69\n74\n8\n73\n41\n99\n75\n33\n2\n26\n72\n94\n26\n100\n53\n73\n2\n70\n19"
-    }
+    "files": {}
   },
   {
     "card": "P4-OP-07",
@@ -666,11 +643,7 @@
     "exit_code": 0,
     "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-PR-01",
@@ -694,9 +667,7 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Invalid. Enter 1 to 20: Enter number: Enter number: Enter number: Enter number: Enter number: 3 9 4 1 2 \n1 2 3 4 9 \nEnter a number to find: 1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-PR-01",
@@ -719,9 +690,7 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: 1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-PR-01",
@@ -744,9 +713,7 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: -1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-PR-02",
@@ -761,9 +728,7 @@
     "exit_code": 0,
     "stdout": "2\nx=0\ny=1\nx=x+y\ny++\n",
     "stderr": "",
-    "files": {
-      "BinaryData.txt": "1\n1\n1\n1\n1\n1\n1\n1\n1\n0\n0\n0\n0\n0\n1\n1\n1\n0\n0\n0\n0\n0\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-PR-03",
@@ -778,9 +743,7 @@
     "exit_code": 0,
     "stdout": "18\n93\n",
     "stderr": "",
-    "files": {
-      "StackData.txt": "a\nb\nd\nf\ng\nu\ne\nh\ni\nk\no\nh\nf\nx\ns\na\nq\nf\ng\nj\no\np\nh\nr\ny\nf\nd\nb\nh\nj\nk\nm\nn\nn\nb\nv\nc\nd\nw\ne\ne\ne\nt\ny\nu\nh\nj\nk\no\np\nf\nd\ne\nw\nq\nq\nc\ng\ny\ne\nf\nt\nb\nj\nu\ni\nl\nj\nm\nb\nd\nw\nf\nt\ng\ng\nh\nh\ni\nu\ne\nw\ns\nq\nd\nc\nx\nz\np\no\nu\nt\ng\nj\nk\nn\nc\ns\nx\nt"
-    }
+    "files": {}
   },
   {
     "card": "P4-RC-01",
@@ -795,9 +758,7 @@
     "exit_code": 0,
     "stdout": "2\nx=0\ny=1\nx=x+y\ny++\n",
     "stderr": "",
-    "files": {
-      "BinaryData.txt": "1\n1\n1\n1\n1\n1\n1\n1\n1\n0\n0\n0\n0\n0\n1\n1\n1\n0\n0\n0\n0\n0\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-RC-02",
@@ -812,9 +773,7 @@
     "exit_code": 0,
     "stdout": "3\n4\n",
     "stderr": "",
-    "files": {
-      "QueueData.txt": "1234\n1568\n9512\n4567\n8512\n4125\n9651\n4851\n2520\n3265\n8966\n8512\n4567\n8512\n4125\n9512\n4567\n8512\n8512\n4567\n8512\n4125\n2520"
-    }
+    "files": {}
   },
   {
     "card": "P4-SQ-01",
@@ -841,9 +800,7 @@
     "exit_code": 0,
     "stdout": "Enter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stack full\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n8\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
     "stderr": "",
-    "files": {
-      "CardValues.txt": "1\nred\n5\nblack\n2\nwhite\n4\nred\n9\ngreen\n6\nblack\n7\npurple\n8\nred\n9\norange\n10\nred\n1\nblack\n2\norange\n3\nyellow\n4\npurple\n5\ngreen\n6\nyellow\n7\nyellow\n8\nwhite\n9\nwhite\n10\nyellow\n1\ngrey\n2\nblue\n3\nblack\n4\nblue\n5\nblue\n6\npurple\n7\ngrey\n8\nblue\n9\nblue\n10\norange"
-    }
+    "files": {}
   },
   {
     "card": "P4-SQ-02",
@@ -858,9 +815,7 @@
     "exit_code": 0,
     "stdout": "Total: 3059\n",
     "stderr": "",
-    "files": {
-      "QueueData.txt": "15\n8\n65\n32\n15\n4\n8\n5\n1\n265\n56\n9\n45\n12\n21\n32\n65\n98\n5\n12\n45\n62\n65\n98\n62\n21\n5\n54\n21\n56\n98\n8\n54\n45\n2\n21\n56\n564\n645\n9\n65\n32\n12\n45\n87\n54"
-    }
+    "files": {}
   },
   {
     "card": "P4-SQ-03",
@@ -894,10 +849,7 @@
     "exit_code": 0,
     "stdout": "Enter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Full\nADF 10\nEnter ID Enter quantity Stored\nLLP 3\nOOP 1\nBXW 5\nXXZ 22\nHQR 6\n",
     "stderr": "",
-    "files": {
-      "Employees.txt": "15.22\n12452\nJunior Developer\n17.80\n21548\nWeb Developer\n22.50\n02586\n5.25\nInterface Manager\n12.50\n65912\nAssistant Tester\n33.49\n42004\n2.00\nTeam Leader\n10.57\n82610\nIntern\n21.58\n51947\n10.50\nJunior Testing Manager\n31.59\n51847\n7.5\nSystem analyst\n",
-      "HoursWeek1.txt": "21548\n50.0\n12452\n48.0\n51947\n51\n82610\n47.5\n02586\n28.5\n65912\n38.0\n42004\n22.5\n51847\n10.0\n"
-    }
+    "files": {}
   },
   {
     "card": "P4-SQ-04",
@@ -920,11 +872,7 @@
     "exit_code": 0,
     "stdout": "pink hamster\nblue elephant\nwhite eagle\nyellow rabbit\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-01",
@@ -949,11 +897,7 @@
     "exit_code": 0,
     "stdout": "10 4 5 13 25 31 4 66 12 5 0 11 15 20 21 12 33 49 12 12 7 7 4 22 0 \nEnter a whole number (0 to 100): The number 12 is found 4 times.\n",
     "stderr": "",
-    "files": {
-      "AnimalData.txt": "horse\nturtle\nlion\nwhale\nrabbit\neagle\nelephant\nhamster",
-      "ColourData.txt": "red\ngreen\nblack\ngrey\norange\npurple\nyellow\nwhite\nblue\npink",
-      "Data.txt": "10\n4\n5\n13\n25\n31\n4\n66\n12\n5\n0\n11\n15\n20\n21\n12\n33\n49\n12\n12\n7\n7\n4\n22\n0"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-02",
@@ -977,9 +921,7 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Invalid. Enter 1 to 20: Enter number: Enter number: Enter number: Enter number: Enter number: 3 9 4 1 2 \n1 2 3 4 9 \nEnter a number to find: 1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-02",
@@ -1002,9 +944,7 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: 1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-02",
@@ -1027,13 +967,45 @@
     "exit_code": 0,
     "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: -1\n",
     "stderr": "",
-    "files": {
-      "Trees.txt": "Beech,30,400,200,No\nHazel,40,300,200,No\nOak,5,900,600,No\nHolly,30,600,300,Yes\nWalnut,30,2500,1000,No\nMagnolia Grandiflora,50,500,300,Yes\nPhotinia,30,400,400,Yes\nBlue Conifer,40,250,50,Yes\nGreen Conifer,40,300,150,Yes"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-03",
     "case": 1,
+    "inputs": [
+      11
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 0\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-03",
+    "case": 2,
+    "inputs": [
+      100
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 19\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-03",
+    "case": 3,
     "inputs": [
       101
     ],
@@ -1046,9 +1018,7 @@
     "exit_code": 0,
     "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Not found\n",
     "stderr": "",
-    "files": {
-      "TreeData.txt": "40\n4\n82\n8\n21\n23\n1\n34\n67\n6\n9\n10\n13\n52\n68\n2\n28\n89\n85\n66\n91\n53\n0\n15\n19\n37\n31\n35\n74\n76\n54\n22\n16\n98\n61\n48\n46\n38\n30\n39\n41\n49\n50\n36\n58\n80\n71\n18\n25\n12"
-    }
+    "files": {}
   },
   {
     "card": "P4-SR-04",
@@ -1063,8 +1033,6 @@
     "exit_code": 0,
     "stdout": "0 3 4 56 67 44 43 32 31 345 45 6 54 1 \n0 1 3 4 6 31 32 43 44 45 54 56 67 345 \n0 found at index: 0\n345 found at index: 13\n67 found at index: 12\n2 not found\n",
     "stderr": "",
-    "files": {
-      "QueueData.txt": "15\n8\n65\n32\n15\n4\n8\n5\n1\n265\n56\n9\n45\n12\n21\n32\n65\n98\n5\n12\n45\n62\n65\n98\n62\n21\n5\n54\n21\n56\n98\n8\n54\n45\n2\n21\n56\n564\n645\n9\n65\n32\n12\n45\n87\n54"
-    }
+    "files": {}
   }
 ]

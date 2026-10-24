@@ -28,6 +28,7 @@ class WhileVariant(ast.NodeTransformer):
                (isinstance(n,ast.Name) and isinstance(n.ctx,ast.Store) and n.id==node.target.id)
                for b in node.body for n in ast.walk(b)):return self.generic_visit(node)
         self.changed=True
+        self.selected=node
         start=ast.Constant(0) if len(node.iter.args)==1 else node.iter.args[0]
         end=node.iter.args[-1]
         return [ast.Assign(targets=[node.target],value=start),
@@ -39,7 +40,19 @@ class WhileVariant(ast.NodeTransformer):
 
 def alternate(code):
     transformer=WhileVariant();tree=transformer.visit(ast.parse(code))
-    if transformer.changed:return ast.unparse(ast.fix_missing_locations(tree))+'\n'
+    if transformer.changed:
+        node=transformer.selected
+        lines=code.splitlines(keepends=True)
+        indent=' ' * node.col_offset
+        start='0' if len(node.iter.args)==1 else ast.unparse(node.iter.args[0])
+        end=ast.unparse(node.iter.args[-1])
+        # Preserve original comments, including all required type declarations.
+        replacement=[indent+'_audit_start = '+start+'\n',indent+'_audit_stop = '+end+'\n',
+            indent+node.target.id+' = _audit_start\n',
+            indent+'while '+node.target.id+' < _audit_stop:\n']
+        replacement+=lines[node.lineno:node.end_lineno]
+        replacement+=[indent+'    '+node.target.id+' += 1\n']
+        return ''.join(lines[:node.lineno-1]+replacement+lines[node.end_lineno:])
     # A local file-loop name is not part of the callable interface.
     return re.sub(r'\bLine\b','InputLine',code)
 
