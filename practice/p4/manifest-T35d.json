@@ -294,6 +294,152 @@
       ],
       "qp_over_ms": "- MS pp.9、17 的 Python 范例为空 list（且 p.17 把 NumberRecords 声明写进注释），按 D10 ① 改为 50 格数组和独立的 NumberRecords 赋值。\n- MS p.21 `TotalData` 的末行 NumberRecords += 1 多缩进一级；参考解对照 QP p.6 修正。\n- MS p.24 把 `OutputRecords()` 缩进在 while 内，导致重复输出中间结果；参考解按 QP p.7 在全部汇总后输出一次。\n- MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。",
       "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。"
+    },
+    {
+      "directory": "practice/p4/9618_w23_42_q1",
+      "id": "9618_w23_42:1(a)(i)",
+      "paper": "9618_w23_42",
+      "marks": 27,
+      "auto_marks": 24.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.8889,
+      "types": [
+        "P4-SQ-01",
+        "P4-SQ-04",
+        "P4-FL-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_42:1(a)(i)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:1(a)(ii)",
+          "marks": 1,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_42:1(b)(i)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_42:1(b)(ii)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_42:1(c)",
+          "marks": 5,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w23_42:1(d)(i)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w23_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "StackData.txt",
+          "bytes": 298,
+          "sha256": "eb72f3638b6437f63f4dda83943f4882f6c12f96a8f59cfde9909a1f199d09e1",
+          "source": "9618_w23_sf_42/11_9618_42_SourceFiles/StackData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 7,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "qp_over_ms": "- MS pp.4、7、11–12 采用空 list、append 和 del；按 D10 ① 改为固定 100 格数组，下标存取、仅更新指针，不删除实际格子。这不改变题目栈的有效数据。\n- MS p.16 的 Python else 实际缩进在 DataAccessed 判断下，原页没有解析文本暗示的缩进缺陷；参考解遵守相同空栈重试逻辑。\n- 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。",
+      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。"
     }
   ]
 }

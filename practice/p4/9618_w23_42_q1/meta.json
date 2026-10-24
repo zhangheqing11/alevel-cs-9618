@@ -1,0 +1,52 @@
+{
+  "id": "9618_w23_42:1(a)(i)",
+  "kind": "past-paper",
+  "title": "元音与辅音双栈",
+  "source": {
+    "paper": "9618_w23_42",
+    "rows": [
+      "9618_w23_42:1(a)(i)",
+      "9618_w23_42:1(a)(ii)",
+      "9618_w23_42:1(b)(i)",
+      "9618_w23_42:1(b)(ii)",
+      "9618_w23_42:1(c)",
+      "9618_w23_42:1(d)(i)",
+      "9618_w23_42:1(d)(ii)"
+    ]
+  },
+  "marks": 27,
+  "types": [
+    "P4-SQ-01",
+    "P4-SQ-04",
+    "P4-FL-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "declare-array",
+    "global-scope",
+    "data-types",
+    "module-header",
+    "char-compare",
+    "logic-ops",
+    "stack-array",
+    "output-format",
+    "array-index",
+    "nested-if",
+    "file-open-read",
+    "file-close",
+    "loop-to-eof",
+    "procedure-call",
+    "exception-handling",
+    "return-value",
+    "pre-condition-loop",
+    "accumulator",
+    "input-prompt",
+    "string-concat"
+  ],
+  "pseudocode": false,
+  "files": [
+    "StackData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}
