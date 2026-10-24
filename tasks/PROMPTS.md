@@ -263,7 +263,7 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 
 ```
 你是执行工位，负责 T35b（P4 真题练习，批 1 后半 · w 季，续做）。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
-续做已推的分支 task/T35b-p4-practice（照交接 README §1 建 worktree，不要重开分支）：前 7 题已完成；第 8 题 practice/p4/9618_w25_43_q3 是上一个工位中断前的 WIP 提交（a0e7778，未验证）——逐项检查（task.md 转写与证据对照表、files sha256、测试、参考解、≥2 mutant），按执行方案第 10 步验证，缺的补齐，再写 practice/p4/manifest-T35b.json（8 题）与 README-T35b.md。
+续做已推的分支 task/T35b-p4-practice（照交接 README §1 建 worktree，不要重开分支）：前 7 题已完成；第 8 题 practice/p4/9618_w25_43_q3 是上一个工位中断前的 WIP 提交（a0e7778，未验证；总控检查时缺 task.md）——逐项检查（task.md 转写与证据对照表、files sha256、测试、参考解、≥2 mutant），按执行方案第 10 步验证，缺的补齐，再写 practice/p4/manifest-T35b.json（8 题）与 README-T35b.md。
 只写 tasks/scope.json 里 T35b 允许的路径与 tasks/progress/T35b.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35b → push → gh pr create --base main --title "T35b: P4 practice (PR/AR/FL/SR/RC, w sessions)"。不要合并 PR，不要推 main。
 最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
 ```

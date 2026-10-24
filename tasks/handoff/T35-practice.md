@@ -6,8 +6,8 @@
 
 | 子批 | 分支 | 已完成 | 剩下 |
 |:--|:--|:--|:--|
-| T35a（批 1 前半 · s 季，9 题） | `task/T35a-p4-practice`（已推） | 6 题已提交：s22_41_q1、s22_42_q2、s23_41_q1、s23_42_q1、s24_41_q1、s24_42_q1；`manifest-T35a.json` 已有前 6 题 | s24_42_q3、s25_41_q2、s25_43_q2；`README-T35a.md`；交付 |
-| T35b（批 1 后半 · w 季，8 题） | `task/T35b-p4-practice`（已推） | 7 题已提交；第 8 题 `9618_w25_43_q3` 以 **WIP 提交**（a0e7778，**未验证**） | 验证并补完 w25_43_q3；`manifest-T35b.json`、`README-T35b.md`；交付 |
+| T35a（批 1 前半 · s 季，9 题） | `task/T35a-p4-practice`（已推） | 6 题已提交（总控 `make check-all` 196 道全过）：s22_41_q1、s22_42_q2、s23_41_q1、s23_42_q1、s24_41_q1、s24_42_q1；`manifest-T35a.json` 已有前 6 题 | s24_42_q3、s25_41_q2、s25_43_q2；`README-T35a.md`；交付 |
+| T35b（批 1 后半 · w 季，8 题） | `task/T35b-p4-practice`（已推） | 7 题已提交；第 8 题 `9618_w25_43_q3` 以 **WIP 提交**（a0e7778，**未验证；总控跑 `make check-all` 时报 `missing task.md`**，其余 7 题全过） | 验证并补完 w25_43_q3；`manifest-T35b.json`、`README-T35b.md`；交付 |
 | T35c（批 2 前半 · SQ/LT，10 题） | 新开 `task/T35c-p4-practice` | — | 全部 |
 | T35d（批 2 后半 · SQ/LT，9 题） | 新开 `task/T35d-p4-practice` | — | 全部 |
 | T35e（批 3 前半 · OP，9 题） | 新开 `task/T35e-p4-practice` | — | 全部 |
