@@ -124,8 +124,20 @@ def test_1g_screenshot_added_five_times_then_jobs_in_order(candidate_path):
     result = run_script(candidate_path)
     assert result.returncode == 0, result.stderr
     lines = result.lines
-    assert lines[:5] == ["Added"] * 5
+    assert sum(line.strip() == "Added" for line in lines) == 5
     jobs = job_lines(result.stdout)
     assert sorted(jobs) == sorted(GIVEN_JOBS), "all five given jobs must be printed once"
     assert in_priority_order(jobs)
-    assert len(lines) == 10 and all(JOB_LINE.match(l) for l in lines[5:]), "expected 5 'Added' then 5 job lines"
+    last_added = max(i for i, line in enumerate(lines) if line.strip() == "Added")
+    assert job_lines("\n".join(lines[last_added + 1:])) == jobs
+
+
+def test_1d_1gi_traced_main(candidate_path):
+    """9618_w22_42:1(d) MP1–2; 1(g)(i) whole; MS pp.6,9."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    initial, adds, sorts, prints = r.called("Initialise"), r.called("AddJob"), r.called("InsertionSort"), r.called("PrintArray")
+    assert initial and sorts and prints
+    assert [tuple(c.args.values()) for c in adds] == GIVEN_JOBS
+    assert next(i for i, c in enumerate(r.calls) if c is initial[0]) < next(i for i, c in enumerate(r.calls) if c is adds[0]) < next(i for i, c in enumerate(r.calls) if c is adds[-1]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is prints[0])

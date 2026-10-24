@@ -112,10 +112,10 @@
 | Part 1(a) | 9618_w22_42:1(a) | 3 | 代码 | `test_1a_jobs_is_100_by_2_and_numberofjobs_declared` · MP1–MP3 | 注释写明 INTEGER、100 × 2；两者在全局（D10 ①） |
 | Part 1(b) | 9618_w22_42:1(b) | 3 | 代码 | `test_1b_initialise_sets_all_minus_one_and_zero` · MP1–MP3 | MP1 过程头；MP2 两层循环 |
 | Part 1(c) | 9618_w22_42:1(c) | 5 | 代码 | `test_1c_addjob_stores_in_next_free_element` · MP4–MP6；`test_1c_addjob_full_outputs_not_added` · MP2–MP3 | MP1 过程头带两个参数 |
-| Part 1(d) | 9618_w22_42:1(d) | 2 | 代码 | `test_1g_screenshot_added_five_times_then_jobs_in_order` · MP1–MP2（5 次 Added、五个作业都在） | 5 次调用的参数与顺序照表 |
+| Part 1(d) | 9618_w22_42:1(d) | 2 | 代码 | `test_1g_screenshot_added_five_times_then_jobs_in_order` · MP1–MP2（5 次 Added、五个作业都在）；`test_1d_1gi_traced_main` · 实际调用、参数与数据链（D46） | 5 次调用的参数与顺序照表 |
 | Part 1(e) | 9618_w22_42:1(e) | 5 | 代码 | `test_1e_insertionsort_orders_given_jobs_by_priority` · MP2–MP5；`test_1e_insertionsort_only_sorts_stored_jobs` · MP2；`test_1e_insertionsort_reverse_order` · MP3–MP5 | MP1 过程头；确实是插入排序（不用 `sort()`） |
 | Part 1(f) | 9618_w22_42:1(f) | 3 | 代码 | `test_1f_printarray_format` · MP1–MP3 | MP1 过程头 |
-| Part 1(g)(i) | 9618_w22_42:1(g)(i) | 1 | 代码 | `test_1g_screenshot_added_five_times_then_jobs_in_order` · 先排序后输出 | 调用顺序 |
+| Part 1(g)(i) | 9618_w22_42:1(g)(i) | 1 | 代码 | `test_1g_screenshot_added_five_times_then_jobs_in_order` · 先排序后输出；`test_1d_1gi_traced_main` · 实际调用、参数与数据链（D46） | 调用顺序 |
 | Part 1(g)(ii) | 9618_w22_42:1(g)(ii) | 1 | 截图 | `test_1g_screenshot_added_five_times_then_jobs_in_order` · Added ×5、作业按优先级 | 截图清晰 |
 
 得分点 24 个：行为可自动测 22 个，只能人工核对 2 个（1(c) MP1、1(e) MP1 的过程头）。
@@ -130,3 +130,9 @@
 - [ ] 1(f) MP1：`def PrintArray():` 过程头。
 - [ ] 1(g)(i)：主程序先 `InsertionSort()` 再 `PrintArray()`。
 - [ ] 1(g)(ii) 截图：5 行 `Added`，然后 `78 priority 1`、`33 priority 8`、`526 priority 9`、`12 priority 9`、`12 priority 10`（526 与 12 可互换）。
+
+### T38c1 · D46 调用与输出核验
+
+原截图测试对整段严格十行且头五行必须 Added，误拒额外标题。改为找到五个 Added 与有序五作业块，逐作业规定格式保留。新增 Initialise、五次 AddJob 的参数/次序、InsertionSort → PrintArray 调用观测。100×2 为 QP 固定声明，保留。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。

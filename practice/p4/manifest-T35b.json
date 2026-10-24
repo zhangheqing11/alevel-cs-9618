@@ -245,7 +245,7 @@
         }
       ],
       "files": [],
-      "mutants": 6,
+      "mutants": 7,
       "qp_pages_checked": [
         2,
         3,
@@ -264,7 +264,7 @@
       "qp_over_ms": [
         "1(a)-1(b): MS only comments the Jobs declaration then appends rows; D10 requires a real 100 x 2 list first, so Initialise assigns in place."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w23_41_q1",
