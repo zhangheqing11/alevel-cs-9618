@@ -131,9 +131,9 @@
       "id": "9618_s22_42:1(a)",
       "paper": "9618_s22_42",
       "marks": 25,
-      "auto_marks": 23.0,
-      "manual_marks": 2.0,
-      "auto_share": 0.92,
+      "auto_marks": 21.0,
+      "manual_marks": 4.0,
+      "auto_share": 0.84,
       "types": [
         "P4-SQ-01",
         "P4-AR-04",
@@ -202,15 +202,17 @@
           "auto_mps": [
             1,
             2,
-            3,
-            4,
             5
           ],
-          "manual_mps": [],
-          "auto_marks": 5.0,
-          "manual_marks": 0.0,
+          "manual_mps": [
+            3,
+            4
+          ],
+          "auto_marks": 3.0,
+          "manual_marks": 2.0,
           "tests": [
-            "test_1d_screenshot"
+            "test_1d_screenshot",
+            "test_1d_1e_main_call_chain"
           ]
         },
         {
@@ -262,8 +264,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 7,
+      "mutants": 3,
+      "tests": 8,
       "qp_pages_checked": [
         2,
         3
@@ -279,7 +281,7 @@
         11,
         12
       ],
-      "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。"
+      "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。 T38c2：补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。"
     },
     {
       "directory": "practice/p4/9618_s23_41_q3",

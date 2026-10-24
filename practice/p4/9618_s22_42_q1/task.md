@@ -109,14 +109,16 @@ A source file is used to answer Question 3. The file is called CardValues.txt
 | Part 1(a) | 9618_s22_42:1(a) | 3 | 代码 | `test_1a_declarations` · MP1、MP2、MP3 | — |
 | Part 1(b) | 9618_s22_42:1(b) | 3 | 代码 | `test_1b_printarray` · MP2、MP3 | MP1 |
 | Part 1(c) | 9618_s22_42:1(c) | 6 | 代码 | `test_1c_push_boundary` · MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
-| Part 1(d)(i) | 9618_s22_42:1(d)(i) | 5 | 代码 | `test_1d_screenshot` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 1(d)(i) | 9618_s22_42:1(d)(i) | 5 | 代码 | `test_1d_1e_main_call_chain` + 原有输出测试 · MP1、MP2、MP5 | MP3、MP4：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 1(d)(ii) | 9618_s22_42:1(d)(ii) | 1 | 截图 | `test_1d_screenshot` · 整行 | — |
 | Part 1(e)(i) | 9618_s22_42:1(e)(i) | 5 | 代码 | `test_1e_pop_lifo_empty_reuse` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 1(e)(ii) | 9618_s22_42:1(e)(ii) | 2 | 截图 | `test_1e_screenshot_after_two_pops` · MP1、MP2 | — |
 
-自动测分值 23.000000，人工核对分值 2.000000，自动占比 92.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 21.000000，人工核对分值 4.000000，自动占比 84.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s22_42:1(d)(i) MP3、MP4：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
 - [ ] 9618_s22_42:1(b) MP1：procedure header with sensible identifier (and end where appropriate)（1 分；人工核对代码结构 / 声明）。
 - [ ] 9618_s22_42:1(c) MP1：function Push() taking an integer parameter（1 分；人工核对代码结构 / 声明）。
@@ -127,3 +129,7 @@ A source file is used to answer Question 3. The file is called CardValues.txt
 ## 原页、编号与差异记录
 
 已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。
+
+## T38c2 · D46 验证补充
+
+补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
