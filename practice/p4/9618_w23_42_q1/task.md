@@ -190,3 +190,7 @@ One source file is used to answer Question 1. The file is called StackData.txt
 - 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。
 
 1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。
+
+## T38c2 · D46 验证补充
+
+补测 ReadData、按五个选择对应 Pop 的顺序与实际返回字母串；保留 QP 要求字母串一行，取消必须为最后一行的限制（QP p.4/MS pp.13–16）。原有空栈重选测试保留。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

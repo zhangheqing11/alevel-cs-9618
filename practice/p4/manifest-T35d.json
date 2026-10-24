@@ -311,7 +311,7 @@
       "marks": 27,
       "auto_marks": 24.0,
       "manual_marks": 3.0,
-      "auto_share": 0.8889,
+      "auto_share": 0.888889,
       "types": [
         "P4-SQ-01",
         "P4-SQ-04",
@@ -425,8 +425,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 7,
+      "mutants": 4,
+      "tests": 8,
       "qp_pages_checked": [
         2,
         3,
@@ -448,7 +448,7 @@
         16
       ],
       "qp_over_ms": "- MS pp.4、7、11–12 采用空 list、append 和 del；按 D10 ① 改为固定 100 格数组，下标存取、仅更新指针，不删除实际格子。这不改变题目栈的有效数据。\n- MS p.16 的 Python else 实际缩进在 DataAccessed 判断下，原页没有解析文本暗示的缩进缺陷；参考解遵守相同空栈重试逻辑。\n- 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。",
-      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。"
+      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。 T38c2：补测 ReadData、按五个选择对应 Pop 的顺序与实际返回字母串；保留 QP 要求字母串一行，取消必须为最后一行的限制（QP p.4/MS pp.13–16）。原有空栈重选测试保留。"
     },
     {
       "directory": "practice/p4/9618_w24_41_q3",
