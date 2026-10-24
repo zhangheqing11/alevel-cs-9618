@@ -1,0 +1,52 @@
+{
+  "id": "9618_s22_41:2(a)",
+  "kind": "past-paper",
+  "title": "Balloon health and defence",
+  "source": {
+    "paper": "9618_s22_41",
+    "rows": [
+      "9618_s22_41:2(a)",
+      "9618_s22_41:2(b)",
+      "9618_s22_41:2(c)",
+      "9618_s22_41:2(d)",
+      "9618_s22_41:2(e)",
+      "9618_s22_41:2(f)",
+      "9618_s22_41:2(g)(i)",
+      "9618_s22_41:2(g)(ii)"
+    ]
+  },
+  "marks": 25,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-03",
+    "P4-OP-07",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "assign-value",
+    "boolean-return",
+    "class-definition",
+    "constructor",
+    "data-types",
+    "encapsulation",
+    "getter-setter",
+    "initialise-variables",
+    "input-prompt",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "p4-identifiers",
+    "procedure-call",
+    "relational-ops",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
