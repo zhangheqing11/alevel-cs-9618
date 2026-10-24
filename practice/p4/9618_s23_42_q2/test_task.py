@@ -1,6 +1,6 @@
 """9618_s23_42 Q2 sale-record circular queue."""
 import re
-from testkit import feed_input, run_script
+from testkit import feed_input, run_script, run_script_traced
 
 
 def record(value):
@@ -64,7 +64,7 @@ def test_2f_screenshot(candidate_path):
     r = run_script(candidate_path, stdin=''.join(f'{a}\n{b}\n' for a, b in data))
     assert r.returncode == 0, r.stderr
     assert re.findall(r'Stored|Full', r.stdout) == ['Stored'] * 5 + ['Full', 'Stored']
-    pairs = [(a, int(b)) for a, b in re.findall(r'\b(ADF|OOP|BXW|XXZ|HQR|LLP)\s+(-?\d+)\b', r.stdout)]
+    pairs = [(a, int(b)) for a, b in re.findall(r'\b(ADF|OOP|BXW|XXZ|HQR|LLP)\b[^\d]*(-?\d+)\b', r.stdout)]
     assert pairs == [('ADF', 10), ('LLP', 3), ('OOP', 1), ('BXW', 5), ('XXZ', 22), ('HQR', 6)]
 
 
@@ -81,3 +81,29 @@ def test_2b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_2f_main_call_chain(candidate_path):
+    """9618_s23_42:2(f)(i) MP1-MP5 max4 (MS p.20): six entries, returned record, seventh entry."""
+    data = 'ADF\n10\nOOP\n1\nBXW\n5\nXXZ\n22\nHQR\n6\nLLP\n3\nLLP\n3\n'
+    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('EnterRecord', 'Dequeue')]
+    assert names == ['EnterRecord'] * 6 + ['Dequeue', 'EnterRecord']
+    inputs = [('ADF', 10), ('OOP', 1), ('BXW', 5), ('XXZ', 22), ('HQR', 6), ('LLP', 3), ('LLP', 3)]
+    enqueues = r.called('Enqueue')
+    assert [record(next(iter(c.args.values()))) for c in enqueues] == inputs
+    assert [c.result for c in enqueues] == [1] * 5 + [-1, 1]
+    returned = r.called('Dequeue')[0].result
+    assert record(returned) == ('ADF', 10)
+    assert re.search(r'ADF\b[^\d]*10\b', r.stdout)
+

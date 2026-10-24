@@ -131,13 +131,15 @@
 | Part 2(b) | 9618_s23_42:2(b) | 4 | 代码 | `test_2b_initial_state` · MP1、MP2、MP3、MP4；`test_2b_no_algorithm_shortcuts` · D10 写法检查 | — |
 | Part 2(c) | 9618_s23_42:2(c) | 6 | 代码 | `test_2c_enqueue_full_wrap` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 2(d) | 9618_s23_42:2(d) | 6 | 代码 | `test_2d_dequeue_empty_fifo_reuse` · MP2、MP3、MP4、MP5、MP6 | MP1 |
-| Part 2(e) | 9618_s23_42:2(e) | 5 | 代码 | `test_2e_enter_record_stored_and_full` · MP2、MP3、MP4、MP5 | MP1 |
-| Part 2(f)(i) | 9618_s23_42:2(f)(i) | 4 | 代码 | `test_2f_screenshot` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 2(e) | 9618_s23_42:2(e) | 5 | 代码 | `test_2e_enter_record_stored_and_full` · MP2、MP3、MP4、MP5；`test_2f_main_call_chain` · 实际调用、参数与结果链 | MP1 |
+| Part 2(f)(i) | 9618_s23_42:2(f)(i) | 4 | 代码 | `test_2f_main_call_chain` + 原有输出测试 · MP1、MP2、MP4、MP5 | MP3：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 2(f)(ii) | 9618_s23_42:2(f)(ii) | 1 | 截图 | `test_2f_screenshot` · 整行 | — |
 
-自动测分值 24.000000，人工核对分值 4.000000，自动占比 85.71%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 23.200000，人工核对分值 4.800000，自动占比 82.86%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s23_42:2(f)(i) MP3：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
 - [ ] 9618_s23_42:2(a) MP1：Record declaration named SaleData // class declaration (and end) named SaleData…（1 分；人工核对代码结构 / 声明）。
 - [ ] 9618_s23_42:2(c) MP1：Function Enqueue() header (and end) taking one parameter (type SaleData)（1 分；人工核对代码结构 / 声明）。
@@ -150,3 +152,7 @@
 ## 原页、编号与差异记录
 
 已看 QP pp.5–7、MS pp.11–22 全部渲染图，核对 evidence.doc 7 格。MS Python EnterRecord 未 int 转换，参考解按 QP 数量整数及 MP2 修正；其他逻辑贴近 MS。MS 2(f)(i) 五个可选点 max4，自动/人工按比例折算；2(f)(ii) 为整行1分。没有 MS 印号 / 语料编号差异。无源数据文件。
+
+## T38c2 · D46 验证补充
+
+补测六次 EnterRecord → Dequeue → 第七次 EnterRecord 及记录参数、状态、返回记录输出；ID/数量允许说明和换行（QP p.7/MS pp.20/22）。固定输入不触发空记录分支，MP3 的空分支归人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

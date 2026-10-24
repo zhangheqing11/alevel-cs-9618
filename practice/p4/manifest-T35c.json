@@ -498,9 +498,9 @@
       "id": "9618_s23_42:2(a)",
       "paper": "9618_s23_42",
       "marks": 28,
-      "auto_marks": 24.0,
-      "manual_marks": 4.0,
-      "auto_share": 0.857143,
+      "auto_marks": 23.2,
+      "manual_marks": 4.8,
+      "auto_share": 0.828571,
       "types": [
         "P4-AR-03",
         "P4-SQ-03",
@@ -598,7 +598,8 @@
           "auto_marks": 4.0,
           "manual_marks": 1.0,
           "tests": [
-            "test_2e_enter_record_stored_and_full"
+            "test_2e_enter_record_stored_and_full",
+            "test_2f_main_call_chain"
           ]
         },
         {
@@ -608,15 +609,17 @@
           "auto_mps": [
             1,
             2,
-            3,
             4,
             5
           ],
-          "manual_mps": [],
-          "auto_marks": 4.0,
-          "manual_marks": 0.0,
+          "manual_mps": [
+            3
+          ],
+          "auto_marks": 3.2,
+          "manual_marks": 0.8,
           "tests": [
-            "test_2f_screenshot"
+            "test_2f_screenshot",
+            "test_2f_main_call_chain"
           ]
         },
         {
@@ -635,8 +638,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 7,
+      "mutants": 3,
+      "tests": 8,
       "qp_pages_checked": [
         5,
         6,
@@ -656,7 +659,7 @@
         21,
         22
       ],
-      "notes": "已看 QP pp.5–7、MS pp.11–22 全部渲染图，核对 evidence.doc 7 格。MS Python EnterRecord 未 int 转换，参考解按 QP 数量整数及 MP2 修正；其他逻辑贴近 MS。MS 2(f)(i) 五个可选点 max4，自动/人工按比例折算；2(f)(ii) 为整行1分。没有 MS 印号 / 语料编号差异。无源数据文件。"
+      "notes": "已看 QP pp.5–7、MS pp.11–22 全部渲染图，核对 evidence.doc 7 格。MS Python EnterRecord 未 int 转换，参考解按 QP 数量整数及 MP2 修正；其他逻辑贴近 MS。MS 2(f)(i) 五个可选点 max4，自动/人工按比例折算；2(f)(ii) 为整行1分。没有 MS 印号 / 语料编号差异。无源数据文件。 T38c2：补测六次 EnterRecord → Dequeue → 第七次 EnterRecord 及记录参数、状态、返回记录输出；ID/数量允许说明和换行（QP p.7/MS pp.20/22）。固定输入不触发空记录分支，MP3 的空分支归人工补核。"
     },
     {
       "directory": "practice/p4/9618_s24_41_q3",
