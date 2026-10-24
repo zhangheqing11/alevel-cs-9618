@@ -5,7 +5,7 @@
 1. 先把本段所有状态变化写进记录表（`ledger.py`），交接文档只做摘要，不替代记录表。
 2. 按下面的模板写 `handoff/YYYY-MM-DD_交接_<下一起点>.md`，例如 `handoff/2026-10-24_交接_P1-IR-04起.md`。文件名以日期开头，按名字排序就是按时间排序，新对话读最大的那个。
 3. 数字（计数、得分、考情）从记录表、手册自动块或 `index.json` 取，不凭记忆写。
-4. 写完按 SKILL.md §11 提交 `ledger handoff attempts`。
+4. 写完按 SKILL.md §12 提交 `ledger handoff attempts`。
 
 写法要求（来自物理交接文档里学生认可的做法）：开场步骤具体到「下一型是什么、手册在哪」；学生的错误写成**可以提前防的清单**，带出现次数（「已错两次」）和应写的英文关键词；待办分清「到期复测 / 薄弱项 / 总复习 / 承诺未交付 / 勘误」；不写空话。
 
@@ -19,11 +19,11 @@
 ## 1. 新对话开场怎么做
 
 1. 在主 checkout `~/Desktop/alevel cs` 打开 Claude Code，加载 skill `cie-9618-cs-tutor`。
-2. 读记录表：`~/.venvs/alevel-cs/bin/python skill/cie-9618-cs-tutor/scripts/ledger.py summary`。截至今天：<各表 已掌握 / 学习中 / 未学 计数>。
+2. 读记录表：`python3 skill/cie-9618-cs-tutor/scripts/ledger.py summary`。截至今天：<各表 已掌握 / 学习中 / 未学 计数>；计划进度：<summary 最后一行>。
 3. 从 **<题型码 名称>** 开始，按题型树顺序：
    - <题型码> <名称> <★>（<小问数> 小问 / <分值> 分）
    - ……
-4. 手册位置：`output/p<N>/` 题型手册的 `## <章节码>` 章（源 `papers/p<N>/cards/<章节码>.md`）；题型卡锚点 `{#<题型码>}`；概念表 `core/<章节码>.md`；教材 <Ch / § / 印刷页>。
+4. 手册：`rows.py card P<N>-<章码>`（章概览）、`rows.py card <题型码>`（一张卡）、`rows.py card P<N>-<章码> --core`（概念表 / 对照表）；源 `papers/p<N>/cards/<章节码>.md`；教材 <Ch / § / 印刷页>。<编程题型：对应练习 `practice/p<N>/…`、前置阶梯 Lxx 是否已过>
 5. 本章考情：<来自手册章首：总分值、出现卷数、常见题号、设问分布>——<一句话说明本章重点是定义句 / 计算 / 写代码……>。
 6. 另一条线的进度：<理论线 / 编程线（阶梯 Lxx、P2 / P4 题型）当前位置与下一步>，按「理论与编程交替」接着排。
 
@@ -39,8 +39,9 @@
 |:--|:--|
 | 记录表 | `ledger/P1.csv … P4.csv`、`ledger/ladder.csv`；`ledger.py summary / show / set` |
 | 手册、概念表、索引 | `output/p<N>/`（缺失时 `make build`） |
-| 查题、看原卷 | `rows.py get <行 id>`（不带 `--ms` 不显示 MS）、`rows.py render <行 id>`、`rows.py drills <题型码>` |
-| 练习 | `make try EX=<练习目录>`；学生作答在 `attempts/<练习目录>/` |
+| 查题、看原卷 | `rows.py get "<行 id>"`（不带 `--ms` 不显示 MS）、`rows.py render "<行 id>"`、`rows.py drills <题型码>` |
+| 练习 | `make try EX=<练习目录>`（P4 加 `K="<测试名>"` 只测某几问）；学生作答在 `attempts/<练习目录>/` |
+| 模考 | `python3 pipeline/mock/make_mock.py <卷>` → `output/mock/<卷>/`；`python3 pipeline/mock/score_mock.py <score.csv>…`；存档在 `attempts/mock/<卷>/` |
 | 勘误 | `handoff/勘误.md` |
 | <本段用到的其他东西> | |
 
@@ -53,6 +54,12 @@
 | P3 | | | | |
 | P4 | | | | |
 | 阶梯 | | <Lxx…> | <Lxx…> | |
+
+**模考**（有才写；数字取自 `score_mock.py` 摘要）
+
+| 卷 | 日期 | 用时 | 原始分 | 参考等级（分数线来源） | 失分最多的题型 |
+|:--|:--|:--|:--|:--|:--|
+| <9618_s26_22> | | <118/120 min> | <54/75> | <B（w2025 component 22）> | <P2-DT-09 4 分；P2-PG-11 3 分> |
 
 **本段得分**
 
@@ -76,5 +83,6 @@
 - **最终总复习**：逐个过所有学习中题型的问题点（见记录表「解释证据」列），重点：……
 - **承诺过但未交付**：<复习图、默写表……>
 - **勘误**（已记入 `handoff/勘误.md`，待总控处理）：……
+- **模考回炉**（有才写）：<哪些题型因模考改回学习中、各自的下一道题>
 - **需要总控处理**：<缺练习文件夹、手册未构建、词表缺口……>
 ```
