@@ -178,13 +178,17 @@
 | Part 2(b) | 9618_w24_42:2(b) | 3 | 代码 | `test_2b_record_initialised_before_enqueue` · MP1、MP2、MP3 | — |
 | Part 2(c) | 9618_w24_42:2(c) | 5 | 代码 | `test_2c_enqueue_first_and_capacity` · MP1、MP2 | MP3 1 mark for function header taking (at least) one parameter and the rest of function correct and using the record/class data structure accurately. |
 | Part 2(d) | 9618_w24_42:2(d) | 3 | 代码 | `test_2d_all_data_without_removing` · MP1、MP2、MP3 | — |
-| Part 2(e)(i) | 9618_w24_42:2(e)(i) | 5 | 代码 | `test_2e_ii_screenshot_rejects_negative`；`test_2e_i_zero_is_valid` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 2(e)(i) | 9618_w24_42:2(e)(i) | 5 | 代码 | `test_2e_2g_main_call_chain` + 原有输出测试 · MP1、MP2、MP3、MP5 | MP4：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 2(e)(ii) | 9618_w24_42:2(e)(ii) | 2 | 截图 | `test_2e_ii_screenshot_rejects_negative` · MP1、MP2 | — |
 | Part 2(f) | 9618_w24_42:2(f) | 4 | 代码 | `test_2f_dequeue_fifo_preserves_cells` · MP1、MP2、MP3、MP4 | — |
-| Part 2(g)(i) | 9618_w24_42:2(g)(i) | 3 | 代码 | `test_2g_ii_screenshot_two_returns` · MP1、MP2、MP3 | — |
+| Part 2(g)(i) | 9618_w24_42:2(g)(i) | 3 | 代码 | `test_2e_2g_main_call_chain` + 原有输出测试 · MP1、MP3 | MP2：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 2(g)(ii) | 9618_w24_42:2(g)(ii) | 1 | 截图 | `test_2g_ii_screenshot_two_returns` · MPwhole | — |
 
 ## 人工核对清单
+
+- [ ] 9618_w24_42:2(g)(i) MP2：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
+
+- [ ] 9618_w24_42:2(e)(i) MP4：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
 - [ ] 2(a) MP1：Record structure or class with constructor Queue (and end where appropriate) …
 - [ ] 2(a) MP3：… containing HeadPointer and TailPointer as integers
@@ -203,3 +207,7 @@
 - 2(c) QP 的三处空白保留，人工核对时用 MS p.20 的 TheData / 99 / + 1；Python 对象传参无需真的返回对象，但允许 MS 的双返回接口。
 
 2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。
+
+## T38c2 · D46 验证补充
+
+补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
