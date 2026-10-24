@@ -1328,8 +1328,8 @@
       "qp_over_ms": [
         "构造参数按 MS Python `Bird(pDistancePerHour, pSpecies)`。主程序的输入编码 QP 未指定：本练习沿用 MS 的鸟选择 1/2，输入顺序为选择 → 分钟 → 方向 N/S/E/W（MS pp.15–17），已作为测试接口约定。QP 列方向与时间输入要求，没有给定这两者的测试输入顺序；若学生采用别的界面，先按此接口调整。Move 本身无需验证参数。MS p.17 的四次结果分别 (500,571)、(500,472)、(464.5,500)、(556,500)；不固定输出措辞，只 GetPosition 按 QP 明确格式。无数据文件，TreeData.txt 属第3题。"
       ],
-      "tests": 6,
-      "mutants": 2,
+      "tests": 31,
+      "mutants": 3,
       "manual_marks": 4.0,
       "auto_share": 0.8571
     },

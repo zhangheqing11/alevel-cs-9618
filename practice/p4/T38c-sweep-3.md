@@ -11,3 +11,13 @@ F08：MS p.18 明确 min 9，改测至少 9 格及前九对象；20 格等价候
 - mutant_hollow_main.py: 1 failed, 8 passed in 0.14s
 - solution.py: 9 passed in 0.32s
 - equivalent.py: 9 passed in 0.15s
+
+## 9618_w25_42_q1
+
+F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标允许相邻行，GetPosition 返回格式保持 QP p.3 要求。分行等价候选修前 6 failed/23 passed，修后全过。 新增真实调用、参数与返回输出检查；hollow-main 保留正确模块、主程序仅输出参考结果。自动占比暂保持原值，最终分类复核见后续汇总。
+
+- mutant_1.py: 17 failed, 14 passed in 0.49s
+- mutant_2.py: 4 failed, 27 passed in 0.47s
+- mutant_hollow_main.py: 8 failed, 23 passed in 0.74s
+- solution.py: 31 passed in 0.55s
+- equivalent.py: 31 passed in 1.73s
