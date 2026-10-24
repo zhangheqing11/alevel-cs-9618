@@ -1,0 +1,54 @@
+{
+  "id": "9618_w24_42:2(a)",
+  "kind": "past-paper",
+  "title": "记录结构线性队列",
+  "source": {
+    "paper": "9618_w24_42",
+    "rows": [
+      "9618_w24_42:2(a)",
+      "9618_w24_42:2(b)",
+      "9618_w24_42:2(c)",
+      "9618_w24_42:2(d)",
+      "9618_w24_42:2(e)(i)",
+      "9618_w24_42:2(e)(ii)",
+      "9618_w24_42:2(f)",
+      "9618_w24_42:2(g)(i)",
+      "9618_w24_42:2(g)(ii)"
+    ]
+  },
+  "marks": 29,
+  "types": [
+    "P4-AR-03",
+    "P4-SQ-02",
+    "P4-AR-04",
+    "P4-MP-02",
+    "P4-MP-03",
+    "P4-MP-01"
+  ],
+  "skills": [
+    "record-type",
+    "class-definition",
+    "declare-array",
+    "data-types",
+    "object-instantiation",
+    "queue-array",
+    "initialise-variables",
+    "count-loop",
+    "translate-pseudocode",
+    "return-value",
+    "module-header",
+    "loop-bounds",
+    "string-concat",
+    "input-prompt",
+    "procedure-call",
+    "input-validation",
+    "output-format",
+    "nested-if",
+    "test-input-sequence",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

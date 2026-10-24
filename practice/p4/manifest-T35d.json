@@ -1,0 +1,1288 @@
+{
+  "subbatch": "T35d",
+  "exercises": [
+    {
+      "directory": "practice/p4/9618_w22_42_q3",
+      "id": "9618_w22_42:3(a)",
+      "paper": "9618_w22_42",
+      "marks": 21,
+      "auto_marks": 19.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.9048,
+      "types": [
+        "P4-SQ-02",
+        "P4-MP-02",
+        "P4-RC-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_42:3(a)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w22_42:3(b)",
+          "marks": 6,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:3(c)",
+          "marks": 4,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w22_42:3(d)",
+          "marks": 6,
+          "primary": "P4-RC-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:3(e)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w22_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 5,
+      "qp_pages_checked": [
+        8,
+        9
+      ],
+      "ms_pages_checked": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "qp_over_ms": "- MS p.21 的 Python 范例漏 `global HeadPointer`，首次入队会引发 UnboundLocalError；参考解补齐。\n- 3(c) QP 要求所有入队都成功才输出 Successful；参考解累计失败标志。MS p.22 范例只保留最后一次返回值；给定空队列装入 20 项时没有输出差异。\n- QP/MS 原页的赋值箭头转写为 `←`；递归参数采用上述明确约定。",
+      "notes": "语料点号按本题 MS 圆点顺序；未拆得分点的 1 分行以 whole 表示。"
+    },
+    {
+      "directory": "practice/p4/9618_w23_41_q2",
+      "id": "9618_w23_41:2(a)(i)",
+      "paper": "9618_w23_41",
+      "marks": 29,
+      "auto_marks": 23.4857,
+      "manual_marks": 5.5143,
+      "auto_share": 0.8099,
+      "types": [
+        "P4-SQ-02",
+        "P4-FL-01",
+        "P4-AR-03",
+        "P4-SQ-04",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_41:2(a)(i)",
+          "marks": 2,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:2(a)(ii)",
+          "marks": 4,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:2(a)(iii)",
+          "marks": 4,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_w23_41:2(b)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 4.285714
+        },
+        {
+          "id": "9618_w23_41:2(c)(i)",
+          "marks": 2,
+          "primary": "P4-AR-03",
+          "auto_mps": [],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 0.0
+        },
+        {
+          "id": "9618_w23_41:2(c)(ii)",
+          "marks": 2,
+          "primary": "P4-AR-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:2(c)(iii)",
+          "marks": 5,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_41:2(d)",
+          "marks": 1,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_41:2(e)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:2(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "QueueData.txt",
+          "bytes": 136,
+          "sha256": "9b4b28747275120bd9c4de28aeab68e1363a1eee3312cb2c99023b94390ce972",
+          "source": "9618_w23_sf_41/11_9618_41_SourceFiles/QueueData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "qp_over_ms": "- MS pp.9、17 的 Python 范例为空 list（且 p.17 把 NumberRecords 声明写进注释），按 D10 ① 改为 50 格数组和独立的 NumberRecords 赋值。\n- MS p.21 `TotalData` 的末行 NumberRecords += 1 多缩进一级；参考解对照 QP p.6 修正。\n- MS p.24 把 `OutputRecords()` 缩进在 while 内，导致重复输出中间结果；参考解按 QP p.7 在全部汇总后输出一次。\n- MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。",
+      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。"
+    },
+    {
+      "directory": "practice/p4/9618_w23_42_q1",
+      "id": "9618_w23_42:1(a)(i)",
+      "paper": "9618_w23_42",
+      "marks": 27,
+      "auto_marks": 24.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.8889,
+      "types": [
+        "P4-SQ-01",
+        "P4-SQ-04",
+        "P4-FL-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_42:1(a)(i)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:1(a)(ii)",
+          "marks": 1,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_42:1(b)(i)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_42:1(b)(ii)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_42:1(c)",
+          "marks": 5,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w23_42:1(d)(i)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w23_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "StackData.txt",
+          "bytes": 298,
+          "sha256": "eb72f3638b6437f63f4dda83943f4882f6c12f96a8f59cfde9909a1f199d09e1",
+          "source": "9618_w23_sf_42/11_9618_42_SourceFiles/StackData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 7,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "qp_over_ms": "- MS pp.4、7、11–12 采用空 list、append 和 del；按 D10 ① 改为固定 100 格数组，下标存取、仅更新指针，不删除实际格子。这不改变题目栈的有效数据。\n- MS p.16 的 Python else 实际缩进在 DataAccessed 判断下，原页没有解析文本暗示的缩进缺陷；参考解遵守相同空栈重试逻辑。\n- 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。",
+      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。"
+    },
+    {
+      "directory": "practice/p4/9618_w24_41_q3",
+      "id": "9618_w24_41:3(a)",
+      "paper": "9618_w24_41",
+      "marks": 19,
+      "auto_marks": 18.375,
+      "manual_marks": 0.625,
+      "auto_share": 0.9671,
+      "types": [
+        "P4-LT-01",
+        "P4-LT-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_41:3(a)",
+          "marks": 2,
+          "primary": "P4-LT-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:3(b)",
+          "marks": 6,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(i)",
+          "marks": 2,
+          "primary": "P4-LT-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(d)(i)",
+          "marks": 5,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.375
+        },
+        {
+          "id": "9618_w24_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_41:3(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "qp_over_ms": "- MS p.27 Python 初始化仅 append 19 行，随后访问 LinkedList[19] 越界；参考解依 QP p.12 创建全部 20 行，最后指针 -1。\n- MS p.36 Python 主程序同样缺最后一行；VB/Java 在该处把最后指针留成 20；参考解沿用正确的 20 节点初始化。\n- MS p.31 OutputLinkedList 在空表时会访问下标 -1；参考解在遍历前检查终止值。不额外要求 QP 未涉及的空表截图。\n- 同季 9618_w24_43 第 3 题与本题相同，不另建练习。",
+      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。"
+    },
+    {
+      "directory": "practice/p4/9618_w24_42_q2",
+      "id": "9618_w24_42:2(a)",
+      "paper": "9618_w24_42",
+      "marks": 29,
+      "auto_marks": 26.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.8966,
+      "types": [
+        "P4-AR-03",
+        "P4-SQ-02",
+        "P4-AR-04",
+        "P4-MP-02",
+        "P4-MP-03",
+        "P4-MP-01"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_42:2(a)",
+          "marks": 3,
+          "primary": "P4-AR-03",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w24_42:2(b)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:2(c)",
+          "marks": 5,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [
+            3
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w24_42:2(d)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:2(e)(i)",
+          "marks": 5,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w24_42:2(e)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:2(f)",
+          "marks": 4,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w24_42:2(g)(i)",
+          "marks": 3,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:2(g)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "qp_over_ms": "- MS p.18 Python 2(a) 的 HeadPointer/TailPointer 少 self.，只会创建局部变量；参考解按 p.19 完整范例修正为对象字段。\n- MS p.26 Python Dequeue 条件使用单等号 `=`，不能运行；参考解修为 `==` 语义。\n- 2(g)(ii) QP 测试串不含 -1，MS p.30 截图沿用含 -1 的 2(e)(ii) 串；自动测试分别用各自 QP 串，返回值同为 10、9。\n- 2(c) QP 的三处空白保留，人工核对时用 MS p.20 的 TheData / 99 / + 1；Python 对象传参无需真的返回对象，但允许 MS 的双返回接口。",
+      "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q1",
+      "id": "9618_w25_41:1(a)",
+      "paper": "9618_w25_41",
+      "marks": 20,
+      "auto_marks": 19.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.95,
+      "types": [
+        "P4-SQ-01",
+        "P4-MP-02",
+        "P4-SQ-04",
+        "P4-AR-05",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:1(b)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(c)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(d)",
+          "marks": 4,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:1(e)",
+          "marks": 4,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(f)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_41:1(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 5,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
+      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q3",
+      "id": "9618_w25_41:3(a)",
+      "paper": "9618_w25_41",
+      "marks": 25,
+      "auto_marks": 22.1667,
+      "manual_marks": 2.8333,
+      "auto_share": 0.8867,
+      "types": [
+        "P4-OP-01",
+        "P4-LT-05",
+        "P4-FL-02",
+        "P4-MP-02",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:3(a)",
+          "marks": 2,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_41:3(b)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:3(c)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:3(d)",
+          "marks": 4,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:3(e)",
+          "marks": 5,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.166667
+        },
+        {
+          "id": "9618_w25_41:3(f)",
+          "marks": 5,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w25_41:3(g)(i)",
+          "marks": 3,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:3(g)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [
+        {
+          "name": "HashTableData.txt",
+          "bytes": 2554,
+          "sha256": "922b71fc41586e22993821383b1f017610ee23da881b8eb2756cae0f95cb6617",
+          "source": "9618_w25_sf_41/HashTableData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "qp_over_ms": "- MS p.30 Python InsertData 缺成功后的 break/return，会把一个记录写满该桶；参考解按 QP p.10 的“下一空格”要求，在写入一次后退出。\n- MS p.32 ReadData 先把 Line.strip() 赋给 Data，下一行却又用 Line.split() 覆盖，保留换行；参考解对去掉行尾后的文本 split。同时补上 MS MP6 的文件异常处理（范例漏写不等于该点不要求）。\n- HashTable 按 D10 ① 在导入时已有真实 100×10 格；InitialiseHashTable 再填空记录，不只声明空 list。\n- MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。",
+      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_42_q3",
+      "id": "9618_w25_42:3(a)",
+      "paper": "9618_w25_42",
+      "marks": 21,
+      "auto_marks": 19.2,
+      "manual_marks": 1.8,
+      "auto_share": 0.9143,
+      "types": [
+        "P4-LT-03",
+        "P4-FL-01",
+        "P4-FL-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_42:3(a)",
+          "marks": 3,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:3(b)",
+          "marks": 7,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_w25_42:3(c)",
+          "marks": 4,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_w25_42:3(d)",
+          "marks": 5,
+          "primary": "P4-FL-03",
+          "auto_mps": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_42:3(e)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "TreeData.txt",
+          "bytes": 142,
+          "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93",
+          "source": "9618_w25_sf_42/TreeData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        10,
+        11,
+        12
+      ],
+      "ms_pages_checked": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "qp_over_ms": "- Python AddNode 范例与 QP 一致，参考解保留其插入逻辑。\n- MS pp.35–36 Java/Python 写文件用追加模式，QP 只要求 new text file 且首次未提供；参考解用 w 创建文件，测试只检查首次写入，不裁决 QP 未要求的重复导出策略。\n- 3(d) 异常测试让 Tree.txt 路径成为目录，真实触发打开错误，不要求某种 try/except 写法。",
+      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_43_q2",
+      "id": "9618_w25_43:2(a)",
+      "paper": "9618_w25_43",
+      "marks": 24,
+      "auto_marks": 22.3333,
+      "manual_marks": 1.6667,
+      "auto_share": 0.9306,
+      "types": [
+        "P4-SQ-02",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-PR-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_43:2(a)",
+          "marks": 2,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:2(b)",
+          "marks": 5,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w25_43:2(c)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:2(d)",
+          "marks": 5,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 3.333333
+        },
+        {
+          "id": "9618_w25_43:2(e)",
+          "marks": 6,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w25_43:2(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "BinaryData.txt",
+          "bytes": 67,
+          "sha256": "b01a6bdb86b953c8acb8f3c84ed1d85d7250010a9456ca3ae9efea24cd509ded",
+          "source": "9618_w25_sf_43/BinaryData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "qp_over_ms": "- MS p.21 Python 初始化多缩进一级，p.23 Enqueue 条件混入 `{` 且缺冒号；参考解修正为合法 Python。\n- MS p.27 ReadData 漏异常处理；参考解补上其 MP6 要求，源文件内容不改。\n- MS p.29 Compress 外循环为 `while NumberItems > 0 and First != \"False\"`：First 已经保存一个出队项，队列余量为 0 不代表 First 无效。该范例会漏掉单项输入及最后仅 1 项的游程。参考解/测试按 QP p.10 完整压缩，外循环只检查 First 不是字符串 False（D31）；原 MS 得分点仍保留。\n- 官方文件压缩结果仍为 MS p.31 的 19051306；附加 `1` → `11`、`01` → `0111` 等边界抓取上述缺陷。",
+      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。"
+    }
+  ]
+}
