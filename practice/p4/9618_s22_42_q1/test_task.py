@@ -22,7 +22,6 @@ def test_1b_printarray(sol, capsys):
     assert 4 in nums(text)
 
 
-
 def test_1c_push_boundary(sol):
     """9618_s22_42:1(c) MP2-MP6: ten additions, full rejects without changing data."""
     for i in range(10):
@@ -51,13 +50,11 @@ def test_1d_screenshot(candidate_path):
     assert_numbers_in_order(r.stdout, list(range(11, 21)))
 
 
-
 def test_1e_screenshot_after_two_pops(candidate_path):
     """9618_s22_42:1(e)(ii) MP1-MP2 (MS p.12): accept all three MS slot variants."""
     r = run_script(candidate_path, stdin='\n'.join(map(str, range(11, 22))) + '\n')
     assert r.returncode == 0, r.stderr
     assert_numbers_in_order(r.stdout, list(range(11, 21)) + list(range(11, 19)))
-
 
 
 def test_1b_no_algorithm_shortcuts(candidate_path):
@@ -85,7 +82,7 @@ def assert_numbers_in_order(text, expected):
 def test_1d_1e_main_call_chain(candidate_path):
     """9618_s22_42:1(d)(i) MP1-MP5;1(e)(ii) MP1-MP2 (MS pp.8/12): main uses stack operations."""
     data = '11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n'
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

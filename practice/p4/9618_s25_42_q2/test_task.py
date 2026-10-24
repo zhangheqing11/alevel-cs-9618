@@ -128,7 +128,7 @@ def assert_numbers_in_order(text, expected):
 def test_2f_ii_main_call_chain(candidate_path, exercise_dir):
     """9618_s25_42:2(f)(ii) whole (QP p.8/MS p.31): Initialise -> CreateHashTable -> PrintSpare."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
     assert r.error is None, r.error

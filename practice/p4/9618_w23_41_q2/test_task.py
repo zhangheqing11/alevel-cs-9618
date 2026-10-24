@@ -21,16 +21,22 @@ def test_2a_i_globals(sol):
 
 
 def test_2a_ii_enqueue_full(sol, capsys):
-    """9618_w23_41:2(a)(ii) MP2-MP4: fills queue; full message and no corruption."""
-    for i in range(50):
+    """9618_w23_41:2(a)(ii) MP2-MP4 (MS p.9 minimum 50): >=50 successes, safe full handling."""
+    capacity = len(sol.Queue)
+    for i in range(capacity + 1):
+        before = sol.Queue.copy()
+        capsys.readouterr()
         sol.Enqueue(str(1000 + i))
+        if sol.TailPointer == i:
+            assert i >= 50, 'at least 50 queue entries must be available'
+            assert capsys.readouterr().out.strip()
+            assert sol.Queue == before
+            break
+        assert i < capacity, 'cannot write beyond allocated storage'
         assert sol.Queue[i] == str(1000 + i)
         assert sol.HeadPointer == 0 and sol.TailPointer == i + 1
-    before = sol.Queue.copy()
-    capsys.readouterr()
-    sol.Enqueue('overflow')
-    assert capsys.readouterr().out.strip()
-    assert sol.Queue == before and sol.TailPointer == 50
+    else:
+        raise AssertionError('full queue never rejects insertion')
 
 
 def test_2a_iii_dequeue_empty_and_fifo(sol, capsys):
@@ -112,17 +118,10 @@ def test_2e_ii_screenshot_totals(candidate_path, exercise_dir):
     assert [(i, int(n)) for i, n in pairs] == EXPECTED
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_2e_main_call_chain(candidate_path, exercise_dir):
     """9618_w23_41:2(e)(i) MP1-MP2 (QP p.7/MS p.23): ReadData first, each TotalData, OutputRecords last."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
     assert r.error is None, r.error

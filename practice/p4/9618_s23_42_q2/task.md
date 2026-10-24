@@ -127,13 +127,13 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a) | 9618_s23_42:2(a) | 2 | 代码 | `test_2a_record` · MP2 | MP1 |
-| Part 2(b) | 9618_s23_42:2(b) | 4 | 代码 | `test_2b_initial_state` · MP1、MP2、MP3、MP4；`test_2b_no_algorithm_shortcuts` · D10 写法检查 | — |
-| Part 2(c) | 9618_s23_42:2(c) | 6 | 代码 | `test_2c_enqueue_full_wrap` · MP2、MP3、MP4、MP5、MP6 | MP1 |
-| Part 2(d) | 9618_s23_42:2(d) | 6 | 代码 | `test_2d_dequeue_empty_fifo_reuse` · MP2、MP3、MP4、MP5、MP6 | MP1 |
-| Part 2(e) | 9618_s23_42:2(e) | 5 | 代码 | `test_2e_enter_record_stored_and_full` · MP2、MP3、MP4、MP5；`test_2f_main_call_chain` · 实际调用、参数与结果链 | MP1 |
-| Part 2(f)(i) | 9618_s23_42:2(f)(i) | 4 | 代码 | `test_2f_main_call_chain` + 原有输出测试 · MP1、MP2、MP4、MP5 | MP3：消息语义 / 未触发分支按同题 MS 核对 |
-| Part 2(f)(ii) | 9618_s23_42:2(f)(ii) | 1 | 截图 | `test_2f_screenshot` · 整行 | — |
+| Part 2(a) | 9618_s23_42:2(a) | 2 | 代码 | `test_2a_record` · MP2 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(b) | 9618_s23_42:2(b) | 4 | 代码 | `test_2b_initial_state`、`test_2b_no_algorithm_shortcuts` · MP1、MP2、MP3、MP4 | — |
+| Part 2(c) | 9618_s23_42:2(c) | 6 | 代码 | `test_2c_enqueue_full_wrap` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(d) | 9618_s23_42:2(d) | 6 | 代码 | `test_2d_dequeue_empty_fifo_reuse` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(e) | 9618_s23_42:2(e) | 5 | 代码 | `test_2e_enter_record_stored_and_full`、`test_2f_main_call_chain` · MP2、MP3、MP4、MP5 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(f)(i) | 9618_s23_42:2(f)(i) | 4 | 代码 | `test_2f_main_call_chain` · MP1、MP2、MP4、MP5 | MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(f)(ii) | 9618_s23_42:2(f)(ii) | 1 | 截图 | `test_2f_screenshot` · MPwhole | — |
 
 自动测分值 23.200000，人工核对分值 4.800000，自动占比 82.86%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
@@ -155,4 +155,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测六次 EnterRecord → Dequeue → 第七次 EnterRecord 及记录参数、状态、返回记录输出；ID/数量允许说明和换行（QP p.7/MS pp.20/22）。固定输入不触发空记录分支，MP3 的空分支归人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测六次 EnterRecord → Dequeue → 第七次 EnterRecord 及记录参数、状态、返回记录输出；ID/数量允许说明和换行（QP p.7/MS pp.20/22）。固定输入不触发空记录分支，MP3 的空分支归人工补核。
+
+本次行为覆盖：自动 23.200000 分、人工 4.800000 分（82.86%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

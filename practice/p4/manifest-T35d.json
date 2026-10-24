@@ -27,7 +27,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(b)",
@@ -43,7 +44,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w22_42:3(c)",
@@ -59,7 +61,8 @@
           "auto_marks": 4.0,
           "tests": [
             "test_3c_3e_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(d)",
@@ -75,7 +78,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w22_42:3(e)(i)",
@@ -88,7 +92,8 @@
           "auto_marks": 1.0,
           "tests": [
             "test_3c_3e_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(e)(ii)",
@@ -98,7 +103,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
@@ -145,7 +151,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(a)(ii)",
@@ -159,7 +166,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_41:2(a)(iii)",
@@ -174,7 +182,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.2
+          "auto_marks": 3.2,
+          "manual_marks": 0.8
         },
         {
           "id": "9618_w23_41:2(b)",
@@ -191,7 +200,8 @@
             1,
             3
           ],
-          "auto_marks": 4.285714
+          "auto_marks": 4.285714,
+          "manual_marks": 1.714286
         },
         {
           "id": "9618_w23_41:2(c)(i)",
@@ -202,7 +212,8 @@
             1,
             2
           ],
-          "auto_marks": 0.0
+          "auto_marks": 0.0,
+          "manual_marks": 2.0
         },
         {
           "id": "9618_w23_41:2(c)(ii)",
@@ -213,7 +224,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(c)(iii)",
@@ -227,7 +239,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(d)",
@@ -237,7 +250,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(e)(i)",
@@ -251,7 +265,8 @@
           "auto_marks": 2.0,
           "tests": [
             "test_2e_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(e)(ii)",
@@ -261,7 +276,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -302,7 +318,7 @@
         24
       ],
       "qp_over_ms": "- MS pp.9、17 的 Python 范例为空 list（且 p.17 把 NumberRecords 声明写进注释），按 D10 ① 改为 50 格数组和独立的 NumberRecords 赋值。\n- MS p.21 `TotalData` 的末行 NumberRecords += 1 多缩进一级；参考解对照 QP p.6 修正。\n- MS p.24 把 `OutputRecords()` 缩进在 while 内，导致重复输出中间结果；参考解按 QP p.7 在全部汇总后输出一次。\n- MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。",
-      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。 T38c2：补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 minimum 50：数组允许至少 50 格，80 格的等价改写通过；QP 逻辑容量仍 50。"
+      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。 T38c2：补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 minimum 50：数组允许至少 50 格，80 格的等价改写通过；QP 逻辑容量可保持 50 或随分配扩大；两种 80 格正确改写均通过。"
     },
     {
       "directory": "practice/p4/9618_w23_42_q1",
@@ -328,7 +344,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(a)(ii)",
@@ -338,7 +355,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(b)(i)",
@@ -354,7 +372,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(b)(ii)",
@@ -370,7 +389,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(c)",
@@ -385,7 +405,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(d)(i)",
@@ -401,7 +422,8 @@
             7
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(d)(ii)",
@@ -411,7 +433,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -457,7 +480,7 @@
       "marks": 19,
       "auto_marks": 18.375,
       "manual_marks": 0.625,
-      "auto_share": 0.9671,
+      "auto_share": 0.967105,
       "types": [
         "P4-LT-01",
         "P4-LT-02",
@@ -474,7 +497,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(b)",
@@ -490,7 +514,8 @@
             7
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(i)",
@@ -501,7 +526,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(ii)",
@@ -514,7 +540,8 @@
           "auto_marks": 1.0,
           "tests": [
             "test_3c_ii_3d_ii_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(iii)",
@@ -524,7 +551,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(d)(i)",
@@ -542,7 +570,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.375
+          "auto_marks": 4.375,
+          "manual_marks": 0.625
         },
         {
           "id": "9618_w24_41:3(d)(ii)",
@@ -555,7 +584,8 @@
           "auto_marks": 1.0,
           "tests": [
             "test_3c_ii_3d_ii_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(d)(iii)",
@@ -565,7 +595,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
@@ -592,16 +623,16 @@
         37
       ],
       "qp_over_ms": "- MS p.27 Python 初始化仅 append 19 行，随后访问 LinkedList[19] 越界；参考解依 QP p.12 创建全部 20 行，最后指针 -1。\n- MS p.36 Python 主程序同样缺最后一行；VB/Java 在该处把最后指针留成 20；参考解沿用正确的 20 节点初始化。\n- MS p.31 OutputLinkedList 在空表时会访问下标 -1；参考解在遍历前检查终止值。不额外要求 QP 未涉及的空表截图。\n- 同季 9618_w24_43 第 3 题与本题相同，不另建练习。",
-      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。"
+      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。补核 MS p.26 min 20×2，接受额外分配但逻辑链仍用前 20 结点；25×3 等价正确数组通过。"
     },
     {
       "directory": "practice/p4/9618_w24_42_q2",
       "id": "9618_w24_42:2(a)",
       "paper": "9618_w24_42",
       "marks": 29,
-      "auto_marks": 24.0,
-      "manual_marks": 5.0,
-      "auto_share": 0.827586,
+      "auto_marks": 23.0,
+      "manual_marks": 6.0,
+      "auto_share": 0.793103,
       "types": [
         "P4-AR-03",
         "P4-SQ-02",
@@ -622,7 +653,8 @@
             1,
             3
           ],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 2.0
         },
         {
           "id": "9618_w24_42:2(b)",
@@ -634,7 +666,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(c)",
@@ -647,7 +680,8 @@
           "manual_mps": [
             3
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w24_42:2(d)",
@@ -659,7 +693,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(e)(i)",
@@ -685,11 +720,13 @@
           "marks": 2,
           "primary": "P4-MP-03",
           "auto_mps": [
-            1,
             2
           ],
-          "manual_mps": [],
-          "auto_marks": 2.0
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w24_42:2(f)",
@@ -702,7 +739,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(g)(i)",
@@ -729,7 +767,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
@@ -757,7 +796,7 @@
         30
       ],
       "qp_over_ms": "- MS p.18 Python 2(a) 的 HeadPointer/TailPointer 少 self.，只会创建局部变量；参考解按 p.19 完整范例修正为对象字段。\n- MS p.26 Python Dequeue 条件使用单等号 `=`，不能运行；参考解修为 `==` 语义。\n- 2(g)(ii) QP 测试串不含 -1，MS p.30 截图沿用含 -1 的 2(e)(ii) 串；自动测试分别用各自 QP 串，返回值同为 10、9。\n- 2(c) QP 的三处空白保留，人工核对时用 MS p.20 的 TheData / 99 / + 1；Python 对象传参无需真的返回对象，但允许 MS 的双返回接口。",
-      "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。 T38c2：补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。"
+      "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。 T38c2：补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。 2(e)(ii) MP1 中消息含义归人工；十个有效值的调用仍自动观察。"
     },
     {
       "directory": "practice/p4/9618_w25_41_q1",
@@ -785,7 +824,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(b)",
@@ -798,7 +838,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(c)",
@@ -811,7 +852,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(d)",
@@ -828,7 +870,8 @@
           "auto_marks": 3.0,
           "tests": [
             "test_1d_1f_main_call_chain"
-          ]
+          ],
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:1(e)",
@@ -841,7 +884,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(f)(i)",
@@ -854,7 +898,8 @@
           "auto_marks": 1.0,
           "tests": [
             "test_1d_1f_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(f)(ii)",
@@ -864,7 +909,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
@@ -886,7 +932,7 @@
         14
       ],
       "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
-      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。 T38c2：原有种子/Push 观察已验证随机范围及首次失败停止；新增 FindValues 实际调用、Pop 值链与极值输出。允许说明文字提及 -999，不能据此认定把哨兵当结果（QP p.3/MS pp.11–14）。固定 30 格由 QP 指定。"
+      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。 T38c2：原有种子/Push 观察已验证随机范围及首次失败停止；新增 FindValues 实际调用、Pop 值链与极值输出。允许说明文字提及 -999，不能据此认定把哨兵当结果（QP p.3/MS pp.11–14）。固定 30 格由 QP 指定。 新增 trace 使用固定种子并恢复主进程随机状态。"
     },
     {
       "directory": "practice/p4/9618_w25_41_q3",
@@ -914,7 +960,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:3(b)",
@@ -925,7 +972,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(c)",
@@ -936,7 +984,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(d)",
@@ -950,7 +999,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:3(e)",
@@ -966,7 +1016,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.166667
+          "auto_marks": 4.166667,
+          "manual_marks": 0.833333
         },
         {
           "id": "9618_w25_41:3(f)",
@@ -980,7 +1031,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(g)(i)",
@@ -995,7 +1047,8 @@
           "auto_marks": 3.0,
           "tests": [
             "test_3g_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(g)(ii)",
@@ -1006,7 +1059,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -1070,7 +1124,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(b)",
@@ -1088,7 +1143,8 @@
             9
           ],
           "manual_mps": [],
-          "auto_marks": 7.0
+          "auto_marks": 7.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(c)",
@@ -1103,7 +1159,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.2
+          "auto_marks": 3.2,
+          "manual_marks": 0.8
         },
         {
           "id": "9618_w25_42:3(d)",
@@ -1118,7 +1175,8 @@
           "manual_mps": [
             2
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_42:3(e)(i)",
@@ -1131,7 +1189,8 @@
           "auto_marks": 1.0,
           "tests": [
             "test_3c_3e_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(e)(ii)",
@@ -1141,7 +1200,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -1205,7 +1265,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(b)",
@@ -1219,7 +1280,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(c)",
@@ -1231,7 +1293,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(d)",
@@ -1247,7 +1310,8 @@
             1,
             2
           ],
-          "auto_marks": 3.333333
+          "auto_marks": 3.333333,
+          "manual_marks": 1.666667
         },
         {
           "id": "9618_w25_43:2(e)",
@@ -1262,7 +1326,8 @@
             6
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(f)(i)",
@@ -1276,7 +1341,8 @@
           "auto_marks": 2.0,
           "tests": [
             "test_2f_main_call_chain"
-          ]
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(f)(ii)",
@@ -1286,7 +1352,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [

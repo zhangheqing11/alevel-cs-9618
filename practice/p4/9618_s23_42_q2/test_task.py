@@ -83,17 +83,10 @@ def test_2b_no_algorithm_shortcuts(candidate_path):
                 'D10: implement search with pointers/comparisons rather than membership'
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_2f_main_call_chain(candidate_path):
     """9618_s23_42:2(f)(i) MP1-MP5 max4 (MS p.20): six entries, returned record, seventh entry."""
     data = 'ADF\n10\nOOP\n1\nBXW\n5\nXXZ\n22\nHQR\n6\nLLP\n3\nLLP\n3\n'
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

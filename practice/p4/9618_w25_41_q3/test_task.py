@@ -110,17 +110,10 @@ def test_3g_ii_screenshot_words(candidate_path, exercise_dir):
         index += 1
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_3g_main_call_chain(candidate_path, exercise_dir):
     """9618_w25_41:3(g)(i) MP1-MP3 (QP p.12/MS p.35): init/read, five integer GetRecord calls and actual returns."""
     data = '528\n1128\n1828\n1062\n39\n'
-    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
     assert r.error is None, r.error

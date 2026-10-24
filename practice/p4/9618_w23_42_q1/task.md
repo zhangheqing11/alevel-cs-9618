@@ -167,10 +167,10 @@ One source file is used to answer Question 1. The file is called StackData.txt
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a)(i) | 9618_w23_42:1(a)(i) | 2 | 代码 | `test_1a_arrays_and_next_free_pointers` · MP1、MP2 | — |
 | Part 1(a)(ii) | 9618_w23_42:1(a)(ii) | 1 | 代码 | `test_1a_arrays_and_next_free_pointers` · MPwhole | — |
-| Part 1(b)(i) | 9618_w23_42:1(b)(i) | 6 | 代码 | `test_1b_i_both_stacks_classify_and_overflow` · MP2、MP3、MP4、MP5、MP6 | MP1 Procedure PushData() heading (and end where appropriate) taking one parameter |
-| Part 1(b)(ii) | 9618_w23_42:1(b)(ii) | 6 | 代码 | `test_1b_ii_read_official_letters`；`test_1b_ii_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1 Procedure header ReadData() with no parameter |
-| Part 1(c) | 9618_w23_42:1(c) | 5 | 代码 | `test_1c_pop_lifo_empty_and_reuse` · MP2、MP3、MP4、MP5 | MP1 One function header with no parameter |
-| Part 1(d)(i) | 9618_w23_42:1(d)(i) | 6 | 代码 | `test_1d_ii_screenshot_utxoe`；`test_1d_i_empty_choice_does_not_count_as_letter` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
+| Part 1(b)(i) | 9618_w23_42:1(b)(i) | 6 | 代码 | `test_1b_i_both_stacks_classify_and_overflow` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(b)(ii) | 9618_w23_42:1(b)(ii) | 6 | 代码 | `test_1b_ii_read_official_letters`、`test_1b_ii_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(c) | 9618_w23_42:1(c) | 5 | 代码 | `test_1c_pop_lifo_empty_and_reuse` · MP2、MP3、MP4、MP5 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(d)(i) | 9618_w23_42:1(d)(i) | 6 | 代码 | `test_1d_ii_screenshot_utxoe`、`test_1d_i_empty_choice_does_not_count_as_letter` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
 | Part 1(d)(ii) | 9618_w23_42:1(d)(ii) | 1 | 截图 | `test_1d_ii_screenshot_utxoe` · MPwhole | — |
 
 ## 人工核对清单
@@ -193,4 +193,6 @@ One source file is used to answer Question 1. The file is called StackData.txt
 
 ## T38c2 · D46 验证补充
 
-补测 ReadData、按五个选择对应 Pop 的顺序与实际返回字母串；保留 QP 要求字母串一行，取消必须为最后一行的限制（QP p.4/MS pp.13–16）。原有空栈重选测试保留。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 ReadData、按五个选择对应 Pop 的顺序与实际返回字母串；保留 QP 要求字母串一行，取消必须为最后一行的限制（QP p.4/MS pp.13–16）。原有空栈重选测试保留。
+
+本次行为覆盖：自动 24.000000 分、人工 3.000000 分（88.89%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

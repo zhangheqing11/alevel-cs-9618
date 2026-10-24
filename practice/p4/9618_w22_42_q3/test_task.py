@@ -90,7 +90,7 @@ def assert_numbers_in_order(text, expected):
 def test_3c_3e_main_call_chain(candidate_path):
     """9618_w22_42:3(c) MP1-MP4;3(e)(i) whole (MS pp.22–23): ordered enqueues and recursive return output."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

@@ -174,17 +174,19 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a) | 9618_w24_42:2(a) | 3 | 代码 | `test_2a_record_array` · MP2 | MP1 Record structure or class with constructor Queue (and end where appropriate) …；MP3 … containing HeadPointer and TailPointer as integers |
+| Part 2(a) | 9618_w24_42:2(a) | 3 | 代码 | `test_2a_record_array` · MP2 | MP1、MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(b) | 9618_w24_42:2(b) | 3 | 代码 | `test_2b_record_initialised_before_enqueue` · MP1、MP2、MP3 | — |
-| Part 2(c) | 9618_w24_42:2(c) | 5 | 代码 | `test_2c_enqueue_first_and_capacity` · MP1、MP2 | MP3 1 mark for function header taking (at least) one parameter and the rest of function correct and using the record/class data structure accurately. |
+| Part 2(c) | 9618_w24_42:2(c) | 5 | 代码 | `test_2c_enqueue_first_and_capacity` · MP1、MP2 | MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(d) | 9618_w24_42:2(d) | 3 | 代码 | `test_2d_all_data_without_removing` · MP1、MP2、MP3 | — |
-| Part 2(e)(i) | 9618_w24_42:2(e)(i) | 5 | 代码 | `test_2e_2g_main_call_chain` + 原有输出测试 · MP1、MP2、MP3、MP5 | MP4：消息语义 / 未触发分支按同题 MS 核对 |
-| Part 2(e)(ii) | 9618_w24_42:2(e)(ii) | 2 | 截图 | `test_2e_ii_screenshot_rejects_negative` · MP1、MP2 | — |
+| Part 2(e)(i) | 9618_w24_42:2(e)(i) | 5 | 代码 | `test_2e_2g_main_call_chain` · MP1、MP2、MP3、MP5 | MP4；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(e)(ii) | 9618_w24_42:2(e)(ii) | 2 | 截图 | `test_2e_ii_screenshot_rejects_negative` · MP2 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(f) | 9618_w24_42:2(f) | 4 | 代码 | `test_2f_dequeue_fifo_preserves_cells` · MP1、MP2、MP3、MP4 | — |
-| Part 2(g)(i) | 9618_w24_42:2(g)(i) | 3 | 代码 | `test_2e_2g_main_call_chain` + 原有输出测试 · MP1、MP3 | MP2：消息语义 / 未触发分支按同题 MS 核对 |
+| Part 2(g)(i) | 9618_w24_42:2(g)(i) | 3 | 代码 | `test_2e_2g_main_call_chain` · MP1、MP3 | MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(g)(ii) | 9618_w24_42:2(g)(ii) | 1 | 截图 | `test_2g_ii_screenshot_two_returns` · MPwhole | — |
 
 ## 人工核对清单
+
+- [ ] 9618_w24_42:2(e)(ii) MP1：本次归人工，按同题 MS 核对适当消息或固定主程序未覆盖的分支。
 
 - [ ] 9618_w24_42:2(g)(i) MP2：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
@@ -210,4 +212,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。 2(e)(ii) MP1 中消息含义归人工；十个有效值的调用仍自动观察。
+
+本次行为覆盖：自动 23.000000 分、人工 6.000000 分（79.31%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

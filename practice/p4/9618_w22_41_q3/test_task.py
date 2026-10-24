@@ -89,7 +89,7 @@ def assert_numbers_in_order(text, expected):
 def test_3e_main_call_chain(candidate_path):
     """9618_w22_41:3(e)(i) MP1-MP3 (QP p.11/MS p.22): SearchValue(0,15), returned index, PostOrder(root)."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

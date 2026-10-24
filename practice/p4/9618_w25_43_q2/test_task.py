@@ -97,13 +97,6 @@ def test_2f_ii_screenshot_official_compressed_output(candidate_path, exercise_di
     assert re.search(r'\b19051306\b', result.stdout)
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_2f_main_call_chain(candidate_path, exercise_dir, tmp_path):
     """9618_w25_43:2(f)(i) MP1-MP2 (MS p.30): ReadData -> Compress -> actual compressed string."""
     for files, expected in [(exercise_dir / 'files', '19051306'), (tmp_path, '120313')]:

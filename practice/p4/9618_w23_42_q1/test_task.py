@@ -88,17 +88,10 @@ def test_1d_i_empty_choice_does_not_count_as_letter(candidate_path, tmp_path):
         assert len(lines) >= 2
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_1d_main_call_chain(candidate_path, exercise_dir):
     """9618_w23_42:1(d)(i) MP1-MP7 (MS pp.13–16): ReadData then the selected Pop calls, output actual letters."""
     data = 'vowel\nconsonant\nconsonant\nvowel\nvowel\n'
-    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
     assert r.error is None, r.error

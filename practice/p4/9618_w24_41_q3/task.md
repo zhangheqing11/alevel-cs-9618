@@ -167,12 +167,12 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_w24_41:3(a) | 2 | 代码 | `test_3a_initial_free_list` · MP1、MP2 | — |
-| Part 3(b) | 9618_w24_41:3(b) | 6 | 代码 | `test_3b_insert_five_at_front`；`test_3b_full_and_recycled_nodes` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
+| Part 3(b) | 9618_w24_41:3(b) | 6 | 代码 | `test_3b_insert_five_at_front`、`test_3b_full_and_recycled_nodes` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
 | Part 3(c)(i) | 9618_w24_41:3(c)(i) | 2 | 代码 | `test_3c_i_output_follows_nonsequential_pointers` · MP1、MP2 | — |
-| Part 3(c)(ii) | 9618_w24_41:3(c)(ii) | 1 | 代码 | `test_3c_iii_screenshot_reverse` · MPwhole；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 3(c)(ii) | 9618_w24_41:3(c)(ii) | 1 | 代码 | `test_3c_iii_screenshot_reverse`、`test_3c_ii_3d_ii_main_call_chain` · MPwhole | — |
 | Part 3(c)(iii) | 9618_w24_41:3(c)(iii) | 1 | 截图 | `test_3c_iii_screenshot_reverse` · MPwhole | — |
-| Part 3(d)(i) | 9618_w24_41:3(d)(i) | 5 | 代码 | `test_3d_i_remove_head_middle_tail`；`test_3d_i_duplicate_only_first_removed`；`test_3b_full_and_recycled_nodes` · MP2、MP3、MP4、MP5、MP6、MP7、MP8 | MP1 Procedure header (and end) with parameter |
-| Part 3(d)(ii) | 9618_w24_41:3(d)(ii) | 1 | 代码 | `test_3d_iii_screenshot_after` · MPwhole；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链；`test_3c_ii_3d_ii_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 3(d)(i) | 9618_w24_41:3(d)(i) | 5 | 代码 | `test_3d_i_remove_head_middle_tail`、`test_3d_i_duplicate_only_first_removed`、`test_3b_full_and_recycled_nodes` · MP2、MP3、MP4、MP5、MP6、MP7、MP8 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(d)(ii) | 9618_w24_41:3(d)(ii) | 1 | 代码 | `test_3d_iii_screenshot_after`、`test_3c_ii_3d_ii_main_call_chain` · MPwhole | — |
 | Part 3(d)(iii) | 9618_w24_41:3(d)(iii) | 1 | 截图 | `test_3d_iii_screenshot_after` · MPwhole | — |
 
 ## 人工核对清单
@@ -194,8 +194,6 @@
 
 ## T38c2 · D46 验证补充
 
-F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。
+F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。补核 MS p.26 min 20×2，接受额外分配但逻辑链仍用前 20 结点；25×3 等价正确数组通过。
 
-## T38c2 · D46 验证补充
-
-F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。
+本次行为覆盖：自动 18.375000 分、人工 0.625000 分（96.71%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

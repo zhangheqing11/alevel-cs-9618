@@ -6,9 +6,9 @@
       "id": "9618_s22_41:3(a)",
       "paper": "9618_s22_41",
       "marks": 21,
-      "auto_marks": 17.142857,
-      "manual_marks": 3.857143,
-      "auto_share": 0.816327,
+      "auto_marks": 16.142857,
+      "manual_marks": 4.857143,
+      "auto_share": 0.768707,
       "types": [
         "P4-SQ-03",
         "P4-MP-02",
@@ -95,12 +95,12 @@
           "id": "9618_s22_41:3(d)(ii)",
           "marks": 1,
           "primary": "P4-MP-03",
-          "auto_mps": [
+          "auto_mps": [],
+          "manual_mps": [
             "whole"
           ],
-          "manual_mps": [],
-          "auto_marks": 1.0,
-          "manual_marks": 0.0,
+          "auto_marks": 0.0,
+          "manual_marks": 1.0,
           "tests": [
             "test_3d_screenshot"
           ]
@@ -124,16 +124,16 @@
         33,
         34
       ],
-      "notes": "QP pp.8–10、MS pp.27–34 全部渲染图已读，evidence.doc 第 3 题 5 格已核。MS 3(c) Python 原图 p.30 印 `false`、`Queue(Head)` 以及先加一后 `Head >= 9`，参考解改为 QP 的 `\"FALSE\"`、`Queue[Head]`、`Head > 9`；后者符合同页得分句 more than 9，不跳过第十个元素（D31）。3(b) 语料 MP1 是五处填空合计 5 分，不拆成五个自造点号；MP2 是函数头 / ByRef、MP3 是 remainder / following logic，归人工。MS 未印独立 MP 数字，其余按清单顺序，无 D37 编号差异。与 s22_43 第 3 题整题相同，不重复创建。 T38c2：补测 11 次 Enqueue 的输入参数/返回状态与 2 次 Dequeue；移除 13 行及状态文字完全相同的额外限制（QP p.10/MS pp.32/34）。合适消息语义及按返回值选择消息改列人工补核。"
+      "notes": "QP pp.8–10、MS pp.27–34 全部渲染图已读，evidence.doc 第 3 题 5 格已核。MS 3(c) Python 原图 p.30 印 `false`、`Queue(Head)` 以及先加一后 `Head >= 9`，参考解改为 QP 的 `\"FALSE\"`、`Queue[Head]`、`Head > 9`；后者符合同页得分句 more than 9，不跳过第十个元素（D31）。3(b) 语料 MP1 是五处填空合计 5 分，不拆成五个自造点号；MP2 是函数头 / ByRef、MP3 是 remainder / following logic，归人工。MS 未印独立 MP 数字，其余按清单顺序，无 D37 编号差异。与 s22_43 第 3 题整题相同，不重复创建。 T38c2：补测 11 次 Enqueue 的输入参数/返回状态与 2 次 Dequeue；移除 13 行及状态文字完全相同的额外限制（QP p.10/MS pp.32/34）。合适消息语义及按返回值选择消息改列人工补核。 截图的适当消息语义不可自动判别，截图整行列人工，A/B 输出测试作为行为辅助。"
     },
     {
       "directory": "practice/p4/9618_s22_42_q1",
       "id": "9618_s22_42:1(a)",
       "paper": "9618_s22_42",
       "marks": 25,
-      "auto_marks": 21.0,
-      "manual_marks": 4.0,
-      "auto_share": 0.84,
+      "auto_marks": 20.0,
+      "manual_marks": 5.0,
+      "auto_share": 0.8,
       "types": [
         "P4-SQ-01",
         "P4-AR-04",
@@ -219,12 +219,12 @@
           "id": "9618_s22_42:1(d)(ii)",
           "marks": 1,
           "primary": "P4-MP-03",
-          "auto_mps": [
+          "auto_mps": [],
+          "manual_mps": [
             "whole"
           ],
-          "manual_mps": [],
-          "auto_marks": 1.0,
-          "manual_marks": 0.0,
+          "auto_marks": 0.0,
+          "manual_marks": 1.0,
           "tests": [
             "test_1d_screenshot"
           ]
@@ -281,7 +281,7 @@
         11,
         12
       ],
-      "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。 T38c2：补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。"
+      "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。 T38c2：补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。 截图的适当消息语义不可自动判别，1(d)(ii) 整行列人工。"
     },
     {
       "directory": "practice/p4/9618_s23_41_q3",
@@ -491,7 +491,7 @@
         37,
         38
       ],
-      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。 T38c2：补测 ReadData 与四次 OutputItem（含实际双栈 Pop）；截图允许额外说明行。QP 明定配对一行的规则保留（QP pp.9–10/MS p.38）。"
+      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。 T38c2：补测 ReadData 与四次 OutputItem（含实际双栈 Pop）；截图允许额外说明行。QP 明定配对一行的规则保留（QP pp.9–10/MS p.38）。 OutputItem 也允许额外说明行，配对本身仍在一行。"
     },
     {
       "directory": "practice/p4/9618_s23_42_q2",
@@ -666,9 +666,9 @@
       "id": "9618_s24_41:3(a)",
       "paper": "9618_s24_41",
       "marks": 17,
-      "auto_marks": 17.0,
-      "manual_marks": 0.0,
-      "auto_share": 1.0,
+      "auto_marks": 16.25,
+      "manual_marks": 0.75,
+      "auto_share": 0.955882,
       "types": [
         "P4-SQ-02",
         "P4-PR-02",
@@ -735,12 +735,13 @@
             4,
             5,
             6,
-            7,
             8
           ],
-          "manual_mps": [],
-          "auto_marks": 6.0,
-          "manual_marks": 0.0,
+          "manual_mps": [
+            7
+          ],
+          "auto_marks": 5.25,
+          "manual_marks": 0.75,
           "tests": [
             "test_3d_storeitems_official_sequence",
             "test_3d_x_and_numeric_checks_at_full_queue"
@@ -798,7 +799,7 @@
         37,
         38
       ],
-      "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。 T38c2：补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。"
+      "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。 T38c2：补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。 StoreItems 计数输出不固定末行；适当消息语义 MP7 改人工。"
     },
     {
       "directory": "practice/p4/9618_s25_41_q1",
@@ -1491,9 +1492,9 @@
       "id": "9618_w22_41:3(a)",
       "paper": "9618_w22_41",
       "marks": 21,
-      "auto_marks": 19.0,
-      "manual_marks": 2.0,
-      "auto_share": 0.904762,
+      "auto_marks": 18.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.857143,
       "types": [
         "P4-LT-03",
         "P4-LT-04",
@@ -1578,12 +1579,13 @@
           "primary": "P4-MP-01",
           "auto_mps": [
             1,
-            2,
             3
           ],
-          "manual_mps": [],
-          "auto_marks": 3.0,
-          "manual_marks": 0.0,
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0,
+          "manual_marks": 1.0,
           "tests": [
             "test_3e_screenshot",
             "test_3e_main_call_chain"
@@ -1623,7 +1625,7 @@
         22,
         23
       ],
-      "notes": "已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。 T38c2：补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。"
+      "notes": "已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。 T38c2：补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。 固定主程序未触发 not-found 分支，3(e)(i) MP2 整点改人工。"
     }
   ]
 }

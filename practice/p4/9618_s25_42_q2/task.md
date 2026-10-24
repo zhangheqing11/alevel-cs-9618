@@ -152,15 +152,15 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a) | 9618_s25_42:2(a) | 2 | 代码 | — | MP1、MP2 |
-| Part 2(b)(i) | 9618_s25_42:2(b)(i) | 1 | 代码 | `test_2b_arrays_and_initialise` · 整行；`test_2b_no_algorithm_shortcuts` · D10 写法检查 | — |
+| Part 2(a) | 9618_s25_42:2(a) | 2 | 代码 | 行为辅助测试（不计自动分） | MP1、MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(b)(i) | 9618_s25_42:2(b)(i) | 1 | 代码 | `test_2b_arrays_and_initialise`、`test_2b_no_algorithm_shortcuts` · MPwhole | — |
 | Part 2(b)(ii) | 9618_s25_42:2(b)(ii) | 2 | 代码 | `test_2b_arrays_and_initialise` · MP1、MP2 | — |
 | Part 2(c) | 9618_s25_42:2(c) | 2 | 代码 | `test_2c_hash` · MP1、MP2 | — |
-| Part 2(d) | 9618_s25_42:2(d) | 6 | 代码 | `test_2d_insert_and_collisions`、`test_2d_last_spare_slot` · MP2、MP3、MP4、MP5、MP6 | MP1 |
-| Part 2(e) | 9618_s25_42:2(e) | 5 | 代码 | `test_2e_create_from_official_data`、`test_2e_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1 |
+| Part 2(d) | 9618_s25_42:2(d) | 6 | 代码 | `test_2d_insert_and_collisions`、`test_2d_last_spare_slot` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(e) | 9618_s25_42:2(e) | 5 | 代码 | `test_2e_create_from_official_data`、`test_2e_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(f)(i) | 9618_s25_42:2(f)(i) | 2 | 代码 | `test_2f_printspare_empty_partial_full` · MP1、MP2 | — |
-| Part 2(f)(ii) | 9618_s25_42:2(f)(ii) | 1 | 代码 | `test_2f_screenshot` · 整行；`test_2f_ii_main_call_chain` · 实际调用、参数与结果链 | — |
-| Part 2(f)(iii) | 9618_s25_42:2(f)(iii) | 1 | 截图 | `test_2f_screenshot` · 整行 | — |
+| Part 2(f)(ii) | 9618_s25_42:2(f)(ii) | 1 | 代码 | `test_2f_screenshot`、`test_2f_ii_main_call_chain` · MPwhole | — |
+| Part 2(f)(iii) | 9618_s25_42:2(f)(iii) | 1 | 截图 | `test_2f_screenshot` · MPwhole | — |
 
 自动测分值 18.166667，人工核对分值 3.833333，自动占比 82.58%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
@@ -180,4 +180,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测 Initialise → CreateHashTable → PrintSpare；PrintSpare 和截图的整段数字严格相等改为键值有序包含，允许题号/说明数字（QP p.8/MS pp.30–32）。固定 200/100 容量由 QP 指定，保留。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 Initialise → CreateHashTable → PrintSpare；PrintSpare 和截图的整段数字严格相等改为键值有序包含，允许题号/说明数字（QP p.8/MS pp.30–32）。固定 200/100 容量由 QP 指定，保留。
+
+本次行为覆盖：自动 18.166667 分、人工 3.833333 分（82.58%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

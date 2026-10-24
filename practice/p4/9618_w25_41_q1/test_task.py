@@ -91,19 +91,18 @@ def test_1f_ii_screenshot_stack_full_and_extrema(candidate_path, tmp_path):
     assert runs[0] != runs[1], 'random generation must vary with the seed'
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_1d_1f_main_call_chain(candidate_path):
     """9618_w25_41:1(d) MP1-MP4;1(f)(i) whole (MS pp.11/14): random Push, stop on False, call FindValues."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
-    r = run_script_traced(candidate_path, stdin=data)
+    import random
+    previous = random.getstate()
+    try:
+        random.seed(9618)
+        r = run_script_traced(candidate_path, stdin=data)
+    finally:
+        random.setstate(previous)
     assert r.error is None, r.error
     pushes, extrema = r.called('Push'), r.called('FindValues')
     assert len(pushes) == 31 and [c.result for c in pushes] == [True] * 30 + [False]

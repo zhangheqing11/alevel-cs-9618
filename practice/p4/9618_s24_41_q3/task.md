@@ -8,7 +8,7 @@
 
 ## Python 接口
 
-`QueueData` 二十格，`QueueHead = QueueTail = -1`；`Enqueue(DataToInsert)` 返回布尔值；`Dequeue()` 空时返回 QP 指定的小写字符串 `"false"`。这是线性队列，尾指针到 19 就满，不回绕。`StoreItems()` 无参，输入十条七字符数据，存入时去掉末尾校验位。最后一行计数报告含无效项数量，主程序再输出一次 Dequeue 结果或空队列提示。只测试 QP 定义的七字符格式（前六位数字），不替题目添加格式校验。
+`QueueData` 二十格，`QueueHead = QueueTail = -1`；`Enqueue(DataToInsert)` 返回布尔值；`Dequeue()` 空时返回 QP 指定的小写字符串 `"false"`。这是线性队列，尾指针到 19 就满，不回绕。`StoreItems()` 无参，输入十条七字符数据，存入时去掉末尾校验位。计数报告含无效项数量（不限定它在函数输出的最后一行），主程序再输出一次 Dequeue 结果或空队列提示。只测试 QP 定义的七字符格式（前六位数字），不替题目添加格式校验。
 
 ## 英文原题（QP 原页转写）
 
@@ -146,16 +146,18 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 3(a) | 9618_s24_41:3(a) | 1 | 代码 | `test_3a_initial_state` · 整行 | — |
-| Part 3(b) | 9618_s24_41:3(b) | 4 | 代码 | `test_3b_enqueue_linear_full` · MP1、MP2、MP3、MP4；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
+| Part 3(a) | 9618_s24_41:3(a) | 1 | 代码 | `test_3a_initial_state` · MPwhole | — |
+| Part 3(b) | 9618_s24_41:3(b) | 4 | 代码 | `test_3b_enqueue_linear_full`、`test_3b_no_algorithm_shortcuts` · MP1、MP2、MP3、MP4 | — |
 | Part 3(c) | 9618_s24_41:3(c) | 3 | 代码 | `test_3c_dequeue_fifo_and_empty_string` · MP1、MP2、MP3 | — |
-| Part 3(d)(i) | 9618_s24_41:3(d)(i) | 6 | 代码 | `test_3d_storeitems_official_sequence`、`test_3d_x_and_numeric_checks_at_full_queue` · MP1、MP2、MP3、MP4、MP5、MP6、MP7、MP8 | — |
-| Part 3(d)(ii) | 9618_s24_41:3(d)(ii) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_empty_message` · 整行；`test_3d_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 3(d)(i) | 9618_s24_41:3(d)(i) | 6 | 代码 | `test_3d_storeitems_official_sequence`、`test_3d_x_and_numeric_checks_at_full_queue` · MP1、MP2、MP3、MP4、MP5、MP6、MP8 | MP7；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(d)(ii) | 9618_s24_41:3(d)(ii) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_empty_message`、`test_3d_main_call_chain` · MPwhole | — |
 | Part 3(d)(iii) | 9618_s24_41:3(d)(iii) | 2 | 截图 | `test_3d_screenshot` · MP1、MP2 | — |
 
-自动测分值 17.000000，人工核对分值 0.000000，自动占比 100.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 16.250000，人工核对分值 0.750000，自动占比 95.59%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s24_41:3(d)(i) MP7：本次归人工，按同题 MS 核对适当消息或固定主程序未覆盖的分支。
 
 
 - [ ] 所有模块头、参数个数与顺序、全局 / 局部作用域符合 QP；所有 list 的类型与大小有英文注释；没有用内置函数替代题目要求的算法（D10 ③）。
@@ -168,4 +170,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 StoreItems → Dequeue 一次及返回项目输出；计数和项目输出不再固定倒数两行，允许相邻多行说明（QP p.13/MS pp.37–38）。 StoreItems 计数输出不固定末行；适当消息语义 MP7 改人工。
+
+本次行为覆盖：自动 16.250000 分、人工 0.750000 分（95.59%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

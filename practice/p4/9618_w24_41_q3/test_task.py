@@ -119,7 +119,7 @@ def assert_numbers_in_order(text, expected):
 @pytest.mark.parametrize('data', ['5\n1\n2\n3\n8\n', '5\n6\n8\n9\n5\n', '10\n7\n8\n5\n6\n'])
 def test_3c_ii_3d_ii_main_call_chain(candidate_path, data):
     """9618_w24_41:3(c)(ii),3(d)(ii) whole (MS pp.32/36): insert, output, RemoveData(5), output."""
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

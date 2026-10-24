@@ -102,10 +102,10 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_w22_42:3(a) | 3 | 代码 | `test_3a_queue_and_pointers` · MP1、MP2、MP3 | — |
-| Part 3(b) | 9618_w22_42:3(b) | 6 | 代码 | `test_3b_first_last_and_full` · MP2、MP3、MP4、MP5、MP6 | MP1 Function header (and close where appropriate) with integer parameter |
-| Part 3(c) | 9618_w22_42:3(c) | 4 | 代码 | `test_3e_ii_screenshot_total`、`test_3c_reports_any_enqueue_failure` · MP1、MP2、MP3、MP4；`test_3c_3e_main_call_chain` · 实际调用、参数与结果链 | — |
-| Part 3(d) | 9618_w22_42:3(d) | 6 | 代码 | `test_3d_recursive_sum` · MP2、MP3、MP4、MP5、MP6 | MP1 function call (and end where appropriate) taking a parameter |
-| Part 3(e)(i) | 9618_w22_42:3(e)(i) | 1 | 代码 | `test_3e_ii_screenshot_total` · MPwhole；`test_3c_3e_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 3(b) | 9618_w22_42:3(b) | 6 | 代码 | `test_3b_first_last_and_full` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(c) | 9618_w22_42:3(c) | 4 | 代码 | `test_3e_ii_screenshot_total`、`test_3c_reports_any_enqueue_failure`、`test_3c_3e_main_call_chain` · MP1、MP2、MP3、MP4 | — |
+| Part 3(d) | 9618_w22_42:3(d) | 6 | 代码 | `test_3d_recursive_sum` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(e)(i) | 9618_w22_42:3(e)(i) | 1 | 代码 | `test_3e_ii_screenshot_total`、`test_3c_3e_main_call_chain` · MPwhole | — |
 | Part 3(e)(ii) | 9618_w22_42:3(e)(ii) | 1 | 截图 | `test_3e_ii_screenshot_total` · MPwhole | — |
 
 ## 人工核对清单
@@ -127,4 +127,6 @@
 
 ## T38c2 · D46 验证补充
 
-原有注入一次失败的测试已观测 Enqueue；补测 RecursiveOutput(19) 调用及返回总和，210 输出允许后续说明数字（QP pp.8–9/MS pp.22–24）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+原有注入一次失败的测试已观测 Enqueue；补测 RecursiveOutput(19) 调用及返回总和，210 输出允许后续说明数字（QP pp.8–9/MS pp.22–24）。
+
+本次行为覆盖：自动 19.000000 分、人工 2.000000 分（90.48%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

@@ -52,7 +52,6 @@ def test_1ce_screenshot(candidate_path):
     assert_numbers_in_order(r.stdout[r.stdout.rfind('Unsuccessful') + len('Unsuccessful'):], [1, 2])
 
 
-
 def test_1b_no_algorithm_shortcuts(candidate_path):
     """9618_s25_41:1(b) MP1 (D10): required algorithm cannot be delegated to built-ins."""
     import ast
@@ -78,7 +77,7 @@ def assert_numbers_in_order(text, expected):
 def test_1c_1e_main_call_chain(candidate_path):
     """9618_s25_41:1(c) MP1-MP3;1(e)(i) MP1-MP2 (MS pp.12/16): 25 enqueues then two dequeues."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

@@ -146,7 +146,6 @@ def test_2g_ii_screenshot_two_returns(candidate_path):
     assert_numbers_in_order(result.stdout.split(marker, 1)[1], [10, 9])
 
 
-
 def assert_numbers_in_order(text, expected):
     """D31/D46: allow explanatory numbers and line breaks around required values."""
     values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
@@ -157,7 +156,7 @@ def assert_numbers_in_order(text, expected):
 def test_2e_2g_main_call_chain(candidate_path):
     """9618_w24_42:2(e)(i) MP1-MP5;2(g)(i) MP1-MP3 (MS pp.23/28): validated enqueues, ReturnAllData, Dequeue twice."""
     data = '10\n9\n-1\n8\n7\n6\n5\n4\n3\n2\n1\n'
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

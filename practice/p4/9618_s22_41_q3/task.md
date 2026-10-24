@@ -10,7 +10,7 @@
 
 采用 MS Python 的显式状态返回接口：`Enqueue(Queue, Head, Tail, NumItems, InputData)` 返回 `(成功布尔值, Queue, Head, Tail, NumItems)`；`Dequeue(Queue, Head, Tail, NumItems)` 返回 `(出队字符串, Queue, Head, Tail, NumItems)`。空队列按 QP 返回字符串 `"FALSE"`。全局声明名用 MS 的 `QueueArray`、`QueueHeadPointer`、`QueueTailPointer`、`NumberOfItems`。每次调用都接回全部返回值；Python 整数参数不能直接实现 ByRef。空元素字符串的具体内容不测。
 
-3(d) 的状态提示可自行措辞；测试只要求前十次相同且第十一次不同，最后两项是 A、B；不把 MS 的 Successful 文案设成接口要求。
+3(d) 的状态提示可自行措辞，允许每次消息包含不同输入值；是否正确表达成功/失败由导师人工核对。测试观察真实调用，并按顺序查找返回的 A、B，不限制总行数。
 
 ## 英文原题（QP 原页转写）
 
@@ -109,14 +109,16 @@ ENDFUNCTION
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s22_41:3(a) | 2 | 代码 | `test_3a_initial_state` · MP1、MP2 | — |
-| Part 3(b) | 9618_s22_41:3(b) | 7 | 代码 | `test_3b_enqueue_full_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP1；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | MP2、MP3 |
-| Part 3(c) | 9618_s22_41:3(c) | 6 | 代码 | `test_3c_dequeue_fifo_empty_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1 |
-| Part 3(d)(i) | 9618_s22_41:3(d)(i) | 5 | 代码 | `test_3d_main_call_chain` + 原有输出测试 · MP1、MP2、MP4、MP5 | MP3：消息语义 / 未触发分支按同题 MS 核对 |
-| Part 3(d)(ii) | 9618_s22_41:3(d)(ii) | 1 | 截图 | `test_3d_screenshot` · 整行 | — |
+| Part 3(b) | 9618_s22_41:3(b) | 7 | 代码 | `test_3b_enqueue_full_and_wrap`、`test_3bc_reuse_slots_after_dequeue`、`test_3b_no_algorithm_shortcuts` · MP1 | MP2、MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(c) | 9618_s22_41:3(c) | 6 | 代码 | `test_3c_dequeue_fifo_empty_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(d)(i) | 9618_s22_41:3(d)(i) | 5 | 代码 | `test_3d_main_call_chain` · MP1、MP2、MP4、MP5 | MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(d)(ii) | 9618_s22_41:3(d)(ii) | 1 | 截图 | 行为辅助测试（不计自动分） | MPwhole；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 
-自动测分值 17.142857，人工核对分值 3.857143，自动占比 81.63%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 16.142857，人工核对分值 4.857143，自动占比 76.87%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s22_41:3(d)(ii) MPwhole：本次归人工，按同题 MS 核对适当消息或固定主程序未覆盖的分支。
 
 - [ ] 9618_s22_41:3(d)(i) MP3：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
@@ -133,4 +135,6 @@ QP pp.8–10、MS pp.27–34 全部渲染图已读，evidence.doc 第 3 题 5 �
 
 ## T38c2 · D46 验证补充
 
-补测 11 次 Enqueue 的输入参数/返回状态与 2 次 Dequeue；移除 13 行及状态文字完全相同的额外限制（QP p.10/MS pp.32/34）。合适消息语义及按返回值选择消息改列人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 11 次 Enqueue 的输入参数/返回状态与 2 次 Dequeue；移除 13 行及状态文字完全相同的额外限制（QP p.10/MS pp.32/34）。合适消息语义及按返回值选择消息改列人工补核。 截图的适当消息语义不可自动判别，截图整行列人工，A/B 输出测试作为行为辅助。
+
+本次行为覆盖：自动 16.142857 分、人工 4.857143 分（76.87%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

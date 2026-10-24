@@ -178,16 +178,18 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 3(a) | 9618_w22_41:3(a) | 3 | 代码 | `test_3a_array_shape_and_unused_nodes` · MP1、MP3 | MP2 |
-| Part 3(b) | 9618_w22_41:3(b) | 2 | 代码 | `test_3b_preset_and_pointers` · MP1、MP2；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
-| Part 3(c) | 9618_w22_41:3(c) | 5 | 代码 | `test_3c_search_both_branches`、`test_3c_search_recursive_and_null_data` · MP1 | MP2 |
+| Part 3(a) | 9618_w22_41:3(a) | 3 | 代码 | `test_3a_array_shape_and_unused_nodes` · MP1、MP3 | MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(b) | 9618_w22_41:3(b) | 2 | 代码 | `test_3b_preset_and_pointers`、`test_3b_no_algorithm_shortcuts` · MP1、MP2 | — |
+| Part 3(c) | 9618_w22_41:3(c) | 5 | 代码 | `test_3c_search_both_branches`、`test_3c_search_recursive_and_null_data` · MP1 | MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 3(d) | 9618_w22_41:3(d) | 7 | 代码 | `test_3d_postorder_recursive`、`test_3d_postorder_different_tree` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
-| Part 3(e)(i) | 9618_w22_41:3(e)(i) | 3 | 代码 | `test_3e_screenshot` · MP1、MP2、MP3；`test_3e_main_call_chain` · 实际调用、参数与结果链 | — |
-| Part 3(e)(ii) | 9618_w22_41:3(e)(ii) | 1 | 截图 | `test_3e_screenshot` · 整行 | — |
+| Part 3(e)(i) | 9618_w22_41:3(e)(i) | 3 | 代码 | `test_3e_screenshot`、`test_3e_main_call_chain` · MP1、MP3 | MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(e)(ii) | 9618_w22_41:3(e)(ii) | 1 | 截图 | `test_3e_screenshot` · MPwhole | — |
 
-自动测分值 19.000000，人工核对分值 2.000000，自动占比 90.48%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 18.000000，人工核对分值 3.000000，自动占比 85.71%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_w22_41:3(e)(i) MP2：本次归人工，按同题 MS 核对适当消息或固定主程序未覆盖的分支。
 
 - [ ] 9618_w22_41:3(a) MP2：looping through all 20 × 3 elements of array …（1 分；人工核对代码结构 / 声明）。
 - [ ] 9618_w22_41:3(c) MP2：1 mark for remainder of function correct（1 分；人工核对代码结构 / 声明）。
@@ -201,4 +203,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 SearchValue 的根/15 参数、返回下标及 PostOrder 根结点；遍历与截图允许说明数字（QP pp.10–11/MS pp.21–23）。固定示例未触发的 not-found 消息仍人工补核。 固定主程序未触发 not-found 分支，3(e)(i) MP2 整点改人工。
+
+本次行为覆盖：自动 18.000000 分、人工 3.000000 分（85.71%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

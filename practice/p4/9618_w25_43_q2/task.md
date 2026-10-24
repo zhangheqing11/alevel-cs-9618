@@ -143,9 +143,9 @@
 | Part 2(a) | 9618_w25_43:2(a) | 2 | 代码 | `test_2a_globals` · MP1、MP2 | — |
 | Part 2(b) | 9618_w25_43:2(b) | 5 | 代码 | `test_2b_last_used_tail_capacity` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 2(c) | 9618_w25_43:2(c) | 3 | 代码 | `test_2c_dequeue_string_false_and_fifo` · MP1、MP2、MP3 | — |
-| Part 2(d) | 9618_w25_43:2(d) | 5 | 代码 | `test_2d_reads_official_file`；`test_2d_any_file_length_to_100`；`test_2d_missing_file` · MP3、MP4、MP5、MP6 | MP1 Procedure header (and end where appropriate)；MP2 Opening the file and closing the file (in appropriate place) |
+| Part 2(d) | 9618_w25_43:2(d) | 5 | 代码 | `test_2d_reads_official_file`、`test_2d_any_file_length_to_100`、`test_2d_missing_file` · MP3、MP4、MP5、MP6 | MP1、MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(e) | 9618_w25_43:2(e) | 6 | 代码 | `test_2e_compress_all_runs_including_final_singleton` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
-| Part 2(f)(i) | 9618_w25_43:2(f)(i) | 2 | 代码 | `test_2f_ii_screenshot_official_compressed_output` · MP1、MP2；`test_2f_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 2(f)(i) | 9618_w25_43:2(f)(i) | 2 | 代码 | `test_2f_ii_screenshot_official_compressed_output`、`test_2f_main_call_chain` · MP1、MP2 | — |
 | Part 2(f)(ii) | 9618_w25_43:2(f)(ii) | 1 | 截图 | `test_2f_ii_screenshot_official_compressed_output` · MPwhole | — |
 
 ## 人工核对清单
@@ -168,4 +168,6 @@
 
 ## T38c2 · D46 验证补充
 
-补测 ReadData → Compress 以及实际 Dequeue 字符，官方 19051306 与新数据 120313 双数据验证输出；取消固定末行/行尾，压缩串本身仍完整（QP pp.10–11/MS pp.28–31）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 ReadData → Compress 以及实际 Dequeue 字符，官方 19051306 与新数据 120313 双数据验证输出；取消固定末行/行尾，压缩串本身仍完整（QP pp.10–11/MS pp.28–31）。
+
+本次行为覆盖：自动 22.333333 分、人工 1.666667 分（93.06%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

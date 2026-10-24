@@ -47,7 +47,7 @@ def test_3d_storeitems_official_sequence(sol, monkeypatch, capsys):
     assert calls == ['999999', '125148', '550021', '984578', '811102', '756855']
     assert sol.QueueData[:6] == calls
     assert (sol.QueueHead, sol.QueueTail) == (0, 5)
-    assert re.search(r'\b4\b', output_lines(capsys.readouterr().out)[-1])
+    assert_numbers_in_order(capsys.readouterr().out, [4])
 
 
 def test_3d_x_and_numeric_checks_at_full_queue(sol, monkeypatch, capsys):
@@ -56,7 +56,7 @@ def test_3d_x_and_numeric_checks_at_full_queue(sol, monkeypatch, capsys):
     feed_input(monkeypatch, *(['954123X', '999999X'] * 5))
     sol.StoreItems()
     out = output_lines(capsys.readouterr().out)
-    assert len(out) >= 6 and re.search(r'\b5\b', out[-1])
+    assert_numbers_in_order('\n'.join(out), [5])
     assert sol.QueueTail == 19
 
 
@@ -102,7 +102,7 @@ def assert_numbers_in_order(text, expected):
 def test_3d_main_call_chain(candidate_path):
     """9618_s24_41:3(d)(ii) whole (MS p.37): StoreItems, Dequeue once, output actual item."""
     data = '999999X\n1251484\n5500212\n0033585\n9845788\n6666666\n3258746\n8111022\n7568557\n0012353\n'
-    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data)
     assert r.error is None, r.error

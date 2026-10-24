@@ -178,11 +178,11 @@ SecondStack.txt and HashData.txt
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s25_42:1(a) | 2 | 代码 | `test_1a_initial_state` · MP1、MP2 | — |
-| Part 1(b) | 9618_s25_42:1(b) | 4 | 代码 | `test_1b_push_full` · MP2、MP3、MP4；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
+| Part 1(b) | 9618_s25_42:1(b) | 4 | 代码 | `test_1b_push_full`、`test_1b_no_algorithm_shortcuts` · MP2、MP3、MP4 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 1(c) | 9618_s25_42:1(c) | 4 | 代码 | `test_1c_pop_empty_lifo_reuse` · MP1、MP2、MP3、MP4 | — |
-| Part 1(d) | 9618_s25_42:1(d) | 6 | 代码 | `test_1d_read_official_files`、`test_1d_overflow_and_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1 |
-| Part 1(e) | 9618_s25_42:1(e) | 7 | 代码 | `test_1e_calculate_all_operators` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1 |
-| Part 1(f)(i) | 9618_s25_42:1(f)(i) | 2 | 代码 | `test_1f_screenshots` · MP1、MP2；`test_1f_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 1(d) | 9618_s25_42:1(d) | 6 | 代码 | `test_1d_read_official_files`、`test_1d_overflow_and_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(e) | 9618_s25_42:1(e) | 7 | 代码 | `test_1e_calculate_all_operators` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(f)(i) | 9618_s25_42:1(f)(i) | 2 | 代码 | `test_1f_screenshots`、`test_1f_main_call_chain` · MP1、MP2 | — |
 | Part 1(f)(ii) | 9618_s25_42:1(f)(ii) | 2 | 截图 | `test_1f_screenshots` · MP1、MP2 | — |
 
 自动测分值 24.000000，人工核对分值 3.000000，自动占比 88.89%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
@@ -202,4 +202,6 @@ SecondStack.txt and HashData.txt
 
 ## T38c2 · D46 验证补充
 
-F06：复现空壳主程序旧测试 17 passed；新增三份文件 ReadData(FileName) → Calculate → 返回值输出观测（含新数据 17），输出允许额外数字说明。复核 QP p.5、MS p.17 原页。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。
+F06：复现空壳主程序旧测试 17 passed；新增三份文件 ReadData(FileName) → Calculate → 返回值输出观测（含新数据 17），输出允许额外数字说明。复核 QP p.5、MS p.17 原页。
+
+本次行为覆盖：自动 24.000000 分、人工 3.000000 分（88.89%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

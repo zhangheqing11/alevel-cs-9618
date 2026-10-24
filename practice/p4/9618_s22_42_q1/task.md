@@ -8,7 +8,7 @@
 
 ## Python 接口
 
-全局 `StackData`（10 个整数）和 `StackPointer`（初值 0）；`Push(DataToPush)` 返回布尔值；`Pop()` 返回整数，空时 -1。QP 未命名的输出过程采用 MS 名 `PrintArray()`，输出指针后输出全部十格（单行或多行都可）。截图测试将数字作为连续流读取。状态提示每次一行，前十次同一成功提示，最后一次不同的满栈提示，提示语中不附带数字。主程序连续输出入栈后和两次出栈后的两份状态。允许保留已出栈槽值、清零或清空；这是 MS 明文允许的变体，不把清除槽值作为得分条件。
+全局 `StackData`（10 个整数）和 `StackPointer`（初值 0）；`Push(DataToPush)` 返回布尔值；`Pop()` 返回整数，空时 -1。QP 未命名的输出过程采用 MS 名 `PrintArray()`，输出指针与全部十格（前后顺序、单行或多行均可）。截图测试按所需数值的有序子序列读取，允许说明文字带数字。状态提示措辞和是否正确表示成功/失败由导师人工核对，不要求每次提示相同。主程序连续输出入栈后和两次出栈后的两份状态。允许保留已出栈槽值、清零或清空；这是 MS 明文允许的变体，不把清除槽值作为得分条件。
 
 ## 英文原题（QP 原页转写）
 
@@ -107,16 +107,18 @@ A source file is used to answer Question 3. The file is called CardValues.txt
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s22_42:1(a) | 3 | 代码 | `test_1a_declarations` · MP1、MP2、MP3 | — |
-| Part 1(b) | 9618_s22_42:1(b) | 3 | 代码 | `test_1b_printarray` · MP2、MP3 | MP1 |
-| Part 1(c) | 9618_s22_42:1(c) | 6 | 代码 | `test_1c_push_boundary` · MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
-| Part 1(d)(i) | 9618_s22_42:1(d)(i) | 5 | 代码 | `test_1d_1e_main_call_chain` + 原有输出测试 · MP1、MP2、MP5 | MP3、MP4：消息语义 / 未触发分支按同题 MS 核对 |
-| Part 1(d)(ii) | 9618_s22_42:1(d)(ii) | 1 | 截图 | `test_1d_screenshot` · 整行 | — |
+| Part 1(b) | 9618_s22_42:1(b) | 3 | 代码 | `test_1b_printarray` · MP2、MP3 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(c) | 9618_s22_42:1(c) | 6 | 代码 | `test_1c_push_boundary`、`test_1b_no_algorithm_shortcuts` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(d)(i) | 9618_s22_42:1(d)(i) | 5 | 代码 | `test_1d_1e_main_call_chain` · MP1、MP2、MP5 | MP3、MP4；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 1(d)(ii) | 9618_s22_42:1(d)(ii) | 1 | 截图 | 行为辅助测试（不计自动分） | MPwhole；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 1(e)(i) | 9618_s22_42:1(e)(i) | 5 | 代码 | `test_1e_pop_lifo_empty_reuse` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 1(e)(ii) | 9618_s22_42:1(e)(ii) | 2 | 截图 | `test_1e_screenshot_after_two_pops` · MP1、MP2 | — |
 
-自动测分值 21.000000，人工核对分值 4.000000，自动占比 84.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 20.000000，人工核对分值 5.000000，自动占比 80.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s22_42:1(d)(ii) MPwhole：本次归人工，按同题 MS 核对适当消息或固定主程序未覆盖的分支。
 
 - [ ] 9618_s22_42:1(d)(i) MP3、MP4：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
@@ -132,4 +134,6 @@ A source file is used to answer Question 3. The file is called CardValues.txt
 
 ## T38c2 · D46 验证补充
 
-补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 Push(11..21) → PrintArray → Pop 两次 → PrintArray；输出允许说明数字、指针前后顺序及 MS 三种清槽方案（QP p.3/MS pp.5/8/10/12）。合适消息语义及按返回值分支改列人工补核。 截图的适当消息语义不可自动判别，1(d)(ii) 整行列人工。
+
+本次行为覆盖：自动 20.000000 分、人工 5.000000 分（80.00%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

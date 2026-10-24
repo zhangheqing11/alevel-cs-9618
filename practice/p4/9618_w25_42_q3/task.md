@@ -135,10 +135,10 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_w25_42:3(a) | 3 | 代码 | `test_3a_globals_and_nulls` · MP1、MP2、MP3 | — |
-| Part 3(b) | 9618_w25_42:3(b) | 7 | 代码 | `test_3b_insert_left_right_and_deep`；`test_3b_last_node_and_full` · MP1、MP2、MP3、MP4、MP5、MP6、MP7、MP8、MP9 | — |
-| Part 3(c) | 9618_w25_42:3(c) | 4 | 代码 | `test_3c_file_inputs_call_addnode_in_order`；`test_3c_missing_input_file` · MP2、MP3、MP4、MP5 | MP1 Opening the file to read and closing the file in an appropriate place |
-| Part 3(d) | 9618_w25_42:3(d) | 5 | 代码 | `test_3d_write_all_nodes_and_format`；`test_3d_write_error_handled` · MP1、MP3、MP4、MP5 | MP2 Opening the file (Tree.txt) to write and closing the file in appropriate place |
-| Part 3(e)(i) | 9618_w25_42:3(e)(i) | 1 | 代码 | `test_3e_ii_screenshot_file_content` · MPwhole；`test_3c_3e_main_call_chain` · 实际调用、参数与结果链 | — |
+| Part 3(b) | 9618_w25_42:3(b) | 7 | 代码 | `test_3b_insert_left_right_and_deep`、`test_3b_last_node_and_full` · MP1、MP2、MP3、MP4、MP5、MP6、MP7、MP8、MP9 | — |
+| Part 3(c) | 9618_w25_42:3(c) | 4 | 代码 | `test_3c_file_inputs_call_addnode_in_order`、`test_3c_missing_input_file` · MP2、MP3、MP4、MP5 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(d) | 9618_w25_42:3(d) | 5 | 代码 | `test_3d_write_all_nodes_and_format`、`test_3d_write_error_handled` · MP1、MP3、MP4、MP5 | MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(e)(i) | 9618_w25_42:3(e)(i) | 1 | 代码 | `test_3e_ii_screenshot_file_content`、`test_3c_3e_main_call_chain` · MPwhole | — |
 | Part 3(e)(ii) | 9618_w25_42:3(e)(ii) | 1 | 截图 | `test_3e_ii_screenshot_file_content` · MPwhole | — |
 
 ## 人工核对清单
@@ -161,4 +161,6 @@
 
 ## T38c2 · D46 验证补充
 
-原有 AddNode 包装已观测输入调用；新增 WriteAllToFile 实际调用并核对生成文件。空壳保留模块但直接写出完整正确 Tree.txt，仍被调用测试拒绝。文件三字段/每结点一行是 QP 明定，保留（QP pp.11–12/MS pp.33/37–38）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+原有 AddNode 包装已观测输入调用；新增 WriteAllToFile 实际调用并核对生成文件。空壳保留模块但直接写出完整正确 Tree.txt，仍被调用测试拒绝。文件三字段/每结点一行是 QP 明定，保留（QP pp.11–12/MS pp.33/37–38）。
+
+本次行为覆盖：自动 19.200000 分、人工 1.800000 分（91.43%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

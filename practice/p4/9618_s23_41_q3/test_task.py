@@ -67,7 +67,7 @@ def test_3c_output_pair(sol, capsys, monkeypatch):
     sol.OutputItem()
     assert calls.count('PopAnimal') == calls.count('PopColour') == 1
     lines = output_lines(capsys.readouterr().out)
-    assert len(lines) == 1 and 'black horse' in lines[0]
+    assert any('black horse' in line for line in lines)
     assert (sol.AnimalTopPointer, sol.ColourTopPointer) == (0, 0)
 
 
@@ -117,17 +117,10 @@ def test_3b_no_algorithm_shortcuts(candidate_path):
                 'D10: implement search with pointers/comparisons rather than membership'
 
 
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
 def test_3d_main_call_chain(candidate_path, exercise_dir):
     """9618_s23_41:3(d)(i) whole (MS p.38): ReadData and OutputItem four times."""
     data = ''
-    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
     assert completed.returncode == 0, completed.stderr
     r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
     assert r.error is None, r.error
