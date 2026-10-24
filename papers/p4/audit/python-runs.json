@@ -1,0 +1,1038 @@
+[
+  {
+    "card": "P4-AR-01",
+    "case": 1,
+    "inputs": [
+      11
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 0\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-01",
+    "case": 2,
+    "inputs": [
+      100
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 19\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-01",
+    "case": 3,
+    "inputs": [
+      101
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Not found\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-02",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "Characters.txt",
+        "sha256": "e479919bb358a1d206c9901abfbb53b4b76d600be8635311148bb39f3be9ba07"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Added\nAdded\nAdded\nAdded\nAdded\n78 priority 1\n33 priority 8\n526 priority 9\n12 priority 9\n12 priority 10\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-03",
+    "case": 1,
+    "inputs": [
+      10,
+      9,
+      -1,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_files": [
+      {
+        "name": "HighScoreTable.txt",
+        "sha256": "d93b28d1e74024d672692655e3bc0c9a988a4ef1010aae9f54dd4b24f87635d7"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Invalid. Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\n10 9 8 7 6 5 4 3 2 1 \n10 is returned\n9 is returned\n8 7 6 5 4 3 2 1 \n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-03",
+    "case": 2,
+    "inputs": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "source_files": [
+      {
+        "name": "HighScoreTable.txt",
+        "sha256": "d93b28d1e74024d672692655e3bc0c9a988a4ef1010aae9f54dd4b24f87635d7"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\nEnter an integer that is 0 or more: Inserted\n10 9 8 7 6 5 4 3 2 1 \n10 is returned\n9 is returned\n8 7 6 5 4 3 2 1 \n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-04",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "CardValues.txt",
+        "sha256": "15615efefcf39ca97e8599eeff965f3bd7f49c12d4bb268101588e83f954dd34"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "37 81 70 29 32 81 75 12 62 43 \n24 20 86 13 33 39 89 72 53 96 \n52 24 25 67 27 22 71 12 79 15 \n59 56 5 51 92 11 85 86 2 89 \n96 30 43 59 8 60 56 26 11 10 \n35 51 12 75 87 63 69 86 64 64 \n19 65 43 78 32 47 49 17 11 97 \n94 76 20 29 72 72 13 100 14 48 \n87 72 73 56 93 4 58 95 2 65 \n92 92 36 53 100 43 67 78 86 59 \n12 29 32 37 43 62 70 75 81 81 \n13 20 24 33 39 53 72 86 89 96 \n12 15 22 24 25 27 52 67 71 79 \n2 5 11 51 56 59 85 86 89 92 \n8 10 11 26 30 43 56 59 60 96 \n12 35 51 63 64 64 69 75 86 87 \n11 17 19 32 43 47 49 65 78 97 \n13 14 20 29 48 72 72 76 94 100 \n2 4 56 58 65 72 73 87 93 95 \n36 43 53 59 67 78 86 92 92 100 \n0\n-1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-AR-05",
+    "case": 1,
+    "inputs": [
+      "TheData.txt"
+    ],
+    "source_files": [
+      {
+        "name": "Blue.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Green.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Orange.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Pink.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Red.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "TheData.txt",
+        "sha256": "d8e5431c47d57241d14f05dc1fec736f71fca7557556f293e75a4d4a2f2beb24"
+      },
+      {
+        "name": "Yellow.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter the filename: ",
+    "stderr": "",
+    "files": {
+      "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
+      "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
+      "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
+      "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
+      "Orange.txt": "15\n21\n71\n29\n18\n221\n2\n28\n54\n68\n",
+      "Green.txt": "20\n16\n21\n34\n38\n71\n13\n3\n3\n42\n5\n1\n156\n5\n"
+    }
+  },
+  {
+    "card": "P4-FL-01",
+    "case": 1,
+    "inputs": [
+      "TheData.txt"
+    ],
+    "source_files": [
+      {
+        "name": "Blue.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Green.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Orange.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Pink.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Red.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "TheData.txt",
+        "sha256": "d8e5431c47d57241d14f05dc1fec736f71fca7557556f293e75a4d4a2f2beb24"
+      },
+      {
+        "name": "Yellow.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter the filename: ",
+    "stderr": "",
+    "files": {
+      "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
+      "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
+      "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
+      "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
+      "Orange.txt": "15\n21\n71\n29\n18\n221\n2\n28\n54\n68\n",
+      "Green.txt": "20\n16\n21\n34\n38\n71\n13\n3\n3\n42\n5\n1\n156\n5\n"
+    }
+  },
+  {
+    "card": "P4-FL-02",
+    "case": 1,
+    "inputs": [
+      "keep",
+      400,
+      200,
+      "Blue Conifer",
+      100
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Beech has a maximum height 400 a maximum width 200 and grows 30 cm a year. It loses its leaves each year.\nEvergreen (keep/lose): Maximum height in cm: Maximum width in cm: Blue Conifer has a maximum height 250 a maximum width 50 and grows 40 cm a year. It does not lose its leaves.\nGreen Conifer has a maximum height 300 a maximum width 150 and grows 40 cm a year. It does not lose its leaves.\nEnter the name of the tree to buy: Starting height in cm: Your tree should be full height in approximately 3.75 years\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-FL-03",
+    "case": 1,
+    "inputs": [
+      "TheData.txt"
+    ],
+    "source_files": [
+      {
+        "name": "Blue.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Green.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Orange.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Pink.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "Red.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "TheData.txt",
+        "sha256": "d8e5431c47d57241d14f05dc1fec736f71fca7557556f293e75a4d4a2f2beb24"
+      },
+      {
+        "name": "Yellow.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter the filename: ",
+    "stderr": "",
+    "files": {
+      "Yellow.txt": "30\n4\n82\n8\n21\n234\n34\n67\n",
+      "Blue.txt": "10\n22\n3\n93\n2\n100\n53\n65\n76\n34\n12\n6\n54\n62\n",
+      "Pink.txt": "33\n29\n9\n3\n12\n4\n99\n76\n56\n102\n146\n53\n56\n46\n",
+      "Red.txt": "10\n9\n1\n76\n19\n38\n34\n46\n14\n45\n37\n43\n",
+      "Orange.txt": "15\n21\n71\n29\n18\n221\n2\n28\n54\n68\n",
+      "Green.txt": "20\n16\n21\n34\n38\n71\n13\n3\n3\n42\n5\n1\n156\n5\n"
+    }
+  },
+  {
+    "card": "P4-LT-01",
+    "case": 1,
+    "inputs": [
+      5,
+      1,
+      2,
+      3,
+      8
+    ],
+    "source_files": [
+      {
+        "name": "Data.txt",
+        "sha256": "11de7ca3386dbb247af40dae432a048f3082b640b6494f5c0ddaf0b860b5e659"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 8\n3\n2\n1\n5\nAfter\n8\n3\n2\n1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-LT-01",
+    "case": 2,
+    "inputs": [
+      5,
+      6,
+      8,
+      9,
+      5
+    ],
+    "source_files": [
+      {
+        "name": "Data.txt",
+        "sha256": "11de7ca3386dbb247af40dae432a048f3082b640b6494f5c0ddaf0b860b5e659"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 5\n9\n8\n6\n5\nAfter\n9\n8\n6\n5\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-LT-01",
+    "case": 3,
+    "inputs": [
+      10,
+      7,
+      8,
+      5,
+      6
+    ],
+    "source_files": [
+      {
+        "name": "Data.txt",
+        "sha256": "11de7ca3386dbb247af40dae432a048f3082b640b6494f5c0ddaf0b860b5e659"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer Enter a positive integer 6\n5\n8\n7\n10\nAfter\n6\n8\n7\n10\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-LT-03",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "files": {
+      "Tree.txt": "1,40,2\n6,4,3\n8,82,17\n9,8,4\n10,21,5\n31,23,7\n22,1,15\n16,34,25\n13,67,14\n-1,6,-1\n-1,9,11\n-1,10,12\n49,13,23\n35,52,19\n-1,68,28\n-1,2,-1\n48,28,26\n18,89,20\n-1,85,-1\n21,66,-1\n-1,91,33\n-1,53,30\n-1,0,-1\n-1,15,24\n32,19,-1\n27,37,37\n38,31,-1\n-1,35,43\n46,74,29\n-1,76,45\n-1,54,34\n-1,22,-1\n-1,16,47\n-1,98,-1\n44,61,-1\n36,48,41\n40,46,-1\n-1,38,39\n-1,30,-1\n-1,39,-1\n-1,41,-1\n-1,49,42\n-1,50,-1\n-1,36,-1\n-1,58,-1\n-1,80,-1\n-1,71,-1\n-1,18,-1\n-1,25,-1\n-1,12,-1\n"
+    }
+  },
+  {
+    "card": "P4-LT-04",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "IntegerData.txt",
+        "sha256": "109ddf3b50460af6ef63a32c7db2403b017e5dd918fad76495c915451d12f86d"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Found at 1\n10\n9\n3\n15\n58\n20\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-LT-05",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "HashData.txt",
+        "sha256": "4c25e6d9c4b975d826d4d4aec5acba8c64535d54a654a8209c31a61c57d87c2f"
+      },
+      {
+        "name": "SecondStack.txt",
+        "sha256": "c8115e35b133ccea75bcf10e2f3184970c3619982ec25459f68a129827f59e16"
+      },
+      {
+        "name": "StackData.txt",
+        "sha256": "ea1c31f3a9ec7c5489c6e13b5749d869d295a92943bfdc42cf69376a04ba6c3b"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "915\n136\n415\n55\n349\n775\n846\n469\n246\n752\n8\n889\n695\n292\n417\n181\n810\n972\n781\n46\n120\n95\n378\n433\n994\n946\n586\n365\n615\n580\n128\n944\n2\n689\n962\n704\n948\n435\n195\n981\n320\n658\n831\n408\n947\n830\n88\n362\n629\n986\n31\n823\n527\n141\n905\n965\n697\n15\n24\n977\n88\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-MP-01",
+    "case": 1,
+    "inputs": [
+      "ADF",
+      10,
+      "OOP",
+      1,
+      "BXW",
+      5,
+      "XXZ",
+      22,
+      "HQR",
+      6,
+      "LLP",
+      3,
+      "LLP",
+      3
+    ],
+    "source_files": [
+      {
+        "name": "Employees.txt",
+        "sha256": "cda0503674054a10e52636cece18af00875678b38667e03e345ecf006dc1b983"
+      },
+      {
+        "name": "HoursWeek1.txt",
+        "sha256": "cd81e133cdf64309f21483eb30df32d8360de5b8784a6be74747011e7ac5681c"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Full\nADF 10\nEnter ID Enter quantity Stored\nLLP 3\nOOP 1\nBXW 5\nXXZ 22\nHQR 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-MP-02",
+    "case": 1,
+    "inputs": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "source_files": [
+      {
+        "name": "CardValues.txt",
+        "sha256": "15615efefcf39ca97e8599eeff965f3bd7f49c12d4bb268101588e83f954dd34"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stack full\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n8\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-MP-03",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "QueueData.txt",
+        "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "50 40 30 20 10\n50 40 20 10\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-01",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-02",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-03",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-04",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-05",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-06",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "IntegerData.txt",
+        "sha256": "109ddf3b50460af6ef63a32c7db2403b017e5dd918fad76495c915451d12f86d"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Player 2 wins\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-OP-07",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Current position = 60\nCurrent speed = 40\n\nCurrent position = 120\nCurrent speed = 80\nCurrent vertical position = 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-PR-01",
+    "case": 1,
+    "inputs": [
+      30,
+      5,
+      3,
+      9,
+      4,
+      1,
+      2,
+      2
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Invalid. Enter 1 to 20: Enter number: Enter number: Enter number: Enter number: Enter number: 3 9 4 1 2 \n1 2 3 4 9 \nEnter a number to find: 1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-PR-01",
+    "case": 2,
+    "inputs": [
+      5,
+      1,
+      6,
+      2,
+      8,
+      10,
+      2
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: 1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-PR-01",
+    "case": 3,
+    "inputs": [
+      5,
+      1,
+      6,
+      2,
+      8,
+      10,
+      7
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: -1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-PR-02",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "BinaryData.txt",
+        "sha256": "b01a6bdb86b953c8acb8f3c84ed1d85d7250010a9456ca3ae9efea24cd509ded"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "2\nx=0\ny=1\nx=x+y\ny++\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-PR-03",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "StackData.txt",
+        "sha256": "eb72f3638b6437f63f4dda83943f4882f6c12f96a8f59cfde9909a1f199d09e1"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "18\n93\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-RC-01",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "BinaryData.txt",
+        "sha256": "b01a6bdb86b953c8acb8f3c84ed1d85d7250010a9456ca3ae9efea24cd509ded"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "2\nx=0\ny=1\nx=x+y\ny++\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-RC-02",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "QueueData.txt",
+        "sha256": "9b4b28747275120bd9c4de28aeab68e1363a1eee3312cb2c99023b94390ce972"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "3\n4\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SQ-01",
+    "case": 1,
+    "inputs": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "source_files": [
+      {
+        "name": "CardValues.txt",
+        "sha256": "15615efefcf39ca97e8599eeff965f3bd7f49c12d4bb268101588e83f954dd34"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stored\nEnter a number Stack full\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n8\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SQ-02",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "QueueData.txt",
+        "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Total: 3059\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SQ-03",
+    "case": 1,
+    "inputs": [
+      "ADF",
+      10,
+      "OOP",
+      1,
+      "BXW",
+      5,
+      "XXZ",
+      22,
+      "HQR",
+      6,
+      "LLP",
+      3,
+      "LLP",
+      3
+    ],
+    "source_files": [
+      {
+        "name": "Employees.txt",
+        "sha256": "cda0503674054a10e52636cece18af00875678b38667e03e345ecf006dc1b983"
+      },
+      {
+        "name": "HoursWeek1.txt",
+        "sha256": "cd81e133cdf64309f21483eb30df32d8360de5b8784a6be74747011e7ac5681c"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "Enter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Stored\nEnter ID Enter quantity Full\nADF 10\nEnter ID Enter quantity Stored\nLLP 3\nOOP 1\nBXW 5\nXXZ 22\nHQR 6\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SQ-04",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "pink hamster\nblue elephant\nwhite eagle\nyellow rabbit\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-01",
+    "case": 1,
+    "inputs": [
+      12
+    ],
+    "source_files": [
+      {
+        "name": "AnimalData.txt",
+        "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f"
+      },
+      {
+        "name": "ColourData.txt",
+        "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893"
+      },
+      {
+        "name": "Data.txt",
+        "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "10 4 5 13 25 31 4 66 12 5 0 11 15 20 21 12 33 49 12 12 7 7 4 22 0 \nEnter a whole number (0 to 100): The number 12 is found 4 times.\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-02",
+    "case": 1,
+    "inputs": [
+      30,
+      5,
+      3,
+      9,
+      4,
+      1,
+      2,
+      2
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Invalid. Enter 1 to 20: Enter number: Enter number: Enter number: Enter number: Enter number: 3 9 4 1 2 \n1 2 3 4 9 \nEnter a number to find: 1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-02",
+    "case": 2,
+    "inputs": [
+      5,
+      1,
+      6,
+      2,
+      8,
+      10,
+      2
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: 1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-02",
+    "case": 3,
+    "inputs": [
+      5,
+      1,
+      6,
+      2,
+      8,
+      10,
+      7
+    ],
+    "source_files": [
+      {
+        "name": "Trees.txt",
+        "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "How many numbers (1 to 20)? Enter number: Enter number: Enter number: Enter number: Enter number: 1 6 2 8 10 \n1 2 6 8 10 \nEnter a number to find: -1\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-03",
+    "case": 1,
+    "inputs": [
+      11
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 0\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-03",
+    "case": 2,
+    "inputs": [
+      100
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Found at position 19\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-03",
+    "case": 3,
+    "inputs": [
+      101
+    ],
+    "source_files": [
+      {
+        "name": "TreeData.txt",
+        "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "36 80 69 28 31 74 11 61 42 23 19 85 100 12 32 38 88 71 52 95 \nSorted\n11 12 19 23 28 31 32 36 38 42 52 61 69 71 74 80 85 88 95 100 \nEnter the number to find: Not found\n",
+    "stderr": "",
+    "files": {}
+  },
+  {
+    "card": "P4-SR-04",
+    "case": 1,
+    "inputs": [],
+    "source_files": [
+      {
+        "name": "QueueData.txt",
+        "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5"
+      }
+    ],
+    "exit_code": 0,
+    "stdout": "0 3 4 56 67 44 43 32 31 345 45 6 54 1 \n0 1 3 4 6 31 32 43 44 45 54 56 67 345 \n0 found at index: 0\n345 found at index: 13\n67 found at index: 12\n2 not found\n",
+    "stderr": "",
+    "files": {}
+  }
+]
