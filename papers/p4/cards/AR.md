@@ -128,28 +128,69 @@ if __name__ == "__main__":
 
 **在考什么**　程序在一个**局部于主程序**的一维数组里存 20 个互不相同的随机整数，范围 0–100（含两端）。Write program code to declare the array local to the main program and store 20 unique random numbers … in the array. 3 分，MS 列 3 点，1 mark each。讲解时对照原卷 QP p.6（2(a)–2(c) 在这一页），MS p.18–19（Python 范例在 p.19）。
 
-**完整作答**
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
+# Question2_N25: 2(a)-(f)
 import random
 
-# ---- 2(a) main program ----
+
+def PrintArray(DataArray):
+    for Index in range(len(DataArray)):
+        print(DataArray[Index], end=" ")
+    print()
+
+
+def BubbleSort(DataArray):
+    Swap = True
+    while Swap:
+        Swap = False
+        for Index in range(len(DataArray) - 1):
+            if DataArray[Index] > DataArray[Index + 1]:
+                Temp = DataArray[Index]
+                DataArray[Index] = DataArray[Index + 1]
+                DataArray[Index + 1] = Temp
+                Swap = True
+    return DataArray
+
+
+def RecursiveBinarySearch(DataArray, Lower, Upper, DataToFind):
+    if Lower > Upper:
+        return -1
+    Middle = (Lower + Upper) // 2
+    if DataArray[Middle] == DataToFind:
+        return Middle
+    elif DataArray[Middle] > DataToFind:
+        return RecursiveBinarySearch(DataArray, Lower, Middle - 1, DataToFind)
+    else:
+        return RecursiveBinarySearch(DataArray, Middle + 1, Upper, DataToFind)
+
+
 if __name__ == "__main__":
-    TheArray = [0] * 20                      # MP1 INTEGER, 20 elements, local to main
-    Count = 0                                # how many numbers are stored so far
+    TheArray = [0] * 20  # INTEGER, 20 elements, local to main
+    Count = 0
     while Count < 20:
-        Generated = random.randint(0, 100)   # MP2 0 to 100 inclusive
+        Generated = random.randint(0, 100)
         Unique = True
-        for Index in range(Count):           # MP3 search the numbers already stored
+        for Index in range(Count):
             if TheArray[Index] == Generated:
                 Unique = False
-        if Unique:                           # only a new number is stored
+        if Unique:
             TheArray[Count] = Generated
             Count = Count + 1
-    print(TheArray)
+    PrintArray(TheArray)
+    SortedArray = BubbleSort(TheArray)
+    print("Sorted")
+    PrintArray(SortedArray)
+    DataToFind = int(input("Enter the number to find: "))
+    Location = RecursiveBinarySearch(SortedArray, 0, len(SortedArray) - 1, DataToFind)
+    if Location == -1:
+        print("Not found")
+    else:
+        print("Found at position", Location)
 ```
 
-运行：打印 20 个数；用 200 个不同随机种子各跑一次，每次都是 20 个互不相同、都在 0–100 之间的整数。
+**运行核对**　整题 2(a)–(f) 先打印 20 个不同的随机整数，再输出 Sorted 和同批数升序，并接受一个查找值。可复现验证中最小值、最大值、缺失值分别得到位置 0、19、Not found（见 SR-03）。整题 QP p.6–8 / MS p.18–26。
 
 **与 MS 逐点对齐**
 
@@ -254,36 +295,55 @@ def AddJob(JobNumber, Priority):
 
 **在考什么**　作业按优先级存放。题目给出伪代码声明 `DECLARE Jobs : ARRAY[0:99, 0:1] OF INTEGER`：`Jobs[0, 0]` 存第一个作业的编号，`Jobs[0, 1]` 存它的优先级；全局变量 `NumberOfJobs` 是当前作业数。1(a) 声明，1(b) `Initialise()` 全部置 –1、计数置 0。1(c) 写过程 `AddJob()`：接收作业号和优先级两个参数，存进下一个空元素；成功输出 `Added`，失败输出 `Not added`。5 分，MS 列 6 点（Max 5）。讲解时对照原卷 QP p.2（情境、伪代码声明、1(a)、1(b)）与 p.3（1(c)、1(d) 测试数据表），MS p.5（1(c)，Python 范例在同页）。
 
-**完整作答**（连同 1(a)、1(b) 与 1(d) 的主程序）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 1(a) ----
-Jobs = [[-1, -1] for x in range(100)]   # global INTEGER 2D array, 100 x 2 elements
-NumberOfJobs = 0                         # global INTEGER
+# Question1_N22: 1(a)-(g)
+Jobs = [[0] * 2 for Row in range(100)]  # global INTEGER, 100 x 2
+NumberOfJobs = 0  # global INTEGER
 
 
-# ---- 1(b) ----
 def Initialise():
     global NumberOfJobs
-    for x in range(100):
-        for y in range(2):
-            Jobs[x][y] = -1
+    for Row in range(100):
+        for Col in range(2):
+            Jobs[Row][Col] = -1
     NumberOfJobs = 0
 
 
-# ---- 1(c) ----
-def AddJob(JobNumber, Priority):            # MP1 two parameters
+def AddJob(JobNumber, Priority):
     global NumberOfJobs
-    if NumberOfJobs == 100:                 # MP2 array is full
-        print("Not added")                  # MP3
+    if NumberOfJobs == 100:
+        print("Not added")
     else:
-        Jobs[NumberOfJobs][0] = JobNumber   # MP4 next free row only
+        Jobs[NumberOfJobs][0] = JobNumber
         Jobs[NumberOfJobs][1] = Priority
-        NumberOfJobs = NumberOfJobs + 1     # MP5
-        print("Added")                      # MP6
+        NumberOfJobs = NumberOfJobs + 1
+        print("Added")
 
 
-# ---- 1(d) main program ----
+def InsertionSort():
+    for I in range(1, NumberOfJobs):
+        CurrentJob = Jobs[I][0]
+        CurrentPriority = Jobs[I][1]
+        J = I - 1
+        Moving = True
+        while J >= 0 and Moving:
+            if Jobs[J][1] > CurrentPriority:
+                Jobs[J + 1][0] = Jobs[J][0]
+                Jobs[J + 1][1] = Jobs[J][1]
+                J = J - 1
+            else:
+                Moving = False
+        Jobs[J + 1][0] = CurrentJob
+        Jobs[J + 1][1] = CurrentPriority
+
+
+def PrintArray():
+    for X in range(NumberOfJobs):
+        print(Jobs[X][0], "priority", Jobs[X][1])
+
+
 if __name__ == "__main__":
     Initialise()
     AddJob(12, 10)
@@ -291,9 +351,11 @@ if __name__ == "__main__":
     AddJob(33, 8)
     AddJob(12, 9)
     AddJob(78, 1)
+    InsertionSort()
+    PrintArray()
 ```
 
-运行：1(d) 的 5 个作业各输出一行 `Added`。另测满的情况：连续加 101 个作业，前 100 次 `Added`、第 101 次 `Not added`，`Jobs[99]` 是第 100 个作业。
+**运行核对**　整题 1(a)–(g) 按 QP 的 5 组数据运行：5 次 Added，随后 78 priority 1、33 priority 8、526 priority 9、12 priority 9、12 priority 10，与 MS p.10 一致。满数组另测第 101 次不写入。整题 QP p.2–4 / MS p.3–10。
 
 **与 MS 逐点对齐**（MS 印 6 点，Max 5；与语料编号一致）
 
@@ -396,40 +458,82 @@ ThisSale.Quantity = 2
 
 **在考什么**　用记录结构设计线性队列。记录 `Queue` 的字段：`QueueArray`（最多 100 个整数的一维数组）、`Headpointer`（第一个数据的下标）、`Tailpointer`（下一个空位的下标）。Write program code to declare the record structure Queue and its fields；语言不支持记录时可以用类；用 Python 时用注释声明类型。3 分，MS 列 3 点（“1 mark each to max”）。2(b) 接着写主程序：新建记录 `TheQueue`，头指针 –1、尾指针 0、数组每个元素 –1（3 分）。讲解时对照原卷 QP p.8（2(a)、2(b) 都在这一页），MS p.18（2(a)）、p.19（2(b)）。
 
-**完整作答**（2(a) 与 2(b)）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 2(a) ----
-class Queue:                                 # MP1 record declared as a class
+# Question2_N24: 2(a)-(g)
+class Queue:
     def __init__(self):
-        self.QueueArray = [0] * 100          # MP2 INTEGER, 100 elements
-        self.Headpointer = 0                 # MP3 INTEGER
-        self.Tailpointer = 0                 # MP3 INTEGER
+        self.QueueArray = [-1] * 100  # INTEGER, 100 elements
+        self.HeadPointer = -1  # INTEGER
+        self.TailPointer = 0  # INTEGER, next free position
 
 
-# ---- 2(b) main program ----
+def Enqueue(AQueue, TheData):
+    if AQueue.HeadPointer == -1:
+        AQueue.QueueArray[AQueue.TailPointer] = TheData
+        AQueue.HeadPointer = 0
+        AQueue.TailPointer = AQueue.TailPointer + 1
+        return 1
+    else:
+        if AQueue.TailPointer > 99:
+            return -1
+        else:
+            AQueue.QueueArray[AQueue.TailPointer] = TheData
+            AQueue.TailPointer = AQueue.TailPointer + 1
+            return 1
+
+
+def ReturnAllData(TheQueue):
+    Temp = ""
+    if TheQueue.HeadPointer != -1:
+        for X in range(TheQueue.HeadPointer, TheQueue.TailPointer):
+            Temp = Temp + str(TheQueue.QueueArray[X]) + " "
+    return Temp
+
+
+def Dequeue(TheQueue):
+    if TheQueue.HeadPointer == -1 or TheQueue.HeadPointer == TheQueue.TailPointer:
+        return -1
+    Temp = TheQueue.QueueArray[TheQueue.HeadPointer]
+    TheQueue.HeadPointer = TheQueue.HeadPointer + 1
+    return Temp
+
+
 if __name__ == "__main__":
-    TheQueue = Queue()                       # new Queue record
-    TheQueue.Headpointer = -1
-    TheQueue.Tailpointer = 0
-    for x in range(100):
-        TheQueue.QueueArray[x] = -1
-    print(TheQueue.Headpointer, TheQueue.Tailpointer, TheQueue.QueueArray[0], TheQueue.QueueArray[99])
+    TheQueue = Queue()
+    for X in range(10):
+        DataInput = int(input("Enter an integer that is 0 or more: "))
+        while DataInput < 0:
+            DataInput = int(input("Invalid. Enter an integer that is 0 or more: "))
+        ReturnValue = Enqueue(TheQueue, DataInput)
+        if ReturnValue == -1:
+            print("Queue full")
+        else:
+            print("Inserted")
+    print(ReturnAllData(TheQueue))
+    for X in range(2):
+        ReturnValue = Dequeue(TheQueue)
+        if ReturnValue == -1:
+            print("Queue empty")
+        else:
+            print(ReturnValue, "is returned")
+    print(ReturnAllData(TheQueue))
 ```
 
-运行输出 `-1 0 -1 -1`（最后一行只为检查，不属于题目要求）。
+**运行核对**　整题 2(a)–(g) 输入 10、9、−1、8、7、6、5、4、3、2、1，−1 被拒，10 个有效数各入队一次；输出 10 到 1，随后出队 10、9，剩下 8 到 1。另一轮按 2(g)(ii) 不含 −1 的数据运行，同样符合 MS p.26、30。整题 QP p.8–11 / MS p.18–30。
 
 **与 MS 逐点对齐**
 
 | MP | MS 要求（原文） | 作答中对应 | 技能标签 |
 |:--|:--|:--|:--|
 | 1 | Record structure or class with constructor Queue (and end where appropriate) … | `class Queue:` 带 `__init__` | `record-type`、`class-definition` |
-| 2 | … containing a 1D array of (100) integers QueueArray | `self.QueueArray = [0] * 100` | `record-type`、`declare-array` |
+| 2 | … containing a 1D array of (100) integers QueueArray | `self.QueueArray = [-1] * 100` | `record-type`、`declare-array` |
 | 3 | … containing HeadPointer and TailPointer as integers | 两个 `self.` 属性，注释 INTEGER | `record-type`、`data-types` |
 
 字段名：QP p.8 印的是 `Headpointer`、`Tailpointer`（小写 p），MS 写 `HeadPointer`、`TailPointer`。本作答照 QP 抄。2(b) 的三个得分点是“新建记录”“头指针 –1、尾指针 0”“100 个元素都置 –1”，主程序三段各对一点。
 
-**证据格怎么交**　2(a) 格贴整个 `class Queue`；2(b) 格贴主程序。两格都是代码，没有截图。
+**证据格怎么交**　2(a) 格贴整个 `class Queue`；2(b) 格贴 TheQueue = Queue()，其构造方法已设置全部初值。后续 Enqueue、ReturnAllData、Dequeue 分别进 2(c)、2(d)、2(f)；2(e)(ii) 与 2(g)(ii) 按各自数据截图，显示拒绝 −1、全部有效输入及出队结果。
 
 **直观**　记录就是一张表格模板：一栏放 100 格的数组，两栏各放一个数字。`Queue()` 是照模板印出一张空表，主程序再往三栏里填初值。
 
@@ -550,41 +654,57 @@ FOR X ← 0 TO ArrayLength - 1
 NEXT X
 ```
 
-**完整作答**（2(a)、2(b)(i)、2(b)(ii) 合在一个程序里）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
+# Question2_J22: 2(a)-(c)
 import random
 
 
-# ---- 2(b)(ii) ----
-def PrintArray(ArrayData):                       # MP1 procedure
-    for x in range(10):
-        for y in range(10):
-            print(ArrayData[x][y], end=" ")      # MP2 one row on one line
-        print()                                  # new line after each row
+def PrintArray(ArrayData):
+    for X in range(10):
+        for Y in range(10):
+            print(ArrayData[X][Y], end=" ")
+        print()
 
 
-# ---- main program: 2(a), 2(b)(i), calls for 2(b)(ii) ----
+def BinarySearch(SearchArray, Lower, Upper, SearchValue):
+    if Upper >= Lower:
+        Mid = (Lower + Upper - 1) // 2  # formula printed in the question
+        if Mid < Lower:
+            Mid = Lower  # prevent a negative/out-of-interval index for a singleton
+        if SearchArray[0][Mid] == SearchValue:
+            return Mid
+        else:
+            if SearchArray[0][Mid] > SearchValue:
+                return BinarySearch(SearchArray, Lower, Mid - 1, SearchValue)
+            else:
+                return BinarySearch(SearchArray, Mid + 1, Upper, SearchValue)
+    return -1
+
+
 if __name__ == "__main__":
-    ArrayData = [[0] * 10 for i in range(10)]    # INTEGER, 10 x 10, local to main
-    for x in range(10):
-        for y in range(10):
-            ArrayData[x][y] = random.randint(1, 100)
-    print("Before")
-    PrintArray(ArrayData)                        # MP3 before ...
+    ArrayData = [[0] * 10 for X in range(10)]  # INTEGER, 10 x 10, local to main
+    for X in range(10):
+        for Y in range(10):
+            ArrayData[X][Y] = random.randint(1, 100)
+    PrintArray(ArrayData)
     ArrayLength = 10
-    for X in range(0, ArrayLength):
-        for Y in range(0, ArrayLength - 1):
-            for Z in range(0, ArrayLength - Y - 1):
+    for X in range(ArrayLength):
+        for Y in range(ArrayLength - 1):
+            for Z in range(ArrayLength - Y - 1):
                 if ArrayData[X][Z] > ArrayData[X][Z + 1]:
                     TempValue = ArrayData[X][Z]
                     ArrayData[X][Z] = ArrayData[X][Z + 1]
                     ArrayData[X][Z + 1] = TempValue
-    print("After")
-    PrintArray(ArrayData)                        # MP3 ... and after the sort
+    PrintArray(ArrayData)
+    print(BinarySearch(ArrayData, 0, 9, ArrayData[0][0]))
+    print(BinarySearch(ArrayData, 0, 9, 101))
 ```
 
-运行：先输出 `Before` 和 10 行、每行 10 个数的网格；再输出 `After` 和同样大小的网格，每一行都已升序。
+**运行核对**　整题 2(a)–(c) 先输出 10×10 随机网格，再输出每行升序的同一网格；最后查找首行已有数返回有效下标，查 101 返回 −1，与 MS p.21、24 的截图条件一致（随机网格不要求与示例数值相同）。整题 QP p.4–6 / MS p.13–24。
+
+补全 2(c) 时必须注意：QP p.6 / MS p.22–23 印的 Mid = (Lower + Upper − 1) DIV 2 在 Lower=Upper=0 时得 −1，可能造成错误访问或递归不前进。照 MS 填空得分；自己写时按模板处理边界。本完整程序保留原公式并在 Mid < Lower 时把 Mid 设为 Lower，确保中点在有效区间；不是静默照抄有缺陷的算法（D44）。
 
 **与 MS 逐点对齐**
 
@@ -683,37 +803,45 @@ def Percentage(Found, Total):
 
 **在考什么**　文本文件 TheData.txt 有 72 行，每行“整数,颜色”（如 `10,red`），共 6 种颜色。2(a) 的 `ReadData()` 把文件每行读进一个一维数组并返回（FL-01 的代表题）。2(b) 写过程 `SplitData()`：参数是字符串数组 `DataArray`；声明 6 个一维数组，每种颜色一个；把每个字符串拆成整数和颜色，整数存进对应颜色的数组。6 分，MS 列 6 点，1 mark each。讲解时对照原卷 QP p.4（2(a)、2(b) 在这一页；2(c)–(e) 在 p.5），MS p.21–22（Python 范例在 p.22）。
 
-**完整作答**（2(b)，连同 2(a) 与 2(e)(i) 的主程序，用官方 TheData.txt 运行）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 2(a) (see FL-01) ----
+# Question2_J25: 2(a)-(e)
 def ReadData():
-    DataList = []                              # STRING, one element per line
+    DataList = []  # STRING, unknown number of lines
     FileName = input("Enter the filename: ")
     try:
-        File = open(FileName, "r")
-        for Line in File:
-            DataList.append(Line.strip())      # remove the line break
-        File.close()
-    except IOError:
+        with open(FileName, "r") as File:
+            for Line in File:
+                DataList.append(Line.rstrip("\n"))
+    except OSError:
         print("Cannot open or read the file")
     return DataList
 
 
-# ---- 2(b) ----
-def SplitData(DataArray):                      # MP1 1D array of strings
-    Red = []                                   # MP2 six arrays: INTEGER each,
-    Green = []                                 #     size unknown, they grow
+def StoreData(DataToStore, FileName):
+    try:
+        with open(FileName, "a") as File:  # MP1 append and automatic close
+            for Item in DataToStore:  # MP2
+                File.write(str(Item))  # MP3
+                File.write("\n")  # MP4
+    except OSError:
+        print("Cannot create or write to file")  # MP5
+
+
+def SplitData(DataArray):
+    Red = []  # INTEGER arrays, unknown size, one per colour
+    Green = []
     Blue = []
     Orange = []
     Yellow = []
     Pink = []
-    for Index in range(len(DataArray)):        # MP3 every string in DataArray
-        Parts = DataArray[Index].split(",")    # MP4 "10,red" -> ["10", "red"]
+    for Index in range(len(DataArray)):
+        Parts = DataArray[Index].split(",")
         Number = int(Parts[0])
         Colour = Parts[1]
-        if Colour == "red":                    # MP5 compare the colour ...
-            Red.append(Number)                 # MP6 ... store the integer
+        if Colour == "red":
+            Red.append(Number)
         elif Colour == "green":
             Green.append(Number)
         elif Colour == "blue":
@@ -724,17 +852,20 @@ def SplitData(DataArray):                      # MP1 1D array of strings
             Yellow.append(Number)
         elif Colour == "pink":
             Pink.append(Number)
-    print("red:", Red)
-    print("pink:", Pink)
+    StoreData(Red, "Red.txt")
+    StoreData(Green, "Green.txt")
+    StoreData(Blue, "Blue.txt")
+    StoreData(Orange, "Orange.txt")
+    StoreData(Yellow, "Yellow.txt")
+    StoreData(Pink, "Pink.txt")
 
 
-# ---- 2(e)(i) main program ----
 if __name__ == "__main__":
     DataFromFile = ReadData()
     SplitData(DataFromFile)
 ```
 
-运行（在官方源文件目录里，输入 `TheData.txt`）：读到 72 行；输出 `red: [10, 9, 1, 76, 19, 38, 34, 46, 14, 45, 37, 43]` 和 pink 的 14 个数。输入不存在的文件名时输出 `Cannot open or read the file`，程序不崩溃。最后两行 `print` 只为检查，不是 2(b) 的要求；2(d) 会把它们换成 6 次 `StoreData()` 调用（见 FL-03）。
+**运行核对**　整题 2(a)–(e) 输入 TheData.txt，读取官方 72 行，按颜色分类并追加到六个文件。Red.txt 的 12 行为 10、9、1、76、19、38、34、46、14、45、37、43；不再用控制台的 red/pink 列表代替文件证据。缺文件与追加路径验证见 FL-01、FL-03。整题 QP p.4–5 / MS p.18–29。
 
 **与 MS 逐点对齐**
 

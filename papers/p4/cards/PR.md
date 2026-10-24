@@ -139,34 +139,62 @@ if __name__ == "__main__":
 
 **在考什么**　程序先读入一批整数，再排序、查找。1(a) 声明全局数组 `DataStored`（最多 20 个整数）和全局变量 `NumberItems`。1(b) 写过程 `Initialise()`：提示用户输入要输入几个数、读入并校验在 1 到 20 之间（含两端）、再提示输入每个数并存进 `DataStored`。5 分，MS 列 5 点，1 mark each。讲解时对照原卷 QP p.2（1(a)、1(b) 都在这一页；1(c) 主程序与测试数据在 p.3），MS p.5–6（Python 范例在 p.6）。
 
-**完整作答**（连同 1(a) 的声明和 1(c)(i) 的主程序，整段可以直接运行）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 1(a) ----
-DataStored = [0] * 20   # global array: INTEGER, 20 elements
-NumberItems = 0         # global INTEGER: how many items are stored
+# Question1_J24: 1(a)-(e)
+DataStored = [0] * 20  # global INTEGER array, 20 elements
+NumberItems = 0  # global INTEGER
 
 
-# ---- 1(b) ----
-def Initialise():                                                       # MP1
+def Initialise():
     global NumberItems
-    Quantity = int(input("How many numbers will you enter (1 to 20)? "))  # MP2
-    while Quantity < 1 or Quantity > 20:                                # MP3
-        Quantity = int(input("Must be between 1 and 20. Enter again: "))
-    for Count in range(Quantity):                                       # MP4
-        DataStored[NumberItems] = int(input("Enter number: "))         # MP5
+    Quantity = int(input("How many numbers (1 to 20)? "))
+    while Quantity < 1 or Quantity > 20:
+        Quantity = int(input("Invalid. Enter 1 to 20: "))
+    for Count in range(Quantity):
+        DataStored[NumberItems] = int(input("Enter number: "))
         NumberItems = NumberItems + 1
 
 
-# ---- 1(c)(i) main program ----
+def BubbleSort():
+    for Pass in range(NumberItems - 1):
+        for Index in range(NumberItems - Pass - 1):
+            if DataStored[Index] > DataStored[Index + 1]:
+                Temp = DataStored[Index]
+                DataStored[Index] = DataStored[Index + 1]
+                DataStored[Index + 1] = Temp
+
+
+def BinarySearch(DataToFind):
+    First = 0
+    Last = NumberItems - 1
+    while First <= Last:
+        MidValue = (First + Last) // 2
+        if DataStored[MidValue] == DataToFind:
+            return MidValue
+        elif DataToFind < DataStored[MidValue]:
+            Last = MidValue - 1
+        else:
+            First = MidValue + 1
+    return -1
+
+
 if __name__ == "__main__":
     NumberItems = 0
     Initialise()
     for X in range(NumberItems):
-        print(DataStored[X])
+        print(DataStored[X], end=" ")
+    print()
+    BubbleSort()
+    for X in range(NumberItems):
+        print(DataStored[X], end=" ")
+    print()
+    Search = int(input("Enter a number to find: "))
+    print(BinarySearch(Search))
 ```
 
-运行（按 1(c)(ii) 的测试数据 30、5、3、9、4、1、2 依次输入）：30 被拒绝、5 被接受，随后读入 5 个数，最后逐行输出 `3`、`9`、`4`、`1`、`2`。
+**运行核对**　最终程序已补齐 1(a)–(e)：初次输入 30、5、3、9、4、1、2 时，30 被拒、读入 5 项，先输出 3 9 4 1 2，再升序输出；最终版还会询问查找值。1(c)(ii) 的早期截图应在加入排序 / 查找前保留；最终两组指定查找测试见 SR-02。整题 QP p.2–5 / MS p.4–13。
 
 **与 MS 逐点对齐**（MS 印的点与语料 `markpoints[].n` 一致）
 
@@ -279,45 +307,55 @@ def CompareStrings(First, Second):         # one character at a time
 
 **在考什么**　程序里有一个字符串 `"x=0;y=1;x=x+y;y++;"`，由 4 条语句组成，每条以分号结尾。函数 `SplitData()` 接收一个字符串参数，把它拆成 4 行代码：每行存进数组的一个新元素，**不带分号**，最后返回这个字符串数组。不许用内置函数拆分。6 分，MS 列 6 点，1 mark each。讲解时对照原卷 QP p.13（3(b)(i)–(iv) 都在这一页），MS p.35–37（Python 范例在 p.37）。
 
-**完整作答**（连同 3(b)(i) 与 3(b)(iii) 的主程序）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 3(b)(ii) ----
-def SplitData(DataString):                     # MP1 one string parameter
-    SplitDataArray = [""] * 4                  # STRING, 4 elements
-    LastElement = 0                            # next free index in SplitDataArray
-    TempString = ""
-    for Count in range(len(DataString)):       # MP2 through each character
-        Character = DataString[Count]
-        if Character == ";":                   # MP3 compare with ';'
-            SplitDataArray[LastElement] = TempString   # MP5 store when ';' found
-            LastElement = LastElement + 1
-            TempString = ""
+# Question3_N25: 3(a)-(b)
+def RecursiveCount(ArrayCopy, NumberElements, DataToFind):
+    if NumberElements == 0:
+        return 0
+    if ArrayCopy[0] == DataToFind:
+        return 1 + RecursiveCount(ArrayCopy[1:], NumberElements - 1, DataToFind)
+    else:
+        return RecursiveCount(ArrayCopy[1:], NumberElements - 1, DataToFind)
+
+
+def SplitData(DataString):
+    Parts = [""] * 4  # STRING, 4 elements
+    Next = 0
+    Temp = ""
+    for Index in range(len(DataString)):
+        Character = DataString[Index]
+        if Character == ";":
+            Parts[Next] = Temp
+            Next = Next + 1
+            Temp = ""
         else:
-            TempString = TempString + Character        # MP4 build the statement
-    return SplitDataArray                      # MP6 no semicolons inside
+            Temp = Temp + Character
+    return Parts
 
 
-# ---- main program: 3(b)(i) and 3(b)(iii) ----
 if __name__ == "__main__":
-    Code = "x=0;y=1;x=x+y;y++;"                # 3(b)(i) local variable
-    Lines = SplitData(Code)                    # 3(b)(iii)
-    for x in range(4):
-        print(Lines[x])
+    MyArray = [0, 5, 1, 2, 5, 9, 9, 6, 5, 0]  # INTEGER, 10 elements
+    print(RecursiveCount(MyArray, 10, 0))
+    Code = "x=0;y=1;x=x+y;y++;"  # local STRING
+    Statements = SplitData(Code)
+    for Index in range(4):
+        print(Statements[Index])
 ```
 
-运行输出 4 行：`x=0`、`y=1`、`x=x+y`、`y++`。
+**运行核对**　最终程序包含 3(a) 递归计数与 3(b) 拆分：先输出 2，再依次输出 x=0、y=1、x=x+y、y++ 四行。3(a)(iii) 与 3(b)(iv) 的截图分别按各自证据格保存。整题 QP p.12–13 / MS p.32–39。
 
 **与 MS 逐点对齐**（MS 印的点与语料编号一致）
 
 | MP | MS 要求（原文） | 作答中对应 | 技能标签 |
 |:--|:--|:--|:--|
 | 1 | Function header, taking one string parameter | `def SplitData(DataString):` | `module-header` |
-| 2 | Loop e.g. four times/through each character in parameter | `for Count in range(len(DataString)):` | `char-loop`、`loop-bounds` |
+| 2 | Loop e.g. four times/through each character in parameter | `for Index in range(len(DataString)):` | `char-loop`、`loop-bounds` |
 | 3 | Comparing character from parameter to ';' … | `if Character == ";":` | `char-compare` |
-| 4 | … concatenate current character to a string until ';' is found | `TempString = TempString + Character` | `string-concat` |
-| 5 | … when ';' found storing string in array | `SplitDataArray[LastElement] = TempString` | `declare-array`、`array-index` |
-| 6 | Returning string array without semicolons | `return SplitDataArray`（分号从没加进 `TempString`） | `return-value` |
+| 4 | … concatenate current character to a string until ';' is found | `Temp = Temp + Character` | `string-concat` |
+| 5 | … when ';' found storing string in array | `Parts[Next] = Temp` | `declare-array`、`array-index` |
+| 6 | Returning string array without semicolons | `return Parts`（分号从没加进 `Temp`） | `return-value` |
 
 MS 的 Python 范例（p.37）是另一种结构：外层 `for x in range(4)` 数“段”，里层 `while Character != ";"` 一个个字符往后读，用 `try` / `except` 防止读过串尾。两种都满足 MP2（“four times”或“through each character”都写在 MS 里）。本手册的写法只有一层循环，下标不会越界，不需要 `try`。
 
@@ -439,26 +477,35 @@ FUNCTION IterativeCalculate(Number : INTEGER) RETURNS INTEGER
 ENDFUNCTION
 ```
 
-**完整作答**（连同 2(a)(ii) 的主程序）
+**完整作答**（整道大题的最终 Python；证据格按小问截取代码，早期测试截图在后续修改前另存）
 
 ```python
-# ---- 2(a)(i) ----
-def IterativeCalculate(Number):          # MP1 header with parameter
-    Total = 0                            # INTEGER
-    ToFind = Number                      # INTEGER
-    while Number != 0:                   # MP2 WHILE Number <> 0
-        if ToFind % Number == 0:         # MP3 MODULUS -> %
-            Total = Total + Number       # MP5 rest exactly as the pseudocode
+# Question2_N23: 2(a)-(b)
+def IterativeCalculate(Number):
+    ToFind = Number
+    Total = 0
+    while Number != 0:
+        if ToFind % Number == 0:
+            Total = Total + Number
         Number = Number - 1
-    return Total                         # MP4 after the loop
+    return Total
 
 
-# ---- 2(a)(ii) main program ----
+def RecursiveValue(Number, ToFind):
+    if Number == 0:
+        return 0
+    if ToFind % Number == 0:
+        return Number + RecursiveValue(Number - 1, ToFind)
+    else:
+        return RecursiveValue(Number - 1, ToFind)
+
+
 if __name__ == "__main__":
     print(IterativeCalculate(10))
+    print(RecursiveValue(50, 50))
 ```
 
-运行输出 `18`；另外调用 `IterativeCalculate(4)` 返回 `7`，与题目的两个例子一致。
+**运行核对**　整题 2(a)–(b) 输出 18、93，分别符合 MS p.18、21；另调用 IterativeCalculate(4) 返回 7。整题 QP p.6–8 / MS p.17–21。
 
 **与 MS 逐点对齐**（MS 印的点与语料编号一致）
 
@@ -470,7 +517,7 @@ if __name__ == "__main__":
 | 4 | Return of correct value at correct place | 循环之后 `return Total` | `return-value` |
 | 5 | Remainder of function correct | 初值、累加、`Number - 1` 与伪代码一一对应 | `translate-pseudocode`、`accumulator` |
 
-**证据格怎么交**　2(a)(i) 格贴整个函数；2(a)(ii) 格贴主程序（2 分：调用 `IterativeCalculate(10)`、输出返回值）；2(a)(iii) 截图格只要看得到 `18`（「One mark for screenshot showing 18」⟦9618_w23_42:2(a)(iii)⟧）。
+**证据格怎么交**　2(a)(i) 格贴 IterativeCalculate；2(b)(i) 格贴 RecursiveValue，2(b)(ii) 贴调用，2(b)(iii) 截图显示 93（MS p.21）。2(a)(ii) 格贴主程序（2 分：调用 `IterativeCalculate(10)`、输出返回值）；2(a)(iii) 截图格只要看得到 `18`（「One mark for screenshot showing 18」⟦9618_w23_42:2(a)(iii)⟧）。
 
 **直观**　从 10 往下一个个试：10 能整除 10 吗？能，记下 10；9 呢？不能；……一直试到 1。把能整除的都加起来。
 
