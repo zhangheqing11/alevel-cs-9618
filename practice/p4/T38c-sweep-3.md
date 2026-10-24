@@ -203,3 +203,18 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 15 passed in 0.11s
 
 自动分 23.0 → 23.0；占比 74.19% → 74.19%。
+
+## 9618_w24_41_q2
+
+补八次 Success 的 Fence 高度/风险参数、getter 与计算结果输出；赢家从整段输出识别，不再要求最后一行。
+
+本轮逐行核对本题配对 MS（12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：3 failed, 19 passed in 0.26s；修后与等价改写：
+
+- mutant_1.py: 5 failed, 18 passed in 0.24s
+- mutant_2.py: 1 failed, 22 passed in 0.18s
+- mutant_hollow_main.py: 4 failed, 19 passed in 0.21s
+- solution.py: 23 passed in 0.17s
+- equivalent_banner.py: 23 passed in 0.23s
+- equivalent_footer.py: 23 passed in 0.16s
+
+自动分 30.0 → 30.0；占比 88.24% → 88.24%。

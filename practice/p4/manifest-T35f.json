@@ -865,8 +865,8 @@
       "qp_over_ms": [
         "同季 _43 与 _41 整卷相同。构造参数顺序及方法名照 MS Python；`Horses` 和 `Course` 在主程序入口内声明。无数据文件。MS p.22 Python `Winner = -1` 在第一匹获胜时错误地取最后一匹，参考解初始化 0，增加 Beauty 获胜用例。QP 只要求 appropriate messages，截图测试只比较名字及数值（容许浮点舍入），不固定文字。MS p.25 两匹每跳成功率及平均值已核对：Beauty 14.4/72/57.6/50.4，平均48.6；Jet 39/65/52/45.5，平均50.375。"
       ],
-      "tests": 8,
-      "mutants": 2,
+      "tests": 23,
+      "mutants": 3,
       "manual_marks": 4.0,
       "auto_share": 0.8824
     },
