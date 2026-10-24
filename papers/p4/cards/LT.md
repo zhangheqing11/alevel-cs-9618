@@ -532,7 +532,7 @@ def SearchValue(Root, ValueToFind):      # returns INTEGER index, or -1
 - 输出写了不止一处，结果重复、顺序乱（9618_w22_41:3(d) 的考官报告）。
 - 判断空指针用错：数组版判 –1，对象版判 `None`；在递归调用之后才判断，会访问 `ArrayNodes[-1]`。
 - 递归查找漏写 `return`：最外层得到 `None`。
-- 伪代码 `ArrayNodes[Root, 1]` 照抄进 Python，语法错误（9618_w22_41:3(c) 的考官报告）。
+- 伪代码 `ArrayNodes[Root, 1]` 照抄进 Python list 访问，会在运行时抛出 `TypeError`：`Root, 1` 被当作一个 tuple 下标；应写 `ArrayNodes[Root][1]`（9618_w22_41:3(c) 的考官报告）。
 - 主程序传的参数类型与自己写的函数不一致（9618_w22_41:3(e)(i) 的考官报告）。
 
 #### 代表题精讲　⟦9618_w22_41:3(d)⟧
