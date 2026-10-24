@@ -247,4 +247,22 @@ T35a manifest 的汇总遗留为 6 题 / 133 分 / 119.1 自动分，逐题清�
 
 ## 最终全库验收
 
-待 fetch/rebase 最新 origin/main 后实际运行并补记。
+2026-10-24，已 fetch 并 rebase 到 `origin/main=705e1b354d4df28bf90686022422988d2c1ebd42`（仅增加工位索引，D46/D47 无变动）。代码验收提交 `fc0f8befe3f1bbde140620d0cabbe369cda602c0`；本次随后只补充验证记录。
+
+```text
+$ make check-all
+  · inventory: 130 papers
+  · rows: 3302 leaves in 130 papers
+  · taxonomy: 249 types
+  · markdown: 3558 row refs, 2280 MS quotes audited in 233 files
+  · exercises: 244 found, 244 executed
+✓ make check passed
+$ make check-scope TASK=T38c1
+✓ T38c1: all changed files are in scope
+$ git diff --check
+(exit 0)
+```
+
+全库 244 份参考解通过，657 个 mutant 各至少失败一测；其中本组 114 个 mutant 全部满足要求。完整日志 `/tmp/T38c1/check-all.log`。
+
+环境记录：首次 `git fetch origin` 写 `.git/FETCH_HEAD` 被沙箱拒绝，随后经 require_escalated 流程获准并成功；独立 worktree 的写入/提交同样经该权限流程完成。辅助只读命令 `ps -ax -o pid,ppid,etime,command` 被本机沙箱拒绝，未重试，改以原校验会话和日志获取结果。执行环境曾短暂不可用；恢复后核验原运行会话，未重复启动 check-all。无未决审批或任务阻塞。
