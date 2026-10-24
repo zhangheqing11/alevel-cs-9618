@@ -825,7 +825,10 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "tests": [
+            "test_1d_1f_main_call_chain"
+          ]
         },
         {
           "id": "9618_w25_41:1(e)",
@@ -848,7 +851,10 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_1d_1f_main_call_chain"
+          ]
         },
         {
           "id": "9618_w25_41:1(f)(ii)",
@@ -862,8 +868,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 5,
+      "mutants": 4,
+      "tests": 6,
       "qp_pages_checked": [
         2,
         3
@@ -880,7 +886,7 @@
         14
       ],
       "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
-      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。"
+      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。 T38c2：原有种子/Push 观察已验证随机范围及首次失败停止；新增 FindValues 实际调用、Pop 值链与极值输出。允许说明文字提及 -999，不能据此认定把哨兵当结果（QP p.3/MS pp.11–14）。固定 30 格由 QP 指定。"
     },
     {
       "directory": "practice/p4/9618_w25_41_q3",

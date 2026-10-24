@@ -2,7 +2,7 @@
 import json
 import re
 import pytest
-from testkit import run_script
+from testkit import run_script, run_script_traced
 
 
 def test_1a_null_array_last_used_pointer(sol):
@@ -50,7 +50,7 @@ def test_1e_find_values_uses_pop(sol, monkeypatch, capsys, data):
     assert len(data) <= len(calls) <= len(data) + 1
     assert sol.TopOfStack == -1
     numbers = [int(n) for n in re.findall(r'-?\d+', out)]
-    assert min(data) in numbers and max(data) in numbers and -999 not in numbers
+    assert min(data) in numbers and max(data) in numbers
     assert re.search(r'[A-Za-z]', out), 'extrema require an explanatory message'
 
 
@@ -87,6 +87,32 @@ def test_1f_ii_screenshot_stack_full_and_extrema(candidate_path, tmp_path):
         assert result.stdout.count('Stack full') == 1
         numbers = [int(n) for n in re.findall(r'-?\d+', result.stdout)]
         assert min(pushed[:30]) in numbers and max(pushed[:30]) in numbers
-        assert -999 not in numbers
         runs.append(pushed)
     assert runs[0] != runs[1], 'random generation must vary with the seed'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_1d_1f_main_call_chain(candidate_path):
+    """9618_w25_41:1(d) MP1-MP4;1(f)(i) whole (MS pp.11/14): random Push, stop on False, call FindValues."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    pushes, extrema = r.called('Push'), r.called('FindValues')
+    assert len(pushes) == 31 and [c.result for c in pushes] == [True] * 30 + [False]
+    values = [c.args.get('DataToPush') for c in pushes]
+    assert all(isinstance(v, int) and 0 <= v <= 1000 for v in values)
+    assert extrema and r.calls.index(pushes[-1]) < r.calls.index(extrema[0])
+    popped = [c.result for c in r.called('Pop')]
+    actual = [v for v in popped if v != -999]
+    assert actual == list(reversed(values[:30]))
+    numbers = [int(n) for n in re.findall(r'-?\d+', r.stdout)]
+    assert min(actual) in numbers and max(actual) in numbers
+
