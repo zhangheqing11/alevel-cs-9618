@@ -29,4 +29,19 @@ def test_3d_iii_screenshot_all_updated_descriptions(candidate_path):
     result=run_script(candidate_path)
     assert result.returncode==0,result.stderr
     expected=[base("Chewie","Squawk",1,10)+". It has a wingspan of 30cm and can say 31 words.",base("Nighteyes","Howl",8,7)+". Its territory is 80 square miles.",base("Copper","Neigh",10,6)]
-    assert all(message in result.stdout for message in expected)
+    assert all(message in " ".join(result.stdout.split()) for message in expected)
+
+
+def test_3main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_42:3(d)(i) MS p.43; 9618_s25_42:3(d)(ii) MS p.44; 9618_s25_42:3(b)(i) MS p.37; 9618_s25_42:3(c)(i) MS p.40: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    assert [list(c.args.values()) for c in r.called("SetTerritorySize")] == [[-20]]
+    assert [list(c.args.values()) for c in r.called("ChangeNumberWords")] == [[2]]
+    descriptions = r.called("Description")
+    assert {"Chewie","Nighteyes","Copper"} <= {n for n in ["Chewie","Nighteyes","Copper"] if any(n in str(c.result) and c.result in r.stdout for c in descriptions)}
+    assert len(r.called("Animal.__init__")) == 3
+    assert [list(c.args.values()) for c in r.called("Parrot.__init__")] == [["Chewie","Squawk",1,10,30,29]]
+    assert [list(c.args.values()) for c in r.called("Wolf.__init__")] == [["Nighteyes","Howl",8,7,100]]

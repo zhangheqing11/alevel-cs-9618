@@ -112,3 +112,18 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 7 passed in 0.07s
 
 自动分 23.0 → 23.0；占比 76.67% → 76.67%。
+
+## 9618_s25_42_q3
+
+补参数化动物构造、父构造、领地/词数更新与 Description 返回输出。QP 明确描述字符串保持；完整输出允许附加说明/相邻换行。
+
+本轮逐行核对本题配对 MS（33, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：4 passed in 0.09s；修后与等价改写：
+
+- mutant_1.py: 2 failed, 3 passed in 0.14s
+- mutant_2.py: 2 failed, 3 passed in 0.10s
+- mutant_hollow_main.py: 1 failed, 4 passed in 0.13s
+- solution.py: 5 passed in 0.09s
+- equivalent_banner.py: 5 passed in 0.09s
+- equivalent_footer.py: 5 passed in 0.07s
+
+自动分 22.0 → 22.0；占比 84.62% → 84.62%。

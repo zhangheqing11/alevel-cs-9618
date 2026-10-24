@@ -1283,8 +1283,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 4,
+      "mutants": 3,
+      "tests": 5,
       "qp_pages_checked": [
         9,
         10,

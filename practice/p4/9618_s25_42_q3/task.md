@@ -214,12 +214,12 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a)(i) | 9618_s25_42:3(a)(i) | 4 | 代码 | `test_3a_animal_constructor_description` · MP4 | MP1, MP2, MP3 |
 | Part 3(a)(ii) | 9618_s25_42:3(a)(ii) | 3 | 代码 | `test_3a_animal_constructor_description` · MP2, MP3 | MP1 |
-| Part 3(b)(i) | 9618_s25_42:3(b)(i) | 4 | 代码 | `test_3b_parrot_inherits_updates_and_overrides` · MP1, MP2, MP3, MP4 | — |
+| Part 3(b)(i) | 9618_s25_42:3(b)(i) | 4 | 代码 | `test_3main_call_chain` / `test_3b_parrot_inherits_updates_and_overrides` · MP1, MP2, MP3, MP4 | — |
 | Part 3(b)(ii) | 9618_s25_42:3(b)(ii) | 2 | 代码 | `test_3b_parrot_inherits_updates_and_overrides` · MP1, MP2 | — |
-| Part 3(c)(i) | 9618_s25_42:3(c)(i) | 4 | 代码 | `test_3c_wolf_inherits_adds_signed_territory` · MP1, MP2, MP3, MP4 | — |
+| Part 3(c)(i) | 9618_s25_42:3(c)(i) | 4 | 代码 | `test_3main_call_chain` / `test_3c_wolf_inherits_adds_signed_territory` · MP1, MP2, MP3, MP4 | — |
 | Part 3(c)(ii) | 9618_s25_42:3(c)(ii) | 2 | 代码 | `test_3c_wolf_inherits_adds_signed_territory` · MP1, MP2 | — |
-| Part 3(d)(i) | 9618_s25_42:3(d)(i) | 2 | 代码 | `test_3d_iii_screenshot_all_updated_descriptions` · MP1, MP2 | — |
-| Part 3(d)(ii) | 9618_s25_42:3(d)(ii) | 3 | 代码 | `test_3d_iii_screenshot_all_updated_descriptions` · MP1, MP2, MP3 | — |
+| Part 3(d)(i) | 9618_s25_42:3(d)(i) | 2 | 代码 | `test_3main_call_chain` / `test_3d_iii_screenshot_all_updated_descriptions` · MP1, MP2 | — |
+| Part 3(d)(ii) | 9618_s25_42:3(d)(ii) | 3 | 代码 | `test_3main_call_chain` / `test_3d_iii_screenshot_all_updated_descriptions` · MP1, MP2, MP3 | — |
 | Part 3(d)(iii) | 9618_s25_42:3(d)(iii) | 2 | 截图 | `test_3d_iii_screenshot_all_updated_descriptions` · MP1, MP2 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。
