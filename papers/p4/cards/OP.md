@@ -184,43 +184,41 @@ if __name__ == "__main__":
 4. 返回和输出分开：getter 返回给调用者；调用者需要展示时再 print。
 5. 核对题目点名的全部方法，不能只写一个。不是每个 getter 都单独两分，按本格 MS 的分组清单给分。
 
-**Python 模板**（自包含骨架；参数、初值、私有要求照具体题目）
+**Python 模板**（本题 Node 的存取方法；三个属性均为 INTEGER）
 
 ```python
 # ---- 2(a)(i) ----
-class Vehicle:
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
-        self.__ID = IDP                           # STRING
-        self.__MaxSpeed = MaxSpeedP               # INTEGER
-        self.__IncreaseAmount = IncreaseAmountP   # INTEGER
-        self.__CurrentSpeed = 0                   # INTEGER
-        self.__HorizontalPosition = 0             # INTEGER
+class Node:
+    def __init__(self, PData):
+        self.__LeftPointer = -1  # INTEGER
+        self.__Data = PData      # INTEGER
+        self.__RightPointer = -1 # INTEGER
 
     # ---- 2(a)(ii) ----
-    def GetCurrentSpeed(self):
-        return self.__CurrentSpeed
+    def GetLeft(self):
+        return self.__LeftPointer
 
-    def GetIncreaseAmount(self):
-        return self.__IncreaseAmount
+    def GetRight(self):
+        return self.__RightPointer
 
-    def GetMaxSpeed(self):
-        return self.__MaxSpeed
-
-    def GetHorizontalPosition(self):
-        return self.__HorizontalPosition
+    def GetData(self):
+        return self.__Data
 
     # ---- 2(a)(iii) ----
-    def SetCurrentSpeed(self, CSP):
-        self.__CurrentSpeed = CSP
+    def SetLeft(self, NewLeft):
+        self.__LeftPointer = NewLeft
 
-    def SetHorizontalPosition(self, HPP):
-        self.__HorizontalPosition = HPP
+    def SetRight(self, NewRight):
+        self.__RightPointer = NewRight
+
+    def SetData(self, NewData):
+        self.__Data = NewData
 ```
 
 **得分表述**（引自对应 MS）
-- 「1 get function header (and end where appropriate) with no parameter …」⟦9618_s23_41:2(a)(ii)⟧
-- 「…returning attribute (without overwriting)」⟦9618_s23_41:2(a)(ii)⟧
-- 「3 further correct get methods」⟦9618_s23_41:2(a)(ii)⟧
+- 「1 set method header (and end) with parameter …」⟦9618_s24_42:2(a)(iii)⟧
+- 「…assigning parameter to correct attribute」⟦9618_s24_42:2(a)(iii)⟧
+- 「Remaining 2 correct」⟦9618_s24_42:2(a)(iii)⟧
 
 **得分点地图**（核验语料 2022–2026s、仅主题型行、去 `equivalent_of`、每行每标签计一次；s26 只进计数。共 26 行，其中 25 行拆点；下表由 `markpoints[].skills` 统计，不是每个标签各值一分）
 
@@ -237,109 +235,120 @@ class Vehicle:
 
 **易错与失分**　考官报告指出，有考生给 getter 多传参数，或 print 而不 return（9618_s23_41:2(a)(ii)）；setter 中重新从用户读取数值也不合要求（9618_s23_41:2(a)(iii)）。把 `self.__X` 写成局部变量 `X` 不会更新对象。
 
-#### 代表题精讲　⟦9618_s23_41:2(a)(ii)⟧
+#### 代表题精讲　⟦9618_s24_42:2(a)(iii)⟧
 
-**在考什么**　四个 getter 共 3 分：第一个的方法头、返回、其余三个正确。另一个代码格 2(a)(iii) 写两个 setter，共 3 分。 整道第 2 题 QP p.4–7（p.4 Vehicle 类图，p.6 Helicopter 类图，p.7 主程序数据）；MS p.12–25。
+**在考什么**　为 Node 写三个 setter：SetLeft、SetRight、SetData 把传入的整数保存到对应属性，3 分、3 点。LeftPointer / RightPointer 存数组下标，不存 Node 对象。整题 QP p.6–9（p.6 Node 类图，p.7 TreeClass 类图与 setter 要求，p.8 插入/输出，p.9 七个测试数）；MS p.15–27（setter 清单与 Python 范例 p.18）。
 
-**完整作答**（整道第 2 题的最终程序；按代码格拆交，不能把整段程序重复贴进每一格）
+**完整作答**（整道第 2 题的最终程序；按代码格拆交）
 
 ```python
 # ---- 2(a)(i) ----
-class Vehicle:
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
-        self.__ID = IDP                           # STRING
-        self.__MaxSpeed = MaxSpeedP               # INTEGER
-        self.__IncreaseAmount = IncreaseAmountP   # INTEGER
-        self.__CurrentSpeed = 0                   # INTEGER
-        self.__HorizontalPosition = 0             # INTEGER
+class Node:
+    def __init__(self, PData):
+        self.__LeftPointer = -1  # INTEGER
+        self.__Data = PData      # INTEGER
+        self.__RightPointer = -1 # INTEGER
 
     # ---- 2(a)(ii) ----
-    def GetCurrentSpeed(self):
-        return self.__CurrentSpeed
+    def GetLeft(self):
+        return self.__LeftPointer
 
-    def GetIncreaseAmount(self):
-        return self.__IncreaseAmount
+    def GetRight(self):
+        return self.__RightPointer
 
-    def GetMaxSpeed(self):
-        return self.__MaxSpeed
-
-    def GetHorizontalPosition(self):
-        return self.__HorizontalPosition
+    def GetData(self):
+        return self.__Data
 
     # ---- 2(a)(iii) ----
-    def SetCurrentSpeed(self, CSP):
-        self.__CurrentSpeed = CSP
+    def SetLeft(self, NewLeft):
+        self.__LeftPointer = NewLeft
 
-    def SetHorizontalPosition(self, HPP):
-        self.__HorizontalPosition = HPP
+    def SetRight(self, NewRight):
+        self.__RightPointer = NewRight
 
-    # ---- 2(a)(iv) ----
-    def IncreaseSpeed(self):
-        self.__CurrentSpeed = self.__CurrentSpeed + self.__IncreaseAmount
-        if self.__CurrentSpeed > self.__MaxSpeed:
-            self.__CurrentSpeed = self.__MaxSpeed
-        self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
+    def SetData(self, NewData):
+        self.__Data = NewData
 
 
 # ---- 2(b)(i) ----
-class Helicopter(Vehicle):
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP, VertChangeP, MaxHeightP):
-        super().__init__(IDP, MaxSpeedP, IncreaseAmountP)
-        self.__VerticalPosition = 0               # INTEGER
-        self.__VerticalChange = VertChangeP       # INTEGER
-        self.__MaxHeight = MaxHeightP             # INTEGER
-
-    def GetVerticalPosition(self):
-        return self.__VerticalPosition
+class TreeClass:
+    def __init__(self):
+        self.__Tree = [Node(-1) for Count in range(20)]  # Node, 20 elements
+        self.__FirstNode = -1    # INTEGER
+        self.__NumberNodes = 0   # INTEGER
 
     # ---- 2(b)(ii) ----
-    def IncreaseSpeed(self):
-        self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange
-        if self.__VerticalPosition > self.__MaxHeight:
-            self.__VerticalPosition = self.__MaxHeight
-        super().IncreaseSpeed()                   # update horizontal motion in every case
+    def InsertNode(self, NewNode):
+        if self.__NumberNodes == 0:
+            self.__Tree[self.__NumberNodes] = NewNode
+            self.__FirstNode = 0
+            self.__NumberNodes = self.__NumberNodes + 1
+        else:
+            self.__Tree[self.__NumberNodes] = NewNode
+            NodeAccess = self.__FirstNode
+            Direction = ""
+            while NodeAccess != -1:
+                Previous = NodeAccess
+                if NewNode.GetData() < self.__Tree[NodeAccess].GetData():
+                    NodeAccess = self.__Tree[NodeAccess].GetLeft()
+                    Direction = "left"
+                else:
+                    NodeAccess = self.__Tree[NodeAccess].GetRight()
+                    Direction = "right"
+            if Direction == "left":
+                self.__Tree[Previous].SetLeft(self.__NumberNodes)
+            else:
+                self.__Tree[Previous].SetRight(self.__NumberNodes)
+            self.__NumberNodes = self.__NumberNodes + 1
+
+    # ---- 2(b)(iii) ----
+    def OutputTree(self):
+        if self.__NumberNodes == 0:
+            print("No nodes")
+        else:
+            for Count in range(self.__NumberNodes):
+                print(self.__Tree[Count].GetLeft(), self.__Tree[Count].GetData(),
+                      self.__Tree[Count].GetRight())
 
 
-# ---- 2(c) ----
-def OutputCurrentPosition(ObjectToOutput):
-    print("Current position =", ObjectToOutput.GetHorizontalPosition())
-    print("Current speed =", ObjectToOutput.GetCurrentSpeed())
-    if isinstance(ObjectToOutput, Helicopter):
-        print("Current vertical position =", ObjectToOutput.GetVerticalPosition())
-
-
-# ---- 2(d)(i) ----
 if __name__ == "__main__":
-    Car = Vehicle("Tiger", 100, 20)
-    Heli = Helicopter("Lion", 350, 40, 3, 100)
-    Car.IncreaseSpeed()
-    Car.IncreaseSpeed()
-    OutputCurrentPosition(Car)
-    print()
-    Heli.IncreaseSpeed()
-    Heli.IncreaseSpeed()
-    OutputCurrentPosition(Heli)
+    # ---- 2(c)(i) ----
+    TheTree = TreeClass()
+    # ---- 2(c)(ii) ----
+    for Data in [10, 11, 5, 1, 20, 7, 15]:
+        TheTree.InsertNode(Node(Data))
+    TheTree.OutputTree()
 ```
 
-按 QP p.7 实参实际运行：汽车位置 60、速度 40；直升机位置 120、速度 80、高度 6，与 MS p.25 截图数值一致。另检查第六次汽车加速后速度仍为 100、位置为 400；直升机连续 34 次加速后高度为 100、速度为 350，触顶分支可运行。
+按 QP p.9 的顺序插入 10、11、5、1、20、7、15，实际输出如下，与 MS p.27 截图的七行一致。输出按数组存储顺序，不是树的中序遍历。
 
-**与 MS 逐点对齐**（2(a)(ii)，3 分；语料 MP 编号与 MS 圆点顺序一致）
+```text
+2 10 1
+-1 11 4
+3 5 5
+-1 1 -1
+6 20 -1
+-1 7 -1
+-1 15 -1
+```
+
+另单独调用三个 setter 后通过 getter 读回 `(2, 12, 1)`，确认三次赋值分别落在左指针、数据、右指针；空树输出 `No nodes`，20 格初始化为 20 个独立 Node。
+
+**与 MS 逐点对齐**（2(a)(iii)，3 分；语料 MP 编号与 MS 圆点顺序一致）
 
 | 语料 MP | MS 原文 | 作答对应 | 技能标签 |
 |:--|:--|:--|:--|
-| 1 | 1 get function header (and end where appropriate) with no parameter … | `GetCurrentSpeed(self)`，没有显式业务参数 | `getter-setter` |
-| 2 | …returning attribute (without overwriting) | `return self.__CurrentSpeed`，不覆盖属性 | `getter-setter`、`return-value` |
-| 3 | 3 further correct get methods | GetIncreaseAmount、GetHorizontalPosition、GetMaxSpeed 全部正确 | `getter-setter` |
+| 1 | 1 set method header (and end) with parameter … | `def SetLeft(self, NewLeft):`，接收一个业务参数 | `getter-setter` |
+| 2 | …assigning parameter to correct attribute | `self.__LeftPointer = NewLeft` | `getter-setter` |
+| 3 | Remaining 2 correct | SetRight 赋给 RightPointer；SetData 赋给 Data，方法头与参数正确 | `getter-setter` |
 
-另看 2(a)(iii) 的 3 点：一个 setter 头及参数 → 赋给属性 → 第二个 setter 正确，语料 MP1–MP3，与 MS p.16 顺序一致。
+**证据格怎么交**　2(a)(iii) 格只贴 Node 内的三个 setter，保留类内缩进；2(a)(ii) 的三个 getter 交在另一个代码格。2(b)(ii) 格交 InsertNode，能看见用 SetLeft / SetRight 更新父结点指针；2(c)(ii) 格交实际创建、插入七个对象和调用 OutputTree 的 main；2(c)(iii) 截图显示上述七行。截图不能代替 setter 代码或调用链核对。
 
-**证据格怎么交**　2(a)(ii) 格交四个 getter；2(a)(iii) 格交两个 setter。不要把 main 的 print 当作 getter 代码。
+**直观**　Node 是一张结点卡：setter 改卡上的一个格子，getter 读格子；指针格写的是另一张卡在数组里的位置。
 
-**直观**　getter 是把仪表读数递出来；setter 是收到新读数后写进仪表，二者都针对点号前的那个对象。
+**对应练习与阶梯**　真题练习 `practice/p4/9618_s24_42_q2/`；前置 **L12 E01**（存取方法）。
 
-**对应练习与阶梯**　真题练习 `practice/p4/9618_s23_41_q2/`（T35 并行生成；路径用于定位，不表示练习已验收）。前置 **L12 E01**。
-
-**下一道变式**　⟦9618_s23_42:3(a)(ii)⟧　GetEmployeeNumber() 返回字符串员工编号，仍无显式业务参数；不能 int 转换丢掉前导零。QP p.8；MS p.25。
+**下一道变式**　⟦9618_s23_41:2(a)(ii)⟧　换回 Vehicle 的四个 getter：GetCurrentSpeed、GetIncreaseAmount、GetMaxSpeed、GetHorizontalPosition 无业务参数，返回原属性；随后 2(a)(iii) 练两个 setter。QP p.4–5；MS p.14–16。代表题与变式来自不同卷。
 
 <!-- auto:drills P4-OP-02 -->
 
