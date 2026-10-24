@@ -25,7 +25,11 @@ WHILE CurrentPointer <> -1
 ENDWHILE
 ```
 
+下面的 Python 用两个结点作独立演示，输出 7、12；真题的数组大小和指针初值仍照该题题干。
+
 ```python
+LinkedList = [[7, 1], [12, -1]]   # INTEGER, 2 x 2; demonstration data
+FirstNode = 0                      # INTEGER, first node in this demonstration
 CurrentPointer = FirstNode
 while CurrentPointer != -1:
     print(LinkedList[CurrentPointer][0])
