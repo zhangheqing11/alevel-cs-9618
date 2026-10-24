@@ -248,3 +248,18 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 8 passed in 0.06s
 
 自动分 25.0 → 25.0；占比 83.33% → 83.33%。
+
+## 9618_w25_43_q1
+
+新增 SetObject 各坐标、DisplayBoard/GetCode、输入坐标 GetObject 和返回对象 getter；QP 棋盘逐行格式保持，命中消息允许分行。
+
+本轮逐行核对本题配对 MS（7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：6 failed, 10 passed in 0.37s；修后与等价改写：
+
+- mutant_1.py: 9 failed, 8 passed in 0.57s
+- mutant_2.py: 1 failed, 16 passed in 0.36s
+- mutant_hollow_main.py: 7 failed, 10 passed in 0.31s
+- solution.py: 17 passed in 0.33s
+- equivalent_banner.py: 17 passed in 0.34s
+- equivalent_footer.py: 17 passed in 0.28s
+
+自动分 22.0 → 22.0；占比 70.97% → 70.97%。

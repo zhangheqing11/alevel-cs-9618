@@ -67,12 +67,26 @@ def test_1cii_board_screenshot(candidate_path):
 def test_1dii_invalid_inputs_screenshot(candidate_path):
     """9618_w25_43:1(d)(i) MP1-MP4; 9618_w25_43:1(d)(ii) whole: 10,4,-1,5 -> C 5."""
     r=run_script(candidate_path,stdin='10\n4\n-1\n5\n');assert r.returncode==0,r.stderr
-    assert re.search(r'\bC\b[^\n]*\b5\b',r.lines[-1])
+    assert re.search(r'\bC\b[\s\S]*?\b5\b',r.stdout)
 
 
 @pytest.mark.parametrize('row,col,code,value',[(0,0,'A',2),(9,9,'B',3),(8,7,'E',7),(2,2,'D',2),(0,9,None,None)])
 def test_1di_hit_miss_and_edges(candidate_path,row,col,code,value):
     """9618_w25_43:1(d)(i) MP1-MP4: both boundaries accepted; hit and Miss."""
     r=run_script(candidate_path,stdin=f'{row}\n{col}\n');assert r.returncode==0,r.stderr
-    if code is None:assert 'Miss' in r.lines[-1]
-    else:assert re.search(r'\b'+code+r'\b[^\n]*\b'+str(value)+r'\b',r.lines[-1])
+    if code is None:assert 'Miss' in r.stdout
+    else:assert re.search(r'\b'+code+r'\b[\s\S]*?\b'+str(value)+r'\b',r.stdout)
+
+
+def test_1main_call_chain(candidate_path, exercise_dir):
+    """9618_w25_43:1(c)(i) MS p.15; 9618_w25_43:1(d)(i) MS p.17; 9618_w25_43:1(b)(iv) MS p.13: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='4\n5\n', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    placements = r.called("SetObject")
+    assert [list(c.args.values())[1:] for c in placements] == [[0,0],[9,9],[4,5],[2,2],[8,7]]
+    assert r.called("DisplayBoard") and len(r.called("GetCode")) >= 100
+    guesses = r.called("GetObject")
+    assert any(list(c.args.values()) == [4,5] for c in guesses)
+    assert r.called("GetValue") and r.called("GetValue")[-1].result == 5
