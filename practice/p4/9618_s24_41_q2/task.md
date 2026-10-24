@@ -244,11 +244,11 @@
 | Part 2(a)(ii) | 9618_s24_41:2(a)(ii) | 3 | 代码 | `test_2a_constructor_getters` · MP2, MP3 | MP1 |
 | Part 2(b) | 9618_s24_41:2(b) | 7 | 代码 | `test_2b_reads_nine_objects` / `test_2b_missing_file` · MP1, MP2, MP3, MP4, MP5, MP6, MP7, MP8 | — |
 | Part 2(c) | 9618_s24_41:2(c) | 4 | 代码 | `test_2c_printtrees_both_messages` · MP1, MP2, MP3, MP4 | — |
-| Part 2(d)(i) | 9618_s24_41:2(d)(i) | 2 | 代码 | `test_2d_ii_and_2e_iii_screenshots` · MP1, MP2 | — |
+| Part 2(d)(i) | 9618_s24_41:2(d)(i) | 2 | 代码 | `test_2d_2e_main_call_chain` / `test_2d_ii_and_2e_iii_screenshots` · MP1, MP2 | — |
 | Part 2(d)(ii) | 9618_s24_41:2(d)(ii) | 1 | 截图 | `test_2d_ii_and_2e_iii_screenshots` · 整行 | — |
 | Part 2(e)(i) | 9618_s24_41:2(e)(i) | 6 | 代码 | `test_2e_filter_inclusive_all_requirements_and_years` / `test_2e_no_suitable_trees` · MP1, MP2, MP3, MP4, MP5, MP6, MP7 | — |
 | Part 2(e)(ii) | 9618_s24_41:2(e)(ii) | 2 | 代码 | `test_2e_filter_inclusive_all_requirements_and_years` · MP1, MP2 | — |
-| Part 2(e)(iii) | 9618_s24_41:2(e)(iii) | 2 | 截图 | `test_2d_ii_and_2e_iii_screenshots` · MP1, MP2 | — |
+| Part 2(e)(iii) | 9618_s24_41:2(e)(iii) | 2 | 截图 | `test_2d_2e_main_call_chain` / `test_2d_ii_and_2e_iii_screenshots` · MP1, MP2 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。
 

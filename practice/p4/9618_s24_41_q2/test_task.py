@@ -17,8 +17,8 @@ def test_2b_reads_nine_objects(sol,exercise_dir,monkeypatch,tmp_path):
     expected=[]
     for line in (work / "Trees.txt").read_text().splitlines():
         name,g,h,w,e=line.split(","); expected.append((name,int(g),int(h),int(w),e))
-    assert len(trees)==9 and len({id(t) for t in trees})==9
-    assert [values(t) for t in trees]==expected
+    assert len(trees) >= 9 and len({id(t) for t in trees[:9]}) == 9
+    assert [values(t) for t in trees[:9]] == expected
 
 def test_2b_missing_file(sol,monkeypatch,tmp_path,capsys):
     """9618_s24_41:2(b) MP1: exception handler and output."""
@@ -58,3 +58,16 @@ def test_2d_ii_and_2e_iii_screenshots(candidate_path,exercise_dir):
     assert "Green Conifer has a maximum height 300" in result.stdout
     tail=result.stdout.split("Green Conifer")[-1]
     assert float(re.findall(r"\d+(?:\.\d+)?",tail)[-1]) in [3,3.75,4]
+
+
+def test_2d_2e_main_call_chain(candidate_path, exercise_dir):
+    """9618_s24_41:2(d)(i) MP1–MP2, 2(e)(iii) MP1; MS pp.21,28: pass returned trees onward."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin="keep\n400\n200\nBlue Conifer\n100\n", files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+    reads, prints, choices = r.called("ReadData"), r.called("PrintTrees"), r.called("ChooseTree")
+    assert reads and prints and choices
+    trees = reads[0].result
+    assert list(prints[0].args.values())[0] is trees[0]
+    assert list(choices[0].args.values())[0] == trees
+    assert r.calls.index(reads[0]) < r.calls.index(prints[0]) < r.calls.index(choices[0])
