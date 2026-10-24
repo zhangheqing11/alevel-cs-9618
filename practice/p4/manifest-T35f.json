@@ -688,8 +688,8 @@
       "qp_over_ms": [
         "构造函数接口按 MS Python：`Character(CName, DBirth, Intell, SpeedP)` 与 `MagicCharacter(ElementP, CName, DBirth, Intell, SpeedP)`；日期使用标准库 `datetime.datetime`（亦可接收 `date`）。年龄固定按 2023 减出生年份，不能用机器当前年；不比较月日。本题未要求 private，公有或私有实现均可，类型注释人工核对。无数据文件；本题 Python 范例行为无需修正。截图按 MS p.29 Royal / 4 / 77 与 p.34 Light / 5 / 90 测数值，允许浮点表示与不同提示措辞。"
       ],
-      "tests": 9,
-      "mutants": 2,
+      "tests": 15,
+      "mutants": 3,
       "manual_marks": 8.0,
       "auto_share": 0.7419
     },

@@ -188,3 +188,18 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 17 passed in 0.18s
 
 自动分 23.0 → 23.0；占比 76.67% → 76.67%。
+
+## 9618_w23_42_q3
+
+截图数值可由空壳伪造，补 Learn/ReturnAge/getter 及返回值输出；输出本已容许换行。
+
+本轮逐行核对本题配对 MS（22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：2 failed, 13 passed in 0.14s；修后与等价改写：
+
+- mutant_1.py: 7 failed, 8 passed in 0.15s
+- mutant_2.py: 5 failed, 10 passed in 0.24s
+- mutant_hollow_main.py: 2 failed, 13 passed in 0.17s
+- solution.py: 15 passed in 0.15s
+- equivalent_banner.py: 15 passed in 0.11s
+- equivalent_footer.py: 15 passed in 0.11s
+
+自动分 23.0 → 23.0；占比 74.19% → 74.19%。
