@@ -1189,8 +1189,8 @@
       "qp_over_ms": [
         "构造方法、getter 按 QP / MS Python 顺序。无数据文件。QP `Trains[0:9]` 与 D10 要求真实 10 格 list；MS p.19 Python 用空 list 后 append，参考解改为 `[None] * 10`，AddTrain 按 NumberTrains 下标存。这里 empty array 指尚未存列车，不是容量为零。GetTrains 返回字符串（不是 print），QP 明确了行格式和空站消息，测试核对格式；允许末尾空行或行末空格。MS p.25 截图：Station is full 一次，STH 两列车 12ADV/134、33ART/20，NTH 为21VBC/24。"
       ],
-      "tests": 7,
-      "mutants": 2,
+      "tests": 8,
+      "mutants": 3,
       "manual_marks": 5.0,
       "auto_share": 0.8333
     },
