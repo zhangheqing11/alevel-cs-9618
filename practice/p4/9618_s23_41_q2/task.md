@@ -209,10 +209,10 @@
 | Part 2(a)(ii) | 9618_s23_41:2(a)(ii) | 3 | 代码 | `test_2a_ii_iii_getters_setters` · MP2, MP3 | MP1 |
 | Part 2(a)(iii) | 9618_s23_41:2(a)(iii) | 3 | 代码 | `test_2a_ii_iii_getters_setters` · MP2, MP3 | MP1 |
 | Part 2(a)(iv) | 9618_s23_41:2(a)(iv) | 3 | 代码 | `test_2a_iv_speed_clamps_position_still_changes` · MP1, MP2, MP3 | — |
-| Part 2(b)(i) | 9618_s23_41:2(b)(i) | 5 | 代码 | `test_2b_i_inheritance_private_fields` · MP1, MP2, MP4, MP5 | MP3 |
+| Part 2(b)(i) | 9618_s23_41:2(b)(i) | 5 | 代码 | `test_2main_call_chain` / `test_2b_i_inheritance_private_fields` · MP1, MP2, MP4, MP5 | MP3 |
 | Part 2(b)(ii) | 9618_s23_41:2(b)(ii) | 4 | 代码 | `test_2b_ii_height_and_speed_caps` · MP2, MP3, MP4 | MP1 |
 | Part 2(c) | 9618_s23_41:2(c) | 3 | 代码 | `test_2c_outputs_vehicle_and_helicopter` · MP1, MP2, MP3 | — |
-| Part 2(d)(i) | 9618_s23_41:2(d)(i) | 5 | 代码 | `test_2d_ii_screenshot` · MP1, MP2, MP3, MP4, MP5 | — |
+| Part 2(d)(i) | 9618_s23_41:2(d)(i) | 5 | 代码 | `test_2main_call_chain` / `test_2d_ii_screenshot` · MP1, MP2, MP3, MP4, MP5 | — |
 | Part 2(d)(ii) | 9618_s23_41:2(d)(ii) | 1 | 截图 | `test_2d_ii_screenshot` · 整行 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。

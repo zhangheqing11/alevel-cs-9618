@@ -52,3 +52,18 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - equivalent_footer.py: 7 passed in 0.09s
 
 自动分 22.3 → 22.3；占比 82.59% → 82.59%。
+
+## 9618_s23_41_q2
+
+整段数字相等误拒说明数字，改为按所需值顺序匹配。主程序增加父/子构造参数、两次加速与输出调用观测；构造继承补核保持人工注释。
+
+本轮逐行核对本题配对 MS（12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 7 passed in 0.05s；修后与等价改写：
+
+- mutant_1.py: 1 failed, 7 passed in 0.06s
+- mutant_2.py: 3 failed, 5 passed in 0.07s
+- mutant_hollow_main.py: 1 failed, 7 passed in 0.06s
+- solution.py: 8 passed in 0.07s
+- equivalent_banner.py: 8 passed in 0.08s
+- equivalent_footer.py: 8 passed in 0.13s
+
+自动分 26.0 → 26.0；占比 81.25% → 81.25%。

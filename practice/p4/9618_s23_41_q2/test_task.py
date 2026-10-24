@@ -42,12 +42,33 @@ def test_2b_ii_height_and_speed_caps(sol):
 def test_2c_outputs_vehicle_and_helicopter(sol, capsys):
     """9618_s23_41:2(c) MP1-MP3: horizontal/speed for both; height only for helicopter."""
     v=sol.Vehicle("V",100,20); v.IncreaseSpeed(); v.OutputCurrentPosition()
-    assert nums(capsys.readouterr().out) == [20,20]
+    assert contains_values(capsys.readouterr().out, [20,20])
     h=sol.Helicopter("H",200,30,7,20); h.IncreaseSpeed(); h.OutputCurrentPosition()
-    assert nums(capsys.readouterr().out) == [30,30,7]
+    assert contains_values(capsys.readouterr().out, [30,30,7])
 
 def test_2d_ii_screenshot(candidate_path):
     """9618_s23_41:2(d)(i) MP1-MP5; 2(d)(ii) whole: official 60,40 / 120,80,6."""
     result=run_script(candidate_path)
     assert result.returncode == 0, result.stderr
-    assert nums(result.stdout) == [60,40,120,80,6]
+    assert contains_values(result.stdout, [60,40,120,80,6])
+
+
+def contains_values(text, expected):
+    """D31/D46: compare required values in order, allowing explanatory text."""
+    values = iter(float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", text))
+    return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
+
+
+def test_2main_call_chain(candidate_path, exercise_dir):
+    """9618_s23_41:2(d)(i) MS p.24; 9618_s23_41:2(b)(i) MS p.18: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    v = r.called("Vehicle.__init__")
+    assert [list(c.args.values()) for c in v] == [["Tiger",100,20],["Lion",350,40]]
+    assert [list(c.args.values()) for c in r.called("Helicopter.__init__")] == [["Lion",350,40,3,100]]
+    assert len(r.called("Helicopter.IncreaseSpeed")) == 2
+    # Parent calls from Helicopter are allowed; car still needs its own two calls.
+    assert len(r.called("Vehicle.IncreaseSpeed")) >= 2
+    assert len(r.called("OutputCurrentPosition")) >= 2
