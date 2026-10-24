@@ -1051,7 +1051,7 @@
       "marks": 21,
       "auto_marks": 19.2,
       "manual_marks": 1.8,
-      "auto_share": 0.9143,
+      "auto_share": 0.914286,
       "types": [
         "P4-LT-03",
         "P4-FL-01",
@@ -1128,7 +1128,10 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_3e_main_call_chain"
+          ]
         },
         {
           "id": "9618_w25_42:3(e)(ii)",
@@ -1152,8 +1155,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         10,
         11,
@@ -1174,7 +1177,7 @@
         38
       ],
       "qp_over_ms": "- Python AddNode 范例与 QP 一致，参考解保留其插入逻辑。\n- MS pp.35–36 Java/Python 写文件用追加模式，QP 只要求 new text file 且首次未提供；参考解用 w 创建文件，测试只检查首次写入，不裁决 QP 未要求的重复导出策略。\n- 3(d) 异常测试让 Tree.txt 路径成为目录，真实触发打开错误，不要求某种 try/except 写法。",
-      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。"
+      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。 T38c2：原有 AddNode 包装已观测输入调用；新增 WriteAllToFile 实际调用并核对生成文件。空壳保留模块但直接写出完整正确 Tree.txt，仍被调用测试拒绝。文件三字段/每结点一行是 QP 明定，保留（QP pp.11–12/MS pp.33/37–38）。"
     },
     {
       "directory": "practice/p4/9618_w25_43_q2",

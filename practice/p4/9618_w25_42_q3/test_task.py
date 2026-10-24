@@ -1,6 +1,7 @@
+import re
 """w25/42 Q3; EXPECTED_FILE transcribed from exact MS p.38 screenshot."""
 import json
-from testkit import run_script
+from testkit import run_script, run_script_traced
 
 EXPECTED_FILE = '''1,40,2
 6,4,3
@@ -137,3 +138,25 @@ def test_3e_ii_screenshot_file_content(candidate_path, exercise_dir):
     result = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert result.returncode == 0, result.stderr
     assert result.read('Tree.txt').splitlines() == EXPECTED_FILE.splitlines()
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3c_3e_main_call_chain(candidate_path, exercise_dir):
+    """9618_w25_42:3(c) MP2-MP4;3(e)(i) whole (MS pp.33/37): AddNode each input, then WriteAllToFile."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    inserts, writes = r.called('AddNode'), r.called('WriteAllToFile')
+    expected = [int(line) for line in (exercise_dir / 'files/TreeData.txt').read_text().splitlines()]
+    assert [next(iter(c.args.values())) for c in inserts] == expected
+    assert len(writes) == 1 and r.calls.index(inserts[-1]) < r.calls.index(writes[0])
+    assert (r.workdir / 'Tree.txt').read_text().splitlines() == EXPECTED_FILE.splitlines()
+
