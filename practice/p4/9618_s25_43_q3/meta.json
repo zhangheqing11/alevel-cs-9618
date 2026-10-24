@@ -1,0 +1,51 @@
+{
+  "id": "9618_s25_43:3(a)(i)",
+  "kind": "past-paper",
+  "title": "LinkedList object references and removal",
+  "source": {
+    "paper": "9618_s25_43",
+    "rows": [
+      "9618_s25_43:3(a)(i)",
+      "9618_s25_43:3(a)(ii)",
+      "9618_s25_43:3(a)(iii)",
+      "9618_s25_43:3(b)(i)",
+      "9618_s25_43:3(b)(ii)",
+      "9618_s25_43:3(b)(iii)",
+      "9618_s25_43:3(b)(iv)",
+      "9618_s25_43:3(c)(i)",
+      "9618_s25_43:3(c)(ii)"
+    ]
+  },
+  "marks": 29,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-LT-02",
+    "P4-LT-01",
+    "P4-OP-07",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "boolean-return",
+    "class-definition",
+    "constructor",
+    "data-types",
+    "getter-setter",
+    "initialise-variables",
+    "linked-list",
+    "method-call",
+    "module-header",
+    "object-instantiation",
+    "object-reference",
+    "output-format",
+    "pre-condition-loop",
+    "relational-ops",
+    "return-value",
+    "string-concat",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

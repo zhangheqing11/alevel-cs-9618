@@ -1315,10 +1315,172 @@
       "qp_over_ms": [
         "接口照 QP：`Animal(Name,Sound,Size,Intelligence)`、`Parrot(...,WingSpan,NumberWords)`、`Wolf(...,TerritorySize)`、`Description()` 返回字符串。`SetTerritorySize(Change)` 虽叫 Set，QP 类图和 MS 都要求“加上参数”，负参数用于减少。MS p.42 Wolf.Description 把 Message 赋成 self.Sound、拼接缺项，且写成 it's territory；按 QP p.11 的完整句式修正为“. Its territory is … square miles.”。其他长字符串在 PDF 里跨行，参考解用合法的分段拼接。此题没有私有属性要求，照 MS 用公有属性，不强制学生改成私有。不测试 1–10 以外的 size/intelligence，QP 未要求校验。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s25_43_q3",
+      "id": "9618_s25_43:3(a)(i)",
+      "paper": "9618_s25_43",
+      "marks": 29,
+      "auto_marks": 22.0,
+      "manual_marks": 7.0,
+      "auto_share": 0.7586,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-LT-02",
+        "P4-LT-01",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_43:3(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            4
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:3(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:3(a)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:3(b)(i)",
+          "marks": 2,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:3(b)(ii)",
+          "marks": 4,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s25_43:3(b)(iii)",
+          "marks": 3,
+          "primary": "P4-LT-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s25_43:3(b)(iv)",
+          "marks": 6,
+          "primary": "P4-LT-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s25_43:3(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s25_43:3(c)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 6,
+      "qp_pages_checked": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "ms_pages_checked": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "qp_over_ms": [
+        "接口照 QP：`Node(Data)`、`LinkedList()`、`InsertNode(integer)`、`Traverse()` 返回空格分隔字符串、`RemoveNode(integer)` 返回真正的 BOOLEAN。末尾多一个空格按 MS 范例接受，内部整数间一个空格。MS p.41 Python 在尾结点访问 NextNode.GetData 会遇 None，且非头删除与找不到时没有返回 BOOLEAN；按 QP 修正为先查下一结点是否非空，再分别返回 True / False。MS p.44 只保存两次 Traverse 返回值，没有 print；QP 截图格与 MS p.45 要求输出两组列表，所以参考解补输出。3(b)(iv) 7 个可选点最多 6 分。"
+      ]
     }
   ],
-  "count": 8,
-  "marks": 234,
-  "auto_marks": 191.642857,
-  "manual_marks": 42.357143
+  "count": 9,
+  "marks": 263,
+  "auto_marks": 213.642857,
+  "manual_marks": 49.357143
 }
