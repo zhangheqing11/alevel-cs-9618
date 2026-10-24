@@ -733,6 +733,129 @@
       ],
       "qp_over_ms": "- MS p.18 Python 2(a) 的 HeadPointer/TailPointer 少 self.，只会创建局部变量；参考解按 p.19 完整范例修正为对象字段。\n- MS p.26 Python Dequeue 条件使用单等号 `=`，不能运行；参考解修为 `==` 语义。\n- 2(g)(ii) QP 测试串不含 -1，MS p.30 截图沿用含 -1 的 2(e)(ii) 串；自动测试分别用各自 QP 串，返回值同为 10、9。\n- 2(c) QP 的三处空白保留，人工核对时用 MS p.20 的 TheData / 99 / + 1；Python 对象传参无需真的返回对象，但允许 MS 的双返回接口。",
       "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q1",
+      "id": "9618_w25_41:1(a)",
+      "paper": "9618_w25_41",
+      "marks": 20,
+      "auto_marks": 19.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.95,
+      "types": [
+        "P4-SQ-01",
+        "P4-MP-02",
+        "P4-SQ-04",
+        "P4-AR-05",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:1(b)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(c)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(d)",
+          "marks": 4,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:1(e)",
+          "marks": 4,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:1(f)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_41:1(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 3,
+      "tests": 5,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
+      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。"
     }
   ]
 }
