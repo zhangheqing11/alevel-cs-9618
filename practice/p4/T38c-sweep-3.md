@@ -82,3 +82,18 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - equivalent_footer.py: 11 passed in 0.11s
 
 自动分 27.0 → 27.0；占比 81.82% → 81.82%。
+
+## 9618_s24_42_q2
+
+主程序只核对数字，新增 InsertNode 七次 Node 参数顺序和 OutputTree/getter。输出数字改子序列；No nodes 允许附带说明。20 格为 QP 明确容量，保持。
+
+本轮逐行核对本题配对 MS（15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 7 passed in 0.14s；修后与等价改写：
+
+- mutant_1.py: 1 failed, 8 passed in 0.11s
+- mutant_2.py: 5 failed, 4 passed in 0.10s
+- mutant_hollow_main.py: 2 failed, 7 passed in 0.10s
+- solution.py: 9 passed in 0.07s
+- equivalent_banner.py: 9 passed in 0.07s
+- equivalent_footer.py: 9 passed in 0.07s
+
+自动分 23.142857 → 23.1429；占比 77.14% → 77.14%。

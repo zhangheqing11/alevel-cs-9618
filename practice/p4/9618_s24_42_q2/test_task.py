@@ -48,10 +48,10 @@ def test_2b_ii_deep_tree_twenty_nodes(sol,data):
 def test_2b_iii_empty_and_populated_output(sol,capsys):
     """9618_s24_42:2(b)(iii) MP1-MP4: empty message, insertion order, getters."""
     tree=sol.TreeClass();tree.OutputTree()
-    assert capsys.readouterr().out.strip()=="No nodes"
+    assert "No nodes" in capsys.readouterr().out
     for value in [10,11,5,1,20,7,15]: tree.InsertNode(sol.Node(value))
     tree.OutputTree()
-    assert [int(v) for v in re.findall(r"-?\d+",capsys.readouterr().out)]==[v for row in EXPECTED for v in row]
+    assert contains_values(capsys.readouterr().out, [v for row in EXPECTED for v in row])
 
 def test_2c_i_main_identifier(candidate_path,capsys):
     """9618_s24_42:2(c)(i) whole: TreeClass instance called TheTree."""
@@ -62,4 +62,25 @@ def test_2c_iii_screenshot(candidate_path):
     """9618_s24_42:2(c)(ii) MP1-MP4; 2(c)(iii) whole: seven left/data/right rows in MS p.27."""
     result=run_script(candidate_path)
     assert result.returncode==0,result.stderr
-    assert [int(v) for v in re.findall(r"-?\d+",result.stdout)]==[v for row in EXPECTED for v in row]
+    assert contains_values(result.stdout, [v for row in EXPECTED for v in row])
+
+
+def contains_values(text, expected):
+    """D31/D46: compare required values in order, allowing explanatory text."""
+    values = iter(float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", text))
+    return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
+
+
+def test_2main_call_chain(candidate_path, exercise_dir):
+    """9618_s24_42:2(c)(ii) MS p.26; 9618_s24_42:2(b)(iii) MS p.24: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    inserts = r.called("InsertNode")
+    assert len(inserts) == 7
+    assert [list(c.args.values())[0].GetData() for c in inserts] == [10,11,5,1,20,7,15]
+    assert r.called("OutputTree")
+    assert any(c.name.endswith("GetLeft") for c in r.calls)
+    assert any(c.name.endswith("GetRight") for c in r.calls)
+    assert any(c.name.endswith("GetData") for c in r.calls)
