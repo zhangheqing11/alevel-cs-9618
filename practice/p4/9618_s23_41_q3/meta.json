@@ -1,0 +1,52 @@
+{
+  "id": "9618_s23_41:3(a)",
+  "kind": "past-paper",
+  "title": "双栈动物与颜色配对",
+  "source": {
+    "paper": "9618_s23_41",
+    "rows": [
+      "9618_s23_41:3(a)",
+      "9618_s23_41:3(b)(i)",
+      "9618_s23_41:3(b)(ii)",
+      "9618_s23_41:3(b)(iii)",
+      "9618_s23_41:3(b)(iv)",
+      "9618_s23_41:3(b)(v)",
+      "9618_s23_41:3(c)",
+      "9618_s23_41:3(d)(i)",
+      "9618_s23_41:3(d)(ii)"
+    ]
+  },
+  "marks": 25,
+  "types": [
+    "P4-SQ-01",
+    "P4-FL-01",
+    "P4-SQ-04",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "boolean-return",
+    "data-types",
+    "declare-array",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "global-scope",
+    "initialise-variables",
+    "loop-to-eof",
+    "module-header",
+    "nested-if",
+    "output-format",
+    "procedure-call",
+    "return-value",
+    "stack-array"
+  ],
+  "pseudocode": false,
+  "files": [
+    "AnimalData.txt",
+    "ColourData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

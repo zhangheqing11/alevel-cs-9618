@@ -276,6 +276,214 @@
         12
       ],
       "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。"
+    },
+    {
+      "directory": "practice/p4/9618_s23_41_q3",
+      "id": "9618_s23_41:3(a)",
+      "paper": "9618_s23_41",
+      "marks": 25,
+      "auto_marks": 24.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.96,
+      "types": [
+        "P4-SQ-01",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_41:3(a)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3a_declarations"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(i)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(ii)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(iii)",
+          "marks": 5,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 4.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_3b_read_files",
+            "test_3b_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(iv)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(v)",
+          "marks": 2,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_read_files",
+            "test_3b_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(c)",
+          "marks": 5,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3c_output_pair",
+            "test_3c_restores_unmatched_item",
+            "test_3c_both_empty_does_not_create_item"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(d)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "AnimalData.txt",
+          "bytes": 60,
+          "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/AnimalData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "ColourData.txt",
+          "bytes": 66,
+          "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/ColourData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        8,
+        9,
+        10
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。"
     }
   ]
 }
