@@ -13,6 +13,9 @@
   rows.py find [--paper 9618_s24_22] [--type P2-XX-04] [--skill file-close] [--grep TEXT] [--ms]
   rows.py ex 9618_s24_22:6(a)
       practice folders whose meta.json covers this leaf
+  rows.py card P4-SQ-02 | P4-SQ [--core]
+      one type card, or a chapter overview (核心思想, 题型树, 本章易混辨析), from the built handbook in
+      output/p<N>/; --core prints that chapter of the concept table (P1/P3) or pseudocode-Python sheet (P2/P4)
 
 Default: never print MS text unless --ms is given (the learner must not see it before answering).
 Run from the repo root, or pass --root. Sources: $ALEVEL_CS_SOURCES or the default path below.
@@ -307,6 +310,57 @@ def cmd_find(args, root) -> int:
     return 0
 
 
+HANDBOOK = {1: "P1题型手册.md", 2: "P2题型手册.md", 3: "P3题型手册.md", 4: "P4题型手册.md"}
+CORE = {1: "P1核心概念.md", 2: "P2伪代码与Python对照.md", 3: "P3核心概念.md", 4: "P4伪代码与Python对照.md"}
+CARD_NOTE = ("（导师须知：「下一道变式」括号里是给导师的备注，常含答案要点或 MS 细节——布置变式时只给题号与题面；"
+             "「代表题精讲」直接讲，不先让学生做。）")
+
+
+def section(lines: list[str], start_re: str, stop_re: str) -> list[str]:
+    """Lines from the first match of start_re up to (not including) the next match of stop_re.
+    Headings inside ``` code fences (e.g. a Python comment `# ---- 1(a) ----`) are not headings."""
+    out, on, fence = [], False, False
+    for line in lines:
+        if line.lstrip().startswith("```"):
+            fence = not fence
+        elif not fence and not on and re.match(start_re, line):
+            on = True
+        elif not fence and on and re.match(stop_re, line):
+            break
+        if on:
+            out.append(line)
+    return out
+
+
+def cmd_card(args, root) -> int:
+    m = re.match(r"^P([1-4])-([A-Z]{2})(?:-(\d{2}))?$", args.code)
+    if not m:
+        raise RowsError(f"not a type or chapter code: {args.code!r} (e.g. P4-SQ-02, or P4-SQ for the chapter)")
+    comp, chap, num = int(m.group(1)), m.group(2), m.group(3)
+    out_dir = root / "output" / f"p{comp}"
+    name = CORE[comp] if args.core else HANDBOOK[comp]
+    path = out_dir / name
+    if not path.exists():
+        raise RowsError(f"{path.relative_to(root)} missing — run `make build` (or `python3 build/build.py all`)")
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if args.core:
+        body = section(lines, rf"^## {chap}\b", r"^## ")
+    elif num:
+        body = section(lines, rf"^### {re.escape(args.code)}\b", r"^##?#? ")
+    else:   # chapter overview: intro, 核心思想, 题型树 (with stats), then 本章易混辨析
+        chapter = section(lines, rf"^## {chap}\b", r"^## ")
+        intro = section(chapter, rf"^## {chap}\b", rf"^### P{comp}-")
+        contrast = section(chapter, r"^### 本章易混辨析", r"^### ")
+        body = intro + ([""] if contrast else []) + contrast
+    if not body:
+        raise RowsError(f"{args.code} not found in {path.relative_to(root)}")
+    print("\n".join(body).rstrip())
+    if num and not args.core:
+        print("\n" + CARD_NOTE)
+    print(f"\n[{path.relative_to(root)}]")
+    return 0
+
+
 def cmd_ex(args, root) -> int:
     hits = []
     for meta in sorted((root / "practice").rglob("meta.json")) if (root / "practice").is_dir() else []:
@@ -349,11 +403,15 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--ms", action="store_true")
     p = sub.add_parser("ex", help="practice folders covering a leaf")
     p.add_argument("row_id")
+    p = sub.add_parser("card", help="one type card (P4-SQ-02) or a chapter overview (P4-SQ) from the built handbook")
+    p.add_argument("code")
+    p.add_argument("--core", action="store_true",
+                   help="with a chapter code: that chapter of the concept table / pseudocode-Python sheet")
     args = ap.parse_args(argv)
     try:
         root = find_root(args.root)
         return {"get": cmd_get, "files": cmd_files, "render": cmd_render, "drills": cmd_drills,
-                "find": cmd_find, "ex": cmd_ex}[args.cmd](args, root)
+                "find": cmd_find, "ex": cmd_ex, "card": cmd_card}[args.cmd](args, root)
     except RowsError as e:
         print(f"✗ {e}", file=sys.stderr)
         return 1
