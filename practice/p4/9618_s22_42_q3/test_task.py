@@ -69,3 +69,15 @@ def test_3e_ii_both_screenshots(candidate_path, exercise_dir):
             for i in range(pos, len(words)-1):
                 if words[i:i+2] in ([colour,number], [number,colour]): pos=i+2; break
             else: raise AssertionError((colour,number,result.stdout))
+
+
+def test_3main_call_chain(candidate_path, exercise_dir):
+    """9618_s22_42:3(e)(i) MS p.34: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='1\n5\n9\n30\n', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    choices = r.called("ChooseCard")
+    assert [c.result for c in choices] == [0,4,8,29]
+    assert len(r.called("GetNumber")) >= 4 and len(r.called("GetColour")) >= 4
+    assert all(str(c.result) in r.stdout for c in r.called("GetNumber") + r.called("GetColour"))

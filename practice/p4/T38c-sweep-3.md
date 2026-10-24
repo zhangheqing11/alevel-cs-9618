@@ -37,3 +37,18 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - equivalent_footer.py: 12 passed in 0.16s
 
 自动分 20.2 → 19.2；占比 80.80% → 76.80%。
+
+## 9618_s22_42_q3
+
+原通过 runpy 验证 Player1 状态但没有真测 ChooseCard/getter 调用；新增四次选择返回下标与 getter 输出链。
+
+本轮逐行核对本题配对 MS（25, 27, 28, 29, 31, 32, 34, 35, 36 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：3 failed, 3 passed in 0.15s；修后与等价改写：
+
+- mutant_1.py: 2 failed, 5 passed in 0.14s
+- mutant_2.py: 4 failed, 3 passed in 0.11s
+- mutant_hollow_main.py: 4 failed, 3 passed in 0.09s
+- solution.py: 7 passed in 0.09s
+- equivalent_banner.py: 7 passed in 0.09s
+- equivalent_footer.py: 7 passed in 0.09s
+
+自动分 22.3 → 22.3；占比 82.59% → 82.59%。

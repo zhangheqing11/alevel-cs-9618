@@ -135,7 +135,7 @@
 | Part 3(b) | 9618_s22_42:3(b) | 3 | 代码 | `test_3b_both_getters` · MP2, MP3 | MP1 |
 | Part 3(c) | 9618_s22_42:3(c) | 7 | 代码 | `test_3c_reads_all_cards_and_3e_player` / `test_3c_missing_file_message` · MP1, MP2, MP3, MP4, MP5, MP6, MP7, MP8, MP9 | MP10 |
 | Part 3(d) | 9618_s22_42:3(d) | 6 | 代码 | `test_3d_validation_and_duplicate_rejection` · MP1, MP2, MP3, MP4, MP5, MP6, MP7, MP8, MP9 | — |
-| Part 3(e)(i) | 9618_s22_42:3(e)(i) | 5 | 代码 | `test_3c_reads_all_cards_and_3e_player` / `test_3e_ii_both_screenshots` · MP1, MP2, MP3, MP4, MP5 | — |
+| Part 3(e)(i) | 9618_s22_42:3(e)(i) | 5 | 代码 | `test_3main_call_chain` / `test_3c_reads_all_cards_and_3e_player` / `test_3e_ii_both_screenshots` · MP1, MP2, MP3, MP4, MP5 | — |
 | Part 3(e)(ii) | 9618_s22_42:3(e)(ii) | 1 | 截图 | `test_3e_ii_both_screenshots` · 整行 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。

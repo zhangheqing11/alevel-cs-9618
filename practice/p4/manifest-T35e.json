@@ -262,8 +262,8 @@
           "sha256_matches_source_files_p4": true
         }
       ],
-      "mutants": 2,
-      "tests": 6,
+      "mutants": 3,
+      "tests": 7,
       "qp_pages_checked": [
         7,
         8,
