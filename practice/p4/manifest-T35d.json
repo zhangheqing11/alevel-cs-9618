@@ -1009,6 +1009,138 @@
       ],
       "qp_over_ms": "- MS p.30 Python InsertData 缺成功后的 break/return，会把一个记录写满该桶；参考解按 QP p.10 的“下一空格”要求，在写入一次后退出。\n- MS p.32 ReadData 先把 Line.strip() 赋给 Data，下一行却又用 Line.split() 覆盖，保留换行；参考解对去掉行尾后的文本 split。同时补上 MS MP6 的文件异常处理（范例漏写不等于该点不要求）。\n- HashTable 按 D10 ① 在导入时已有真实 100×10 格；InitialiseHashTable 再填空记录，不只声明空 list。\n- MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。",
       "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_42_q3",
+      "id": "9618_w25_42:3(a)",
+      "paper": "9618_w25_42",
+      "marks": 21,
+      "auto_marks": 19.2,
+      "manual_marks": 1.8,
+      "auto_share": 0.9143,
+      "types": [
+        "P4-LT-03",
+        "P4-FL-01",
+        "P4-FL-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_42:3(a)",
+          "marks": 3,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:3(b)",
+          "marks": 7,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_w25_42:3(c)",
+          "marks": 4,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_w25_42:3(d)",
+          "marks": 5,
+          "primary": "P4-FL-03",
+          "auto_mps": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_42:3(e)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "TreeData.txt",
+          "bytes": 142,
+          "sha256": "883d863da0888afc902c28bb87b8f039e07d632c6052bff2c28c68eeec2cab93",
+          "source": "9618_w25_sf_42/TreeData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        10,
+        11,
+        12
+      ],
+      "ms_pages_checked": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "qp_over_ms": "- Python AddNode 范例与 QP 一致，参考解保留其插入逻辑。\n- MS pp.35–36 Java/Python 写文件用追加模式，QP 只要求 new text file 且首次未提供；参考解用 w 创建文件，测试只检查首次写入，不裁决 QP 未要求的重复导出策略。\n- 3(d) 异常测试让 Tree.txt 路径成为目录，真实触发打开错误，不要求某种 try/except 写法。",
+      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。"
     }
   ]
 }
