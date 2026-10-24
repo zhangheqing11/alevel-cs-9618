@@ -143,10 +143,151 @@
       "qp_over_ms": [
         "接口：`Balloon(DefenceItem, Colour)`、`GetDefenceItem()`、`ChangeHealth(Change)`、`CheckHealth()`、`Defend(MyBalloon)`。MS p.25 原页 Python 把 `ChangeHealth` 印成 `VhangeHealth`，参考解修正为题干方法名。提示语和状态文字不固定；测试只要求输出盾牌名称及状态行，人工核对该状态表示仍有生命值。主程序接收返回对象的赋值与 Balloon1 名称人工补核。2(f) 有 10 个可选点最多 8 分，按比例折算。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s22_42_q3",
+      "id": "9618_s22_42:3(a)",
+      "paper": "9618_s22_42",
+      "marks": 27,
+      "auto_marks": 22.3,
+      "manual_marks": 4.7,
+      "auto_share": 0.8259,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-FL-02",
+        "P4-PR-01",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_42:3(a)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            3,
+            5
+          ],
+          "manual_mps": [
+            1,
+            2,
+            4
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s22_42:3(b)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s22_42:3(c)",
+          "marks": 7,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "manual_mps": [
+            10
+          ],
+          "auto_marks": 6.3
+        },
+        {
+          "id": "9618_s22_42:3(d)",
+          "marks": 6,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s22_42:3(e)(i)",
+          "marks": 5,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s22_42:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [
+        {
+          "name": "CardValues.txt",
+          "bytes": 296,
+          "sha256": "15615efefcf39ca97e8599eeff965f3bd7f49c12d4bb268101588e83f954dd34",
+          "source": "9618_s22_sf_42/06_9618_42_Confidential Source Files June 2022/CardValues.txt",
+          "sha256_matches_source_files_p4": true
+        }
+      ],
+      "mutants": 2,
+      "tests": 6,
+      "qp_pages_checked": [
+        7,
+        8,
+        9
+      ],
+      "ms_pages_checked": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "qp_over_ms": [
+        "接口取 QP 的 `ChooseCard()`（大写 C），用 MS 的全局 `NumbersChosen` 保存 30 个 BOOLEAN；返回 0–29 下标。`CardArray` 与 `Player1` 在主程序建立，测试运行完整入口后读取这两个数组。MS p.32 的 `chooseCard` / `true` / `NumbersChosen(...)` 分别修为 `ChooseCard` / `True` / 方括号下标；p.29 的 `File.close` 改为 `with` 自动关闭，去掉颜色行的换行。MS p.35 测试 2 将 white 误写为 while，按 QP 数据文件输出 white。输出可为“数字 颜色”或“颜色 数字”，同一张牌可分两行。3(c) 10 个可选点最多 7 分，3(d) 9 个可选点最多 6 分。缺文件测试在读取阶段后停止，避免对 QP 未规定的后续选择作要求。"
+      ]
     }
   ],
-  "count": 1,
-  "marks": 25,
-  "auto_marks": 20.2,
-  "manual_marks": 4.8
+  "count": 2,
+  "marks": 52,
+  "auto_marks": 42.5,
+  "manual_marks": 9.5
 }

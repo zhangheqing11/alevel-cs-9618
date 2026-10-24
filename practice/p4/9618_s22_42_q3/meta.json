@@ -1,0 +1,60 @@
+{
+  "id": "9618_s22_42:3(a)",
+  "kind": "past-paper",
+  "title": "Card selection without replacement",
+  "source": {
+    "paper": "9618_s22_42",
+    "rows": [
+      "9618_s22_42:3(a)",
+      "9618_s22_42:3(b)",
+      "9618_s22_42:3(c)",
+      "9618_s22_42:3(d)",
+      "9618_s22_42:3(e)(i)",
+      "9618_s22_42:3(e)(ii)"
+    ]
+  },
+  "marks": 27,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-FL-02",
+    "P4-PR-01",
+    "P4-OP-07",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "array-of-objects",
+    "assign-value",
+    "class-definition",
+    "constructor",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "encapsulation",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "getter-setter",
+    "input-prompt",
+    "input-validation",
+    "loop-to-eof",
+    "method-call",
+    "module-header",
+    "object-instantiation",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "read-line-groups",
+    "relational-ops",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "CardValues.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}
