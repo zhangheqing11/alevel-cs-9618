@@ -114,10 +114,10 @@ MS 2(b)(i) 的三行没有编号：语料 MP1 = “One mark for each gap (5)”�
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a)(i) | 9618_w23_42:2(a)(i) | 5 | 代码 | `test_2a_iterativecalculate_totals_divisors` · MP2–MP4；`test_2a_iterativecalculate_is_iterative` · MP2（仅检查无递归） | MP1 函数头带参数；MP5 与伪代码结构一致 |
-| Part 2(a)(ii) | 9618_w23_42:2(a)(ii) | 2 | 代码 | `test_2a_screenshot_outputs_18` · MP1–MP2 | 参数是 10 |
+| Part 2(a)(ii) | 9618_w23_42:2(a)(ii) | 2 | 代码 | `test_2a_screenshot_outputs_18` · MP1–MP2；`test_2aii_2bii_traced_main` · 实际调用、参数与数据链（D46） | 参数是 10 |
 | Part 2(a)(iii) | 9618_w23_42:2(a)(iii) | 1 | 截图 | `test_2a_screenshot_outputs_18` · 输出 18 | 截图清晰 |
 | Part 2(b)(i) | 9618_w23_42:2(b)(i) | 7 | 代码 | `test_2b_recursivevalue_totals_divisors` · MP1（空 1–3）；`test_2b_recursivevalue_keeps_tofind` · MP1（空 4–5）；`test_2b_recursivevalue_is_recursive` · MP2 | MP3 其余部分照伪代码、没有多余内容；五个空的写法 |
-| Part 2(b)(ii) | 9618_w23_42:2(b)(ii) | 1 | 代码 | `test_2b_screenshot_outputs_93` · 调用并输出 | 参数是 50、50 |
+| Part 2(b)(ii) | 9618_w23_42:2(b)(ii) | 1 | 代码 | `test_2b_screenshot_outputs_93` · 调用并输出；`test_2aii_2bii_traced_main` · 实际调用、参数与数据链（D46） | 参数是 50、50 |
 | Part 2(b)(iii) | 9618_w23_42:2(b)(iii) | 1 | 截图 | `test_2b_screenshot_outputs_93` · 输出 93 | 截图清晰 |
 
 按分值：行为可自动测 14 分，只能人工核对 3 分（2(a)(i) MP1 函数头、MP5 “Remainder of function correct” 整体结构，及 2(b)(i) MP3 “nothing superfluous”）。续做按交接的纯结构点归人工口径修正；行为测试不能单独证明完整结构正确。
@@ -128,3 +128,9 @@ MS 2(b)(i) 的三行没有编号：语料 MP1 = “One mark for each gap (5)”�
 - [ ] 2(b)(i) MP1 五个空：`0`、`MODULUS`、`Number`、`RETURN`、`ToFind`（MS p.19）；MP2：两处递归调用都正确且位置对；MP3：其余部分照伪代码，没有多余内容。
 - [ ] 2(a)(ii)、2(b)(ii)：主程序分别输出 `IterativeCalculate(10)` 与 `RecursiveValue(50, 50)` 的返回值。
 - [ ] 截图格：2(a)(iii) 显示 18；2(b)(iii) 显示 93。
+
+### T38c1 · D46 调用与输出核验
+
+原主程序只查 18、93，补测 IterativeCalculate(10)、RecursiveValue(50,50) 的实际调用、参数、返回结果与顺序。保留正确的输出子序列和指定递归过程验证，无新增严格格式限制。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
