@@ -15,7 +15,7 @@ F06：复现空壳主程序旧测试 17 passed；新增三份文件 ReadData(Fil
 
 ## 9618_w24_41_q3
 
-F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。
+F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。补核 MS p.26 min 20×2，接受额外分配但逻辑链仍用前 20 结点；25×3 等价正确数组通过。
 
 - 调用观测：`test_3c_ii_3d_ii_main_call_chain`。
 - 原页：该题同卷 QP / MS（本次复核页见后续正文；原 T35 页清单保留于 manifest）。

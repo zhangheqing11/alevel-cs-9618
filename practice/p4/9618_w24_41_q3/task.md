@@ -155,7 +155,7 @@
 
 ## Python 接口与测试约定
 
-- 全局 `LinkedList` 为 20×2 整数 list，列 0 是数据，列 1 是下一指针；`FirstNode=-1`，`FirstEmpty=0`。`InsertData()`、`OutputLinkedList()`、`RemoveData(ItemToRemove)` 使用题给名字。
+- 全局 `LinkedList` 至少为 20×2 整数 list（逻辑链使用题目给定的前 20 个结点），列 0 是数据，列 1 是下一指针；`FirstNode=-1`，`FirstEmpty=0`。`InsertData()`、`OutputLinkedList()`、`RemoveData(ItemToRemove)` 使用题给名字。
 - InsertData 每次最多插入五个正整数，满时结束；测试不添加 QP 未要求的正整数输入校验。
 - 删除参数保证存在（QP 明示），不测找不到的情况。回收结点可接在空闲链头或尾；测试按链遍历核对两条链恰好覆盖 20 格，不强迫某一种合法的回收顺序。是否把回收结点数据清成 -1 不作限制（MS 头删除范例不清数据）。
 - 输出数据的换行/空格不限；主程序 After 前后应是链顺序，允许带数字的说明文字，按要求数据的顺序匹配。无数据文件。

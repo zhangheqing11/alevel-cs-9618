@@ -27,7 +27,9 @@ def check_partition(sol):
 def test_3a_initial_free_list(sol):
     """9618_w24_41:3(a) MP1-MP2: all 20 nodes, terminating -1 and initial pointers."""
     assert sol.FirstNode == -1 and sol.FirstEmpty == 0
-    assert sol.LinkedList == [[-1, i + 1] for i in range(19)] + [[-1, -1]]
+    assert isinstance(sol.LinkedList, list) and len(sol.LinkedList) >= 20
+    assert all(isinstance(row, list) and len(row) >= 2 for row in sol.LinkedList[:20])
+    assert [row[:2] for row in sol.LinkedList[:20]] == [[-1, i + 1] for i in range(19)] + [[-1, -1]]
 
 
 def test_3b_insert_five_at_front(sol, monkeypatch):
