@@ -108,11 +108,11 @@ One source file is used to answer Question 1. The file is called Data.txt
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_w24_41:1(a) | 6 | 代码 | `test_1a_readdata_returns_all_45_items` · MP2、MP4–MP6；`test_1a_readdata_closes_file` · MP3；`test_1a_missing_file_is_handled` · MP7 | MP1 函数头；MP2 数组注释（STRING、45）；MP3 关闭的位置 |
 | Part 1(b)(i) | 9618_w24_41:1(b)(i) | 2 | 代码 | `test_1b_formatarray_joins_with_spaces` · MP2 | MP1 函数头带参数 |
-| Part 1(b)(ii) | 9618_w24_41:1(b)(ii) | 3 | 代码 | `test_1b_screenshot_all_colours_in_one_string` · MP1–MP3 | 返回的数组存进变量再传入 |
+| Part 1(b)(ii) | 9618_w24_41:1(b)(ii) | 3 | 代码 | `test_1b_screenshot_all_colours_in_one_string` · MP1–MP3；`test_1bii_1dii_traced_main` · 实际调用、参数与数据链（D46） | 返回的数组存进变量再传入 |
 | Part 1(b)(iii) | 9618_w24_41:1(b)(iii) | 1 | 截图 | `test_1b_screenshot_all_colours_in_one_string` · 45 个颜色在一行 | 截图清晰 |
 | Part 1(c) | 9618_w24_41:1(c) | 4 | 代码 | `test_1c_comparestrings_returns_1_or_2` · MP1、MP3–MP4；`test_1c_compares_one_character_at_a_time` · MP2 | MP1 函数头；每种情况都有返回值 |
 | Part 1(d)(i) | 9618_w24_41:1(d)(i) | 3 | 代码 | `test_1d_bubble_sorts_official_data` · MP1、MP3；`test_1d_bubble_reverse_order` · MP3；`test_1d_bubble_uses_comparestrings` · MP2 | MP1 函数头；确实是冒泡排序 |
-| Part 1(d)(ii) | 9618_w24_41:1(d)(ii) | 2 | 代码 | `test_1d_screenshot_sorted_data` · MP1–MP2 | 用 `Bubble()` 的返回值调用 `FormatArray()` |
+| Part 1(d)(ii) | 9618_w24_41:1(d)(ii) | 2 | 代码 | `test_1d_screenshot_sorted_data` · MP1–MP2；`test_1bii_1dii_traced_main` · 实际调用、参数与数据链（D46） | 用 `Bubble()` 的返回值调用 `FormatArray()` |
 | Part 1(d)(iii) | 9618_w24_41:1(d)(iii) | 1 | 截图 | `test_1d_screenshot_sorted_data` · 排好序的一行 | 截图清晰 |
 
 得分点分值 23（1(a) 7 点封顶 6 分）：行为可自动测 21，只能人工核对 2（1(a) MP1、1(b)(i) MP1 的函数头）。
@@ -126,3 +126,9 @@ One source file is used to answer Question 1. The file is called Data.txt
 - [ ] 1(d)(i)：数组作参数、返回排好的数组；比较用 `CompareStrings()`，结果为 2 时交换；外层、内层循环正确。
 - [ ] 1(d)(ii)：`Bubble()` 的返回值存起来或直接传给 `FormatArray()` 并输出。
 - [ ] 截图格：1(b)(iii) 一行显示全部 45 个颜色（原顺序）；1(d)(iii) 一行显示排好序的颜色（`amber aqua azure … violet white yellow`）。
+
+### T38c1 · D46 调用与输出核验
+
+新增 ReadData 返回数组 → FormatArray，以及 Bubble 返回数组 → FormatArray 的实际调用/参数/结果检查。截图原先要求颜色行整行完全一致，改为行内包含指定字符串并检查先后，接受额外说明。明确存入某变量等语法仍人工补核。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
