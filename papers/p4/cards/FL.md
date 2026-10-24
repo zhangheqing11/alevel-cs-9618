@@ -49,7 +49,7 @@ def ReadData():
 - 「Returning populated array」⟦9618_s25_41:2(a)⟧
 - 「Exception handling try catch with appropriate output」⟦9618_s25_41:2(a)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 14 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 14 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -202,7 +202,7 @@ def ReadPairs(FileName):
 - 「… casting height growth, max height and max width to integers」⟦9618_s24_41:2(b)⟧
 - 「… creating a new object of type Tree with the 5 values」⟦9618_s24_41:2(b)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 11 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 11 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -371,7 +371,7 @@ def StoreData(DataToStore, FileName):
 - 「… with new line break between each line」⟦9618_s25_41:2(c)⟧
 - 「Using exception handling try and catch with suitable output」⟦9618_s25_41:2(c)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 4 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 4 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|

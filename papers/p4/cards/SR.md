@@ -41,7 +41,7 @@ def LinearSearch(DataArray, DataToFind):
 - 「Looping through each array element and keeping count of the number of times the parameter appears」⟦9618_s23_41:1(c)⟧
 - 「Returning the calculated count value」⟦9618_s23_41:1(c)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 5 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 5 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -166,7 +166,7 @@ def BinarySearch(A, Target):
 - 「If DataToFind > mid, updating First/Lower with mid + 1 inside loop」⟦9618_s24_41:1(e)(i)⟧
 - 「Returning -1 when not found and a suitable loop with end criteria」⟦9618_s24_41:1(e)(i)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 5 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 5 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -309,7 +309,7 @@ def BubbleSort(DataArray):
 - 「… comparing elements and swapping into ascending order」⟦9618_w25_42:2(c)⟧
 - 「Sort must work for array of any length i.e. loops for length of parameter array」⟦9618_w25_42:2(c)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 8 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 8 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -460,7 +460,7 @@ def InsertionSort(DataArray):
 - 「… moving elements in sorted list」⟦9618_s25_43:2(b)⟧
 - 「… and inserting element in correct position (ascending order)」⟦9618_s25_43:2(b)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 6 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 6 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|

@@ -46,7 +46,7 @@ def RecursiveCount(ArrayCopy, NumberElements, DataToFind):
 - 「… if no match return recursive call without adding 1」⟦9618_w25_43:3(a)(i)⟧
 - 「… all recursive calls have array without first element, NumberElements-1 and DataToFind」⟦9618_w25_43:3(a)(i)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 2 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 2 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
@@ -168,7 +168,7 @@ def RecursiveVowels(Value):
 - 「… if it is a vowel, returning 1 + recursive call with 1 less character」⟦9618_w23_41:1(b)(i)⟧
 - 「… if not a vowel, return recursive call with 1 less character」⟦9618_w23_41:1(b)(i)⟧
 
-**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 2 行，均已拆点。下表列出现行数最多的 8 个标签；同次数按标签名排序，不把行数当分值。）
+**得分点地图**（核验语料 2022–2026s、主题型行、去掉 `equivalent_of`；同一行同一标签计一次；s26 只进计数。本型 2 行，均已拆点。下表最多列 8 个覆盖行数较多的标签；同次数按标签名排序，不把行数当分值。）
 
 | 技能标签 | 行数 |
 |:--|--:|
