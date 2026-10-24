@@ -1,0 +1,59 @@
+{
+  "id": "9618_w25_41:3(a)",
+  "kind": "past-paper",
+  "title": "二维哈希桶与公开记录对象",
+  "source": {
+    "paper": "9618_w25_41",
+    "rows": [
+      "9618_w25_41:3(a)",
+      "9618_w25_41:3(b)",
+      "9618_w25_41:3(c)",
+      "9618_w25_41:3(d)",
+      "9618_w25_41:3(e)",
+      "9618_w25_41:3(f)",
+      "9618_w25_41:3(g)(i)",
+      "9618_w25_41:3(g)(ii)"
+    ]
+  },
+  "marks": 25,
+  "types": [
+    "P4-OP-01",
+    "P4-LT-05",
+    "P4-FL-02",
+    "P4-MP-02",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "class-definition",
+    "constructor",
+    "array-2d",
+    "declare-array",
+    "array-of-objects",
+    "module-header",
+    "nested-loops",
+    "initialise-variables",
+    "return-value",
+    "div-mod",
+    "hash-table",
+    "procedure-call",
+    "linear-search",
+    "file-open-read",
+    "file-close",
+    "loop-to-eof",
+    "field-extract",
+    "object-instantiation",
+    "type-conversion",
+    "exception-handling",
+    "output-format",
+    "input-prompt",
+    "count-loop",
+    "test-input-sequence",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [
+    "HashTableData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

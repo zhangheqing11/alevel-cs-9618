@@ -856,6 +856,159 @@
       ],
       "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
       "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。"
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q3",
+      "id": "9618_w25_41:3(a)",
+      "paper": "9618_w25_41",
+      "marks": 25,
+      "auto_marks": 22.1667,
+      "manual_marks": 2.8333,
+      "auto_share": 0.8867,
+      "types": [
+        "P4-OP-01",
+        "P4-LT-05",
+        "P4-FL-02",
+        "P4-MP-02",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:3(a)",
+          "marks": 2,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_41:3(b)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:3(c)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:3(d)",
+          "marks": 4,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:3(e)",
+          "marks": 5,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.166667
+        },
+        {
+          "id": "9618_w25_41:3(f)",
+          "marks": 5,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w25_41:3(g)(i)",
+          "marks": 3,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:3(g)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [
+        {
+          "name": "HashTableData.txt",
+          "bytes": 2554,
+          "sha256": "922b71fc41586e22993821383b1f017610ee23da881b8eb2756cae0f95cb6617",
+          "source": "9618_w25_sf_41/HashTableData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 3,
+      "tests": 8,
+      "qp_pages_checked": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "qp_over_ms": "- MS p.30 Python InsertData 缺成功后的 break/return，会把一个记录写满该桶；参考解按 QP p.10 的“下一空格”要求，在写入一次后退出。\n- MS p.32 ReadData 先把 Line.strip() 赋给 Data，下一行却又用 Line.split() 覆盖，保留换行；参考解对去掉行尾后的文本 split。同时补上 MS MP6 的文件异常处理（范例漏写不等于该点不要求）。\n- HashTable 按 D10 ① 在导入时已有真实 100×10 格；InitialiseHashTable 再填空记录，不只声明空 list。\n- MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。",
+      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。"
     }
   ]
 }
