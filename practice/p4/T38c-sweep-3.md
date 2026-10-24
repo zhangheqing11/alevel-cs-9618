@@ -4,7 +4,7 @@
 
 ## 9618_s24_41_q2
 
-F08：MS p.18 明确 min 9，改测至少 9 格及前九对象；20 格等价候选修前 1 failed/7 passed，修后全过。QP pp.7–10、MS p.18 与 pp.21,28 调用点核对。 新增真实调用、参数与返回输出检查；hollow-main 保留正确模块、主程序仅输出参考结果。自动占比暂保持原值，最终分类复核见后续汇总。
+F08：MS p.18 明确 min 9，改测至少 9 格及前九对象；20 格等价候选修前 1 failed/7 passed，修后全过。QP pp.7–10、MS p.18 与 pp.22,28 调用点核对。 新增真实调用、参数与返回输出检查；hollow-main 保留正确模块、主程序仅输出参考结果。自动占比暂保持原值，最终分类复核见后续汇总。
 
 - mutant_1.py: 1 failed, 8 passed in 0.16s
 - mutant_2.py: 2 failed, 7 passed in 0.12s
@@ -302,3 +302,19 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - 总计：18 题 / 165 格 / 538 分；243 个参数化用例，56 个 mutant，其中 hollow-main 18 个；自动 430.0651/538（79.94%）。
 
 需要总控决定：无共享文件修改请求；请验收以上三处保守归人工分类。traced 不记录 self 且返回值只作浅拷贝，接收对象身份/代码赋值及因果关系仍需结合现有状态测试和人工清单，不宣称自动授予整道题的考试分数。
+
+## 全仓验收
+
+基于 `origin/main` `705e1b354d4df28bf90686022422988d2c1ebd42` 完成 rebase；`make check-all` 实际成功，日志如下：
+
+```text
+/Users/zhangheqing/.venvs/alevel-cs/bin/python tools/check.py --all-exercises
+  · inventory: 130 papers
+  · rows: 3302 leaves in 130 papers
+  · taxonomy: 249 types
+  · markdown: 3558 row refs, 2280 MS quotes audited in 233 files
+  · exercises: 244 found, 244 executed
+✓ make check passed
+```
+
+`make check-scope TASK=T38c3`、`git diff --check` 均通过；本组5个数据文件哈希与只读原件和manifest一致。代码验收提交 `6c4642e8ab3dfb6104c676e3d64bfefc21929eba`；本节仅记录结果，不改变被测代码。PR保持draft，等待总控验收；无共享修改请求。
