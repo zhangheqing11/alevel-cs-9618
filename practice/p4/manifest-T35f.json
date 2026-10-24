@@ -321,10 +321,181 @@
       "mutants": 2,
       "manual_marks": 3.7778,
       "auto_share": 0.8781
+    },
+    {
+      "directory": "practice/p4/9618_w23_41_q3",
+      "id": "9618_w23_41:3(a)(i)",
+      "paper": "9618_w23_41",
+      "marks": 30,
+      "auto_marks": 25.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-07",
+        "P4-OP-04",
+        "P4-OP-05",
+        "P4-PR-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_41:3(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            3,
+            4
+          ],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(iii)",
+          "marks": 4,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(iv)",
+          "marks": 4,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:3(b)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:3(c)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(d)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w23_41:3(e)(i)",
+          "marks": 5,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_41:3(e)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "qp_over_ms": [
+        "同季 _43 与 _41 整卷相同。构造参数按 MS Python 顺序 `(XPositionP, YPositionP, NameP)`，QP 未规定参数顺序，作为测试接口统一。本题没有强制 private，不以是否使用双下划线判分。MS p.37 Python 将移动分支缩进在方向校验循环中，导致有效方向不移动；参考解将分支放到循环后，按 QP 得到 jack right → (60, 50)、karla down → (100, 30)。无数据文件；函数头、属性类型、Move 是否使用 setter 人工补核。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 5.0,
+      "auto_share": 0.8333
     }
   ],
-  "marks": 62,
-  "auto_marks": 52.2222,
-  "manual_marks": 9.7778,
-  "count": 2
+  "marks": 92,
+  "auto_marks": 77.2222,
+  "manual_marks": 14.7778,
+  "count": 3
 }
