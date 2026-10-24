@@ -479,5 +479,18 @@
       "papers/p4/core/**",
       "docs/review/**"
     ]
+  },
+  "T50b": {
+    "allow": [
+      "papers/p1/cards/**",
+      "papers/p1/core/**",
+      "papers/p2/cards/**",
+      "papers/p2/core/**",
+      "papers/p3/cards/**",
+      "papers/p3/core/**",
+      "papers/p4/cards/**",
+      "papers/p4/core/**",
+      "docs/review/**"
+    ]
   }
 }
