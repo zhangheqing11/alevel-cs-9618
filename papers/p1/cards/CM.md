@@ -391,6 +391,12 @@
 
 **英文作答句**　The company is not reliant on a third party, which gives it greater control over the security and privacy of its work and greater control over backup. The storage can also be tailored to the company's requirements, for example the amount of storage each employee can access.
 
+**迁移与卡点**
+- **卡点**：“相对于什么”。私有云对公有云的好处是“不依赖第三方 → 对安全、备份、定制有更大控制”；公有云对本地服务器的缺点是“依赖网络与第三方”。先圈出题目 instead of / compared to 后面的那个对象，每一点都写成“比它多了 / 少了什么”。
+- **考官在换什么**：定义（remote 不能漏）、公有 / 私有的对比方向、好处还是缺点、是否 discuss（两面都写）；情境（动画师、餐厅、学生）决定展开句里的例子。
+- **从代表题到变式**：代表题是三个独立的好处；变式是“两个缺点，每个点 + 展开”——不是三个点，而是两组“缺点 + because”。搬过去的是同一张好处 / 缺点清单；要换的是答案的形状。
+- **反例**：私有云写成“公司自己的电脑上”——私有云仍在远程服务器上，区别只是“只供本公司”。
+
 **下一道变式**　⟦9618_w23_13:3(a)(ii)⟧　（反方向：公有云相对 LAN 服务器的两个缺点，每个缺点“点 + 展开”。）
 
 <!-- auto:drills P1-CM-08 -->
@@ -481,6 +487,12 @@
 **与 MS 对齐**　MS 的六个词：full stops、hexadecimal、zeros、128、dynamic、private。最后两空要从描述反推类型：“can change each time”→ dynamic；“only be accessed by other devices in the same LAN … assigned by the router”→ private。
 
 **英文作答句**　IPv4 is made of four groups of 8-bit numbers separated by full stops. IPv6 is made of eight groups of 4 hexadecimal numbers separated by colons; multiple consecutive groups of zeros can be replaced with a double colon, and each IPv6 address is 128 bits. A dynamic IP address can change each time the computer connects to a network; a private IP address can only be accessed by devices in the same LAN.
+
+**迁移与卡点**
+- **卡点**：IPv6 每组 16 位（4 个十六进制数字），不是 8 位；static / dynamic 和 public / private 是两组互不相关的属性，“static private”要两个含义都说。
+- **考官在换什么**：问格式（填空、区别）、问合法性（圈出并说理由）、问四种类型的含义——全都来自那张 IPv4 / IPv6 对照表。
+- **从代表题到变式**：代表题是按描述填词；变式是判断一个地址——用对照表逐条对：有字母就不是十进制的 IPv4，某一组超过 255 也不是；用句点、只有 4 组又不是 IPv6。理由要**两种格式都排除**。搬过去的是对照表；要换的是用法（从填表变成逐条核对）。
+- **反例**：题干已给的区别（句点 vs 冒号）再写一遍；判断题只排除一种格式。
 
 **下一道变式**　⟦9618_w25_11:7(b)⟧　（判断 256.0.0.A 是 IPv4、IPv6 还是不合法，并说两条理由。）
 
