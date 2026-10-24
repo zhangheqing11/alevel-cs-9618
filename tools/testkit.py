@@ -78,3 +78,84 @@ def use_files(monkeypatch, tmp_path, files_dir) -> pathlib.Path:
         shutil.copytree(src, tmp_path, dirs_exist_ok=True)
     monkeypatch.chdir(tmp_path)
     return pathlib.Path(tmp_path)
+
+
+@dataclasses.dataclass
+class Call:
+    name: str        # function or method name (methods as "Class.method")
+    args: dict       # argument values at entry (shallow copies of lists/dicts)
+    result: object = None
+
+
+@dataclasses.dataclass
+class TracedRun:
+    stdout: str
+    calls: list      # list[Call] in call order (functions defined in the candidate file only)
+    workdir: pathlib.Path
+    error: BaseException | None = None
+
+    def names(self) -> list[str]:
+        return [c.name for c in self.calls]
+
+    def called(self, name: str) -> list:
+        """Calls whose name equals `name` or ends with ".name" (methods)."""
+        return [c for c in self.calls if c.name == name or c.name.endswith("." + name)]
+
+
+def run_script_traced(path, stdin: str = "", files_dir=None) -> TracedRun:
+    """Run a candidate program as __main__ in this process, in a fresh temp dir, and record
+    every call into a function or method defined in that file (name, arguments, return value).
+
+    Use it for main-program mark points ("call ReadData then Calculate and output the value"):
+    assert on what was actually called and with what, not only on the printed numbers, so a
+    main program that hard-codes the expected output cannot pass.
+        r = run_script_traced(candidate_path, stdin="Data1.txt\\n", files_dir=exercise_dir / "files")
+        assert r.called("ReadData") and r.called("Calculate")
+        assert str(r.called("Calculate")[-1].result) in r.stdout
+    stdin is fed to input(); output is captured; exceptions are kept in .error (not raised).
+    """
+    import contextlib, copy, io, os, runpy
+    src = pathlib.Path(path).resolve()
+    workdir = pathlib.Path(tempfile.mkdtemp(prefix="trace_"))
+    if files_dir is not None and pathlib.Path(files_dir).is_dir():
+        shutil.copytree(files_dir, workdir, dirs_exist_ok=True)
+    calls: list[Call] = []
+    open_frames: dict[int, Call] = {}
+    target = str(src)
+
+    def profiler(frame, event, arg):
+        code = frame.f_code
+        if code.co_filename != target or code.co_name in ("<module>", "<listcomp>", "<dictcomp>",
+                                                           "<setcomp>", "<genexpr>", "<lambda>"):
+            return
+        if event == "call":
+            name = code.co_qualname if hasattr(code, "co_qualname") else code.co_name
+            argnames = code.co_varnames[:code.co_argcount + code.co_kwonlyargcount]
+            args = {}
+            for a in argnames:
+                if a in frame.f_locals and a != "self":
+                    v = frame.f_locals[a]
+                    args[a] = copy.copy(v) if isinstance(v, (list, dict)) else v
+            c = Call(name, args)
+            calls.append(c)
+            open_frames[id(frame)] = c
+        elif event == "return":
+            c = open_frames.pop(id(frame), None)
+            if c is not None:
+                c.result = copy.copy(arg) if isinstance(arg, (list, dict)) else arg
+
+    out = io.StringIO()
+    old_cwd, old_stdin, error = os.getcwd(), sys.stdin, None
+    try:
+        os.chdir(workdir)
+        sys.stdin = io.StringIO(stdin)
+        sys.setprofile(profiler)
+        with contextlib.redirect_stdout(out):
+            runpy.run_path(target, run_name="__main__")
+    except BaseException as e:  # noqa: BLE001 - keep the run's outcome for the test to inspect
+        error = e
+    finally:
+        sys.setprofile(None)
+        sys.stdin = old_stdin
+        os.chdir(old_cwd)
+    return TracedRun(out.getvalue(), calls, workdir, error)

@@ -35,3 +35,5 @@
 3. **数据文件**：`files/` 里的 `.txt` 从官方源文件**逐字节复制**（CRLF、末行不换行都保留），sha256 与 `pipeline/extract/source_files_p4.json` 一致；题目要求程序新建的文件不放进 `files/`。`make try` 首次运行会把 `files/` 复制到 `attempts/<练习>/`，学生可以直接 `python solution.py`。
 4. **测试**：函数型测试读数据文件前调 `tools/testkit.use_files(monkeypatch, tmp_path, exercise_dir / "files")`；截图格换成 `run_script(..., files_dir=…)` 的输出断言（按 MS 列出的值做子序列 / 行内包含匹配，不测提示语，D13 / D31）。测试名带小问号（`test_1b_…`），学生可用 `make try EX=… K=1b` 一问一问地测。
 5. **`task.md` 必有证据文档对照表**：每个证据格 → 行 id → 每个得分点是自动测（测试名）还是人工核对。
+6. **主程序 / 调用链得分点**（D46）：MS 要求“调用 X（并用其返回值 / 传参数）”的点，只有在测试真正观测到调用时才能标“自动”——用 `tools/testkit.run_script_traced(path, stdin, files_dir)`，断言 `r.called("ReadData")`、参数、返回值被输出等；否则在对照表标“人工”。每道含主程序的练习加一个 `ref/mutant_hollow_main.py`：功能模块照参考解，主程序不调用这些模块、直接打印期望结果——测试必须挂掉它。
+7. **输出断言只测 QP / MS 要求的东西**（D46，D31）：不要从整段输出里提取全部数字做严格相等（允许说明文字里的数字）；允许把一条信息分成相邻几行；数组 / 容量按 MS 的下限（“min 9 elements”）测，不收紧成恰好；格式只在 QP 规定处严格。

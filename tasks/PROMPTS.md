@@ -339,3 +339,41 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 只写 tasks/scope.json 里 T39 允许的路径与 tasks/progress/T39.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T39 → push → gh pr create --base main --title "T39: update tutor skill for P3/P4, mocks and thresholds"。不要合并 PR，不要推 main。
 最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
 ```
+
+## T38 修正（#57 合并后发出；T38b、T38c1、T38c2、T38c3 四个会话可并行）
+
+### codex · T38b 改 P4 卡 + OP 换题（新开 Codex 会话）
+
+```
+你是执行工位，负责 T38b：按 D46 修正 P4 题型卡 F01–F04，并把 OP-02、OP-03、OP-07 的代表题换成审计建议的三道。前提：#57（T38 审计报告）已合并进 main。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D10、D13、D31、D37、D40–D46）、tasks/T38-fixes.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T38-fixes.md（交接文档：执行方案）**、papers/p4/audit/T38-report.md 与 T38-findings.jsonl（F01–F09 = jsonl 行序）。
+另读 tasks/T37-p4-cards.md（卡片标准）、tasks/handoff/T37-cards.md（写卡执行方案与工具）、papers/p4/cards/OP.md 全章。从最新 origin/main 开分支 task/T38b-p4-card-fixes。新代表题要对照 QP / MS 原页（/Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读），完整作答是可运行的整题 Python，在官方源文件 / QP 数据上跑过、输出与 MS 一致。
+只写 tasks/scope.json 里 T38b 允许的路径与 tasks/progress/T38b.md；共享文件（tools/、schemas/ 等）不改。每完成一个单元就提交并更新进度日志。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → python3 build/build.py p4 → make check-scope TASK=T38b → push → gh pr create --base main --title "T38b: fix P4 handbook per audit (incl. OP rep swaps)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡要求的内容与「需要总控决定」。
+```
+
+### codex · T38c1 排查 P4 练习（T35a + T35b 的 17 道；新开 Codex 会话）
+
+```
+你是执行工位，负责 T38c1：按 D46 排查并修正 T35a + T35b 的 17 道 P4 真题练习（练习目录清单见 tasks/scope.json 的 T38c1）。前提：#57（T38 审计报告）已合并进 main。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D10、D13、D31、D37、D40–D46）、tasks/T38-fixes.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T38-fixes.md（交接文档：执行方案）**、papers/p4/audit/T38-report.md 与 T38-findings.jsonl（F01–F09 = jsonl 行序）。
+另读 schemas/exercise-format.md 末节 P4 规则（第 6、7 条是 D46 新加的）、papers/p4/practice-notes.md、tools/testkit.py 的 run_script_traced。审计已发现的本组问题：F05 9618_s24_42_q3——先修它们，再逐题排查其余练习的同类问题（调用链漏测、过严断言），每道含主程序的练习加 ref/mutant_hollow_main.py，并用 1–2 个等价正确改写自测。从最新 origin/main 开分支 task/T38c1-p4-practice。
+只写 tasks/scope.json 里 T38c1 允许的路径与 tasks/progress/T38c1.md；共享文件（tools/、schemas/ 等）不改。每完成一个单元就提交并更新进度日志。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T38c1 → push → gh pr create --base main --title "T38c1: harden P4 practice tests (call chains, over-strict output)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡要求的内容与「需要总控决定」。
+```
+
+### codex · T38c2 排查 P4 练习（T35c + T35d 的 19 道；新开 Codex 会话）
+
+```
+你是执行工位，负责 T38c2：按 D46 排查并修正 T35c + T35d 的 19 道 P4 真题练习（练习目录清单见 tasks/scope.json 的 T38c2）。前提：#57（T38 审计报告）已合并进 main。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D10、D13、D31、D37、D40–D46）、tasks/T38-fixes.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T38-fixes.md（交接文档：执行方案）**、papers/p4/audit/T38-report.md 与 T38-findings.jsonl（F01–F09 = jsonl 行序）。
+另读 schemas/exercise-format.md 末节 P4 规则（第 6、7 条是 D46 新加的）、papers/p4/practice-notes.md、tools/testkit.py 的 run_script_traced。审计已发现的本组问题：F06 9618_s25_42_q1、F07 9618_w24_41_q3——先修它们，再逐题排查其余练习的同类问题（调用链漏测、过严断言），每道含主程序的练习加 ref/mutant_hollow_main.py，并用 1–2 个等价正确改写自测。从最新 origin/main 开分支 task/T38c2-p4-practice。
+只写 tasks/scope.json 里 T38c2 允许的路径与 tasks/progress/T38c2.md；共享文件（tools/、schemas/ 等）不改。每完成一个单元就提交并更新进度日志。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T38c2 → push → gh pr create --base main --title "T38c2: harden P4 practice tests (call chains, over-strict output)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡要求的内容与「需要总控决定」。
+```
+
+### codex · T38c3 排查 P4 练习（T35e + T35f 的 18 道；新开 Codex 会话）
+
+```
+你是执行工位，负责 T38c3：按 D46 排查并修正 T35e + T35f 的 18 道 P4 真题练习（练习目录清单见 tasks/scope.json 的 T38c3）。前提：#57（T38 审计报告）已合并进 main。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D10、D13、D31、D37、D40–D46）、tasks/T38-fixes.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T38-fixes.md（交接文档：执行方案）**、papers/p4/audit/T38-report.md 与 T38-findings.jsonl（F01–F09 = jsonl 行序）。
+另读 schemas/exercise-format.md 末节 P4 规则（第 6、7 条是 D46 新加的）、papers/p4/practice-notes.md、tools/testkit.py 的 run_script_traced。审计已发现的本组问题：F08 9618_s24_41_q2、F09 9618_w25_42_q1——先修它们，再逐题排查其余练习的同类问题（调用链漏测、过严断言），每道含主程序的练习加 ref/mutant_hollow_main.py，并用 1–2 个等价正确改写自测。从最新 origin/main 开分支 task/T38c3-p4-practice。
+只写 tasks/scope.json 里 T38c3 允许的路径与 tasks/progress/T38c3.md；共享文件（tools/、schemas/ 等）不改。每完成一个单元就提交并更新进度日志。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T38c3 → push → gh pr create --base main --title "T38c3: harden P4 practice tests (call chains, over-strict output)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡要求的内容与「需要总控决定」。
+```

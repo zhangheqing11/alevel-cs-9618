@@ -367,5 +367,95 @@
       "ledger/P3.csv",
       "ledger/P4.csv"
     ]
+  },
+  "T38b": {
+    "allow": [
+      "papers/p4/cards/**",
+      "papers/p4/core/**",
+      "papers/p4/front.md",
+      "papers/p4/back.md",
+      "papers/p4/audit/T38-fixes.md"
+    ]
+  },
+  "T38c1": {
+    "allow": [
+      "practice/p4/9618_s22_41_q1/**",
+      "practice/p4/9618_s22_42_q2/**",
+      "practice/p4/9618_s23_41_q1/**",
+      "practice/p4/9618_s23_42_q1/**",
+      "practice/p4/9618_s24_41_q1/**",
+      "practice/p4/9618_s24_42_q1/**",
+      "practice/p4/9618_s24_42_q3/**",
+      "practice/p4/9618_s25_41_q2/**",
+      "practice/p4/9618_s25_43_q2/**",
+      "practice/p4/9618_w22_41_q1/**",
+      "practice/p4/9618_w22_42_q1/**",
+      "practice/p4/9618_w23_41_q1/**",
+      "practice/p4/9618_w23_42_q2/**",
+      "practice/p4/9618_w24_41_q1/**",
+      "practice/p4/9618_w24_42_q3/**",
+      "practice/p4/9618_w25_42_q2/**",
+      "practice/p4/9618_w25_43_q3/**",
+      "practice/p4/T38c-sweep-1.md",
+      "practice/p4/manifest-T35a.json",
+      "practice/p4/README-T35a.md",
+      "practice/p4/manifest-T35b.json",
+      "practice/p4/README-T35b.md"
+    ]
+  },
+  "T38c2": {
+    "allow": [
+      "practice/p4/9618_s22_41_q3/**",
+      "practice/p4/9618_s22_42_q1/**",
+      "practice/p4/9618_s23_41_q3/**",
+      "practice/p4/9618_s23_42_q2/**",
+      "practice/p4/9618_s24_41_q3/**",
+      "practice/p4/9618_s25_41_q1/**",
+      "practice/p4/9618_s25_42_q1/**",
+      "practice/p4/9618_s25_42_q2/**",
+      "practice/p4/9618_s25_43_q1/**",
+      "practice/p4/9618_w22_41_q3/**",
+      "practice/p4/9618_w22_42_q3/**",
+      "practice/p4/9618_w23_41_q2/**",
+      "practice/p4/9618_w23_42_q1/**",
+      "practice/p4/9618_w24_41_q3/**",
+      "practice/p4/9618_w24_42_q2/**",
+      "practice/p4/9618_w25_41_q1/**",
+      "practice/p4/9618_w25_41_q3/**",
+      "practice/p4/9618_w25_42_q3/**",
+      "practice/p4/9618_w25_43_q2/**",
+      "practice/p4/T38c-sweep-2.md",
+      "practice/p4/manifest-T35c.json",
+      "practice/p4/README-T35c.md",
+      "practice/p4/manifest-T35d.json",
+      "practice/p4/README-T35d.md"
+    ]
+  },
+  "T38c3": {
+    "allow": [
+      "practice/p4/9618_s22_41_q2/**",
+      "practice/p4/9618_s22_42_q3/**",
+      "practice/p4/9618_s23_41_q2/**",
+      "practice/p4/9618_s23_42_q3/**",
+      "practice/p4/9618_s24_41_q2/**",
+      "practice/p4/9618_s24_42_q2/**",
+      "practice/p4/9618_s25_41_q3/**",
+      "practice/p4/9618_s25_42_q3/**",
+      "practice/p4/9618_s25_43_q3/**",
+      "practice/p4/9618_w22_41_q2/**",
+      "practice/p4/9618_w22_42_q2/**",
+      "practice/p4/9618_w23_41_q3/**",
+      "practice/p4/9618_w23_42_q3/**",
+      "practice/p4/9618_w24_41_q2/**",
+      "practice/p4/9618_w24_42_q1/**",
+      "practice/p4/9618_w25_41_q2/**",
+      "practice/p4/9618_w25_42_q1/**",
+      "practice/p4/9618_w25_43_q1/**",
+      "practice/p4/T38c-sweep-3.md",
+      "practice/p4/manifest-T35e.json",
+      "practice/p4/README-T35e.md",
+      "practice/p4/manifest-T35f.json",
+      "practice/p4/README-T35f.md"
+    ]
   }
 }
