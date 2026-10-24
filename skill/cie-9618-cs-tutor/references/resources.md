@@ -24,7 +24,7 @@
 
 ## 2. 老师提供的原始资料（只读）
 
-根目录 `$ALEVEL_CS_SOURCES`，默认 `/Users/zhangheqing/Desktop/alevel cs/sources`。不得编辑、改名、移动、删除；`teach_cambridge_raw/`、`teach_cambridge_sf/` 是导出包原样，不直接引用。`rows.py files <卷>` 直接列出一份卷的全部文件。
+根目录 `/Users/zhangheqing/Desktop/alevel cs/sources`（脚本也认环境变量 `ALEVEL_CS_SOURCES`；会话里这个变量通常没设，命令里直接写绝对路径）。不得编辑、改名、移动、删除；`teach_cambridge_raw/`、`teach_cambridge_sf/` 是导出包原样，不直接引用。`rows.py files <卷>` 直接列出一份卷的全部文件。
 
 | 资料 | 路径（相对 sources/） | 用来做什么 | 边界 |
 |:--|:--|:--|:--|
@@ -43,7 +43,7 @@
 | Scheme of Work | `official/support/9618_Scheme_of_Work_for_examination_from_2021.pdf` | 官方教学顺序、课时与个别常见误区 | 不覆盖本系统已定的学习顺序 |
 | 旧版指南与 2026 考纲 | `official/support/` 下 2023–25、2026 版 | 只在核对新旧差异时用 | 不用于示范写法 |
 
-读 PDF：`pdftotext -layout -f <页> -l <页> "<文件>" -`；看图用 `rows.py render`（PyMuPDF）。
+读 PDF：`pdftotext -layout -f <页> -l <页> "<文件>" -`；看图用 `rows.py render`（PyMuPDF）。没有行数据的 PDF（2021 样卷、范答册）渲染原页：`pdftoppm -r 110 -png -f <页> -l <页> "<文件>" work/tmp/figures/<名>`（生成 `<名>-<页>.png`）。
 
 ## 3. 资料缺失时怎么降级
 

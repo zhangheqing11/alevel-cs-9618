@@ -8,7 +8,7 @@
 |:--|:--|:--|
 | `9618_s26_*`（12 份：11–13、21–23、31–33、41–43） | D1 保留，平时专项、复测、变式都跳过 | 4–5 月限时整卷模考；有批改包 |
 | 2021 样卷 `sources/official/specimen/9618_y21_sp_<qp\|ms\|in>_<n>.pdf`；P4 题卷与证据文档在 `9618_y21_sp_qp_4/`、源文件在 `9618_y21_sp_sf_4/` | 不在 `corpus/rows`，没有批改包 | 冲刺整卷，按样卷自己的 MS 手工批；P1–P3 有 Specimen Paper Answers 可对照 |
-| 用得最少的往年卷 | `rows.py find --paper <卷>` 看该卷各行是否已做 | s26 用完后的补充整卷；`make_mock.py` 也能给普通卷生成批改包 |
+| 用得最少的往年卷 | 在记录表「独立题目」「复测结果」里出现最少的卷（`rows.py find --paper <卷>` 列出该卷各行与题型） | s26 用完后的补充整卷；`make_mock.py` 也能给普通卷（含 2021）生成批改包 |
 
 时长（2027–29 考纲 p.11，批改包里也会写）：P1、P3 90 分钟；P2 120 分钟；P4 150 分钟；每卷 75 分。
 
@@ -19,7 +19,13 @@
 1. 确认卷别与时长：`python3 skill/cie-9618-cs-tutor/scripts/rows.py files 9618_s26_22` 列出 QP、MS、插页、源文件的路径——**只告诉学生 QP（与插页、源文件）的路径**，不打开 MS，也先不生成批改包（README：做完后才打开批改包）。
 2. 作答方式：
    - **P1 / P2 / P3**：考试是纸笔。优先打印 QP 手写、做完拍照发来（HEIC 用 SKILL.md §9 的 `sips` 转换）；也可以在 `attempts/mock/<卷>/answers.md` 里打字（伪代码写进代码块）。P2 带当卷插页（`9618_s26_in_2x.pdf`）。
-   - **P4**：你把该卷源文件目录里的 `.txt` 复制到 `attempts/mock/<卷>/`（只复制数据文件，不改原件）；学生在那里按题目要求的文件名写程序（如 `Question1_J26.py`），并按证据文档的格子顺序维护 `attempts/mock/<卷>/evidence.md`：每个代码格贴代码，每个截图格贴运行输出。
+   - **P4**：你把该卷源文件目录里的 `.txt` 复制到 `attempts/mock/<卷>/`（只复制数据文件，不改原件；有的卷多套一层目录，所以用 find）：
+
+     ```bash
+     mkdir -p attempts/mock/9618_s26_42 && find "/Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/9618_s26_sf_42" -name "*.txt" -exec cp {} attempts/mock/9618_s26_42/ \;
+     ```
+
+     学生在那里按题目要求的文件名写程序（如 `Question1_J26.py`），并按证据文档的格子顺序维护 `attempts/mock/<卷>/evidence.md`：每个代码格贴代码，每个截图格贴运行输出。
 3. 学生自己计时，记下开始、结束时间；超时部分用另一种颜色或标「超时」，批改时分开算。
 
 ## 3. 生成批改包
@@ -34,7 +40,7 @@ python3 pipeline/mock/make_mock.py 9618_s26_22
 
 ## 4. 自批、复核与估分
 
-1. **学生自批**：打开 `marking.html`，逐小问对 MS 打分；图、表、代码排版回原页。在 `score.csv` 填 `marks_awarded`（未得分填 0，空着表示未批）；`lost_skills` 可填 `loop-to-eof=2;file-close=1`（标签取技能词表，数值为正整数，一分只归一个技能，拿不准留空）；`note` 写失分原因或疑问。
+1. **学生自批**：打开批改包（`open output/mock/9618_s26_22/marking.html`），逐小问对 MS 打分；图、表、代码排版回原页。在 `score.csv` 填 `marks_awarded`（未得分填 0，空着表示未批）；`lost_skills` 可填 `loop-to-eof=2;file-close=1`（标签取技能词表，数值为正整数，一分只归一个技能，拿不准留空）；`note` 写失分原因或疑问。
 2. **你复核**（逐卷，一条回复一卷）：
    - 每个丢分小问：对照该题 MS 确认丢的是哪一点，给出可得分的写法，归错误类别；
    - 全部写代码小问（P2 伪代码、P3 伪代码、P4 程序）逐点重批：P2 / P3 按 programming.md §6 的伪代码规则；P4 由你按 QP 测试数据运行学生程序（p4-practical.md §5 的 `run_script`，`files_dir` 指向 `attempts/mock/<卷>/`），并按 MS 核对每个证据格；

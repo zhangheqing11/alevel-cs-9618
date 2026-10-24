@@ -5,7 +5,7 @@
 **教材页码**：表中是印刷页码；**PDF 页 = 印刷页 + 6**（例如 Ch12 印刷第 178 页 = PDF 第 184 页）。读教材：
 
 ```bash
-pdftotext -layout -f <PDF起> -l <PDF止> "$ALEVEL_CS_SOURCES/textbooks/Langfield_Duddell_Coursebook_2e_2019.pdf" -
+pdftotext -layout -f <PDF起> -l <PDF止> "/Users/zhangheqing/Desktop/alevel cs/sources/textbooks/Langfield_Duddell_Coursebook_2e_2019.pdf" -
 ```
 
 Scheme of Work 的单元号与考纲大节号相同（Unit 1 = 第 1 节 …），所以表里不单列。

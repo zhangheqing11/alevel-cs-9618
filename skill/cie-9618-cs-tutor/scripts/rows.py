@@ -17,6 +17,7 @@
       one type card, or a chapter overview (核心思想, 题型树, 本章易混辨析), from the built handbook in
       output/p<N>/; --core prints that chapter of the concept table (P1/P3) or pseudocode-Python sheet (P2/P4)
 
+Row ids may also be given in the handbook's short form: "s22/22 Q4(a)" = 9618_s22_22:4(a); "s26/42" = 9618_s26_42.
 Default: never print MS text unless --ms is given (the learner must not see it before answering).
 Run from the repo root, or pass --root. Sources: $ALEVEL_CS_SOURCES or the default path below.
 """
@@ -64,6 +65,19 @@ def parse_paper(paper: str) -> dict:
         raise RowsError(f"not a paper code: {paper!r} (expected e.g. 9618_s24_22)")
     return {"session": m.group(1), "year": 2000 + int(m.group(2)), "component": int(m.group(3)),
             "variant": int(m.group(4))}
+
+
+SHORT_RE = re.compile(r"^([msw])(\d{2})/([1-4][1-3])(?:\s*Q?\s*(\S.*))?$")
+
+
+def normalize_ref(ref: str) -> str:
+    """Accept the handbook's short form too: 's22/22 Q4(a)' -> '9618_s22_22:4(a)', 's26/42' -> '9618_s26_42'."""
+    ref = ref.strip()
+    m = SHORT_RE.match(ref)
+    if not m:
+        return ref
+    paper = f"9618_{m.group(1)}{m.group(2)}_{m.group(3)}"
+    return f"{paper}:{m.group(4).replace(' ', '')}" if m.group(4) else paper
 
 
 def split_id(row_id: str) -> tuple[str, str | None]:
@@ -408,6 +422,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--core", action="store_true",
                    help="with a chapter code: that chapter of the concept table / pseudocode-Python sheet")
     args = ap.parse_args(argv)
+    for attr in ("row_id", "ref"):
+        if getattr(args, attr, None):
+            setattr(args, attr, normalize_ref(getattr(args, attr)))
+    if getattr(args, "paper", None):
+        args.paper = normalize_ref(args.paper)
     try:
         root = find_root(args.root)
         return {"get": cmd_get, "files": cmd_files, "render": cmd_render, "drills": cmd_drills,

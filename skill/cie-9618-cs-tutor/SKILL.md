@@ -12,7 +12,7 @@ description: Teach, drill, mark and mock-exam CIE AS & A Level Computer Science 
 ## 0. 每条教学回复发出前的自查
 
 1. 用到官方题：已打开**该题自己的** MS（`rows.py get --ms`；有图、表、代码排版时看原页）。
-2. 学生作答前，没有泄露 MS、得分点、参考解 `ref/`、测试期望值、题型卡「下一道变式」括号里的备注、练习 `task.md` 里的「人工核对清单」「证据文档对照表」。
+2. 学生作答前，没有泄露 MS、得分点、参考解 `ref/`、测试期望值、题型卡「下一道变式」括号里的备注、练习 `task.md` 里讲得分点 / 核对 / 差异的节（§5 第 4 条）。
 3. 批改给了「MS 得分点 ↔ 学生原句 / 代码行」对照；编程题给了测试结果解读。
 4. 状态按 §6 门槛判定，变化**当场**用 `ledger.py set` 写进记录表。
 5. 示范伪代码逐字符合 2027–29 指南；Python 贴近伪代码结构。
@@ -38,7 +38,7 @@ description: Teach, drill, mark and mock-exam CIE AS & A Level Computer Science 
 | 考纲节号 ↔ 题型码 ↔ 教材章节 ↔ 范答对应的卷 | [references/syllabus-map.md](references/syllabus-map.md) |
 | 学生说「交接」、一段学习结束 | [references/handoff-template.md](references/handoff-template.md) |
 
-**命令速查**（在主 checkout 根目录运行；脚本都是标准库，`render` 缺 PyMuPDF 时自动换用 `~/.venvs/alevel-cs/bin/python`；行 id 含括号，**一律加引号**；每个脚本都有 `--help`）：
+**命令速查**（在主 checkout 根目录运行；脚本都是标准库，`render` 缺 PyMuPDF 时自动换用 `~/.venvs/alevel-cs/bin/python`；行 id 含括号，**一律加引号**；`rows.py` 也认手册里的短格式 `"s22/22 Q4(a)"`；每个脚本都有 `--help`）：
 
 ```bash
 python3 skill/cie-9618-cs-tutor/scripts/ledger.py summary                  # 各表计数、学习中、到期复测、计划进度
@@ -82,7 +82,7 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
 |:--|:--|:--|:--|:--|:--|
 | P1 | 题型 | 对话里英文作答（或拍照） | 该题 MS | 理论门槛 | theory.md |
 | P3 理论 / 逐步作答题 | 题型 | 同上；浮点、卡诺图、Dijkstra、A*、RPN、BNF、汇编、Prolog 写出全部步骤 | 该题 MS（过程分与答案分分开） | 理论门槛 | theory.md |
-| P3 写伪代码题 | 题型 | 对话里手写伪代码 | 该题 MS 得分点 + programming.md §6 批改规则 | 理论门槛（不要求 pytest） | theory.md §6 |
+| P3 写伪代码题 | 题型 | 对话里手写伪代码 | 该题 MS 得分点 + programming.md §6 批改规则 | 理论门槛（不要求 pytest） | theory.md §6.2 |
 | P2 写代码题 | 题型 | `answer.pseudo`（AD-06 是 `answer.steps.md`）→ 同题 `solution.py` | 伪代码 / 步骤按 MS 人工批；Python 跑 pytest | 编程门槛 | programming.md |
 | P2 非编程题 | 题型 | 对话里作答 | 该题 MS | 理论门槛 | programming.md §10 |
 | P4 | 题型（练习 = 整道大题） | 在 `solution.py` 里从空文件写 Python | 该型小问的测试 + 人工清单逐点按 MS | P4 门槛 | p4-practical.md |
@@ -136,7 +136,7 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
 ### 4.4 学习顺序与时间线
 
 - 已定：**AS 先行**；2026 年 10–12 月 P1 + P2 + 阶梯 L01–L08，2027 年 1–3 月 P3 + P4 + 阶梯 L09–L12，4–5 月整卷冲刺与 s26 模考。**理论课与编程课交替**。
-- 交替的默认单位：学完一章 P1（或 P3），下一段做编程（一级阶梯，或该级解锁的 P2 / P4 题型），再回到理论下一章。P2 / P4 题型需要的阶梯级（P2 卡与 `ladder/design.md` §6；P4 手册「使用指南」的章 ↔ 阶梯表）还没过时，先走阶梯。
+- 交替的默认单位：学完一章 P1（或 P3），下一段做编程（一级阶梯，或该级解锁的 P2 / P4 题型），再回到理论下一章。全部还是未学时（第一次上课）：从 P1 第 1 章 IR 首学开始，学完接阶梯 L01，再回 P1 第 2 章；1 月进入 A2 时从阶梯 L09 与 P3 第 1 章 DR 开始。P2 / P4 题型需要的阶梯级（P2 卡与 `ladder/design.md` §6；P4 手册「使用指南」的章 ↔ 阶梯表）还没过时，先走阶梯。
 - 章的顺序按该卷 `taxonomy.json`；章内按题型树顺序。P4 例外：每道大题都含主程序与截图，所以 MP-01、MP-03 在第一道 P4 练习时就地首学（p4-practical.md §2）。
 - P3 的写代码题型（CT、FP-06、FP-10 等）用到的算法与 P4 相同：先过对应阶梯级，P3 与 P4 同一算法可以前后挨着学。
 - `ledger.py summary` 的「计划进度」行只是提示：落后时在交接文档里提一次并给出调整建议（例如加快 ★☆☆ 型、把章末复测合并），不在每条回复里催。学生指定的顺序优先。
@@ -163,8 +163,8 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
    - 默认卡片「下一道变式」，否则刷题清单里与代表题核心相同、至少换了一个需要迁移的特征（问法、表示、数据结构、文件格式、情景、与已学内容的组合）的题。优先 2022–2025 带 MS 的题；编程题优先有练习文件夹的题。
    - 卡片「下一道变式」后面括号里的说明是写给导师的（常含答案要点、MS 细节）：布置时**只给题号与题面**（`rows.py get`，必要时原卷页），括号内容等批改时再用。
    - 变式只有 1–2 分、证据太薄时，把同一大题里相邻的同型或相关小问一起布置（合计 4–8 分为宜），记录时逐行列出。
-   - 卡片标「自编」或用了「无第二道」的自练：没有官方 MS，要说明，并按该型已核验题的得分逻辑批改（不能据此标已掌握，见 §6）。
-   - 练习文件夹的 `task.md`：作答前只让学生读「导读」「英文原题」「Python 接口」；「人工核对清单」「证据文档对照表」「原页、编号与差异记录」里有 MS 得分点原文，写完、测完再看。
+   - 卡片标「自编」或写明「无第二道」的型：变式没有官方 MS，要说明，并按该型已核验题的得分逻辑批改（§6）。
+   - 练习文件夹的 `task.md`：作答前读导读 / 说明、英文原题、Python 接口、数据文件与图的文字转写；**「人工核对清单」「证据文档对照表」以及讲 QP / MS 差异、得分点编号、原页核验的节**含 MS 得分点或范例缺陷，写完、测完再看。接口节里夹带的 MS 差异说明，你转述时略去。P4 优先让学生看 QP 原页（`rows.py render`，考场原样）。
 5. **阶段检查**：讲完一组相关题型后，用本章「易混辨析」出一道对比或混合小题（真题小问）。
 6. **章末**：核对记录表；复测本章学习中题型（§4.5）；给一份复习图——题型树 + 学生状态、必背英文得分句（三层）、本章常见失分与学生自己的重复错误、仍薄弱的题型；指向手册与概念表的对应节，不整段复制。
 
@@ -172,7 +172,7 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
 
 ## 6. 掌握门槛
 
-**通用**：不能从「讲过了」「HTML 里勾了」「最终输出碰巧对」推断掌握。你给过代码级提示（programming.md §9 提示阶梯第 4 级起）或完整示范的题不算独立，标学习中，之后换题复测。复测通过（不同卷上的一道新题达到门槛）才把学习中改成已掌握；同一型在不同卷上连续三道干净，是保持或恢复已掌握的强证据。没有官方 MS 的题（自编、无第二道的自练）只能作练习，不能单独支撑「已掌握」。
+**通用**：不能从「讲过了」「HTML 里勾了」「最终输出碰巧对」推断掌握。你给过代码级提示（programming.md §9 提示阶梯第 4 级起）或完整示范的题不算独立，标学习中，之后换题复测。复测通过（不同卷上的一道新题达到门槛）才把学习中改成已掌握；同一型在不同卷上连续三道干净，是保持或恢复已掌握的强证据。卡片标「自编」或「无第二道」时用的自练题没有官方 MS：照样按门槛判，但批改时说明「非 MS 核验」，解释证据注明「自编变式」。
 
 **理论门槛**（P1、P3 全部题型——含逐步作答题与写伪代码题——以及 P2 的非编程小问）
 
@@ -349,7 +349,7 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
 - 状态：待总控处理
 ```
 
-**写入边界**：学习会话只写 `ledger/`、`handoff/`、`attempts/`，以及草稿区 `work/tmp/`。不改 `papers/`、`practice/`、`ladder/`、`corpus/`、`pipeline/`、`output/`（`make build` 与模考批改包生成除外）、`skill/`、`tools/`、`docs/`、`schemas/`，不碰 `sources/`。`attempts/` 里的作答代码只由学生写：你只用 `make try` 创建骨架、在 `attempts/mock/<卷>/` 放源文件副本，示范代码写在回复里。
+**写入边界**：学习会话只写 `ledger/`、`handoff/`、`attempts/`，以及草稿区 `work/tmp/`。不改 `papers/`、`practice/`、`ladder/`、`corpus/`、`pipeline/`、`output/`（`make build`、生成模考批改包、填写与改正 `output/mock/<卷>/score.csv` 除外）、`skill/`、`tools/`、`docs/`、`schemas/`，不碰 `sources/`。`attempts/` 里的作答代码只由学生写：你只用 `make try` 创建骨架、在 `attempts/mock/<卷>/` 放源文件副本，示范代码写在回复里。
 
 **提交**：一章结束、交接、或学生说今天到此为止时，在主 checkout 当前分支上只提交这三个路径：
 

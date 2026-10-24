@@ -51,7 +51,7 @@
 
 1. **选变式**：卡片「下一道变式」（括号备注只给自己看）或刷题清单里有练习文件夹的题。
 2. **布置**：你运行 `make try EX=practice/p2/<练习>`，它创建 `attempts/practice/p2/<练习>/solution.py`（函数签名 + `raise NotImplementedError`），`meta.json` 里 `pseudocode: true` 时还有 `answer.pseudo`（含题目要求的模块头），P2-AD-06 是 `answer.steps.md`（编号英文步骤，D38）。告诉学生：
-   - 题面在 `practice/p2/<练习>/task.md`：作答前只读开头的说明、「英文原题与给定信息」「Python 接口」；**「人工核对清单」是 MS 得分点，写完再看**。
+   - 题面在 `practice/p2/<练习>/task.md`：作答前只读开头的说明、「英文原题与给定信息」「Python 接口」（有图时看 `assets/` 的原图）；**「人工核对清单」是 MS 得分点，写完再看**。
    - 在 VS Code 打开 `attempts/practice/p2/<练习>/`：**先**写 `answer.pseudo`（或 `answer.steps.md`），再写 `solution.py`（同一算法的 Python，接口按「Python 接口」一节）。
    - 程序要读的数据文件在练习的 `files/`；测试会把它们复制到临时目录，程序里直接用文件名打开（`open("Trees.txt")`），不写绝对路径。
    - 不看 `test_task.py` 和 `ref/`；可以随时自己跑 `make try EX=…` 看 Python 测试结果。
