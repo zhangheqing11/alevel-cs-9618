@@ -43,4 +43,26 @@ def test_3c_ii_screenshots_before_after(candidate_path):
     """9618_s25_43:3(c)(i) MP1-MP3; 3(c)(ii) MP1-MP2: 50 40 30 20 10 then 50 40 20 10."""
     result=run_script(candidate_path)
     assert result.returncode==0,result.stderr
-    assert [int(v) for v in re.findall(r"-?\d+",result.stdout)]==[50,40,30,20,10,50,40,20,10]
+    assert contains_values(result.stdout, [50,40,30,20,10,50,40,20,10])
+
+
+def contains_values(text, expected):
+    """D31/D46: compare required values in order, allowing explanatory text."""
+    values = iter(float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", text))
+    return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
+
+
+def test_3main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_43:3(c)(i) MS p.43; 9618_s25_43:3(b)(ii) MS p.37: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    assert [list(c.args.values()) for c in r.called("InsertNode")] == [[10],[20],[30],[40],[50]]
+    removals = r.called("RemoveNode")
+    assert len(removals) == 1 and list(removals[0].args.values()) == [30]
+    traversals = r.called("Traverse")
+    assert len(traversals) >= 2 and all(c.result.strip() in r.stdout for c in traversals)
+    events = [c.name.split(".")[-1] for c in r.calls if c.name.split(".")[-1] in ("Traverse","RemoveNode")]
+    assert events == ["Traverse","RemoveNode","Traverse"]
+    assert len(r.called("SetNextNode")) >= 5

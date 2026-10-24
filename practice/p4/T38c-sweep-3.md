@@ -127,3 +127,19 @@ runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数�
 - equivalent_footer.py: 5 passed in 0.07s
 
 自动分 22.0 → 22.0；占比 84.62% → 84.62%。
+
+## 9618_s25_43_q3
+
+补五次 InsertNode、RemoveNode(30)、前后 Traverse 返回输出顺序与 SetNextNode；截图数字改子序列。
+
+本轮逐行核对本题配对 MS（33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44, 45 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：9 passed in 0.09s；修后与等价改写：
+
+- mutant_1.py: 1 failed, 9 passed in 0.12s
+- mutant_2.py: 3 failed, 7 passed in 0.16s
+- mutant_3.py: 1 failed, 9 passed in 0.09s
+- mutant_hollow_main.py: 1 failed, 9 passed in 0.09s
+- solution.py: 10 passed in 0.08s
+- equivalent_banner.py: 10 passed in 0.08s
+- equivalent_footer.py: 10 passed in 0.08s
+
+自动分 22.0 → 22.0；占比 75.86% → 75.86%。

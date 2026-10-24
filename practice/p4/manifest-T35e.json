@@ -1444,8 +1444,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 9,
+      "mutants": 4,
+      "tests": 10,
       "qp_pages_checked": [
         7,
         8,

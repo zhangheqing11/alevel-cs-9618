@@ -192,10 +192,10 @@
 | Part 3(a)(ii) | 9618_s25_43:3(a)(ii) | 3 | 代码 | `test_3a_node_references` · MP2, MP3 | MP1 |
 | Part 3(a)(iii) | 9618_s25_43:3(a)(iii) | 2 | 代码 | `test_3a_node_references` · MP2 | MP1 |
 | Part 3(b)(i) | 9618_s25_43:3(b)(i) | 2 | 代码 | `test_3b_i_ii_iii_empty_and_head_insertion` · MP2 | MP1 |
-| Part 3(b)(ii) | 9618_s25_43:3(b)(ii) | 4 | 代码 | `test_3b_i_ii_iii_empty_and_head_insertion` · MP2, MP3, MP4 | MP1 |
+| Part 3(b)(ii) | 9618_s25_43:3(b)(ii) | 4 | 代码 | `test_3main_call_chain` / `test_3b_i_ii_iii_empty_and_head_insertion` · MP2, MP3, MP4 | MP1 |
 | Part 3(b)(iii) | 9618_s25_43:3(b)(iii) | 3 | 代码 | `test_3b_i_ii_iii_empty_and_head_insertion` · MP1, MP2, MP3 | — |
 | Part 3(b)(iv) | 9618_s25_43:3(b)(iv) | 6 | 代码 | `test_3b_iv_empty_and_singleton` / `test_3b_iv_head_middle_tail_missing` / `test_3b_iv_removes_only_first_match` · MP1, MP2, MP3, MP4, MP5, MP6, MP7 | — |
-| Part 3(c)(i) | 9618_s25_43:3(c)(i) | 3 | 代码 | `test_3c_ii_screenshots_before_after` · MP1, MP2, MP3 | — |
+| Part 3(c)(i) | 9618_s25_43:3(c)(i) | 3 | 代码 | `test_3main_call_chain` / `test_3c_ii_screenshots_before_after` · MP1, MP2, MP3 | — |
 | Part 3(c)(ii) | 9618_s25_43:3(c)(ii) | 2 | 截图 | `test_3c_ii_screenshots_before_after` · MP1, MP2 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。
