@@ -50,7 +50,7 @@ def main():
     args.out.mkdir(parents=True, exist_ok=True)
     import pymupdf
     rows, cards = collect()
-    results = dict(cards=[], picks=[], maps=[], python=[], pages=[], inputs={})
+    results = dict(cards=[], picks=[], maps=[], map_columns=[], python=[], pages=[], inputs={})
     paths = sorted((ROOT/'papers/p4/cards').glob('*.md')) + sorted((ROOT/'papers/p4/core').glob('*.md'))
     paths += [ROOT/'papers/p4/front.md', ROOT/'papers/p4/back.md']
     for path in paths:
@@ -85,6 +85,17 @@ def main():
         skills = lambda r: {s for mp in r.get('markpoints',[]) for s in mp['skills']}
         counts = Counter(s for r in sample for s in skills(r))
         results['maps'].append(dict(card=card['card'], rows=[r['id'] for r in sample], skills=dict(sorted(counts.items()))))
+        section=card['body'].split('**得分点地图**',1)[1].split('**易错',1)[0]
+        for line in section.splitlines():
+            cells=[x.strip() for x in line.strip().strip('|').split('|')]
+            if len(cells)<2 or not re.fullmatch(r'(?:各\s*)?\d+(?:\s*\+\s*\d+)*',cells[1]):continue
+            tags=re.findall(r'`([^`]+)`',cells[0] if re.search(r'`[a-z]+-',cells[0]) else cells[-1])
+            reported=[int(n) for n in re.findall(r'\d+',cells[1])]
+            if len(reported)==1:reported*=len(tags)
+            for tag,number in zip(tags,reported):
+                members=[r['id'] for r in sample if tag in skills(r)]
+                results['map_columns'].append(dict(card=card['card'],tag=tag,reported=number,
+                    actual=len(members),delta=len(members)-number,rows=members))
         packet = card['body']+'\n\n=== ORIGINAL PDF PAGES ===\n'
         for rid in dict.fromkeys(re.findall(REF,card['body'])):
             row = rows[rid]
@@ -104,7 +115,8 @@ def main():
     (args.out/'mechanical.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(dict(cards=len(cards),picks=results['picks'],python=len(results['python']),
         complete=sum(b['complete'] for b in results['python']),ast_failures=[b for b in results['python'] if b['ast']!='pass'],
-        rendered=len(set(p['image'] for p in results['pages']))),ensure_ascii=False,indent=2))
+        rendered=len(set(p['image'] for p in results['pages'])),map_columns=len(results['map_columns']),
+        map_deltas=[m for m in results['map_columns'] if m['delta']]),ensure_ascii=False,indent=2))
 
 
 if __name__=='__main__':

@@ -21,7 +21,7 @@ from check_handbook import ROOT, SOURCES, collect
 INPUTS = {
  'P4-PR-01': [[30,5,3,9,4,1,2,2],[5,1,6,2,8,10,2],[5,1,6,2,8,10,7]],
  'P4-SR-02': [[30,5,3,9,4,1,2,2],[5,1,6,2,8,10,2],[5,1,6,2,8,10,7]],
- 'P4-AR-01': [[101]], 'P4-SR-03': [[101]],
+ 'P4-AR-01': [[11],[100],[101]], 'P4-SR-03': [[11],[100],[101]],
  'P4-AR-03': [[10,9,-1,8,7,6,5,4,3,2,1],[10,9,8,7,6,5,4,3,2,1]],
  'P4-AR-05': [['TheData.txt']], 'P4-FL-01': [['TheData.txt']], 'P4-FL-03': [['TheData.txt']],
  'P4-FL-02': [['keep',400,200,'Blue Conifer',100]],
@@ -71,7 +71,8 @@ runpy.run_path("answer.py", run_name="__main__")
                         capture_output=True,text=True,timeout=8)
                     result=dict(card=c['card'],case=number,inputs=inputs,source_files=copied,
                         exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr,
-                        files={p.name:p.read_text() for p in temp.glob('*.txt')})
+                        files={p.name:p.read_text() for p in temp.glob('*.txt')
+                               if not any(f['name']==p.name and f['sha256']==hashlib.sha256(p.read_bytes()).hexdigest() for f in copied)})
                 except subprocess.TimeoutExpired as exc:
                     result=dict(card=c['card'],case=number,inputs=inputs,error='timeout',stdout=str(exc.stdout))
                 results.append(result)
