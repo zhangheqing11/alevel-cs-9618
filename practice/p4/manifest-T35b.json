@@ -983,7 +983,7 @@
         }
       ],
       "files": [],
-      "mutants": 8,
+      "mutants": 9,
       "qp_pages_checked": [
         12,
         13
@@ -1001,7 +1001,7 @@
       "qp_over_ms": [
         "3(b)(iii): MS MP1 says array as argument; QP and all MS language examples pass the string from 3(b)(i)."
       ],
-      "notes": "All listed QP/MS rendered pages viewed in this continuation; no question data files. MS parameter order accepted via keyword arguments."
+      "notes": "All listed QP/MS rendered pages viewed in this continuation; no question data files. MS parameter order accepted via keyword arguments. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     }
   ],
   "coverage_method": "Marks weighted by markpoints[].marks, proportionally scaled to the row marks where optional points exceed the cap; unnumbered one-mark rows use whole. Pure headers and pure structural points are manual; mixed points with tested behaviour are auto, with remaining aspects on the manual checklist.",

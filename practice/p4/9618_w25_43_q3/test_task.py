@@ -172,3 +172,19 @@ def test_3biv_screenshot_four_lines(candidate_path):
     remaining = iter(lines)
     for expected in SPLIT:
         assert any(expected in line for line in remaining), f"missing separate output line: {expected}"
+
+
+def test_3aii_3biii_traced_results(candidate_path):
+    """9618_w25_43:3(a)(ii) MP2–3; 3(b)(iii) MP1–2; MS pp.34,38."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path)
+    assert r.error is None
+    counts, splits = r.called("RecursiveCount"), r.called("SplitData")
+    assert counts and splits
+    assert counts[0].args == {"ArrayCopy": GIVEN, "NumberElements": 10, "DataToFind": 0}
+    assert counts[0].result == 2
+    assert CODE in splits[0].args.values() and list(splits[0].result)[:4] == SPLIT
+    assert next(i for i, c in enumerate(r.calls) if c is counts[0]) < next(i for i, c in enumerate(r.calls) if c is splits[0])
+    assert counts[0].result in ints(r.stdout)
+    remaining = iter(r.stdout.splitlines())
+    assert all(any(item in line for line in remaining) for item in splits[0].result[:4])

@@ -103,11 +103,11 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a)(i) | 9618_w25_43:3(a)(i) | 6 | 代码 | `test_3ai_recursivecount_counts` · MP2–MP5；`test_3ai_each_call_drops_the_first_element` · MP4–MP6 | MP1 三参数函数头；确实实现题给递归算法，不用内置统计 |
-| Part 3(a)(ii) | 9618_w25_43:3(a)(ii) | 3 | 代码 | `test_3aii_main_stores_array_and_passes_parameters` · MP1–MP2；`test_3aiii_screenshot_outputs_2` · MP3 | 数组注释 INTEGER、10 个元素；输出的是调用返回值 |
+| Part 3(a)(ii) | 9618_w25_43:3(a)(ii) | 3 | 代码 | `test_3aii_main_stores_array_and_passes_parameters` · MP1–MP2；`test_3aiii_screenshot_outputs_2` · MP3；`test_3aii_3biii_traced_results` · 实际调用、参数与数据链（D46） | 数组注释 INTEGER、10 个元素；输出的是调用返回值 |
 | Part 3(a)(iii) | 9618_w25_43:3(a)(iii) | 1 | 截图 | `test_3aiii_screenshot_outputs_2` · 整行（2） | 截图清晰可读 |
 | Part 3(b)(i) | 9618_w25_43:3(b)(i) | 1 | 代码 | `test_3bi_main_stores_the_string` · 整行（在主程序变量中存题给字符串） | 变量局部于主程序 |
 | Part 3(b)(ii) | 9618_w25_43:3(b)(ii) | 6 | 代码 | `test_3bii_splitdata_four_statements` · MP2–MP6；`test_3bii_no_inbuilt_split` · MP2–MP4 的算法限制 | MP1 单字符串参数函数头；逐字符比较并拼接，无内置拆分代劳 |
-| Part 3(b)(iii) | 9618_w25_43:3(b)(iii) | 2 | 代码 | `test_3biii_main_calls_splitdata_with_the_string` · MP1；`test_3biv_screenshot_four_lines` · MP2 | MP1 使用 SplitData 的返回数组，传字符串（上文 D31） |
+| Part 3(b)(iii) | 9618_w25_43:3(b)(iii) | 2 | 代码 | `test_3biii_main_calls_splitdata_with_the_string` · MP1；`test_3biv_screenshot_four_lines` · MP2；`test_3aii_3biii_traced_results` · 实际调用、参数与数据链（D46） | MP1 使用 SplitData 的返回数组，传字符串（上文 D31） |
 | Part 3(b)(iv) | 9618_w25_43:3(b)(iv) | 1 | 截图 | `test_3biv_screenshot_four_lines` · 整行（四条语句分别一行） | 截图清晰可读 |
 
 按得分点分值加权：自动 18 / 20 分（90%），人工 2 / 20 分（10%），人工专属为两个函数头；行为点中附带的结构、注释等仍需看清单。
@@ -120,3 +120,9 @@
 - [ ] 3(b)(ii) MP1：函数带一个字符串参数；遍历字符、与 `;` 比较、拼接、存数组、返回；不借内置拆分函数代劳。真实字符串数组，注释类型及四个有效元素。
 - [ ] 3(b)(iii)：传入字符串变量、使用返回数组，循环逐行输出元素，没有把四条输出写死。
 - [ ] 两个截图格都有对应输出且清晰可读；以原 MS 的输出内容核对。
+
+### T38c1 · D46 调用与输出核验
+
+既有运行跟踪已观测主程序数组、字符串及调用参数；新增标准追踪并检查 RecursiveCount / SplitData 返回内容与输出。测试继续兼容参数顺序，数组额外未使用格原先已接受；四条语句分行是 QP 要求，保留。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
