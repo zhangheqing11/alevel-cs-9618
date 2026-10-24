@@ -457,5 +457,27 @@
       "practice/p4/manifest-T35f.json",
       "practice/p4/README-T35f.md"
     ]
+  },
+  "T50": {
+    "allow": [
+      "skill/cie-9618-cs-tutor/**",
+      "papers/p1/front.md",
+      "papers/p1/back.md",
+      "papers/p1/cards/**",
+      "papers/p1/core/**",
+      "papers/p2/front.md",
+      "papers/p2/back.md",
+      "papers/p2/cards/**",
+      "papers/p2/core/**",
+      "papers/p3/front.md",
+      "papers/p3/back.md",
+      "papers/p3/cards/**",
+      "papers/p3/core/**",
+      "papers/p4/front.md",
+      "papers/p4/back.md",
+      "papers/p4/cards/**",
+      "papers/p4/core/**",
+      "docs/review/**"
+    ]
   }
 }
