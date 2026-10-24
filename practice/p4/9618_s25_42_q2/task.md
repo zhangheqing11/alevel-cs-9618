@@ -159,7 +159,7 @@
 | Part 2(d) | 9618_s25_42:2(d) | 6 | 代码 | `test_2d_insert_and_collisions`、`test_2d_last_spare_slot` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 2(e) | 9618_s25_42:2(e) | 5 | 代码 | `test_2e_create_from_official_data`、`test_2e_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 2(f)(i) | 9618_s25_42:2(f)(i) | 2 | 代码 | `test_2f_printspare_empty_partial_full` · MP1、MP2 | — |
-| Part 2(f)(ii) | 9618_s25_42:2(f)(ii) | 1 | 代码 | `test_2f_screenshot` · 整行 | — |
+| Part 2(f)(ii) | 9618_s25_42:2(f)(ii) | 1 | 代码 | `test_2f_screenshot` · 整行；`test_2f_ii_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 2(f)(iii) | 9618_s25_42:2(f)(iii) | 1 | 截图 | `test_2f_screenshot` · 整行 | — |
 
 自动测分值 18.166667，人工核对分值 3.833333，自动占比 82.58%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
@@ -177,3 +177,7 @@
 ## 原页、编号与差异记录
 
 已看 QP pp.6–8、MS pp.19–32 全部渲染图并放大 MS p.32 截图，核对 evidence.doc 9 格。MS p.32 61个键逐项核对，官方数据重算与图一致。MS Python class Record 与 QP NewRecord 不一致，按 QP 命名；MS PrintSpare 无上界检查，全100格非空会越界，参考解补 X<100，保留按连续填入顺序输出（D31）。Initialise 采用下标赋值满足固定大小数组，不对空 list append。2(a) 两点仅声明结构/类型，分值归人工，字段值测试作辅助。2(e) 六可选点 max5。未印数字MP；语料圆点序号一致。
+
+## T38c2 · D46 验证补充
+
+补测 Initialise → CreateHashTable → PrintSpare；PrintSpare 和截图的整段数字严格相等改为键值有序包含，允许题号/说明数字（QP p.8/MS pp.30–32）。固定 200/100 容量由 QP 指定，保留。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

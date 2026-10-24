@@ -1273,7 +1273,8 @@
           "auto_marks": 1.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_2f_screenshot"
+            "test_2f_screenshot",
+            "test_2f_ii_main_call_chain"
           ]
         },
         {
@@ -1302,8 +1303,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 2,
-      "tests": 10,
+      "mutants": 3,
+      "tests": 11,
       "qp_pages_checked": [
         6,
         7,
@@ -1325,7 +1326,7 @@
         31,
         32
       ],
-      "notes": "已看 QP pp.6–8、MS pp.19–32 全部渲染图并放大 MS p.32 截图，核对 evidence.doc 9 格。MS p.32 61个键逐项核对，官方数据重算与图一致。MS Python class Record 与 QP NewRecord 不一致，按 QP 命名；MS PrintSpare 无上界检查，全100格非空会越界，参考解补 X<100，保留按连续填入顺序输出（D31）。Initialise 采用下标赋值满足固定大小数组，不对空 list append。2(a) 两点仅声明结构/类型，分值归人工，字段值测试作辅助。2(e) 六可选点 max5。未印数字MP；语料圆点序号一致。"
+      "notes": "已看 QP pp.6–8、MS pp.19–32 全部渲染图并放大 MS p.32 截图，核对 evidence.doc 9 格。MS p.32 61个键逐项核对，官方数据重算与图一致。MS Python class Record 与 QP NewRecord 不一致，按 QP 命名；MS PrintSpare 无上界检查，全100格非空会越界，参考解补 X<100，保留按连续填入顺序输出（D31）。Initialise 采用下标赋值满足固定大小数组，不对空 list append。2(a) 两点仅声明结构/类型，分值归人工，字段值测试作辅助。2(e) 六可选点 max5。未印数字MP；语料圆点序号一致。 T38c2：补测 Initialise → CreateHashTable → PrintSpare；PrintSpare 和截图的整段数字严格相等改为键值有序包含，允许题号/说明数字（QP p.8/MS pp.30–32）。固定 200/100 容量由 QP 指定，保留。"
     },
     {
       "directory": "practice/p4/9618_s25_43_q1",
