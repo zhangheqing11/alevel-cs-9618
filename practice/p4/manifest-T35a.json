@@ -411,7 +411,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 10,
       "qp_pages_checked": [
         2,
@@ -424,7 +424,7 @@
       "qp_over_ms": [
         "1(b)/1(c): MS Java example loops to length - 1 (last element skipped, also visible in the MS p.11 screenshot); tests follow QP and include the last element"
       ],
-      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10."
+      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s23_42_q1",

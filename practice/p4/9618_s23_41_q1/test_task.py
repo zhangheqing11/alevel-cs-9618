@@ -17,7 +17,21 @@ def run_main(candidate_path, monkeypatch, tmp_path, files_dir, *answers):
     """Run the candidate as __main__ in a copy of files/; returns its global namespace."""
     use_files(monkeypatch, tmp_path, files_dir)
     feed_input(monkeypatch, *answers)
-    return runpy.run_path(str(candidate_path), run_name="__main__")
+    import sys
+    seen = {}
+    def profile(frame, event, arg):
+        if (event == "return" and frame.f_code.co_filename == str(candidate_path)
+                and frame.f_code.co_name not in ("PrintArray", "LinearSearch")
+                and "DataArray" in frame.f_locals):
+            seen["DataArray"] = list(frame.f_locals["DataArray"])
+    old = sys.getprofile()
+    try:
+        sys.setprofile(profile)
+        namespace = runpy.run_path(str(candidate_path), run_name="__main__")
+    finally:
+        sys.setprofile(old)
+    namespace.update(seen)
+    return namespace
 
 
 def ints(line):
@@ -46,22 +60,21 @@ def test_1b_i_print_array_one_line_in_order(sol, capsys):
     """9618_s23_41:1(b)(i) MP2-MP3: all elements, in stored order, on one line."""
     sol.PrintArray([10, 4, 5, 13, 25])
     lines = output_lines(capsys.readouterr().out)
-    assert len(lines) == 1, f"expected one line, got {lines}"
-    assert ints(lines[0]) == [10, 4, 5, 13, 25]
+    assert any([10, 4, 5, 13, 25] == ints(line)[-5:] for line in lines)
 
 
 def test_1b_i_print_array_any_length(sol, capsys):
     """9618_s23_41:1(b)(i) MP2: loops through the whole parameter array (25 elements)."""
     sol.PrintArray(DATA)
     lines = output_lines(capsys.readouterr().out)
-    assert len(lines) == 1 and ints(lines[0]) == DATA
+    assert any(ints(line)[-25:] == DATA for line in lines)
 
 
 def test_1b_iii_screenshot_array_output(candidate_path, exercise_dir):
     """9618_s23_41:1(b)(ii) MP1 and 9618_s23_41:1(b)(iii) MP1: the 25 values on one line (MS p.8 example)."""
     res = run_script(candidate_path, stdin="12\n", files_dir=exercise_dir / "files")
     assert res.returncode == 0, res.stderr[-600:]
-    assert any(ints(ln)[:25] == DATA for ln in res.lines), "the 25 values of Data.txt are not output on one line"
+    assert any(ints(ln)[-25:] == DATA for ln in res.lines), "the 25 values of Data.txt are not output on one line"
 
 
 # ---------------------------------------------------------------- 1(c)
@@ -80,8 +93,8 @@ def test_1c_linear_search_other_array(sol):
 # ---------------------------------------------------------------- 1(d)
 
 def _result_line(res, number, times):
-    pat = re.compile(rf"The number {number} is found {times} times")
-    return any(pat.search(ln) for ln in res.lines)
+    pat = re.compile(rf"The number\s+{number}\s+is found\s+{times}\s+times")
+    return bool(pat.search(res.stdout))
 
 
 def test_1d_i_validates_0_to_100(candidate_path, exercise_dir):
@@ -104,3 +117,18 @@ def test_1d_ii_screenshot_number_12(candidate_path, exercise_dir):
     res = run_script(candidate_path, stdin="12\n", files_dir=exercise_dir / "files")
     assert res.returncode == 0, res.stderr[-600:]
     assert _result_line(res, 12, 4)
+
+
+def test_1bii_di_traced_main(candidate_path, exercise_dir):
+    """9618_s23_41:1(b)(ii) whole; 1(d)(i) MP3–4; MS pp.8,10."""
+    from testkit import run_script_traced
+    for value in (12, 7, 99):
+        r = run_script_traced(candidate_path, stdin=f"{value}\n", files_dir=exercise_dir / "files")
+        assert r.error is None
+        prints, searches = r.called("PrintArray"), r.called("LinearSearch")
+        assert prints and searches
+        assert DATA in list(prints[0].args.values())
+        assert list(searches[0].args.values()) == [DATA, value]
+        assert next(i for i, c in enumerate(r.calls) if c is prints[0]) < next(i for i, c in enumerate(r.calls) if c is searches[0])
+        assert searches[0].result == DATA.count(value)
+        assert re.search(rf"The number\s+{value}\s+is found\s+{searches[0].result}\s+times", r.stdout)

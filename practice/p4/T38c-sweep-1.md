@@ -46,3 +46,14 @@ F05：取消整个输出段数字严格相等；按 Recursive / Iterative 段匹
 - 运行：7 passed in 0.08s；6 个 mutant 各至少一测失败。
 - 占比：自动/人工分类不变，增加实际观测以支撑原自动声明；混合点中的结构/变量存储仍人工补核。
 
+## 9618_s23_41_q1
+
+增加 PrintArray(DataArray)、LinearSearch(DataArray, validated input) 的实际调用与返回值消息核对，覆盖三种查找值。QP 明定数组同行、完整结果消息格式；允许额外数字标题与消息中的相邻换行，仍检查规定的词序和数值。 等价 main() 暴露旧测试只查 runpy 模块命名空间，已改成观测主程序帧中的 DataArray，接受局部 main()。
+
+- 调用观测：`test_1bii_di_traced_main`。
+- 原件：QP pp.2–3；MS pp.7–8、10。
+- hollow-main：保留参考模块，主程序只硬编码原参考输出；测试失败。
+- 等价改写：主程序增加数字说明；主程序提取为 main()（必要时保留 global）。 两个版本均全过。
+- 运行：16 passed in 0.31s；6 个 mutant 各至少一测失败。
+- 占比：自动/人工分类不变，增加实际观测以支撑原自动声明；混合点中的结构/变量存储仍人工补核。
+

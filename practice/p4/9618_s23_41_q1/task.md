@@ -77,10 +77,10 @@ and ColourData.txt
 | Part 1(a)(i) | 9618_s23_41:1(a)(i) | 1 | 代码 | `test_1a_dataarray_holds_25_integers_from_file` · 名为 DataArray、25 个整数 | 注释写明 25 个元素与 INTEGER；局部于主程序 |
 | Part 1(a)(ii) | 9618_s23_41:1(a)(ii) | 4 | 代码 | `test_1a_dataarray_holds_25_integers_from_file` · MP1–MP3；`test_1a_missing_file_handled` · MP4（不崩溃） | MP4 提示语合适；MP5 关闭文件且位置合适（max 4） |
 | Part 1(b)(i) | 9618_s23_41:1(b)(i) | 3 | 代码 | `test_1b_i_print_array_one_line_in_order`、`test_1b_i_print_array_any_length` · MP2–MP3 | MP1 过程头带一个数组参数 |
-| Part 1(b)(ii) | 9618_s23_41:1(b)(ii) | 1 | 代码 | `test_1b_iii_screenshot_array_output` · 以 DataArray 调用 PrintArray | — |
+| Part 1(b)(ii) | 9618_s23_41:1(b)(ii) | 1 | 代码 | `test_1b_iii_screenshot_array_output` · 以 DataArray 调用 PrintArray；`test_1bii_di_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(b)(iii) | 9618_s23_41:1(b)(iii) | 1 | 截图 | `test_1b_iii_screenshot_array_output` · 一行里依次是 Data.txt 的 25 个数（MS p.8 样例） | 截图清晰 |
 | Part 1(c) | 9618_s23_41:1(c) | 3 | 代码 | `test_1c_linear_search_counts`、`test_1c_linear_search_other_array` · MP2–MP3 | MP1 函数头带数组与查找值两个参数；不用 `count()` |
-| Part 1(d)(i) | 9618_s23_41:1(d)(i) | 4 | 代码 | `test_1d_i_validates_0_to_100` · MP1–MP4；`test_1d_i_bounds_inclusive` · MP2 | MP1 提示语合适 |
+| Part 1(d)(i) | 9618_s23_41:1(d)(i) | 4 | 代码 | `test_1d_i_validates_0_to_100` · MP1–MP4；`test_1d_i_bounds_inclusive` · MP2；`test_1bii_di_traced_main` · 实际调用、参数与数据链（D46） | MP1 提示语合适 |
 | Part 1(d)(ii) | 9618_s23_41:1(d)(ii) | 1 | 截图 | `test_1d_ii_screenshot_number_12` · `The number 12 is found 4 times`（MS p.11 样例） | 截图里能看到输入的 12 |
 
 ## 人工核对清单
@@ -96,3 +96,9 @@ and ColourData.txt
 
 - MS 的 Java 范例 `X < DataArray.length - 1` 少查最后一个元素（MS p.11 截图里数组末尾的 `0` 也没输出）；QP 要求「outputs the contents of the array」「counts … the number of times」，测试按 QP 查到最后一个元素（D31）。
 - 1(a)(i)、1(b)(ii)、1(b)(iii)、1(d)(ii) 是 1 分行，语料不拆得分点；其余行 MS 用圆点列点，语料 `markpoints[].n` 就是圆点顺序，没有对照差异。
+
+### T38c1 · D46 调用与输出核验
+
+增加 PrintArray(DataArray)、LinearSearch(DataArray, validated input) 的实际调用与返回值消息核对，覆盖三种查找值。QP 明定数组同行、完整结果消息格式；允许额外数字标题与消息中的相邻换行，仍检查规定的词序和数值。 等价 main() 暴露旧测试只查 runpy 模块命名空间，已改成观测主程序帧中的 DataArray，接受局部 main()。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
