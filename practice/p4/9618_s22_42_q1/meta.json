@@ -1,0 +1,44 @@
+{
+  "id": "9618_s22_42:1(a)",
+  "kind": "past-paper",
+  "title": "数组栈与下一空位指针",
+  "source": {
+    "paper": "9618_s22_42",
+    "rows": [
+      "9618_s22_42:1(a)",
+      "9618_s22_42:1(b)",
+      "9618_s22_42:1(c)",
+      "9618_s22_42:1(d)(i)",
+      "9618_s22_42:1(d)(ii)",
+      "9618_s22_42:1(e)(i)",
+      "9618_s22_42:1(e)(ii)"
+    ]
+  },
+  "marks": 25,
+  "types": [
+    "P4-SQ-01",
+    "P4-AR-04",
+    "P4-MP-02",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "boolean-return",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "input-prompt",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "return-value",
+    "stack-array",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
