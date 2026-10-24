@@ -211,7 +211,7 @@
 | Part 3(c)(ii) | 9618_s25_41:3(c)(ii) | 1 | 代码 | `test_3c_i_ii_root_is_original_node` · 整行 | — |
 | Part 3(c)(iii) | 9618_s25_41:3(c)(iii) | 6 | 代码 | `test_3c_iii_insert_identity_and_duplicate_right` · MP2, MP3, MP4, MP5, MP6 | MP1 |
 | Part 3(d) | 9618_s25_41:3(d) | 5 | 代码 | `test_3d_recursive_inorder` · MP1, MP2, MP3, MP4, MP5 | — |
-| Part 3(e)(i) | 9618_s25_41:3(e)(i) | 3 | 代码 | `test_3b_and_3e_i_main_objects` / `test_3e_ii_screenshot` · MP1, MP2, MP3 | — |
+| Part 3(e)(i) | 9618_s25_41:3(e)(i) | 3 | 代码 | `test_3main_call_chain` / `test_3b_and_3e_i_main_objects` / `test_3e_ii_screenshot` · MP1, MP2, MP3 | — |
 | Part 3(e)(ii) | 9618_s25_41:3(e)(ii) | 1 | 截图 | `test_3e_ii_screenshot` · 整行 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。

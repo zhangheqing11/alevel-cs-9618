@@ -1128,8 +1128,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 6,
+      "mutants": 3,
+      "tests": 7,
       "qp_pages_checked": [
         6,
         7,

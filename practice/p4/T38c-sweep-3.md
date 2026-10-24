@@ -97,3 +97,18 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - equivalent_footer.py: 9 passed in 0.07s
 
 自动分 23.142857 → 23.1429；占比 77.14% → 77.14%。
+
+## 9618_s25_41_q3
+
+runpy 树结构正确仍不证明 Insert/OutputInOrder 调用；补 Node 参数顺序与 root 返回对象传递。截图/递归输出允许说明数字。
+
+本轮逐行核对本题配对 MS（30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 5 passed in 0.08s；修后与等价改写：
+
+- mutant_1.py: 6 failed, 1 passed in 0.14s
+- mutant_2.py: 2 failed, 5 passed in 0.09s
+- mutant_hollow_main.py: 2 failed, 5 passed in 0.06s
+- solution.py: 7 passed in 0.06s
+- equivalent_banner.py: 7 passed in 0.06s
+- equivalent_footer.py: 7 passed in 0.07s
+
+自动分 23.0 → 23.0；占比 76.67% → 76.67%。
