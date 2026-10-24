@@ -38,12 +38,12 @@ def count_calls(monkeypatch, sol, name):
 
 @pytest.mark.parametrize("number, total", DIVISOR_TOTALS)
 def test_2a_iterativecalculate_totals_divisors(sol, number, total):
-    """9618_w23_42:2(a)(i) MP2-MP5: loop from Number down to 1, MODULUS test, total returned."""
+    """9618_w23_42:2(a)(i) MP2-MP4: loop from Number down to 1, MODULUS test, total returned."""
     assert sol.IterativeCalculate(number) == total
 
 
 def test_2a_iterativecalculate_is_iterative(sol, monkeypatch):
-    """9618_w23_42:2(a)(i) MP2, MP5: follows the given WHILE loop (called once, no recursion)."""
+    """9618_w23_42:2(a)(i) MP2 (partial): called once, no recursion; MP5 full structure is checked manually."""
     spy, calls = count_calls(monkeypatch, sol, "IterativeCalculate")
     assert spy(10) == 18
     assert len(calls) == 1

@@ -113,14 +113,14 @@ MS 2(b)(i) 的三行没有编号：语料 MP1 = “One mark for each gap (5)”�
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a)(i) | 9618_w23_42:2(a)(i) | 5 | 代码 | `test_2a_iterativecalculate_totals_divisors` · MP2–MP5；`test_2a_iterativecalculate_is_iterative` · MP2、MP5 | MP1 函数头带参数；MP5 与伪代码结构一致 |
+| Part 2(a)(i) | 9618_w23_42:2(a)(i) | 5 | 代码 | `test_2a_iterativecalculate_totals_divisors` · MP2–MP4；`test_2a_iterativecalculate_is_iterative` · MP2（仅检查无递归） | MP1 函数头带参数；MP5 与伪代码结构一致 |
 | Part 2(a)(ii) | 9618_w23_42:2(a)(ii) | 2 | 代码 | `test_2a_screenshot_outputs_18` · MP1–MP2 | 参数是 10 |
 | Part 2(a)(iii) | 9618_w23_42:2(a)(iii) | 1 | 截图 | `test_2a_screenshot_outputs_18` · 输出 18 | 截图清晰 |
 | Part 2(b)(i) | 9618_w23_42:2(b)(i) | 7 | 代码 | `test_2b_recursivevalue_totals_divisors` · MP1（空 1–3）；`test_2b_recursivevalue_keeps_tofind` · MP1（空 4–5）；`test_2b_recursivevalue_is_recursive` · MP2 | MP3 其余部分照伪代码、没有多余内容；五个空的写法 |
 | Part 2(b)(ii) | 9618_w23_42:2(b)(ii) | 1 | 代码 | `test_2b_screenshot_outputs_93` · 调用并输出 | 参数是 50、50 |
 | Part 2(b)(iii) | 9618_w23_42:2(b)(iii) | 1 | 截图 | `test_2b_screenshot_outputs_93` · 输出 93 | 截图清晰 |
 
-按分值：行为可自动测 15 分，只能人工核对 2 分（2(a)(i) MP1 函数头、2(b)(i) MP3 “nothing superfluous”）。
+按分值：行为可自动测 14 分，只能人工核对 3 分（2(a)(i) MP1 函数头、MP5 “Remainder of function correct” 整体结构，及 2(b)(i) MP3 “nothing superfluous”）。续做按交接的纯结构点归人工口径修正；行为测试不能单独证明完整结构正确。
 
 ## 人工核对清单
 
