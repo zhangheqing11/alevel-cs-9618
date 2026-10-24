@@ -1,0 +1,53 @@
+{
+  "id": "9618_w22_41:2(a)(i)",
+  "kind": "past-paper",
+  "title": "Card 与 Hand：封装、组合与计分",
+  "source": {
+    "paper": "9618_w22_41",
+    "rows": [
+      "9618_w22_41:2(a)(i)",
+      "9618_w22_41:2(a)(ii)",
+      "9618_w22_41:2(a)(iii)",
+      "9618_w22_41:2(b)(i)",
+      "9618_w22_41:2(b)(ii)",
+      "9618_w22_41:2(b)(iii)",
+      "9618_w22_41:2(c)(i)",
+      "9618_w22_41:2(c)(ii)",
+      "9618_w22_41:2(c)(iii)"
+    ]
+  },
+  "marks": 31,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-OP-06",
+    "P4-PR-03",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-objects",
+    "class-definition",
+    "constructor",
+    "containment",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "encapsulation",
+    "getter-setter",
+    "initialise-variables",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
