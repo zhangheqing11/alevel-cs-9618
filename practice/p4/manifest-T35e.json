@@ -825,10 +825,173 @@
       "qp_over_ms": [
         "接口照 QP：`Tree(Name, Growth, MaxHeight, MaxWidth, Evergreen)`、`ReadData()` 返回对象列表、`PrintTrees(Item)`、`ChooseTree(Trees)`。QP 2(e)(iii) 写 ChooseTrees（多 s），与前文不一致，按定义用 ChooseTree。输入次序采用 MS p.25：先 keep/lose、再最大高、再最大宽、选树名、购买高度。仅测试已声明的 keep/lose；不要求其他同义输入。空匹配时输出消息后结束，不进入 MS p.27 没有保护的无限购买循环。年数不强制取整；官方截图接受 3 / 3.75 / 4，Beech 示例接受 12。PrintTrees 按 QP 文字格式，末尾句号不影响判定。MS ReadData 用 split(\"\\n\")，遇文件末尾换行会产生空记录，参考解逐行读取；官方原件字节不变。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s24_42_q2",
+      "id": "9618_s24_42:2(a)(i)",
+      "paper": "9618_s24_42",
+      "marks": 30,
+      "auto_marks": 23.142857,
+      "manual_marks": 6.857143,
+      "auto_share": 0.7714,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-LT-03",
+        "P4-AR-04",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_42:2(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            4
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:2(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:2(b)(i)",
+          "marks": 4,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s24_42:2(b)(ii)",
+          "marks": 6,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.142857
+        },
+        {
+          "id": "9618_s24_42:2(b)(iii)",
+          "marks": 4,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s24_42:2(c)(i)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:2(c)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s24_42:2(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "ms_pages_checked": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "qp_over_ms": [
+        "接口照 QP 的 `Node(Data)`、`TreeClass()` 及 get/set/InsertNode/OutputTree 名称。MS 2(a)(i) 得分点称属性 public，但 Python 范例为私有；测试接受公有或私有，只按 getter/setter 行为与题给指针约定核对。MS p.23 原页的 NumberNodes 增量实际在左右分支之外（抽文本会丢缩进），参考解保持。该算法对重复值 / 满树行为 QP 未定义，测试只插入不同整数且不超过 20 个，不额外规定溢出返回值。2(b)(ii) 7 个可选点最多 6 分。无数据文件，不复制本卷其他题的文件。"
+      ]
     }
   ],
-  "count": 5,
-  "marks": 148,
-  "auto_marks": 123.5,
-  "manual_marks": 24.5
+  "count": 6,
+  "marks": 178,
+  "auto_marks": 146.642857,
+  "manual_marks": 31.357143
 }

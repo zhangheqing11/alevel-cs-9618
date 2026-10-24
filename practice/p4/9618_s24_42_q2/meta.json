@@ -1,0 +1,52 @@
+{
+  "id": "9618_s24_42:2(a)(i)",
+  "kind": "past-paper",
+  "title": "Node objects in an array binary tree",
+  "source": {
+    "paper": "9618_s24_42",
+    "rows": [
+      "9618_s24_42:2(a)(i)",
+      "9618_s24_42:2(a)(ii)",
+      "9618_s24_42:2(a)(iii)",
+      "9618_s24_42:2(b)(i)",
+      "9618_s24_42:2(b)(ii)",
+      "9618_s24_42:2(b)(iii)",
+      "9618_s24_42:2(c)(i)",
+      "9618_s24_42:2(c)(ii)",
+      "9618_s24_42:2(c)(iii)"
+    ]
+  },
+  "marks": 30,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-LT-03",
+    "P4-AR-04",
+    "P4-OP-07",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-of-objects",
+    "binary-tree",
+    "class-definition",
+    "constructor",
+    "containment",
+    "count-loop",
+    "data-types",
+    "getter-setter",
+    "initialise-variables",
+    "loop-bounds",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "pre-condition-loop",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
