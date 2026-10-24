@@ -1,6 +1,6 @@
 """9618_s22_42 Q1 stack; MS accepts uncleared or cleared popped slots."""
 import re
-from testkit import run_script
+from testkit import run_script, run_script_traced
 
 
 def nums(text):
@@ -14,11 +14,12 @@ def test_1a_declarations(sol):
 
 
 def test_1b_printarray(sol, capsys):
-    """9618_s22_42:1(b) MP2-MP3: all ten elements and pointer, in either order."""
+    """9618_s22_42:1(b) MP2-MP3 (MS p.5): all cells and pointer; no QP output order constraint."""
     sol.StackData = list(range(11, 21)); sol.StackPointer = 4
     sol.PrintArray()
-    out = nums(capsys.readouterr().out)
-    assert out == [4] + list(range(11, 21)) or out == list(range(11, 21)) + [4]
+    text = capsys.readouterr().out
+    assert_numbers_in_order(text, list(range(11, 21)))
+    assert 4 in nums(text)
 
 
 def test_1c_push_boundary(sol):
@@ -43,27 +44,17 @@ def test_1e_pop_lifo_empty_reuse(sol):
 
 
 def test_1d_screenshot(candidate_path):
-    """9618_s22_42:1(d)(i) MP1-MP5; 1(d)(ii) whole: first ten stored, eleventh rejected."""
+    """9618_s22_42:1(d)(ii) whole (MS p.10): stored array, allow explanatory digits."""
     r = run_script(candidate_path, stdin='\n'.join(map(str, range(11, 22))) + '\n')
     assert r.returncode == 0, r.stderr
-    lines = [x.strip() for x in r.stdout.splitlines() if x.strip()]
-    assert len(lines) >= 11
-    statuses = [x.rsplit(':', 1)[-1].strip() for x in lines[:11]]
-    assert len(set(statuses[:10])) == 1 and statuses[10] != statuses[0]
-    out = nums('\n'.join(lines[11:]))
-    assert out[:11] == [10] + list(range(11, 21))
+    assert_numbers_in_order(r.stdout, list(range(11, 21)))
 
 
 def test_1e_screenshot_after_two_pops(candidate_path):
-    """9618_s22_42:1(e)(ii) MP1-MP2: before and after output; accept all MS slot variants."""
+    """9618_s22_42:1(e)(ii) MP1-MP2 (MS p.12): accept all three MS slot variants."""
     r = run_script(candidate_path, stdin='\n'.join(map(str, range(11, 22))) + '\n')
     assert r.returncode == 0, r.stderr
-    lines = [x for x in r.stdout.splitlines() if x.strip()]
-    out = nums('\n'.join(lines[11:]))
-    assert out[:11] == [10] + list(range(11, 21))
-    after = out[11:]
-    assert after[0] == 8 and after[1:9] == list(range(11, 19))
-    assert after[9:] in ([], [19, 20], [0, 0])
+    assert_numbers_in_order(r.stdout, list(range(11, 21)) + list(range(11, 19)))
 
 
 def test_1b_no_algorithm_shortcuts(candidate_path):
@@ -79,3 +70,26 @@ def test_1b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_1d_1e_main_call_chain(candidate_path):
+    """9618_s22_42:1(d)(i) MP1-MP5;1(e)(ii) MP1-MP2 (MS pp.8/12): main uses stack operations."""
+    data = '11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n'
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    pushes = r.called('Push')
+    assert [next(iter(c.args.values())) for c in pushes] == list(range(11, 22))
+    assert [c.result for c in pushes] == [True] * 10 + [False]
+    assert [c.name for c in r.calls if c.name in ('Push', 'PrintArray', 'Pop')] == ['Push'] * 11 + ['PrintArray', 'Pop', 'Pop', 'PrintArray']
+    assert [c.result for c in r.called('Pop')] == [20, 19]
+    assert_numbers_in_order(r.stdout, list(range(11, 21)) + list(range(11, 19)))
+

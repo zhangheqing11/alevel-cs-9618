@@ -181,13 +181,13 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 3(a) | 9618_w25_41:3(a) | 2 | 代码 | `test_3a_public_record_constructor` · MP2 | MP1 Class header (and end) and constructor header (and end) in class |
+| Part 3(a) | 9618_w25_41:3(a) | 2 | 代码 | `test_3a_public_record_constructor` · MP2 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 3(b) | 9618_w25_41:3(b) | 2 | 代码 | `test_3b_initialise_all_cells` · MP1、MP2 | — |
 | Part 3(c) | 9618_w25_41:3(c) | 2 | 代码 | `test_3c_hash_modulo` · MP1、MP2 | — |
-| Part 3(d) | 9618_w25_41:3(d) | 4 | 代码 | `test_3d_insert_collision_slots_once` · MP2、MP3、MP4 | MP1 Procedure header (and end) taking one Record parameter |
-| Part 3(e) | 9618_w25_41:3(e) | 5 | 代码 | `test_3e_reads_official_records`；`test_3e_missing_file_handled` · MP2、MP3、MP4、MP5、MP6 | MP1 Procedure header (and end), opening file and closing file (in appropriate place) |
+| Part 3(d) | 9618_w25_41:3(d) | 4 | 代码 | `test_3d_insert_collision_slots_once` · MP2、MP3、MP4 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 3(e) | 9618_w25_41:3(e) | 5 | 代码 | `test_3e_reads_official_records`、`test_3e_missing_file_handled` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 3(f) | 9618_w25_41:3(f) | 5 | 代码 | `test_3f_getrecord_last_collision_and_missing` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 3(g)(i) | 9618_w25_41:3(g)(i) | 3 | 代码 | `test_3g_ii_screenshot_words` · MP1、MP2、MP3 | — |
+| Part 3(g)(i) | 9618_w25_41:3(g)(i) | 3 | 代码 | `test_3g_ii_screenshot_words`、`test_3g_main_call_chain` · MP1、MP2、MP3 | — |
 | Part 3(g)(ii) | 9618_w25_41:3(g)(ii) | 2 | 截图 | `test_3g_ii_screenshot_words` · MP1、MP2 | — |
 
 ## 人工核对清单
@@ -208,3 +208,9 @@
 - MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。
 
 3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。
+
+## T38c2 · D46 验证补充
+
+补测 InitialiseHashTable → ReadData → 五次 GetRecord 的整数参数与有序返回字符串；原有输出已允许额外说明，容量为 QP 明定，无放宽项（QP p.12/MS pp.35–36）。
+
+本次行为覆盖：自动 22.166667 分、人工 2.833333 分（88.67%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

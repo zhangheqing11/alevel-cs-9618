@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 import pytest
-from testkit import run_script, use_files
+from testkit import run_script, run_script_traced, use_files
 
 
 def test_1a_initial_state(sol):
@@ -81,8 +81,7 @@ def test_1f_screenshots(candidate_path, exercise_dir, filename, total):
     """9618_s25_42:1(f)(i) MP1-MP2; 1(f)(ii) MP1/MP2: own-MS totals 131 and 320."""
     r = run_script(candidate_path, stdin=filename + '\n', files_dir=exercise_dir / 'files')
     assert r.returncode == 0, r.stderr
-    values = re.findall(r'-?\d+(?:\.\d+)?', r.stdout)
-    assert values and float(values[-1]) == total
+    assert_numbers_in_order(r.stdout, [total])
 
 
 def test_1b_no_algorithm_shortcuts(candidate_path):
@@ -98,3 +97,25 @@ def test_1b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+@pytest.mark.parametrize('filename,total', [('StackData.txt', 131), ('SecondStack.txt', 320), ('Other.txt', 17)])
+def test_1f_main_call_chain(candidate_path, exercise_dir, tmp_path, filename, total):
+    """9618_s25_42:1(f)(i) MP1-MP2 (QP p.5/MS p.17): filename -> ReadData -> Calculate -> result."""
+    import shutil
+    shutil.copytree(exercise_dir / 'files', tmp_path, dirs_exist_ok=True)
+    (tmp_path / 'Other.txt').write_text('2\n+\n15')
+    r = run_script_traced(candidate_path, stdin=filename + '\n', files_dir=tmp_path)
+    assert r.error is None, r.error
+    reads, calculations = r.called('ReadData'), r.called('Calculate')
+    assert reads and reads[0].args.get('FileName') == filename
+    assert calculations and calculations[-1].result == pytest.approx(total)
+    assert r.calls.index(reads[0]) < r.calls.index(calculations[0])
+    assert_numbers_in_order(r.stdout, [calculations[-1].result])

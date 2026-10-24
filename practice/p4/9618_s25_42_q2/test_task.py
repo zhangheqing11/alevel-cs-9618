@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 import pytest
-from testkit import run_script, use_files
+from testkit import run_script, run_script_traced, use_files
 
 MS_SPARE = [915,136,415,55,349,775,846,469,246,752,8,889,695,292,417,181,810,972,781,46,120,95,378,433,994,946,586,365,615,580,128,944,2,689,962,704,948,435,195,981,320,658,831,408,947,830,88,362,629,986,31,823,527,141,905,965,697,15,24,977,88]
 
@@ -93,14 +93,14 @@ def test_2f_printspare_empty_partial_full(sol, capsys, count):
     for i in range(count):
         sol.Spare[i] = sol.NewRecord(i + 1, 99, 88)
     sol.PrintSpare()
-    assert [int(x) for x in re.findall(r'-?\d+', capsys.readouterr().out)] == list(range(1, count + 1))
+    assert_numbers_in_order(capsys.readouterr().out, list(range(1, count + 1)))
 
 
 def test_2f_screenshot(candidate_path, exercise_dir):
     """9618_s25_42:2(f)(ii) whole; 2(f)(iii) whole: 61 keys in exact own-MS screenshot order."""
     r = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert r.returncode == 0, r.stderr
-    assert [int(x) for x in re.findall(r'-?\d+', r.stdout)] == MS_SPARE
+    assert_numbers_in_order(r.stdout, MS_SPARE)
 
 
 def test_2b_no_algorithm_shortcuts(candidate_path):
@@ -116,3 +116,23 @@ def test_2b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_2f_ii_main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_42:2(f)(ii) whole (QP p.8/MS p.31): Initialise -> CreateHashTable -> PrintSpare."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('Initialise', 'CreateHashTable', 'PrintSpare')]
+    assert names == ['Initialise', 'CreateHashTable', 'PrintSpare']
+    assert_numbers_in_order(r.stdout, MS_SPARE)
+

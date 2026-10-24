@@ -1,6 +1,6 @@
 """9618_s25_41 Q1 circular queue; tail means last stored item."""
 import re
-from testkit import output_lines, run_script
+from testkit import output_lines, run_script, run_script_traced
 
 
 def test_1a_initial_state(sol):
@@ -44,16 +44,12 @@ def test_1d_empty_reset_and_reuse(sol):
 
 
 def test_1ce_screenshot(candidate_path):
-    """9618_s25_41:1(c) MP1-MP3; 1(e)(i) MP1-MP2; 1(e)(ii) whole."""
+    """9618_s25_41:1(c) MP3;1(e)(ii) whole (QP p.3/MS pp.12/16): status with integer, line breaks allowed."""
     r = run_script(candidate_path)
     assert r.returncode == 0, r.stderr
-    lines = output_lines(r.stdout)
-    assert len(lines) == 27
-    for i, line in enumerate(lines[:25], 1):
-        match = re.search(r'\b(\d+)\s+(Successful|Unsuccessful)\b', line)
-        assert match and int(match[1]) == i
-        assert match[2] == ('Successful' if i <= 20 else 'Unsuccessful')
-    assert re.search(r'\b1\b', lines[-2]) and re.search(r'\b2\b', lines[-1])
+    pairs = re.findall(r'\b(\d+)\s+(Successful|Unsuccessful)\b', r.stdout)
+    assert [(int(n), status) for n, status in pairs] == [(i, 'Successful' if i <= 20 else 'Unsuccessful') for i in range(1, 26)]
+    assert_numbers_in_order(r.stdout[r.stdout.rfind('Unsuccessful') + len('Unsuccessful'):], [1, 2])
 
 
 def test_1b_no_algorithm_shortcuts(candidate_path):
@@ -69,3 +65,26 @@ def test_1b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_1c_1e_main_call_chain(candidate_path):
+    """9618_s25_41:1(c) MP1-MP3;1(e)(i) MP1-MP2 (MS pp.12/16): 25 enqueues then two dequeues."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    enqueues, dequeues = r.called('Enqueue'), r.called('Dequeue')
+    assert [next(iter(c.args.values())) for c in enqueues] == list(range(1, 26))
+    assert [c.result for c in enqueues] == [True] * 20 + [False] * 5
+    assert [c.result for c in dequeues] == [1, 2]
+    assert r.calls.index(enqueues[-1]) < r.calls.index(dequeues[0])
+    assert_numbers_in_order(r.stdout[r.stdout.rfind('Unsuccessful') + len('Unsuccessful'):], [c.result for c in dequeues])
+

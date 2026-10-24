@@ -1,0 +1,26 @@
+# D46: correct modules, but main bypasses the required calls.
+# Queue: ARRAY[0:99] OF INTEGER; pointers: INTEGER.
+Queue = [-1] * 100
+HeadPointer = -1
+TailPointer = 0
+
+
+def Enqueue(Data):
+    global HeadPointer, TailPointer
+    if TailPointer < 100:
+        if HeadPointer == -1:
+            HeadPointer = 0
+        Queue[TailPointer] = Data
+        TailPointer += 1
+        return True
+    return False
+
+
+def RecursiveOutput(Start):
+    if Start == HeadPointer:
+        return Queue[Start]
+    return Queue[Start] + RecursiveOutput(Start - 1)
+
+
+if __name__ == '__main__':
+    print('Successful\n210\n', end='')

@@ -121,9 +121,9 @@ One source file is used to answer Question 3. The file is called HashTableData.t
 | Part 1(a) | 9618_w25_41:1(a) | 2 | 代码 | `test_1a_null_array_last_used_pointer` · MP1、MP2 | — |
 | Part 1(b) | 9618_w25_41:1(b) | 4 | 代码 | `test_1b_capacity_and_boolean` · MP1、MP2、MP3、MP4 | — |
 | Part 1(c) | 9618_w25_41:1(c) | 4 | 代码 | `test_1c_pop_lifo_empty_reuse` · MP1、MP2、MP3、MP4 | — |
-| Part 1(d) | 9618_w25_41:1(d) | 4 | 代码 | `test_1f_ii_screenshot_stack_full_and_extrema` · MP2、MP3、MP4 | MP1 Looping 40 times |
+| Part 1(d) | 9618_w25_41:1(d) | 4 | 代码 | `test_1f_ii_screenshot_stack_full_and_extrema`、`test_1d_1f_main_call_chain` · MP2、MP3、MP4 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 1(e) | 9618_w25_41:1(e) | 4 | 代码 | `test_1e_find_values_uses_pop` · MP1、MP2、MP3、MP4 | — |
-| Part 1(f)(i) | 9618_w25_41:1(f)(i) | 1 | 代码 | `test_1f_ii_screenshot_stack_full_and_extrema` · MPwhole | — |
+| Part 1(f)(i) | 9618_w25_41:1(f)(i) | 1 | 代码 | `test_1f_ii_screenshot_stack_full_and_extrema`、`test_1d_1f_main_call_chain` · MPwhole | — |
 | Part 1(f)(ii) | 9618_w25_41:1(f)(ii) | 1 | 截图 | `test_1f_ii_screenshot_stack_full_and_extrema` · MPwhole | — |
 
 ## 人工核对清单
@@ -141,3 +141,9 @@ One source file is used to answer Question 3. The file is called HashTableData.t
 - MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。
 
 1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。
+
+## T38c2 · D46 验证补充
+
+原有种子/Push 观察已验证随机范围及首次失败停止；新增 FindValues 实际调用、Pop 值链与极值输出。允许说明文字提及 -999，不能据此认定把哨兵当结果（QP p.3/MS pp.11–14）。固定 30 格由 QP 指定。 新增 trace 使用固定种子并恢复主进程随机状态。
+
+本次行为覆盖：自动 19.000000 分、人工 1.000000 分（95.00%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

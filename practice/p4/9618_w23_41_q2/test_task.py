@@ -1,6 +1,6 @@
 """w23/41 Q2: linear queue, file and records (exact matching MS)."""
 import re
-from testkit import run_script, use_files
+from testkit import run_script, run_script_traced, use_files
 
 EXPECTED = [('1234', 1), ('1568', 1), ('9512', 2), ('4567', 4), ('8512', 6),
             ('4125', 3), ('9651', 1), ('4851', 1), ('2520', 2), ('3265', 1), ('8966', 1)]
@@ -14,23 +14,29 @@ def record_pair(record):
 
 def test_2a_i_globals(sol):
     """9618_w23_41:2(a)(i) MP1-MP2; 2(c)(ii) MP1-MP2."""
-    assert isinstance(sol.Queue, list) and len(sol.Queue) == 50
+    assert isinstance(sol.Queue, list) and len(sol.Queue) >= 50
     assert sol.HeadPointer == -1 and sol.TailPointer == 0
     assert isinstance(sol.Records, list) and len(sol.Records) == 50
     assert sol.NumberRecords == 0
 
 
 def test_2a_ii_enqueue_full(sol, capsys):
-    """9618_w23_41:2(a)(ii) MP2-MP4: fills queue; full message and no corruption."""
-    for i in range(50):
+    """9618_w23_41:2(a)(ii) MP2-MP4 (MS p.9 minimum 50): >=50 successes, safe full handling."""
+    capacity = len(sol.Queue)
+    for i in range(capacity + 1):
+        before = sol.Queue.copy()
+        capsys.readouterr()
         sol.Enqueue(str(1000 + i))
+        if sol.TailPointer == i:
+            assert i >= 50, 'at least 50 queue entries must be available'
+            assert capsys.readouterr().out.strip()
+            assert sol.Queue == before
+            break
+        assert i < capacity, 'cannot write beyond allocated storage'
         assert sol.Queue[i] == str(1000 + i)
         assert sol.HeadPointer == 0 and sol.TailPointer == i + 1
-    before = sol.Queue.copy()
-    capsys.readouterr()
-    sol.Enqueue('overflow')
-    assert capsys.readouterr().out.strip()
-    assert sol.Queue == before and sol.TailPointer == 50
+    else:
+        raise AssertionError('full queue never rejects insertion')
 
 
 def test_2a_iii_dequeue_empty_and_fifo(sol, capsys):
@@ -110,3 +116,19 @@ def test_2e_ii_screenshot_totals(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     pairs = re.findall(r'ID\s+(\d+)\s+Total\s+(\d+)', result.stdout)
     assert [(i, int(n)) for i, n in pairs] == EXPECTED
+
+
+def test_2e_main_call_chain(candidate_path, exercise_dir):
+    """9618_w23_41:2(e)(i) MP1-MP2 (QP p.7/MS p.23): ReadData first, each TotalData, OutputRecords last."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('ReadData', 'TotalData', 'OutputRecords')]
+    assert names == ['ReadData'] + ['TotalData'] * 23 + ['OutputRecords']
+    data = (exercise_dir / 'files/QueueData.txt').read_text().splitlines()
+    assert [c.result for c in r.called('Dequeue')] == data
+    pairs = re.findall(r'ID\s+(\d+)\s+Total\s+(\d+)', r.stdout)
+    assert [(i, int(n)) for i, n in pairs] == EXPECTED
+

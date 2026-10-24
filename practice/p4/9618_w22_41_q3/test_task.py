@@ -1,7 +1,7 @@
 """9618_w22_41 Q3 recursive tree search and postorder."""
 import re
 import pytest
-from testkit import output_lines, run_script
+from testkit import output_lines, run_script, run_script_traced
 
 PRESET = [[1,20,5], [2,15,-1], [-1,3,3], [-1,9,4], [-1,10,-1], [-1,58,-1]]
 
@@ -44,24 +44,24 @@ def test_3d_postorder_recursive(sol, monkeypatch, capsys):
         calls.append(root); return original(root)
     monkeypatch.setattr(sol, 'PostOrder', spy)
     sol.PostOrder(sol.ArrayNodes[0])
-    assert [int(x) for x in re.findall(r'-?\d+', capsys.readouterr().out)] == [10, 9, 3, 15, 58, 20]
+    assert_numbers_in_order(capsys.readouterr().out, [10, 9, 3, 15, 58, 20])
     assert len(calls) >= 6
     sol.PostOrder(sol.ArrayNodes[4])
-    assert [int(x) for x in re.findall(r'-?\d+', capsys.readouterr().out)] == [10]
+    assert_numbers_in_order(capsys.readouterr().out, [10])
 
 
 def test_3d_postorder_different_tree(sol, capsys):
     """9618_w22_41:3(d) MP2-MP7: QP illustration postorder 3 9 25 60 50."""
     sol.ArrayNodes = [[1,50,2], [3,25,4], [-1,60,-1], [-1,3,-1], [-1,9,-1]] + [[-1]*3 for _ in range(15)]
     sol.PostOrder(sol.ArrayNodes[0])
-    assert [int(x) for x in re.findall(r'-?\d+', capsys.readouterr().out)] == [3,9,25,60,50]
+    assert_numbers_in_order(capsys.readouterr().out, [3,9,25,60,50])
 
 
 def test_3e_screenshot(candidate_path):
     """9618_w22_41:3(e)(i) MP1-MP3; 3(e)(ii) whole: MS p.23 found1; 10 9 3 15 58 20."""
     r = run_script(candidate_path)
     assert r.returncode == 0, r.stderr
-    assert [int(x) for x in re.findall(r'-?\d+', r.stdout)] == [1,10,9,3,15,58,20]
+    assert_numbers_in_order(r.stdout, [1,10,9,3,15,58,20])
 
 
 def test_3b_no_algorithm_shortcuts(candidate_path):
@@ -77,3 +77,26 @@ def test_3b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3e_main_call_chain(candidate_path):
+    """9618_w22_41:3(e)(i) MP1-MP3 (QP p.11/MS p.22): SearchValue(0,15), returned index, PostOrder(root)."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    searches, traversals = r.called('SearchValue'), r.called('PostOrder')
+    assert searches and searches[0].args == {'Root': 0, 'ValueToFind': 15}
+    assert searches[0].result == 1
+    assert traversals and traversals[0].args.get('RootNode') == PRESET[0]
+    assert r.calls.index(searches[0]) < r.calls.index(traversals[0])
+    assert_numbers_in_order(r.stdout, [searches[0].result, 10, 9, 3, 15, 58, 20])
+

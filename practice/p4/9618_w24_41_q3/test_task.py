@@ -1,7 +1,7 @@
 """w24/41 Q3: linked nodes, free list and first-match deletion."""
 import re
 import pytest
-from testkit import feed_input, run_script
+from testkit import feed_input, run_script, run_script_traced
 
 
 def chain(sol, start):
@@ -27,7 +27,9 @@ def check_partition(sol):
 def test_3a_initial_free_list(sol):
     """9618_w24_41:3(a) MP1-MP2: all 20 nodes, terminating -1 and initial pointers."""
     assert sol.FirstNode == -1 and sol.FirstEmpty == 0
-    assert sol.LinkedList == [[-1, i + 1] for i in range(19)] + [[-1, -1]]
+    assert isinstance(sol.LinkedList, list) and len(sol.LinkedList) >= 20
+    assert all(isinstance(row, list) and len(row) >= 2 for row in sol.LinkedList[:20])
+    assert [row[:2] for row in sol.LinkedList[:20]] == [[-1, i + 1] for i in range(19)] + [[-1, -1]]
 
 
 def test_3b_insert_five_at_front(sol, monkeypatch):
@@ -66,7 +68,7 @@ def test_3c_i_output_follows_nonsequential_pointers(sol, capsys):
     sol.LinkedList[12] = [86, -1]
     sol.FirstNode = 7
     sol.OutputLinkedList()
-    assert [int(n) for n in re.findall(r'-?\d+', capsys.readouterr().out)] == [51, 14, 86]
+    assert_numbers_in_order(capsys.readouterr().out, [51, 14, 86])
 
 
 @pytest.mark.parametrize('target,expected', [(8, [3, 2, 1, 5]), (2, [8, 3, 1, 5]), (5, [8, 3, 2, 1])])
@@ -94,7 +96,7 @@ def test_3c_iii_screenshot_reverse(candidate_path):
     result = run_script(candidate_path, stdin='5\n1\n2\n3\n8\n', timeout=1.0)
     assert result.returncode == 0, result.stderr
     before = result.stdout.split('After')[0]
-    assert [int(n) for n in re.findall(r'-?\d+', before)][-5:] == [8, 3, 2, 1, 5]
+    assert_numbers_in_order(before, [8, 3, 2, 1, 5])
 
 
 @pytest.mark.parametrize('data,expected', [('5\n6\n8\n9\n5\n', [9, 8, 6, 5]),
@@ -104,4 +106,28 @@ def test_3d_iii_screenshot_after(candidate_path, data, expected):
     result = run_script(candidate_path, stdin=data, timeout=1.0)
     assert result.returncode == 0, result.stderr
     assert 'After' in result.stdout
-    assert [int(n) for n in re.findall(r'-?\d+', result.stdout.split('After')[-1])] == expected
+    assert_numbers_in_order(result.stdout.split('After')[-1], expected)
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+@pytest.mark.parametrize('data', ['5\n1\n2\n3\n8\n', '5\n6\n8\n9\n5\n', '10\n7\n8\n5\n6\n'])
+def test_3c_ii_3d_ii_main_call_chain(candidate_path, data):
+    """9618_w24_41:3(c)(ii),3(d)(ii) whole (MS pp.32/36): insert, output, RemoveData(5), output."""
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('InsertData', 'OutputLinkedList', 'RemoveData')]
+    assert names == ['InsertData', 'OutputLinkedList', 'RemoveData', 'OutputLinkedList']
+    assert r.called('RemoveData')[0].args.get('ItemToRemove') == 5
+    before, after = r.stdout.split('After', 1)
+    expected = list(reversed([int(x) for x in data.split()]))
+    assert_numbers_in_order(before, expected)
+    expected.remove(5)
+    assert_numbers_in_order(after, expected)

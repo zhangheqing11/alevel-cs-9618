@@ -1,5 +1,6 @@
+import re
 """w23/42 Q1: two stacks; MS output utxoe."""
-from testkit import output_lines, run_script, use_files
+from testkit import output_lines, run_script, run_script_traced, use_files
 
 
 def test_1a_arrays_and_next_free_pointers(sol):
@@ -71,7 +72,7 @@ def test_1d_ii_screenshot_utxoe(candidate_path, exercise_dir):
     result = run_script(candidate_path, stdin='vowel\nconsonant\nconsonant\nvowel\nvowel\n',
                         files_dir=exercise_dir / 'files')
     assert result.returncode == 0, result.stderr
-    assert output_lines(result.stdout)[-1].rstrip().endswith('utxoe')
+    assert re.search(r'\butxoe\b', result.stdout)
 
 
 def test_1d_i_empty_choice_does_not_count_as_letter(candidate_path, tmp_path):
@@ -82,6 +83,21 @@ def test_1d_i_empty_choice_does_not_count_as_letter(candidate_path, tmp_path):
                             files_dir=tmp_path)
         assert result.returncode == 0, result.stderr
         lines = output_lines(result.stdout)
-        assert lines[-1].rstrip().endswith(letter * 5)
+        assert re.search(r'\b' + letter * 5 + r'\b', result.stdout)
         # QP requires a message for the failed pop; its wording is not prescribed.
         assert len(lines) >= 2
+
+
+def test_1d_main_call_chain(candidate_path, exercise_dir):
+    """9618_w23_42:1(d)(i) MP1-MP7 (MS pp.13–16): ReadData then the selected Pop calls, output actual letters."""
+    data = 'vowel\nconsonant\nconsonant\nvowel\nvowel\n'
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    pops = [c for c in r.calls if c.name in ('PopVowel', 'PopConsonant')]
+    assert r.called('ReadData') and r.calls.index(r.called('ReadData')[0]) < r.calls.index(pops[0])
+    assert [c.name for c in pops] == ['PopVowel', 'PopConsonant', 'PopConsonant', 'PopVowel', 'PopVowel']
+    assert ''.join(c.result for c in pops) == 'utxoe'
+    assert re.search(r'\butxoe\b', r.stdout)
+

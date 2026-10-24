@@ -174,7 +174,7 @@
 
 ## Python 接口与测试约定
 
-- 全局 `Queue`（50 格 STRING）、`HeadPointer=-1`、`TailPointer=0`；`Enqueue(Data)`、`Dequeue()`、`ReadData()`、`TotalData()`、`OutputRecords()` 使用 QP 名字。
+- 全局 `Queue`（至少 50 格 STRING；本题逻辑容量 50）、`HeadPointer=-1`、`TailPointer=0`；`Enqueue(Data)`、`Dequeue()`、`ReadData()`、`TotalData()`、`OutputRecords()` 使用 QP 名字。
 - `RecordData` 可公开 `ID`/`Total` 字段，也可采用 MS 的 `GetID()` / `GetTotal()` 访问接口；构造方法自行设计，测试不强制额外构造签名。
 - `Records` 建成 50 个真实格子，`NumberRecords=0`。按 D10 ①，不能只写空 list；`Enqueue` 和创建记录按下标写入，替换 MS 的 append。
 - 使用官方 `QueueData.txt`，函数型文件测试在临时副本目录运行；不规定满/空/缺文件提示的具体措辞。2(d) 输出按 QP 的 ID / Total 格式，空白宽度不限。
@@ -186,14 +186,14 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a)(i) | 9618_w23_41:2(a)(i) | 2 | 代码 | `test_2a_i_globals` · MP1、MP2 | — |
-| Part 2(a)(ii) | 9618_w23_41:2(a)(ii) | 4 | 代码 | `test_2a_ii_enqueue_full` · MP2、MP3、MP4 | MP1 Procedure Enqueue() header (and close where appropriate) with one (string) parameter |
-| Part 2(a)(iii) | 9618_w23_41:2(a)(iii) | 4 | 代码 | `test_2a_iii_dequeue_empty_and_fifo` · MP2、MP3、MP4、MP5 | MP1 Function header Dequeue() (and end where appropriate) with no parameter |
-| Part 2(b) | 9618_w23_41:2(b) | 6 | 代码 | `test_2b_read_official_file`；`test_2b_missing_file` · MP2、MP4、MP5、MP6、MP7 | MP1 Procedure header ReadData() with no parameters；MP3 … and closing file |
-| Part 2(c)(i) | 9618_w23_41:2(c)(i) | 2 | 代码 | — | MP1 Declaration of record type/class RecordData；MP2 ID as a string and total as an Integer |
+| Part 2(a)(ii) | 9618_w23_41:2(a)(ii) | 4 | 代码 | `test_2a_ii_enqueue_full` · MP2、MP3、MP4 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(a)(iii) | 9618_w23_41:2(a)(iii) | 4 | 代码 | `test_2a_iii_dequeue_empty_and_fifo` · MP2、MP3、MP4、MP5 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(b) | 9618_w23_41:2(b) | 6 | 代码 | `test_2b_read_official_file`、`test_2b_missing_file` · MP2、MP4、MP5、MP6、MP7 | MP1、MP3；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
+| Part 2(c)(i) | 9618_w23_41:2(c)(i) | 2 | 代码 | 行为辅助测试（不计自动分） | MP1、MP2；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 2(c)(ii) | 9618_w23_41:2(c)(ii) | 2 | 代码 | `test_2a_i_globals` · MP1、MP2 | — |
 | Part 2(c)(iii) | 9618_w23_41:2(c)(iii) | 5 | 代码 | `test_2c_iii_total_first_existing_and_new` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 2(d) | 9618_w23_41:2(d) | 1 | 代码 | `test_2d_output_records` · MPwhole | — |
-| Part 2(e)(i) | 9618_w23_41:2(e)(i) | 2 | 代码 | `test_2e_ii_screenshot_totals` · MP1、MP2 | — |
+| Part 2(e)(i) | 9618_w23_41:2(e)(i) | 2 | 代码 | `test_2e_ii_screenshot_totals`、`test_2e_main_call_chain` · MP1、MP2 | — |
 | Part 2(e)(ii) | 9618_w23_41:2(e)(ii) | 1 | 截图 | `test_2e_ii_screenshot_totals` · MPwhole | — |
 
 ## 人工核对清单
@@ -217,3 +217,9 @@
 - MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。
 
 2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。
+
+## T38c2 · D46 验证补充
+
+补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 minimum 50：数组允许至少 50 格，80 格的等价改写通过；QP 逻辑容量可保持 50 或随分配扩大；两种 80 格正确改写均通过。
+
+本次行为覆盖：自动 23.485714 分、人工 5.514286 分（80.99%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

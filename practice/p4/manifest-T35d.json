@@ -8,7 +8,7 @@
       "marks": 21,
       "auto_marks": 19.0,
       "manual_marks": 2.0,
-      "auto_share": 0.9048,
+      "auto_share": 0.904762,
       "types": [
         "P4-SQ-02",
         "P4-MP-02",
@@ -27,7 +27,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(b)",
@@ -43,7 +44,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w22_42:3(c)",
@@ -56,7 +58,11 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "tests": [
+            "test_3c_3e_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(d)",
@@ -72,7 +78,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w22_42:3(e)(i)",
@@ -82,7 +89,11 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_3e_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w22_42:3(e)(ii)",
@@ -92,12 +103,13 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 5,
+      "mutants": 4,
+      "tests": 6,
       "qp_pages_checked": [
         8,
         9
@@ -110,16 +122,16 @@
         24
       ],
       "qp_over_ms": "- MS p.21 的 Python 范例漏 `global HeadPointer`，首次入队会引发 UnboundLocalError；参考解补齐。\n- 3(c) QP 要求所有入队都成功才输出 Successful；参考解累计失败标志。MS p.22 范例只保留最后一次返回值；给定空队列装入 20 项时没有输出差异。\n- QP/MS 原页的赋值箭头转写为 `←`；递归参数采用上述明确约定。",
-      "notes": "语料点号按本题 MS 圆点顺序；未拆得分点的 1 分行以 whole 表示。"
+      "notes": "语料点号按本题 MS 圆点顺序；未拆得分点的 1 分行以 whole 表示。 T38c2：原有注入一次失败的测试已观测 Enqueue；补测 RecursiveOutput(19) 调用及返回总和，210 输出允许后续说明数字（QP pp.8–9/MS pp.22–24）。"
     },
     {
       "directory": "practice/p4/9618_w23_41_q2",
       "id": "9618_w23_41:2(a)(i)",
       "paper": "9618_w23_41",
       "marks": 29,
-      "auto_marks": 23.4857,
-      "manual_marks": 5.5143,
-      "auto_share": 0.8099,
+      "auto_marks": 23.485714,
+      "manual_marks": 5.514286,
+      "auto_share": 0.809852,
       "types": [
         "P4-SQ-02",
         "P4-FL-01",
@@ -139,7 +151,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(a)(ii)",
@@ -153,7 +166,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_41:2(a)(iii)",
@@ -168,7 +182,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.2
+          "auto_marks": 3.2,
+          "manual_marks": 0.8
         },
         {
           "id": "9618_w23_41:2(b)",
@@ -185,7 +200,8 @@
             1,
             3
           ],
-          "auto_marks": 4.285714
+          "auto_marks": 4.285714,
+          "manual_marks": 1.714286
         },
         {
           "id": "9618_w23_41:2(c)(i)",
@@ -196,7 +212,8 @@
             1,
             2
           ],
-          "auto_marks": 0.0
+          "auto_marks": 0.0,
+          "manual_marks": 2.0
         },
         {
           "id": "9618_w23_41:2(c)(ii)",
@@ -207,7 +224,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(c)(iii)",
@@ -221,7 +239,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(d)",
@@ -231,7 +250,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(e)(i)",
@@ -242,7 +262,11 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "tests": [
+            "test_2e_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_41:2(e)(ii)",
@@ -252,7 +276,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -266,8 +291,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         4,
         5,
@@ -293,7 +318,7 @@
         24
       ],
       "qp_over_ms": "- MS pp.9、17 的 Python 范例为空 list（且 p.17 把 NumberRecords 声明写进注释），按 D10 ① 改为 50 格数组和独立的 NumberRecords 赋值。\n- MS p.21 `TotalData` 的末行 NumberRecords += 1 多缩进一级；参考解对照 QP p.6 修正。\n- MS p.24 把 `OutputRecords()` 缩进在 while 内，导致重复输出中间结果；参考解按 QP p.7 在全部汇总后输出一次。\n- MS p.24 主程序把 HeadPointer 改成 0；本练习保留 QP 初值 -1，首次入队置 0；空队列主循环用额外判断避免从 -1 开始读。",
-      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。"
+      "notes": "2(a)(iii) 有 5 个候选点，最多 4 分；2(b) 有 7 个候选点，最多 6 分，均按候选点权重比例折算。2(c)(iii) 语料 MP1 是递增 NumberRecords，MP2 是模块头与 Dequeue，MP3–MP5 为三个分支；MS 没有印数字编号，顺序照圆点。 T38c2：补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 minimum 50：数组允许至少 50 格，80 格的等价改写通过；QP 逻辑容量可保持 50 或随分配扩大；两种 80 格正确改写均通过。"
     },
     {
       "directory": "practice/p4/9618_w23_42_q1",
@@ -302,7 +327,7 @@
       "marks": 27,
       "auto_marks": 24.0,
       "manual_marks": 3.0,
-      "auto_share": 0.8889,
+      "auto_share": 0.888889,
       "types": [
         "P4-SQ-01",
         "P4-SQ-04",
@@ -319,7 +344,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(a)(ii)",
@@ -329,7 +355,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(b)(i)",
@@ -345,7 +372,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(b)(ii)",
@@ -361,7 +389,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(c)",
@@ -376,7 +405,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w23_42:1(d)(i)",
@@ -392,7 +422,8 @@
             7
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w23_42:1(d)(ii)",
@@ -402,7 +433,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -416,8 +448,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 7,
+      "mutants": 4,
+      "tests": 8,
       "qp_pages_checked": [
         2,
         3,
@@ -439,7 +471,7 @@
         16
       ],
       "qp_over_ms": "- MS pp.4、7、11–12 采用空 list、append 和 del；按 D10 ① 改为固定 100 格数组，下标存取、仅更新指针，不删除实际格子。这不改变题目栈的有效数据。\n- MS p.16 的 Python else 实际缩进在 DataAccessed 判断下，原页没有解析文本暗示的缩进缺陷；参考解遵守相同空栈重试逻辑。\n- 官方输入 `vowel, consonant, consonant, vowel, vowel` 输出 utxoe（MS p.16），已按源文件实跑。",
-      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。"
+      "notes": "1(d)(i) 有 7 个候选点，最多 6 分；按候选点分值等权比例折算。其余语料点号与 MS 圆点顺序一致；1 分行不拆。 T38c2：补测 ReadData、按五个选择对应 Pop 的顺序与实际返回字母串；保留 QP 要求字母串一行，取消必须为最后一行的限制（QP p.4/MS pp.13–16）。原有空栈重选测试保留。"
     },
     {
       "directory": "practice/p4/9618_w24_41_q3",
@@ -448,7 +480,7 @@
       "marks": 19,
       "auto_marks": 18.375,
       "manual_marks": 0.625,
-      "auto_share": 0.9671,
+      "auto_share": 0.967105,
       "types": [
         "P4-LT-01",
         "P4-LT-02",
@@ -465,7 +497,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(b)",
@@ -481,7 +514,8 @@
             7
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(i)",
@@ -492,7 +526,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(ii)",
@@ -502,7 +537,11 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_ii_3d_ii_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(c)(iii)",
@@ -512,7 +551,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(d)(i)",
@@ -530,7 +570,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.375
+          "auto_marks": 4.375,
+          "manual_marks": 0.625
         },
         {
           "id": "9618_w24_41:3(d)(ii)",
@@ -540,7 +581,11 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_ii_3d_ii_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_41:3(d)(iii)",
@@ -550,12 +595,13 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         12,
         13,
@@ -577,16 +623,16 @@
         37
       ],
       "qp_over_ms": "- MS p.27 Python 初始化仅 append 19 行，随后访问 LinkedList[19] 越界；参考解依 QP p.12 创建全部 20 行，最后指针 -1。\n- MS p.36 Python 主程序同样缺最后一行；VB/Java 在该处把最后指针留成 20；参考解沿用正确的 20 节点初始化。\n- MS p.31 OutputLinkedList 在空表时会访问下标 -1；参考解在遍历前检查终止值。不额外要求 QP 未涉及的空表截图。\n- 同季 9618_w24_43 第 3 题与本题相同，不另建练习。",
-      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。"
+      "notes": "3(b) 有 7 个候选点，最多 6 分；3(d)(i) 有 8 个候选点，最多 5 分；按候选点权重比例折算。MS 圆点未印数字，语料 MP 顺序与圆点一致。 T38c2：F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData → OutputLinkedList → RemoveData(5) → OutputLinkedList 顺序/参数/输出观测；数据输出改为顺序包含。复核 QP pp.14–15、MS pp.32/36 原页。trace 前先限时执行，拒绝产生死循环的错误链表。补核 MS p.26 min 20×2，接受额外分配但逻辑链仍用前 20 结点；25×3 等价正确数组通过。"
     },
     {
       "directory": "practice/p4/9618_w24_42_q2",
       "id": "9618_w24_42:2(a)",
       "paper": "9618_w24_42",
       "marks": 29,
-      "auto_marks": 26.0,
-      "manual_marks": 3.0,
-      "auto_share": 0.8966,
+      "auto_marks": 23.0,
+      "manual_marks": 6.0,
+      "auto_share": 0.793103,
       "types": [
         "P4-AR-03",
         "P4-SQ-02",
@@ -607,7 +653,8 @@
             1,
             3
           ],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 2.0
         },
         {
           "id": "9618_w24_42:2(b)",
@@ -619,7 +666,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(c)",
@@ -632,7 +680,8 @@
           "manual_mps": [
             3
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w24_42:2(d)",
@@ -644,7 +693,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(e)(i)",
@@ -654,22 +704,29 @@
             1,
             2,
             3,
-            4,
             5
           ],
-          "manual_mps": [],
-          "auto_marks": 5.0
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 4.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2e_2g_main_call_chain"
+          ]
         },
         {
           "id": "9618_w24_42:2(e)(ii)",
           "marks": 2,
           "primary": "P4-MP-03",
           "auto_mps": [
-            1,
             2
           ],
-          "manual_mps": [],
-          "auto_marks": 2.0
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w24_42:2(f)",
@@ -682,7 +739,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w24_42:2(g)(i)",
@@ -690,11 +748,16 @@
           "primary": "P4-MP-01",
           "auto_mps": [
             1,
-            2,
             3
           ],
-          "manual_mps": [],
-          "auto_marks": 3.0
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2e_2g_main_call_chain"
+          ]
         },
         {
           "id": "9618_w24_42:2(g)(ii)",
@@ -704,12 +767,13 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         8,
         9,
@@ -732,7 +796,7 @@
         30
       ],
       "qp_over_ms": "- MS p.18 Python 2(a) 的 HeadPointer/TailPointer 少 self.，只会创建局部变量；参考解按 p.19 完整范例修正为对象字段。\n- MS p.26 Python Dequeue 条件使用单等号 `=`，不能运行；参考解修为 `==` 语义。\n- 2(g)(ii) QP 测试串不含 -1，MS p.30 截图沿用含 -1 的 2(e)(ii) 串；自动测试分别用各自 QP 串，返回值同为 10、9。\n- 2(c) QP 的三处空白保留，人工核对时用 MS p.20 的 TheData / 99 / + 1；Python 对象传参无需真的返回对象，但允许 MS 的双返回接口。",
-      "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。"
+      "notes": "2(c) 语料 MP1=三处补全（3 分），MP2=返回值（1 分），MP3=模块头和其余结构（1 分）。不能把语料 MP1 当作单个 1 分点。其余点号与 MS 圆点顺序一致。 T38c2：补测 10 次有效 Enqueue（拒绝 -1）→ ReturnAllData → 两次 Dequeue → ReturnAllData；只保留 QP/MS 明定的一行队列格式，取消返回信息同一行、最终必须输出剩余数组的额外要求（QP pp.10–11/MS pp.23/26/28/30）。B 分行显示返回信息且只调用第二次 ReturnAllData；未触发的 full/empty 分支归人工。 2(e)(ii) MP1 中消息含义归人工；十个有效值的调用仍自动观察。"
     },
     {
       "directory": "practice/p4/9618_w25_41_q1",
@@ -760,7 +824,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(b)",
@@ -773,7 +838,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(c)",
@@ -786,7 +852,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(d)",
@@ -800,7 +867,11 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "tests": [
+            "test_1d_1f_main_call_chain"
+          ],
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:1(e)",
@@ -813,7 +884,8 @@
             4
           ],
           "manual_mps": [],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(f)(i)",
@@ -823,7 +895,11 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_1d_1f_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:1(f)(ii)",
@@ -833,12 +909,13 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 5,
+      "mutants": 4,
+      "tests": 6,
       "qp_pages_checked": [
         2,
         3
@@ -855,16 +932,16 @@
         14
       ],
       "qp_over_ms": "- 本题 Python 范例与 QP 在被测情况下一致；无 Python 范例修正。\n- MS p.11 VB.NET 随机上限写 RandomNumber.Next(0, 1000)，与 QP 的含 1000 不同；参考解使用含上界的 randint(0, 1000)。",
-      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。"
+      "notes": "1(d) MS p.11 把调用与失败退出写在一个圆点及续文中，语料拆为 MP3 / MP4，各 1 分；MP1=40 次循环上限，MP2=随机范围。其余顺序与圆点一致。 T38c2：原有种子/Push 观察已验证随机范围及首次失败停止；新增 FindValues 实际调用、Pop 值链与极值输出。允许说明文字提及 -999，不能据此认定把哨兵当结果（QP p.3/MS pp.11–14）。固定 30 格由 QP 指定。 新增 trace 使用固定种子并恢复主进程随机状态。"
     },
     {
       "directory": "practice/p4/9618_w25_41_q3",
       "id": "9618_w25_41:3(a)",
       "paper": "9618_w25_41",
       "marks": 25,
-      "auto_marks": 22.1667,
-      "manual_marks": 2.8333,
-      "auto_share": 0.8867,
+      "auto_marks": 22.166667,
+      "manual_marks": 2.833333,
+      "auto_share": 0.886667,
       "types": [
         "P4-OP-01",
         "P4-LT-05",
@@ -883,7 +960,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:3(b)",
@@ -894,7 +972,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(c)",
@@ -905,7 +984,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(d)",
@@ -919,7 +999,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_41:3(e)",
@@ -935,7 +1016,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 4.166667
+          "auto_marks": 4.166667,
+          "manual_marks": 0.833333
         },
         {
           "id": "9618_w25_41:3(f)",
@@ -949,7 +1031,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(g)(i)",
@@ -961,7 +1044,11 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "tests": [
+            "test_3g_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_41:3(g)(ii)",
@@ -972,7 +1059,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -986,8 +1074,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         9,
         10,
@@ -1008,7 +1096,7 @@
         36
       ],
       "qp_over_ms": "- MS p.30 Python InsertData 缺成功后的 break/return，会把一个记录写满该桶；参考解按 QP p.10 的“下一空格”要求，在写入一次后退出。\n- MS p.32 ReadData 先把 Line.strip() 赋给 Data，下一行却又用 Line.split() 覆盖，保留换行；参考解对去掉行尾后的文本 split。同时补上 MS MP6 的文件异常处理（范例漏写不等于该点不要求）。\n- HashTable 按 D10 ① 在导入时已有真实 100×10 格；InitialiseHashTable 再填空记录，不只声明空 list。\n- MS Python 的空记录共享对象写法在整体替换槽位时可行；测试不对空记录对象身份过拟合。",
-      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。"
+      "notes": "3(d) MS p.29 第 3 圆点含无冲突与有冲突的两段，语料拆成 MP3 / MP4。3(e) 有 6 个候选点，最多 5 分，按权重比例折算；MP1 归人工（函数头和文件关闭位置），MP2–MP6 归行为自动。 T38c2：补测 InitialiseHashTable → ReadData → 五次 GetRecord 的整数参数与有序返回字符串；原有输出已允许额外说明，容量为 QP 明定，无放宽项（QP p.12/MS pp.35–36）。"
     },
     {
       "directory": "practice/p4/9618_w25_42_q3",
@@ -1017,7 +1105,7 @@
       "marks": 21,
       "auto_marks": 19.2,
       "manual_marks": 1.8,
-      "auto_share": 0.9143,
+      "auto_share": 0.914286,
       "types": [
         "P4-LT-03",
         "P4-FL-01",
@@ -1036,7 +1124,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(b)",
@@ -1054,7 +1143,8 @@
             9
           ],
           "manual_mps": [],
-          "auto_marks": 7.0
+          "auto_marks": 7.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(c)",
@@ -1069,7 +1159,8 @@
           "manual_mps": [
             1
           ],
-          "auto_marks": 3.2
+          "auto_marks": 3.2,
+          "manual_marks": 0.8
         },
         {
           "id": "9618_w25_42:3(d)",
@@ -1084,7 +1175,8 @@
           "manual_mps": [
             2
           ],
-          "auto_marks": 4.0
+          "auto_marks": 4.0,
+          "manual_marks": 1.0
         },
         {
           "id": "9618_w25_42:3(e)(i)",
@@ -1094,7 +1186,11 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "tests": [
+            "test_3c_3e_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_42:3(e)(ii)",
@@ -1104,7 +1200,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -1118,8 +1215,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         10,
         11,
@@ -1140,16 +1237,16 @@
         38
       ],
       "qp_over_ms": "- Python AddNode 范例与 QP 一致，参考解保留其插入逻辑。\n- MS pp.35–36 Java/Python 写文件用追加模式，QP 只要求 new text file 且首次未提供；参考解用 w 创建文件，测试只检查首次写入，不裁决 QP 未要求的重复导出策略。\n- 3(d) 异常测试让 Tree.txt 路径成为目录，真实触发打开错误，不要求某种 try/except 写法。",
-      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。"
+      "notes": "3(b) 有 9 个候选点，最多 7 分；3(c) 有 5 个候选点，最多 4 分，按点分值比例折算。语料编号按 MS 圆点顺序，不能把候选点数当成本题分值。 T38c2：原有 AddNode 包装已观测输入调用；新增 WriteAllToFile 实际调用并核对生成文件。空壳保留模块但直接写出完整正确 Tree.txt，仍被调用测试拒绝。文件三字段/每结点一行是 QP 明定，保留（QP pp.11–12/MS pp.33/37–38）。"
     },
     {
       "directory": "practice/p4/9618_w25_43_q2",
       "id": "9618_w25_43:2(a)",
       "paper": "9618_w25_43",
       "marks": 24,
-      "auto_marks": 22.3333,
-      "manual_marks": 1.6667,
-      "auto_share": 0.9306,
+      "auto_marks": 22.333333,
+      "manual_marks": 1.666667,
+      "auto_share": 0.930556,
       "types": [
         "P4-SQ-02",
         "P4-FL-01",
@@ -1168,7 +1265,8 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(b)",
@@ -1182,7 +1280,8 @@
             5
           ],
           "manual_mps": [],
-          "auto_marks": 5.0
+          "auto_marks": 5.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(c)",
@@ -1194,7 +1293,8 @@
             3
           ],
           "manual_mps": [],
-          "auto_marks": 3.0
+          "auto_marks": 3.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(d)",
@@ -1210,7 +1310,8 @@
             1,
             2
           ],
-          "auto_marks": 3.333333
+          "auto_marks": 3.333333,
+          "manual_marks": 1.666667
         },
         {
           "id": "9618_w25_43:2(e)",
@@ -1225,7 +1326,8 @@
             6
           ],
           "manual_mps": [],
-          "auto_marks": 6.0
+          "auto_marks": 6.0,
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(f)(i)",
@@ -1236,7 +1338,11 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "tests": [
+            "test_2f_main_call_chain"
+          ],
+          "manual_marks": 0.0
         },
         {
           "id": "9618_w25_43:2(f)(ii)",
@@ -1246,7 +1352,8 @@
             "whole"
           ],
           "manual_mps": [],
-          "auto_marks": 1.0
+          "auto_marks": 1.0,
+          "manual_marks": 0.0
         }
       ],
       "files": [
@@ -1260,8 +1367,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         9,
         10,
@@ -1282,7 +1389,7 @@
         31
       ],
       "qp_over_ms": "- MS p.21 Python 初始化多缩进一级，p.23 Enqueue 条件混入 `{` 且缺冒号；参考解修正为合法 Python。\n- MS p.27 ReadData 漏异常处理；参考解补上其 MP6 要求，源文件内容不改。\n- MS p.29 Compress 外循环为 `while NumberItems > 0 and First != \"False\"`：First 已经保存一个出队项，队列余量为 0 不代表 First 无效。该范例会漏掉单项输入及最后仅 1 项的游程。参考解/测试按 QP p.10 完整压缩，外循环只检查 First 不是字符串 False（D31）；原 MS 得分点仍保留。\n- 官方文件压缩结果仍为 MS p.31 的 19051306；附加 `1` → `11`、`01` → `0111` 等边界抓取上述缺陷。",
-      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。"
+      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。 T38c2：补测 ReadData → Compress 以及实际 Dequeue 字符，官方 19051306 与新数据 120313 双数据验证输出；取消固定末行/行尾，压缩串本身仍完整（QP pp.10–11/MS pp.28–31）。"
     }
   ]
 }

@@ -1,6 +1,6 @@
 """9618_s24_41 Q3 linear queue and weighted check digit."""
 import re
-from testkit import feed_input, output_lines, run_script
+from testkit import feed_input, output_lines, run_script, run_script_traced
 
 DATA = ['999999X', '1251484', '5500212', '0033585', '9845788', '6666666', '3258746', '8111022', '7568557', '0012353']
 
@@ -47,7 +47,7 @@ def test_3d_storeitems_official_sequence(sol, monkeypatch, capsys):
     assert calls == ['999999', '125148', '550021', '984578', '811102', '756855']
     assert sol.QueueData[:6] == calls
     assert (sol.QueueHead, sol.QueueTail) == (0, 5)
-    assert re.search(r'\b4\b', output_lines(capsys.readouterr().out)[-1])
+    assert_numbers_in_order(capsys.readouterr().out, [4])
 
 
 def test_3d_x_and_numeric_checks_at_full_queue(sol, monkeypatch, capsys):
@@ -56,7 +56,7 @@ def test_3d_x_and_numeric_checks_at_full_queue(sol, monkeypatch, capsys):
     feed_input(monkeypatch, *(['954123X', '999999X'] * 5))
     sol.StoreItems()
     out = output_lines(capsys.readouterr().out)
-    assert len(out) >= 6 and re.search(r'\b5\b', out[-1])
+    assert_numbers_in_order('\n'.join(out), [5])
     assert sol.QueueTail == 19
 
 
@@ -65,8 +65,7 @@ def test_3d_screenshot(candidate_path):
     r = run_script(candidate_path, stdin='\n'.join(DATA) + '\n')
     assert r.returncode == 0, r.stderr
     lines = output_lines(r.stdout)
-    assert re.search(r'\b4\b', lines[-2])
-    assert re.search(r'\b999999\b', lines[-1])
+    assert_numbers_in_order(r.stdout, [4, 999999])
 
 
 def test_3d_main_empty_message(candidate_path):
@@ -74,8 +73,8 @@ def test_3d_main_empty_message(candidate_path):
     r = run_script(candidate_path, stdin=('9541235\n' * 10))
     assert r.returncode == 0, r.stderr
     lines = output_lines(r.stdout)
-    assert re.search(r'\b10\b', lines[-2])
-    assert lines[-1].strip() and '954123' not in lines[-1]
+    assert_numbers_in_order(r.stdout, [10])
+    assert r.stdout.strip() and '954123' not in r.stdout
 
 
 def test_3b_no_algorithm_shortcuts(candidate_path):
@@ -91,3 +90,24 @@ def test_3b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3d_main_call_chain(candidate_path):
+    """9618_s24_41:3(d)(ii) whole (MS p.37): StoreItems, Dequeue once, output actual item."""
+    data = '999999X\n1251484\n5500212\n0033585\n9845788\n6666666\n3258746\n8111022\n7568557\n0012353\n'
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    assert r.called('StoreItems') and len(r.called('Dequeue')) == 1
+    assert r.calls.index(r.called('StoreItems')[0]) < r.calls.index(r.called('Dequeue')[0])
+    assert r.called('Dequeue')[0].result == '999999'
+    assert_numbers_in_order(r.stdout, [4, int(r.called('Dequeue')[0].result)])
+

@@ -1,6 +1,7 @@
+import re
 """w25/43 Q2; MS screenshot 19051306 and QP complete run-length encoding."""
 import pytest
-from testkit import output_lines, run_script, use_files
+from testkit import output_lines, run_script, run_script_traced, use_files
 
 
 def test_2a_globals(sol):
@@ -93,4 +94,19 @@ def test_2f_ii_screenshot_official_compressed_output(candidate_path, exercise_di
     """9618_w25_43:2(f)(i) MP1-MP2; 2(f)(ii) whole: MS p.31 shows 19051306."""
     result = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert result.returncode == 0, result.stderr
-    assert any(line.rstrip().endswith('19051306') for line in output_lines(result.stdout))
+    assert re.search(r'\b19051306\b', result.stdout)
+
+
+def test_2f_main_call_chain(candidate_path, exercise_dir, tmp_path):
+    """9618_w25_43:2(f)(i) MP1-MP2 (MS p.30): ReadData -> Compress -> actual compressed string."""
+    for files, expected in [(exercise_dir / 'files', '19051306'), (tmp_path, '120313')]:
+        (tmp_path / 'BinaryData.txt').write_text('1\n1\n0\n0\n0\n1\n1\n1')
+        completed = run_script(candidate_path, files_dir=files, timeout=5.0)
+        assert completed.returncode == 0, completed.stderr
+        r = run_script_traced(candidate_path, files_dir=files)
+        assert r.error is None, r.error
+        names = [c.name for c in r.calls if c.name in ('ReadData', 'Compress')]
+        assert names == ['ReadData', 'Compress']
+        digits = [c.result for c in r.called('Dequeue') if c.result != 'False']
+        assert digits == (files / 'BinaryData.txt').read_text().splitlines()
+        assert re.search(r'\b' + expected + r'\b', r.stdout)

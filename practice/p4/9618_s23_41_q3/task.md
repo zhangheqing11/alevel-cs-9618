@@ -174,14 +174,14 @@
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s23_41:3(a) | 3 | 代码 | `test_3a_declarations` · MP1、MP2、MP3 | — |
-| Part 3(b)(i) | 9618_s23_41:3(b)(i) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2、MP3；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | — |
+| Part 3(b)(i) | 9618_s23_41:3(b)(i) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse`、`test_3b_no_algorithm_shortcuts` · MP1、MP2、MP3 | — |
 | Part 3(b)(ii) | 9618_s23_41:3(b)(ii) | 3 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2、MP3 | — |
-| Part 3(b)(iii) | 9618_s23_41:3(b)(iii) | 5 | 代码 | `test_3b_read_files`、`test_3b_missing_file` · MP1、MP2、MP3、MP5 | MP4 |
+| Part 3(b)(iii) | 9618_s23_41:3(b)(iii) | 5 | 代码 | `test_3b_read_files`、`test_3b_missing_file` · MP1、MP2、MP3、MP5 | MP4；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 3(b)(iv) | 9618_s23_41:3(b)(iv) | 2 | 代码 | `test_3b_stack_capacity_lifo_and_reuse` · MP1、MP2 | — |
 | Part 3(b)(v) | 9618_s23_41:3(b)(v) | 2 | 代码 | `test_3b_read_files`、`test_3b_missing_file` · MP1、MP2 | — |
 | Part 3(c) | 9618_s23_41:3(c) | 5 | 代码 | `test_3c_output_pair`、`test_3c_restores_unmatched_item`、`test_3c_both_empty_does_not_create_item` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 3(d)(i) | 9618_s23_41:3(d)(i) | 1 | 代码 | `test_3d_screenshot` · 整行 | — |
-| Part 3(d)(ii) | 9618_s23_41:3(d)(ii) | 1 | 截图 | `test_3d_screenshot` · 整行 | — |
+| Part 3(d)(i) | 9618_s23_41:3(d)(i) | 1 | 代码 | `test_3d_screenshot`、`test_3d_main_call_chain` · MPwhole | — |
+| Part 3(d)(ii) | 9618_s23_41:3(d)(ii) | 1 | 截图 | `test_3d_screenshot` · MPwhole | — |
 
 自动测分值 24.000000，人工核对分值 1.000000，自动占比 96.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
@@ -195,3 +195,9 @@
 ## 原页、编号与差异记录
 
 已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。
+
+## T38c2 · D46 验证补充
+
+补测 ReadData 与四次 OutputItem（含实际双栈 Pop）；截图允许额外说明行。QP 明定配对一行的规则保留（QP pp.9–10/MS p.38）。 OutputItem 也允许额外说明行，配对本身仍在一行。
+
+本次行为覆盖：自动 24.000000 分、人工 1.000000 分（96.00%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

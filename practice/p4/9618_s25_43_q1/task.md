@@ -122,11 +122,11 @@ One source file is used to answer Question 1. The file is called QueueData.txt
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s25_43:1(a) | 3 | 代码 | `test_1a_initial_state` · MP1、MP2、MP3 | — |
-| Part 1(b) | 9618_s25_43:1(b) | 6 | 代码 | `test_1b_enqueue_full` · MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | MP1 |
+| Part 1(b) | 9618_s25_43:1(b) | 6 | 代码 | `test_1b_enqueue_full`、`test_1b_no_algorithm_shortcuts` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 1(c) | 9618_s25_43:1(c) | 5 | 代码 | `test_1c_dequeue_fifo_empty` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 1(d) | 9618_s25_43:1(d) | 6 | 代码 | `test_1d_official_file`、`test_1d_unknown_length_overflow_and_missing` · MP2、MP3、MP4、MP5、MP6 | MP1 |
+| Part 1(d) | 9618_s25_43:1(d) | 6 | 代码 | `test_1d_official_file`、`test_1d_unknown_length_overflow_and_missing` · MP2、MP3、MP4、MP5、MP6 | MP1；结构、消息语义 / 未触发分支按下方清单及同题 MS 核对 |
 | Part 1(e)(i) | 9618_s25_43:1(e)(i) | 5 | 代码 | `test_1e_screenshot`、`test_1e_main_uses_dequeue_until_sentinel` · MP1、MP2、MP3、MP4、MP5 | — |
-| Part 1(e)(ii) | 9618_s25_43:1(e)(ii) | 1 | 截图 | `test_1e_screenshot` · 整行 | — |
+| Part 1(e)(ii) | 9618_s25_43:1(e)(ii) | 1 | 截图 | `test_1e_screenshot` · MPwhole | — |
 
 自动测分值 24.000000，人工核对分值 2.000000，自动占比 92.31%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
@@ -141,3 +141,9 @@ One source file is used to answer Question 1. The file is called QueueData.txt
 ## 原页、编号与差异记录
 
 已看 QP pp.2–3、MS pp.7–18 全部渲染图，核对 evidence.doc 6 格。MS p.18 截图3059，官方文件运行一致。MS Python CreateQueue 在第一次满时 break；参考解继续读到 EOF，符合 QP 每行调用和未知行数要求，测试允许满提示一次或多次（MS MP5 明文）。MP1只考函数头与文件打开/关闭位置，归人工；MP6行为测缺文件，所有访问是否在try仍人工核对。其余采用 MS Python，无给分编号差异。
+
+## T38c2 · D46 验证补充
+
+补测 CreateQueue 调用及到 -1 的 Dequeue 总和；官方 3059 与新文件 27 双数据验证返回值使用，输出不固定最后一个数字（QP p.3/MS pp.17–18）。原有 Dequeue 观察保留。
+
+本次行为覆盖：自动 24.000000 分、人工 2.000000 分（92.31%）。调用测试不能代替类型注释、代码结构及证据截图的人工检查。

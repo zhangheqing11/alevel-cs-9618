@@ -2,7 +2,7 @@
 import inspect
 import json
 import re
-from testkit import output_lines, run_script
+from testkit import output_lines, run_script, run_script_traced
 
 
 def field(q, name):
@@ -125,7 +125,7 @@ def test_2e_ii_screenshot_rejects_negative(candidate_path, tmp_path):
     assert result.returncode == 0, result.stderr
     assert len(states) == 10
     assert states[-1][2][:9] == [10, 9, 8, 7, 6, 5, 4, 3, 2]
-    assert any(line.strip() == '10 9 8 7 6 5 4 3 2 1' for line in output_lines(result.stdout))
+    assert any('10 9 8 7 6 5 4 3 2 1' in line for line in output_lines(result.stdout))
     # Messages may include the input prompt on the same line, and need not say 'Inserted'.
     assert len(output_lines(result.stdout)) >= 13
 
@@ -134,15 +134,41 @@ def test_2e_i_zero_is_valid(candidate_path):
     """9618_w24_42:2(e)(i) MP3: zero is accepted, negative input retried."""
     result = run_script(candidate_path, stdin='-5\n' + '\n'.join(map(str, range(10))) + '\n')
     assert result.returncode == 0, result.stderr
-    assert any(line.strip() == '0 1 2 3 4 5 6 7 8 9' for line in output_lines(result.stdout))
+    assert any('0 1 2 3 4 5 6 7 8 9' in line for line in output_lines(result.stdout))
 
 
 def test_2g_ii_screenshot_two_returns(candidate_path):
-    """9618_w24_42:2(g)(i) MP1-MP3; 2(g)(ii) whole: returns 10 then 9."""
+    """9618_w24_42:2(g)(ii) whole (QP p.11/MS p.30): 10 then 9 returned; no final-output requirement."""
     result = run_script(candidate_path, stdin='10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n')
     assert result.returncode == 0, result.stderr
-    lines = output_lines(result.stdout)
-    start = next(i for i, line in enumerate(lines) if line.strip() == '10 9 8 7 6 5 4 3 2 1')
-    assert re.findall(r'-?\d+', lines[start + 1]) == ['10']
-    assert re.findall(r'-?\d+', lines[start + 2]) == ['9']
-    assert lines[-1].strip() == '8 7 6 5 4 3 2 1'
+    marker = '10 9 8 7 6 5 4 3 2 1'
+    assert marker in result.stdout
+    assert_numbers_in_order(result.stdout.split(marker, 1)[1], [10, 9])
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_2e_2g_main_call_chain(candidate_path):
+    """9618_w24_42:2(e)(i) MP1-MP5;2(g)(i) MP1-MP3 (MS pp.23/28): validated enqueues, ReturnAllData, Dequeue twice."""
+    data = '10\n9\n-1\n8\n7\n6\n5\n4\n3\n2\n1\n'
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('Enqueue', 'ReturnAllData', 'Dequeue')]
+    assert names == ['Enqueue'] * 10 + ['ReturnAllData', 'Dequeue', 'Dequeue', 'ReturnAllData']
+    enqueues = r.called('Enqueue')
+    assert [next(v for v in c.args.values() if isinstance(v, int)) for c in enqueues] == list(range(10, 0, -1))
+    all_data = r.called('ReturnAllData')
+    assert all_data[0].result.split() == list(map(str, range(10, 0, -1)))
+    assert all_data[1].result.split() == list(map(str, range(8, 0, -1)))
+    assert all_data[0].result.strip() in r.stdout
+    returned = [c.result[1] if isinstance(c.result, tuple) else c.result for c in r.called('Dequeue')]
+    assert returned == [10, 9]
+    assert_numbers_in_order(r.stdout.split(all_data[0].result.strip(), 1)[1], returned)
+

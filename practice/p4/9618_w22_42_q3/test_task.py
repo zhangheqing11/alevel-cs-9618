@@ -1,7 +1,7 @@
 """Exact matching w22/42 Q3 MS; corpus MP numbering."""
 import re
 
-from testkit import run_script
+from testkit import run_script, run_script_traced
 
 
 def test_3a_queue_and_pointers(sol):
@@ -44,7 +44,7 @@ def test_3e_ii_screenshot_total(candidate_path, exercise_dir):
     result = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert result.returncode == 0, result.stderr
     assert 'Successful' in result.stdout and 'Unsuccessful' not in result.stdout
-    assert re.findall(r'-?\d+', result.stdout)[-1:] == ['210']
+    assert_numbers_in_order(result.stdout, [210])
 
 
 def test_3c_reports_any_enqueue_failure(candidate_path, tmp_path):
@@ -78,3 +78,25 @@ def test_3c_reports_any_enqueue_failure(candidate_path, tmp_path):
     assert 'Unsuccessful' in result.stdout
     import json
     assert json.loads(record.read_text()) == list(range(1, 21))
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3c_3e_main_call_chain(candidate_path):
+    """9618_w22_42:3(c) MP1-MP4;3(e)(i) whole (MS pp.22–23): ordered enqueues and recursive return output."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, timeout=5.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    enqueues, sums = r.called('Enqueue'), r.called('RecursiveOutput')
+    assert [next(iter(c.args.values())) for c in enqueues] == list(range(1, 21))
+    assert sums and sums[0].args.get('Start') == 19 and sums[0].result == 210
+    assert r.calls.index(enqueues[-1]) < r.calls.index(sums[0])
+    assert_numbers_in_order(r.stdout, [sums[0].result])
+
