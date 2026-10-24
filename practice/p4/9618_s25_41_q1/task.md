@@ -126,14 +126,16 @@ Green.txt, Orange.txt, Pink.txt, Red.txt and Yellow.txt
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s25_41:1(a) | 2 | 代码 | `test_1a_initial_state` · MP1、MP2 | — |
 | Part 1(b) | 9618_s25_41:1(b) | 6 | 代码 | `test_1b_enqueue_full`、`test_1bd_wrap_partial_dequeue_and_refill` · MP1、MP2、MP3、MP4、MP5、MP6；`test_1b_no_algorithm_shortcuts` · D10 写法检查 | — |
-| Part 1(c) | 9618_s25_41:1(c) | 3 | 代码 | `test_1ce_screenshot` · MP1、MP2、MP3 | — |
+| Part 1(c) | 9618_s25_41:1(c) | 3 | 代码 | `test_1c_1e_main_call_chain` + 原有输出测试 · MP1、MP3 | MP2：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 1(d) | 9618_s25_41:1(d) | 6 | 代码 | `test_1bd_wrap_partial_dequeue_and_refill`、`test_1d_empty_reset_and_reuse` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
-| Part 1(e)(i) | 9618_s25_41:1(e)(i) | 2 | 代码 | `test_1ce_screenshot` · MP1、MP2 | — |
+| Part 1(e)(i) | 9618_s25_41:1(e)(i) | 2 | 代码 | `test_1ce_screenshot` · MP1、MP2；`test_1c_1e_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 1(e)(ii) | 9618_s25_41:1(e)(ii) | 1 | 截图 | `test_1ce_screenshot` · 整行 | — |
 
-自动测分值 20.000000，人工核对分值 0.000000，自动占比 100.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 19.000000，人工核对分值 1.000000，自动占比 95.00%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s25_41:1(c) MP2：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
 
 - [ ] 所有模块头、参数个数与顺序、全局 / 局部作用域符合 QP；所有 list 的类型与大小有英文注释；没有用内置函数替代题目要求的算法（D10 ③）。
@@ -143,3 +145,7 @@ Green.txt, Orange.txt, Pink.txt, Red.txt and Yellow.txt
 ## 原页、编号与差异记录
 
 已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。
+
+## T38c2 · D46 验证补充
+
+补测 Enqueue(1..25) 与两次 Dequeue 的返回值；取消固定 27 行，整数和 Successful/Unsuccessful 可分相邻行（QP p.3/MS pp.12/16）。返回值用于选择的代码分支由人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

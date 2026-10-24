@@ -805,9 +805,9 @@
       "id": "9618_s25_41:1(a)",
       "paper": "9618_s25_41",
       "marks": 20,
-      "auto_marks": 20.0,
-      "manual_marks": 0.0,
-      "auto_share": 1.0,
+      "auto_marks": 19.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.95,
       "types": [
         "P4-SQ-03",
         "P4-MP-02",
@@ -857,14 +857,16 @@
           "primary": "P4-MP-02",
           "auto_mps": [
             1,
-            2,
             3
           ],
-          "manual_mps": [],
-          "auto_marks": 3.0,
-          "manual_marks": 0.0,
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0,
+          "manual_marks": 1.0,
           "tests": [
-            "test_1ce_screenshot"
+            "test_1ce_screenshot",
+            "test_1c_1e_main_call_chain"
           ]
         },
         {
@@ -899,7 +901,8 @@
           "auto_marks": 2.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_1ce_screenshot"
+            "test_1ce_screenshot",
+            "test_1c_1e_main_call_chain"
           ]
         },
         {
@@ -918,8 +921,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 6,
+      "mutants": 3,
+      "tests": 7,
       "qp_pages_checked": [
         2,
         3
@@ -937,7 +940,7 @@
         16,
         17
       ],
-      "notes": "已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。"
+      "notes": "已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。 T38c2：补测 Enqueue(1..25) 与两次 Dequeue 的返回值；取消固定 27 行，整数和 Successful/Unsuccessful 可分相邻行（QP p.3/MS pp.12/16）。返回值用于选择的代码分支由人工补核。"
     },
     {
       "directory": "practice/p4/9618_s25_42_q1",
