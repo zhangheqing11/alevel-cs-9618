@@ -136,7 +136,7 @@ F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData �
 
 ## 9618_w23_41_q2
 
-补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。没有容量 min/恰好冲突。
+补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 minimum 50：数组允许至少 50 格，80 格的等价改写通过；QP 逻辑容量仍 50。
 
 - 调用观测：`test_2e_main_call_chain`。
 - 原页：该题同卷 QP / MS（本次复核页见后续正文；原 T35 页清单保留于 manifest）。

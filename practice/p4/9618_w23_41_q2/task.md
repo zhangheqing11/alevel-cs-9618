@@ -174,7 +174,7 @@
 
 ## Python 接口与测试约定
 
-- 全局 `Queue`（50 格 STRING）、`HeadPointer=-1`、`TailPointer=0`；`Enqueue(Data)`、`Dequeue()`、`ReadData()`、`TotalData()`、`OutputRecords()` 使用 QP 名字。
+- 全局 `Queue`（至少 50 格 STRING；本题逻辑容量 50）、`HeadPointer=-1`、`TailPointer=0`；`Enqueue(Data)`、`Dequeue()`、`ReadData()`、`TotalData()`、`OutputRecords()` 使用 QP 名字。
 - `RecordData` 可公开 `ID`/`Total` 字段，也可采用 MS 的 `GetID()` / `GetTotal()` 访问接口；构造方法自行设计，测试不强制额外构造签名。
 - `Records` 建成 50 个真实格子，`NumberRecords=0`。按 D10 ①，不能只写空 list；`Enqueue` 和创建记录按下标写入，替换 MS 的 append。
 - 使用官方 `QueueData.txt`，函数型文件测试在临时副本目录运行；不规定满/空/缺文件提示的具体措辞。2(d) 输出按 QP 的 ID / Total 格式，空白宽度不限。
@@ -220,4 +220,4 @@
 
 ## T38c2 · D46 验证补充
 
-补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。没有容量 min/恰好冲突。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
+补测 ReadData → 每项 TotalData → OutputRecords 的调用和实际 Dequeue 返回；原有 ID/Total 格式为 QP 明定，保留（QP pp.6–7/MS pp.22–24）。复核 MS p.9 明定 minimum 50，数组声明检查放宽为至少 50；80 格且逻辑容量 50 的正确版本全过。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。

@@ -14,7 +14,7 @@ def record_pair(record):
 
 def test_2a_i_globals(sol):
     """9618_w23_41:2(a)(i) MP1-MP2; 2(c)(ii) MP1-MP2."""
-    assert isinstance(sol.Queue, list) and len(sol.Queue) == 50
+    assert isinstance(sol.Queue, list) and len(sol.Queue) >= 50
     assert sol.HeadPointer == -1 and sol.TailPointer == 0
     assert isinstance(sol.Records, list) and len(sol.Records) == 50
     assert sol.NumberRecords == 0
