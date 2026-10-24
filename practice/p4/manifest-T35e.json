@@ -284,10 +284,176 @@
       "qp_over_ms": [
         "接口取 QP 的 `ChooseCard()`（大写 C），用 MS 的全局 `NumbersChosen` 保存 30 个 BOOLEAN；返回 0–29 下标。`CardArray` 与 `Player1` 在主程序建立，测试运行完整入口后读取这两个数组。MS p.32 的 `chooseCard` / `true` / `NumbersChosen(...)` 分别修为 `ChooseCard` / `True` / 方括号下标；p.29 的 `File.close` 改为 `with` 自动关闭，去掉颜色行的换行。MS p.35 测试 2 将 white 误写为 while，按 QP 数据文件输出 white。输出可为“数字 颜色”或“颜色 数字”，同一张牌可分两行。3(c) 10 个可选点最多 7 分，3(d) 9 个可选点最多 6 分。缺文件测试在读取阶段后停止，避免对 QP 未规定的后续选择作要求。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s23_41_q2",
+      "id": "9618_s23_41:2(a)(i)",
+      "paper": "9618_s23_41",
+      "marks": 32,
+      "auto_marks": 26.0,
+      "manual_marks": 6.0,
+      "auto_share": 0.8125,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-04",
+        "P4-OP-05",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_41:2(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_41:2(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s23_41:2(a)(iv)",
+          "marks": 3,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_41:2(b)(i)",
+          "marks": 5,
+          "primary": "P4-OP-04",
+          "auto_mps": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "manual_mps": [
+            3
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s23_41:2(b)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_41:2(c)",
+          "marks": 3,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s23_41:2(d)(i)",
+          "marks": 5,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s23_41:2(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "qp_over_ms": [
+        "接口采用 QP 的 Vehicle / Helicopter 方法名，2(c) 未命名输出过程采用 MS 的对象方法 `OutputCurrentPosition()`（父、子类各一份）。`Helicopter(ID, MaxSpeed, IncreaseAmount, VerticalChange, MaxHeight)`；允许 `super()` 或显式父类调用。MS p.21 高度越界时写 `MaxHeight`，漏了 `self.__`；参考解修正为 `self.__MaxHeight`，并测试越过最大高度。MS 构造方法漏写 HorizontalPosition 的类型，补 INTEGER 注释。QP 类图的 `GetVerticalPosition()` 同时实现；它未有独立计分小问。截图只断言 MS p.25 的 60、40、120、80、6，提示文字人工核对。"
+      ]
     }
   ],
-  "count": 2,
-  "marks": 52,
-  "auto_marks": 42.5,
-  "manual_marks": 9.5
+  "count": 3,
+  "marks": 84,
+  "auto_marks": 68.5,
+  "manual_marks": 15.5
 }
