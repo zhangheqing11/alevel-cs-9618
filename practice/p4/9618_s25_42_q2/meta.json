@@ -1,0 +1,58 @@
+{
+  "id": "9618_s25_42:2(a)",
+  "kind": "past-paper",
+  "title": "哈希表与溢出区",
+  "source": {
+    "paper": "9618_s25_42",
+    "rows": [
+      "9618_s25_42:2(a)",
+      "9618_s25_42:2(b)(i)",
+      "9618_s25_42:2(b)(ii)",
+      "9618_s25_42:2(c)",
+      "9618_s25_42:2(d)",
+      "9618_s25_42:2(e)",
+      "9618_s25_42:2(f)(i)",
+      "9618_s25_42:2(f)(ii)",
+      "9618_s25_42:2(f)(iii)"
+    ]
+  },
+  "marks": 22,
+  "types": [
+    "P4-AR-03",
+    "P4-LT-05",
+    "P4-FL-02",
+    "P4-AR-05",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-of-records",
+    "class-definition",
+    "count-loop",
+    "data-types",
+    "div-mod",
+    "exception-handling",
+    "field-extract",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "hash-table",
+    "initialise-variables",
+    "linear-search",
+    "loop-to-eof",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "procedure-call",
+    "record-type",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "HashData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

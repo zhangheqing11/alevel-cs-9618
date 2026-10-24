@@ -1,0 +1,58 @@
+{
+  "id": "9618_s25_42:1(a)",
+  "kind": "past-paper",
+  "title": "文件栈计算器",
+  "source": {
+    "paper": "9618_s25_42",
+    "rows": [
+      "9618_s25_42:1(a)",
+      "9618_s25_42:1(b)",
+      "9618_s25_42:1(c)",
+      "9618_s25_42:1(d)",
+      "9618_s25_42:1(e)",
+      "9618_s25_42:1(f)(i)",
+      "9618_s25_42:1(f)(ii)"
+    ]
+  },
+  "marks": 27,
+  "types": [
+    "P4-SQ-01",
+    "P4-FL-01",
+    "P4-SQ-04",
+    "P4-PR-03",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "declare-array",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "global-scope",
+    "initialise-variables",
+    "input-prompt",
+    "loop-to-eof",
+    "module-header",
+    "nested-if",
+    "operator-precedence",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "relational-ops",
+    "return-value",
+    "stack-array",
+    "test-input-sequence",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "StackData.txt",
+    "SecondStack.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "9618_w22_41:3(a)",
+  "kind": "past-paper",
+  "title": "二叉树递归查找与后序遍历",
+  "source": {
+    "paper": "9618_w22_41",
+    "rows": [
+      "9618_w22_41:3(a)",
+      "9618_w22_41:3(b)",
+      "9618_w22_41:3(c)",
+      "9618_w22_41:3(d)",
+      "9618_w22_41:3(e)(i)",
+      "9618_w22_41:3(e)(ii)"
+    ]
+  },
+  "marks": 21,
+  "types": [
+    "P4-LT-03",
+    "P4-LT-04",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-2d",
+    "binary-tree",
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "module-header",
+    "nested-if",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "recursion",
+    "relational-ops",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

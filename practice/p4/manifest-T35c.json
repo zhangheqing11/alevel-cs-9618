@@ -1,0 +1,1614 @@
+{
+  "subbatch": "T35c",
+  "exercises": [
+    {
+      "directory": "practice/p4/9618_s22_41_q3",
+      "id": "9618_s22_41:3(a)",
+      "paper": "9618_s22_41",
+      "marks": 21,
+      "auto_marks": 18.142857,
+      "manual_marks": 2.857143,
+      "auto_share": 0.863946,
+      "types": [
+        "P4-SQ-03",
+        "P4-MP-02",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_41:3(a)",
+          "marks": 2,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s22_41:3(b)",
+          "marks": 7,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [
+            2,
+            3
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 2.0,
+          "tests": [
+            "test_3b_enqueue_full_and_wrap",
+            "test_3bc_reuse_slots_after_dequeue",
+            "test_3b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s22_41:3(c)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.142857,
+          "manual_marks": 0.857143,
+          "tests": [
+            "test_3c_dequeue_fifo_empty_and_wrap",
+            "test_3bc_reuse_slots_after_dequeue"
+          ]
+        },
+        {
+          "id": "9618_s22_41:3(d)(i)",
+          "marks": 5,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s22_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 6,
+      "qp_pages_checked": [
+        8,
+        9,
+        10
+      ],
+      "ms_pages_checked": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "notes": "QP pp.8–10、MS pp.27–34 全部渲染图已读，evidence.doc 第 3 题 5 格已核。MS 3(c) Python 原图 p.30 印 `false`、`Queue(Head)` 以及先加一后 `Head >= 9`，参考解改为 QP 的 `\"FALSE\"`、`Queue[Head]`、`Head > 9`；后者符合同页得分句 more than 9，不跳过第十个元素（D31）。3(b) 语料 MP1 是五处填空合计 5 分，不拆成五个自造点号；MP2 是函数头 / ByRef、MP3 是 remainder / following logic，归人工。MS 未印独立 MP 数字，其余按清单顺序，无 D37 编号差异。与 s22_43 第 3 题整题相同，不重复创建。"
+    },
+    {
+      "directory": "practice/p4/9618_s22_42_q1",
+      "id": "9618_s22_42:1(a)",
+      "paper": "9618_s22_42",
+      "marks": 25,
+      "auto_marks": 23.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.92,
+      "types": [
+        "P4-SQ-01",
+        "P4-AR-04",
+        "P4-MP-02",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_42:1(a)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_declarations"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(b)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1b_printarray"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(c)",
+          "marks": 6,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1c_push_boundary",
+            "test_1b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(d)(i)",
+          "marks": 5,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1d_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1d_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(e)(i)",
+          "marks": 5,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_pop_lifo_empty_reuse"
+          ]
+        },
+        {
+          "id": "9618_s22_42:1(e)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_screenshot_after_two_pops"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "notes": "已看 QP pp.2–3 与 MS pp.4–12 全部渲染图，并核对 evidence.doc 7 格。MS Python 例正确，参考解只加入口保护；Java 主程序循环少一次，不采用（QP 明确 11 次）。MS 1(e)(ii) 明确接受 11–20、11–18、11–18 后两个 null；测试接受这些输出，固定数组声明与 Pop 指针行为另测。MS 没有印数字 MP，语料清单顺序一致；无编号差异。无源数据文件。"
+    },
+    {
+      "directory": "practice/p4/9618_s23_41_q3",
+      "id": "9618_s23_41:3(a)",
+      "paper": "9618_s23_41",
+      "marks": 25,
+      "auto_marks": 24.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.96,
+      "types": [
+        "P4-SQ-01",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_41:3(a)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3a_declarations"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(i)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse",
+            "test_3b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(ii)",
+          "marks": 3,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(iii)",
+          "marks": 5,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 4.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_3b_read_files",
+            "test_3b_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(iv)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_stack_capacity_lifo_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(b)(v)",
+          "marks": 2,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_read_files",
+            "test_3b_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(c)",
+          "marks": 5,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3c_output_pair",
+            "test_3c_restores_unmatched_item",
+            "test_3c_both_empty_does_not_create_item"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(d)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s23_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "AnimalData.txt",
+          "bytes": 60,
+          "sha256": "4c77f71887d5f912588f905f6e0023b027e2d9e6b87cc7ccb3177415437ed27f",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/AnimalData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "ColourData.txt",
+          "bytes": 66,
+          "sha256": "b191a9e0f24c4131952f0f6242ae9ea8c76abf4ddd702cc4d6370b622c1c8893",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/ColourData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 9,
+      "qp_pages_checked": [
+        8,
+        9,
+        10
+      ],
+      "ms_pages_checked": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。"
+    },
+    {
+      "directory": "practice/p4/9618_s23_42_q2",
+      "id": "9618_s23_42:2(a)",
+      "paper": "9618_s23_42",
+      "marks": 28,
+      "auto_marks": 24.0,
+      "manual_marks": 4.0,
+      "auto_share": 0.857143,
+      "types": [
+        "P4-AR-03",
+        "P4-SQ-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_42:2(a)",
+          "marks": 2,
+          "primary": "P4-AR-03",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2a_record"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(b)",
+          "marks": 4,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2b_initial_state",
+            "test_2b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(c)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2c_enqueue_full_wrap"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(d)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2d_dequeue_empty_fifo_reuse"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(e)",
+          "marks": 5,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2e_enter_record_stored_and_full"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(f)(i)",
+          "marks": 4,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2f_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s23_42:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2f_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "notes": "已看 QP pp.5–7、MS pp.11–22 全部渲染图，核对 evidence.doc 7 格。MS Python EnterRecord 未 int 转换，参考解按 QP 数量整数及 MP2 修正；其他逻辑贴近 MS。MS 2(f)(i) 五个可选点 max4，自动/人工按比例折算；2(f)(ii) 为整行1分。没有 MS 印号 / 语料编号差异。无源数据文件。"
+    },
+    {
+      "directory": "practice/p4/9618_s24_41_q3",
+      "id": "9618_s24_41:3(a)",
+      "paper": "9618_s24_41",
+      "marks": 17,
+      "auto_marks": 17.0,
+      "manual_marks": 0.0,
+      "auto_share": 1.0,
+      "types": [
+        "P4-SQ-02",
+        "P4-PR-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_41:3(a)",
+          "marks": 1,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s24_41:3(b)",
+          "marks": 4,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_enqueue_linear_full",
+            "test_3b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s24_41:3(c)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3c_dequeue_fifo_and_empty_string"
+          ]
+        },
+        {
+          "id": "9618_s24_41:3(d)(i)",
+          "marks": 6,
+          "primary": "P4-PR-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_storeitems_official_sequence",
+            "test_3d_x_and_numeric_checks_at_full_queue"
+          ]
+        },
+        {
+          "id": "9618_s24_41:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot",
+            "test_3d_main_empty_message"
+          ]
+        },
+        {
+          "id": "9618_s24_41:3(d)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        11,
+        12,
+        13
+      ],
+      "ms_pages_checked": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_41_q1",
+      "id": "9618_s25_41:1(a)",
+      "paper": "9618_s25_41",
+      "marks": 20,
+      "auto_marks": 20.0,
+      "manual_marks": 0.0,
+      "auto_share": 1.0,
+      "types": [
+        "P4-SQ-03",
+        "P4-MP-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_41:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(b)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1b_enqueue_full",
+            "test_1bd_wrap_partial_dequeue_and_refill",
+            "test_1b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(c)",
+          "marks": 3,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(d)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1bd_wrap_partial_dequeue_and_refill",
+            "test_1d_empty_reset_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(e)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 6,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "notes": "已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_42_q1",
+      "id": "9618_s25_42:1(a)",
+      "paper": "9618_s25_42",
+      "marks": 27,
+      "auto_marks": 24.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.888889,
+      "types": [
+        "P4-SQ-01",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-PR-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_42:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(b)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1b_push_full",
+            "test_1b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(c)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1c_pop_empty_lifo_reuse"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(d)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1d_read_official_files",
+            "test_1d_overflow_and_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(e)",
+          "marks": 7,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 6.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1e_calculate_all_operators"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1f_screenshots"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(f)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1f_screenshots"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "StackData.txt",
+          "bytes": 26,
+          "sha256": "ea1c31f3a9ec7c5489c6e13b5749d869d295a92943bfdc42cf69376a04ba6c3b",
+          "source": "9618_s25_sf_42/StackData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "SecondStack.txt",
+          "bytes": 26,
+          "sha256": "c8115e35b133ccea75bcf10e2f3184970c3619982ec25459f68a129827f59e16",
+          "source": "9618_s25_sf_42/SecondStack.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": "已看 QP pp.2–5、MS pp.7–18 全部渲染图，并核对 evidence.doc 7 格。QP p.4 栈图转写为顶到底 10、+、3、−、2，结果11；MS p.18 两次截图分别131.0、320.0，测试接受相同数值的整数/浮点显示。参考解采用 MS Python 顺序运算、Pop 取数；只收窄 bare except 为 OSError 并加英文类型注释、入口保护，无 QP/MS 算法冲突。MP 与印刷清单一致。HashData.txt 属第2题，不复制。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_42_q2",
+      "id": "9618_s25_42:2(a)",
+      "paper": "9618_s25_42",
+      "marks": 22,
+      "auto_marks": 18.166667,
+      "manual_marks": 3.833333,
+      "auto_share": 0.825758,
+      "types": [
+        "P4-AR-03",
+        "P4-LT-05",
+        "P4-FL-02",
+        "P4-AR-05",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_42:2(a)",
+          "marks": 2,
+          "primary": "P4-AR-03",
+          "auto_mps": [],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 0.0,
+          "manual_marks": 2.0,
+          "tests": [
+            "test_2a_record_fields"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(b)(i)",
+          "marks": 1,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2b_arrays_and_initialise",
+            "test_2b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(b)(ii)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2b_arrays_and_initialise"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(c)",
+          "marks": 2,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2c_hash"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(d)",
+          "marks": 6,
+          "primary": "P4-LT-05",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_2d_insert_and_collisions",
+            "test_2d_last_spare_slot"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(e)",
+          "marks": 5,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.166667,
+          "manual_marks": 0.833333,
+          "tests": [
+            "test_2e_create_from_official_data",
+            "test_2e_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(f)(i)",
+          "marks": 2,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2f_printspare_empty_partial_full"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2f_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s25_42:2(f)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_2f_screenshot"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "HashData.txt",
+          "bytes": 2326,
+          "sha256": "4c25e6d9c4b975d826d4d4aec5acba8c64535d54a654a8209c31a61c57d87c2f",
+          "source": "9618_s25_sf_42/HashData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 10,
+      "qp_pages_checked": [
+        6,
+        7,
+        8
+      ],
+      "ms_pages_checked": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "notes": "已看 QP pp.6–8、MS pp.19–32 全部渲染图并放大 MS p.32 截图，核对 evidence.doc 9 格。MS p.32 61个键逐项核对，官方数据重算与图一致。MS Python class Record 与 QP NewRecord 不一致，按 QP 命名；MS PrintSpare 无上界检查，全100格非空会越界，参考解补 X<100，保留按连续填入顺序输出（D31）。Initialise 采用下标赋值满足固定大小数组，不对空 list append。2(a) 两点仅声明结构/类型，分值归人工，字段值测试作辅助。2(e) 六可选点 max5。未印数字MP；语料圆点序号一致。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_43_q1",
+      "id": "9618_s25_43:1(a)",
+      "paper": "9618_s25_43",
+      "marks": 26,
+      "auto_marks": 24.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.923077,
+      "types": [
+        "P4-SQ-02",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_43:1(a)",
+          "marks": 3,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(b)",
+          "marks": 6,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1b_enqueue_full",
+            "test_1b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(c)",
+          "marks": 5,
+          "primary": "P4-SQ-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1c_dequeue_fifo_empty"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(d)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1d_official_file",
+            "test_1d_unknown_length_overflow_and_missing"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(e)(i)",
+          "marks": 5,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_screenshot",
+            "test_1e_main_uses_dequeue_until_sentinel"
+          ]
+        },
+        {
+          "id": "9618_s25_43:1(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1e_screenshot"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "QueueData.txt",
+          "bytes": 174,
+          "sha256": "9576e3e73ccf62362e05e12d40f2e99e4456984e745b2591b8c06bcaa34a29a5",
+          "source": "9618_s25_sf_43/QueueData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": "已看 QP pp.2–3、MS pp.7–18 全部渲染图，核对 evidence.doc 6 格。MS p.18 截图3059，官方文件运行一致。MS Python CreateQueue 在第一次满时 break；参考解继续读到 EOF，符合 QP 每行调用和未知行数要求，测试允许满提示一次或多次（MS MP5 明文）。MP1只考函数头与文件打开/关闭位置，归人工；MP6行为测缺文件，所有访问是否在try仍人工核对。其余采用 MS Python，无给分编号差异。"
+    },
+    {
+      "directory": "practice/p4/9618_w22_41_q3",
+      "id": "9618_w22_41:3(a)",
+      "paper": "9618_w22_41",
+      "marks": 21,
+      "auto_marks": 19.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.904762,
+      "types": [
+        "P4-LT-03",
+        "P4-LT-04",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_41:3(a)",
+          "marks": 3,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            3
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_3a_array_shape_and_unused_nodes"
+          ]
+        },
+        {
+          "id": "9618_w22_41:3(b)",
+          "marks": 2,
+          "primary": "P4-LT-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3b_preset_and_pointers",
+            "test_3b_no_algorithm_shortcuts"
+          ]
+        },
+        {
+          "id": "9618_w22_41:3(c)",
+          "marks": 5,
+          "primary": "P4-LT-04",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 4.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_3c_search_both_branches",
+            "test_3c_search_recursive_and_null_data"
+          ]
+        },
+        {
+          "id": "9618_w22_41:3(d)",
+          "marks": 7,
+          "primary": "P4-LT-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3d_postorder_recursive",
+            "test_3d_postorder_different_tree"
+          ]
+        },
+        {
+          "id": "9618_w22_41:3(e)(i)",
+          "marks": 3,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3e_screenshot"
+          ]
+        },
+        {
+          "id": "9618_w22_41:3(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_3e_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 8,
+      "qp_pages_checked": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "notes": "已看 QP pp.8–11、MS pp.16–23 全部渲染图，核对 evidence.doc 6 格。MS p.17 Python 把 ArrayNodes 重建为仅6行，且写 FreeNodes（多s），参考解保留20行并用 QP FreeNode。MS p.23 截图为 Found at 1，然后10、9、3、15、58、20。3(c)语料MP1合并四处填空（4分），MP2整体余下逻辑（1分）人工；不自造四个点号。3(e)(i) MP2 的成功分支自动测，找不到分支固定示例不会经过，归于人工补核，不据此声称整个分支均自动覆盖。PostOrder采用节点参数，MS也允许下标参数但本练习接口已约定节点形式。与 w22_43 第3题相同；无本题源文件。"
+    }
+  ]
+}
