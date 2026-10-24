@@ -923,6 +923,190 @@
         17
       ],
       "notes": "已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_42_q1",
+      "id": "9618_s25_42:1(a)",
+      "paper": "9618_s25_42",
+      "marks": 27,
+      "auto_marks": 24.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.888889,
+      "types": [
+        "P4-SQ-01",
+        "P4-FL-01",
+        "P4-SQ-04",
+        "P4-PR-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_42:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(b)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1b_push_full"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(c)",
+          "marks": 4,
+          "primary": "P4-SQ-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1c_pop_empty_lifo_reuse"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(d)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1d_read_official_files",
+            "test_1d_overflow_and_missing_file"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(e)",
+          "marks": 7,
+          "primary": "P4-SQ-04",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 6.0,
+          "manual_marks": 1.0,
+          "tests": [
+            "test_1e_calculate_all_operators"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1f_screenshots"
+          ]
+        },
+        {
+          "id": "9618_s25_42:1(f)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1f_screenshots"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "StackData.txt",
+          "bytes": 26,
+          "sha256": "ea1c31f3a9ec7c5489c6e13b5749d869d295a92943bfdc42cf69376a04ba6c3b",
+          "source": "9618_s25_sf_42/StackData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "SecondStack.txt",
+          "bytes": 26,
+          "sha256": "c8115e35b133ccea75bcf10e2f3184970c3619982ec25459f68a129827f59e16",
+          "source": "9618_s25_sf_42/SecondStack.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": "已看 QP pp.2–5、MS pp.7–18 全部渲染图，并核对 evidence.doc 7 格。QP p.4 栈图转写为顶到底 10、+、3、−、2，结果11；MS p.18 两次截图分别131.0、320.0，测试接受相同数值的整数/浮点显示。参考解采用 MS Python 顺序运算、Pop 取数；只收窄 bare except 为 OSError 并加英文类型注释、入口保护，无 QP/MS 算法冲突。MP 与印刷清单一致。HashData.txt 属第2题，不复制。"
     }
   ]
 }
