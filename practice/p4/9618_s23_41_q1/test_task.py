@@ -119,16 +119,17 @@ def test_1d_ii_screenshot_number_12(candidate_path, exercise_dir):
     assert _result_line(res, 12, 4)
 
 
-def test_1bii_di_traced_main(candidate_path, exercise_dir):
+def test_1bii_1di_traced_main(candidate_path, exercise_dir):
     """9618_s23_41:1(b)(ii) whole; 1(d)(i) MP3–4; MS pp.8,10."""
     from testkit import run_script_traced
     for value in (12, 7, 99):
         r = run_script_traced(candidate_path, stdin=f"{value}\n", files_dir=exercise_dir / "files")
         assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
         prints, searches = r.called("PrintArray"), r.called("LinearSearch")
         assert prints and searches
         assert DATA in list(prints[0].args.values())
         assert list(searches[0].args.values()) == [DATA, value]
-        assert next(i for i, c in enumerate(r.calls) if c is prints[0]) < next(i for i, c in enumerate(r.calls) if c is searches[0])
+        assert positions[id(prints[0])] < positions[id(searches[0])]
         assert searches[0].result == DATA.count(value)
         assert re.search(rf"The number\s+{value}\s+is found\s+{searches[0].result}\s+times", r.stdout)

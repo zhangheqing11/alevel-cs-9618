@@ -6,7 +6,7 @@ import re
 
 from testkit import output_lines, run_script
 
-JOB_LINE = re.compile(r"^\s*(-?\d+)\s+priority\s+(-?\d+)\s*$")
+JOB_LINE = re.compile(r"(?<!\d)(-?\d+)\s+priority\s+(-?\d+)(?!\d)")
 GIVEN_JOBS = [(12, 10), (526, 9), (33, 8), (12, 9), (78, 1)]  # QP 1(d) table, in order
 
 
@@ -17,7 +17,7 @@ def rows(jobs):
 
 def job_lines(text):
     """(job, priority) pairs from lines shaped like '123 priority 1'."""
-    return [(int(m.group(1)), int(m.group(2))) for m in map(JOB_LINE.match, output_lines(text)) if m]
+    return [(int(m.group(1)), int(m.group(2))) for m in map(JOB_LINE.search, output_lines(text)) if m]
 
 
 def fresh(sol, capsys, jobs=GIVEN_JOBS):
@@ -63,7 +63,7 @@ def test_1c_addjob_stores_in_next_free_element(sol, capsys):
     out = output_lines(capsys.readouterr().out)
     assert rows(sol.Jobs[:3]) == [[12, 10], [526, 9], [-1, -1]]
     assert sol.NumberOfJobs == 2
-    assert out == ["Added", "Added"]
+    assert [line for line in out if line in ("Added", "Not added")] == ["Added", "Added"]
 
 
 def test_1c_addjob_full_outputs_not_added(sol, capsys):
@@ -73,10 +73,10 @@ def test_1c_addjob_full_outputs_not_added(sol, capsys):
         sol.AddJob(n + 1, 5)
     capsys.readouterr()
     sol.AddJob(500, 1)  # the 100th job still fits
-    assert output_lines(capsys.readouterr().out) == ["Added"]
+    assert "Added" in output_lines(capsys.readouterr().out)
     before = rows(sol.Jobs)
     sol.AddJob(777, 2)
-    assert output_lines(capsys.readouterr().out) == ["Not added"]
+    assert "Not added" in output_lines(capsys.readouterr().out)
     assert rows(sol.Jobs) == before
     assert sol.NumberOfJobs == 100
 
@@ -137,7 +137,8 @@ def test_1d_1gi_traced_main(candidate_path):
     from testkit import run_script_traced
     r = run_script_traced(candidate_path)
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     initial, adds, sorts, prints = r.called("Initialise"), r.called("AddJob"), r.called("InsertionSort"), r.called("PrintArray")
     assert initial and sorts and prints
     assert [tuple(c.args.values()) for c in adds] == GIVEN_JOBS
-    assert next(i for i, c in enumerate(r.calls) if c is initial[0]) < next(i for i, c in enumerate(r.calls) if c is adds[0]) < next(i for i, c in enumerate(r.calls) if c is adds[-1]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is prints[0])
+    assert positions[id(initial[0])] < positions[id(adds[0])] < positions[id(adds[-1])] < positions[id(sorts[0])] < positions[id(prints[0])]

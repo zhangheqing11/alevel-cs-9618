@@ -179,12 +179,13 @@ def test_3aii_3biii_traced_results(candidate_path):
     from testkit import run_script_traced
     r = run_script_traced(candidate_path)
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     counts, splits = r.called("RecursiveCount"), r.called("SplitData")
     assert counts and splits
     assert counts[0].args == {"ArrayCopy": GIVEN, "NumberElements": 10, "DataToFind": 0}
     assert counts[0].result == 2
     assert CODE in splits[0].args.values() and list(splits[0].result)[:4] == SPLIT
-    assert next(i for i, c in enumerate(r.calls) if c is counts[0]) < next(i for i, c in enumerate(r.calls) if c is splits[0])
+    assert positions[id(counts[0])] < positions[id(splits[0])]
     assert counts[0].result in ints(r.stdout)
     remaining = iter(r.stdout.splitlines())
     assert all(any(item in line for line in remaining) for item in splits[0].result[:4])

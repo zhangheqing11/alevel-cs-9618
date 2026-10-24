@@ -34,7 +34,9 @@ def run_seeded(candidate_path, tmp_path, seed, stdin):
 
 def arrays_in(stdout):
     """Output lines holding exactly 20 integers (the PrintArray lines), in order."""
-    return [ints(line) for line in output_lines(stdout) if len(ints(line)) == 20]
+    runs = [re.search(r"-?\d+(?:[ \t]+-?\d+){19}(?!\d)", line)
+            for line in output_lines(stdout)]
+    return [ints(match.group()) for match in runs if match]
 
 
 class NoSortList(list):
@@ -85,8 +87,8 @@ def test_2d_screenshot_unsorted_sorted_line_then_sorted(candidate_path, tmp_path
     before, after = arrays[0], arrays[1]
     assert after == sorted(before)
     sorted_at = next(i for i, line in enumerate(lines) if "Sorted" in line)
-    assert any(ints(line) == before for line in lines[:sorted_at])
-    assert any(ints(line) == after for line in lines[sorted_at:])
+    assert any(before in arrays_in(line) for line in lines[:sorted_at])
+    assert any(after in arrays_in(line) for line in lines[sorted_at:])
 
 
 # ---------------------------------------------------------------- 2(b)
@@ -95,7 +97,8 @@ def test_2b_printarray_single_line_with_spaces(sol, capsys):
     """9618_w25_42:2(b) MP1-MP3: the array output once, on one line, a space between each integer."""
     data = list(range(100, 0, -5))  # 20 integers
     sol.PrintArray(data)
-    assert " ".join(str(v) for v in data) in output_lines(capsys.readouterr().out)
+    assert any(" ".join(str(v) for v in data) in line
+               for line in output_lines(capsys.readouterr().out))
 
 
 # ---------------------------------------------------------------- 2(c)
@@ -173,6 +176,7 @@ def test_2di_2fi_traced_main(candidate_path):
     finally:
         random.setstate(state)
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     prints, sorts, searches = r.called("PrintArray"), r.called("BubbleSort"), r.called("RecursiveBinarySearch")
     assert len(prints) >= 2 and sorts and searches
     before = list(prints[0].args.values())[0]
@@ -183,4 +187,4 @@ def test_2di_2fi_traced_main(candidate_path):
     # QP specifies the four argument roles; parameter names may vary.
     assert list(search.args.values()) == [sorts[0].result, 0, 19, 999]
     assert search.result == -1 and "Not found" in r.stdout
-    assert next(i for i, c in enumerate(r.calls) if c is prints[0]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is prints[-1]) < next(i for i, c in enumerate(r.calls) if c is search)
+    assert positions[id(prints[0])] < positions[id(sorts[0])] < positions[id(prints[-1])] < positions[id(search)]

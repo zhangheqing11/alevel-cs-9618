@@ -8,7 +8,7 @@
       "marks": 29,
       "auto_marks": 23.9,
       "manual_marks": 5.1,
-      "auto_share": 0.824,
+      "auto_share": 0.824138,
       "types": [
         "P4-AR-01",
         "P4-FL-02",
@@ -183,9 +183,9 @@
       "id": "9618_s22_42:2(a)",
       "paper": "9618_s22_42",
       "marks": 23,
-      "auto_marks": 22.0,
-      "manual_marks": 1.0,
-      "auto_share": 0.957,
+      "auto_marks": 22,
+      "manual_marks": 1,
+      "auto_share": 0.956522,
       "types": [
         "P4-AR-02",
         "P4-SR-03",
@@ -294,7 +294,7 @@
       "marks": 18,
       "auto_marks": 15.2,
       "manual_marks": 2.8,
-      "auto_share": 0.844,
+      "auto_share": 0.844444,
       "types": [
         "P4-AR-01",
         "P4-FL-01",
@@ -431,8 +431,8 @@
       "id": "9618_s23_42:1(a)",
       "paper": "9618_s23_42",
       "marks": 14,
-      "auto_marks": 14.0,
-      "manual_marks": 0.0,
+      "auto_marks": 14,
+      "manual_marks": 0,
       "auto_share": 1.0,
       "types": [
         "P4-AR-01",
@@ -521,9 +521,9 @@
       "id": "9618_s24_41:1(a)",
       "paper": "9618_s24_41",
       "marks": 27,
-      "auto_marks": 25.0,
-      "manual_marks": 2.0,
-      "auto_share": 0.926,
+      "auto_marks": 25,
+      "manual_marks": 2,
+      "auto_share": 0.925926,
       "types": [
         "P4-AR-01",
         "P4-PR-01",
@@ -680,7 +680,7 @@
       "marks": 22,
       "auto_marks": 19.5,
       "manual_marks": 2.5,
-      "auto_share": 0.886,
+      "auto_share": 0.886364,
       "types": [
         "P4-FL-01",
         "P4-MP-01",
@@ -832,7 +832,7 @@
       "marks": 23,
       "auto_marks": 22.0,
       "manual_marks": 1.0,
-      "auto_share": 0.957,
+      "auto_share": 0.956522,
       "types": [
         "P4-AR-01",
         "P4-SR-04",
@@ -1327,8 +1327,8 @@
       "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     }
   ],
-  "count": 6,
-  "marks": 133,
-  "auto_marks": 119.1,
-  "manual_marks": 13.9
+  "count": 9,
+  "marks": 201,
+  "auto_marks": 182.85,
+  "manual_marks": 18.15
 }

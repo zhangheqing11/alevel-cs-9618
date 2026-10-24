@@ -77,10 +77,10 @@ and ColourData.txt
 | Part 1(a)(i) | 9618_s23_41:1(a)(i) | 1 | 代码 | `test_1a_dataarray_holds_25_integers_from_file` · 名为 DataArray、25 个整数 | 注释写明 25 个元素与 INTEGER；局部于主程序 |
 | Part 1(a)(ii) | 9618_s23_41:1(a)(ii) | 4 | 代码 | `test_1a_dataarray_holds_25_integers_from_file` · MP1–MP3；`test_1a_missing_file_handled` · MP4（不崩溃） | MP4 提示语合适；MP5 关闭文件且位置合适（max 4） |
 | Part 1(b)(i) | 9618_s23_41:1(b)(i) | 3 | 代码 | `test_1b_i_print_array_one_line_in_order`、`test_1b_i_print_array_any_length` · MP2–MP3 | MP1 过程头带一个数组参数 |
-| Part 1(b)(ii) | 9618_s23_41:1(b)(ii) | 1 | 代码 | `test_1b_iii_screenshot_array_output` · 以 DataArray 调用 PrintArray；`test_1bii_di_traced_main` · 实际调用、参数与数据链（D46） | — |
+| Part 1(b)(ii) | 9618_s23_41:1(b)(ii) | 1 | 代码 | `test_1b_iii_screenshot_array_output` · 以 DataArray 调用 PrintArray；`test_1bii_1di_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(b)(iii) | 9618_s23_41:1(b)(iii) | 1 | 截图 | `test_1b_iii_screenshot_array_output` · 一行里依次是 Data.txt 的 25 个数（MS p.8 样例） | 截图清晰 |
 | Part 1(c) | 9618_s23_41:1(c) | 3 | 代码 | `test_1c_linear_search_counts`、`test_1c_linear_search_other_array` · MP2–MP3 | MP1 函数头带数组与查找值两个参数；不用 `count()` |
-| Part 1(d)(i) | 9618_s23_41:1(d)(i) | 4 | 代码 | `test_1d_i_validates_0_to_100` · MP1–MP4；`test_1d_i_bounds_inclusive` · MP2；`test_1bii_di_traced_main` · 实际调用、参数与数据链（D46） | MP1 提示语合适 |
+| Part 1(d)(i) | 9618_s23_41:1(d)(i) | 4 | 代码 | `test_1d_i_validates_0_to_100` · MP1–MP4；`test_1d_i_bounds_inclusive` · MP2；`test_1bii_1di_traced_main` · 实际调用、参数与数据链（D46） | MP1 提示语合适 |
 | Part 1(d)(ii) | 9618_s23_41:1(d)(ii) | 1 | 截图 | `test_1d_ii_screenshot_number_12` · `The number 12 is found 4 times`（MS p.11 样例） | 截图里能看到输入的 12 |
 
 ## 人工核对清单
@@ -102,3 +102,5 @@ and ColourData.txt
 增加 PrintArray(DataArray)、LinearSearch(DataArray, validated input) 的实际调用与返回值消息核对，覆盖三种查找值。QP 明定数组同行、完整结果消息格式；允许额外数字标题与消息中的相邻换行，仍检查规定的词序和数值。 等价 main() 暴露旧测试只查 runpy 模块命名空间，已改成观测主程序帧中的 DataArray，接受局部 main()。
 
 测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：PrintArray 增加含数字说明行，数组仍一整行。自动测规定内容与格式，允许额外说明；未增加自动分值。

@@ -30,6 +30,17 @@ def sentence(row):
     return f"{row[0]} reached level {row[1]} with a score of {row[2]}"
 
 
+def ordered_messages(expected, stdout):
+    """QP p.13/MS p.34 prescribe the sentence, not a ban on labels or wrapping."""
+    remaining = " ".join(stdout.split())
+    for message in expected:
+        position = remaining.find(message)
+        if position < 0:
+            return False
+        remaining = remaining[position + len(message):]
+    return True
+
+
 def normalise(lines):
     return [" ".join(line.split()) for line in lines]
 
@@ -81,13 +92,12 @@ def values_of_highscores_in_main(path):
 # ---------------------------------------------------------------- 3(a)
 
 def test_3a_highscores_7_by_3_empty_strings(candidate_path, monkeypatch, tmp_path, exercise_dir, capsys):
-    """9618_w24_42:3(a) MP1-MP2: the main program's HighScores is a 7 x 3 array with every element "" before ReadData()."""
+    """9618_w24_42:3(a) MP1-MP2: the main program's HighScores has at least 7 x 3 elements, all "" before ReadData()."""
     use_files(monkeypatch, tmp_path, exercise_dir / "files")
     seen = values_of_highscores_in_main(candidate_path)
     capsys.readouterr()
-    empty = [["", "", ""] for _ in range(7)]
     assert any(all(item == "" for row in v for item in row) for v in seen if len(v) >= 7 and all(len(r) >= 3 for r in v)), \
-        "HighScores is never a 7 x 3 array of empty strings in the main program"
+        "HighScores is never an at-least-7-by-3 array of empty strings in the main program"
 
 
 # ---------------------------------------------------------------- 3(b)
@@ -121,7 +131,7 @@ def test_3b_missing_file_is_handled(sol, monkeypatch, tmp_path, capsys):
 def test_3c_output_format_in_array_order(sol, capsys):
     """9618_w24_42:3(c) MP1-MP2: one line per player, in array order, 'GHEH reached level 3 with a score of 10'."""
     sol.OutputHighScores([list(r) for r in QP_TABLE])
-    assert normalise(output_lines(capsys.readouterr().out)) == [sentence(r) for r in QP_TABLE]
+    assert ordered_messages([sentence(r) for r in QP_TABLE], capsys.readouterr().out)
 
 
 # ---------------------------------------------------------------- 3(d)
@@ -151,8 +161,7 @@ def test_3e_screenshot_before_and_after(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     rows = official_rows(exercise_dir)
     expected = ["Before"] + [sentence(r) for r in rows] + ["After"] + [sentence(r) for r in required_order(rows)]
-    remaining = iter(normalise(result.lines))
-    assert all(any(wanted == line for line in remaining) for wanted in expected)
+    assert ordered_messages(expected, result.stdout)
 
 
 def test_3ei_traced_main(candidate_path, exercise_dir):
@@ -160,9 +169,10 @@ def test_3ei_traced_main(candidate_path, exercise_dir):
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, files_dir=exercise_dir / "files")
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     reads, sorts, outputs = r.called("ReadData"), r.called("SortScores"), r.called("OutputHighScores")
     assert reads and sorts and len(outputs) >= 2
-    assert next(i for i, c in enumerate(r.calls) if c is reads[0]) < next(i for i, c in enumerate(r.calls) if c is outputs[0]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is outputs[-1])
+    assert positions[id(reads[0])] < positions[id(outputs[0])] < positions[id(sorts[0])] < positions[id(outputs[-1])]
     expected = required_order(official_rows(exercise_dir))
     assert as_rows(sorts[0].result)[:7] == expected
     assert as_rows(list(outputs[-1].args.values())[0])[:7] == expected

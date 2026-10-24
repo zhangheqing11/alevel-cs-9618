@@ -185,8 +185,18 @@ def test_1b_1di_traced_main(candidate_path, exercise_dir):
     for choice, filename in (("easy", "Easy.txt"), ("medium", "Medium.txt"), ("hard", "Hard.txt")):
         r = run_script_traced(candidate_path, stdin=choice + "\nno\n", files_dir=exercise_dir / "files")
         assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
         reads, plays = r.called("ReadWords"), r.called("Play")
         assert reads and plays
         assert list(reads[0].args.values()) == [filename]
-        assert next(i for i, c in enumerate(r.calls) if c is reads[0]) < next(i for i, c in enumerate(r.calls) if c is plays[0])
+        assert positions[id(reads[0])] < positions[id(plays[0])]
         assert answers(exercise_dir, filename)[0] in r.stdout
+
+
+def test_1di_readwords_calls_play_after_loading(sol, monkeypatch, tmp_path, exercise_dir):
+    """9618_s24_42:1(d)(i) whole; QP p.3: ReadWords itself calls Play after loading."""
+    use_files(monkeypatch, tmp_path, exercise_dir / "files")
+    seen = []
+    monkeypatch.setattr(sol, "Play", lambda: seen.append((list(sol.WordArray), sol.NumberWords)))
+    sol.ReadWords("Easy.txt")
+    assert seen and seen[0][0][:15] == ["house"] + EASY and seen[0][1] == 14

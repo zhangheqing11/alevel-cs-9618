@@ -23,7 +23,8 @@ def find_block(lines, block, start=0):
 
 
 def printed(capsys):
-    return [ln.strip() for ln in output_lines(capsys.readouterr().out)]
+    return [ln.strip() for ln in output_lines(capsys.readouterr().out)
+            if re.fullmatch(r"[A-Z]{3} \d+", ln.strip())]
 
 
 def tokens(text):
@@ -176,14 +177,15 @@ def test_1f_writes_unchanged_top_ten(sol, monkeypatch, tmp_path, exercise_dir):
     assert tokens(text) == tokens(" ".join(ORIGINAL))
 
 
-def test_1di_eiii_traced_main(candidate_path, exercise_dir):
+def test_1di_1eiii_traced_main(candidate_path, exercise_dir):
     """9618_s22_41:1(d)(i) MP1–2; 1(e)(iii) MP1–2; MS pp.8,15."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, stdin="JKL\n9999\n", files_dir=exercise_dir / "files")
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     read, output, arrange = r.called("ReadHighScores"), r.called("OutputHighScores"), r.called("Arrange")
     assert read and len(output) >= 2 and arrange
     assert list(arrange[0].args.values()) == ["JKL", 9999]
-    assert next(i for i, c in enumerate(r.calls) if c is read[0]) < next(i for i, c in enumerate(r.calls) if c is output[0]) < next(i for i, c in enumerate(r.calls) if c is arrange[0]) < next(i for i, c in enumerate(r.calls) if c is output[-1])
+    assert positions[id(read[0])] < positions[id(output[0])] < positions[id(arrange[0])] < positions[id(output[-1])]
     assert find_block(r.stdout.splitlines(), ORIGINAL) >= 0
     assert find_block(r.stdout.splitlines(), WITH_JKL) >= 0

@@ -174,7 +174,8 @@ def test_1di_1e_traced_main(candidate_path, exercise_dir):
     for value, expected in ((61, 2), (8, 3)):
         r = run_script_traced(candidate_path, stdin=f"{value}\n", files_dir=exercise_dir / "files")
         assert r.error is None
+        positions = {id(call): index for index, call in enumerate(r.calls)}
         read, find, sort = r.called("ReadFile"), r.called("FindValues"), r.called("BubbleSort")
         assert read and find and sort
-        assert next(i for i, c in enumerate(r.calls) if c is read[0]) < next(i for i, c in enumerate(r.calls) if c is find[0]) < next(i for i, c in enumerate(r.calls) if c is sort[0])
+        assert positions[id(read[0])] < positions[id(find[0])] < positions[id(sort[0])]
         assert find[0].result == expected and expected in ints(r.stdout)

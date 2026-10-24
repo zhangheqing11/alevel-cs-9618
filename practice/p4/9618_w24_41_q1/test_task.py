@@ -154,6 +154,7 @@ def test_1bii_1dii_traced_main(candidate_path, exercise_dir):
     from testkit import run_script_traced
     r = run_script_traced(candidate_path, files_dir=exercise_dir / "files")
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     reads, formats, sorts = r.called("ReadData"), r.called("FormatArray"), r.called("Bubble")
     assert reads and len(formats) >= 2 and sorts
     items = official_items(exercise_dir)
@@ -163,4 +164,4 @@ def test_1bii_1dii_traced_main(candidate_path, exercise_dir):
     assert sorts[0].result == sorted(items)
     assert list(formats[-1].args.values())[0] == sorts[0].result
     assert formats[0].result.strip() in r.stdout and formats[-1].result.strip() in r.stdout
-    assert next(i for i, c in enumerate(r.calls) if c is reads[0]) < next(i for i, c in enumerate(r.calls) if c is formats[0]) < next(i for i, c in enumerate(r.calls) if c is sorts[0]) < next(i for i, c in enumerate(r.calls) if c is formats[-1])
+    assert positions[id(reads[0])] < positions[id(formats[0])] < positions[id(sorts[0])] < positions[id(formats[-1])]

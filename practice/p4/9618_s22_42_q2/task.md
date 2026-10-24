@@ -107,10 +107,10 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 2(a) | 9618_s22_42:2(a) | 4 | 代码 | `test_2a_ten_by_ten_random_1_to_100` · MP1–MP4；`test_2a_values_are_random` · MP4 | MP1 数组局部于主程序；MP2 注释写明 INTEGER（D10 ①） |
 | Part 2(b)(i) | 9618_s22_42:2(b)(i) | 5 | 代码 | `test_2b_i_bubble_sort_each_line_ascending` · MP1–MP5；`test_2b_i_no_builtin_sort`（QP 禁用内置排序） | 三重循环照伪代码（MP1 外层、MP2 第二层、MP3 内层界） |
-| Part 2(b)(ii) | 9618_s22_42:2(b)(ii) | 3 | 代码 | `test_2b_iii_screenshot_unsorted_then_sorted` · MP2–MP3（每行一整行、排序前后各调用一次）；`test_2bii_cii_traced_main` · 实际调用、参数与数据链（D46） | MP1 过程头 |
+| Part 2(b)(ii) | 9618_s22_42:2(b)(ii) | 3 | 代码 | `test_2b_iii_screenshot_unsorted_then_sorted` · MP2–MP3（每行一整行、排序前后各调用一次）；`test_2bii_2cii_traced_main` · 实际调用、参数与数据链（D46） | MP1 过程头 |
 | Part 2(b)(iii) | 9618_s22_42:2(b)(iii) | 1 | 截图 | `test_2b_iii_screenshot_unsorted_then_sorted` · 先未排序、后在一个维度上排好（MS p.21 样例） | 截图清晰 |
 | Part 2(c)(i) | 9618_s22_42:2(c)(i) | 8 | 代码 | `test_2c_i_finds_value_in_first_row`、`test_2c_i_not_found_returns_minus_1` · MP1（六个空：`2`、`SearchValue`、`Mid`、`Lower`、`Upper`、`-1`）、MP3；`test_2c_i_is_recursive` · MP2 | MP1 六个空逐句对照 QP；MP2 函数头参数；MP3 用整数除法 |
-| Part 2(c)(ii) | 9618_s22_42:2(c)(ii) | 2 | 截图 | `test_2c_ii_screenshot_index_and_minus_1` · MP1（找到时输出下标）、MP2（找不到输出 –1）；`test_2bii_cii_traced_main` · 实际调用、参数与数据链（D46） | 截图里的两个测试数确实一个在第一行、一个不在 |
+| Part 2(c)(ii) | 9618_s22_42:2(c)(ii) | 2 | 截图 | `test_2c_ii_screenshot_index_and_minus_1` · MP1（找到时输出下标）、MP2（找不到输出 –1）；`test_2bii_2cii_traced_main` · 实际调用、参数与数据链（D46） | 截图里的两个测试数确实一个在第一行、一个不在 |
 
 ## 人工核对清单
 

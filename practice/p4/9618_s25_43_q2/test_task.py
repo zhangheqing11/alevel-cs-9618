@@ -53,7 +53,7 @@ def test_2c_output_format(sol, capsys, values):
     """9618_s25_43:2(c) MP1–MP2: every item in order, one line with spaces."""
     sol.OutputArray(list(values))
     lines = capsys.readouterr().out.strip().splitlines()
-    assert any(line.split() == [str(x) for x in values] for line in lines)
+    assert any(" ".join(str(x) for x in values) in line for line in lines)
 
 
 def test_2dii_screenshot_unsorted_then_sorted(candidate_path):

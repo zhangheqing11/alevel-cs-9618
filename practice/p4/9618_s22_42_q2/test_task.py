@@ -149,9 +149,8 @@ def test_2c_ii_screenshot_index_and_minus_1(seeded):
     assert any(0 <= v <= 9 for v in values), "no index 0..9 output for the number that is found"
 
 
-def test_2bii_cii_traced_main(candidate_path):
+def test_2bii_2cii_traced_main(candidate_path):
     """9618_s22_42:2(b)(ii) MP3; 2(c)(ii) MP1–2; QP pp.5–6/MS pp.17,24."""
-    import copy
     import random
     from testkit import run_script_traced
     state = random.getstate()
@@ -161,12 +160,13 @@ def test_2bii_cii_traced_main(candidate_path):
     finally:
         random.setstate(state)
     assert r.error is None
+    positions = {id(call): index for index, call in enumerate(r.calls)}
     prints = r.called("PrintArray") or r.called("Printarray")
     searches = r.called("BinarySearch")
     assert len(prints) >= 2 and searches
-    # testkit snapshots nested lists shallowly: copy on CALL before sorting.
+    # testkit snapshots nested lists shallowly.
     # Values at entry/exit for the grid itself remain checked by screenshot tests.
-    assert next(i for i, c in enumerate(r.calls) if c is prints[0]) < next(i for i, c in enumerate(r.calls) if c is prints[-1]) < next(i for i, c in enumerate(r.calls) if c is searches[0])
+    assert positions[id(prints[0])] < positions[id(prints[-1])] < positions[id(searches[0])]
     seen = []
     for c in searches:
         if c.args["Lower"] == 0 and c.args["Upper"] == 9:

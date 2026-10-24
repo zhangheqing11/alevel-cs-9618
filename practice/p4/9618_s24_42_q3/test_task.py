@@ -141,7 +141,7 @@ def test_3bi_ci_di_no_builtin_shortcuts(candidate_path):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops)
 
 
-def test_3bii_cii_dii_traced_calls_and_results(candidate_path):
+def test_3bii_3cii_3dii_traced_calls_and_results(candidate_path):
     """9618_s24_42:3(b)(ii) MP1–2, 3(c)(ii) whole, 3(d)(ii) MP1–2; MS pp.32,36,39."""
     from testkit import run_script_traced
     r = run_script_traced(candidate_path)

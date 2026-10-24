@@ -101,11 +101,11 @@ QP 把分数排成 `10 000`、`9 092`（千位空格只是排版）；文件里�
 | Part 1(a) | 9618_s22_41:1(a) | 2 | 代码 | `test_1a_global_array_has_11_elements` · MP1–MP2（有全局数组、11 个元素） | MP1 标识符合适；MP2 注释写明数据类型（D10 ①） |
 | Part 1(b) | 9618_s22_41:1(b) | 6 | 代码 | `test_1b_reads_ten_players_from_file` · MP2–MP5；`test_1b_missing_file_handled` · MP7–MP8 | MP1 过程头（与结尾）；MP6 关闭文件（max 6） |
 | Part 1(c) | 9618_s22_41:1(c) | 3 | 代码 | `test_1c_outputs_every_element_name_space_score` · MP2–MP3 | MP1 过程头与结尾 |
-| Part 1(d)(i) | 9618_s22_41:1(d)(i) | 2 | 代码 | `test_1d_screenshot_shows_ten_players` · MP1–MP2（先读后输出）；`test_1di_eiii_traced_main` · 实际调用、参数与数据链（D46） | — |
+| Part 1(d)(i) | 9618_s22_41:1(d)(i) | 2 | 代码 | `test_1d_screenshot_shows_ten_players` · MP1–MP2（先读后输出）；`test_1di_1eiii_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(d)(ii) | 9618_s22_41:1(d)(ii) | 1 | 截图 | `test_1d_screenshot_shows_ten_players` · 10 个名字与分数（MS p.9 样例） | 截图清晰 |
 | Part 1(e)(i) | 9618_s22_41:1(e)(i) | 3 | 代码 | `test_1e_i_rejects_name_not_3_characters` · MP1–MP2；`test_1e_i_score_upper_bound_100000_inclusive`、`test_1e_i_score_lower_bound` · MP3 | 提示语是否合适 |
 | Part 1(e)(ii) | 9618_s22_41:1(e)(ii) | 5 | 代码 | `test_1e_ii_inserts_jkl_in_second_place`、`test_1e_ii_inserts_at_top`、`test_1e_ii_inserts_in_tenth_place`、`test_1e_ii_score_too_low_not_inserted` · MP2–MP5 | MP1 过程头：1 个字符串 + 1 个整数参数 |
-| Part 1(e)(iii) | 9618_s22_41:1(e)(iii) | 2 | 代码 | `test_1e_iv_screenshot_before_and_after` · MP1–MP2（调用并在前后各输出一次）；`test_1di_eiii_traced_main` · 实际调用、参数与数据链（D46） | — |
+| Part 1(e)(iii) | 9618_s22_41:1(e)(iii) | 2 | 代码 | `test_1e_iv_screenshot_before_and_after` · MP1–MP2（调用并在前后各输出一次）；`test_1di_1eiii_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(e)(iv) | 9618_s22_41:1(e)(iv) | 1 | 截图 | `test_1e_iv_screenshot_before_and_after` · 输入 JKL、9999，之后的列表 JKL 在第二位（MS p.16 样例） | 截图里能看到输入的 JKL、9999 |
 | Part 1(f) | 9618_s22_41:1(f) | 4 | 代码 | `test_1f_writes_new_top_ten`、`test_1f_writes_unchanged_top_ten` · MP1（以写方式建 NewHighScore.txt）、MP3–MP4 | MP1 过程头；MP2 关闭文件；MP5 异常处理与输出（max 4） |
 
@@ -128,3 +128,5 @@ QP 把分数排成 `10 000`、`9 092`（千位空格只是排版）；文件里�
 主程序原先仅看榜单内容，未证明先 ReadHighScores、后 OutputHighScores，或 Arrange 的参数。增加调用顺序与 JKL/9999 参数观测。输出格式由 QP 明确规定，名字和分数同行要求保留；数组 11 格为 QP 明定，保留。
 
 测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
+
+D46 输出补核：输出过程增加含数字标题，仍逐玩家按题定格式输出。自动测规定内容与格式，允许额外说明；未增加自动分值。
