@@ -225,3 +225,14 @@ F07：复现空壳主程序旧测试 11 passed；新增三组数据 InsertData �
 - 本次对若干消息语义和未触发分支保守归人工，自动占比下降；请总控验收此分类。没有共享工具/schema 修改请求。
 - `run_script_traced` 本身没有超时；新调用测试先作限时子进程预检，避免已知坏链表进入无界 trace。工具增强由总控另行决定，本任务不改 tools。
 - w24/42 Q2 的第二次 ReturnAllData 只要求调用；正确版本可不打印该次结果。本次测试按 QP p.10 / MS p.28 放宽，请验收。
+
+## 最终验收（2026-10-24）
+
+- 最新 origin/main `705e1b354d4df28bf90686022422988d2c1ebd42` 已 rebase；其相对初始基线只更新交接索引，不新增评分约束。
+- `PATH=/Users/zhangheqing/.venvs/alevel-cs/bin:$PATH make check-all`：通过，244 found / 244 executed；130 papers、3302 rows、249 types、3558 row refs、2280 MS quotes / 233 Markdown files。
+- `make check-scope TASK=T38c2`、`git diff --check`：通过。
+- 本组最终 19 题 / 136 行 / 447 分，161 个测试函数、206 个参数展开用例；19 个参考解通过，66 个 mutant 各至少一测失败（含新增 19 个 hollow-main）。
+- rebase 后 38/38 个正确等价改写通过；清理重复定义后 s22/41 Q3 又复验参考解、两版正确改写和全部 mutant。
+- 自动分 393.320238，人工分 53.679762，自动占比 87.99%（原 404.870238 / 447 = 90.58%）；降低部分已同步证据表、manifest 和 README。
+- 11 个官方数据文件逐字节 / SHA-256 一致，未改原件。测试代码受审树为 `4cfa2741dde27078817a0b85c8e2a4cb28b11579`；本段及进度补记仅记录验收结果。
+- 原生 Git 推送 dry run 成功；`gh auth status` 返回 token invalid，因此 PR 通过已确认可访问本仓库的 GitHub 连接器创建，保持 draft / open。不合并、不推 main。
