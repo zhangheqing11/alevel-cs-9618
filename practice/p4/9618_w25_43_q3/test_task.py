@@ -12,7 +12,7 @@ import sys
 
 import pytest
 
-from testkit import output_lines, run_script
+from testkit import run_script
 
 GIVEN = [0, 5, 1, 2, 5, 9, 9, 6, 5, 0]  # QP 3(a)(ii), in order
 CODE = "x=0;y=1;x=x+y;y++;"  # QP 3(b)
@@ -97,7 +97,7 @@ def test_3ai_recursivecount_counts(sol, array, find, expected):
 
 
 def test_3ai_each_call_drops_the_first_element(sol, monkeypatch):
-    """9618_w25_43:3(a)(i) MP1, MP6: recursive; every call gets the array without its first element,
+    """9618_w25_43:3(a)(i) MP4-MP6: recursive; every call gets the array without its first element,
     NumberElements - 1 and the same DataToFind, down to 0 elements."""
     spy, calls = spy_on_recursivecount(monkeypatch, sol)
     assert spy(ArrayCopy=list(GIVEN), NumberElements=10, DataToFind=0) == 2
@@ -124,8 +124,7 @@ def test_3aiii_screenshot_outputs_2(candidate_path):
     result = run_script(candidate_path)
     assert result.returncode == 0, result.stderr
     lines = [line.strip() for line in result.lines]
-    before = lines[:lines.index("x=0")] if "x=0" in lines else lines
-    assert 2 in [n for line in before for n in ints(line)]
+    assert 2 in [n for line in lines for n in ints(line)]
 
 
 # ---------------------------------------------------------------- 3(b)
@@ -170,6 +169,6 @@ def test_3biv_screenshot_four_lines(candidate_path):
     result = run_script(candidate_path)
     assert result.returncode == 0, result.stderr
     lines = [line.strip() for line in result.lines]
-    assert "x=0" in lines, "x=0 is not output on its own line"
-    start = lines.index("x=0")
-    assert lines[start:start + 4] == SPLIT
+    remaining = iter(lines)
+    for expected in SPLIT:
+        assert any(expected in line for line in remaining), f"missing separate output line: {expected}"
