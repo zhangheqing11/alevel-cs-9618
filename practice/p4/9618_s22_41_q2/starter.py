@@ -1,26 +1,26 @@
 # ---- 2(a) ----
-# Write the code required by this part.
+# Declare Balloon and its constructor with private attributes.
 
 # ---- 2(b) ----
-# Amend the code required by this part.
+# Return the defence item.
 
 # ---- 2(c) ----
-# Amend the code required by this part.
+# Add the supplied change to health.
 
 # ---- 2(d) ----
-# Amend the code required by this part.
+# Return whether health is zero or below.
 
 # ---- 2(e) ----
-# Amend the code required by this part.
+# Input the defence item and colour and instantiate Balloon1.
 
 # ---- 2(f) ----
-# Write the code required by this part.
+# Defend a balloon against the input strength and return the updated object.
 
 # ---- 2(g)(i) ----
-# Amend the code required by this part.
+# Call Defend and store its returned object.
 
 # ---- 2(g)(ii) ----
-# Test the code required by this part.
+# Test using Shield, Red and strength 50.
 
 # ---- main program ----
 if __name__ == "__main__":

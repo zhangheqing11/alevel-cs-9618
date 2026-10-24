@@ -1,6 +1,6 @@
-# 9618_s23_42 第 3 题 · Employee payroll and Manager bonus
+# 9618_s23_42 第 3 题 · Employee / Manager：工资与奖金
 
-标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s23_42_q3 K=3b` 可分问测试。对象私有属性使用 `self.__Name`；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
+标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s23_42_q3 K=3b` 可分问测试。QP 要求私有属性时使用 `self.__Name`；未要求时可按 MS 使用公有属性；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
 来源：QP pp.8–12；MS pp.23–37。已看 QP 全题原页、MS Python 范例原页；证据格与官方 evidence.doc 逐格核对。
 
 ## 英文原题（对照 QP 原页转写）
@@ -63,7 +63,6 @@
                                                                                                        [2]
 
 
-                                                   9
 
         (iii)   The method SetPay():
 
@@ -92,7 +91,6 @@
 
 
 
-                                                     10
 
     (b) The child class Manager inherits from the parent class Employee.
 
@@ -144,7 +142,6 @@
 
 
 
-                                                   11
 
     (c) The main program has a global 1D array, EmployeeArray, to store data about
         eight employees. Each employee is stored as an object of type Employee.
@@ -200,7 +197,6 @@
 
 
 
-                                                                            12
 
        (e) (i)       The main program needs to call EnterHours() and use the method GetTotalPay()
                      to output the employee number and total pay for each of the eight employees.
@@ -220,25 +216,11 @@
 
  Copy and paste the screenshot into part 3(e)(ii) in the evidence document.
                                                                                                                                                          [1]
-
-
-
-
-Permission to reproduce items where third‑party owned material protected by copyright is included has been sought and cleared where possible. Every
-reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the
-publisher will be pleased to make amends at the earliest possible opportunity.
-
-To avoid the issue of disclosure of answer‑related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge
-Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download
-at www.cambridgeinternational.org after the live examination series.
-
-Cambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge
-Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.
 ```
 
 ## Python 接口与 QP / MS 差异
 
-构造参数采用 MS：`Employee(EmpNum, Pay, Job)` 与 `Manager(EmpNum, Pay, Job, Bonus)`。全局 `EmployeeArray` 为 8 个对象的 list；`EnterHours()` 无参数。周编号 1–52 映射 0–51，不测试 QP 未定义的无效周。MS p.35 / p.36 将 EmployeeArray 写成 Employees，p.36 `for(Y in range(0,8):` 是语法笔误；统一修正，输入 ID 保持 STRING、去行尾，完整读取工时对并关闭文件。p.30 的百分比公式照原页实现。p.37 截图顺序跟工时文件不同于 EmployeeArray；QP 未规定输出顺序，自动测核对全部 ID/总额映射，接受浮点显示差异，不强制排序。文件开关位置及调用结构人工补核。3(c) 8 个可选点最多 7 分，3(d) 6 个可选点最多 4 分。
+构造参数采用 MS：`Employee(EmpNum, Pay, Job)` 与 `Manager(EmpNum, Pay, Job, Bonus)`。全局 `EmployeeArray` 为 8 个对象的 list；`EnterHours()` 无参数。周编号 1–52 映射 0–51，不测试 QP 未定义的无效周。MS p.35 / p.36 将 EmployeeArray 写成 Employees，p.36 `for(Y in range(0,8):` 是语法笔误；统一修正，输入 ID 保持 STRING、去行尾，完整读取工时对并关闭文件。p.29 的百分比公式照原页实现。p.37 截图顺序跟工时文件不同于 EmployeeArray；QP 未规定输出顺序，自动测核对全部 ID/总额映射，接受浮点显示差异，不强制排序。文件开关位置及调用结构人工补核。3(c) 8 个可选点最多 7 分，3(d) 6 个可选点最多 4 分。
 
 ## 证据文档对照表
 
@@ -265,7 +247,7 @@ Local Examinations Syndicate (UCLES), which is a department of the University of
 - [ ] 3(a)(iii) MP1：Method header (and close) with two parameters (week number and number of hours)
 - [ ] 3(b)(i) MP2：Constructor within class (and end) taking 4 parameters…
 - [ ] 3(b)(ii) MP1：Method SetPay header (and end) taking 2 parameters
-- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，私有属性不改成公有属性。
+- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，QP 要求私有的属性不改成公有属性。
 - [ ] 题目指定算法自行实现，不用 `in`、`sort()`、`sorted()`、`index()`、`max()` 等代劳（D10 ③；本项人工核对）。
 - [ ] 截图清晰，输入、输出及要求的文件名可见；appropriate message 的语义与状态一致（措辞不限）。
 

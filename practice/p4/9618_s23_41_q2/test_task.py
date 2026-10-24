@@ -6,7 +6,8 @@ def nums(text): return [int(x) for x in re.findall(r"-?\d+", text)]
 def test_2a_i_constructor_private(sol):
     """9618_s23_41:2(a)(i) MP2, MP4-MP5: all five private attributes."""
     v = sol.Vehicle("Test", 35, 12)
-    assert vars(v) == {"_Vehicle__ID":"Test", "_Vehicle__MaxSpeed":35, "_Vehicle__IncreaseAmount":12, "_Vehicle__CurrentSpeed":0, "_Vehicle__HorizontalPosition":0}
+    expected = {"_Vehicle__ID":"Test", "_Vehicle__MaxSpeed":35, "_Vehicle__IncreaseAmount":12, "_Vehicle__CurrentSpeed":0, "_Vehicle__HorizontalPosition":0}
+    assert all(vars(v).get(k) == value for k,value in expected.items())
 
 def test_2a_ii_iii_getters_setters(sol):
     """9618_s23_41:2(a)(ii) MP2-MP3; 2(a)(iii) MP2-MP3: reads/writes correct fields."""

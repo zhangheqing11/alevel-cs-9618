@@ -1,6 +1,6 @@
-# 9618_s25_42 第 3 题 · Animal inheritance and descriptions
+# 9618_s25_42 第 3 题 · Animal / Parrot / Wolf：继承与描述
 
-标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s25_42_q3 K=3b` 可分问测试。对象私有属性使用 `self.__Name`；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
+标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s25_42_q3 K=3b` 可分问测试。QP 要求私有属性时使用 `self.__Name`；未要求时可按 MS 使用公有属性；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
 来源：QP pp.9–12；MS pp.33–45。已看 QP 全题原页、MS Python 范例原页；证据格与官方 evidence.doc 逐格核对。
 
 ## 英文原题（对照 QP 原页转写）
@@ -61,7 +61,6 @@
 
 
 
-                                                     10
 
     (b) The class Parrot inherits from the class Animal
 
@@ -115,7 +114,6 @@
 
 
 
-                                                     11
 
     (c) The class Wolf inherits from the class Animal
 
@@ -166,7 +164,6 @@
 
 
 
-                                                                            12
 
        (d) (i)       The main program declares instances of the classes for three animals:
 
@@ -205,25 +202,11 @@
 
  Copy and paste the screenshot into part 3(d)(iii) in the evidence document.
                                                                                                                                                          [2]
-
-
-
-
-Permission to reproduce items where third‑party owned material protected by copyright is included has been sought and cleared where possible. Every
-reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the
-publisher will be pleased to make amends at the earliest possible opportunity.
-
-To avoid the issue of disclosure of answer‑related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge
-Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download
-at www.cambridgeinternational.org after the live examination series.
-
-Cambridge Assessment International Education is part of Cambridge Assessment. Cambridge Assessment is the brand name of the University of Cambridge
-Local Examinations Syndicate (UCLES), which is a department of the University of Cambridge.
 ```
 
 ## Python 接口与 QP / MS 差异
 
-接口照 QP：`Animal(Name,Sound,Size,Intelligence)`、`Parrot(...,WingSpan,NumberWords)`、`Wolf(...,TerritorySize)`、`Description()` 返回字符串。`SetTerritorySize(Change)` 虽叫 Set，QP 类图和 MS 都要求“加上参数”，负参数用于减少。MS p.42 Wolf.Description 把 Message 赋成 self.Sound、拼接缺项，且写成 it's territory；按 QP p.11 的完整句式修正为“. Its territory is … square miles.”。其他长字符串在 PDF 里跨行，参考解用合法的分段拼接。此题没有私有属性要求，照 MS 用公有属性，不强制学生改成私有。不测试 1–10 以外的 size/intelligence，QP 未要求校验。
+接口照 QP：`Animal(Name,Sound,Size,Intelligence)`、`Parrot(...,WingSpan,NumberWords)`、`Wolf(...,TerritorySize)`、`Description()` 返回字符串。`SetTerritorySize(Change)` 虽叫 Set，QP 类图和 MS 都要求“加上参数”，负参数用于减少。MS p.42 Wolf.Description 的领地句写成 it's territory，缺少 QP 指定的句号与 Its；按 QP p.11 的完整句式修正为“. Its territory is … square miles.”。其他长字符串在 PDF 里跨行，参考解用合法的分段拼接。此题没有私有属性要求，照 MS 用公有属性，不强制学生改成私有。不测试 1–10 以外的 size/intelligence，QP 未要求校验。
 
 ## 证据文档对照表
 
@@ -247,7 +230,7 @@ Local Examinations Syndicate (UCLES), which is a department of the University of
 - [ ] 3(a)(i) MP2：Four attributes with appropriate data types
 - [ ] 3(a)(i) MP3：Constructor header (and end where appropriate) within class taking (min) 4 parameters …
 - [ ] 3(a)(ii) MP1：Description() method header (and end where appropriate) with no parameter
-- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，私有属性不改成公有属性。
+- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，QP 要求私有的属性不改成公有属性。
 - [ ] 题目指定算法自行实现，不用 `in`、`sort()`、`sorted()`、`index()`、`max()` 等代劳（D10 ③；本项人工核对）。
 - [ ] 截图清晰，输入、输出及要求的文件名可见；appropriate message 的语义与状态一致（措辞不限）。
 

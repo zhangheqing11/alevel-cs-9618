@@ -37,10 +37,13 @@ def test_3d_recursive_inorder(sol,monkeypatch,capsys):
 def test_3b_and_3e_i_main_objects(candidate_path,capsys):
     """9618_s25_41:3(b) MP1-MP2; 3(e)(i) MP1-MP3: five nodes and tree rooted at 10."""
     ns=runpy.run_path(str(candidate_path),run_name="__main__")
-    values=[v.GetData() for v in ns.values() if isinstance(v,ns["Node"])]
-    assert set(values)>={10,20,5,15,7}
     trees=[v for v in ns.values() if isinstance(v,ns["Tree"])]
-    assert any(t.GetRootNode().GetData()==10 for t in trees)
+    assert len(trees) >= 1
+    root = trees[0].GetRootNode()
+    assert root.GetData() == 10
+    assert root.GetLeft().GetData() == 5 and root.GetRight().GetData() == 20
+    assert root.GetLeft().GetRight().GetData() == 7
+    assert root.GetRight().GetLeft().GetData() == 15
 
 def test_3e_ii_screenshot(candidate_path):
     """9618_s25_41:3(e)(ii) whole: output 5,7,10,15,20, in ascending order."""

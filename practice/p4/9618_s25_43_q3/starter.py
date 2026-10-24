@@ -1,29 +1,29 @@
 # ---- 3(a)(i) ----
-# Write the code required by this part.
+# Declare Node with integer data and a null next-node reference.
 
 # ---- 3(a)(ii) ----
-# Write the code required by this part.
+# Return the data and next-node reference.
 
 # ---- 3(a)(iii) ----
-# Write the code required by this part.
+# Set the next-node reference.
 
 # ---- 3(b)(i) ----
-# Write the code required by this part.
+# Declare LinkedList and initialise its head to null.
 
 # ---- 3(b)(ii) ----
-# Write the code required by this part.
+# Prepend a new node containing the supplied integer.
 
 # ---- 3(b)(iii) ----
-# list the code required by this part.
+# Return all node data as a space-separated string.
 
 # ---- 3(b)(iv) ----
-# Write the code required by this part.
+# Remove the first matching node and return success or failure.
 
 # ---- 3(c)(i) ----
-# Write the code required by this part.
+# Build the specified list and traverse before and after removing 30.
 
 # ---- 3(c)(ii) ----
-# Test the code required by this part.
+# Run the program and capture both list outputs.
 
 # ---- main program ----
 if __name__ == "__main__":

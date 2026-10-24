@@ -1,29 +1,29 @@
 # ---- 2(a)(i) ----
-# Write the code required by this part.
+# Declare Vehicle and initialise its private attributes.
 
 # ---- 2(a)(ii) ----
-# Write the code required by this part.
+# Return current speed, increase amount, maximum speed and horizontal position.
 
 # ---- 2(a)(iii) ----
-# Write the code required by this part.
+# Set the current speed and horizontal position.
 
 # ---- 2(a)(iv) ----
-# Write the code required by this part.
+# Increase speed within the maximum and update horizontal position.
 
 # ---- 2(b)(i) ----
-# Write the code required by this part.
+# Declare Helicopter inheriting from Vehicle.
 
 # ---- 2(b)(ii) ----
-# Write the code required by this part.
+# Override IncreaseSpeed to update height and horizontal movement.
 
 # ---- 2(c) ----
-# Write the code required by this part.
+# Output position and speed, and helicopter height when appropriate.
 
 # ---- 2(d)(i) ----
-# Write the code required by this part.
+# Instantiate the car and helicopter and increase both speeds twice.
 
 # ---- 2(d)(ii) ----
-# Test the code required by this part.
+# Run the program and capture the output.
 
 # ---- main program ----
 if __name__ == "__main__":

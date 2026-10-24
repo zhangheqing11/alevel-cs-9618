@@ -1,6 +1,6 @@
-# 9618_s24_42 第 2 题 · Node objects in an array binary tree
+# 9618_s24_42 第 2 题 · Node / TreeClass：对象数组二叉树
 
-标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s24_42_q2 K=2b` 可分问测试。对象私有属性使用 `self.__Name`；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
+标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s24_42_q2 K=2b` 可分问测试。QP 要求私有属性时使用 `self.__Name`；未要求时可按 MS 使用公有属性；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
 来源：QP pp.6–9；MS pp.15–27。已看 QP 全题原页、MS Python 范例原页；证据格与官方 evidence.doc 逐格核对。
 
 ## 英文原题（对照 QP 原页转写）
@@ -11,7 +11,6 @@
 2   A binary tree stores data in ascending order. For example:
 
 
-                                                          15
 
                                        8                                19
 
@@ -58,7 +57,6 @@
  Copy and paste the program code into part 2(a)(i) in the evidence document.
                                                                                                           [4]
 
-                                                      7
 
          (ii)   The get methods GetLeft(), GetRight()and GetData()each return the relevant
                 attribute.
@@ -114,7 +112,6 @@
  Copy and paste the program code into part 2(b)(i) in the evidence document.
                                                                                                         [4]
 
-                                                     8
 
          (ii)   The method InsertNode()takes a Node object, NewNode, as a parameter and inserts
                 it into the array Tree.
@@ -161,7 +158,6 @@
 
 
 
-                                                      9
 
     (c) (i)     The main program declares an instance of TreeClass with the identifier TheTree.
 
@@ -236,7 +232,7 @@
 - [ ] 2(a)(iii) MP1：1 set method header (and end) with parameter …
 - [ ] 2(b)(i) MP1：Class TreeClass header (and end)
 - [ ] 2(b)(ii) MP1：Method header and end, taking a Node as parameter
-- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，私有属性不改成公有属性。
+- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，QP 要求私有的属性不改成公有属性。
 - [ ] 题目指定算法自行实现，不用 `in`、`sort()`、`sorted()`、`index()`、`max()` 等代劳（D10 ③；本项人工核对）。
 - [ ] 截图清晰，输入、输出及要求的文件名可见；appropriate message 的语义与状态一致（措辞不限）。
 

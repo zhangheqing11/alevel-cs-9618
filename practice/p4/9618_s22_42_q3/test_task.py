@@ -32,7 +32,6 @@ def test_3c_missing_file_message(candidate_path, monkeypatch, tmp_path, capsys):
     feed_input(monkeypatch, "1", "2", "3", "4")
     # Stop after the file-loading stage, before uninitialised cards can be used.
     import sys
-    seen = []
     class StopAfterRead(Exception): pass
     def trace(frame, event, arg):
         if frame.f_code.co_filename == str(candidate_path) and event == "line":
@@ -47,13 +46,16 @@ def test_3c_missing_file_message(candidate_path, monkeypatch, tmp_path, capsys):
     finally: sys.settrace(previous)
     assert capsys.readouterr().out.strip()
 
-def test_3d_validation_and_duplicate_rejection(sol, monkeypatch):
-    """9618_s22_42:3(d) MP1-MP9: bounds inclusive, index conversion, duplicates recorded."""
-    sol.NumbersChosen = [False] * 30
-    feed_input(monkeypatch, "0", "31", "1", "1", "30")
-    assert sol.ChooseCard() == 0
-    assert sol.ChooseCard() == 29
-    assert sol.NumbersChosen[0] is True and sol.NumbersChosen[29] is True
+def test_3d_validation_and_duplicate_rejection(candidate_path, exercise_dir, monkeypatch, tmp_path, capsys):
+    """9618_s22_42:3(d) MP1-MP9: any suitable selection store; inclusive bounds and persistent choices."""
+    use_files(monkeypatch, tmp_path, exercise_dir / "files")
+    # Run the required setup without dictating a flag array or its name.
+    feed_input(monkeypatch, "1", "2", "3", "4", "0", "31", "1", "30", "30", "29")
+    ns = runpy.run_path(str(candidate_path), run_name="__main__")
+    choose = ns["ChooseCard"]
+    assert choose() == 29
+    assert choose() == 28
+
 
 def test_3e_ii_both_screenshots(candidate_path, exercise_dir):
     """9618_s22_42:3(e)(ii) whole: both official selections, repeats rejected."""

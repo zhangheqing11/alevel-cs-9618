@@ -1,6 +1,6 @@
-# 9618_s22_42 第 3 题 · Card selection without replacement
+# 9618_s22_42 第 3 题 · Card：不放回选牌
 
-标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s22_42_q3 K=3b` 可分问测试。对象私有属性使用 `self.__Name`；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
+标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s22_42_q3 K=3b` 可分问测试。QP 要求私有属性时使用 `self.__Name`；未要求时可按 MS 使用公有属性；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
 来源：QP pp.7–9；MS pp.25–35。已看 QP 全题原页、MS Python 范例原页；证据格与官方 evidence.doc 逐格核对。
 
 ## 英文原题（对照 QP 原页转写）
@@ -54,7 +54,6 @@
 
 
 
-                                                         8
 
     (c) The text file CardValues.txt stores the data for 30 cards, in the order: number, colour.
 
@@ -111,7 +110,6 @@
 
 
 
-                                                      9
 
          (ii)   Test your program with the following test data:
 
@@ -127,7 +125,7 @@
 
 ## Python 接口与 QP / MS 差异
 
-接口取 QP 的 `ChooseCard()`（大写 C），用 MS 的全局 `NumbersChosen` 保存 30 个 BOOLEAN；返回 0–29 下标。`CardArray` 与 `Player1` 在主程序建立，测试运行完整入口后读取这两个数组。MS p.32 的 `chooseCard` / `true` / `NumbersChosen(...)` 分别修为 `ChooseCard` / `True` / 方括号下标；p.29 的 `File.close` 改为 `with` 自动关闭，去掉颜色行的换行。MS p.35 测试 2 将 white 误写为 while，按 QP 数据文件输出 white。输出可为“数字 颜色”或“颜色 数字”，同一张牌可分两行。3(c) 10 个可选点最多 7 分，3(d) 9 个可选点最多 6 分。缺文件测试在读取阶段后停止，避免对 QP 未规定的后续选择作要求。
+接口取 QP 的 `ChooseCard()`（大写 C），参考解用 MS 的 `NumbersChosen` 保存 30 个 BOOLEAN，学生可用任何合适的选择记录方式；返回 0–29 下标。`CardArray` 与 `Player1` 在主程序建立，测试运行完整入口后读取这两个数组。MS p.32 的 `chooseCard` / `true` / `NumbersChosen(...)` 分别修为 `ChooseCard` / `True` / 方括号下标；p.29 的 `File.close` 改为 `with` 自动关闭，去掉颜色行的换行。MS p.35 测试 2 将 white 误写为 while，按 QP 数据文件输出 white。输出可为“数字 颜色”或“颜色 数字”，同一张牌可分两行。3(c) 10 个可选点最多 7 分，3(d) 9 个可选点最多 6 分。缺文件测试在读取阶段后停止，避免对 QP 未规定的后续选择作要求。
 
 ## 证据文档对照表
 
@@ -149,7 +147,7 @@
 - [ ] 3(a) MP4：correct constructor header (and end where appropriate) with two parameters …
 - [ ] 3(b) MP1：1 get method header (and close where appropriate) with no parameter …
 - [ ] 3(c) MP10：Closing the file in a suitable place
-- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，私有属性不改成公有属性。
+- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，QP 要求私有的属性不改成公有属性。
 - [ ] 题目指定算法自行实现，不用 `in`、`sort()`、`sorted()`、`index()`、`max()` 等代劳（D10 ③；本项人工核对）。
 - [ ] 截图清晰，输入、输出及要求的文件名可见；appropriate message 的语义与状态一致（措辞不限）。
 

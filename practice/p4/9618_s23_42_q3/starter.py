@@ -1,32 +1,32 @@
 # ---- 3(a)(i) ----
-# Write the code required by this part.
+# Declare Employee and initialise all fifty-two weekly pay values.
 
 # ---- 3(a)(ii) ----
-# Write the code required by this part.
+# Return the employee number.
 
 # ---- 3(a)(iii) ----
-# Write the code required by this part.
+# Calculate and store pay for the specified week.
 
 # ---- 3(a)(iv) ----
-# Write the code required by this part.
+# Return the total pay for the year.
 
 # ---- 3(b)(i) ----
-# Write the code required by this part.
+# Declare Manager inheriting from Employee.
 
 # ---- 3(b)(ii) ----
-# Write the code required by this part.
+# Increase hours by the bonus percentage and call the parent SetPay.
 
 # ---- 3(c) ----
-# Write the code required by this part.
+# Read eight employees, including optional manager bonus values.
 
 # ---- 3(d) ----
-# Write the code required by this part.
+# Read week-one hours, find employees and call their SetPay methods.
 
 # ---- 3(e)(i) ----
-# Amend the code required by this part.
+# Call EnterHours and output each employee number and total pay.
 
 # ---- 3(e)(ii) ----
-# Test the code required by this part.
+# Run the program and capture the output.
 
 # ---- main program ----
 if __name__ == "__main__":

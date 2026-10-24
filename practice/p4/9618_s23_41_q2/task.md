@@ -1,6 +1,6 @@
-# 9618_s23_41 第 2 题 · Vehicle and Helicopter inheritance
+# 9618_s23_41 第 2 题 · Vehicle / Helicopter：继承与速度上限
 
-标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s23_41_q2 K=2b` 可分问测试。对象私有属性使用 `self.__Name`；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
+标识符及文件名照 QP；数组建成真实 list，并用英文注释注明类型与大小（D10）。从空文件完成，主程序放在 `if __name__ == "__main__":` 下，提示写在 `input("…")` 中。按 `make try EX=practice/p4/9618_s23_41_q2 K=2b` 可分问测试。QP 要求私有属性时使用 `self.__Name`；未要求时可按 MS 使用公有属性；测试允许正确的循环实现，不靠指定变量名或固定提示语判分。
 同季 _43 与本卷整卷相同，本题不另复制。
 
 来源：QP pp.4–7；MS pp.12–25。已看 QP 全题原页、MS Python 范例原页；证据格与官方 evidence.doc 逐格核对。
@@ -65,7 +65,6 @@
 
 
 
-                                                    5
 
          (ii)   Write  program  code    for  the  get   methods   GetCurrentSpeed(),
                 GetIncreaseAmount(), GetMaxSpeed() and GetHorizontalPosition()
@@ -101,7 +100,6 @@
 
 
 
-                                                          6
 
     (b) The child class Helicopter inherits from the parent class Vehicle. A helicopter also has a
         vertical position and changes the vertical position when it increases speed.
@@ -158,7 +156,6 @@
 
 
 
-                                                     7
 
     (c) A procedure needs to output the horizontal position and speed of a vehicle. If the vehicle is a
         helicopter, it also outputs the vertical position.
@@ -228,7 +225,7 @@
 - [ ] 2(a)(iii) MP1：1 set procedure (and end where appropriate) taking parameter …
 - [ ] 2(b)(i) MP3：Constructor (and end where appropriate) with (min) 5 parameters
 - [ ] 2(b)(ii) MP1：Method header (overriding where required) with no parameter
-- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，私有属性不改成公有属性。
+- [ ] 所有方法头、主程序的调用顺序、返回值接收与题给标识符符合该题 MS；属性注释写明类型，QP 要求私有的属性不改成公有属性。
 - [ ] 题目指定算法自行实现，不用 `in`、`sort()`、`sorted()`、`index()`、`max()` 等代劳（D10 ③；本项人工核对）。
 - [ ] 截图清晰，输入、输出及要求的文件名可见；appropriate message 的语义与状态一致（措辞不限）。
 

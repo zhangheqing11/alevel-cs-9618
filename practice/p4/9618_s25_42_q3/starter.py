@@ -1,29 +1,29 @@
 # ---- 3(a)(i) ----
-# Write the code required by this part.
+# Declare Animal and initialise all four attributes.
 
 # ---- 3(a)(ii) ----
-# Write the code required by this part.
+# Return the animal description string.
 
 # ---- 3(b)(i) ----
-# Write the code required by this part.
+# Declare Parrot and implement additive word-count changes.
 
 # ---- 3(b)(ii) ----
-# Write the code required by this part.
+# Override Description to include wingspan and word count.
 
 # ---- 3(c)(i) ----
-# Write the code required by this part.
+# Declare Wolf and implement additive territory changes.
 
 # ---- 3(c)(ii) ----
-# Write the code required by this part.
+# Override Description to include territory size.
 
 # ---- 3(d)(i) ----
-# Write the code required by this part.
+# Instantiate the three specified animals.
 
 # ---- 3(d)(ii) ----
-# Write the code required by this part.
+# Update the wolf and parrot and output all descriptions.
 
 # ---- 3(d)(iii) ----
-# Test the code required by this part.
+# Run the program and capture the updated descriptions.
 
 # ---- main program ----
 if __name__ == "__main__":

@@ -1,20 +1,20 @@
 # ---- 3(a) ----
-# Write the code required by this part.
+# Declare Card and its constructor with private attributes.
 
 # ---- 3(b) ----
-# Write the code required by this part.
+# Return the number and colour through get methods.
 
 # ---- 3(c) ----
-# Write the code required by this part.
+# Read thirty cards into CardArray.
 
 # ---- 3(d) ----
-# Amend the code required by this part.
+# Validate a card choice and reject cards already selected.
 
 # ---- 3(e)(i) ----
-# Amend the code required by this part.
+# Choose four cards for Player1 and output their data.
 
 # ---- 3(e)(ii) ----
-# Test the code required by this part.
+# Run both official selection tests.
 
 # ---- main program ----
 if __name__ == "__main__":

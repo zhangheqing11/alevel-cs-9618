@@ -1,29 +1,29 @@
 # ---- 2(a)(i) ----
-# Write the code required by this part.
+# Declare Node with data and null left and right pointers.
 
 # ---- 2(a)(ii) ----
-# Write the code required by this part.
+# Return the left pointer, right pointer and data.
 
 # ---- 2(a)(iii) ----
-# Write the code required by this part.
+# Set the left pointer, right pointer and data.
 
 # ---- 2(b)(i) ----
-# Write the code required by this part.
+# Declare TreeClass and initialise twenty distinct Node objects.
 
 # ---- 2(b)(ii) ----
-# Write the code required by this part.
+# Insert a Node into the array-based binary tree.
 
 # ---- 2(b)(iii) ----
-# Write the code required by this part.
+# Output inserted nodes in array order, or No nodes.
 
 # ---- 2(c)(i) ----
-# Write the code required by this part.
+# Create the TreeClass object TheTree.
 
 # ---- 2(c)(ii) ----
-# Write the code required by this part.
+# Insert the seven specified values and output the tree.
 
 # ---- 2(c)(iii) ----
-# Test the code required by this part.
+# Run the program and capture the output.
 
 # ---- main program ----
 if __name__ == "__main__":

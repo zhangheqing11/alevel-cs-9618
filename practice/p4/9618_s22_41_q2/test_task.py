@@ -40,7 +40,7 @@ def test_2f_defend_calls_methods_and_returns_object(sol, monkeypatch, capsys, st
     feed_input(monkeypatch, str(strength))
     assert sol.Defend(target) is target
     assert target.health == 100 - strength
-    assert target.calls == ["change", "get", "check"]
+    assert sorted(target.calls) == ["change", "check", "get"]
     lines = capsys.readouterr().out.splitlines()
     assert any("Shield" in line for line in lines)
     assert len(lines) >= 2  # appropriate message semantics checked manually

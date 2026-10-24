@@ -1,29 +1,29 @@
 # ---- 2(a)(i) ----
-# Write the code required by this part.
+# Declare Tree and initialise its five private attributes.
 
 # ---- 2(a)(ii) ----
-# Write the code required by this part.
+# Return all five attributes through get methods.
 
 # ---- 2(b) ----
-# Write the code required by this part.
+# Read nine trees from Trees.txt and return the object array.
 
 # ---- 2(c) ----
-# name the code required by this part.
+# Print a tree description with the correct evergreen message.
 
 # ---- 2(d)(i) ----
-# Write the code required by this part.
+# Read the trees and print the first object.
 
 # ---- 2(d)(ii) ----
-# Test the code required by this part.
+# Run the initial tree description test.
 
 # ---- 2(e)(i) ----
-# Write the code required by this part.
+# Select all trees meeting the user requirements.
 
 # ---- 2(e)(ii) ----
-# Write the code required by this part.
+# Calculate the selected tree growth time from its purchase height.
 
 # ---- 2(e)(iii) ----
-# Write the code required by this part.
+# Run the official evergreen tree selection test.
 
 # ---- main program ----
 if __name__ == "__main__":

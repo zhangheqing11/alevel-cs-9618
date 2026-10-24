@@ -1,32 +1,32 @@
 # ---- 3(a)(i) ----
-# Write the code required by this part.
+# Declare Node with integer data and null node references.
 
 # ---- 3(a)(ii) ----
-# Write the code required by this part.
+# Return left and right node references and node data.
 
 # ---- 3(a)(iii) ----
-# Write the code required by this part.
+# Set left and right node references.
 
 # ---- 3(b) ----
-# Write the code required by this part.
+# Instantiate the five specified Node objects.
 
 # ---- 3(c)(i) ----
-# Write the code required by this part.
+# Declare Tree with the supplied root Node.
 
 # ---- 3(c)(ii) ----
-# Write the code required by this part.
+# Return the root Node.
 
 # ---- 3(c)(iii) ----
-# Write the code required by this part.
+# Insert the supplied Node into its binary-search-tree position.
 
 # ---- 3(d) ----
-# Write the code required by this part.
+# Recursively output the tree in ascending order.
 
 # ---- 3(e)(i) ----
-# Write the code required by this part.
+# Build the specified tree and call OutputInOrder on its root.
 
 # ---- 3(e)(ii) ----
-# Test the code required by this part.
+# Run the program and capture the output.
 
 # ---- main program ----
 if __name__ == "__main__":
