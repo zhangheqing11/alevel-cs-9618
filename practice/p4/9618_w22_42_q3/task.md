@@ -46,12 +46,7 @@
  Copy and paste the program code into part 3(c) in the evidence document.
                                                                                                    [4]
 
-
-
-
-
-
-    (d) The following iterative pseudocode function calculates the total of all the values stored in the
+(d) The following iterative pseudocode function calculates the total of all the values stored in the
         queue.
 
          FUNCTION IterativeOutput(Start: INTEGER) RETURNS INTEGER
@@ -108,7 +103,7 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_w22_42:3(a) | 3 | 代码 | `test_3a_queue_and_pointers` · MP1、MP2、MP3 | — |
 | Part 3(b) | 9618_w22_42:3(b) | 6 | 代码 | `test_3b_first_last_and_full` · MP2、MP3、MP4、MP5、MP6 | MP1 Function header (and close where appropriate) with integer parameter |
-| Part 3(c) | 9618_w22_42:3(c) | 4 | 代码 | `test_3e_ii_screenshot_total` · MP1、MP2、MP3、MP4 | — |
+| Part 3(c) | 9618_w22_42:3(c) | 4 | 代码 | `test_3e_ii_screenshot_total`、`test_3c_reports_any_enqueue_failure` · MP1、MP2、MP3、MP4 | — |
 | Part 3(d) | 9618_w22_42:3(d) | 6 | 代码 | `test_3d_recursive_sum` · MP2、MP3、MP4、MP5、MP6 | MP1 function call (and end where appropriate) taking a parameter |
 | Part 3(e)(i) | 9618_w22_42:3(e)(i) | 1 | 代码 | `test_3e_ii_screenshot_total` · MPwhole | — |
 | Part 3(e)(ii) | 9618_w22_42:3(e)(ii) | 1 | 截图 | `test_3e_ii_screenshot_total` · MPwhole | — |

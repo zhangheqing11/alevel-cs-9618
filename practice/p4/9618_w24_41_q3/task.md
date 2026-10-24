@@ -60,12 +60,7 @@
     Copy and paste the program code into part 3(a) in the evidence document.
                                                                                                           [2]
 
-
-
-
-
-
-    (b) The procedure InsertData() takes five positive integers as input from the user and inserts
+(b) The procedure InsertData() takes five positive integers as input from the user and inserts
         these into the linked list.
 
          Each data item is inserted at the front of the linked list.
@@ -89,12 +84,7 @@
  Copy and paste the program code into part 3(b) in the evidence document.
                                                                                                  [6]
 
-
-
-
-
-
-    (c) The procedure OutputLinkedList() outputs the data in the linked list in order by following
+(c) The procedure OutputLinkedList() outputs the data in the linked list in order by following
         the pointers from FirstNode.
 
           (i)   Write program code for OutputLinkedList().
@@ -122,12 +112,7 @@
  Copy and paste the screenshot into part 3(c)(iii) in the evidence document.
                                                                                                [1]
 
-
-
-
-
-
-    (d) The procedure RemoveData() removes a node from the linked list.
+(d) The procedure RemoveData() removes a node from the linked list.
 
          The procedure takes the data item to be removed from the linked list as a parameter.
 

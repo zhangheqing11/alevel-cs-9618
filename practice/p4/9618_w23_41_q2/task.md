@@ -51,12 +51,7 @@
  Copy and paste the program code into part 2(a)(iii) in the evidence document.
                                                                                                           [4]
 
-
-
-
-
-
-    (b) A shop sells computer games. Each game has a unique identifier (ID) of string data type.
+(b) A shop sells computer games. Each game has a unique identifier (ID) of string data type.
 
          The text file QueueData.txt contains a list of game IDs.
 
@@ -103,12 +98,7 @@
  Copy and paste the program code into part 2(c)(ii) in the evidence document.
                                                                                                    [2]
 
-
-
-
-
-
-        (iii)   The pseudocode algorithm for the procedure TotalData():
+(iii)   The pseudocode algorithm for the procedure TotalData():
 
                 •   uses Dequeue() to remove an ID from the queue
                 •   checks whether a RecordData with the returned ID exists in Records
@@ -147,12 +137,7 @@
  Copy and paste the program code into part 2(c)(iii) in the evidence document.
                                                                                               [5]
 
-
-
-
-
-
-    (d) The procedure OutputRecords() outputs the ID and total of each record in Records in the
+(d) The procedure OutputRecords() outputs the ID and total of each record in Records in the
         format:
 
                 ID   1234     Total      4

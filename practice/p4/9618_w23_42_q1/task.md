@@ -59,12 +59,7 @@ One source file is used to answer Question 1. The file is called StackData.txt
  Copy and paste the program code into part 1(a)(ii) in the evidence document.
                                                                                                             [1]
 
-
-
-
-
-
-    (b) (i)     The procedure PushData() takes one letter as a parameter.
+(b) (i)     The procedure PushData() takes one letter as a parameter.
 
                 If the parameter is a vowel, it is pushed onto StackVowel and the relevant pointer
                 updated.
@@ -114,12 +109,7 @@ One source file is used to answer Question 1. The file is called StackData.txt
  Copy and paste the program code into part 1(c) in the evidence document.
                                                                                                [5]
 
-
-
-
-
-
-    (d) The program first needs to call ReadData() and then:
+(d) The program first needs to call ReadData() and then:
 
          1.     prompt the user to input their choice of vowel or consonant
          2.     take, as input, the user’s choice

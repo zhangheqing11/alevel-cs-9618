@@ -52,12 +52,7 @@ One source file is used to answer Question 3. The file is called HashTableData.t
     Copy and paste the program code into part 1(b) in the evidence document.
                                                                                                          [4]
 
-
-
-
-
-
-    (c) The function Pop() returns the next integer in the stack and updates the pointer as
+(c) The function Pop() returns the next integer in the stack and updates the pointer as
         appropriate. If there is no data in the stack, the function returns the value –999
 
           Write program code for Pop()

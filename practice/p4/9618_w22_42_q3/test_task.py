@@ -45,3 +45,36 @@ def test_3e_ii_screenshot_total(candidate_path, exercise_dir):
     assert result.returncode == 0, result.stderr
     assert 'Successful' in result.stdout and 'Unsuccessful' not in result.stdout
     assert re.findall(r'-?\d+', result.stdout)[-1:] == ['210']
+
+
+def test_3c_reports_any_enqueue_failure(candidate_path, tmp_path):
+    """9618_w22_42:3(c) MP1-MP4: one failed insertion means Unsuccessful, even if last succeeds."""
+    record = tmp_path / 'calls.json'
+    wrapper = tmp_path / 'one_failure.py'
+    wrapper.write_text(
+        'import json, runpy, sys\n'
+        'calls = []\n'
+        'def trace(frame, event, arg):\n'
+        '    if event == "line" and frame.f_globals.get("__name__") == "__main__":\n'
+        '        namespace = frame.f_globals\n'
+        '        if "Enqueue" in namespace and "RecursiveOutput" in namespace:\n'
+        '            original = namespace["Enqueue"]\n'
+        '            def enqueue(value):\n'
+        '                calls.append(value)\n'
+        '                return False if value == 5 else original(value)\n'
+        '            namespace["Enqueue"] = enqueue\n'
+        '            sys.settrace(None)\n'
+        '            return None\n'
+        '    return trace\n'
+        'sys.settrace(trace)\n'
+        'try:\n'
+        f'    runpy.run_path({str(candidate_path)!r}, run_name="__main__")\n'
+        'finally:\n'
+        '    sys.settrace(None)\n'
+        f'    open({str(record)!r}, "w").write(json.dumps(calls))\n'
+    )
+    result = run_script(wrapper)
+    assert result.returncode == 0, result.stderr
+    assert 'Unsuccessful' in result.stdout
+    import json
+    assert json.loads(record.read_text()) == list(range(1, 21))

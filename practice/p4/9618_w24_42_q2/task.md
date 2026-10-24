@@ -40,12 +40,7 @@
     Copy and paste the program code into part 2(b) in the evidence document.
                                                                                                         [3]
 
-
-
-
-
-
-    (c) The pseudocode function Enqueue() inserts an integer value into the queue.
+(c) The pseudocode function Enqueue() inserts an integer value into the queue.
 
          The function is incomplete. There are three incomplete statements.
 
@@ -99,9 +94,7 @@
  Copy and paste the program code into part 2(d) in the evidence document.
                                                                                                                        [3]
 
-
-
-    (e) (i)      The main program asks the user to enter 10 integers with values of 0 or greater. It reads
+(e) (i)      The main program asks the user to enter 10 integers with values of 0 or greater. It reads
                  each input repeatedly until a valid number is entered.
 
                  All 10 valid inputs are added to the queue, using Enqueue().
@@ -155,8 +148,7 @@
  Copy and paste the program code into part 2(g)(i) in the evidence document.
                                                                                                         [3]
 
-
-         (ii)   Test your program with the following inputs in the order given:
+(ii)   Test your program with the following inputs in the order given:
 
                          10      9     8     7      6        5    4   3   2       1
 
