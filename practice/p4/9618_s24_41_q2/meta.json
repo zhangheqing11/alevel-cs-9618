@@ -1,0 +1,68 @@
+{
+  "id": "9618_s24_41:2(a)(i)",
+  "kind": "past-paper",
+  "title": "Tree：条件筛选与生长年数",
+  "source": {
+    "paper": "9618_s24_41",
+    "rows": [
+      "9618_s24_41:2(a)(i)",
+      "9618_s24_41:2(a)(ii)",
+      "9618_s24_41:2(b)",
+      "9618_s24_41:2(c)",
+      "9618_s24_41:2(d)(i)",
+      "9618_s24_41:2(d)(ii)",
+      "9618_s24_41:2(e)(i)",
+      "9618_s24_41:2(e)(ii)",
+      "9618_s24_41:2(e)(iii)"
+    ]
+  },
+  "marks": 31,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-FL-02",
+    "P4-OP-07",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-AR-05",
+    "P4-PR-03",
+    "P4-SR-01"
+  ],
+  "skills": [
+    "array-of-objects",
+    "class-definition",
+    "constructor",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "encapsulation",
+    "exception-handling",
+    "field-extract",
+    "file-close",
+    "file-open-read",
+    "flag-variable",
+    "getter-setter",
+    "input-prompt",
+    "linear-search",
+    "logic-ops",
+    "loop-to-eof",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "operator-precedence",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "return-value",
+    "test-input-sequence",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Trees.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

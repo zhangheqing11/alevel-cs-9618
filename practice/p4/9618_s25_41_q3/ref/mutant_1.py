@@ -1,0 +1,67 @@
+# 9618_s25_41:3(a)(i) MP4: object-reference.
+class Node:
+    # NodeData : INTEGER; LeftNode, RightNode : Node reference or None.
+    def __init__(self, pNodeData):
+        self.__NodeData = pNodeData
+        self.__LeftNode = -1
+        self.__RightNode = None
+
+    def GetLeft(self):
+        return self.__LeftNode
+
+    def GetRight(self):
+        return self.__RightNode
+
+    def GetData(self):
+        return self.__NodeData
+
+    def SetLeft(self, NewNode):
+        self.__LeftNode = NewNode
+
+    def SetRight(self, NewNode):
+        self.__RightNode = NewNode
+
+
+class Tree:
+    # FirstNode : Node reference.
+    def __init__(self, FirstNode):
+        self.__FirstNode = FirstNode
+
+    def GetRootNode(self):
+        return self.__FirstNode
+
+    def Insert(self, NewNode):
+        CurrentNode = self.__FirstNode
+        while True:
+            if NewNode.GetData() < CurrentNode.GetData():
+                if CurrentNode.GetLeft() is None:
+                    CurrentNode.SetLeft(NewNode)
+                    return True
+                CurrentNode = CurrentNode.GetLeft()
+            else:
+                if CurrentNode.GetRight() is None:
+                    CurrentNode.SetRight(NewNode)
+                    return True
+                CurrentNode = CurrentNode.GetRight()
+
+
+def OutputInOrder(RootNode):
+    if RootNode.GetLeft() is not None:
+        OutputInOrder(RootNode.GetLeft())
+    print(RootNode.GetData())
+    if RootNode.GetRight() is not None:
+        OutputInOrder(RootNode.GetRight())
+
+
+if __name__ == "__main__":
+    FirstNode = Node(10)
+    SecondNode = Node(20)
+    ThirdNode = Node(5)
+    FourthNode = Node(15)
+    FifthNode = Node(7)
+    MyTree = Tree(FirstNode)
+    MyTree.Insert(SecondNode)
+    MyTree.Insert(ThirdNode)
+    MyTree.Insert(FourthNode)
+    MyTree.Insert(FifthNode)
+    OutputInOrder(MyTree.GetRootNode())

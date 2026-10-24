@@ -1,0 +1,48 @@
+{
+  "id": "9618_s25_42:3(a)(i)",
+  "kind": "past-paper",
+  "title": "Animal / Parrot / Wolf：继承与描述",
+  "source": {
+    "paper": "9618_s25_42",
+    "rows": [
+      "9618_s25_42:3(a)(i)",
+      "9618_s25_42:3(a)(ii)",
+      "9618_s25_42:3(b)(i)",
+      "9618_s25_42:3(b)(ii)",
+      "9618_s25_42:3(c)(i)",
+      "9618_s25_42:3(c)(ii)",
+      "9618_s25_42:3(d)(i)",
+      "9618_s25_42:3(d)(ii)",
+      "9618_s25_42:3(d)(iii)"
+    ]
+  },
+  "marks": 26,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-03",
+    "P4-OP-04",
+    "P4-OP-05",
+    "P4-OP-07",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "assign-value",
+    "class-definition",
+    "constructor",
+    "data-types",
+    "inheritance",
+    "method-call",
+    "module-header",
+    "object-instantiation",
+    "output-format",
+    "polymorphism",
+    "return-value",
+    "string-concat",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
