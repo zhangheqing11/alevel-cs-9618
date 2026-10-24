@@ -1,0 +1,47 @@
+{
+  "id": "9618_s23_42:2(a)",
+  "kind": "past-paper",
+  "title": "销售记录循环队列",
+  "source": {
+    "paper": "9618_s23_42",
+    "rows": [
+      "9618_s23_42:2(a)",
+      "9618_s23_42:2(b)",
+      "9618_s23_42:2(c)",
+      "9618_s23_42:2(d)",
+      "9618_s23_42:2(e)",
+      "9618_s23_42:2(f)(i)",
+      "9618_s23_42:2(f)(ii)"
+    ]
+  },
+  "marks": 28,
+  "types": [
+    "P4-AR-03",
+    "P4-SQ-03",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-of-records",
+    "class-definition",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "input-prompt",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "procedure-call",
+    "queue-array",
+    "record-type",
+    "return-value",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
