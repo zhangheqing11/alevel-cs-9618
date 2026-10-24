@@ -430,7 +430,8 @@
           "auto_marks": 1.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_3d_screenshot"
+            "test_3d_screenshot",
+            "test_3d_main_call_chain"
           ]
         },
         {
@@ -468,8 +469,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 2,
-      "tests": 9,
+      "mutants": 3,
+      "tests": 10,
       "qp_pages_checked": [
         8,
         9,
@@ -490,7 +491,7 @@
         37,
         38
       ],
-      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。"
+      "notes": "已看 QP pp.8–10 与 MS pp.26–38 全部渲染图，核对 evidence.doc 9 格。MS p.38 截图依次 pink hamster、blue elephant、white eagle、yellow rabbit。MS 用空 list + append，参考解按 D10 用固定长度数组和下标赋值，避免 Pop 后再次 Push 落到错误位置。MS ReadData 没去行尾，参考解去行尾使输出符合 QP 一行一对。MS 3(c) 两栈均空时将空串压回 Animal，按 QP “removed animal” 改为只放回实际取出的项目（D31）。MS 无独立数字 MP，语料按清单顺序；3(b)(iii) 首句印 1 mark，但五点与 5 分栏明确。与 s23_43 第 3 题相同，不重复创建。 T38c2：补测 ReadData 与四次 OutputItem（含实际双栈 Pop）；截图允许额外说明行。QP 明定配对一行的规则保留（QP pp.9–10/MS p.38）。"
     },
     {
       "directory": "practice/p4/9618_s23_42_q2",

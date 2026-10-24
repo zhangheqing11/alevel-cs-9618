@@ -1,7 +1,8 @@
+import re
 """9618_s23_41 Q3: two stacks and restoring an unmatched item."""
 from pathlib import Path
 import pytest
-from testkit import output_lines, run_script, use_files
+from testkit import output_lines, run_script, run_script_traced, use_files
 
 
 def test_3a_declarations(sol):
@@ -93,8 +94,12 @@ def test_3d_screenshot(candidate_path, exercise_dir):
     assert r.returncode == 0, r.stderr
     lines = [' '.join(x.split()) for x in output_lines(r.stdout)]
     expected = ['pink hamster', 'blue elephant', 'white eagle', 'yellow rabbit']
-    assert len(lines) == 4
-    assert all(pair in line for pair, line in zip(expected, lines))
+    position = 0
+    for pair in expected:
+        while position < len(lines) and pair not in lines[position]:
+            position += 1
+        assert position < len(lines), pair
+        position += 1
 
 
 def test_3b_no_algorithm_shortcuts(candidate_path):
@@ -110,3 +115,28 @@ def test_3b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3d_main_call_chain(candidate_path, exercise_dir):
+    """9618_s23_41:3(d)(i) whole (MS p.38): ReadData and OutputItem four times."""
+    data = ''
+    completed = run_script(candidate_path, stdin=data, files_dir=exercise_dir / 'files', timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data, files_dir=exercise_dir / 'files')
+    assert r.error is None, r.error
+    names = [c.name for c in r.calls if c.name in ('ReadData', 'OutputItem')]
+    assert names == ['ReadData'] + ['OutputItem'] * 4
+    for name in ('PopAnimal', 'PopColour'):
+        assert len(r.called(name)) == 4
+    expected = ['pink hamster', 'blue elephant', 'white eagle', 'yellow rabbit']
+    position = 0
+    for pair in expected:
+        position = r.stdout.index(pair, position) + len(pair)
+
