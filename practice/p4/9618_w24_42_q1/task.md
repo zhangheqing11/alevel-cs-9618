@@ -304,7 +304,7 @@ One source file is used to answer Question 3. The file is called HighScoreTable.
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 1(a)(i) | 9618_w24_42:1(a)(i) | 4 | 代码 | `test_1ai_aii_event` · MP2、MP3、MP4 | MP1 |
+| Part 1(a)(i) | 9618_w24_42:1(a)(i) | 4 | 代码 | `test_1ai_aii_event` · MP2、MP4 | MP1、MP3 |
 | Part 1(a)(ii) | 9618_w24_42:1(a)(ii) | 3 | 代码 | `test_1ai_aii_event` · MP2、MP3 | MP1 |
 | Part 1(b)(i) | 9618_w24_42:1(b)(i) | 1 | 代码 | `test_1bi_bii_ei_main_objects` · 全行 | — |
 | Part 1(b)(ii) | 9618_w24_42:1(b)(ii) | 3 | 代码 | `test_1bi_bii_ei_main_objects` · MP1、MP2、MP3 | — |
@@ -316,12 +316,14 @@ One source file is used to answer Question 3. The file is called HighScoreTable.
 
 ## 人工核对清单
 
+- [ ] 1(a)(i) MP3: Constructor header (and end where appropriate) with 3 (min) parameters within class declaration …
+
 - [ ] 1(a)(i) MP1: Class EventItem header (and end where appropriate)
 - [ ] 1(a)(ii) MP1: 1 get method with no parameter …
 - [ ] 1(c) MP1: Class Character declared (and end where appropriate)
 - [ ] 1(d) MP1: Method header CalculateScore (and end where appropriate) taking (min) 2 parameters
 - [ ] 1(e)(ii) MP5: …outputting message if it's a draw.
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

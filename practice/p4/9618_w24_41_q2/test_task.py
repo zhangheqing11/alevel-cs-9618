@@ -16,7 +16,7 @@ def has_values(text,expected):
 
 
 def test_2ai_aii_horse(sol):
-    """9618_w24_41:2(a)(i) MP2-MP4; 2(a)(ii) MP2-MP3."""
+    """9618_w24_41:2(a)(i) MP2-MP4; 9618_w24_41:2(a)(ii) MP2-MP3."""
     h=sol.Horse('Fox',132,70)
     assert (h._Horse__Name,h._Horse__MaxFenceHeight,h._Horse__PercentageSuccess)==('Fox',132,70)
     assert h.GetName()=='Fox' and h.GetMaxFenceHeight()==132
@@ -38,7 +38,7 @@ def test_2d_success(sol,height,risk,modifier):
 
 
 def test_2bi_cii_main_arrays(candidate_path,monkeypatch):
-    """9618_w24_41:2(b)(i) MP1-MP3; 2(c)(ii) MP1-MP3: arrays and object data."""
+    """9618_w24_41:2(b)(i) MP1-MP3; 9618_w24_41:2(c)(ii) MP1-MP3: arrays and object data."""
     feed_input(monkeypatch,*DATA.splitlines());ns=runpy.run_path(str(candidate_path),run_name='__main__')
     assert len(ns['Horses'])==2
     assert [(h.GetName(),h.GetMaxFenceHeight()) for h in ns['Horses']]==[('Beauty',150),('Jet',160)]
@@ -46,7 +46,7 @@ def test_2bi_cii_main_arrays(candidate_path,monkeypatch):
 
 
 def test_2bii_screenshot_names(candidate_path):
-    """9618_w24_41:2(b)(i) MP4-MP5; 2(b)(ii) whole: both names."""
+    """9618_w24_41:2(b)(i) MP4-MP5; 9618_w24_41:2(b)(ii) whole: both names."""
     r=run_script(candidate_path,stdin=DATA);assert r.returncode==0,r.stderr
     assert 'Beauty' in r.stdout and 'Jet' in r.stdout
 
@@ -59,7 +59,7 @@ def test_2cii_validation_boundaries(candidate_path,monkeypatch):
 
 
 def test_2eiii_screenshot_all_chances(candidate_path):
-    """9618_w24_41:2(e)(i) MP1-MP3; 2(e)(ii) MP1-MP2; 2(e)(iii) MP1-MP2."""
+    """9618_w24_41:2(e)(i) MP1-MP3; 9618_w24_41:2(e)(ii) MP1-MP2; 9618_w24_41:2(e)(iii) MP1-MP2."""
     r=run_script(candidate_path,stdin=DATA);assert r.returncode==0,r.stderr
     assert has_values(r.stdout,[14.4,72,57.6,50.4,48.6,39,65,52,45.5,50.375])
     assert 'Jet' in r.lines[-1]

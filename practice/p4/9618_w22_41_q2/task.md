@@ -205,10 +205,10 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a)(i) | 9618_w22_41:2(a)(i) | 5 | 代码 | `test_2ai_card_private_constructor` · MP2、MP4、MP5 | MP1、MP3 |
+| Part 2(a)(i) | 9618_w22_41:2(a)(i) | 5 | 代码 | `test_2ai_card_private_constructor` · MP2、MP5 | MP1、MP3、MP4 |
 | Part 2(a)(ii) | 9618_w22_41:2(a)(ii) | 3 | 代码 | `test_2aii_getters` · MP2、MP3 | MP1 |
 | Part 2(a)(iii) | 9618_w22_41:2(a)(iii) | 2 | 代码 | `test_2aiii_biii_main_objects` · MP1、MP2 | — |
-| Part 2(b)(i) | 9618_w22_41:2(b)(i) | 6 | 代码 | `test_2bi_hand_constructor` · MP2、MP3、MP4、MP5、MP6 | MP1 |
+| Part 2(b)(i) | 9618_w22_41:2(b)(i) | 6 | 代码 | `test_2bi_hand_constructor` · MP2、MP3、MP5、MP6 | MP1、MP4 |
 | Part 2(b)(ii) | 9618_w22_41:2(b)(ii) | 2 | 代码 | `test_2bii_getcard` · MP2 | MP1 |
 | Part 2(b)(iii) | 9618_w22_41:2(b)(iii) | 2 | 代码 | `test_2aiii_biii_main_objects` · MP1、MP2 | — |
 | Part 2(c)(i) | 9618_w22_41:2(c)(i) | 6 | 代码 | `test_2ci_score_all_five`、`test_2ci_getter_protocol` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
@@ -217,13 +217,17 @@
 
 ## 人工核对清单
 
+- [ ] 2(b)(i) MP4: constructor with 5 Card objects as parameters
+
+- [ ] 2(a)(i) MP4: …taking 2 parameters
+
 - [ ] 2(a)(i) MP1: class Card declaration (and end where appropriate)
 - [ ] 2(a)(i) MP3: constructor header (and end where appropriate)…
 - [ ] 2(a)(ii) MP1: 1 get method as function (and end where appropriate) with no parameters…
 - [ ] 2(b)(i) MP1: class Hand declaration (and end where appropriate)
 - [ ] 2(b)(ii) MP1: function GetCard() header (and end where appropriate) taking (integer) parameter
 - [ ] 2(c)(ii) MP4: … or if there was a draw in appropriate message
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

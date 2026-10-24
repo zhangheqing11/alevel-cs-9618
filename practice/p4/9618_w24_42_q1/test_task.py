@@ -6,7 +6,7 @@ from testkit import run_script
 
 
 def test_1ai_aii_event(sol):
-    """9618_w24_42:1(a)(i) MP2-MP4; 1(a)(ii) MP2-MP3: constructor/getters."""
+    """9618_w24_42:1(a)(i) MP2-MP4; 9618_w24_42:1(a)(ii) MP2-MP3: constructor/getters."""
     e=sol.EventItem('New','swim',4)
     assert (e.GetName(),e.GetEventType(),e.GetDifficulty())==('New','swim',4)
     assert e._EventItem__EventName=='New' and e._EventItem__Difficulty==4
@@ -33,7 +33,7 @@ def test_1d_all_skills_difficulties(sol,skill,difficulty):
 
 
 def test_1bi_bii_ei_main_objects(candidate_path):
-    """9618_w24_42:1(b)(i) whole; 1(b)(ii) MP1-MP3; 1(e)(i) MP1-MP2."""
+    """9618_w24_42:1(b)(i) whole; 9618_w24_42:1(b)(ii) MP1-MP3; 9618_w24_42:1(e)(i) MP1-MP2."""
     ns=runpy.run_path(str(candidate_path),run_name='__main__')
     assert len(ns['Group'])>=5
     assert [(e.GetName(),e.GetEventType(),e.GetDifficulty()) for e in ns['Group'][:5]]==[
@@ -44,7 +44,7 @@ def test_1bi_bii_ei_main_objects(candidate_path):
 
 
 def test_1eiii_screenshot(candidate_path):
-    """9618_w24_42:1(e)(ii) MP1-MP4,MP6-MP7; 1(e)(iii) whole: winners and 4 points."""
+    """9618_w24_42:1(e)(ii) MP1-MP4,MP6-MP7; 9618_w24_42:1(e)(iii) whole: winners and 4 points."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
     winners=[re.search(r'\b(Tarz|Geni)\b',line).group(0) for line in r.lines if re.search(r'\b(Tarz|Geni)\b',line)]
     assert winners==['Tarz','Tarz','Tarz','Geni','Tarz','Tarz']

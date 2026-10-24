@@ -13,7 +13,7 @@ def position(text):
 
 
 def test_1ai_aii_constructor_species(sol):
-    """9618_w25_42:1(a)(i) MP2-MP4; 1(a)(ii) MP2: private data and 500 initial positions."""
+    """9618_w25_42:1(a)(i) MP2-MP4; 9618_w25_42:1(a)(ii) MP2: private data and 500 initial positions."""
     b=sol.Bird(63.5,'Pigeon')
     assert (b._Bird__Species,b._Bird__DistancePerHour,b._Bird__XPosition,b._Bird__YPosition)==('Pigeon',63.5,500,500)
     assert b.GetSpecies()=='Pigeon'
@@ -46,7 +46,7 @@ def test_1b_main_objects(candidate_path,monkeypatch):
     ('1',60,'N','Cockatiel',500,571),('2',30,'S','Macaw',500,472),
     ('1',30,'W','Cockatiel',464.5,500),('2',60,'E','Macaw',556,500)])
 def test_1cii_four_screenshots(candidate_path,choice,minutes,direction,name,x,y):
-    """9618_w25_42:1(c)(i) MP1-MP2,MP5-MP8; 1(c)(ii) MP1-MP3: four MS results."""
+    """9618_w25_42:1(c)(i) MP1-MP2,MP5-MP8; 9618_w25_42:1(c)(ii) MP1-MP3: four MS results."""
     r=run_script(candidate_path,stdin=f'{choice}\n{minutes}\n{direction}\n');assert r.returncode==0,r.stderr
     assert re.search(r'Cockatiel.*X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)
     assert re.search(r'Macaw.*X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)

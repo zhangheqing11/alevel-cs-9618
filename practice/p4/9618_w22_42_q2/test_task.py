@@ -45,7 +45,7 @@ def test_2d_missing_file(candidate_path):
 
 @pytest.mark.parametrize('move,x,y',[('A',83,9),('D',85,9),('W',84,10),('S',84,8)])
 def test_2e_f_g_moves(candidate_path,exercise_dir,move,x,y):
-    """9618_w22_42:2(e) MP1-MP6; 2(f) MP1-MP7; 2(g)(i) MP1-MP2."""
+    """9618_w22_42:2(e) MP1-MP6; 9618_w22_42:2(f) MP1-MP7; 9618_w22_42:2(g)(i) MP1-MP2."""
     r=run_script(candidate_path,stdin=f'THOMAS\nQUI\nX\n{move}\n',files_dir=exercise_dir/'files')
     assert r.returncode==0,r.stderr
     assert re.search(r'qui.*X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout,re.I)

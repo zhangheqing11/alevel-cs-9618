@@ -255,10 +255,10 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a)(i) | 9618_w25_41:2(a)(i) | 4 | 代码 | `test_2ai_aii_train` · MP2、MP3、MP4 | MP1 |
+| Part 2(a)(i) | 9618_w25_41:2(a)(i) | 4 | 代码 | `test_2ai_aii_train` · MP2、MP4 | MP1、MP3 |
 | Part 2(a)(ii) | 9618_w25_41:2(a)(ii) | 3 | 代码 | `test_2ai_aii_train` · MP2、MP3 | MP1 |
 | Part 2(b) | 9618_w25_41:2(b) | 2 | 代码 | `test_2b_di_main_instances` · MP1、MP2 | — |
-| Part 2(c)(i) | 9618_w25_41:2(c)(i) | 3 | 代码 | `test_2ci_station_initial_state` · MP1、MP2、MP3 | — |
+| Part 2(c)(i) | 9618_w25_41:2(c)(i) | 3 | 代码 | `test_2ci_station_initial_state` · MP1、MP3 | MP2 |
 | Part 2(c)(ii) | 9618_w25_41:2(c)(ii) | 4 | 代码 | `test_2cii_capacity_and_storage` · MP2、MP3、MP4 | MP1 |
 | Part 2(c)(iii) | 9618_w25_41:2(c)(iii) | 6 | 代码 | `test_2ciii_empty_string`、`test_2ciii_getters_formatted_return` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
 | Part 2(d)(i) | 9618_w25_41:2(d)(i) | 2 | 代码 | `test_2b_di_main_instances` · MP1、MP2 | — |
@@ -267,10 +267,14 @@
 
 ## 人工核对清单
 
+- [ ] 2(c)(i) MP2: Constructor header (and end) within class taking 2 parameters …
+
+- [ ] 2(a)(i) MP3: Constructor header (and end) within class with 2 parameters …
+
 - [ ] 2(a)(i) MP1: Class header (and end)
 - [ ] 2(a)(ii) MP1: One get method header (and end) with no parameter …
 - [ ] 2(c)(ii) MP1: Method header (and close) taking one Train parameter
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

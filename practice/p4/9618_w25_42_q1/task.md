@@ -214,7 +214,7 @@ One source file is used to answer Question 3. The file is called TreeData.txt
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 1(a)(i) | 9618_w25_42:1(a)(i) | 4 | 代码 | `test_1ai_aii_constructor_species` · MP2、MP3、MP4 | MP1 |
+| Part 1(a)(i) | 9618_w25_42:1(a)(i) | 4 | 代码 | `test_1ai_aii_constructor_species` · MP2、MP4 | MP1、MP3 |
 | Part 1(a)(ii) | 9618_w25_42:1(a)(ii) | 2 | 代码 | `test_1ai_aii_constructor_species` · MP2 | MP1 |
 | Part 1(a)(iii) | 9618_w25_42:1(a)(iii) | 3 | 代码 | `test_1aiii_position_return` · MP1、MP2、MP3 | — |
 | Part 1(a)(iv) | 9618_w25_42:1(a)(iv) | 5 | 代码 | `test_1aiv_moves` · MP2、MP3、MP4、MP5 | MP1 |
@@ -224,10 +224,12 @@ One source file is used to answer Question 3. The file is called TreeData.txt
 
 ## 人工核对清单
 
+- [ ] 1(a)(i) MP3: Constructor header (and end) taking 2 parameters within class …
+
 - [ ] 1(a)(i) MP1: Class header (and end)
 - [ ] 1(a)(ii) MP1: Get method header (and end) with no parameter ….
 - [ ] 1(a)(iv) MP1: Method header (and end) taking direction and minutes flying as parameters
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

@@ -235,7 +235,7 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 3(a)(i) | 9618_w23_42:3(a)(i) | 5 | 代码 | `test_3ai_aii_constructor_and_getters` · MP4、MP5 | MP1、MP2、MP3 |
+| Part 3(a)(i) | 9618_w23_42:3(a)(i) | 5 | 代码 | `test_3ai_aii_constructor_and_getters` · MP5 | MP1、MP2、MP3、MP4 |
 | Part 3(a)(ii) | 9618_w23_42:3(a)(ii) | 3 | 代码 | `test_3ai_aii_constructor_and_getters` · MP2、MP3 | MP1 |
 | Part 3(a)(iii) | 9618_w23_42:3(a)(iii) | 2 | 代码 | `test_3aiii_setter` · MP2 | MP1 |
 | Part 3(a)(iv) | 9618_w23_42:3(a)(iv) | 1 | 代码 | `test_3aiv_learn` · 全行 | — |
@@ -243,7 +243,7 @@
 | Part 3(b)(i) | 9618_w23_42:3(b)(i) | 2 | 代码 | `test_3bi_di_named_instances` · MP1、MP2 | — |
 | Part 3(b)(ii) | 9618_w23_42:3(b)(ii) | 3 | 代码 | `test_3biii_royal_screenshot` · MP1、MP2、MP3 | — |
 | Part 3(b)(iii) | 9618_w23_42:3(b)(iii) | 1 | 截图 | `test_3biii_royal_screenshot` · 全行 | — |
-| Part 3(c)(i) | 9618_w23_42:3(c)(i) | 5 | 代码 | `test_3ci_parent_constructor` · MP1、MP3、MP4、MP5 | MP2 |
+| Part 3(c)(i) | 9618_w23_42:3(c)(i) | 5 | 代码 | `test_3ci_parent_constructor` · MP1、MP4、MP5 | MP2、MP3 |
 | Part 3(c)(ii) | 9618_w23_42:3(c)(ii) | 3 | 代码 | `test_3cii_magic_learning` · MP1、MP2、MP3 | — |
 | Part 3(d)(i) | 9618_w23_42:3(d)(i) | 2 | 代码 | `test_3bi_di_named_instances` · MP1、MP2 | — |
 | Part 3(d)(ii) | 9618_w23_42:3(d)(ii) | 1 | 代码 | `test_3diii_magic_screenshot` · 全行 | — |
@@ -251,13 +251,17 @@
 
 ## 人工核对清单
 
+- [ ] 3(c)(i) MP3: Constructor header taking 5 parameters …
+
+- [ ] 3(a)(i) MP4: … taking 4 parameters
+
 - [ ] 3(a)(i) MP1: Class declaration
 - [ ] 3(a)(i) MP2: Four attributes with correct data types
 - [ ] 3(a)(i) MP3: Constructor header
 - [ ] 3(a)(ii) MP1: 1 get header with no parameter …
 - [ ] 3(a)(iii) MP1: Set header with 1 parameter …
 - [ ] 3(c)(i) MP2: Declaring Element as string
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

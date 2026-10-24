@@ -178,7 +178,7 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 2(a) | 9618_w22_42:2(a) | 4 | 代码 | `test_2a_private_initialisation` · MP2、MP3、MP4 | MP1 |
+| Part 2(a) | 9618_w22_42:2(a) | 4 | 代码 | `test_2a_private_initialisation` · MP2、MP4 | MP1、MP3 |
 | Part 2(b) | 9618_w22_42:2(b) | 3 | 代码 | `test_2b_getters` · MP2、MP3 | MP1 |
 | Part 2(c) | 9618_w22_42:2(c) | 2 | 代码 | `test_2c_change_adds` · MP2 | MP1 |
 | Part 2(d) | 9618_w22_42:2(d) | 7 | 代码 | `test_2d_all_file_objects`、`test_2d_missing_file` · MP1、MP2、MP3、MP4、MP5、MP6、MP8、MP9 | MP7 |
@@ -189,11 +189,13 @@
 
 ## 人工核对清单
 
+- [ ] 2(a) MP3: Constructor method (and end where appropriate) taking 3 parameters …
+
 - [ ] 2(a) MP1: Class declaration (and end where appropriate) for Character
 - [ ] 2(b) MP1: 1 get method header (and end where appropriate) with no parameters…
 - [ ] 2(c) MP1: method header (and end where appropriate) taking 2 (integer) parameters
 - [ ] 2(d) MP7: closing the text file (in appropriate place)
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

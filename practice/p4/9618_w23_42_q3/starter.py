@@ -1,41 +1,45 @@
 # ---- 3(a)(i) ----
-# Write the required code or collect the output evidence.
+# Write program code to declare the class Character and its constructor.
 
 # ---- 3(a)(ii) ----
-# Write the required code or collect the output evidence.
+# The get methods GetIntelligence() and GetName() return the attribute values.
 
 # ---- 3(a)(iii) ----
-# Write the required code or collect the output evidence.
+# The method SetIntelligence() assigns the value of its parameter to the attribute.
 
 # ---- 3(a)(iv) ----
-# Write the required code or collect the output evidence.
+# The method Learn() increases the current value of Intelligence by 10%.
 
 # ---- 3(a)(v) ----
-# Write the required code or collect the output evidence.
+# The method ReturnAge() calculates and returns the age of the character in years as an
+# integer.
 
 # ---- 3(b)(i) ----
-# Write the required code or collect the output evidence.
+# Write program code to create a new instance of Character with the identifier
+# FirstCharacter.
 
 # ---- 3(b)(ii) ----
-# Write the required code or collect the output evidence.
+# Write program code to call the method Learn() for the character created in part 3(b)(i).
 
 # ---- 3(b)(iii) ----
-# Test the required code or collect the output evidence.
+# Test your program.
 
 # ---- 3(c)(i) ----
-# Write the required code or collect the output evidence.
+# Write program code to declare the class MagicCharacter and its constructor.
 
 # ---- 3(c)(ii) ----
-# Write the required code or collect the output evidence.
+# The method Learn() overrides the parent class method and increases the intelligence
+# depending on the character’s element.
 
 # ---- 3(d)(i) ----
-# Write the required code or collect the output evidence.
+# Write program code to create a new instance of MagicCharacter with the identifier
+# FirstMagic.
 
 # ---- 3(d)(ii) ----
-# Write the required code or collect the output evidence.
+# Write program code to call the method Learn() for the character created in part 3(d)(i).
 
 # ---- 3(d)(iii) ----
-# Test the required code or collect the output evidence.
+# Test your program.
 
 # ---- main program ----
 if __name__ == "__main__":

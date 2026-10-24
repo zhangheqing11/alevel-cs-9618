@@ -14,7 +14,7 @@ MAIN_BOARD=matrix([(0,0,'A'),(9,9,'B'),(4,5,'C'),(2,2,'D'),(8,7,'E')])
 
 
 def test_1ai_aii_boardobject(sol):
-    """9618_w25_43:1(a)(i) MP4-MP5; 1(a)(ii) MP2-MP3."""
+    """9618_w25_43:1(a)(i) MP4-MP5; 9618_w25_43:1(a)(ii) MP2-MP3."""
     o=sol.BoardObject('Z',11)
     assert o.GetCode()=='Z' and o.GetValue()==11
 
@@ -31,7 +31,7 @@ def test_1bi_initial_board(sol):
 
 @pytest.mark.parametrize('r,c',[(0,9),(9,0),(4,5),(0,0),(9,9)])
 def test_1bii_biii_get_set_coordinates(sol,r,c):
-    """9618_w25_43:1(b)(ii) MP2; 1(b)(iii) MP2: row/column order, no shared-row alias."""
+    """9618_w25_43:1(b)(ii) MP2; 9618_w25_43:1(b)(iii) MP2: row/column order, no shared-row alias."""
     b=sol.Board();o=sol.BoardObject('X',3);b.SetObject(o,r,c)
     assert b.GetObject(r,c) is o
     for row in range(10):
@@ -49,7 +49,7 @@ def test_1biv_display_qp_example(sol,capsys):
 
 
 def test_1aiii_ci_named_objects_and_placement(candidate_path,monkeypatch):
-    """9618_w25_43:1(a)(iii) MP1-MP3; 1(c)(i) MP1-MP3: five names and positions."""
+    """9618_w25_43:1(a)(iii) MP1-MP3; 9618_w25_43:1(c)(i) MP1-MP3: five names and positions."""
     feed_input(monkeypatch,'4','5');ns=runpy.run_path(str(candidate_path),run_name='__main__')
     for i,(code,value) in enumerate([('A',2),('B',3),('C',5),('D',2),('E',7)],1):
         obj=ns['Object'+str(i)];assert isinstance(obj,ns['BoardObject'])
@@ -65,7 +65,7 @@ def test_1cii_board_screenshot(candidate_path):
 
 
 def test_1dii_invalid_inputs_screenshot(candidate_path):
-    """9618_w25_43:1(d)(i) MP1-MP4; 1(d)(ii) whole: 10,4,-1,5 -> C 5."""
+    """9618_w25_43:1(d)(i) MP1-MP4; 9618_w25_43:1(d)(ii) whole: 10,4,-1,5 -> C 5."""
     r=run_script(candidate_path,stdin='10\n4\n-1\n5\n');assert r.returncode==0,r.stderr
     assert re.search(r'\bC\b[^\n]*\b5\b',r.lines[-1])
 

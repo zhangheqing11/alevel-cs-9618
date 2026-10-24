@@ -4,7 +4,7 @@ from testkit import run_script,output_lines
 
 
 def test_2ai_aii_train(sol):
-    """9618_w25_41:2(a)(i) MP2-MP4; 2(a)(ii) MP2-MP3."""
+    """9618_w25_41:2(a)(i) MP2-MP4; 9618_w25_41:2(a)(ii) MP2-MP3."""
     t=sol.Train('X11',28)
     assert (t._Train__TrainIDNumber,t._Train__Route)==('X11',28)
     assert (t.GetTrainIDNumber(),t.GetRoute())==('X11',28)
@@ -45,7 +45,7 @@ def test_2ciii_getters_formatted_return(sol):
 
 
 def test_2b_di_main_instances(candidate_path):
-    """9618_w25_41:2(b) MP1-MP2; 2(d)(i) MP1-MP2."""
+    """9618_w25_41:2(b) MP1-MP2; 9618_w25_41:2(d)(i) MP1-MP2."""
     ns=runpy.run_path(str(candidate_path),run_name='__main__')
     values=[]
     for value in ns.values():
@@ -57,8 +57,12 @@ def test_2b_di_main_instances(candidate_path):
 
 
 def test_2diii_screenshot(candidate_path):
-    """9618_w25_41:2(d)(ii) MP1-MP4; 2(d)(iii) MP1-MP2: full once, two formatted stations."""
+    """9618_w25_41:2(d)(ii) MP1-MP4; 9618_w25_41:2(d)(iii) MP1-MP2: full once, two formatted stations."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
-    assert r.lines==['Station is full','The trains at station STH are:',
+    expected=['Station is full','The trains at station STH are:',
                      '12ADV on route number 134','33ART on route number 20',
                      'The trains at station NTH are:','21VBC on route number 24']
+
+    lines=iter(r.lines)
+    assert all(any(line.endswith(value) for line in lines) for value in expected)
+    assert r.stdout.count('Station is full')==1

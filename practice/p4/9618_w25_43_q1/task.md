@@ -348,7 +348,7 @@ One source file is used to answer Question 2. The file is called BinaryData.txt
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 1(a)(i) | 9618_w25_43:1(a)(i) | 5 | 代码 | `test_1ai_aii_boardobject` · MP4、MP5 | MP1、MP2、MP3 |
+| Part 1(a)(i) | 9618_w25_43:1(a)(i) | 5 | 代码 | `test_1ai_aii_boardobject` · MP5 | MP1、MP2、MP3、MP4 |
 | Part 1(a)(ii) | 9618_w25_43:1(a)(ii) | 3 | 代码 | `test_1ai_aii_boardobject` · MP2、MP3 | MP1 |
 | Part 1(a)(iii) | 9618_w25_43:1(a)(iii) | 3 | 代码 | `test_1aiii_ci_named_objects_and_placement` · MP1、MP2、MP3 | — |
 | Part 1(b)(i) | 9618_w25_43:1(b)(i) | 4 | 代码 | `test_1bi_initial_board` · MP3、MP4 | MP1、MP2 |
@@ -362,6 +362,8 @@ One source file is used to answer Question 2. The file is called BinaryData.txt
 
 ## 人工核对清单
 
+- [ ] 1(a)(i) MP4: … taking two parameters …
+
 - [ ] 1(a)(i) MP1: Class header (and end where appropriate)
 - [ ] 1(a)(i) MP2: Declaring Code as string and Value as integer
 - [ ] 1(a)(i) MP3: Constructor header (and end where appropriate) within class …
@@ -370,10 +372,27 @@ One source file is used to answer Question 2. The file is called BinaryData.txt
 - [ ] 1(b)(i) MP2: Constructor header (and end where appropriate) within class
 - [ ] 1(b)(ii) MP1: Get method header taking 2 (integer) parameters …
 - [ ] 1(b)(iii) MP1: Set method header taking three parameters (TheObject, row, column) …
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 
 ## MS 得分点编号
 
 测试与上表使用语料 `markpoints[].n`。1 分行按全行计；未印 MP 数字的圆点按原页顺序对应。可选点多于行分值时，自动 / 人工分值按点的权重比例折算；结构整体点仅作人工。
+
+## QP p.4 网格图转写
+
+下表加粗黑格与原图相同（row 1, column 3）；行列均从 0 开始。
+
+| Row / Column | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 0 |  |  |  |  |  |  |  |  |  |  |
+| 1 |  |  |  | **■** |  |  |  |  |  |  |
+| 2 |  |  |  |  |  |  |  |  |  |  |
+| 3 |  |  |  |  |  |  |  |  |  |  |
+| 4 |  |  |  |  |  |  |  |  |  |  |
+| 5 |  |  |  |  |  |  |  |  |  |  |
+| 6 |  |  |  |  |  |  |  |  |  |  |
+| 7 |  |  |  |  |  |  |  |  |  |  |
+| 8 |  |  |  |  |  |  |  |  |  |  |
+| 9 |  |  |  |  |  |  |  |  |  |  |

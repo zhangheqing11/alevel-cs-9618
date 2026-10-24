@@ -6,7 +6,7 @@ from testkit import feed_input,run_script
 
 
 def test_3ai_aii_construct_getters(sol):
-    """9618_w23_41:3(a)(i) MP3-MP4; 3(a)(ii) MP2-MP3."""
+    """9618_w23_41:3(a)(i) MP3-MP4; 9618_w23_41:3(a)(ii) MP2-MP3."""
     c=sol.Character(67,23,'A')
     assert (c.GetXPosition(),c.GetYPosition())==(67,23)
     assert any(k.endswith('Name') and v=='A' for k,v in vars(c).items())
@@ -23,7 +23,7 @@ def test_3aiii_clamps_and_accumulates(sol,axis):
 @pytest.mark.parametrize('cls,step',[('Character',10),('BikeCharacter',20)])
 @pytest.mark.parametrize('direction,dx,dy',[('up',0,1),('down',0,-1),('left',-1,0),('right',1,0)])
 def test_3aiv_cii_move(sol,cls,step,direction,dx,dy):
-    """9618_w23_41:3(a)(iv) MP2-MP4; 3(c)(ii) MP1-MP2: overriding Move."""
+    """9618_w23_41:3(a)(iv) MP2-MP4; 9618_w23_41:3(c)(ii) MP1-MP2: overriding Move."""
     c=getattr(sol,cls)(50,50,'A');c.Move(direction)
     assert (c.GetXPosition(),c.GetYPosition())==(50+step*dx,50+step*dy)
 
@@ -40,7 +40,7 @@ def test_3ci_inherits_parent(sol,monkeypatch):
 
 
 def test_3b_d_main_instances(candidate_path,monkeypatch):
-    """9618_w23_41:3(b) MP1-MP2; 3(d) whole: Jack and Karla correct instances."""
+    """9618_w23_41:3(b) MP1-MP2; 9618_w23_41:3(d) whole: Jack and Karla correct instances."""
     feed_input(monkeypatch,'jack','right');ns=runpy.run_path(str(candidate_path),run_name='__main__')
     assert isinstance(ns['Jack'],ns['Character']) and isinstance(ns['Karla'],ns['BikeCharacter'])
     assert (ns['Jack'].GetXPosition(),ns['Jack'].GetYPosition())==(60,50)
@@ -49,7 +49,7 @@ def test_3b_d_main_instances(candidate_path,monkeypatch):
 
 @pytest.mark.parametrize('name,direction,x,y',[('jack','right',60,50),('karla','down',100,30)])
 def test_3eii_screenshots(candidate_path,name,direction,x,y):
-    """9618_w23_41:3(e)(i) MP1-MP5; 3(e)(ii) MP1: exact two MS screenshot results."""
+    """9618_w23_41:3(e)(i) MP1-MP5; 9618_w23_41:3(e)(ii) MP1: exact two MS screenshot results."""
     r=run_script(candidate_path,stdin=f'{name}\n{direction}\n')
     assert r.returncode==0,r.stderr
     assert re.search(r'X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout)

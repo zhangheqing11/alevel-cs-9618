@@ -1,6 +1,5 @@
 """Exact matching 9618_w22_41 MS, Question 2; corpus MP numbers."""
 import runpy
-import sys
 from testkit import run_script
 
 
@@ -53,9 +52,12 @@ def test_2ci_getter_protocol(sol):
 
 
 def test_2aiii_biii_main_objects(candidate_path):
-    """9618_w22_41:2(a)(iii) MP1-MP2; 2(b)(iii) MP1-MP2."""
+    """9618_w22_41:2(a)(iii) MP1-MP2; 9618_w22_41:2(b)(iii) MP1-MP2."""
     ns=runpy.run_path(str(candidate_path),run_name='__main__')
-    cards=[v for v in ns.values() if isinstance(v,ns['Card'])]
+    values=[]
+    for value in ns.values():
+        values.extend(value if isinstance(value,list) else [value])
+    cards=[v for v in values if isinstance(v,ns['Card'])]
     assert {(c.GetNumber(),c.GetColour()) for c in cards}=={(n,c) for n in range(1,6) for c in ['red','blue','yellow']}
     hands=[v for v in ns.values() if isinstance(v,ns['Hand'])]
     values=[[(h.GetCard(i).GetNumber(),h.GetCard(i).GetColour()) for i in range(5)] for h in hands]
@@ -64,7 +66,7 @@ def test_2aiii_biii_main_objects(candidate_path):
 
 
 def test_2ciii_screenshot_player2(candidate_path):
-    """9618_w22_41:2(c)(iii) whole; 2(c)(ii) MP1-MP3: player 2 wins."""
+    """9618_w22_41:2(c)(iii) whole; 9618_w22_41:2(c)(ii) MP1-MP3: player 2 wins."""
     res=run_script(candidate_path)
     assert res.returncode==0,res.stderr
     assert any('2' in line for line in res.lines)

@@ -227,12 +227,12 @@
 
 | 证据格 | 行 id | 分 | 交什么 | 自动测（测试名 · 得分点） | 人工核对（得分点） |
 |:--|:--|--:|:--|:--|:--|
-| Part 3(a)(i) | 9618_w23_41:3(a)(i) | 4 | 代码 | `test_3ai_aii_construct_getters` · MP3、MP4 | MP1、MP2 |
+| Part 3(a)(i) | 9618_w23_41:3(a)(i) | 4 | 代码 | `test_3ai_aii_construct_getters` · MP4 | MP1、MP2、MP3 |
 | Part 3(a)(ii) | 9618_w23_41:3(a)(ii) | 3 | 代码 | `test_3ai_aii_construct_getters` · MP2、MP3 | MP1 |
 | Part 3(a)(iii) | 9618_w23_41:3(a)(iii) | 4 | 代码 | `test_3aiii_clamps_and_accumulates` · MP2、MP3、MP4 | MP1 |
 | Part 3(a)(iv) | 9618_w23_41:3(a)(iv) | 4 | 代码 | `test_3aiv_cii_move` · MP2、MP3、MP4 | MP1 |
 | Part 3(b) | 9618_w23_41:3(b) | 2 | 代码 | `test_3b_d_main_instances` · MP1、MP2 | — |
-| Part 3(c)(i) | 9618_w23_41:3(c)(i) | 3 | 代码 | `test_3ci_inherits_parent` · MP1、MP2、MP3 | — |
+| Part 3(c)(i) | 9618_w23_41:3(c)(i) | 3 | 代码 | `test_3ci_inherits_parent` · MP1、MP3 | MP2 |
 | Part 3(c)(ii) | 9618_w23_41:3(c)(ii) | 2 | 代码 | `test_3aiv_cii_move` · MP1、MP2 | — |
 | Part 3(d) | 9618_w23_41:3(d) | 1 | 代码 | `test_3b_d_main_instances` · 全行 | — |
 | Part 3(e)(i) | 9618_w23_41:3(e)(i) | 5 | 代码 | `test_3ei_rejects_invalid_inputs`、`test_3eii_screenshots` · MP1、MP2、MP3、MP4、MP5 | — |
@@ -240,12 +240,16 @@
 
 ## 人工核对清单
 
+- [ ] 3(c)(i) MP2: Constructor taking all 3 parameters …
+
+- [ ] 3(a)(i) MP3: Constructor header (and end where appropriate) with 3 parameters
+
 - [ ] 3(a)(i) MP1: Class header (and end where appropriate)
 - [ ] 3(a)(i) MP2: Three attributes with correct names and data types
 - [ ] 3(a)(ii) MP1: 1 get header with no parameter …
 - [ ] 3(a)(iii) MP1: 1 set method header (and end where appropriate) with parameter …
 - [ ] 3(a)(iv) MP1: Method header with (string) parameter
-- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
+- [ ] 类型与大小的英文注释、函数头及参数、类与方法的归属、QP 要求时的私有属性声明符合本题 MS。混合得分点中能测行为的计自动，头部和类型仍须人工复核。
 - [ ] 主程序的调用、返回值使用与分支逐项符合 QP；截图清晰并包含题目要求的输入与输出；提示语语义合适。
 - [ ] 指定算法的实现没有用内置函数代劳；文件打开 / 关闭位置及异常范围按 MS 检查。
 

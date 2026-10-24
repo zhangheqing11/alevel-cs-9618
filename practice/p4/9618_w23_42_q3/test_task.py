@@ -7,7 +7,7 @@ from testkit import run_script
 
 
 def test_3ai_aii_constructor_and_getters(sol):
-    """9618_w23_42:3(a)(i) MP4-MP5; 3(a)(ii) MP2-MP3."""
+    """9618_w23_42:3(a)(i) MP4-MP5; 9618_w23_42:3(a)(ii) MP2-MP3."""
     dob=datetime.datetime(2005,12,31);c=sol.Character('Other',dob,62.5,7)
     assert c.GetName()=='Other' and c.GetIntelligence()==62.5
     assert any(k.endswith('Speed') and v==7 for k,v in vars(c).items())
@@ -54,7 +54,7 @@ def test_3ci_parent_constructor(sol,monkeypatch):
 
 
 def test_3bi_di_named_instances(candidate_path):
-    """9618_w23_42:3(b)(i) MP1-MP2; 3(d)(i) MP1-MP2: correct objects."""
+    """9618_w23_42:3(b)(i) MP1-MP2; 9618_w23_42:3(d)(i) MP1-MP2: correct objects."""
     ns=runpy.run_path(str(candidate_path),run_name='__main__')
     a=ns['FirstCharacter'];b=ns['FirstMagic']
     assert isinstance(a,ns['Character']) and isinstance(b,ns['MagicCharacter'])
@@ -63,12 +63,12 @@ def test_3bi_di_named_instances(candidate_path):
 
 
 def test_3biii_royal_screenshot(candidate_path):
-    """9618_w23_42:3(b)(ii) MP1-MP3; 3(b)(iii) whole: Royal, 4, 77."""
+    """9618_w23_42:3(b)(ii) MP1-MP3; 9618_w23_42:3(b)(iii) whole: Royal, 4, 77."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
     assert re.search(r'Royal\D+4\D+77(?:\.0)?\b',r.stdout)
 
 
 def test_3diii_magic_screenshot(candidate_path):
-    """9618_w23_42:3(d)(ii) whole; 3(d)(iii) whole: Light, 5, 90 from MS p.34."""
+    """9618_w23_42:3(d)(ii) whole; 9618_w23_42:3(d)(iii) whole: Light, 5, 90 from MS p.34."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
     assert re.search(r'Light\D+5\D+90(?:\.0)?\b',r.stdout)
