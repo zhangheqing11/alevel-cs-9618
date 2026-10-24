@@ -228,8 +228,11 @@ def cmd_summary(args) -> int:
         print(line)
         learning = [r for r in rows if r["状态"] == "学习中"]
         for r in learning:
+            # Due = the planned date has passed and the row is still 学习中. A failed retest keeps the
+            # row 学习中, so the tutor sets a new 复测日期 after every retest (SKILL.md §4.5); an old
+            # 复测结果 must not hide the next due date.
             due = r["复测日期"]
-            flag = "  ⚠ 到期" if due and due <= today and not r["复测结果"] else ""
+            flag = "  ⚠ 到期" if due and due <= today else ""
             print(f"    学习中 {r['类型']} {r['名称']}" + (f"（复测 {due}）" if due else "") + flag)
         last = max((r["日期"] for r in rows if r["日期"]), default="")
         if last:
