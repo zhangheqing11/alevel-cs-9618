@@ -678,9 +678,9 @@
       "id": "9618_s24_42:1(a)",
       "paper": "9618_s24_42",
       "marks": 22,
-      "auto_marks": 19.0,
-      "manual_marks": 3.0,
-      "auto_share": 0.864,
+      "auto_marks": 19.5,
+      "manual_marks": 2.5,
+      "auto_share": 0.886,
       "types": [
         "P4-FL-01",
         "P4-MP-01",
@@ -733,10 +733,8 @@
             5,
             6
           ],
-          "manual_mps": [
-            1
-          ],
-          "auto_marks": 5.5
+          "manual_mps": [],
+          "auto_marks": 6.0
         },
         {
           "id": "9618_s24_42:1(c)(ii)",

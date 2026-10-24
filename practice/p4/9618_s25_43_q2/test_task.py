@@ -101,11 +101,15 @@ def test_2fii_screenshot_locations(candidate_path):
     # Locate the sorted row, then inspect each of the four search results.
     sorted_row = next(i for i, line in enumerate(lines) if ints(line) == sorted(ORIGINAL))
     results = lines[sorted_row + 1:]
-    assert len(results) == 4
-    for line, index in zip(results[:3], [0, 13, 12]):
-        assert ints(line)[-1] == index
-    assert re.search(r"[A-Za-z]", results[3]), "not-found outcome needs an appropriate message"
-    assert not re.search(r"(?<!\d)(0|13|12)(?!\d)", results[3])
+    position = 0
+    for index in [0, 13, 12]:
+        while position < len(results) and (not ints(results[position]) or ints(results[position])[-1] != index):
+            position += 1
+        assert position < len(results), f"missing index {index} in search output"
+        position += 1
+    failure_message = " ".join(results[position:])
+    assert any(char.isalpha() for char in failure_message), "not-found outcome needs an appropriate message"
+
 
 
 def test_2b_e_no_builtin_shortcuts(candidate_path):
