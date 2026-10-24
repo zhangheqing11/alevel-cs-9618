@@ -279,7 +279,7 @@ python3 pipeline/mock/score_mock.py output/mock/9618_s26_22/score.csv       # �
 - 讲解图：优先内联可视化工具画 SVG / HTML；没有时写 `.svg` 到 `work/tmp/figures/` 并给链接；都不行用等宽字符图。没有 matplotlib / PIL，不依赖它们。
 - 学生发来的 HEIC 照片：`sips -s format jpeg <in>.HEIC --out work/tmp/figures/<名>.jpg` 再读。
 - 读图、完成、追踪题：作答前只给空白结构（表头、空格、空图框），不标出要学生得出的值；批改时把 MS 要求的完成版与学生版本并排，每处差异对应到 MS 得分点。重画的图标「重画」与题号，不能当成比原图更准确。
-- 常用图的约定（逻辑电路只用考纲门符号、卡诺图格雷码顺序、指针图标头尾与空指针约定、追踪表只在值改变时填、Dijkstra / A* 结点表、RPN 栈状态、类图、状态转换图、结构图等）见 theory.md §5 与 programming.md §10。
+- 常用图的约定（逻辑电路只用考纲门符号、卡诺图格雷码顺序、指针图标头尾与空指针约定、追踪表按该题 MS 的约定填（赋值语句执行了就记，值没变也记；语句没执行才空着，D40）、Dijkstra / A* 结点表、RPN 栈状态、类图、状态转换图、结构图等）见 theory.md §5 与 programming.md §10。
 
 ---
 
