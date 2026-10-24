@@ -1191,10 +1191,149 @@
       "mutants": 2,
       "manual_marks": 3.0,
       "auto_share": 0.9
+    },
+    {
+      "directory": "practice/p4/9618_w25_42_q1",
+      "id": "9618_w25_42:1(a)(i)",
+      "paper": "9618_w25_42",
+      "marks": 28,
+      "auto_marks": 25.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-07",
+        "P4-PR-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_42:1(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(iv)",
+          "marks": 5,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_42:1(b)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:1(c)(i)",
+          "marks": 8,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [],
+          "auto_marks": 8.0
+        },
+        {
+          "id": "9618_w25_42:1(c)(ii)",
+          "marks": 3,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "qp_over_ms": [
+        "构造参数按 MS Python `Bird(pDistancePerHour, pSpecies)`。主程序的输入编码 QP 未指定：本练习沿用 MS 的鸟选择 1/2，输入顺序为选择 → 分钟 → 方向 N/S/E/W（MS pp.15–17），已作为测试接口约定。QP 列方向与时间输入要求，没有给定这两者的测试输入顺序；若学生采用别的界面，先按此接口调整。Move 本身无需验证参数。MS p.17 的四次结果分别 (500,571)、(500,472)、(464.5,500)、(556,500)；不固定输出措辞，只 GetPosition 按 QP 明确格式。无数据文件，TreeData.txt 属第3题。"
+      ],
+      "tests": 6,
+      "mutants": 2,
+      "manual_marks": 3.0,
+      "auto_share": 0.8929
     }
   ],
-  "marks": 216,
-  "auto_marks": 184.4222,
-  "manual_marks": 31.5778,
-  "count": 7
+  "marks": 244,
+  "auto_marks": 209.4222,
+  "manual_marks": 34.5778,
+  "count": 8
 }
