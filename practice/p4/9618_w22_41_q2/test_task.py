@@ -70,3 +70,18 @@ def test_2ciii_screenshot_player2(candidate_path):
     res=run_script(candidate_path)
     assert res.returncode==0,res.stderr
     assert any('2' in line for line in res.lines)
+
+
+def test_2main_call_chain(candidate_path, exercise_dir):
+    """9618_w22_41:2(c)(ii) MS p.15: observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    scores = r.called("CalculateValue")
+    assert len(scores) == 2 and [c.result for c in scores] == [46,85]
+    hands = [list(c.args.values())[0] for c in scores]
+    assert [[(h.GetCard(i).GetNumber(),h.GetCard(i).GetColour()) for i in range(5)] for h in hands] == [
+        [(1,"red"),(2,"red"),(3,"red"),(4,"red"),(1,"yellow")],
+        [(2,"yellow"),(3,"yellow"),(4,"yellow"),(5,"yellow"),(1,"blue")]]
+    assert "2" in r.stdout

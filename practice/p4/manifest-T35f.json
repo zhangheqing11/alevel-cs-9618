@@ -6,7 +6,7 @@
       "id": "9618_w22_41:2(a)(i)",
       "paper": "9618_w22_41",
       "marks": 31,
-      "auto_marks": 23.0,
+      "auto_marks": 22.0,
       "types": [
         "P4-OP-01",
         "P4-OP-02",
@@ -115,13 +115,13 @@
           "primary": "P4-PR-03",
           "auto_mps": [
             1,
-            2,
-            3
+            2
           ],
           "manual_mps": [
-            4
+            4,
+            3
           ],
-          "auto_marks": 3.0
+          "auto_marks": 2.0
         },
         {
           "id": "9618_w22_41:2(c)(iii)",
@@ -154,10 +154,10 @@
       "qp_over_ms": [
         "同季 _43 与 _41 整卷相同，不另做练习。`CalculateValue(Player)` 使用 MS 的函数名；主程序各牌和两手牌名称不限。QP / MS 要求 Cards 有 10 格，MS p.11 Python 只 append 5 张；参考解分配 10 格。MS p.13 `range(0, 4)` 漏第五张，按 QP 改为 `range(0, 5)`。两手总分分别为 46、85；MS p.15 截图只要求 player 2 wins，测试不要求输出分数或固定措辞。平局分支由人工核对。"
       ],
-      "tests": 8,
-      "mutants": 2,
-      "manual_marks": 8.0,
-      "auto_share": 0.7419
+      "tests": 9,
+      "mutants": 3,
+      "manual_marks": 9.0,
+      "auto_share": 0.7097
     },
     {
       "directory": "practice/p4/9618_w22_42_q2",
