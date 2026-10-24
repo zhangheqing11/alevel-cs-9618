@@ -110,7 +110,7 @@
           "final_newline": false
         }
       ],
-      "mutants": 6,
+      "mutants": 7,
       "qp_pages_checked": [
         2,
         3
@@ -127,7 +127,7 @@
         "1(e): MS main prints the array; QP and MP1 require BubbleSort itself to output the sorted array.",
         "1(b): ineffective rstrip without assignment replaced by conversion of the read line."
       ],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w22_42_q1",

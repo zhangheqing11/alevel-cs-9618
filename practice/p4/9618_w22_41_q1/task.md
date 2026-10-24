@@ -76,9 +76,9 @@ A source file is used to answer Question 1. The file is called IntegerData.txt
 | Part 1(a) | 9618_w22_41:1(a) | 2 | 代码 | `test_1a_dataarray_has_100_elements` · MP1–MP2 | 注释写明 INTEGER 与 100（D10 ①）；声明在全局 |
 | Part 1(b) | 9618_w22_41:1(b) | 6 | 代码 | `test_1b_readfile_stores_all_100_integers` · MP2–MP4；`test_1b_readfile_closes_file` · MP5；`test_1b_missing_file_is_handled` · MP6–MP7 | MP1 过程头；MP5 关闭的位置；MP7 提示措辞 |
 | Part 1(c) | 9618_w22_41:1(c) | 7 | 代码 | `test_1c_rejects_out_of_range_then_counts` · MP2、MP3、MP5–MP7；`test_1c_accepts_both_bounds` · MP3；`test_1c_checks_all_100_elements` · MP4；`test_1c_returns_zero_when_absent` · MP6–MP7 | MP1 函数头与输入提示 |
-| Part 1(d)(i) | 9618_w22_41:1(d)(i) | 3 | 代码 | `test_1d_main_revalidates_and_outputs_count` · MP1–MP3（由 1(d)(ii) 一并端到端检查） | MP3 “appropriate message” 的措辞 |
+| Part 1(d)(i) | 9618_w22_41:1(d)(i) | 3 | 代码 | `test_1d_main_revalidates_and_outputs_count` · MP1–MP3（由 1(d)(ii) 一并端到端检查）；`test_1di_1e_traced_main` · 实际调用、参数与数据链（D46） | MP3 “appropriate message” 的措辞 |
 | Part 1(d)(ii) | 9618_w22_41:1(d)(ii) | 1 | 截图 | `test_1d_screenshot_input_61_outputs_2` · 输入 61、输出 2 | 截图清晰、能看到输入的 61 |
-| Part 1(e) | 9618_w22_41:1(e) | 4 | 代码 | `test_1e_bubblesort_sorts_and_prints_official_data` · MP1–MP4；`test_1e_bubblesort_reverse_order` · MP2–MP4；`test_1e_main_calls_bubblesort` · MP1 | MP1 过程头；确实是冒泡排序（外层 / 内层循环、相邻比较与交换），没有用 `sort()` |
+| Part 1(e) | 9618_w22_41:1(e) | 4 | 代码 | `test_1e_bubblesort_sorts_and_prints_official_data` · MP1–MP4；`test_1e_bubblesort_reverse_order` · MP2–MP4；`test_1e_main_calls_bubblesort` · MP1；`test_1di_1e_traced_main` · 实际调用、参数与数据链（D46） | MP1 过程头；确实是冒泡排序（外层 / 内层循环、相邻比较与交换），没有用 `sort()` |
 
 得分点 24 个（1(b) 7 点封顶 6 分）：行为可自动测 23 个，只能人工核对 1 个（1(b) MP1 过程头）。其余点里的「头部 / 措辞 / 类型注释」部分仍按下面的清单人工看。
 
@@ -90,3 +90,9 @@ A source file is used to answer Question 1. The file is called IntegerData.txt
 - [ ] 1(d)(i) MP1–MP3：主程序先 `ReadFile()` 再 `FindValues()`，返回值带说明文字输出。
 - [ ] 1(e) MP1：过程头，过程末尾输出数组，主程序调用 `BubbleSort()`；MP2–MP4：外层循环、内层循环、相邻比较并交换全部元素（不用 `sort()`，D10 ③）。
 - [ ] 截图格：能看到输入 61 与输出 2（MS 样例：`Enter a number between 1 and 100` / `61` / `The number was found 2 times`）。
+
+### T38c1 · D46 调用与输出核验
+
+主程序原先用正确数值证明三个模块已调用，新增 ReadFile → FindValues → BubbleSort 的实际顺序和两种输入的计数返回值检查。消息与数字允许相邻换行；排序输出用有序连续块匹配，允许其后额外数字说明。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
