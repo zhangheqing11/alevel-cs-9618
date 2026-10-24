@@ -67,3 +67,18 @@ F09：QP p.5、MS p.12 appropriate messages(s) 不限同一行；鸟名/坐标�
 - equivalent_footer.py: 8 passed in 0.13s
 
 自动分 26.0 → 26.0；占比 81.25% → 81.25%。
+
+## 9618_s23_42_q3
+
+工资截图原将全段数字两两组装，额外说明数字会误拒。改为每个已知 ID 后查工资值，允许换行。新增 EnterHours/getter/父构造调用。
+
+本轮逐行核对本题配对 MS（23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37 页）中的调用/输出点，QP 要求以题面转写及原 PDF 为准。hollow-main 修前：1 failed, 9 passed in 0.12s；修后与等价改写：
+
+- mutant_1.py: 3 failed, 8 passed in 0.11s
+- mutant_2.py: 4 failed, 7 passed in 0.21s
+- mutant_hollow_main.py: 2 failed, 9 passed in 0.11s
+- solution.py: 11 passed in 0.10s
+- equivalent_banner.py: 11 passed in 0.10s
+- equivalent_footer.py: 11 passed in 0.11s
+
+自动分 27.0 → 27.0；占比 81.82% → 81.82%。
