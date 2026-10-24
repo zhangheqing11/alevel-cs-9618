@@ -91,25 +91,3 @@ def test_3d_main_call_chain(candidate_path):
     assert r.calls.index(enqueues[-1]) < r.calls.index(dequeues[0])
     assert re.search(r'\bA\b[\s\S]*\bB\b', r.stdout)
 
-
-def assert_numbers_in_order(text, expected):
-    """D31/D46: allow explanatory numbers and line breaks around required values."""
-    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
-    for wanted in expected:
-        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
-
-
-def test_3d_main_call_chain(candidate_path):
-    """9618_s22_41:3(d)(i) MP1-MP5 (MS p.32): 11 inputs passed, two returned values output."""
-    data = 'A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\n'
-    completed = run_script(candidate_path, stdin=data, timeout=5.0)
-    assert completed.returncode == 0, completed.stderr
-    r = run_script_traced(candidate_path, stdin=data)
-    assert r.error is None, r.error
-    enqueues, dequeues = r.called('Enqueue'), r.called('Dequeue')
-    assert [c.args.get('InputData') for c in enqueues] == list('ABCDEFGHIJK')
-    assert [c.result[0] for c in enqueues] == [True] * 10 + [False]
-    assert len(dequeues) == 2 and [c.result[0] for c in dequeues] == ['A', 'B']
-    assert r.calls.index(enqueues[-1]) < r.calls.index(dequeues[0])
-    assert re.search(r'\bA\b[\s\S]*\bB\b', r.stdout)
-
