@@ -1,0 +1,60 @@
+{
+  "id": "9618_w23_41:2(a)(i)",
+  "kind": "past-paper",
+  "title": "游戏 ID 线性队列与记录汇总",
+  "source": {
+    "paper": "9618_w23_41",
+    "rows": [
+      "9618_w23_41:2(a)(i)",
+      "9618_w23_41:2(a)(ii)",
+      "9618_w23_41:2(a)(iii)",
+      "9618_w23_41:2(b)",
+      "9618_w23_41:2(c)(i)",
+      "9618_w23_41:2(c)(ii)",
+      "9618_w23_41:2(c)(iii)",
+      "9618_w23_41:2(d)",
+      "9618_w23_41:2(e)(i)",
+      "9618_w23_41:2(e)(ii)"
+    ]
+  },
+  "marks": 29,
+  "types": [
+    "P4-SQ-02",
+    "P4-FL-01",
+    "P4-AR-03",
+    "P4-SQ-04",
+    "P4-AR-04",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "declare-array",
+    "global-scope",
+    "data-types",
+    "queue-array",
+    "initialise-variables",
+    "module-header",
+    "output-format",
+    "array-index",
+    "return-value",
+    "file-open-read",
+    "file-close",
+    "loop-to-eof",
+    "procedure-call",
+    "exception-handling",
+    "record-type",
+    "class-definition",
+    "array-of-records",
+    "accumulator",
+    "nested-if",
+    "linear-search",
+    "flag-variable",
+    "count-loop"
+  ],
+  "pseudocode": false,
+  "files": [
+    "QueueData.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}
