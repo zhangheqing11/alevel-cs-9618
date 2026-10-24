@@ -1,0 +1,67 @@
+{
+  "id": "9618_w22_42:2(a)",
+  "kind": "past-paper",
+  "title": "Character：文件对象数组、检索与移动",
+  "source": {
+    "paper": "9618_w22_42",
+    "rows": [
+      "9618_w22_42:2(a)",
+      "9618_w22_42:2(b)",
+      "9618_w22_42:2(c)",
+      "9618_w22_42:2(d)",
+      "9618_w22_42:2(e)",
+      "9618_w22_42:2(f)",
+      "9618_w22_42:2(g)(i)",
+      "9618_w22_42:2(g)(ii)"
+    ]
+  },
+  "marks": 31,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-03",
+    "P4-FL-02",
+    "P4-SR-01",
+    "P4-PR-01",
+    "P4-PR-03",
+    "P4-OP-07",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "array-of-objects",
+    "assign-value",
+    "class-definition",
+    "constructor",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "encapsulation",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "getter-setter",
+    "input-prompt",
+    "input-validation",
+    "linear-search",
+    "logic-ops",
+    "loop-to-eof",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "pre-condition-loop",
+    "read-line-groups",
+    "return-value",
+    "string-concat",
+    "string-functions",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Characters.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

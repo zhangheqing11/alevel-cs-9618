@@ -158,10 +158,173 @@
       "mutants": 2,
       "manual_marks": 6.0,
       "auto_share": 0.8065
+    },
+    {
+      "directory": "practice/p4/9618_w22_42_q2",
+      "id": "9618_w22_42:2(a)",
+      "paper": "9618_w22_42",
+      "marks": 31,
+      "auto_marks": 27.2222,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-FL-02",
+        "P4-SR-01",
+        "P4-PR-01",
+        "P4-PR-03",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_42:2(a)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w22_42:2(b)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_42:2(c)",
+          "marks": 2,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w22_42:2(d)",
+          "marks": 7,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "manual_mps": [
+            7
+          ],
+          "auto_marks": 6.2222
+        },
+        {
+          "id": "9618_w22_42:2(e)",
+          "marks": 5,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:2(f)",
+          "marks": 7,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_w22_42:2(g)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_42:2(g)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Characters.txt",
+          "bytes": 140,
+          "sha256": "e479919bb358a1d206c9901abfbb53b4b76d600be8635311148bb39f3be9ba07",
+          "source": "9618_w22_sf_42/11_9618_42_Confidential Source Files November 2022/Characters.txt",
+          "sha256_matches_source_files_p4": true
+        }
+      ],
+      "qp_pages_checked": [
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "qp_over_ms": [
+        "类方法按 QP 命名，无需另加读文件函数。主程序数组名称不限，测试在 main 命名空间检查包含 10 个 Character 的 list。MS p.16 Python 只 lower 输入、没有 lower 存储姓名，无法找到 Qui；参考解双方 lower，实现 MS 的大小写点并通过 QP 指定 qui 测试。MS p.19 的 Python 输出 CharacterName 却从未赋输入，参考解输出对象 GetName()。MS p.20 截图为 X = 83、Y = 9；QP p.7 的格式示例 Y = 0 只是示例格式，不是该次输入的结果。缺文件之后如何继续 QP 未定义，测试只核对捕获异常和消息。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 3.7778,
+      "auto_share": 0.8781
     }
   ],
-  "marks": 31,
-  "auto_marks": 25.0,
-  "manual_marks": 6.0,
-  "count": 1
+  "marks": 62,
+  "auto_marks": 52.2222,
+  "manual_marks": 9.7778,
+  "count": 2
 }
