@@ -512,7 +512,7 @@ if __name__ == "__main__":
 
 **直观**　速度是每小时的路程，先换成这几分钟走了多远，再决定在平面图上向哪个方向移动。
 
-**对应练习与阶梯**　真题练习 `practice/p4/9618_w25_42_q1/`；前置 **L12 E01**（对象状态与方法）、**L03 E01**（选择分支）。
+**对应练习与阶梯**　真题练习 `practice/p4/9618_w25_42_q1/`；前置 **L12 E01**（对象状态与方法）、**L02 E01**（选择分支）。
 
 **下一道变式**　⟦9618_s23_41:2(a)(iv)⟧　Vehicle.IncreaseSpeed 先加速、限制上限，再在所有路径更新水平位置；推荐超过时赋最大值，同时按本题 MS 接受撤销本次增量。QP p.4–5；MS p.17。代表题与变式来自不同卷。
 
@@ -1098,11 +1098,11 @@ if __name__ == "__main__":
 **识别信号**　instantiate … with the identifier …；with correct parameters；call … twice；using get methods。
 
 **解题思路**
-1. 对照题表，把每一个对象的类、变量名、实参顺序和类型写清。
-2. `Car = Vehicle(...)` 调用构造并保存对象，不是把类名赋给 Car，也不是只写参数列表。
-3. 对象方法用 `Car.IncreaseSpeed()`；不把它当普通函数 `IncreaseSpeed(Car)`。
-4. 精确数调用次数及顺序：本题汽车加速两次并输出，再直升机加速两次并输出。
-5. 取私有值用 getter；方法返回字符串时主程序要 print 返回值。输出整个对象通常只得到对象地址，不能代替它的属性。
+1. 对照题表，把每一个对象的类、变量名、实参顺序和类型写清；Chewie 是 Parrot，Nighteyes 是 Wolf，Copper 用 Animal。
+2. 先创建并保存对象，再对这些对象调用方法；不要把类名覆盖成对象变量名。
+3. `SetTerritorySize(Change)` 的动作是加上 Change，减少 20 就传 −20；不能传 +20，也不能只在外部直接改属性。
+4. 在 Chewie 上调用 ChangeNumberWords(2)，再输出所有动物更新后的 Description 返回值。
+5. `Animal1.Description()` 生成字符串但不会显示；写 `print(Animal1.Description())`。主程序不重写一份描述文字来代替真实方法调用。
 
 **Python 模板**（自包含骨架；参数、初值、私有要求照具体题目）
 
@@ -1125,11 +1125,9 @@ if __name__ == "__main__":
 ```
 
 **得分表述**（引自对应 MS）
-- 「Instantiating an object of type Vehicle with correct parameters ("Tiger", 100, 20)」⟦9618_s23_41:2(d)(i)⟧
-- 「Instantiating an object of type Helicopter with correct parameters ("Lion", 350, 40, 3, 100)」⟦9618_s23_41:2(d)(i)⟧
-- 「Calling IncreaseSpeed() twice for the car」⟦9618_s23_41:2(d)(i)⟧
-- 「Calling IncreaseSpeed() twice for the helicopter」⟦9618_s23_41:2(d)(i)⟧
-- 「Calling the output for both objects」⟦9618_s23_41:2(d)(i)⟧
+- 「Calling SetTerritorySize(-20) for instance of Nighteyes」⟦9618_s25_42:3(d)(ii)⟧
+- 「Calling ChangeNumberWords(2) for instance of Chewie」⟦9618_s25_42:3(d)(ii)⟧
+- 「Calling Description() for all 3 animals (after any updates) and outputting return values」⟦9618_s25_42:3(d)(ii)⟧
 
 **得分点地图**（核验语料 2022–2026s、仅主题型行、去 `equivalent_of`、每行每标签计一次；s26 只进计数。共 36 行，其中 32 行拆点；下表由 `markpoints[].skills` 统计，不是每个标签各值一分）
 
@@ -1144,111 +1142,94 @@ if __name__ == "__main__":
 
 读图、参数、属性与调用方向是本型自查重点；单题分值与 Max 始终回本题 MS 核对。
 
-**易错与失分**　考官报告指出，有考生未按题给次数调用方法，或把对象方法当过程调用（9618_s23_41:2(d)(i)）。遍历对象数组按顺序输出、getter 只是取值手段时，入口是 AR-04；只有实例化和方法调用占主要得分点时归本型（D43）。
+**易错与失分**　考官报告指出，有考生直接改对象属性而不调用更新方法，或调用 Description 后没有输出返回值（9618_s25_42:3(d)(ii)）；还有考生把三个对象都建成 Animal，或把对象变量命名成类名（9618_s25_42:3(d)(i)）。遍历对象数组按顺序输出、getter 只是取值手段时，入口是 AR-04；本题型看实例化和方法调用的主要得分点（D43）。
 
-#### 代表题精讲　⟦9618_s23_41:2(d)(i)⟧
+#### 代表题精讲　⟦9618_s25_42:3(d)(ii)⟧
 
-**在考什么**　主程序用两种类建两个对象，各调用 IncreaseSpeed 两次再输出；5 分、5 点。 整道第 2 题 QP p.4–7（p.4 Vehicle 类图，p.6 Helicopter 类图，p.7 主程序数据）；MS p.12–25。
+**在考什么**　main 针对 Wolf 与 Parrot 调用不同的状态方法，再对三个动物调用同名 Description 并输出返回值；3 分、3 点。整题 QP p.9–12（p.9 Animal 类图与描述格式，p.10 Parrot 类图，p.11 Wolf 类图，p.12 创建实参与 main）；MS p.33–45（本行清单及 Python 范例 p.44，截图 p.45）。不读取文件，全部数据来自 QP p.12。
 
-**完整作答**（整道第 2 题的最终程序；按代码格拆交，不能把整段程序重复贴进每一格）
+**完整作答**（整道第 3 题的最终程序；按代码格拆交）
 
 ```python
-# ---- 2(a)(i) ----
-class Vehicle:
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP):
-        self.__ID = IDP                           # STRING
-        self.__MaxSpeed = MaxSpeedP               # INTEGER
-        self.__IncreaseAmount = IncreaseAmountP   # INTEGER
-        self.__CurrentSpeed = 0                   # INTEGER
-        self.__HorizontalPosition = 0             # INTEGER
+# ---- 3(a)(i) ----
+class Animal:
+    def __init__(self, pName, pSound, pSize, pIntelligence):
+        self.Name = pName                  # STRING
+        self.Sound = pSound                # STRING
+        self.Size = pSize                  # INTEGER
+        self.Intelligence = pIntelligence  # INTEGER
 
-    # ---- 2(a)(ii) ----
-    def GetCurrentSpeed(self):
-        return self.__CurrentSpeed
-
-    def GetIncreaseAmount(self):
-        return self.__IncreaseAmount
-
-    def GetMaxSpeed(self):
-        return self.__MaxSpeed
-
-    def GetHorizontalPosition(self):
-        return self.__HorizontalPosition
-
-    # ---- 2(a)(iii) ----
-    def SetCurrentSpeed(self, CSP):
-        self.__CurrentSpeed = CSP
-
-    def SetHorizontalPosition(self, HPP):
-        self.__HorizontalPosition = HPP
-
-    # ---- 2(a)(iv) ----
-    def IncreaseSpeed(self):
-        self.__CurrentSpeed = self.__CurrentSpeed + self.__IncreaseAmount
-        if self.__CurrentSpeed > self.__MaxSpeed:
-            self.__CurrentSpeed = self.__MaxSpeed
-        self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
+    # ---- 3(a)(ii) ----
+    def Description(self):
+        Message = "The animal's name is " + self.Name + ", it makes a " + self.Sound
+        Message = Message + ", its size is " + str(self.Size)
+        Message = Message + " and its intelligence level is " + str(self.Intelligence)
+        return Message
 
 
-# ---- 2(b)(i) ----
-class Helicopter(Vehicle):
-    def __init__(self, IDP, MaxSpeedP, IncreaseAmountP, VertChangeP, MaxHeightP):
-        super().__init__(IDP, MaxSpeedP, IncreaseAmountP)
-        self.__VerticalPosition = 0               # INTEGER
-        self.__VerticalChange = VertChangeP       # INTEGER
-        self.__MaxHeight = MaxHeightP             # INTEGER
+# ---- 3(b)(i) ----
+class Parrot(Animal):
+    def __init__(self, pName, pSound, pSize, pIntelligence, pWingSpan, pNumberWords):
+        super().__init__(pName, pSound, pSize, pIntelligence)
+        self.WingSpan = pWingSpan        # INTEGER
+        self.NumberWords = pNumberWords  # INTEGER
 
-    def GetVerticalPosition(self):
-        return self.__VerticalPosition
+    def ChangeNumberWords(self, Change):
+        self.NumberWords = self.NumberWords + Change
 
-    # ---- 2(b)(ii) ----
-    def IncreaseSpeed(self):
-        self.__VerticalPosition = self.__VerticalPosition + self.__VerticalChange
-        if self.__VerticalPosition > self.__MaxHeight:
-            self.__VerticalPosition = self.__MaxHeight
-        super().IncreaseSpeed()                   # update horizontal motion in every case
+    # ---- 3(b)(ii) ----
+    def Description(self):
+        Message = super().Description() + ". It has a wingspan of " + str(self.WingSpan)
+        Message = Message + "cm and can say " + str(self.NumberWords) + " words."
+        return Message
 
 
-# ---- 2(c) ----
-def OutputCurrentPosition(ObjectToOutput):
-    print("Current position =", ObjectToOutput.GetHorizontalPosition())
-    print("Current speed =", ObjectToOutput.GetCurrentSpeed())
-    if isinstance(ObjectToOutput, Helicopter):
-        print("Current vertical position =", ObjectToOutput.GetVerticalPosition())
+# ---- 3(c)(i) ----
+class Wolf(Animal):
+    def __init__(self, pName, pSound, pSize, pIntelligence, pTerritorySize):
+        super().__init__(pName, pSound, pSize, pIntelligence)
+        self.TerritorySize = pTerritorySize  # INTEGER
+
+    def SetTerritorySize(self, Change):
+        self.TerritorySize = self.TerritorySize + Change
+
+    # ---- 3(c)(ii) ----
+    def Description(self):
+        return super().Description() + ". Its territory is " + str(self.TerritorySize) + " square miles."
 
 
-# ---- 2(d)(i) ----
 if __name__ == "__main__":
-    Car = Vehicle("Tiger", 100, 20)
-    Heli = Helicopter("Lion", 350, 40, 3, 100)
-    Car.IncreaseSpeed()
-    Car.IncreaseSpeed()
-    OutputCurrentPosition(Car)
-    print()
-    Heli.IncreaseSpeed()
-    Heli.IncreaseSpeed()
-    OutputCurrentPosition(Heli)
+    # ---- 3(d)(i) ----
+    Animal1 = Parrot("Chewie", "Squawk", 1, 10, 30, 29)
+    Animal2 = Wolf("Nighteyes", "Howl", 8, 7, 100)
+    Animal3 = Animal("Copper", "Neigh", 10, 6)
+    # ---- 3(d)(ii) ----
+    Animal2.SetTerritorySize(-20)
+    Animal1.ChangeNumberWords(2)
+    print(Animal1.Description())
+    print(Animal2.Description())
+    print(Animal3.Description())
 ```
 
-按 QP p.7 实参实际运行：汽车位置 60、速度 40；直升机位置 120、速度 80、高度 6，与 MS p.25 截图数值一致。另检查第六次汽车加速后速度仍为 100、位置为 400；直升机连续 34 次加速后高度为 100、速度为 350，触顶分支可运行。
+实际运行得到三个完整描述：Chewie / Squawk / size 1 / intelligence 10 / wingspan 30cm / **31 words**；Nighteyes / Howl / size 8 / intelligence 7 / **80 square miles**；Copper / Neigh / size 10 / intelligence 6。全部字段与 MS p.45 截图一致。运行调用记录另核对 Wolf.SetTerritorySize 的 Change=−20、Parrot.ChangeNumberWords 的 Change=2，以及更新后调用三个对象的 Description；确认输出包含各返回字符串。
 
-**与 MS 逐点对齐**（2(d)(i)，5 分；语料 MP 编号与 MS 圆点顺序一致）
+MS p.40 清单中简写 Territory / SetTerritory，QP p.11 和 MS p.41 Python 用 TerritorySize / SetTerritorySize，本程序统一按后者。MS p.42 Python 范例用 `it's territory is`，QP p.11 要 `. Its territory is `；程序按 QP 格式与 MS 语言无关得分点写，不照抄范例笔误。
+
+**与 MS 逐点对齐**（3(d)(ii)，3 分；语料 MP 编号与 MS 圆点顺序一致）
 
 | 语料 MP | MS 原文 | 作答对应 | 技能标签 |
 |:--|:--|:--|:--|
-| 1 | Instantiating an object of type Vehicle with correct parameters ("Tiger", 100, 20) | Car = Vehicle("Tiger", 100, 20) | `object-instantiation` |
-| 2 | Instantiating an object of type Helicopter with correct parameters ("Lion", 350, 40, 3, 100) | Heli = Helicopter("Lion", 350, 40, 3, 100) | `object-instantiation` |
-| 3 | Calling IncreaseSpeed() twice for the car | Car.IncreaseSpeed() 两次 | `method-call` |
-| 4 | Calling IncreaseSpeed() twice for the helicopter | Heli.IncreaseSpeed() 两次 | `method-call` |
-| 5 | Calling the output for both objects | 对两个对象各调用 OutputCurrentPosition | `procedure-call`、`method-call` |
+| 1 | Calling SetTerritorySize(-20) for instance of Nighteyes | `Animal2.SetTerritorySize(-20)`，100 加 −20 得 80 | `method-call` |
+| 2 | Calling ChangeNumberWords(2) for instance of Chewie | `Animal1.ChangeNumberWords(2)`，29 加 2 得 31 | `method-call` |
+| 3 | Calling Description() for all 3 animals (after any updates) and outputting return values | 更新后分别 `print(Animal1.Description())`、Animal2、Animal3；动态选择各自实现 | `method-call`、`output-format`、`polymorphism` |
 
-**证据格怎么交**　2(d)(i) 代码格交 main 中的创建、调用与输出语句；2(d)(ii) 截图格交两辆车的结果。输出标签可用合适说明，数值和所属对象必须清楚。
+**证据格怎么交**　3(d)(i) 格交三个对象的实例化；3(d)(ii) 格交两次更新与三次 print 调用，能看见对象、参数符号及先更新后取描述的顺序；3(d)(iii) 截图显示三个完整描述，尤其 31 words 与 80 square miles（MS p.45 两分：三条完整准确信息；正确更新值）。类、构造、Description 分别交 3(a)–(c) 的对应代码格。截图里的正确数字不能证明调用已经发生，代码也须逐项核对（D46）。
 
-**直观**　类是制造说明，对象是造出来的车；`Car.IncreaseSpeed()` 是让这辆车动作，不是让说明书动作。
+**直观**　先让狼缩小领地、让鹦鹉学两词，再请每只动物介绍自己；介绍来自对象当前状态。
 
-**对应练习与阶梯**　真题练习 `practice/p4/9618_s23_41_q2/`（T35 并行生成；路径用于定位，不表示练习已验收）。前置 **L12 E01、L12 E03**。
+**对应练习与阶梯**　真题练习 `practice/p4/9618_s25_42_q3/`；前置 **L12 E01、L12 E03、L12 E05**（对象方法、继承、多态）。
 
-**下一道变式**　⟦9618_w22_41:2(b)(iii)⟧　两个 Hand 的实参是已经建好的 Card 变量，不是十个数字与颜色；按 QP 的五张牌名单传参。QP p.6；MS p.13。
+**下一道变式**　⟦9618_s23_41:2(d)(i)⟧　创建 Vehicle("Tiger", 100, 20) 与 Helicopter("Lion", 350, 40, 3, 100)，各加速两次并输出。QP p.7；MS p.24–25。不同卷练习“先创建、再调用、最后输出”的同一条链。
 
 <!-- auto:drills P4-OP-07 -->
 
