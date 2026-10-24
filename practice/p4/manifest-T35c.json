@@ -785,6 +785,144 @@
         38
       ],
       "notes": "已看 QP pp.11–13、MS pp.29–38 全部渲染图，核对 evidence.doc 6 格。MS Python Enqueue 用 append 将数据放在预留20格后，改为 QueueData[QueueTail]；Dequeue 返回 False 与 QP / 得分句的字符串 false 不同，按 QP 修正；StoreItems 对不匹配的 X 可能执行 int(\"X\")，改为先算期望校验字符后比较。保留 X 代表10的 QP算法，未擅自改成常见校验算法（D31）。3(d)(i) 八个可选点 max6，按分值折算；1分行按 whole，不编造点号。其余圆点顺序与语料一致。与 s24_43 第3题相同。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_41_q1",
+      "id": "9618_s25_41:1(a)",
+      "paper": "9618_s25_41",
+      "marks": 20,
+      "auto_marks": 20.0,
+      "manual_marks": 0.0,
+      "auto_share": 1.0,
+      "types": [
+        "P4-SQ-03",
+        "P4-MP-02",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_41:1(a)",
+          "marks": 2,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1a_initial_state"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(b)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1b_enqueue_full",
+            "test_1bd_wrap_partial_dequeue_and_refill"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(c)",
+          "marks": 3,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(d)",
+          "marks": 6,
+          "primary": "P4-SQ-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1bd_wrap_partial_dequeue_and_refill",
+            "test_1d_empty_reset_and_reuse"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(e)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        },
+        {
+          "id": "9618_s25_41:1(e)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0,
+          "manual_marks": 0.0,
+          "tests": [
+            "test_1ce_screenshot"
+          ]
+        }
+      ],
+      "files": [],
+      "mutants": 2,
+      "tests": 5,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "notes": "已看 QP pp.2–3、MS pp.7–17 全部渲染图（含 p.17 延续的截图），核对 evidence.doc 6 格。MS Python 1(c) 循环名 X 而 print 用 x，参考解统一 X；声明加类型和大小注释；其余采用 MS Python 算法，无算法边界偏离。1(c) MS 第二个圆点同时印两个行为句，语料拆为 MP2（selection）与 MP3（output），对应同一印刷圆点，D37 ②；其余圆点顺序相同。无本题数据文件，卷首七个文件仅属第2题，不复制。"
     }
   ]
 }

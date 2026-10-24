@@ -1,0 +1,41 @@
+{
+  "id": "9618_s25_41:1(a)",
+  "kind": "past-paper",
+  "title": "整数循环队列",
+  "source": {
+    "paper": "9618_s25_41",
+    "rows": [
+      "9618_s25_41:1(a)",
+      "9618_s25_41:1(b)",
+      "9618_s25_41:1(c)",
+      "9618_s25_41:1(d)",
+      "9618_s25_41:1(e)(i)",
+      "9618_s25_41:1(e)(ii)"
+    ]
+  },
+  "marks": 20,
+  "types": [
+    "P4-SQ-03",
+    "P4-MP-02",
+    "P4-MP-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-index",
+    "boolean-return",
+    "count-loop",
+    "declare-array",
+    "global-scope",
+    "initialise-variables",
+    "module-header",
+    "nested-if",
+    "output-format",
+    "procedure-call",
+    "queue-array",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
