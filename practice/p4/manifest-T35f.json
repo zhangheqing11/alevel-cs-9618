@@ -1330,10 +1330,193 @@
       "mutants": 2,
       "manual_marks": 3.0,
       "auto_share": 0.8929
+    },
+    {
+      "directory": "practice/p4/9618_w25_43_q1",
+      "id": "9618_w25_43:1(a)(i)",
+      "paper": "9618_w25_43",
+      "marks": 31,
+      "auto_marks": 23.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-06",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_43:1(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            4,
+            5
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:1(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:1(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(i)",
+          "marks": 4,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            3,
+            4
+          ],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(iv)",
+          "marks": 3,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w25_43:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_43:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "qp_over_ms": [
+        "接口照 QP / MS Python：`BoardObject(Code, Value)`、`Board()`、`GetObject(row, column)`、`SetObject(TheObject, row, column)`、`DisplayBoard()`。Object1–Object5 是题给标识符，必须保留；主程序 Board 实例名不限。QP p.4 的网格图是行/列均0–9，黑格在 row1,column3，表示两个下标的含义，已在图旁原文转写；无额外数据。无数据文件，BinaryData.txt 属第2题。MS p.16 的完整棋盘与 p.19 输入10/4/-1/5的 C 5 输出已核对；Python 范例无需行为修正。本题未强制 private，公有/私有实现都可。"
+      ],
+      "tests": 8,
+      "mutants": 2,
+      "manual_marks": 8.0,
+      "auto_share": 0.7419
     }
   ],
-  "marks": 244,
-  "auto_marks": 209.4222,
-  "manual_marks": 34.5778,
-  "count": 8
+  "marks": 275,
+  "auto_marks": 232.4222,
+  "manual_marks": 42.5778,
+  "count": 9
 }

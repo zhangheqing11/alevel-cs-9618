@@ -1,0 +1,53 @@
+{
+  "id": "9618_w25_43:1(a)(i)",
+  "kind": "past-paper",
+  "title": "BoardObject 与 Board：二维对象数组与命中判断",
+  "source": {
+    "paper": "9618_w25_43",
+    "rows": [
+      "9618_w25_43:1(a)(i)",
+      "9618_w25_43:1(a)(ii)",
+      "9618_w25_43:1(a)(iii)",
+      "9618_w25_43:1(b)(i)",
+      "9618_w25_43:1(b)(ii)",
+      "9618_w25_43:1(b)(iii)",
+      "9618_w25_43:1(b)(iv)",
+      "9618_w25_43:1(c)(i)",
+      "9618_w25_43:1(c)(ii)",
+      "9618_w25_43:1(d)(i)",
+      "9618_w25_43:1(d)(ii)"
+    ]
+  },
+  "marks": 31,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-OP-06",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "array-2d",
+    "array-of-objects",
+    "class-definition",
+    "constructor",
+    "containment",
+    "data-types",
+    "getter-setter",
+    "initialise-variables",
+    "input-validation",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "nested-loops",
+    "object-instantiation",
+    "output-format",
+    "p4-identifiers",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
