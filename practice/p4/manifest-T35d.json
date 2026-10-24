@@ -1184,9 +1184,9 @@
       "id": "9618_w25_43:2(a)",
       "paper": "9618_w25_43",
       "marks": 24,
-      "auto_marks": 22.3333,
-      "manual_marks": 1.6667,
-      "auto_share": 0.9306,
+      "auto_marks": 22.333333,
+      "manual_marks": 1.666667,
+      "auto_share": 0.930556,
       "types": [
         "P4-SQ-02",
         "P4-FL-01",
@@ -1273,7 +1273,10 @@
             2
           ],
           "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 2.0,
+          "tests": [
+            "test_2f_main_call_chain"
+          ]
         },
         {
           "id": "9618_w25_43:2(f)(ii)",
@@ -1297,8 +1300,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 3,
-      "tests": 8,
+      "mutants": 4,
+      "tests": 9,
       "qp_pages_checked": [
         9,
         10,
@@ -1319,7 +1322,7 @@
         31
       ],
       "qp_over_ms": "- MS p.21 Python 初始化多缩进一级，p.23 Enqueue 条件混入 `{` 且缺冒号；参考解修正为合法 Python。\n- MS p.27 ReadData 漏异常处理；参考解补上其 MP6 要求，源文件内容不改。\n- MS p.29 Compress 外循环为 `while NumberItems > 0 and First != \"False\"`：First 已经保存一个出队项，队列余量为 0 不代表 First 无效。该范例会漏掉单项输入及最后仅 1 项的游程。参考解/测试按 QP p.10 完整压缩，外循环只检查 First 不是字符串 False（D31）；原 MS 得分点仍保留。\n- 官方文件压缩结果仍为 MS p.31 的 19051306；附加 `1` → `11`、`01` → `0111` 等边界抓取上述缺陷。",
-      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。"
+      "notes": "2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。 T38c2：补测 ReadData → Compress 以及实际 Dequeue 字符，官方 19051306 与新数据 120313 双数据验证输出；取消固定末行/行尾，压缩串本身仍完整（QP pp.10–11/MS pp.28–31）。"
     }
   ]
 }

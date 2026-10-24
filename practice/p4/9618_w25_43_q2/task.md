@@ -145,7 +145,7 @@
 | Part 2(c) | 9618_w25_43:2(c) | 3 | 代码 | `test_2c_dequeue_string_false_and_fifo` · MP1、MP2、MP3 | — |
 | Part 2(d) | 9618_w25_43:2(d) | 5 | 代码 | `test_2d_reads_official_file`；`test_2d_any_file_length_to_100`；`test_2d_missing_file` · MP3、MP4、MP5、MP6 | MP1 Procedure header (and end where appropriate)；MP2 Opening the file and closing the file (in appropriate place) |
 | Part 2(e) | 9618_w25_43:2(e) | 6 | 代码 | `test_2e_compress_all_runs_including_final_singleton` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
-| Part 2(f)(i) | 9618_w25_43:2(f)(i) | 2 | 代码 | `test_2f_ii_screenshot_official_compressed_output` · MP1、MP2 | — |
+| Part 2(f)(i) | 9618_w25_43:2(f)(i) | 2 | 代码 | `test_2f_ii_screenshot_official_compressed_output` · MP1、MP2；`test_2f_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 2(f)(ii) | 9618_w25_43:2(f)(ii) | 1 | 截图 | `test_2f_ii_screenshot_official_compressed_output` · MPwhole | — |
 
 ## 人工核对清单
@@ -165,3 +165,7 @@
 - 官方文件压缩结果仍为 MS p.31 的 19051306；附加 `1` → `11`、`01` → `0111` 等边界抓取上述缺陷。
 
 2(d) 6 个候选点最多 5 分，按权重比例折算。其余语料编号与 MS 圆点顺序一致。Compress 的哨兵终止与按 NumberItems 终止只要完整处理最后一段，行为测试都接受。
+
+## T38c2 · D46 验证补充
+
+补测 ReadData → Compress 以及实际 Dequeue 字符，官方 19051306 与新数据 120313 双数据验证输出；取消固定末行/行尾，压缩串本身仍完整（QP pp.10–11/MS pp.28–31）。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
