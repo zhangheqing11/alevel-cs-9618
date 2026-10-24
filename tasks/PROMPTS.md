@@ -321,3 +321,21 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 只写 tasks/scope.json 里 T37B 允许的路径与 tasks/progress/T37B.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → python3 build/build.py p4 → make check-scope TASK=T37B → push → gh pr create --base main --title "T37 batch B: P4 SQ/LT/OP/MP cards + back"。不要合并 PR，不要推 main。
 最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
 ```
+
+### codex · T38 审计 P4 题型手册（新开 Codex 会话）
+
+```
+你是执行工位，负责 T38：逐张审计 P4 题型手册（36 张卡）并抽查 6 道 P4 真题练习，只出报告，不改卡片与练习。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D2、D10、D31、D37、D40–D45）、tasks/T38-p4-audit.md（任务卡：范围、10 项审计项、产出格式）、tasks/handoff/README.md 与 **tasks/handoff/T38-audit.md（交接文档：执行方案）**，再通读 papers/p2/audit/T26-report.md、papers/p3/audit/T36-report.md 学前例的格式与口径。
+从最新 origin/main 开分支 task/T38-p4-audit。每张卡的代表题都要渲染 QP 与 MS 原页核对；每个完整作答的 Python 都要在官方源文件 / QP 测试数据上实际运行（PDF 与源文件在 /Users/zhangheqing/Desktop/alevel cs/sources/pastpapers/，只读）。报告与 jsonl 用纯文本行 id，不用 ⟦⟧ 与「」。
+只写 tasks/scope.json 里 T38 允许的路径与 tasks/progress/T38.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T38 → push → gh pr create --base main --title "T38: audit P4 handbook"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T39 教学 skill 更新到全四卷（新开 Codex 会话）
+
+```
+你是执行工位，负责 T39：把教学 skill skill/cie-9618-cs-tutor/ 更新到能教全四卷（P3、P4 手册与 P4 上机练习）、能带整卷模考（批改包 + 分数线估分），并生成 ledger/P3.csv、ledger/P4.csv。skill 是给 Claude 学习会话看的说明书，保持原口吻，不改教学协议本身。先读 AGENTS.md、docs/DECISIONS.md（D1、D2、D31、D32、D33、D37、D38、D44、D45）、tasks/T39-skill-update.md（任务卡：现状、9 项改动、完成标准）、tasks/handoff/README.md 与 **tasks/handoff/T39-skill.md（交接文档：执行方案）**；改之前先读 pipeline/mock/README.md、corpus/thresholds/README.md、papers/p4/practice-notes.md、schemas/exercise-format.md、schemas/ledger-format.md、tools/try.py，命令以它们为准。
+从最新 origin/main 开分支 task/T39-skill-update。skill 里写到的每条命令都要实际跑一次（模考包用一份 s26 卷、score_mock 用假数据、make try 用一道 P4 练习的参考解加 K=），生成物放 output/ 或 work/tmp/，不入库；ledger/P1.csv、P2.csv、ladder.csv 是学生的真实记录，不要改。
+只写 tasks/scope.json 里 T39 允许的路径与 tasks/progress/T39.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T39 → push → gh pr create --base main --title "T39: update tutor skill for P3/P4, mocks and thresholds"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```

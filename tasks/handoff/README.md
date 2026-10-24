@@ -4,8 +4,10 @@
 
 | 文档 | 任务 | 状态 |
 |:--|:--|:--|
-| [T35-practice.md](T35-practice.md) | T35a–f P4 真题练习（54 道大题） | a 6/9、b 8/8（第 8 道 WIP 未验证）续做；c–f 新开 |
-| [T37-cards.md](T37-cards.md) | T37A / T37B P4 题型卡 | A 剩 FL、SR、RC + front；B 剩 OP、MP + back |
+| [T35-practice.md](T35-practice.md) | T35a–f P4 真题练习（54 道大题） | ✅ 已合并（#48、#49、#52–#55） |
+| [T37-cards.md](T37-cards.md) | T37A / T37B P4 题型卡 | ✅ 已合并（#50、#51） |
+| [T38-audit.md](T38-audit.md) | T38 审计 P4 手册 + 抽查 6 道练习 | 待开 |
+| [T39-skill.md](T39-skill.md) | T39 教学 skill 更新到全四卷 + P3 / P4 记录表 | 待开 |
 
 ## 通用约定（所有交接任务）
 

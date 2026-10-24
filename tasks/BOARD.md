@@ -36,8 +36,10 @@
 | T34 | P4 全量打标签 + 拆得分点（744 行、582 行拆 2311 点；与试标主题型 70/71；D43 裁决已落实） | 子智能体 · Opus 5.5 high（codex 到期代做） | T33 ✅（T12f 合并后 rebase 重跑 apply） | ✅ | #45 |
 | T36 | 审计 P3 题型手册（79 张卡；12 条：error 0 / warn 4 / nit 8） | 子智能体 · Opus 5.5 high（codex 到期代做，非跨模型） | T32 ✅ | ✅ | #46 |
 | T36b | 按审计修正 P3 手册（D44：11 条 + BL-02 变式；F06 不改；T36-coverage.json 保留为审计快照，另改 2 处同类“最常见”） | 子智能体 · Opus 5.5 high | T36 ✅ | ✅ | #47 |
-| T37 | P4 题型卡 + 伪代码 ↔ Python 对照（批 A：PR/AR ✅ 已写，剩 FL/SR/RC + front · 批 B：SQ/LT ✅ 已写，剩 OP/MP + back）；交接 `tasks/handoff/T37-cards.md` | codex（续做） | T34 ✅ | 🔨 | `task/T37{A,B}-p4-cards`（已推） |
-| T35 | P4 真题练习（54 道大题 1350 分；T35a 6/9、T35b 8/8 待验、T35c–f 未开）；交接 `tasks/handoff/T35-practice.md` | codex（六个子批可并行） | T34 ✅、D42 ④ 工具 ✅ | 🔨 | `task/T35{a..f}-p4-practice`（a、b 已推） |
+| T37 | P4 题型卡 + 伪代码 ↔ Python 对照（36 型齐：批 A ✅ #51 · 批 B ✅ #50） | 子智能体 + codex 续做 | T34 ✅ | ✅ | #50 #51 |
+| T35 | P4 真题练习（54 道大题 1350 分：T35a ✅ #49 · b ✅ #48 · c ✅ #52 · d ✅ #55 · e ✅ #54 · f ✅ #53） | 子智能体 + codex | T34 ✅ | ✅ | #48 #49 #52–#55 |
+| T38 | 审计 P4 题型手册（36 张卡）+ 抽查 6 道 P4 练习 | codex | T37 ✅ | ⏳ | `task/T38-p4-audit` |
+| T39 | 教学 skill 更新（P3/P4 手册与练习、模考包、分数线、ER、D31/D37/D38/D45；P3/P4 学习记录表） | codex | T35 ✅、T37 ✅ | ⏳ | `task/T39-skill-update` |
 | T40 | 分数线表（10 季 component 120 行 / option 156 行） | codex-1 | — | ✅ | #38 |
 | T41 | 整卷模考批改包生成器（s26 + 估分；已接 T40 真实分数线） | codex-2 | T40（估分部分） | ✅ | #39 |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。

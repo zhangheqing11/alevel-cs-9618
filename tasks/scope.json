@@ -355,5 +355,17 @@
       "papers/p4/core/OP.md",
       "papers/p4/core/MP.md"
     ]
+  },
+  "T38": {
+    "allow": [
+      "papers/p4/audit/**"
+    ]
+  },
+  "T39": {
+    "allow": [
+      "skill/cie-9618-cs-tutor/**",
+      "ledger/P3.csv",
+      "ledger/P4.csv"
+    ]
   }
 }
