@@ -247,3 +247,77 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 可以先写脚本做机械检查（选题规则、计数重算、页码引用、伪代码 lint、Python 片段运行、真值表），放在 papers/p3/audit/（T26 的 papers/p1/audit/、papers/p2/audit/ 脚本可复制改用），再逐张人工核对。产出：papers/p3/audit/T36-findings.jsonl、papers/p3/audit/T36-report.md（引用行号写纯文本行 id，不用 ⟦⟧；引 MS 用 “”，不用「」）。
 只改 tasks/scope.json 里 T36 允许的路径（papers/p3/audit/**）与 tasks/progress/T36.md；不要改卡片、概念表、corpus、practice。交付：git fetch origin && git rebase origin/main → make check → make check-scope TASK=T36 → push → gh pr create --base main --title "T36: audit P3 handbook"。PR 描述：审计卡数、问题数（按 severity）、最严重的 5 条、「需要总控决定」。不要合并 PR。停下前更新 tasks/progress/T36.md 并提交。
 ```
+
+## 2026-10-24 起：Codex 交接模式（每个任务新开一个 Codex 会话；交接文档在 tasks/handoff/）
+
+### codex · T35a 续做（P4 练习批 1 前半，剩 3 题）
+
+```
+你是执行工位，负责 T35a（P4 真题练习，批 1 前半 · s 季，续做）。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+续做已推的分支 task/T35a-p4-practice（照交接 README §1 建 worktree，不要重开分支）：已完成并提交 6 题（见 tasks/progress/T35a.md 与 practice/p4/manifest-T35a.json），它们就是范本。剩下 9618_s24_42_q3、9618_s25_41_q2、9618_s25_43_q2 三题，然后写 practice/p4/README-T35a.md，全部 9 题都在 manifest 里。
+只写 tasks/scope.json 里 T35a 允许的路径与 tasks/progress/T35a.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35a → push → gh pr create --base main --title "T35a: P4 practice (PR/AR/FL/SR/RC, s sessions)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T35b 续做（P4 练习批 1 后半，补验第 8 题）
+
+```
+你是执行工位，负责 T35b（P4 真题练习，批 1 后半 · w 季，续做）。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+续做已推的分支 task/T35b-p4-practice（照交接 README §1 建 worktree，不要重开分支）：前 7 题已完成；第 8 题 practice/p4/9618_w25_43_q3 是上一个工位中断前的 WIP 提交（a0e7778，未验证）——逐项检查（task.md 转写与证据对照表、files sha256、测试、参考解、≥2 mutant），按执行方案第 10 步验证，缺的补齐，再写 practice/p4/manifest-T35b.json（8 题）与 README-T35b.md。
+只写 tasks/scope.json 里 T35b 允许的路径与 tasks/progress/T35b.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35b → push → gh pr create --base main --title "T35b: P4 practice (PR/AR/FL/SR/RC, w sessions)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T35c 新开（P4 练习批 2 前半 · SQ/LT（10 题））
+
+```
+你是执行工位，负责 T35c（P4 真题练习，批 2 前半 · SQ/LT（10 题））。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+新任务：从最新 origin/main 开分支 task/T35c-p4-practice（照交接 README §1）。大题清单见任务卡分批表的 T35c 行。先读 T35a / T35b 已完成的 2–3 道练习作范本（分支 origin/task/T35a-p4-practice、origin/task/T35b-p4-practice，可用 git show 或另建只读 worktree 查看），再逐题按执行方案做。
+只写 tasks/scope.json 里 T35c 允许的路径与 tasks/progress/T35c.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35c → push → gh pr create --base main --title "T35c: P4 practice (SQ/LT, s sessions + w22_41)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T35d 新开（P4 练习批 2 后半 · SQ/LT（9 题））
+
+```
+你是执行工位，负责 T35d（P4 真题练习，批 2 后半 · SQ/LT（9 题））。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+新任务：从最新 origin/main 开分支 task/T35d-p4-practice（照交接 README §1）。大题清单见任务卡分批表的 T35d 行。先读 T35a / T35b 已完成的 2–3 道练习作范本（分支 origin/task/T35a-p4-practice、origin/task/T35b-p4-practice，可用 git show 或另建只读 worktree 查看），再逐题按执行方案做。
+只写 tasks/scope.json 里 T35d 允许的路径与 tasks/progress/T35d.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35d → push → gh pr create --base main --title "T35d: P4 practice (SQ/LT, w sessions)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T35e 新开（P4 练习批 3 前半 · OP（9 题））
+
+```
+你是执行工位，负责 T35e（P4 真题练习，批 3 前半 · OP（9 题））。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+新任务：从最新 origin/main 开分支 task/T35e-p4-practice（照交接 README §1）。大题清单见任务卡分批表的 T35e 行。先读 T35a / T35b 已完成的 2–3 道练习作范本（分支 origin/task/T35a-p4-practice、origin/task/T35b-p4-practice，可用 git show 或另建只读 worktree 查看），再逐题按执行方案做。
+只写 tasks/scope.json 里 T35e 允许的路径与 tasks/progress/T35e.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35e → push → gh pr create --base main --title "T35e: P4 practice (OP, s sessions)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T35f 新开（P4 练习批 3 后半 · OP（9 题））
+
+```
+你是执行工位，负责 T35f（P4 真题练习，批 3 后半 · OP（9 题））。先读 AGENTS.md、docs/DECISIONS.md（D1、D3、D10、D11、D13、D24、D31、D37 ②、D42、D43）、tasks/T35-p4-practice.md（任务卡：本子批的大题清单在分批表里）、papers/p4/practice-notes.md、schemas/exercise-format.md 末节、tasks/handoff/README.md（通用约定）与 **tasks/handoff/T35-practice.md（交接文档：每道大题的 11 步执行方案、占比口径、已知的坑——严格照做）**。
+新任务：从最新 origin/main 开分支 task/T35f-p4-practice（照交接 README §1）。大题清单见任务卡分批表的 T35f 行。先读 T35a / T35b 已完成的 2–3 道练习作范本（分支 origin/task/T35a-p4-practice、origin/task/T35b-p4-practice，可用 git show 或另建只读 worktree 查看），再逐题按执行方案做。
+只写 tasks/scope.json 里 T35f 允许的路径与 tasks/progress/T35f.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T35f → push → gh pr create --base main --title "T35f: P4 practice (OP, w sessions)"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T37A 续做（P4 卡：FL / SR / RC + front）
+
+```
+你是执行工位，续做 T37A（P4 题型卡，设计类产物）。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D2、D10、D13、D24、D25、D31、D33、D37、D40–D44）、**tasks/T37-p4-cards.md（任务卡：卡片结构、Python 模板 / 得分点地图 / 对应练习三项、选题规则、六条审计教训——全文照做）**、schemas/card-format.md、papers/p4/taxonomy.json、papers/p4/tagging-guide.md、papers/p4/skill_tags.json、corpus/tag_report_p4.md、tasks/handoff/README.md 与 **tasks/handoff/T37-cards.md（交接文档：现状、工具、每张卡的执行方案）**。
+续做已推的分支 task/T37A-p4-cards（照交接 README §1 建 worktree）：PR、AR 两章已完成，是你的质量标杆，先通读。剩下 FL、SR、RC 三章（cards + core，进度日志里已预选代表题与变式，核对原页后再用）与 papers/p4/front.md。每张卡的完整作答都要写成可运行的整题 Python，在官方源文件 / QP 测试数据上跑过，输出与 MS 一致；工具见交接文档（~/Desktop/alevel-cs-wt/handoff/t37b-scripts/ 复制到 work/tmp/）。
+只写 tasks/scope.json 里 T37A 允许的路径与 tasks/progress/T37A.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → python3 build/build.py p4 → make check-scope TASK=T37A → push → gh pr create --base main --title "T37 batch A: P4 front + PR/AR/FL/SR/RC cards"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T37B 续做（P4 卡：OP / MP + back）
+
+```
+你是执行工位，续做 T37B（P4 题型卡，设计类产物）。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D2、D10、D13、D24、D25、D31、D33、D37、D40–D44）、**tasks/T37-p4-cards.md（任务卡：卡片结构、Python 模板 / 得分点地图 / 对应练习三项、选题规则、六条审计教训——全文照做）**、schemas/card-format.md、papers/p4/taxonomy.json、papers/p4/tagging-guide.md、papers/p4/skill_tags.json、corpus/tag_report_p4.md、tasks/handoff/README.md 与 **tasks/handoff/T37-cards.md（交接文档：现状、工具、每张卡的执行方案）**。
+续做已推的分支 task/T37B-p4-cards（照交接 README §1 建 worktree）：SQ、LT 两章已完成，是你的质量标杆，先通读。剩下 OP（7 型）、MP（3 型，含截图证据格的讲法）两章（cards + core）与 papers/p4/back.md。每张卡的完整作答都要写成可运行的整题 Python，在官方源文件 / QP 测试数据上跑过，输出与 MS 一致；上一个工位的脚本与已跑程序在 ~/Desktop/alevel-cs-wt/handoff/t37b-scripts/（复制到 work/tmp/t37b/）。
+只写 tasks/scope.json 里 T37B 允许的路径与 tasks/progress/T37B.md；共享文件不改。每完成一个单元就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → python3 build/build.py p4 → make check-scope TASK=T37B → push → gh pr create --base main --title "T37 batch B: P4 SQ/LT/OP/MP cards + back"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
