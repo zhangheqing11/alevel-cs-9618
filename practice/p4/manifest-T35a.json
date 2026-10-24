@@ -826,6 +826,172 @@
         "1(d)(iii): MS p.14 screenshot shows an extra debug line (97); tests check only the values the MS lists"
       ],
       "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens."
+    },
+    {
+      "directory": "practice/p4/9618_s24_42_q3",
+      "id": "9618_s24_42:3(a)",
+      "paper": "9618_s24_42",
+      "marks": 23,
+      "auto_marks": 22.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.957,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-04",
+        "P4-RC-01",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-RC-02",
+        "P4-MP-01",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_42:3(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(i)",
+          "marks": 4,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(ii)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(i)",
+          "marks": 4,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(i)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 4,
+      "tests": 7,
+      "qp_pages_checked": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "ms_pages_checked": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "qp_over_ms": [
+        "`RecursiveInsertion(IntegerArray, NumberElements)`；`IterativeInsertion(IntegerArray, NumberElements)`（MS 也接受仅数组参数，测试兼容）；`BinarySearch(IntegerArray, First, Last, ToFind)`。",
+        "3(c)(i)：MS p.35 的 Python 外循环从 NumberElements 向下递减，不能对原始数组完成升序排序；例如 [3, 2, 1] 得到 [1, 3, 2]。按 QP 改为依次插入长度递增的前缀。",
+        "3(c)(ii)：QP 要求 original initialised array；MS p.36 直接复用已被递归排序改变的 NumberArray。参考解给两个排序各传副本，测试检查两次入口数组都为原始顺序。",
+        "3(b)(i) 原卷使用无界 ARRAY[] 参数；此处忠实转写，属 QP 原文，不作为 D24 教学新写法。测试不要求输出数组采用 Python 列表格式或逐行输出。"
+      ],
+      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。"
     }
   ],
   "count": 6,
