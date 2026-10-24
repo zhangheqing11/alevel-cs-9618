@@ -875,7 +875,7 @@
       "id": "9618_w24_42:1(a)(i)",
       "paper": "9618_w24_42",
       "marks": 29,
-      "auto_marks": 23.2,
+      "auto_marks": 22.2,
       "types": [
         "P4-OP-01",
         "P4-OP-02",
@@ -981,15 +981,15 @@
           "auto_mps": [
             1,
             2,
-            3,
             4,
             6,
             7
           ],
           "manual_mps": [
-            5
+            5,
+            3
           ],
-          "auto_marks": 6.0
+          "auto_marks": 5.0
         },
         {
           "id": "9618_w24_42:1(e)(iii)",
@@ -1030,10 +1030,10 @@
       "qp_over_ms": [
         "构造参数顺序照 MS Python；主程序两名 Character 的变量名不限（MS 用 P1/P2）。QP 类图写 Type / CharacterName，MS Python 写 EventType / CName；参考解用 QP 名称，行为测试容许这两个私有属性的 MS 别名，标识符仍按 QP 人工核对。无数据文件，本卷 HighScoreTable.txt 属第3题，不复制。MS p.17 截图依次 Tarz/Tarz/Tarz/Geni/Tarz，最终 Tarz 4 分。1(e)(ii) 的单场平局 MP5 及 MP6 内总分平局分支人工核对，固定比赛数据无平局；其余积分行为自动测。"
       ],
-      "tests": 5,
-      "mutants": 2,
-      "manual_marks": 5.8,
-      "auto_share": 0.8
+      "tests": 30,
+      "mutants": 3,
+      "manual_marks": 6.8,
+      "auto_share": 0.7655
     },
     {
       "directory": "practice/p4/9618_w25_41_q2",
