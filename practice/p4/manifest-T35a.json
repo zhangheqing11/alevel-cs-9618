@@ -1296,7 +1296,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 8,
       "qp_pages_checked": [
         4,
@@ -1324,7 +1324,7 @@
         "本题 Python MS 范例与 QP 无需作行为修正。2(c) 的 Java / VB 范例跳过值 −1，QP 要求输出每个元素，本练习一律按 QP 输出所有元素（含负整数）。允许迭代或递归二分查找，排序须为插入排序。",
         "截图测试按 MS p.25 / p.32 的数值与顺序断言，不固定说明文字；单行空格格式只在 QP 明确要求的 OutputArray 中检查。"
       ],
-      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。"
+      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     }
   ],
   "count": 6,
