@@ -1,0 +1,51 @@
+{
+  "id": "9618_s24_42:3(a)",
+  "kind": "past-paper",
+  "title": "递归与迭代插入排序、递归二分查找",
+  "source": {
+    "paper": "9618_s24_42",
+    "rows": [
+      "9618_s24_42:3(a)",
+      "9618_s24_42:3(b)(i)",
+      "9618_s24_42:3(b)(ii)",
+      "9618_s24_42:3(b)(iii)",
+      "9618_s24_42:3(c)(i)",
+      "9618_s24_42:3(c)(ii)",
+      "9618_s24_42:3(c)(iii)",
+      "9618_s24_42:3(d)(i)",
+      "9618_s24_42:3(d)(ii)",
+      "9618_s24_42:3(d)(iii)"
+    ]
+  },
+  "marks": 23,
+  "types": [
+    "P4-AR-01",
+    "P4-SR-04",
+    "P4-RC-01",
+    "P4-AR-04",
+    "P4-MP-03",
+    "P4-RC-02",
+    "P4-MP-01",
+    "P4-SR-02"
+  ],
+  "skills": [
+    "binary-search",
+    "count-loop",
+    "div-mod",
+    "insertion-sort",
+    "module-header",
+    "nested-if",
+    "nested-loops",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "recursion",
+    "relational-ops",
+    "return-value",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

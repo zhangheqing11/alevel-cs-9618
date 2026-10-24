@@ -1,0 +1,1334 @@
+{
+  "subbatch": "T35a",
+  "exercises": [
+    {
+      "directory": "practice/p4/9618_s22_41_q1",
+      "id": "9618_s22_41:1(a)",
+      "paper": "9618_s22_41",
+      "marks": 29,
+      "auto_marks": 23.9,
+      "manual_marks": 5.1,
+      "auto_share": 0.824,
+      "types": [
+        "P4-AR-01",
+        "P4-FL-02",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-PR-01",
+        "P4-SR-04",
+        "P4-FL-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_41:1(a)",
+          "marks": 2,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_41:1(b)",
+          "marks": 6,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+          ],
+          "manual_mps": [
+            1,
+            6
+          ],
+          "auto_marks": 4.5
+        },
+        {
+          "id": "9618_s22_41:1(c)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_41:1(d)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_41:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s22_41:1(e)(i)",
+          "marks": 3,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s22_41:1(e)(ii)",
+          "marks": 5,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s22_41:1(e)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_41:1(e)(iv)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s22_41:1(f)",
+          "marks": 4,
+          "primary": "P4-FL-03",
+          "auto_mps": [
+            1,
+            3,
+            4
+          ],
+          "manual_mps": [
+            2,
+            5
+          ],
+          "auto_marks": 2.4
+        }
+      ],
+      "files": [
+        {
+          "name": "HighScore.txt",
+          "bytes": 109,
+          "sha256": "df01ab58ab0f085bfbb4a8f80d8e80406de487ed059df33830bc9cc0decc5270",
+          "source": "9618_s22_sf_41/06_9618_41_Confidential Source Files June 2022/HighScore.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 4,
+      "tests": 15,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        5,
+        9,
+        13,
+        16,
+        17
+      ],
+      "qp_over_ms": [
+        "1(e)(ii): MS Python example breaks after one shift; reference and tests follow QP (whole list moves down)",
+        "1(f): MS example writes to \" NewHighScore.txt\" (leading space) and closes inside the loop; tests use the QP file name"
+      ],
+      "notes": "Arrange(Username, Score) is the MS name for the unnamed 1(e)(ii) procedure; NewHighScore.txt line format not fixed by QP, tests compare tokens."
+    },
+    {
+      "directory": "practice/p4/9618_s22_42_q2",
+      "id": "9618_s22_42:2(a)",
+      "paper": "9618_s22_42",
+      "marks": 23,
+      "auto_marks": 22.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.957,
+      "types": [
+        "P4-AR-02",
+        "P4-SR-03",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s22_42:2(a)",
+          "marks": 4,
+          "primary": "P4-AR-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s22_42:2(b)(i)",
+          "marks": 5,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5
+        },
+        {
+          "id": "9618_s22_42:2(b)(ii)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s22_42:2(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s22_42:2(c)(i)",
+          "marks": 8,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 8
+        },
+        {
+          "id": "9618_s22_42:2(c)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        }
+      ],
+      "files": [],
+      "mutants": 4,
+      "tests": 9,
+      "qp_pages_checked": [
+        4,
+        5,
+        6
+      ],
+      "ms_pages_checked": [
+        21,
+        22,
+        24
+      ],
+      "qp_over_ms": [
+        "2(c)(i): MS Python example tests `if Upper >= 0`; reference follows the QP `IF Upper >= Lower`",
+        "2(c): the QP Mid formula (Lower + (Upper - 1)) DIV 2 recurses forever for some positions; tests use only cases the faithful translation answers correctly (standard formula also passes)"
+      ],
+      "notes": "No data file (random numbers). Screenshot tests run the program through a wrapper that seeds random; assertions are seed-independent properties."
+    },
+    {
+      "directory": "practice/p4/9618_s23_41_q1",
+      "id": "9618_s23_41:1(a)(i)",
+      "paper": "9618_s23_41",
+      "marks": 18,
+      "auto_marks": 15.2,
+      "manual_marks": 2.8,
+      "auto_share": 0.844,
+      "types": [
+        "P4-AR-01",
+        "P4-FL-01",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-SR-01",
+        "P4-PR-01"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_41:1(a)(i)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(a)(ii)",
+          "marks": 4,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            5
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_s23_41:1(b)(i)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_41:1(b)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s23_41:1(c)",
+          "marks": 3,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_41:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s23_41:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Data.txt",
+          "bytes": 89,
+          "sha256": "1621c8fb2d4c9c6c5a98b7bbb66514ebdd75c6bf6d6ee79d010851481b5fadd2",
+          "source": "9618_s23_sf_41/06_9618_41_2023_source files/Data.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 5,
+      "tests": 10,
+      "qp_pages_checked": [
+        2,
+        3
+      ],
+      "ms_pages_checked": [
+        8,
+        11
+      ],
+      "qp_over_ms": [
+        "1(b)/1(c): MS Java example loops to length - 1 (last element skipped, also visible in the MS p.11 screenshot); tests follow QP and include the last element"
+      ],
+      "notes": "Main program run in-process with runpy to read the local DataArray; MS accepts DataArray = [] + append, reference uses [0] * 25 per D10."
+    },
+    {
+      "directory": "practice/p4/9618_s23_42_q1",
+      "id": "9618_s23_42:1(a)",
+      "paper": "9618_s23_42",
+      "marks": 14,
+      "auto_marks": 14.0,
+      "manual_marks": 0.0,
+      "auto_share": 1.0,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-03",
+        "P4-AR-04",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s23_42:1(a)",
+          "marks": 2,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_42:1(b)",
+          "marks": 2,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s23_42:1(c)",
+          "marks": 6,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 6
+        },
+        {
+          "id": "9618_s23_42:1(d)(i)",
+          "marks": 3,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s23_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 6,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        8,
+        10
+      ],
+      "qp_over_ms": [
+        "1(c): QP pseudocode inner loop FOR Y <- 0 TO ArrayLength - X - 1 (inclusive) would index Animals[10]; tests check only the sorted result, MS Python range() form passes",
+        "1(a): MS Python example is only `global Animals #comment`; per D10 (1) the test requires a real 10-element module-level list"
+      ],
+      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile)."
+    },
+    {
+      "directory": "practice/p4/9618_s24_41_q1",
+      "id": "9618_s24_41:1(a)",
+      "paper": "9618_s24_41",
+      "marks": 27,
+      "auto_marks": 25.0,
+      "manual_marks": 2.0,
+      "auto_share": 0.926,
+      "types": [
+        "P4-AR-01",
+        "P4-PR-01",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-SR-03",
+        "P4-MP-01",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_41:1(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(b)",
+          "marks": 5,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s24_41:1(c)(i)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s24_41:1(c)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        },
+        {
+          "id": "9618_s24_41:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-SR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4
+        },
+        {
+          "id": "9618_s24_41:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_41:1(e)(i)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5
+        },
+        {
+          "id": "9618_s24_41:1(e)(ii)",
+          "marks": 3,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_41:1(e)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [],
+          "auto_marks": 2
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 11,
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        7,
+        9,
+        13
+      ],
+      "qp_over_ms": [
+        "1(a): MS Python example is only `global DataStored #integer`; per D10 (1) the test requires a real 20-element module-level list",
+        "1(e)(iii): MS accepts index 16 (whole 20-slot array sorted); test accepts 1 or 16"
+      ],
+      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped."
+    },
+    {
+      "directory": "practice/p4/9618_s24_42_q1",
+      "id": "9618_s24_42:1(a)",
+      "paper": "9618_s24_42",
+      "marks": 22,
+      "auto_marks": 19.5,
+      "manual_marks": 2.5,
+      "auto_share": 0.886,
+      "types": [
+        "P4-FL-01",
+        "P4-MP-01",
+        "P4-SR-01",
+        "P4-AR-05",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_42:1(a)",
+          "marks": 6,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [
+            1,
+            8
+          ],
+          "auto_marks": 4.5
+        },
+        {
+          "id": "9618_s24_42:1(b)",
+          "marks": 4,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_42:1(c)(i)",
+          "marks": 6,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s24_42:1(c)(ii)",
+          "marks": 3,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3
+        },
+        {
+          "id": "9618_s24_42:1(d)(i)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_42:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_s24_42:1(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Easy.txt",
+          "bytes": 79,
+          "sha256": "a70412a68fe5ebebd7e5e94a7de486f718213bdb47d97103f159f9cc30e11497",
+          "source": "9618_s24_sf_42/Easy.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "Medium.txt",
+          "bytes": 273,
+          "sha256": "8e665d58bc9c9ec87e301da29c5e15dffc29648cab7a8435497843fb41fdc07a",
+          "source": "9618_s24_sf_42/Medium.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "Hard.txt",
+          "bytes": 570,
+          "sha256": "774cee18b5abd92155c5550baf4a7787c6c29ff7cc7186c7d00287b95fcbbf13",
+          "source": "9618_s24_sf_42/Hard.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        }
+      ],
+      "mutants": 5,
+      "tests": 16,
+      "qp_pages_checked": [
+        2,
+        3,
+        4
+      ],
+      "ms_pages_checked": [
+        13,
+        14
+      ],
+      "qp_over_ms": [
+        "1(a)/1(c): MS Python example sets NumberWords = len(WordArray) (main word included) and then mixes NumberWords-1 and NumberWords+1; QP and MS MP7 say NumberWords counts answers only, reference and tests follow QP",
+        "1(d)(iii): MS p.14 screenshot shows an extra debug line (97); tests check only the values the MS lists"
+      ],
+      "notes": "1(c)(i) MP1 is half automated (outputs main word and count) and half manual (procedure header has no parameters). Percentage and unfound-answer layout not fixed by QP; tests match tokens."
+    },
+    {
+      "directory": "practice/p4/9618_s24_42_q3",
+      "id": "9618_s24_42:3(a)",
+      "paper": "9618_s24_42",
+      "marks": 23,
+      "auto_marks": 22.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.957,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-04",
+        "P4-RC-01",
+        "P4-AR-04",
+        "P4-MP-03",
+        "P4-RC-02",
+        "P4-MP-01",
+        "P4-SR-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_42:3(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(i)",
+          "marks": 4,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(ii)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:3(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(i)",
+          "marks": 4,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(i)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_42:3(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 4,
+      "tests": 7,
+      "qp_pages_checked": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "ms_pages_checked": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "qp_over_ms": [
+        "`RecursiveInsertion(IntegerArray, NumberElements)`；`IterativeInsertion(IntegerArray, NumberElements)`（MS 也接受仅数组参数，测试兼容）；`BinarySearch(IntegerArray, First, Last, ToFind)`。",
+        "3(c)(i)：MS p.35 的 Python 外循环从 NumberElements 向下递减，不能对原始数组完成升序排序；例如 [3, 2, 1] 得到 [1, 3, 2]。按 QP 改为依次插入长度递增的前缀。",
+        "3(c)(ii)：QP 要求 original initialised array；MS p.36 直接复用已被递归排序改变的 NumberArray。参考解给两个排序各传副本，测试检查两次入口数组都为原始顺序。",
+        "3(b)(i) 原卷使用无界 ARRAY[] 参数；此处忠实转写，属 QP 原文，不作为 D24 教学新写法。测试不要求输出数组采用 Python 列表格式或逐行输出。"
+      ],
+      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_41_q2",
+      "id": "9618_s25_41:2(a)",
+      "paper": "9618_s25_41",
+      "marks": 25,
+      "auto_marks": 22.25,
+      "manual_marks": 2.75,
+      "auto_share": 0.89,
+      "types": [
+        "P4-FL-01",
+        "P4-AR-05",
+        "P4-FL-03",
+        "P4-MP-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_41:2(a)",
+          "marks": 7,
+          "primary": "P4-FL-01",
+          "auto_mps": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 5.25
+        },
+        {
+          "id": "9618_s25_41:2(b)",
+          "marks": 6,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_41:2(c)",
+          "marks": 5,
+          "primary": "P4-FL-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_41:2(d)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_41:2(e)(i)",
+          "marks": 3,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_s25_41:2(e)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [
+        {
+          "name": "Blue.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Blue.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        },
+        {
+          "name": "Green.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Green.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        },
+        {
+          "name": "Orange.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Orange.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        },
+        {
+          "name": "Pink.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Pink.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        },
+        {
+          "name": "Red.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Red.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        },
+        {
+          "name": "TheData.txt",
+          "bytes": 674,
+          "sha256": "d8e5431c47d57241d14f05dc1fec736f71fca7557556f293e75a4d4a2f2beb24",
+          "source": "9618_s25_sf_41/TheData.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": true,
+          "final_newline": false
+        },
+        {
+          "name": "Yellow.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source": "9618_s25_sf_41/Yellow.txt",
+          "sha256_matches_source_files_p4": true,
+          "crlf": false,
+          "final_newline": false
+        }
+      ],
+      "mutants": 5,
+      "tests": 9,
+      "qp_pages_checked": [
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "qp_over_ms": [
+        "`ReadData()` 返回字符串列表；`SplitData(DataArray)` 无返回值，声明六个局部整数数组并分别调用 `StoreData(DataToStore, FileName)`；`StoreData` 追加写整数。按 MS 接口命名；数组在数据到达时增长（未知行数，不要求预留任意固定上限）。",
+        "2(a)：MS p.19 Python 直接 append(Line)，未去换行；按该行 MP6 与 QP 数据格式去除 CR/LF，否则分色失败。",
+        "2(b)/2(c)：MS p.21 将 SplitLine[0] 字符串加入数组，p.26 直接 write(Item)；QP 明确数组存 integer，参考解先 int()，写时 str()。",
+        "未知/损坏颜色和文件缺失时的返回数组内容 QP 未定义，测试不替题目规定；文件不存在须有异常消息。输出措辞不固定。官方空色文件一并复制，追加测试不覆写已有行。"
+      ],
+      "notes": "- 按 MS 人工查 ReadData 函数头与打开/关闭位置（MP1、MP3），SplitData 函数头（MP1）。\n- StoreData MP1 含函数头、追加行为、关闭位置；追加可自动测，函数头与关闭位置人工核对。\n- 六个 INTEGER 数组及动态大小注释；实际局部数组由传给 StoreData 的值检查，不强制数组变量名。\n- e(i) 调用链与返回值使用人工复核，e(ii) 文件名必须与数据同屏，输入与提示必须可见，截图须清晰。\n- 2(a) 8 个可选点最多 7 分：按分值比例折算。"
+    },
+    {
+      "directory": "practice/p4/9618_s25_43_q2",
+      "id": "9618_s25_43:2(a)",
+      "paper": "9618_s25_43",
+      "marks": 20,
+      "auto_marks": 19.0,
+      "manual_marks": 1.0,
+      "auto_share": 0.95,
+      "types": [
+        "P4-AR-01",
+        "P4-SR-04",
+        "P4-AR-04",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-SR-02",
+        "P4-MP-02"
+      ],
+      "rows": [
+        {
+          "id": "9618_s25_43:2(a)",
+          "marks": 1,
+          "primary": "P4-AR-01",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:2(b)",
+          "marks": 5,
+          "primary": "P4-SR-04",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_43:2(c)",
+          "marks": 2,
+          "primary": "P4-AR-04",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(d)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s25_43:2(e)",
+          "marks": 6,
+          "primary": "P4-SR-02",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_s25_43:2(f)(i)",
+          "marks": 2,
+          "primary": "P4-MP-02",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s25_43:2(f)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        }
+      ],
+      "files": [],
+      "mutants": 5,
+      "tests": 8,
+      "qp_pages_checked": [
+        4,
+        5,
+        6
+      ],
+      "ms_pages_checked": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "qp_over_ms": [
+        "`InsertionSort(DataArray)` 返回升序数组；`OutputArray(DataArray)` 无返回值，按 QP 输出一行空格分隔；`Search(DataArray, ItemToFind)` 返回下标或 −1。无数据文件，不复制本卷其他题目的 QueueData.txt。",
+        "本题 Python MS 范例与 QP 无需作行为修正。2(c) 的 Java / VB 范例跳过值 −1，QP 要求输出每个元素，本练习一律按 QP 输出所有元素（含负整数）。允许迭代或递归二分查找，排序须为插入排序。",
+        "截图测试按 MS p.25 / p.32 的数值与顺序断言，不固定说明文字；单行空格格式只在 QP 明确要求的 OutputArray 中检查。"
+      ],
+      "notes": "- 数组在主程序局部，注释 14 个 INTEGER。\n- 模块头按 MS 检查；含返回值或输出行为的混合点仍计自动覆盖，其函数头由人工补核。\n- 2(b) 必须插入排序：提取当前值、后移已排序段、插回正确位置。结果正确不能证明采用了指定排序。\n- 2(e) 确为二分查找；允许递归或迭代，不限定变量名或循环形式。\n- 2(f) appropriate message 语义与截图清晰度人工核对。"
+    }
+  ],
+  "count": 6,
+  "marks": 133,
+  "auto_marks": 119.1,
+  "manual_marks": 13.9
+}

@@ -1,0 +1,47 @@
+{
+  "id": "9618_s22_42:2(a)",
+  "kind": "past-paper",
+  "title": "二维随机数组：冒泡排序与递归二分查找",
+  "source": {
+    "paper": "9618_s22_42",
+    "rows": [
+      "9618_s22_42:2(a)",
+      "9618_s22_42:2(b)(i)",
+      "9618_s22_42:2(b)(ii)",
+      "9618_s22_42:2(b)(iii)",
+      "9618_s22_42:2(c)(i)",
+      "9618_s22_42:2(c)(ii)"
+    ]
+  },
+  "marks": 23,
+  "types": [
+    "P4-AR-02",
+    "P4-SR-03",
+    "P4-AR-04",
+    "P4-MP-03",
+    "P4-SR-02"
+  ],
+  "skills": [
+    "array-2d",
+    "binary-search",
+    "bubble-sort",
+    "data-types",
+    "declare-array",
+    "div-mod",
+    "initialise-variables",
+    "loop-bounds",
+    "module-header",
+    "nested-loops",
+    "output-format",
+    "procedure-call",
+    "random-numbers",
+    "recursion",
+    "relational-ops",
+    "test-output",
+    "translate-pseudocode"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

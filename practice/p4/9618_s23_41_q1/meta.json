@@ -1,0 +1,52 @@
+{
+  "id": "9618_s23_41:1(a)(i)",
+  "kind": "past-paper",
+  "title": "读 25 个整数、输出数组、线性查找计数",
+  "source": {
+    "paper": "9618_s23_41",
+    "rows": [
+      "9618_s23_41:1(a)(i)",
+      "9618_s23_41:1(a)(ii)",
+      "9618_s23_41:1(b)(i)",
+      "9618_s23_41:1(b)(ii)",
+      "9618_s23_41:1(b)(iii)",
+      "9618_s23_41:1(c)",
+      "9618_s23_41:1(d)(i)",
+      "9618_s23_41:1(d)(ii)"
+    ]
+  },
+  "marks": 18,
+  "types": [
+    "P4-AR-01",
+    "P4-FL-01",
+    "P4-AR-04",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-SR-01",
+    "P4-PR-01"
+  ],
+  "skills": [
+    "accumulator",
+    "array-index",
+    "count-loop",
+    "exception-handling",
+    "file-close",
+    "file-open-read",
+    "input-prompt",
+    "input-validation",
+    "linear-search",
+    "loop-bounds",
+    "loop-to-eof",
+    "module-header",
+    "output-format",
+    "procedure-call",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [
+    "Data.txt"
+  ],
+  "entry": "main",
+  "ms_verified": true
+}

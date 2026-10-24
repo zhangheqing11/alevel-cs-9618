@@ -1,0 +1,48 @@
+{
+  "id": "9618_s25_43:2(a)",
+  "kind": "past-paper",
+  "title": "插入排序、数组格式输出、二分查找",
+  "source": {
+    "paper": "9618_s25_43",
+    "rows": [
+      "9618_s25_43:2(a)",
+      "9618_s25_43:2(b)",
+      "9618_s25_43:2(c)",
+      "9618_s25_43:2(d)(i)",
+      "9618_s25_43:2(d)(ii)",
+      "9618_s25_43:2(e)",
+      "9618_s25_43:2(f)(i)",
+      "9618_s25_43:2(f)(ii)"
+    ]
+  },
+  "marks": 20,
+  "types": [
+    "P4-AR-01",
+    "P4-SR-04",
+    "P4-AR-04",
+    "P4-MP-01",
+    "P4-MP-03",
+    "P4-SR-02",
+    "P4-MP-02"
+  ],
+  "skills": [
+    "array-index",
+    "binary-search",
+    "count-loop",
+    "div-mod",
+    "insertion-sort",
+    "module-header",
+    "nested-if",
+    "output-format",
+    "pre-condition-loop",
+    "procedure-call",
+    "recursion",
+    "relational-ops",
+    "return-value",
+    "shift-values"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
