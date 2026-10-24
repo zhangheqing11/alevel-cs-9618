@@ -156,3 +156,14 @@ F05：取消整个输出段数字严格相等；按 Recursive / Iterative 段匹
 - 运行：18 passed in 1.05s；9 个 mutant 各至少一测失败。
 - 占比：自动/人工分类不变，增加实际观测以支撑原自动声明；混合点中的结构/变量存储仍人工补核。
 
+## 9618_w25_42_q2
+
+增加随机数组 PrintArray → BubbleSort → PrintArray → RecursiveBinarySearch 的真实调用及返回数组传递检查。取消 Sorted 标题必须整行且紧邻两次数组的限制；Found at position 与下标允许相邻换行。单行数组空格格式仍是 QP 明确要求，额外说明行允许。
+
+- 调用观测：`test_2di_2fi_traced_main`。
+- 原件：QP pp.6–8；MS pp.19、22、25–26。
+- hollow-main：保留参考模块，主程序只硬编码原参考输出；测试失败。
+- 等价改写：主程序增加数字说明；主程序提取为 main()（必要时保留 global）。 两个版本均全过。
+- 运行：19 passed in 1.13s；9 个 mutant 各至少一测失败。
+- 占比：自动/人工分类不变，增加实际观测以支撑原自动声明；混合点中的结构/变量存储仍人工补核。
+

@@ -860,7 +860,7 @@
         }
       ],
       "files": [],
-      "mutants": 8,
+      "mutants": 9,
       "qp_pages_checked": [
         6,
         7,
@@ -878,7 +878,7 @@
         26
       ],
       "qp_over_ms": [],
-      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation."
+      "notes": "Page review inherited from the completed exercise and task.md; evidence cells and source hashes rechecked in this continuation. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_w25_43_q3",
