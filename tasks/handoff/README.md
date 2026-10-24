@@ -7,7 +7,7 @@
 | [T35-practice.md](T35-practice.md) | T35a–f P4 真题练习（54 道大题） | ✅ 已合并（#48、#49、#52–#55） |
 | [T37-cards.md](T37-cards.md) | T37A / T37B P4 题型卡 | ✅ 已合并（#50、#51） |
 | [T38-audit.md](T38-audit.md) | T38 审计 P4 手册 + 抽查 6 道练习 | ✅ 已合并 #57 |
-| [T38-fixes.md](T38-fixes.md) | T38b 改 P4 卡（含 OP 换题）；T38c1–3 排查 54 道 P4 练习 | 已派发（协调主会话创建的 Codex 会话：T38b `01a16e49-a50f-773f-833d-49c9ce4040d2`；T38c1 `01a16e49-ddd9-7082-b357-1d02f75810c5`；T38c2 `01a16e4a-0f6d-754d-9032-542d119b50e8`；T38c3 `01a16e4a-4059-7731-878e-a528614740fd`；默认 draft PR，验收照常，合并前先 `gh pr ready`） |
+| [T38-fixes.md](T38-fixes.md) | T38b 改 P4 卡（含 OP 换题）；T38c1–3 排查 54 道 P4 练习 | ✅ 已合并（#58、#60、#61、#59；D48） |
 | [T39-skill.md](T39-skill.md) | T39 教学 skill 重构到全四卷 + P3 / P4 记录表 | ✅ 已合并 #56（D47） |
 
 ## 通用约定（所有交接任务）
