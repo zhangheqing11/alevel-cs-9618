@@ -1,0 +1,1524 @@
+{
+  "subbatch": "T35f",
+  "exercises": [
+    {
+      "directory": "practice/p4/9618_w22_41_q2",
+      "id": "9618_w22_41:2(a)(i)",
+      "paper": "9618_w22_41",
+      "marks": 31,
+      "auto_marks": 23.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-06",
+        "P4-PR-03",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_41:2(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            5
+          ],
+          "manual_mps": [
+            1,
+            3,
+            4
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_41:2(a)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_41:2(b)(i)",
+          "marks": 6,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "manual_mps": [
+            1,
+            4
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w22_41:2(b)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w22_41:2(b)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_41:2(c)(i)",
+          "marks": 6,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w22_41:2(c)(ii)",
+          "marks": 4,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [
+            4
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w22_41:2(c)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "qp_over_ms": [
+        "同季 _43 与 _41 整卷相同，不另做练习。`CalculateValue(Player)` 使用 MS 的函数名；主程序各牌和两手牌名称不限。QP / MS 要求 Cards 有 10 格，MS p.11 Python 只 append 5 张；参考解分配 10 格。MS p.13 `range(0, 4)` 漏第五张，按 QP 改为 `range(0, 5)`。两手总分分别为 46、85；MS p.15 截图只要求 player 2 wins，测试不要求输出分数或固定措辞。平局分支由人工核对。"
+      ],
+      "tests": 8,
+      "mutants": 2,
+      "manual_marks": 8.0,
+      "auto_share": 0.7419
+    },
+    {
+      "directory": "practice/p4/9618_w22_42_q2",
+      "id": "9618_w22_42:2(a)",
+      "paper": "9618_w22_42",
+      "marks": 31,
+      "auto_marks": 26.2222,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-FL-02",
+        "P4-SR-01",
+        "P4-PR-01",
+        "P4-PR-03",
+        "P4-OP-07",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w22_42:2(a)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_42:2(b)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_42:2(c)",
+          "marks": 2,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w22_42:2(d)",
+          "marks": 7,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "manual_mps": [
+            7
+          ],
+          "auto_marks": 6.2222
+        },
+        {
+          "id": "9618_w22_42:2(e)",
+          "marks": 5,
+          "primary": "P4-SR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w22_42:2(f)",
+          "marks": 7,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_w22_42:2(g)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w22_42:2(g)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [
+        {
+          "name": "Characters.txt",
+          "bytes": 140,
+          "sha256": "e479919bb358a1d206c9901abfbb53b4b76d600be8635311148bb39f3be9ba07",
+          "source": "9618_w22_sf_42/11_9618_42_Confidential Source Files November 2022/Characters.txt",
+          "sha256_matches_source_files_p4": true
+        }
+      ],
+      "qp_pages_checked": [
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "qp_over_ms": [
+        "类方法按 QP 命名，无需另加读文件函数。主程序数组名称不限，测试在 main 命名空间检查包含 10 个 Character 的 list。MS p.16 Python 只 lower 输入、没有 lower 存储姓名，无法找到 Qui；参考解双方 lower，实现 MS 的大小写点并通过 QP 指定 qui 测试。MS p.19 的 Python 输出 CharacterName 却从未赋输入，参考解输出对象 GetName()。MS p.20 截图为 X = 83、Y = 9；QP p.7 的格式示例 Y = 0 只是示例格式，不是该次输入的结果。缺文件之后如何继续 QP 未定义，测试只核对捕获异常和消息。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 4.7778,
+      "auto_share": 0.8459
+    },
+    {
+      "directory": "practice/p4/9618_w23_41_q3",
+      "id": "9618_w23_41:3(a)(i)",
+      "paper": "9618_w23_41",
+      "marks": 30,
+      "auto_marks": 23.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-07",
+        "P4-OP-04",
+        "P4-OP-05",
+        "P4-PR-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_41:3(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            4
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(iii)",
+          "marks": 4,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:3(a)(iv)",
+          "marks": 4,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_41:3(b)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-04",
+          "auto_mps": [
+            1,
+            3
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(c)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_41:3(d)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w23_41:3(e)(i)",
+          "marks": 5,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w23_41:3(e)(ii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "qp_over_ms": [
+        "同季 _43 与 _41 整卷相同。构造参数按 MS Python 顺序 `(XPositionP, YPositionP, NameP)`，QP 未规定参数顺序，作为测试接口统一。本题没有强制 private，不以是否使用双下划线判分。MS p.37 Python 将移动分支缩进在方向校验循环中，导致有效方向不移动；参考解将分支放到循环后，按 QP 得到 jack right → (60, 50)、karla down → (100, 30)。无数据文件；函数头、属性类型、Move 是否使用 setter 人工补核。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 7.0,
+      "auto_share": 0.7667
+    },
+    {
+      "directory": "practice/p4/9618_w23_42_q3",
+      "id": "9618_w23_42:3(a)(i)",
+      "paper": "9618_w23_42",
+      "marks": 31,
+      "auto_marks": 23.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-07",
+        "P4-MP-03",
+        "P4-OP-04",
+        "P4-OP-05"
+      ],
+      "rows": [
+        {
+          "id": "9618_w23_42:3(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            5
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_42:3(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:3(a)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w23_42:3(a)(iv)",
+          "marks": 1,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w23_42:3(a)(v)",
+          "marks": 2,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:3(b)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:3(b)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_42:3(b)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w23_42:3(c)(i)",
+          "marks": 5,
+          "primary": "P4-OP-04",
+          "auto_mps": [
+            1,
+            4,
+            5
+          ],
+          "manual_mps": [
+            2,
+            3
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_42:3(c)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-05",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w23_42:3(d)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w23_42:3(d)(ii)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w23_42:3(d)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "ms_pages_checked": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "qp_over_ms": [
+        "构造函数接口按 MS Python：`Character(CName, DBirth, Intell, SpeedP)` 与 `MagicCharacter(ElementP, CName, DBirth, Intell, SpeedP)`；日期使用标准库 `datetime.datetime`（亦可接收 `date`）。年龄固定按 2023 减出生年份，不能用机器当前年；不比较月日。本题未要求 private，公有或私有实现均可，类型注释人工核对。无数据文件；本题 Python 范例行为无需修正。截图按 MS p.29 Royal / 4 / 77 与 p.34 Light / 5 / 90 测数值，允许浮点表示与不同提示措辞。"
+      ],
+      "tests": 9,
+      "mutants": 2,
+      "manual_marks": 8.0,
+      "auto_share": 0.7419
+    },
+    {
+      "directory": "practice/p4/9618_w24_41_q2",
+      "id": "9618_w24_41:2(a)(i)",
+      "paper": "9618_w24_41",
+      "marks": 34,
+      "auto_marks": 30.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-MP-03",
+        "P4-PR-01",
+        "P4-OP-03",
+        "P4-AR-05"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_41:2(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:2(b)(i)",
+          "marks": 5,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w24_41:2(b)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w24_41:2(c)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_41:2(c)(ii)",
+          "marks": 5,
+          "primary": "P4-PR-01",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w24_41:2(d)",
+          "marks": 5,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [],
+          "auto_marks": 5.0
+        },
+        {
+          "id": "9618_w24_41:2(e)(i)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_41:2(e)(ii)",
+          "marks": 2,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_41:2(e)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ms_pages_checked": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "qp_over_ms": [
+        "同季 _43 与 _41 整卷相同。构造参数顺序及方法名照 MS Python；`Horses` 和 `Course` 在主程序入口内声明。无数据文件。MS p.22 Python `Winner = -1` 在第一匹获胜时错误地取最后一匹，参考解初始化 0，增加 Beauty 获胜用例。QP 只要求 appropriate messages，截图测试只比较名字及数值（容许浮点舍入），不固定文字。MS p.25 两匹每跳成功率及平均值已核对：Beauty 14.4/72/57.6/50.4，平均48.6；Jet 39/65/52/45.5，平均50.375。"
+      ],
+      "tests": 8,
+      "mutants": 2,
+      "manual_marks": 4.0,
+      "auto_share": 0.8824
+    },
+    {
+      "directory": "practice/p4/9618_w24_42_q1",
+      "id": "9618_w24_42:1(a)(i)",
+      "paper": "9618_w24_42",
+      "marks": 29,
+      "auto_marks": 23.2,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-03",
+        "P4-PR-03",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_42:1(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:1(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:1(b)(i)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w24_42:1(b)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:1(c)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:1(d)",
+          "marks": 4,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_w24_42:1(e)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:1(e)(ii)",
+          "marks": 7,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "manual_mps": [
+            5
+          ],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w24_42:1(e)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "qp_over_ms": [
+        "构造参数顺序照 MS Python；主程序两名 Character 的变量名不限（MS 用 P1/P2）。QP 类图写 Type / CharacterName，MS Python 写 EventType / CName；参考解用 QP 名称，行为测试容许这两个私有属性的 MS 别名，标识符仍按 QP 人工核对。无数据文件，本卷 HighScoreTable.txt 属第3题，不复制。MS p.17 截图依次 Tarz/Tarz/Tarz/Geni/Tarz，最终 Tarz 4 分。1(e)(ii) 的单场平局 MP5 及 MP6 内总分平局分支人工核对，固定比赛数据无平局；其余积分行为自动测。"
+      ],
+      "tests": 5,
+      "mutants": 2,
+      "manual_marks": 5.8,
+      "auto_share": 0.8
+    },
+    {
+      "directory": "practice/p4/9618_w25_41_q2",
+      "id": "9618_w25_41:2(a)(i)",
+      "paper": "9618_w25_41",
+      "marks": 30,
+      "auto_marks": 25.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-06",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_41:2(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(b)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            3
+          ],
+          "manual_mps": [
+            2
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_41:2(c)(iii)",
+          "marks": 6,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(ii)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_41:2(d)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ms_pages_checked": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "qp_over_ms": [
+        "构造方法、getter 按 QP / MS Python 顺序。无数据文件。QP `Trains[0:9]` 与 D10 要求真实 10 格 list；MS p.19 Python 用空 list 后 append，参考解改为 `[None] * 10`，AddTrain 按 NumberTrains 下标存。这里 empty array 指尚未存列车，不是容量为零。GetTrains 返回字符串（不是 print），QP 明确了行格式和空站消息，测试核对格式；允许末尾空行或行末空格。MS p.25 截图：Station is full 一次，STH 两列车 12ADV/134、33ART/20，NTH 为21VBC/24。"
+      ],
+      "tests": 7,
+      "mutants": 2,
+      "manual_marks": 5.0,
+      "auto_share": 0.8333
+    },
+    {
+      "directory": "practice/p4/9618_w25_42_q1",
+      "id": "9618_w25_42:1(a)(i)",
+      "paper": "9618_w25_42",
+      "marks": 28,
+      "auto_marks": 24.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-03",
+        "P4-OP-07",
+        "P4-PR-01",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_42:1(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:1(a)(iv)",
+          "marks": 5,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_42:1(b)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_42:1(c)(i)",
+          "marks": 8,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [],
+          "auto_marks": 8.0
+        },
+        {
+          "id": "9618_w25_42:1(c)(ii)",
+          "marks": 3,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "ms_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "qp_over_ms": [
+        "构造参数按 MS Python `Bird(pDistancePerHour, pSpecies)`。主程序的输入编码 QP 未指定：本练习沿用 MS 的鸟选择 1/2，输入顺序为选择 → 分钟 → 方向 N/S/E/W（MS pp.15–17），已作为测试接口约定。QP 列方向与时间输入要求，没有给定这两者的测试输入顺序；若学生采用别的界面，先按此接口调整。Move 本身无需验证参数。MS p.17 的四次结果分别 (500,571)、(500,472)、(464.5,500)、(556,500)；不固定输出措辞，只 GetPosition 按 QP 明确格式。无数据文件，TreeData.txt 属第3题。"
+      ],
+      "tests": 6,
+      "mutants": 2,
+      "manual_marks": 4.0,
+      "auto_share": 0.8571
+    },
+    {
+      "directory": "practice/p4/9618_w25_43_q1",
+      "id": "9618_w25_43:1(a)(i)",
+      "paper": "9618_w25_43",
+      "marks": 31,
+      "auto_marks": 22.0,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-06",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w25_43:1(a)(i)",
+          "marks": 5,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            5
+          ],
+          "manual_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_43:1(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:1(a)(iii)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(i)",
+          "marks": 4,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            3,
+            4
+          ],
+          "manual_mps": [
+            1,
+            2
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(ii)",
+          "marks": 2,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(iii)",
+          "marks": 2,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            2
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_w25_43:1(b)(iv)",
+          "marks": 3,
+          "primary": "P4-OP-06",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(c)(i)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w25_43:1(c)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w25_43:1(d)(i)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_w25_43:1(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ms_pages_checked": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "qp_over_ms": [
+        "接口照 QP / MS Python：`BoardObject(Code, Value)`、`Board()`、`GetObject(row, column)`、`SetObject(TheObject, row, column)`、`DisplayBoard()`。Object1–Object5 是题给标识符，必须保留；主程序 Board 实例名不限。QP p.4 的网格图是行/列均0–9，黑格在 row1,column3，表示两个下标的含义，已在图旁原文转写；无额外数据。无数据文件，BinaryData.txt 属第2题。MS p.16 的完整棋盘与 p.19 输入10/4/-1/5的 C 5 输出已核对；Python 范例无需行为修正。本题未强制 private，公有/私有实现都可。"
+      ],
+      "tests": 8,
+      "mutants": 2,
+      "manual_marks": 9.0,
+      "auto_share": 0.7097
+    }
+  ],
+  "marks": 275,
+  "auto_marks": 219.4222,
+  "manual_marks": 55.5778,
+  "count": 9
+}

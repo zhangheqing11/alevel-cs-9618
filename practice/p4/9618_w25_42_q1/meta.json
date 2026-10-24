@@ -1,0 +1,54 @@
+{
+  "id": "9618_w25_42:1(a)(i)",
+  "kind": "past-paper",
+  "title": "Bird：飞行距离、坐标与输入校验",
+  "source": {
+    "paper": "9618_w25_42",
+    "rows": [
+      "9618_w25_42:1(a)(i)",
+      "9618_w25_42:1(a)(ii)",
+      "9618_w25_42:1(a)(iii)",
+      "9618_w25_42:1(a)(iv)",
+      "9618_w25_42:1(b)",
+      "9618_w25_42:1(c)(i)",
+      "9618_w25_42:1(c)(ii)"
+    ]
+  },
+  "marks": 28,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-03",
+    "P4-OP-07",
+    "P4-PR-01",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "assign-value",
+    "class-definition",
+    "constructor",
+    "data-types",
+    "encapsulation",
+    "getter-setter",
+    "initialise-variables",
+    "input-prompt",
+    "input-validation",
+    "logic-ops",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "operator-precedence",
+    "output-format",
+    "pre-condition-loop",
+    "return-value",
+    "string-concat",
+    "test-input-sequence",
+    "test-output",
+    "type-conversion"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}

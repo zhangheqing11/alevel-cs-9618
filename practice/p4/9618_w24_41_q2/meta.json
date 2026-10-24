@@ -1,0 +1,59 @@
+{
+  "id": "9618_w24_41:2(a)(i)",
+  "kind": "past-paper",
+  "title": "Horse 与 Fence：校验、成功率与最高平均值",
+  "source": {
+    "paper": "9618_w24_41",
+    "rows": [
+      "9618_w24_41:2(a)(i)",
+      "9618_w24_41:2(a)(ii)",
+      "9618_w24_41:2(b)(i)",
+      "9618_w24_41:2(b)(ii)",
+      "9618_w24_41:2(c)(i)",
+      "9618_w24_41:2(c)(ii)",
+      "9618_w24_41:2(d)",
+      "9618_w24_41:2(e)(i)",
+      "9618_w24_41:2(e)(ii)",
+      "9618_w24_41:2(e)(iii)"
+    ]
+  },
+  "marks": 34,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-MP-03",
+    "P4-PR-01",
+    "P4-OP-03",
+    "P4-AR-05"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-objects",
+    "class-definition",
+    "constructor",
+    "count-loop",
+    "data-types",
+    "declare-array",
+    "encapsulation",
+    "getter-setter",
+    "input-prompt",
+    "input-validation",
+    "max-min",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "nested-loops",
+    "object-instantiation",
+    "operator-precedence",
+    "output-format",
+    "relational-ops",
+    "return-value",
+    "test-input-sequence",
+    "test-output"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
