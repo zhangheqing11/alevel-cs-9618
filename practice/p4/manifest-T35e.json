@@ -649,10 +649,186 @@
       "qp_over_ms": [
         "构造参数采用 MS：`Employee(EmpNum, Pay, Job)` 与 `Manager(EmpNum, Pay, Job, Bonus)`。全局 `EmployeeArray` 为 8 个对象的 list；`EnterHours()` 无参数。周编号 1–52 映射 0–51，不测试 QP 未定义的无效周。MS p.35 / p.36 将 EmployeeArray 写成 Employees，p.36 `for(Y in range(0,8):` 是语法笔误；统一修正，输入 ID 保持 STRING、去行尾，完整读取工时对并关闭文件。p.30 的百分比公式照原页实现。p.37 截图顺序跟工时文件不同于 EmployeeArray；QP 未规定输出顺序，自动测核对全部 ID/总额映射，接受浮点显示差异，不强制排序。文件开关位置及调用结构人工补核。3(c) 8 个可选点最多 7 分，3(d) 6 个可选点最多 4 分。"
       ]
+    },
+    {
+      "directory": "practice/p4/9618_s24_41_q2",
+      "id": "9618_s24_41:2(a)(i)",
+      "paper": "9618_s24_41",
+      "marks": 31,
+      "auto_marks": 28.0,
+      "manual_marks": 3.0,
+      "auto_share": 0.9032,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-FL-02",
+        "P4-OP-07",
+        "P4-MP-01",
+        "P4-MP-03",
+        "P4-AR-05",
+        "P4-PR-03",
+        "P4-SR-01"
+      ],
+      "rows": [
+        {
+          "id": "9618_s24_41:2(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            4
+          ],
+          "manual_mps": [
+            1,
+            3
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_41:2(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_41:2(b)",
+          "marks": 7,
+          "primary": "P4-FL-02",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "manual_mps": [],
+          "auto_marks": 7.0
+        },
+        {
+          "id": "9618_s24_41:2(c)",
+          "marks": 4,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [],
+          "auto_marks": 4.0
+        },
+        {
+          "id": "9618_s24_41:2(d)(i)",
+          "marks": 2,
+          "primary": "P4-MP-01",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_41:2(d)(ii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1.0
+        },
+        {
+          "id": "9618_s24_41:2(e)(i)",
+          "marks": 6,
+          "primary": "P4-AR-05",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "manual_mps": [],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_s24_41:2(e)(ii)",
+          "marks": 2,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_s24_41:2(e)(iii)",
+          "marks": 2,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        }
+      ],
+      "files": [
+        {
+          "name": "Trees.txt",
+          "bytes": 224,
+          "sha256": "d4b482bb801132bc0b7ca26a6a694a59b5759b3242838996f9e15c21f2567291",
+          "source": "9618_s24_sf_41/Trees.txt",
+          "sha256_matches_source_files_p4": true
+        }
+      ],
+      "mutants": 2,
+      "tests": 7,
+      "qp_pages_checked": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "ms_pages_checked": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "qp_over_ms": [
+        "接口照 QP：`Tree(Name, Growth, MaxHeight, MaxWidth, Evergreen)`、`ReadData()` 返回对象列表、`PrintTrees(Item)`、`ChooseTree(Trees)`。QP 2(e)(iii) 写 ChooseTrees（多 s），与前文不一致，按定义用 ChooseTree。输入次序采用 MS p.25：先 keep/lose、再最大高、再最大宽、选树名、购买高度。仅测试已声明的 keep/lose；不要求其他同义输入。空匹配时输出消息后结束，不进入 MS p.27 没有保护的无限购买循环。年数不强制取整；官方截图接受 3 / 3.75 / 4，Beech 示例接受 12。PrintTrees 按 QP 文字格式，末尾句号不影响判定。MS ReadData 用 split(\"\\n\")，遇文件末尾换行会产生空记录，参考解逐行读取；官方原件字节不变。"
+      ]
     }
   ],
-  "count": 4,
-  "marks": 117,
-  "auto_marks": 95.5,
-  "manual_marks": 21.5
+  "count": 5,
+  "marks": 148,
+  "auto_marks": 123.5,
+  "manual_marks": 24.5
 }
