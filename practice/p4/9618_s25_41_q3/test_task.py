@@ -31,7 +31,7 @@ def test_3d_recursive_inorder(sol,monkeypatch,capsys):
     def spy(node): calls.append(node);return original(node)
     monkeypatch.setattr(sol,"OutputInOrder",spy)
     spy(root)
-    assert [int(v) for v in re.findall(r"-?\d+",capsys.readouterr().out)]==[5,7,10,15,20]
+    assert contains_values(capsys.readouterr().out, [5,7,10,15,20])
     assert len([n for n in calls if n is not None])==5
 
 def test_3b_and_3e_i_main_objects(candidate_path,capsys):
@@ -49,4 +49,24 @@ def test_3e_ii_screenshot(candidate_path):
     """9618_s25_41:3(e)(ii) whole: output 5,7,10,15,20, in ascending order."""
     result=run_script(candidate_path)
     assert result.returncode==0,result.stderr
-    assert [int(v) for v in re.findall(r"-?\d+",result.stdout)]==[5,7,10,15,20]
+    assert contains_values(result.stdout, [5,7,10,15,20])
+
+
+def contains_values(text, expected):
+    """D31/D46: compare required values in order, allowing explanatory text."""
+    values = iter(float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", text))
+    return all(any(abs(value - wanted) < 1e-7 for value in values) for wanted in expected)
+
+
+def test_3ei_main_call_chain(candidate_path, exercise_dir):
+    """9618_s25_41:3(e)(i) MS p.41: 3(e)(i) MP1–MP3; observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    inserts = r.called("Insert")
+    assert [list(c.args.values())[0].GetData() for c in inserts] == [20,5,15,7]
+    roots = r.called("GetRootNode")
+    outputs = r.called("OutputInOrder")
+    assert roots and outputs and list(outputs[0].args.values())[0] is roots[0].result
+    assert r.called("Tree.__init__") and list(r.called("Tree.__init__")[0].args.values())[0].GetData() == 10

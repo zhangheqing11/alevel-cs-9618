@@ -30,7 +30,14 @@ def test_3a_iii_iv_set_week_and_total(sol, week):
 def test_3b_inherits_and_calls_parent_with_bonus(sol, monkeypatch):
     """9618_s23_42:3(b)(i) MP1, MP3-MP4; 3(b)(ii) MP2-MP3: percent increase and parent call."""
     assert issubclass(sol.Manager,sol.Employee)
+    constructor_calls = []
+    original_constructor = sol.Employee.__init__
+    def constructor_spy(self,*args,**kwargs):
+        constructor_calls.append(args if args else tuple(kwargs.values()))
+        original_constructor(self,*args,**kwargs)
+    monkeypatch.setattr(sol.Employee,"__init__",constructor_spy)
     m=sol.Manager("02586",22.5,"Manager",5.25)
+    assert constructor_calls == [("02586",22.5,"Manager")]
     calls=[]
     original=sol.Employee.SetPay
     def spy(self,week,hours): calls.append((week,hours)); return original(self,week,hours)
@@ -89,6 +96,26 @@ def test_3e_ii_screenshot_all_pays(candidate_path,exercise_dir):
     """9618_s23_42:3(e)(i) MP1-MP2; 3(e)(ii) whole: eight ID/pay pairs from MS p.37."""
     result=run_script(candidate_path,files_dir=exercise_dir / "files")
     assert result.returncode == 0,result.stderr
-    numbers=re.findall(r"\d+(?:\.\d+)?",result.stdout)
-    pairs={numbers[i]:float(numbers[i+1]) for i in range(0,len(numbers),2)}
+    pairs = {}
+    expected_ids = ["12452","21548","02586","65912","42004","82610","51947","51847"]
+    for employee_id in expected_ids:
+        match = re.search(re.escape(employee_id) + r"\D+(\d+(?:\.\d+)?)", result.stdout)
+        assert match, result.stdout
+        pairs[employee_id] = float(match.group(1))
     assert pairs == pytest.approx({"12452":730.56,"21548":890,"02586":674.915625,"65912":475,"42004":768.5955,"82610":502.075,"51947":1216.1409,"51847":339.5925},rel=1e-6)
+
+
+def test_3ei_main_call_chain(candidate_path, exercise_dir):
+    """9618_s23_42:3(e)(i) MS p.36; 9618_s23_42:3(b)(i) MS p.28: 3(b)(i) MP3; 3(e)(i) MP1–MP2; observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    assert len(r.called("EnterHours")) == 1
+    ids = {str(c.result).strip() for c in r.called("GetEmployeeNumber")}
+    assert {"12452","21548","02586","65912","42004","82610","51947","51847"} <= ids
+    totals = r.called("GetTotalPay")
+    assert len(totals) >= 8 and all(str(c.result) in r.stdout for c in totals)
+    # Manager must initialise its Employee portion using the read values.
+    assert len(r.called("Employee.__init__")) == 8
+    assert len(r.called("Manager.__init__")) == 4

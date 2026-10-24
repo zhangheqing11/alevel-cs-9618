@@ -72,3 +72,17 @@ def test_3diii_magic_screenshot(candidate_path):
     """9618_w23_42:3(d)(ii) whole; 9618_w23_42:3(d)(iii) whole: Light, 5, 90 from MS p.34."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
     assert re.search(r'Light\D+5\D+90(?:\.0)?\b',r.stdout)
+
+
+def test_3bii_3dii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w23_42:3(b)(ii) MS p.29; 9618_w23_42:3(d)(ii) MS p.34: 3(b)(ii) MP1–MP3; 3(d)(ii) whole; observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    assert len(r.called("Learn")) >= 2
+    assert {c.result for c in r.called("ReturnAge")} == {4,5}
+    assert {c.result for c in r.called("GetIntelligence")} >= {77,90}
+    assert {c.result for c in r.called("GetName")} >= {"Royal","Light"}
+    assert all(str(c.result) in r.stdout for c in r.called("ReturnAge") + r.called("GetName"))
+    assert all(str(v) in r.stdout for v in (77,90))

@@ -52,11 +52,25 @@ def test_3eii_screenshots(candidate_path,name,direction,x,y):
     """9618_w23_41:3(e)(i) MP1-MP5; 9618_w23_41:3(e)(ii) MP1: exact two MS screenshot results."""
     r=run_script(candidate_path,stdin=f'{name}\n{direction}\n')
     assert r.returncode==0,r.stderr
-    assert re.search(r'X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout)
+    assert re.search(r'X\s*=\s*'+str(x)+r'.*Y\s*=\s*'+str(y),r.stdout, re.S)
 
 
 def test_3ei_rejects_invalid_inputs(candidate_path):
     """9618_w23_41:3(e)(i) MP1-MP5: reject both invalid names and invalid directions."""
     r=run_script(candidate_path,stdin='nobody\njack\nforward\nright\n')
     assert r.returncode==0,r.stderr
-    assert re.search(r'X\s*=\s*60.*Y\s*=\s*50',r.stdout)
+    assert re.search(r'X\s*=\s*60.*Y\s*=\s*50',r.stdout, re.S)
+
+
+@pytest.mark.parametrize("character,direction", [("jack","right"),("karla","down")])
+def test_3ei_main_call_chain(candidate_path, exercise_dir, character, direction):
+    """9618_w23_41:3(e)(i) MS p.35: 3(e)(i) MP3,MP5; observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin=f"{character}\n{direction}\n", files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    moves = r.called("Move")
+    assert moves and all(list(c.args.values()) == [direction] for c in moves)
+    assert r.called("GetXPosition") and r.called("GetYPosition")
+    assert str(r.called("GetXPosition")[-1].result) in r.stdout
+    assert str(r.called("GetYPosition")[-1].result) in r.stdout

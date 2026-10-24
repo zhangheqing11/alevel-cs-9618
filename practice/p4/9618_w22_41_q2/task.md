@@ -212,7 +212,7 @@
 | Part 2(b)(ii) | 9618_w22_41:2(b)(ii) | 2 | 代码 | `test_2bii_getcard` · MP2 | MP1 |
 | Part 2(b)(iii) | 9618_w22_41:2(b)(iii) | 2 | 代码 | `test_2aiii_biii_main_objects` · MP1、MP2 | — |
 | Part 2(c)(i) | 9618_w22_41:2(c)(i) | 6 | 代码 | `test_2ci_score_all_five`、`test_2ci_getter_protocol` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
-| Part 2(c)(ii) | 9618_w22_41:2(c)(ii) | 4 | 代码 | `test_2ciii_screenshot_player2` · MP1、MP2、MP3 | MP4 |
+| Part 2(c)(ii) | 9618_w22_41:2(c)(ii) | 4 | 代码 | `test_2cii_main_call_chain` / `test_2ciii_screenshot_player2` · MP1、MP2、 | MP3（调用后赋值 / 返回值比较使用关系人工核对）； MP4 |
 | Part 2(c)(iii) | 9618_w22_41:2(c)(iii) | 1 | 截图 | `test_2ciii_screenshot_player2` · 全行 | — |
 
 ## 人工核对清单

@@ -354,10 +354,10 @@ One source file is used to answer Question 2. The file is called BinaryData.txt
 | Part 1(b)(i) | 9618_w25_43:1(b)(i) | 4 | 代码 | `test_1bi_initial_board` · MP3、MP4 | MP1、MP2 |
 | Part 1(b)(ii) | 9618_w25_43:1(b)(ii) | 2 | 代码 | `test_1bii_biii_get_set_coordinates` · MP2 | MP1 |
 | Part 1(b)(iii) | 9618_w25_43:1(b)(iii) | 2 | 代码 | `test_1bii_biii_get_set_coordinates` · MP2 | MP1 |
-| Part 1(b)(iv) | 9618_w25_43:1(b)(iv) | 3 | 代码 | `test_1biv_display_qp_example` · MP1、MP2、MP3 | — |
-| Part 1(c)(i) | 9618_w25_43:1(c)(i) | 3 | 代码 | `test_1aiii_ci_named_objects_and_placement`、`test_1cii_board_screenshot` · MP1、MP2、MP3 | — |
+| Part 1(b)(iv) | 9618_w25_43:1(b)(iv) | 3 | 代码 | `test_1biv_display_qp_example` / `test_1biv_display_qp_example` · MP1、MP2、MP3 | — |
+| Part 1(c)(i) | 9618_w25_43:1(c)(i) | 3 | 代码 | `test_1ci_1di_main_call_chain` / `test_1aiii_ci_named_objects_and_placement`、`test_1cii_board_screenshot` · MP1、MP2、MP3 | — |
 | Part 1(c)(ii) | 9618_w25_43:1(c)(ii) | 1 | 截图 | `test_1cii_board_screenshot` · 全行 | — |
-| Part 1(d)(i) | 9618_w25_43:1(d)(i) | 4 | 代码 | `test_1di_hit_miss_and_edges`、`test_1dii_invalid_inputs_screenshot` · MP1、MP2、MP3、MP4 | — |
+| Part 1(d)(i) | 9618_w25_43:1(d)(i) | 4 | 代码 | `test_1ci_1di_main_call_chain` / `test_1di_hit_miss_and_edges`、`test_1dii_invalid_inputs_screenshot` · MP1、MP2、MP3、MP4 | — |
 | Part 1(d)(ii) | 9618_w25_43:1(d)(ii) | 1 | 截图 | `test_1dii_invalid_inputs_screenshot` · 全行 | — |
 
 ## 人工核对清单

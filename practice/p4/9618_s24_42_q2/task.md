@@ -216,9 +216,9 @@
 | Part 2(a)(iii) | 9618_s24_42:2(a)(iii) | 3 | 代码 | `test_2a_node_getters_setters` · MP2, MP3 | MP1 |
 | Part 2(b)(i) | 9618_s24_42:2(b)(i) | 4 | 代码 | `test_2b_i_constructor_twenty_independent_nodes` · MP2, MP3, MP4 | MP1 |
 | Part 2(b)(ii) | 9618_s24_42:2(b)(ii) | 6 | 代码 | `test_2b_ii_insert_left_right_and_count` / `test_2b_ii_deep_tree_twenty_nodes` · MP2, MP3, MP4, MP5, MP6, MP7 | MP1 |
-| Part 2(b)(iii) | 9618_s24_42:2(b)(iii) | 4 | 代码 | `test_2b_iii_empty_and_populated_output` · MP1, MP2, MP3, MP4 | — |
+| Part 2(b)(iii) | 9618_s24_42:2(b)(iii) | 4 | 代码 | `test_2b_iii_empty_and_populated_output` / `test_2b_iii_empty_and_populated_output` · MP1, MP2, MP3, MP4 | — |
 | Part 2(c)(i) | 9618_s24_42:2(c)(i) | 1 | 代码 | `test_2c_i_main_identifier` · 整行 | — |
-| Part 2(c)(ii) | 9618_s24_42:2(c)(ii) | 4 | 代码 | `test_2c_iii_screenshot` · MP1, MP2, MP3, MP4 | — |
+| Part 2(c)(ii) | 9618_s24_42:2(c)(ii) | 4 | 代码 | `test_2cii_main_call_chain` / `test_2c_iii_screenshot` · MP1, MP2, MP3, MP4 | — |
 | Part 2(c)(iii) | 9618_s24_42:2(c)(iii) | 1 | 截图 | `test_2c_iii_screenshot` · 整行 | — |
 
 自动覆盖表示行为得到验证；混合点里的函数头、注释、调用结构仍须补核，不能凭测试自动授予考试分数。可选得分点多于该行满分时，按 markpoints[].marks 加权后按该行满分比例折算。

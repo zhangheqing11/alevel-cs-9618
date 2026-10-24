@@ -6,9 +6,9 @@
       "id": "9618_s22_41:2(a)",
       "paper": "9618_s22_41",
       "marks": 25,
-      "auto_marks": 20.2,
-      "manual_marks": 4.8,
-      "auto_share": 0.808,
+      "auto_marks": 19.2,
+      "manual_marks": 5.8,
+      "auto_share": 0.768,
       "types": [
         "P4-OP-01",
         "P4-OP-02",
@@ -105,11 +105,12 @@
           "marks": 2,
           "primary": "P4-MP-01",
           "auto_mps": [
-            1,
+            1
+          ],
+          "manual_mps": [
             2
           ],
-          "manual_mps": [],
-          "auto_marks": 2.0
+          "auto_marks": 1.0
         },
         {
           "id": "9618_s22_41:2(g)(ii)",
@@ -123,8 +124,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 11,
+      "mutants": 4,
+      "tests": 12,
       "qp_pages_checked": [
         5,
         6,
@@ -261,8 +262,8 @@
           "sha256_matches_source_files_p4": true
         }
       ],
-      "mutants": 2,
-      "tests": 6,
+      "mutants": 3,
+      "tests": 7,
       "qp_pages_checked": [
         7,
         8,
@@ -421,8 +422,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 7,
+      "mutants": 3,
+      "tests": 8,
       "qp_pages_checked": [
         4,
         5,
@@ -618,8 +619,8 @@
           "sha256_matches_source_files_p4": true
         }
       ],
-      "mutants": 2,
-      "tests": 10,
+      "mutants": 3,
+      "tests": 11,
       "qp_pages_checked": [
         8,
         9,
@@ -793,8 +794,8 @@
           "sha256_matches_source_files_p4": true
         }
       ],
-      "mutants": 2,
-      "tests": 8,
+      "mutants": 3,
+      "tests": 9,
       "qp_pages_checked": [
         6,
         7,
@@ -826,8 +827,8 @@
       "id": "9618_s24_42:2(a)(i)",
       "paper": "9618_s24_42",
       "marks": 30,
-      "auto_marks": 23.142857,
-      "manual_marks": 6.857143,
+      "auto_marks": 23.1429,
+      "manual_marks": 6.8571,
       "auto_share": 0.7714,
       "types": [
         "P4-OP-01",
@@ -957,8 +958,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 8,
+      "mutants": 3,
+      "tests": 9,
       "qp_pages_checked": [
         6,
         7,
@@ -1127,8 +1128,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 6,
+      "mutants": 3,
+      "tests": 7,
       "qp_pages_checked": [
         6,
         7,
@@ -1282,8 +1283,8 @@
         }
       ],
       "files": [],
-      "mutants": 2,
-      "tests": 4,
+      "mutants": 3,
+      "tests": 5,
       "qp_pages_checked": [
         9,
         10,
@@ -1443,8 +1444,8 @@
         }
       ],
       "files": [],
-      "mutants": 3,
-      "tests": 9,
+      "mutants": 4,
+      "tests": 10,
       "qp_pages_checked": [
         7,
         8,
@@ -1472,6 +1473,6 @@
   ],
   "count": 9,
   "marks": 263,
-  "auto_marks": 213.642857,
-  "manual_marks": 49.357143
+  "auto_marks": 212.6429,
+  "manual_marks": 50.3571
 }

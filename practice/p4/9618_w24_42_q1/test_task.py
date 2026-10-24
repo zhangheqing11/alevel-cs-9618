@@ -47,5 +47,18 @@ def test_1eiii_screenshot(candidate_path):
     """9618_w24_42:1(e)(ii) MP1-MP4,MP6-MP7; 9618_w24_42:1(e)(iii) whole: winners and 4 points."""
     r=run_script(candidate_path);assert r.returncode==0,r.stderr
     winners=[re.search(r'\b(Tarz|Geni)\b',line).group(0) for line in r.lines if re.search(r'\b(Tarz|Geni)\b',line)]
-    assert winners==['Tarz','Tarz','Tarz','Geni','Tarz','Tarz']
-    assert re.search(r'\b4\b',r.lines[-1])
+    assert winners[:6]==['Tarz','Tarz','Tarz','Geni','Tarz','Tarz']
+    assert re.search(r'Tarz[\s\S]*?\b4\b', r.stdout)
+
+
+def test_1eii_main_call_chain(candidate_path, exercise_dir):
+    """9618_w24_42:1(e)(ii) MS p.13: 1(e)(ii) MP2,MP7; observe required calls, parameters and returned output (D46)."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin='', files_dir=exercise_dir / "files")
+    assert r.error is None, r.error
+
+    scores = r.called("CalculateScore")
+    from collections import Counter
+    assert Counter(tuple(c.args.values()) for c in scores) == Counter({("jump",3):2,("swim",4):2,("run",5):2,("drive",2):2,("jump",4):2})
+    assert len(r.called("GetEventType")) >= 5 and len(r.called("GetDifficulty")) >= 5
+    assert {c.result for c in r.called("GetName")} >= {"Tarz","Geni"}

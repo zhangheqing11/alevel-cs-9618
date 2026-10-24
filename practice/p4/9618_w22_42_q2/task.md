@@ -183,8 +183,8 @@
 | Part 2(c) | 9618_w22_42:2(c) | 2 | 代码 | `test_2c_change_adds` · MP2 | MP1 |
 | Part 2(d) | 9618_w22_42:2(d) | 7 | 代码 | `test_2d_all_file_objects`、`test_2d_missing_file` · MP1、MP2、MP3、MP4、MP5、MP6、MP8、MP9 | MP7 |
 | Part 2(e) | 9618_w22_42:2(e) | 5 | 代码 | `test_2e_f_g_moves` · MP1、MP2、MP3、MP4、MP5、MP6 | — |
-| Part 2(f) | 9618_w22_42:2(f) | 7 | 代码 | `test_2e_f_g_moves` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
-| Part 2(g)(i) | 9618_w22_42:2(g)(i) | 2 | 代码 | `test_2e_f_g_moves` · MP1、MP2 | — |
+| Part 2(f) | 9618_w22_42:2(f) | 7 | 代码 | `test_2f_2gi_main_call_chain` / `test_2e_f_g_moves` · MP1、MP2、MP3、MP4、MP5、MP6、MP7 | — |
+| Part 2(g)(i) | 9618_w22_42:2(g)(i) | 2 | 代码 | `test_2f_2gi_main_call_chain` / `test_2e_f_g_moves` · MP1、MP2 | — |
 | Part 2(g)(ii) | 9618_w22_42:2(g)(ii) | 1 | 截图 | `test_2gii_screenshot` · 全行 | — |
 
 ## 人工核对清单

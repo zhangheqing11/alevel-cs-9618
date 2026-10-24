@@ -48,9 +48,9 @@ def test_1b_main_objects(candidate_path,monkeypatch):
 def test_1cii_four_screenshots(candidate_path,choice,minutes,direction,name,x,y):
     """9618_w25_42:1(c)(i) MP1-MP2,MP5-MP8; 9618_w25_42:1(c)(ii) MP1-MP3: four MS results."""
     r=run_script(candidate_path,stdin=f'{choice}\n{minutes}\n{direction}\n');assert r.returncode==0,r.stderr
-    assert re.search(r'Cockatiel.*X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)
-    assert re.search(r'Macaw.*X\s*=\s*500(?:\.0)?.*Y\s*=\s*500',r.stdout)
-    matches=re.findall(re.escape(name)+r'[^\n]*X\s*=\s*(-?\d+(?:\.\d+)?)\s+Y\s*=\s*(-?\d+(?:\.\d+)?)',r.stdout)
+    assert re.search(r'Cockatiel[\s\S]*?X\s*=\s*500(?:\.0)?[\s\S]*?Y\s*=\s*500',r.stdout)
+    assert re.search(r'Macaw[\s\S]*?X\s*=\s*500(?:\.0)?[\s\S]*?Y\s*=\s*500',r.stdout)
+    matches=re.findall(re.escape(name)+r'(?:(?!Cockatiel|Macaw)[\s\S])*?X\s*=\s*(-?\d+(?:\.\d+)?)\s+Y\s*=\s*(-?\d+(?:\.\d+)?)',r.stdout)
     assert tuple(map(float,matches[-1]))==pytest.approx((x,y))
 
 
@@ -58,5 +58,21 @@ def test_1cii_four_screenshots(candidate_path,choice,minutes,direction,name,x,y)
 def test_1ci_validation(candidate_path,minutes):
     """9618_w25_42:1(c)(i) MP2-MP7: repeat invalid choice/time/direction, inclusive limits."""
     r=run_script(candidate_path,stdin=f'3\n0\n1\n-1\n501\n{minutes}\nQ\nN\n');assert r.returncode==0,r.stderr
-    matches=re.findall(r'Cockatiel[^\n]*X\s*=\s*(-?\d+(?:\.\d+)?)\s+Y\s*=\s*(-?\d+(?:\.\d+)?)',r.stdout)
+    matches=re.findall(r'Cockatiel(?:(?!Cockatiel|Macaw)[\s\S])*?X\s*=\s*(-?\d+(?:\.\d+)?)\s+Y\s*=\s*(-?\d+(?:\.\d+)?)',r.stdout)
     assert tuple(map(float,matches[-1]))==pytest.approx((500,500+71/60*minutes))
+
+
+@pytest.mark.parametrize("choice,minutes,direction", [("1",60,"N"),("2",30,"S")])
+def test_1ci_main_call_chain(candidate_path, choice, minutes, direction):
+    """9618_w25_42:1(c)(i) MP5–MP8; MS p.12: Move receives direction/time, getters supply output."""
+    from testkit import run_script_traced
+    r = run_script_traced(candidate_path, stdin=f"{choice}\n{minutes}\n{direction}\n")
+    assert r.error is None, r.error
+    moves = r.called("Move")
+    assert len(moves) == 1
+    assert list(moves[0].args.values()) == [direction, minutes]
+    positions = r.called("GetPosition")
+    assert len(positions) >= 3
+    assert all(" ".join(c.result.split()) in " ".join(r.stdout.split()) for c in positions)
+    assert next(i for i, c in enumerate(r.calls) if c is moves[0]) < next(i for i, c in enumerate(r.calls) if c is positions[-1])
+    assert {c.result for c in r.called("GetSpecies")} == {"Cockatiel", "Macaw"}

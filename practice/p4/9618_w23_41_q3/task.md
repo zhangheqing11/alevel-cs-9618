@@ -235,7 +235,7 @@
 | Part 3(c)(i) | 9618_w23_41:3(c)(i) | 3 | 代码 | `test_3ci_inherits_parent` · MP1、MP3 | MP2 |
 | Part 3(c)(ii) | 9618_w23_41:3(c)(ii) | 2 | 代码 | `test_3aiv_cii_move` · MP1、MP2 | — |
 | Part 3(d) | 9618_w23_41:3(d) | 1 | 代码 | `test_3b_d_main_instances` · 全行 | — |
-| Part 3(e)(i) | 9618_w23_41:3(e)(i) | 5 | 代码 | `test_3ei_rejects_invalid_inputs`、`test_3eii_screenshots` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 3(e)(i) | 9618_w23_41:3(e)(i) | 5 | 代码 | `test_3ei_main_call_chain` / `test_3ei_rejects_invalid_inputs`、`test_3eii_screenshots` · MP1、MP2、MP3、MP4、MP5 | — |
 | Part 3(e)(ii) | 9618_w23_41:3(e)(ii) | 2 | 截图 | `test_3eii_screenshots` · MP1 | — |
 
 ## 人工核对清单
