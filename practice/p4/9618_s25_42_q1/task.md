@@ -182,7 +182,7 @@ SecondStack.txt and HashData.txt
 | Part 1(c) | 9618_s25_42:1(c) | 4 | 代码 | `test_1c_pop_empty_lifo_reuse` · MP1、MP2、MP3、MP4 | — |
 | Part 1(d) | 9618_s25_42:1(d) | 6 | 代码 | `test_1d_read_official_files`、`test_1d_overflow_and_missing_file` · MP2、MP3、MP4、MP5、MP6 | MP1 |
 | Part 1(e) | 9618_s25_42:1(e) | 7 | 代码 | `test_1e_calculate_all_operators` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1 |
-| Part 1(f)(i) | 9618_s25_42:1(f)(i) | 2 | 代码 | `test_1f_screenshots` · MP1、MP2 | — |
+| Part 1(f)(i) | 9618_s25_42:1(f)(i) | 2 | 代码 | `test_1f_screenshots` · MP1、MP2；`test_1f_main_call_chain` · 实际调用、参数与结果链 | — |
 | Part 1(f)(ii) | 9618_s25_42:1(f)(ii) | 2 | 截图 | `test_1f_screenshots` · MP1、MP2 | — |
 
 自动测分值 24.000000，人工核对分值 3.000000，自动占比 88.89%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
@@ -199,3 +199,7 @@ SecondStack.txt and HashData.txt
 ## 原页、编号与差异记录
 
 已看 QP pp.2–5、MS pp.7–18 全部渲染图，并核对 evidence.doc 7 格。QP p.4 栈图转写为顶到底 10、+、3、−、2，结果11；MS p.18 两次截图分别131.0、320.0，测试接受相同数值的整数/浮点显示。参考解采用 MS Python 顺序运算、Pop 取数；只收窄 bare except 为 OSError 并加英文类型注释、入口保护，无 QP/MS 算法冲突。MP 与印刷清单一致。HashData.txt 属第2题，不复制。
+
+## T38c2 · D46 验证补充
+
+F06：复现空壳主程序旧测试 17 passed；新增三份文件 ReadData(FileName) → Calculate → 返回值输出观测（含新数据 17），输出允许额外数字说明。复核 QP p.5、MS p.17 原页。 自动/人工分值口径不变；新增调用观测支持原表自动分类。截图清晰度与代码结构仍按人工清单核对。

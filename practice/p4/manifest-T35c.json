@@ -1052,7 +1052,8 @@
           "auto_marks": 2.0,
           "manual_marks": 0.0,
           "tests": [
-            "test_1f_screenshots"
+            "test_1f_screenshots",
+            "test_1f_main_call_chain"
           ]
         },
         {
@@ -1091,8 +1092,8 @@
           "final_newline": false
         }
       ],
-      "mutants": 2,
-      "tests": 8,
+      "mutants": 3,
+      "tests": 9,
       "qp_pages_checked": [
         2,
         3,
@@ -1113,7 +1114,7 @@
         17,
         18
       ],
-      "notes": "已看 QP pp.2–5、MS pp.7–18 全部渲染图，并核对 evidence.doc 7 格。QP p.4 栈图转写为顶到底 10、+、3、−、2，结果11；MS p.18 两次截图分别131.0、320.0，测试接受相同数值的整数/浮点显示。参考解采用 MS Python 顺序运算、Pop 取数；只收窄 bare except 为 OSError 并加英文类型注释、入口保护，无 QP/MS 算法冲突。MP 与印刷清单一致。HashData.txt 属第2题，不复制。"
+      "notes": "已看 QP pp.2–5、MS pp.7–18 全部渲染图，并核对 evidence.doc 7 格。QP p.4 栈图转写为顶到底 10、+、3、−、2，结果11；MS p.18 两次截图分别131.0、320.0，测试接受相同数值的整数/浮点显示。参考解采用 MS Python 顺序运算、Pop 取数；只收窄 bare except 为 OSError 并加英文类型注释、入口保护，无 QP/MS 算法冲突。MP 与印刷清单一致。HashData.txt 属第2题，不复制。 T38c2：F06：复现空壳主程序旧测试 17 passed；新增三份文件 ReadData(FileName) → Calculate → 返回值输出观测（含新数据 17），输出允许额外数字说明。复核 QP p.5、MS p.17 原页。"
     },
     {
       "directory": "practice/p4/9618_s25_42_q2",
