@@ -1,7 +1,7 @@
 """9618_s25_43 Q1 linear queue and dequeue-based total."""
 from pathlib import Path
 import re
-from testkit import run_script, use_files
+from testkit import run_script, run_script_traced, use_files
 
 
 def test_1a_initial_state(sol):
@@ -62,7 +62,7 @@ def test_1e_screenshot(candidate_path, exercise_dir):
     """9618_s25_43:1(e)(i) MP1-MP5; 1(e)(ii) whole: own MS p.18 total 3059."""
     r = run_script(candidate_path, files_dir=exercise_dir / 'files')
     assert r.returncode == 0, r.stderr
-    assert re.findall(r'-?\d+', r.stdout)[-1] == '3059'
+    assert_numbers_in_order(r.stdout, [3059])
 
 
 def test_1e_main_uses_dequeue_until_sentinel(candidate_path, tmp_path, exercise_dir):
@@ -98,3 +98,26 @@ def test_1b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_1e_main_call_chain(candidate_path, exercise_dir, tmp_path):
+    """9618_s25_43:1(e)(i) MP1-MP5 (MS p.17): CreateQueue, Dequeue to sentinel, sum actual returns."""
+    for files, expected in [(exercise_dir / 'files', 3059), (tmp_path, 27)]:
+        (tmp_path / 'QueueData.txt').write_text('12\n8\n7')
+        completed = run_script(candidate_path, files_dir=files, timeout=1.0)
+        assert completed.returncode == 0, completed.stderr
+        r = run_script_traced(candidate_path, files_dir=files)
+        assert r.error is None, r.error
+        creates, dequeues = r.called('CreateQueue'), r.called('Dequeue')
+        assert creates and dequeues and r.calls.index(creates[0]) < r.calls.index(dequeues[0])
+        results = [c.result for c in dequeues]
+        assert results[-1] == -1 and -1 not in results[:-1]
+        assert sum(results[:-1]) == expected
+        assert_numbers_in_order(r.stdout, [sum(results[:-1])])

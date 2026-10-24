@@ -141,3 +141,7 @@ One source file is used to answer Question 1. The file is called QueueData.txt
 ## 原页、编号与差异记录
 
 已看 QP pp.2–3、MS pp.7–18 全部渲染图，核对 evidence.doc 6 格。MS p.18 截图3059，官方文件运行一致。MS Python CreateQueue 在第一次满时 break；参考解继续读到 EOF，符合 QP 每行调用和未知行数要求，测试允许满提示一次或多次（MS MP5 明文）。MP1只考函数头与文件打开/关闭位置，归人工；MP6行为测缺文件，所有访问是否在try仍人工核对。其余采用 MS Python，无给分编号差异。
+
+## T38c2 · D46 验证补充
+
+补测 CreateQueue 调用及到 -1 的 Dequeue 总和；官方 3059 与新文件 27 双数据验证返回值使用，输出不固定最后一个数字（QP p.3/MS pp.17–18）。原有 Dequeue 观察保留。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
