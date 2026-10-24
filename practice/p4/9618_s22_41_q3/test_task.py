@@ -1,5 +1,6 @@
+import re
 """Circular queue tests derived from the matching 9618_s22_41 MS."""
-from testkit import output_lines, run_script
+from testkit import output_lines, run_script, run_script_traced
 
 
 def test_3a_initial_state(sol):
@@ -48,15 +49,12 @@ def test_3bc_reuse_slots_after_dequeue(sol):
 
 
 def test_3d_screenshot(candidate_path):
-    """9618_s22_41:3(d)(i) MP1-MP5; 3(d)(ii) whole: ten successes, one failure, A then B."""
+    """9618_s22_41:3(d)(ii) whole (MS p.34): A, B in order; messages reviewed separately."""
     r = run_script(candidate_path, stdin='\n'.join('ABCDEFGHIJK') + '\n')
     assert r.returncode == 0, r.stderr
-    lines = output_lines(r.stdout)
-    assert len(lines) == 13
-    # QP permits any appropriate message; ten equal outcomes then a different outcome.
-    status = [line.rsplit(':', 1)[-1].strip() for line in lines[:11]]
-    assert len(set(status[:10])) == 1 and status[10] != status[0]
-    assert lines[-2].strip().endswith('A') and lines[-1].strip().endswith('B')
+    assert re.search(r'\bA\b[\s\S]*\bB\b', r.stdout)
+
+
 
 
 def test_3b_no_algorithm_shortcuts(candidate_path):
@@ -72,3 +70,49 @@ def test_3b_no_algorithm_shortcuts(candidate_path):
         if isinstance(node, ast.Compare):
             assert not any(isinstance(op, (ast.In, ast.NotIn)) for op in node.ops), \
                 'D10: implement search with pointers/comparisons rather than membership'
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3d_main_call_chain(candidate_path):
+    """9618_s22_41:3(d)(i) MP1-MP5 (MS p.32): 11 inputs passed, two returned values output."""
+    data = 'A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\n'
+    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    enqueues, dequeues = r.called('Enqueue'), r.called('Dequeue')
+    assert [c.args.get('InputData') for c in enqueues] == list('ABCDEFGHIJK')
+    assert [c.result[0] for c in enqueues] == [True] * 10 + [False]
+    assert len(dequeues) == 2 and [c.result[0] for c in dequeues] == ['A', 'B']
+    assert r.calls.index(enqueues[-1]) < r.calls.index(dequeues[0])
+    assert re.search(r'\bA\b[\s\S]*\bB\b', r.stdout)
+
+
+
+def assert_numbers_in_order(text, expected):
+    """D31/D46: allow explanatory numbers and line breaks around required values."""
+    values = iter(float(n) for n in re.findall(r"(?<![\w.])-?\d+(?:\.\d+)?(?![\w.])", text))
+    for wanted in expected:
+        assert any(value == wanted for value in values), f"missing ordered value {wanted}: {text!r}"
+
+
+def test_3d_main_call_chain(candidate_path):
+    """9618_s22_41:3(d)(i) MP1-MP5 (MS p.32): 11 inputs passed, two returned values output."""
+    data = 'A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\n'
+    completed = run_script(candidate_path, stdin=data, timeout=1.0)
+    assert completed.returncode == 0, completed.stderr
+    r = run_script_traced(candidate_path, stdin=data)
+    assert r.error is None, r.error
+    enqueues, dequeues = r.called('Enqueue'), r.called('Dequeue')
+    assert [c.args.get('InputData') for c in enqueues] == list('ABCDEFGHIJK')
+    assert [c.result[0] for c in enqueues] == [True] * 10 + [False]
+    assert len(dequeues) == 2 and [c.result[0] for c in dequeues] == ['A', 'B']
+    assert r.calls.index(enqueues[-1]) < r.calls.index(dequeues[0])
+    assert re.search(r'\bA\b[\s\S]*\bB\b', r.stdout)
+

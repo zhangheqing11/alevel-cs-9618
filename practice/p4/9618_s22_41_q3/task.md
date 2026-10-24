@@ -111,12 +111,14 @@ ENDFUNCTION
 | Part 3(a) | 9618_s22_41:3(a) | 2 | 代码 | `test_3a_initial_state` · MP1、MP2 | — |
 | Part 3(b) | 9618_s22_41:3(b) | 7 | 代码 | `test_3b_enqueue_full_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP1；`test_3b_no_algorithm_shortcuts` · D10 写法检查 | MP2、MP3 |
 | Part 3(c) | 9618_s22_41:3(c) | 6 | 代码 | `test_3c_dequeue_fifo_empty_and_wrap`、`test_3bc_reuse_slots_after_dequeue` · MP2、MP3、MP4、MP5、MP6、MP7 | MP1 |
-| Part 3(d)(i) | 9618_s22_41:3(d)(i) | 5 | 代码 | `test_3d_screenshot` · MP1、MP2、MP3、MP4、MP5 | — |
+| Part 3(d)(i) | 9618_s22_41:3(d)(i) | 5 | 代码 | `test_3d_main_call_chain` + 原有输出测试 · MP1、MP2、MP4、MP5 | MP3：消息语义 / 未触发分支按同题 MS 核对 |
 | Part 3(d)(ii) | 9618_s22_41:3(d)(ii) | 1 | 截图 | `test_3d_screenshot` · 整行 | — |
 
-自动测分值 18.142857，人工核对分值 2.857143，自动占比 86.39%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
+自动测分值 17.142857，人工核对分值 3.857143，自动占比 81.63%。这是验证覆盖口径，自动测试不为未实际核对的写法授分。
 
 ## 人工核对清单
+
+- [ ] 9618_s22_41:3(d)(i) MP3：按同题 MS 查看消息语义及未触发的选择分支；不由固定输出推定。
 
 - [ ] 9618_s22_41:3(b) MP2：1 mark for function heading and end, dealing with ByRef（1 分；人工核对代码结构 / 声明）。
 - [ ] 9618_s22_41:3(b) MP3：1 mark for remainder of function correct and following the logic（1 分；人工核对代码结构 / 声明）。
@@ -128,3 +130,7 @@ ENDFUNCTION
 ## 原页、编号与差异记录
 
 QP pp.8–10、MS pp.27–34 全部渲染图已读，evidence.doc 第 3 题 5 格已核。MS 3(c) Python 原图 p.30 印 `false`、`Queue(Head)` 以及先加一后 `Head >= 9`，参考解改为 QP 的 `"FALSE"`、`Queue[Head]`、`Head > 9`；后者符合同页得分句 more than 9，不跳过第十个元素（D31）。3(b) 语料 MP1 是五处填空合计 5 分，不拆成五个自造点号；MP2 是函数头 / ByRef、MP3 是 remainder / following logic，归人工。MS 未印独立 MP 数字，其余按清单顺序，无 D37 编号差异。与 s22_43 第 3 题整题相同，不重复创建。
+
+## T38c2 · D46 验证补充
+
+补测 11 次 Enqueue 的输入参数/返回状态与 2 次 Dequeue；移除 13 行及状态文字完全相同的额外限制（QP p.10/MS pp.32/34）。合适消息语义及按返回值选择消息改列人工补核。 自动/人工分类以本次复核后的证据表和 manifest 为准。截图清晰度与代码结构仍按人工清单核对。
