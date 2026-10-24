@@ -868,10 +868,175 @@
       "mutants": 2,
       "manual_marks": 3.0,
       "auto_share": 0.9118
+    },
+    {
+      "directory": "practice/p4/9618_w24_42_q1",
+      "id": "9618_w24_42:1(a)(i)",
+      "paper": "9618_w24_42",
+      "marks": 29,
+      "auto_marks": 24.2,
+      "types": [
+        "P4-OP-01",
+        "P4-OP-02",
+        "P4-OP-07",
+        "P4-OP-03",
+        "P4-PR-03",
+        "P4-MP-03"
+      ],
+      "rows": [
+        {
+          "id": "9618_w24_42:1(a)(i)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:1(a)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-02",
+          "auto_mps": [
+            2,
+            3
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:1(b)(i)",
+          "marks": 1,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        },
+        {
+          "id": "9618_w24_42:1(b)(ii)",
+          "marks": 3,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2,
+            3
+          ],
+          "manual_mps": [],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:1(c)",
+          "marks": 4,
+          "primary": "P4-OP-01",
+          "auto_mps": [
+            2,
+            3,
+            4
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.0
+        },
+        {
+          "id": "9618_w24_42:1(d)",
+          "marks": 4,
+          "primary": "P4-OP-03",
+          "auto_mps": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "manual_mps": [
+            1
+          ],
+          "auto_marks": 3.2
+        },
+        {
+          "id": "9618_w24_42:1(e)(i)",
+          "marks": 2,
+          "primary": "P4-OP-07",
+          "auto_mps": [
+            1,
+            2
+          ],
+          "manual_mps": [],
+          "auto_marks": 2.0
+        },
+        {
+          "id": "9618_w24_42:1(e)(ii)",
+          "marks": 7,
+          "primary": "P4-PR-03",
+          "auto_mps": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "manual_mps": [
+            5
+          ],
+          "auto_marks": 6.0
+        },
+        {
+          "id": "9618_w24_42:1(e)(iii)",
+          "marks": 1,
+          "primary": "P4-MP-03",
+          "auto_mps": [
+            "whole"
+          ],
+          "manual_mps": [],
+          "auto_marks": 1
+        }
+      ],
+      "files": [],
+      "qp_pages_checked": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ms_pages_checked": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "qp_over_ms": [
+        "构造参数顺序照 MS Python；主程序两名 Character 的变量名不限（MS 用 P1/P2）。QP 类图写 Type / CharacterName，MS Python 写 EventType / CName；参考解用 QP 名称，行为测试容许这两个私有属性的 MS 别名，标识符仍按 QP 人工核对。无数据文件，本卷 HighScoreTable.txt 属第3题，不复制。MS p.17 截图依次 Tarz/Tarz/Tarz/Geni/Tarz，最终 Tarz 4 分。1(e)(ii) 的单场平局 MP5 及 MP6 内总分平局分支人工核对，固定比赛数据无平局；其余积分行为自动测。"
+      ],
+      "tests": 5,
+      "mutants": 2,
+      "manual_marks": 4.8,
+      "auto_share": 0.8345
     }
   ],
-  "marks": 157,
-  "auto_marks": 133.2222,
-  "manual_marks": 23.7778,
-  "count": 5
+  "marks": 186,
+  "auto_marks": 157.4222,
+  "manual_marks": 28.5778,
+  "count": 6
 }

@@ -1,0 +1,49 @@
+{
+  "id": "9618_w24_42:1(a)(i)",
+  "kind": "past-paper",
+  "title": "EventItem 与 Character：按技能算概率与比赛积分",
+  "source": {
+    "paper": "9618_w24_42",
+    "rows": [
+      "9618_w24_42:1(a)(i)",
+      "9618_w24_42:1(a)(ii)",
+      "9618_w24_42:1(b)(i)",
+      "9618_w24_42:1(b)(ii)",
+      "9618_w24_42:1(c)",
+      "9618_w24_42:1(d)",
+      "9618_w24_42:1(e)(i)",
+      "9618_w24_42:1(e)(ii)",
+      "9618_w24_42:1(e)(iii)"
+    ]
+  },
+  "marks": 29,
+  "types": [
+    "P4-OP-01",
+    "P4-OP-02",
+    "P4-OP-07",
+    "P4-OP-03",
+    "P4-PR-03",
+    "P4-MP-03"
+  ],
+  "skills": [
+    "accumulator",
+    "array-of-objects",
+    "class-definition",
+    "constructor",
+    "count-loop",
+    "data-types",
+    "encapsulation",
+    "getter-setter",
+    "method-call",
+    "module-header",
+    "nested-if",
+    "object-instantiation",
+    "output-format",
+    "relational-ops",
+    "return-value"
+  ],
+  "pseudocode": false,
+  "files": [],
+  "entry": "main",
+  "ms_verified": true
+}
