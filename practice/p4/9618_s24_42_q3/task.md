@@ -142,13 +142,13 @@ Test your program.
 |:--|:--|--:|:--|:--|:--|
 | Part 3(a) | 9618_s24_42:3(a) | 1 | 代码 | `test_3a_bii_cii_main_calls_original_arrays` · whole | 局部作用域、7 个 INTEGER 注释 |
 | Part 3(b)(i) | 9618_s24_42:3(b)(i) | 4 | 代码 | `test_3bi_recursive_sort` · MP1–MP3；`test_3bi_ci_di_no_builtin_shortcuts` | MP4：照题给结构；MP1 的函数头 |
-| Part 3(b)(ii) | 9618_s24_42:3(b)(ii) | 2 | 代码 | `test_3a_bii_cii_main_calls_original_arrays` · MP1；`test_3biii_ciii_diii_screenshots` · MP2 | — |
+| Part 3(b)(ii) | 9618_s24_42:3(b)(ii) | 2 | 代码 | `test_3a_bii_cii_main_calls_original_arrays` · MP1；`test_3biii_ciii_diii_screenshots` · MP2；`test_3bii_cii_dii_traced_calls_and_results` · 实际调用、参数与数据链（D46） | — |
 | Part 3(b)(iii) | 9618_s24_42:3(b)(iii) | 1 | 截图 | `test_3biii_ciii_diii_screenshots` · whole（Recursive + 1 8 15 22 85 100 644） | 截图清晰 |
 | Part 3(c)(i) | 9618_s24_42:3(c)(i) | 4 | 代码 | `test_3ci_iterative_sort` · MP1–MP4；`test_3bi_ci_di_no_builtin_shortcuts` | MP1 函数头；插入排序过程而非别种排序 |
-| Part 3(c)(ii) | 9618_s24_42:3(c)(ii) | 1 | 代码 | `test_3a_bii_cii_main_calls_original_arrays`、`test_3biii_ciii_diii_screenshots` · whole | — |
+| Part 3(c)(ii) | 9618_s24_42:3(c)(ii) | 1 | 代码 | `test_3a_bii_cii_main_calls_original_arrays`、`test_3biii_ciii_diii_screenshots` · whole；`test_3bii_cii_dii_traced_calls_and_results` · 实际调用、参数与数据链（D46） | — |
 | Part 3(c)(iii) | 9618_s24_42:3(c)(iii) | 1 | 截图 | `test_3biii_ciii_diii_screenshots` · whole（Iterative + 同一升序结果） | 截图清晰 |
 | Part 3(d)(i) | 9618_s24_42:3(d)(i) | 6 | 代码 | `test_3di_recursive_binary_search` · MP1–MP7；`test_3bi_ci_di_no_builtin_shortcuts` | MP1 函数头与参数 |
-| Part 3(d)(ii) | 9618_s24_42:3(d)(ii) | 2 | 代码 | `test_3biii_ciii_diii_screenshots` · MP1–MP2；`test_3dii_main_not_found_branch` · MP2 | 失败消息语义 |
+| Part 3(d)(ii) | 9618_s24_42:3(d)(ii) | 2 | 代码 | `test_3biii_ciii_diii_screenshots` · MP1–MP2；`test_3dii_main_not_found_branch` · MP2；`test_3bii_cii_dii_traced_calls_and_results` · 实际调用、参数与数据链（D46） | 失败消息语义 |
 | Part 3(d)(iii) | 9618_s24_42:3(d)(iii) | 1 | 截图 | `test_3biii_ciii_diii_screenshots` · whole（index 6） | 截图清晰 |
 
 ## 人工核对清单
@@ -162,3 +162,9 @@ Test your program.
 ## 原页核验与编号对照
 
 QP 10, 11, 12, 13 页；MS 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 页已查看渲染图；Python 缩进依据原页。各行 MS 圆点顺序与语料 n 对应，无另印不同点号。可选点超过行分值时按点分值比例折算，仅用于覆盖统计，不取代实际批改。
+
+### T38c1 · D46 调用与输出核验
+
+F05：取消整个输出段数字严格相等；按 Recursive / Iterative 段匹配有序子序列，允许 Question 3 等数字说明及逐项换行。补查 BinarySearch 的真实调用、排好数组/0/6/644 参数及返回值；保留两个排序入口原始顺序检查。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。

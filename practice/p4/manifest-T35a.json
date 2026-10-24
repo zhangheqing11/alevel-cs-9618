@@ -961,7 +961,7 @@
         }
       ],
       "files": [],
-      "mutants": 4,
+      "mutants": 5,
       "tests": 7,
       "qp_pages_checked": [
         10,
@@ -989,7 +989,7 @@
         "3(c)(ii)：QP 要求 original initialised array；MS p.36 直接复用已被递归排序改变的 NumberArray。参考解给两个排序各传副本，测试检查两次入口数组都为原始顺序。",
         "3(b)(i) 原卷使用无界 ARRAY[] 参数；此处忠实转写，属 QP 原文，不作为 D24 教学新写法。测试不要求输出数组采用 Python 列表格式或逐行输出。"
       ],
-      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。"
+      "notes": "- 数组局部于主程序，注释大小 7 与 INTEGER。\n- 3(b)(i) MP4：逐段核对题给伪代码结构，包括 LoopAgain 与界限检查；只看排序结果不够。\n- 3(c)(i) 确为插入排序（允许 while / for 的正确实现）；3(d)(i) 确为二分递归。\n- 函数头和参数名、截图清晰度、Not found 语义人工核对。\n- 3(d)(i) 有 7 个候选点，最多 6 分：统计按比例折算。 T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s25_41_q2",
