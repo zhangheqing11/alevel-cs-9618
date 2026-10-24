@@ -499,7 +499,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 6,
       "qp_pages_checked": [
         2,
@@ -514,7 +514,7 @@
         "1(c): QP pseudocode inner loop FOR Y <- 0 TO ArrayLength - X - 1 (inclusive) would index Animals[10]; tests check only the sorted result, MS Python range() form passes",
         "1(a): MS Python example is only `global Animals #comment`; per D10 (1) the test requires a real 10-element module-level list"
       ],
-      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile)."
+      "notes": "No data file. 1(b) order checked by snapshotting the global Animals when SortDescending() is called (sys.setprofile). T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_41_q1",
