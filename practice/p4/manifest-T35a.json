@@ -654,7 +654,7 @@
         }
       ],
       "files": [],
-      "mutants": 5,
+      "mutants": 6,
       "tests": 11,
       "qp_pages_checked": [
         2,
@@ -671,7 +671,7 @@
         "1(a): MS Python example is only `global DataStored #integer`; per D10 (1) the test requires a real 20-element module-level list",
         "1(e)(iii): MS accepts index 16 (whole 20-slot array sorted); test accepts 1 or 16"
       ],
-      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped."
+      "notes": "No data file. Function tests pad unused slots with 999 so first-NumberItems and whole-array designs both pass; screenshot tests read the integer stream with zeros dropped. T38c1: traced calls/parameters/results checked; hollow-main rejected; two equivalent programs passed. See T38c-sweep-1.md."
     },
     {
       "directory": "practice/p4/9618_s24_42_q1",

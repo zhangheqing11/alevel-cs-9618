@@ -125,12 +125,25 @@ def test_1e_iii_screenshot_test_1_found(candidate_path):
     """9618_s24_41:1(e)(ii) MP1-MP3 and 9618_s24_41:1(e)(iii) MP1 (test 1): 2 is found at index 1 (MS accepts 16)."""
     res = run(candidate_path, 5, 1, 6, 2, 8, 10, 2)
     assert res.returncode == 0, res.stderr[-500:]
-    last = re.findall(r"-?\d+", res.stdout)[-1]
-    assert int(last) in (1, 16), f"last value output should be the index of 2, got {last}"
+    assert any(int(value) in (1, 16) for value in re.findall(r"-?\d+", res.stdout))
 
 
 def test_1e_iii_screenshot_test_2_not_found(candidate_path):
     """9618_s24_41:1(e)(iii) MP1 (test 2): 7 is not found, -1 output."""
     res = run(candidate_path, 5, 1, 6, 2, 8, 10, 7)
     assert res.returncode == 0, res.stderr[-500:]
-    assert re.findall(r"-?\d+", res.stdout)[-1] == "-1"
+    assert "-1" in re.findall(r"-?\d+", res.stdout)
+
+
+def test_1ci_1dii_1eii_traced_main(candidate_path):
+    """9618_s24_41:1(c)(i) MP1; 1(d)(ii) whole; 1(e)(ii) MP2–3; MS pp.6,9,12."""
+    from testkit import run_script_traced
+    for value in (2, 7):
+        r = run_script_traced(candidate_path, stdin=f"5\n1\n6\n2\n8\n10\n{value}\n")
+        assert r.error is None
+        initial, sort, searches = r.called("Initialise"), r.called("BubbleSort"), r.called("BinarySearch")
+        assert initial and sort and searches
+        assert next(i for i, c in enumerate(r.calls) if c is initial[0]) < next(i for i, c in enumerate(r.calls) if c is sort[0]) < next(i for i, c in enumerate(r.calls) if c is searches[0])
+        assert searches[0].args == {"DataToFind": value}
+        assert searches[0].result in ((1, 16) if value == 2 else (-1,))
+        assert searches[0].result in [int(x) for x in re.findall(r"-?\d+", r.stdout)]

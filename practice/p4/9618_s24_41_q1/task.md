@@ -103,13 +103,13 @@
 |:--|:--|--:|:--|:--|:--|
 | Part 1(a) | 9618_s24_41:1(a) | 1 | 代码 | `test_1a_globals_declared` · 全局 DataStored（20 格）与 NumberItems | 注释写明 INTEGER（D10 ①） |
 | Part 1(b) | 9618_s24_41:1(b) | 5 | 代码 | `test_1b_initialise_rejects_30_then_stores_five` · MP2–MP5；`test_1b_initialise_quantity_1_to_20_inclusive` · MP3 | MP1 过程头无参数；MP2 提示语合适 |
-| Part 1(c)(i) | 9618_s24_41:1(c)(i) | 2 | 代码 | `test_1c_ii_screenshot_invalid_30_then_array` · MP1–MP2 | MP1 先把 0 存进 NumberItems |
+| Part 1(c)(i) | 9618_s24_41:1(c)(i) | 2 | 代码 | `test_1c_ii_screenshot_invalid_30_then_array` · MP1–MP2；`test_1ci_1dii_1eii_traced_main` · 实际调用、参数与数据链（D46） | MP1 先把 0 存进 NumberItems |
 | Part 1(c)(ii) | 9618_s24_41:1(c)(ii) | 2 | 截图 | `test_1c_ii_screenshot_invalid_30_then_array` · MP1（30 被拒、5 被收）、MP2（数组输出 3 9 4 1 2；MS p.7 样例） | 截图里看得到两次输入数量 |
 | Part 1(d)(i) | 9618_s24_41:1(d)(i) | 4 | 代码 | `test_1d_i_bubble_sort_ascending` · MP1–MP4 | MP1 过程头 |
-| Part 1(d)(ii) | 9618_s24_41:1(d)(ii) | 1 | 代码 | `test_1d_iii_screenshot_sorted` · 调用 BubbleSort 后输出数组 | — |
+| Part 1(d)(ii) | 9618_s24_41:1(d)(ii) | 1 | 代码 | `test_1d_iii_screenshot_sorted` · 调用 BubbleSort 后输出数组；`test_1ci_1dii_1eii_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(d)(iii) | 9618_s24_41:1(d)(iii) | 1 | 截图 | `test_1d_iii_screenshot_sorted` · 1 2 3 4 9（MS p.9 样例） | 截图里看得到输入 |
 | Part 1(e)(i) | 9618_s24_41:1(e)(i) | 6 | 代码 | `test_1e_i_binary_search_found`、`test_1e_i_binary_search_larger_array` · MP2–MP5；`test_1e_i_binary_search_not_found` · MP6 | MP1 函数头带 DataToFind；确是迭代（循环）不是递归 |
-| Part 1(e)(ii) | 9618_s24_41:1(e)(ii) | 3 | 代码 | `test_1e_iii_screenshot_test_1_found`、`test_1e_iii_screenshot_test_2_not_found` · MP1–MP3 | — |
+| Part 1(e)(ii) | 9618_s24_41:1(e)(ii) | 3 | 代码 | `test_1e_iii_screenshot_test_1_found`、`test_1e_iii_screenshot_test_2_not_found` · MP1–MP3；`test_1ci_1dii_1eii_traced_main` · 实际调用、参数与数据链（D46） | — |
 | Part 1(e)(iii) | 9618_s24_41:1(e)(iii) | 2 | 截图 | `test_1e_iii_screenshot_test_1_found` · 测试 1 输出 1（MS 也接受 16）；`test_1e_iii_screenshot_test_2_not_found` · 测试 2 输出 –1（MS p.13 样例） | 两次测试都截图 |
 
 ## 人工核对清单
@@ -125,3 +125,9 @@
 - MS 的 Python 范例 `BinarySearch` 用 `Last = NumberItems`（比最后一个下标大 1）；在 `append` 出来的只有 5 个元素的 list 上找比最大值还大的数会越界。参考解用 `Last = NumberItems - 1`；测试数组都有 20 格，两种写法都能通过。
 - MS 的 Python 范例冒泡排序比较的是 `DataStored[Count2] > DataStored[Count]`（两个循环变量各自走全程），也能排好；参考解用相邻元素比较的标准写法。
 - 1(a)、1(d)(ii)、1(d)(iii) 是 1 分行，语料不拆得分点；1(e)(iii) 语料把「1 mark for each test」记为 MP1（2 分）。其余行语料 `markpoints[].n` 就是 MS 圆点顺序。
+
+### T38c1 · D46 调用与输出核验
+
+增加 Initialise → BubbleSort → BinarySearch 的真实调用、输入参数及找到/未找到返回结果检查。取消搜索结果必须是整段最后一个数字的限制，允许末尾 Question 1 等说明。NumberItems=0 在 Initialise 前的赋值仍人工核对；20 格由 QP 明确规定，不放宽。
+
+测试观测候选文件中的实际模块调用、参数与返回值；结果与调用记录同时核对。注释、指定算法结构、变量接收返回值及截图呈现仍按人工清单检查；自动占比沿用逐点加权口径。
