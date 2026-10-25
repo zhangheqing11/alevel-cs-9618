@@ -46,3 +46,23 @@
 4. 全部完成后：`retrieval.py check` 全过；用临时记录表副本重跑 `pick` / `show` 演示。
 5. PR 描述加「返工」一节：§3 各项计数前后对比、每卷代码题比例、每卷随机抽 5 道（`pick --seed`）的完整 Q / A / 测。
 6. 交付：rebase → `retrieval.py check` → `make check` → `make check-scope TASK=T51` → `git push --force-with-lease`。不合并、不推 main。
+
+## 5. 第二轮返工（总控 2026-10-25 验收 a921fc2）
+
+第一轮返工把模板去掉了（万能题面 0、空话「测」0、截断 0、235 条「测」各不相同、115 道自写答案、42 个代码块），方向对。抽查 40 道仍有三类会误导导师的问题，**只修这三类，其余保留**：
+
+| 类 | 规模 | 例 |
+|:--|:--|:--|
+| A 不回答 Q，或「依据」与 A 无关 | 抽查约 1 / 10 | `P4-SQ-02-R1` 问空队列两个指针的初值，A 却是 Dequeue 判空代码；`P4-MP-01-R1` 问空 / 非空两种情况，A 只写了非空，依据是“输出全部记录”；`P4-AR-04-R2` 的依据是“拼接加空格再返回”，与“逐行打印”无关；`P3-SY-12-R1` 问 why，A 是一句给分备注；`P3-DR-02-R2` 题面已经说出答案（“refer to an object in memory”） |
+| A 直接用了 MS 的**给分备注**而不是知识 | 约 10 道 | 「1 mark for first 4 rows, 1 mark for second 4 rows」、「Two marks if no errors present」、「XOR (with remainder correct and bracketed and nothing extra)」、「Lines from S3 with correct event labels …」、「Do not allow operators in stacks」、「Any correct Boolean term」、「All original fields are in correct tables」、「Use of correct Flight1 variable …」、「Two correct attributes (…)」、「all correct Boolean operators and punctuation …」 |
+| 伪代码答案结构没闭合 | 17 个伪代码块里 13 个 | `IF TopOfStack = 8 THEN` / `RETURN FALSE` 没有 `ENDIF`；`FOR … ` 没有 `NEXT`；`WHILE` 没有 `ENDWHILE`；`PROCEDURE` 没有 `ENDPROCEDURE`。P2 卷首「考场作答方法」第一条就是漏 ENDIF 丢分，题库不能示范它 |
+
+### 做法
+
+1. **`check` 再加三条护栏**：
+   - 伪代码块里每个 `IF` / `WHILE` / `FOR` / `REPEAT` / `CASE` / `FUNCTION` / `PROCEDURE` / `CLASS` 都有对应的结束词（`ENDIF` / `ENDWHILE` / `NEXT` / `UNTIL` / `ENDCASE` / `ENDFUNCTION` / `ENDPROCEDURE` / `ENDCLASS`）；省略的循环体用一行 `...` 表示，但结束词必须写。Python 块用 `ast.parse` 能解析（省略处写 `...`，它在 Python 里合法）。
+   - A 是直接 MS 引文（不是「非 MS 原文」）时，引文里出现 `mark`、`Accept`、`Reject`、`Allow`、`Do not`、`correct`（不区分大小写）就报错——这些是给分备注，要换成「（非 MS 原文）知识句 + 依据：给分句」，或换一句真正陈述知识的 MS 原句。
+   - 输出被这三条拦下的题号清单，作为第二轮返工清单。
+2. **逐题核对全部 235 道的 Q / A / 依据三者对齐**（不是只修护栏拦下的）：A 是否**正好**回答 Q（问 initial values 就答初值，问 why 就答原因，问两种情况就两种都答）；「依据」是否支撑 A 的那句话；题面是否已经泄露答案。核对结果记进进度日志：每卷改了哪些题号、为什么。
+3. 修完跑 `retrieval.py check`、`make check`，按卷提交 `T51: fix answer alignment in P<N> retrieval items`。
+4. PR 描述加「第二轮返工」一节：三条新护栏的前后计数、逐题核对改动的题号清单、上表点名的 15 道题各自改后的完整 Q / A / 依据。

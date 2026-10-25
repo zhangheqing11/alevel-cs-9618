@@ -415,3 +415,12 @@ PR 描述贴出两段新文字全文、每幅图能推出哪些题型，以及�
 只写 tasks/scope.json 里 T51 允许的路径与 tasks/progress/T51.md；SKILL.md 与 ledger/ 不改。每完成一章就提交并更新进度日志。交付：git fetch origin && git rebase origin/main → python3 skill/cie-9618-cs-tutor/scripts/retrieval.py check → make check → make check-scope TASK=T51 → git push --force-with-lease（PR #66 自动更新）。不要合并 PR，不要推 main。
 在 PR 描述加「返工」一节：护栏各项前后计数、每卷代码题比例、每卷 5 道随机题的完整 Q / A / 测，以及「需要总控决定」。
 ```
+
+### codex · T51 第二轮返工（#66；新开 Codex 会话）
+
+```
+你是执行工位，续做 T51 第二轮返工：第一轮返工已去掉模板（总控验收认可），但抽查 40 道仍有三类问题——A 不回答 Q 或「依据」与 A 无关（约一成）、约 10 道 A 直接用了 MS 的给分备注（如「1 mark for first 4 rows…」「Do not allow operators in stacks」）、17 个伪代码块里 13 个结构没闭合（IF 无 ENDIF、FOR 无 NEXT 等）。先读 AGENTS.md（§5）、tasks/T51-retrieval-bank.md、tasks/handoff/T51-retrieval.md 与 **tasks/handoff/T51-rework.md 第 5 节（第二轮结论、点名题号、三条新护栏、逐题核对要求——严格照做）**。
+续做分支 task/T51-retrieval-bank（照交接 README §1 建 worktree，不要重开分支）。先给 retrieval.py check 加三条护栏并存报错清单，再逐题核对全部 235 道的 Q / A / 依据对齐，只修有问题的题，合格的保留；手写修改，不要用脚本生成文字。伪代码合 2027–29 指南（结构必须闭合），Python 合 D10。
+只写 tasks/scope.json 里 T51 允许的路径与 tasks/progress/T51.md；SKILL.md 与 ledger/ 不改。每修完一卷就提交并更新进度日志。交付：git fetch origin && git rebase origin/main → python3 skill/cie-9618-cs-tutor/scripts/retrieval.py check → make check → make check-scope TASK=T51 → git push --force-with-lease（PR #66 自动更新）。不要合并 PR，不要推 main。
+在 PR 描述加「第二轮返工」一节：新护栏前后计数、改动题号清单、第 5 节点名的 15 道题改后的完整 Q / A / 依据，以及「需要总控决定」。
+```
