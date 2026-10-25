@@ -406,3 +406,12 @@ PR 描述贴出两段新文字全文、每幅图能推出哪些题型，以及�
 只写 tasks/scope.json 里 T53 允许的路径（build/**）与 tasks/progress/T53.md；tools/、Makefile、docs/ 不改。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → ~/.venvs/alevel-cs/bin/python -m pytest build/tests -q → python3 build/build.py all → make check → make check-scope TASK=T53 → push → gh pr create --base main --title "T53: build docs/guide and fix quote regex"。不要合并 PR，不要推 main。
 最后在 PR 描述里写全任务卡「完成标准」要求的内容（含构建前后对比）与「需要总控决定」。
 ```
+
+### codex · T51 返工（#66 题库内容打回；新开 Codex 会话）
+
+```
+你是执行工位，续做 T51：#66 的抽题脚本与 skill 挂钩已验收保留，但题库正文是按模板批量生成的（72 道题面是同一句 “state one required step, condition, or reason”，103 条「测」是同一句空话，换情境题只是在 R1 前加场景短语，部分答案不回答题面，全库没有代码答案），被总控打回。先读 AGENTS.md（§5）、docs/DECISIONS.md（D1、D2、D10、D47）、tasks/T51-retrieval-bank.md、tasks/handoff/T51-retrieval.md（原格式）与 **tasks/handoff/T51-rework.md（返工结论、重写规则、check 护栏、执行方案——严格照做）**，再读 skill/cie-9618-cs-tutor/references/few-shots.md 示例 6–8 看好的检索题是什么样子。
+续做分支 task/T51-retrieval-bank（照交接 README §1 建 worktree，不要重开分支）。先给 retrieval.py check 加护栏、存报错清单，再逐章手写重写；不要用脚本生成题面、答案或「测」。每道题自问：学生不看卡 30 秒内知道答什么吗？A 是不是正好回答 Q？
+只写 tasks/scope.json 里 T51 允许的路径与 tasks/progress/T51.md；SKILL.md 与 ledger/ 不改。每完成一章就提交并更新进度日志。交付：git fetch origin && git rebase origin/main → python3 skill/cie-9618-cs-tutor/scripts/retrieval.py check → make check → make check-scope TASK=T51 → git push --force-with-lease（PR #66 自动更新）。不要合并 PR，不要推 main。
+在 PR 描述加「返工」一节：护栏各项前后计数、每卷代码题比例、每卷 5 道随机题的完整 Q / A / 测，以及「需要总控决定」。
+```
