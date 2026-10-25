@@ -10,8 +10,8 @@
 | [T38-fixes.md](T38-fixes.md) | T38b 改 P4 卡（含 OP 换题）；T38c1–3 排查 54 道 P4 练习 | ✅ 已合并（#58、#60、#61、#59；D48） |
 | [T39-skill.md](T39-skill.md) | T39 教学 skill 重构到全四卷 + P3 / P4 记录表 | ✅ 已合并 #56（D47） |
 | [T51-retrieval.md](T51-retrieval.md) · [T51-rework.md](T51-rework.md) | T51 开场检索题库 + 抽题脚本 | 🔨 #66 题库内容打回返工（脚本与挂钩保留） |
-| [T52-models.md](T52-models.md) | T52 P3 DR、P4 LT 心智模型 | 👀 #64 验收通过，待合并 |
-| [T53-guide-build.md](T53-guide-build.md) | T53 指南进构建 + 引文正则（M1） | 👀 #65 验收通过，待合并 |
+| [T52-models.md](T52-models.md) | T52 P3 DR、P4 LT 心智模型 | ✅ 已合并 #64 |
+| [T53-guide-build.md](T53-guide-build.md) | T53 指南进构建 + 引文正则（M1） | ✅ 已合并 #65 |
 
 ## 通用约定（所有交接任务）
 

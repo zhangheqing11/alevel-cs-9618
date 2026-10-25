@@ -47,6 +47,6 @@
 | T50 | 最终全量审查与优化（skill、卷首书末、20 张 ★★★ 卡、一致性；0 处给分错误） | 云端 · Fable 5.1 | 全部 ✅ | ✅ | #62 |
 | T50b | 第二轮：用 Fable 的判断力做教学优化（心智模型与概念主线、★★★ 讲解层、考场作答方法、skill 诊断式教学），不重复纠错 | 云端 · Fable 5.1 | T50 ✅ | ✅ | #63（分支 claude/friendly-einstein-mh2pht） |
 | T51 | 开场检索题库（★★★ 每型 2 道、★★☆ 每型 1 道，答案带 MS 证据）+ `retrieval.py` 抽题脚本 | codex | T50b ✅ | 🔨 返工（题库模板化，见 handoff/T51-rework.md） | #66 |
-| T52 | P3 DR、P4 LT 两章补「心智模型」 | codex | T50b ✅ | 👀 | #64 |
-| T53 | `docs/guide/` 纳入构建（HTML 版）+ 修构建器引文正则（M1） | codex | T50b ✅ | 👀 | #65 |
+| T52 | P3 DR、P4 LT 两章补「心智模型」 | codex | T50b ✅ | ✅ | #64 |
+| T53 | `docs/guide/` 纳入构建（HTML 版）+ 修构建器引文正则（M1） | codex | T50b ✅ | ✅ | #65 |
 第 2 阶段以后的任务卡在依赖完成时由总控写出。决策见 `docs/DECISIONS.md`。
