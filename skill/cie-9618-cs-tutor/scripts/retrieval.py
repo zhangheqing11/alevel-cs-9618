@@ -51,6 +51,30 @@ MEASURE_RE = re.compile(r"^\s{2}- 测：\s*(?P<value>.*)$")
 ROW_RE = re.compile(r"⟦(?P<row>[^⟧\s]+)⟧")
 QUOTE_RE = re.compile(r"「(?P<quote>[^」]+)」\s*⟦(?P<row>[^⟧\s]+)⟧")
 
+# Retrieval items for these types should make the learner write a short,
+# executable step.  The bank checker uses this list to prevent a whole paper
+# of prose-only prompts from passing coverage checks.
+CODE_TYPES = {
+    # P2: pseudocode modules, file/ADT operations, traces and amendments.
+    "P2-DT-05", "P2-DT-06", "P2-DT-07", "P2-DT-09", "P2-DT-10", "P2-DT-16",
+    "P2-PG-09", "P2-PG-10", "P2-PG-11",
+    "P2-SD-06", "P2-SD-07", "P2-SD-08", "P2-SD-12",
+    # P3: algorithms, stack/ADT work, assembly and file pseudocode.
+    "P3-CT-02", "P3-CT-06", "P3-FP-03", "P3-FP-10",
+    # P4 practical programming: all active P4 retrieval types.
+    "P4-PR-01", "P4-PR-03", "P4-AR-01", "P4-AR-04", "P4-AR-05",
+    "P4-FL-01", "P4-FL-02", "P4-SR-01", "P4-SR-02", "P4-SR-03", "P4-SR-04",
+    "P4-SQ-01", "P4-SQ-02", "P4-SQ-03", "P4-SQ-04", "P4-LT-02", "P4-LT-03",
+    "P4-OP-01", "P4-OP-02", "P4-OP-03", "P4-OP-06", "P4-OP-07",
+    "P4-MP-01", "P4-MP-02", "P4-MP-03",
+}
+FORBIDDEN_Q_PHRASES = (
+    "state one required step",
+    "in a new situation",
+    "in a different",
+)
+GENERIC_MEASURE = "只测这一题型的一个关键得分点。"
+
 
 class RetrievalError(Exception):
     """A user-facing bank or command error."""
@@ -299,6 +323,7 @@ def check_paper(root: pathlib.Path, paper: str) -> tuple[list[str], int, int]:
     type_index = index["types"]
     seen: set[str] = set()
     by_type: dict[str, list[dict]] = defaultdict(list)
+    measures: dict[str, str] = {}
     switched = 0
     for item in items:
         item_id = item["id"]
@@ -312,6 +337,27 @@ def check_paper(root: pathlib.Path, paper: str) -> tuple[list[str], int, int]:
             errors.append(f"{path.relative_to(root)} line {item['line']}: missing Q")
         if not item["measure"].strip():
             errors.append(f"{path.relative_to(root)} line {item['line']}: missing 测")
+        measure = item["measure"].strip()
+        if measure == GENERIC_MEASURE:
+            errors.append(f"{path.relative_to(root)} line {item['line']}: generic 测 line")
+        if measure.endswith(("……", "...", "…")):
+            errors.append(f"{path.relative_to(root)} line {item['line']}: 测 line is truncated")
+        if len(measure) > 40:
+            errors.append(f"{path.relative_to(root)} line {item['line']}: 测 line exceeds 40 characters")
+        if measure in measures:
+            errors.append(
+                f"{path.relative_to(root)} line {item['line']}: 测 duplicates {measures[measure]} in {paper}"
+            )
+        else:
+            measures[measure] = item_id
+        question_lower = item["q"].lower()
+        for phrase in FORBIDDEN_Q_PHRASES:
+            if phrase in question_lower:
+                errors.append(f"{path.relative_to(root)} line {item['line']}: template Q phrase {phrase!r}")
+        type_info = type_index.get(item["type"], {})
+        name_en = str(type_info.get("name_en", "")).strip().lower()
+        if len(name_en.split()) >= 3 and name_en in question_lower:
+            errors.append(f"{path.relative_to(root)} line {item['line']}: Q repeats name_en {name_en!r}")
         answer = item["answer"]
         if not answer.strip():
             errors.append(f"{path.relative_to(root)} line {item['line']}: missing A")
@@ -335,6 +381,22 @@ def check_paper(root: pathlib.Path, paper: str) -> tuple[list[str], int, int]:
             errors.append(f"{path.relative_to(root)}: {code} ({data['stars']}) has {len(entries)} questions; needs {required}")
         if need_migration and not any(item["label"] == "换情境" for item in entries):
             errors.append(f"{path.relative_to(root)}: {code} (★★★) needs at least one 〔换情境〕 question")
+        if code in CODE_TYPES:
+            code_items = [item for item in entries if "```" in item["answer"] and "非 MS 原文" in item["answer"]]
+            required_code = (len(entries) + 1) // 2
+            if len(code_items) < required_code:
+                errors.append(
+                    f"{path.relative_to(root)}: {code} has {len(code_items)}/{len(entries)} code answers; "
+                    f"needs at least {required_code}"
+                )
+        if sum(1 for item in entries if item["label"] == "换情境") > 1:
+            answers = [item["answer"] for item in entries if item["label"] == "换情境"]
+            if len(answers) != len(set(answers)):
+                errors.append(f"{path.relative_to(root)}: {code} has duplicate 〔换情境〕 answers")
+        if len(entries) > 1:
+            answers = [item["answer"] for item in entries]
+            if len(answers) != len(set(answers)):
+                errors.append(f"{path.relative_to(root)}: {code} has duplicate answers")
     for code in by_type:
         if code not in expected:
             star = type_index.get(code, {}).get("stars", "unknown")
