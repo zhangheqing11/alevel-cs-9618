@@ -16,6 +16,7 @@ Examples::
 from __future__ import annotations
 
 import argparse
+import ast
 import datetime as dt
 import json
 import pathlib
@@ -74,6 +75,13 @@ FORBIDDEN_Q_PHRASES = (
     "in a different",
 )
 GENERIC_MEASURE = "只测这一题型的一个关键得分点。"
+CODE_FENCE_RE = re.compile(r"```(?P<lang>[A-Za-z0-9_-]*)\n(?P<body>.*?)```", re.S)
+MARKING_PHRASE_RE = re.compile(r"\b(mark(?:s)?|accept|reject|allow|do not|correct)\b", re.I)
+PSEUDO_OPENERS = {
+    "IF": "ENDIF", "WHILE": "ENDWHILE", "FOR": "NEXT", "REPEAT": "UNTIL",
+    "CASE": "ENDCASE", "FUNCTION": "ENDFUNCTION", "PROCEDURE": "ENDPROCEDURE",
+    "CLASS": "ENDCLASS",
+}
 
 
 class RetrievalError(Exception):
@@ -233,6 +241,55 @@ def _choose_item(items: list[dict], code: str, avoid: set[str], rng: random.Rand
     return rng.choice(pool)
 
 
+def _code_blocks(answer: str) -> list[tuple[str, str]]:
+    return [(m.group("lang").lower(), m.group("body")) for m in CODE_FENCE_RE.finditer(answer)]
+
+
+def _pseudo_structure_errors(body: str) -> list[str]:
+    """Check the small 1–3 line pseudocode snippets used in retrieval answers."""
+    stack: list[str] = []
+    errors: list[str] = []
+    for raw in body.splitlines():
+        line = raw.strip()
+        if not line or line == "..." or line.startswith("//"):
+            continue
+        upper = line.upper()
+        # An ELSE/ELSEIF belongs to the currently open IF; it does not close it.
+        if upper.startswith("ELSEIF") or upper == "ELSE":
+            if not stack or stack[-1] != "ENDIF":
+                errors.append(f"unexpected {line}")
+            continue
+        matched_end = None
+        for opener, closer in PSEUDO_OPENERS.items():
+            if upper.startswith(opener + " ") or upper == opener or upper.startswith(opener + "("):
+                stack.append(closer)
+                break
+            if upper == closer or upper.startswith(closer + " "):
+                matched_end = closer
+                break
+        if matched_end:
+            if not stack or stack[-1] != matched_end:
+                errors.append(f"unexpected {line}")
+            else:
+                stack.pop()
+    errors.extend(f"missing {closer}" for closer in reversed(stack))
+    return errors
+
+
+def _answer_structure_errors(item: dict) -> list[str]:
+    errors: list[str] = []
+    answer = item["answer"]
+    for lang, body in _code_blocks(answer):
+        if lang in {"python", "py"}:
+            try:
+                ast.parse(body)
+            except SyntaxError as exc:
+                errors.append(f"Python answer does not parse: {exc.msg}")
+        elif lang in {"pseudocode", "pseudo", "text", ""}:
+            errors.extend(_pseudo_structure_errors(body))
+    return errors
+
+
 def pick(args: argparse.Namespace, root: pathlib.Path) -> int:
     paper = args.paper
     items = load_bank(root, paper)
@@ -363,6 +420,12 @@ def check_paper(root: pathlib.Path, paper: str) -> tuple[list[str], int, int]:
             errors.append(f"{path.relative_to(root)} line {item['line']}: missing A")
         if "⟦" not in answer and "非 MS 原文" not in answer:
             errors.append(f"{path.relative_to(root)} line {item['line']}: A needs ⟦row id⟧ or （非 MS 原文）")
+        if "非 MS 原文" not in answer:
+            quoted = " ".join(m.group("quote") for m in QUOTE_RE.finditer(answer))
+            if MARKING_PHRASE_RE.search(quoted):
+                errors.append(f"{path.relative_to(root)} line {item['line']}: A quotes marking/commentary text directly")
+        for structure_error in _answer_structure_errors(item):
+            errors.append(f"{path.relative_to(root)} line {item['line']}: {structure_error}")
         row_ids = ROW_RE.findall(answer)
         if any("s26" in row_id for row_id in row_ids) or "9618_s26_" in answer:
             errors.append(f"{path.relative_to(root)} line {item['line']}: s26 evidence is reserved and forbidden")
