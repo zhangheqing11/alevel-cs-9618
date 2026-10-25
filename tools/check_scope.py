@@ -35,7 +35,7 @@ def glob_to_regex(pattern: str) -> re.Pattern:
 
 
 def git(*args: str) -> str:
-    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True).stdout
+    return subprocess.run(["git", "-c", "core.quotepath=false", *args], cwd=ROOT, capture_output=True, text=True).stdout
 
 
 def changed_files() -> list[str]:
@@ -44,7 +44,7 @@ def changed_files() -> list[str]:
         base = git("merge-base", ref, "HEAD").strip()
         if base:
             break
-    files = set(git("diff", "--name-only", base, "HEAD").split()) if base else set()
+    files = set(git("diff", "--name-only", base, "HEAD").splitlines()) if base else set()
     for line in git("status", "--porcelain", "--untracked-files=all").splitlines():
         files.add(line[3:].strip().strip('"'))
     return sorted(f for f in files if f)

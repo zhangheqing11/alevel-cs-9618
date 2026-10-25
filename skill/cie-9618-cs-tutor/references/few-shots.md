@@ -455,6 +455,7 @@ python3 skill/cie-9618-cs-tutor/scripts/ledger.py set P4 P4-SQ-02 状态=学习�
 | A buffer allows temporary storage of the data | The buffer temporarily stores the data | ✓ |
 | … so that the computer can transfer data to the buffer at the higher speed | — | ✗ |
 | ... and is not held up waiting for data to transfer // so the computer can carry on with other tasks | the computer can write to the disc more easily | ✗（more easily 不是机制） |
+| ... so the optical disc reader/writer is not overloaded | — | ✗ |
 | … and so that data is transferred to optical disc reader/writer from the buffer at the slower rate | then sends it to the optical disc | ✗ |
 
 - 做对的：temporarily 这个限定词写了，这一分稳。

@@ -276,7 +276,7 @@ def check_markdown(rep: Report, rows: dict, types: dict) -> None:
 def changed_paths() -> set[str] | None:
     """Files changed vs the merge-base with origin/main (or main), plus uncommitted. None = unknown."""
     def git(*args):
-        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+        return subprocess.run(["git", "-c", "core.quotepath=false", *args], cwd=ROOT, capture_output=True, text=True)
     base = None
     for ref in ("origin/main", "main"):
         r = git("merge-base", ref, "HEAD")

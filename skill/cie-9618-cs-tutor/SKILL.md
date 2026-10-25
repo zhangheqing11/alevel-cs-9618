@@ -28,7 +28,8 @@ description: Teach, drill, mark and mock-exam CIE AS & A Level Computer Science 
 
 | 什么时候 | 读 |
 |:--|:--|
-| 每个新对话第一次讲概念之前 | [references/few-shots.md](references/few-shots.md)（讲解语气示范 + 两个批改示范） |
+| 每个新对话第一次讲概念之前 | [references/few-shots.md](references/few-shots.md)（讲解语气、批改、诊断探针、错误转检索题与开场检索的示范） |
+| 每次换章、开新卷（尤其开 P3、P4 前） | [docs/guide/concept-threads.md](../../docs/guide/concept-threads.md)（跨卷概念主线：每一步新增了什么、旧知识怎样迁移） |
 | 找资料、原始 PDF、教材 / 范答 / 考官报告的用法；资料缺失怎么降级 | [references/resources.md](references/resources.md) |
 | P1、P3 理论题（含 P3 逐步作答题与 P3 写伪代码题） | [references/theory.md](references/theory.md) |
 | P2（伪代码 + 同题 Python）；伪代码批改规则（P3 写代码题也用） | [references/programming.md](references/programming.md) |
