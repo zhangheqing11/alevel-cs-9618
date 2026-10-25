@@ -56,10 +56,11 @@ QUOTE_RE = re.compile(r"「(?P<quote>[^」]+)」\s*⟦(?P<row>[^⟧\s]+)⟧")
 # executable step.  The bank checker uses this list to prevent a whole paper
 # of prose-only prompts from passing coverage checks.
 CODE_TYPES = {
-    # P2: pseudocode modules, file/ADT operations, traces and amendments.
+    # P2: pseudocode modules, file/ADT operations and amendments.  Trace tables
+    # (SD-07) and reading given code (SD-08) are not code-writing types.
     "P2-DT-05", "P2-DT-06", "P2-DT-07", "P2-DT-09", "P2-DT-10", "P2-DT-16",
     "P2-PG-09", "P2-PG-10", "P2-PG-11",
-    "P2-SD-06", "P2-SD-07", "P2-SD-08", "P2-SD-12",
+    "P2-SD-06", "P2-SD-12",
     # P3: algorithms, stack/ADT work, assembly and file pseudocode.
     "P3-CT-02", "P3-CT-06", "P3-FP-03", "P3-FP-10",
     # P4 practical programming: all active P4 retrieval types.
