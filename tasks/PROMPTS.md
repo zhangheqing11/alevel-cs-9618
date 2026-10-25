@@ -377,3 +377,32 @@ T12f 合并后 rebase 时若 corpus/rows/p4/*.jsonl 冲突：取 origin/main 的
 只写 tasks/scope.json 里 T38c3 允许的路径与 tasks/progress/T38c3.md；共享文件（tools/、schemas/ 等）不改。每完成一个单元就提交并更新进度日志。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check-all → make check-scope TASK=T38c3 → push → gh pr create --base main --title "T38c3: harden P4 practice tests (call chains, over-strict output)"。不要合并 PR，不要推 main。
 最后在 PR 描述里写全任务卡要求的内容与「需要总控决定」。
 ```
+
+## T50b 之后（2026-10-25；T51、T52、T53 三个会话互不依赖，可并行）
+
+### codex · T51 开场检索题库（新开 Codex 会话）
+
+```
+你是执行工位，负责 T51：为教学 skill 建一个按题型码组织、答案带 MS 证据的开场检索题库（★★★ 每型 2 道、★★☆ 每型 1 道，共 169 个题型），并写抽题脚本 retrieval.py。先读 AGENTS.md（§5 证据规则）、docs/DECISIONS.md（D1、D2、D10、D40、D47）、tasks/T51-retrieval-bank.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T51-retrieval.md（交接文档：题库格式、脚本规格、逐章执行方案、坑——严格照做）**，再读 skill/cie-9618-cs-tutor/references/few-shots.md 的「六种探针」「把错误转成下一道题」两节与示例 6–8。
+从最新 origin/main 开分支 task/T51-retrieval-bank。先写脚本与 README、用 P1 IR 两三个题型试通格式，再按 P1 → P2 → P3 → P4 逐章写题；每道题只测一环、30 秒英文答完；MS 原句逐字写成「…」⟦行 id⟧，只引该题型卡或该章概念表已出现的行，不用 s26 行；代码答案标「非 MS 原文」。ledger/ 下的真实记录表不要改，实测用 work/tmp/ 里的副本。
+只写 tasks/scope.json 里 T51 允许的路径与 tasks/progress/T51.md；SKILL.md 与其他共享文件不改。每完成一章就提交并更新进度日志（随时可能被中断）。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → python3 skill/cie-9618-cs-tutor/scripts/retrieval.py check → make check → make check-scope TASK=T51 → push → gh pr create --base main --title "T51: opening retrieval bank and picker"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容与「需要总控决定」。
+```
+
+### codex · T52 P3 DR、P4 LT 心智模型（新开 Codex 会话）
+
+```
+你是执行工位，负责 T52：在 papers/p3/cards/DR.md 与 papers/p4/cards/LT.md 的「核心思想」末尾各加一段「心智模型」，把整章讲成一两幅能推出题型的图，结尾告诉学生看到题先定位到图的哪里。先读 AGENTS.md、docs/DECISIONS.md（D2、D10、D24）、tasks/T52-chapter-models.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T52-models.md（交接文档：范本、写作方向、执行方案、坑）**；范本是 papers/p1/cards/HW.md 第 15 行等 T50b 新加的四段心智模型，衔接读 docs/guide/concept-threads.md。
+从最新 origin/main 开分支 task/T52-chapter-models。只加新段，不动原有段落、题型卡、引文与选题；新段不写「」；每个模型句落到本章题型码上；下标与空指针约定写“以本题题干为准”。
+只写 tasks/scope.json 里 T52 允许的路径与 tasks/progress/T52.md；共享文件不改。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → make check → python3 build/build.py p3 → python3 build/build.py p4 → make check-scope TASK=T52 → push → gh pr create --base main --title "T52: mental models for P3 DR and P4 LT"。不要合并 PR，不要推 main。
+PR 描述贴出两段新文字全文、每幅图能推出哪些题型，以及「需要总控决定」。
+```
+
+### codex · T53 指南进构建 + 引文正则（新开 Codex 会话）
+
+```
+你是执行工位，负责 T53：让构建器把 docs/guide/*.md 生成成和手册同样式的 output/guide/*.md 与 .html（build.py 新命令 guide，all 包含它），并修 build/markdown.py 引文正则跨越「」吞文本的问题（T50 M1）。先读 AGENTS.md、tasks/T53-guide-build.md（任务卡）、tasks/handoff/README.md 与 **tasks/handoff/T53-guide-build.md（交接文档：执行方案、测试要求、坑）**，再读 build/README.md、build/build.py（build_ladder 是范本）、build/markdown.py、build/tests/。
+从最新 origin/main 开分支 task/T53-guide-build。先用 --out work/tmp/before 留一份构建基线；正则先写失败的回归测试再修；guide 构建加夹具测试；最后 --out work/tmp/after 再构建，diff 两份 .md 输出，逐处说明差异。output/ 与 work/tmp/ 不提交。
+只写 tasks/scope.json 里 T53 允许的路径（build/**）与 tasks/progress/T53.md；tools/、Makefile、docs/ 不改。交付照 tasks/handoff/README.md §6–7：git fetch origin && git rebase origin/main → ~/.venvs/alevel-cs/bin/python -m pytest build/tests -q → python3 build/build.py all → make check → make check-scope TASK=T53 → push → gh pr create --base main --title "T53: build docs/guide and fix quote regex"。不要合并 PR，不要推 main。
+最后在 PR 描述里写全任务卡「完成标准」要求的内容（含构建前后对比）与「需要总控决定」。
+```

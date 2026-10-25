@@ -245,7 +245,7 @@ def check_row_links(rep: Report, rows: dict, types: dict, vocab: dict) -> None:
 # -------------------------------------------------------------------- cards
 
 def check_markdown(rep: Report, rows: dict, types: dict) -> None:
-    md_files = [p for base in ("papers", "ladder", "skill") for p in sorted((ROOT / base).rglob("*.md"))]
+    md_files = [p for base in ("papers", "ladder", "skill", "docs/guide") for p in sorted((ROOT / base).rglob("*.md"))]
     n_refs = n_quotes = 0
     for path in md_files:
         text = path.read_text(encoding="utf-8")

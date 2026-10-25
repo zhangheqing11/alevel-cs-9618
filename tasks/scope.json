@@ -502,5 +502,22 @@
       "docs/review/**",
       "skill/cie-9618-cs-tutor/references/**"
     ]
+  },
+  "T51": {
+    "allow": [
+      "skill/cie-9618-cs-tutor/references/**",
+      "skill/cie-9618-cs-tutor/scripts/retrieval.py"
+    ]
+  },
+  "T52": {
+    "allow": [
+      "papers/p3/cards/DR.md",
+      "papers/p4/cards/LT.md"
+    ]
+  },
+  "T53": {
+    "allow": [
+      "build/**"
+    ]
   }
 }
