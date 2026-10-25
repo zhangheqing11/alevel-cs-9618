@@ -257,9 +257,7 @@ def build_ladder(root: Path, out: Path) -> bool:
         html_documents.append(_processed(card, root=root, chapter=None, taxonomy=empty_taxonomy,
                                          stats={}, rows=rows, metadata=metadata, output="html"))
         level = card.parent.name
-        title_match = re.search(r"^#\s+(.+?)\s*$", _read(card), re.M)
-        title = title_match.group(1).strip() if title_match else ""
-        title = re.sub(r"\s+\{#[^}]+\}\s*$", "", title).strip()
+        title = _document_title(_read(card))
         exercises = []
         for meta in sorted(card.parent.rglob("meta.json")):
             exercises.append(meta.parent.relative_to(root).as_posix())
@@ -281,9 +279,48 @@ def build_ladder(root: Path, out: Path) -> bool:
     return True
 
 
+def _document_title(text: str, fallback: str = "") -> str:
+    """Return the first level-one Markdown heading without an explicit anchor."""
+
+    match = re.search(r"^#\s+(.+?)\s*$", text, re.M)
+    if not match:
+        return fallback
+    return re.sub(r"\s*\{#[^}]+\}\s*$", "", match.group(1)).strip()
+
+
+def build_guide(root: Path, out: Path) -> bool:
+    guide_dir = root / "docs" / "guide"
+    documents = sorted(guide_dir.glob("*.md")) if guide_dir.exists() else []
+    if not documents:
+        detail = "is missing" if not guide_dir.exists() else "has no Markdown files"
+        print(f"skip guide: {guide_dir.relative_to(root)} {detail}")
+        return False
+
+    rows = load_rows(root)
+    source_root = Path(os.environ.get("ALEVEL_CS_SOURCES", "/Users/zhangheqing/Desktop/alevel cs/sources"))
+    metadata = citation_metadata(rows, load_inventory(root), source_root=source_root)
+    empty_taxonomy = {"chapters": [], "types": []}
+    output_dir = out / "guide"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    for document in documents:
+        raw = _read(document)
+        processed = _processed(document, root=root, chapter=None, taxonomy=empty_taxonomy,
+                               stats={}, rows=rows, metadata=metadata)
+        processed_html = _processed(document, root=root, chapter=None, taxonomy=empty_taxonomy,
+                                    stats={}, rows=rows, metadata=metadata, output="html")
+        stem = document.stem
+        md_path = output_dir / f"{stem}.md"
+        _write(md_path, processed)
+        title = _document_title(raw, stem)
+        _write(output_dir / f"{stem}.html", render_html(processed_html, title, "guide"))
+        print(f"built {_display_path(md_path, root)}")
+    return True
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("all", "p1", "p2", "p3", "p4", "ladder"))
+    parser.add_argument("command", choices=("all", "p1", "p2", "p3", "p4", "ladder", "guide"))
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1],
                         help="repository or fixture root")
     parser.add_argument("--out", type=Path, default=None, help="output directory (default ROOT/output)")
@@ -292,10 +329,13 @@ def main(argv: list[str] | None = None) -> int:
     out = (args.out or (root / "output")).resolve()
     if args.command == "ladder":
         build_ladder(root, out)
+    elif args.command == "guide":
+        build_guide(root, out)
     elif args.command == "all":
         for component in range(1, 5):
             build_component(root, out, component)
         build_ladder(root, out)
+        build_guide(root, out)
     else:
         build_component(root, out, int(args.command[1]))
     return 0

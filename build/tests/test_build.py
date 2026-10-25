@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from build.build import build_component, build_ladder, main
+from build.build import build_component, build_guide, build_ladder, main
 from build.markdown import citation_metadata
 from build.stats import apply_stars, calculate_stats, load_rows
 
@@ -86,6 +86,27 @@ def test_ladder_build_and_missing_inputs_are_graceful(tmp_path: Path):
     missing = tmp_path / "missing"
     missing.mkdir()
     assert main(["all", "--root", str(missing), "--out", str(tmp_path / "out")]) == 0
+
+
+def test_guide_build_renders_markdown_and_html(tmp_path: Path):
+    assert build_guide(FIXTURE, tmp_path)
+
+    markdown = (tmp_path / "guide/concept-threads.md").read_text(encoding="utf-8")
+    html = (tmp_path / "guide/concept-threads.html").read_text(encoding="utf-8")
+    assert "s24/11 Q1" in markdown
+    assert "示例概念主线" in html
+    assert '<title>示例概念主线</title>' in html
+    assert 'data-kind="guide"' in html
+    assert 'class="citation"' in html
+    assert "9618_s24_qp_11.pdf#page=2" in html
+
+    command_out = tmp_path / "command"
+    assert main(["guide", "--root", str(FIXTURE), "--out", str(command_out)]) == 0
+    assert (command_out / "guide/concept-threads.html").exists()
+
+    all_out = tmp_path / "all"
+    assert main(["all", "--root", str(FIXTURE), "--out", str(all_out)]) == 0
+    assert (all_out / "guide/concept-threads.md").exists()
 
 
 @pytest.mark.parametrize("command", ["p1", "p2", "p3", "p4"])

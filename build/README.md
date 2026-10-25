@@ -7,7 +7,10 @@
 ~/.venvs/alevel-cs/bin/python build/build.py all
 ~/.venvs/alevel-cs/bin/python build/build.py p2
 ~/.venvs/alevel-cs/bin/python build/build.py ladder
+~/.venvs/alevel-cs/bin/python build/build.py guide
 ```
+
+`guide` 构建 `docs/guide/*.md`，生成带题号引文的 `output/guide/*.md` 与 `.html`（HTML 引文链接到原卷）；`all` 会一并构建指南。
 
 可以用 `--root` 指向测试夹具，用 `--out` 指向临时输出目录。缺少 taxonomy、卡片
 或语料时，构建器会提示并跳过对应部分，仍以成功状态退出，方便总控逐步填入真实内容。
