@@ -13,6 +13,8 @@
 
 这一章几乎没有计算（子网求网络 ID/主机 ID 除外），分值都在 describe / explain 里。得分的关键是用**设备名 + 动作**写短句：“The switch checks the destination address of each packet”，而不是“the network sends it to the right place”。
 
+**心智模型**　一句话：**每个设备有地址，每一跳按地址转发**。数据包 = 报头（源地址、目的地址、序号）+ 数据；网络里的每样硬件只做一件事——看地址决定往哪送：集线器不看地址（转发给所有端口），交换机看 MAC 地址（只送到目的端口），路由器看 IP 地址（在网络之间选路），DNS 把域名翻成 IP 地址，子网掩码告诉你地址的哪一段是“网络”、哪一段是“主机”（CM-10、CM-11）。拓扑（CM-03、CM-04）决定一跳能到哪些设备、会不会撞车（总线上要 CSMA/CD，CM-07；交换机星型不会）；LAN / WAN、客户端-服务器 / 对等网（CM-01、CM-02）问的是“地址空间多大、谁存数据谁处理”；云和位流（CM-08、CM-12）是把存储与处理放到远端地址、再把数据连续送回来。描述题的每一句都应该是“某个设备看某个地址做某个动作”——这就是卷首第 10 条规则在本章的样子。
+
 ### 题型树
 <!-- auto:type-tree -->
 
@@ -389,6 +391,12 @@
 
 **英文作答句**　The company is not reliant on a third party, which gives it greater control over the security and privacy of its work and greater control over backup. The storage can also be tailored to the company's requirements, for example the amount of storage each employee can access.
 
+**迁移与卡点**
+- **卡点**：“相对于什么”。私有云对公有云的好处是“不依赖第三方 → 对安全、备份、定制有更大控制”；公有云对本地服务器的缺点是“依赖网络与第三方”。先圈出题目 instead of / compared to 后面的那个对象，每一点都写成“比它多了 / 少了什么”。
+- **考官在换什么**：定义（remote 不能漏）、公有 / 私有的对比方向、好处还是缺点、是否 discuss（两面都写）；情境（动画师、餐厅、学生）决定展开句里的例子。
+- **从代表题到变式**：代表题是三个独立的好处；变式是“两个缺点，每个点 + 展开”——不是三个点，而是两组“缺点 + because”。搬过去的是同一张好处 / 缺点清单；要换的是答案的形状。
+- **反例**：私有云写成“公司自己的电脑上”——私有云仍在远程服务器上，区别只是“只供本公司”。
+
 **下一道变式**　⟦9618_w23_13:3(a)(ii)⟧　（反方向：公有云相对 LAN 服务器的两个缺点，每个缺点“点 + 展开”。）
 
 <!-- auto:drills P1-CM-08 -->
@@ -479,6 +487,12 @@
 **与 MS 对齐**　MS 的六个词：full stops、hexadecimal、zeros、128、dynamic、private。最后两空要从描述反推类型：“can change each time”→ dynamic；“only be accessed by other devices in the same LAN … assigned by the router”→ private。
 
 **英文作答句**　IPv4 is made of four groups of 8-bit numbers separated by full stops. IPv6 is made of eight groups of 4 hexadecimal numbers separated by colons; multiple consecutive groups of zeros can be replaced with a double colon, and each IPv6 address is 128 bits. A dynamic IP address can change each time the computer connects to a network; a private IP address can only be accessed by devices in the same LAN.
+
+**迁移与卡点**
+- **卡点**：IPv6 每组 16 位（4 个十六进制数字），不是 8 位；static / dynamic 和 public / private 是两组互不相关的属性，“static private”要两个含义都说。
+- **考官在换什么**：问格式（填空、区别）、问合法性（圈出并说理由）、问四种类型的含义——全都来自那张 IPv4 / IPv6 对照表。
+- **从代表题到变式**：代表题是按描述填词；变式是判断一个地址——用对照表逐条对：有字母就不是十进制的 IPv4，某一组超过 255 也不是；用句点、只有 4 组又不是 IPv6。理由要**两种格式都排除**。搬过去的是对照表；要换的是用法（从填表变成逐条核对）。
+- **反例**：题干已给的区别（句点 vs 冒号）再写一遍；判断题只排除一种格式。
 
 **下一道变式**　⟦9618_w25_11:7(b)⟧　（判断 256.0.0.A 是 IPv4、IPv6 还是不合法，并说两条理由。）
 

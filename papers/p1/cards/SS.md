@@ -11,6 +11,8 @@
 
 这一章几乎全是“说出名称 + 说明作用/理由”的文字题。MS 的结构高度固定：**“benefit / feature 1 分 + expansion 1 分”成对给分**。所以每一点都要写成“是什么 → 所以/因为什么”两截，单写一个名词通常只拿一半。
 
+**心智模型**　把操作系统想成一个**资源的管理员**：资源只有四种——处理器时间、内存、存储（文件）、外设——外加“谁有权用”（安全）。SS-01 的每个管理任务就是“对一种资源做分配、记录、回收、保护”；实用软件（SS-02）是管理员的工具箱，每件工具对应一种资源的维护（磁盘：碎片整理、格式化、修复；文件：备份、压缩；安全：杀毒）。另一半是**翻译的时间点**：源代码总要变成机器码，区别只在“什么时候翻、翻多少”——编译器在运行前一次翻完（运行快、错误集中报、可以不带源码发布），解释器在运行时逐句翻（改一句就能试、报错停在当句、每次运行都要重翻），折中方案先翻成中间代码再解释（SS-06，跨平台）。SS-04 至 SS-07 的全部优缺点与选择题，都从“翻译发生在运行前还是运行中”这一句推出来；IDE 是把编辑、翻译、调试放在一处的工作台。
+
 ### 题型树
 <!-- auto:type-tree -->
 
@@ -64,6 +66,12 @@
 **英文作答句**　Memory management stores data from all currently running programs concurrently in RAM and stops the data from overwriting each other. Process management allows one process to be paused whilst another process is actioned, decides which process is to be run next, and switches between processes so that they share the use of the processor.
 
 **直观**　多任务像一个厨师同时做几道菜：内存管理是给每道菜分一块案板、不让它们混在一起；进程管理是决定此刻翻哪个锅、几秒后换下一个。
+
+**迁移与卡点**
+- **卡点**：“管理 X”不算答案。每项管理任务要写出一个具体动作（分配内存块、决定下一个运行谁、安装驱动程序）；只写 manages memory 最多拿名称分。
+- **考官在换什么**：问目的、问“另外几个”任务、问某一项任务的细节、问两项任务怎样支持多任务；五项任务是固定清单，分值决定要写几个动作。
+- **从代表题到变式**：代表题是内存 + 进程两栏；变式是硬件管理一栏四分——四个动作：安装驱动程序、向设备收发数据、管理缓冲区、处理设备中断。搬过去的是“名称 + 动作”的写法；要换的是从章首表里取哪一行。
+- **反例**：把实用软件的活（碎片整理、杀毒）写成 OS 的管理任务；在 OS 题里展开中断处理的细节（那是 PF-04 的分）。
 
 **下一道变式**　⟦9618_s23_11:3(a)⟧　（换成硬件管理：描述 OS 怎样管理外设，4 分。）
 
@@ -121,6 +129,12 @@
 
 **直观**　碎片化的磁盘像一本书被拆成散页塞在书架各处，读一本要满屋跑；整理后每本书的页按顺序放在一起，一伸手就拿完。
 
+**迁移与卡点**
+- **卡点**：碎片整理的机制——它不删文件、不腾空间，只把同一文件的块排成连续的，所以读写头移动少。缺了“连续”“读写头”这两个词就只拿一半。
+- **考官在换什么**：问目的、问某一个实用程序、按情境选一个、排除某一类（“不是为安全服务的”）。每个实用程序都是“做什么 → 为什么需要”两句。
+- **从代表题到变式**：代表题是两个指定的实用程序；变式让你自己挑一个，但排除安全类——病毒检查不能选；选碎片整理或备份，名称 1 分、解释 2 分。搬过去的是章表里的“做什么 + 为什么”；要注意的是先读排除条件再选。
+- **反例**：SSD 情境选碎片整理（没有读写头，没意义）；备份写成 stores data。
+
 **下一道变式**　⟦9618_w23_12:8(b)⟧　（自己挑一个不是为安全服务的实用程序，名称 1 分 + 解释 2 分。）
 
 <!-- auto:drills P1-SS-02 -->
@@ -175,6 +189,12 @@
 **英文作答句**　The executable file size of the program using the DLL will be smaller, because the executable does not contain all the library routines. There is no need to recompile the main program when changes are made to the DLL, because changes to the DLL code are done independently of the main program.
 
 **直观**　普通库像把整本参考书复印进你的报告；DLL 像在报告里写“见图书馆某书第几页”——报告薄了，书更新了你的报告自动引用新版。
+
+**迁移与卡点**
+- **卡点**：分清“程序库的好处”和“DLL 相对普通库的好处”。问 DLL 时，“省编程时间”不是 DLL 独有的，不给分；DLL 的分在“可执行文件小、内存省、独立更新不用重编译”。
+- **考官在换什么**：定义、好处、缺点、团队共享、DLL——同一个对象的五个角度；成对给分时第二分永远是 because。
+- **从代表题到变式**：代表题是 DLL 的好处；变式是库例程的**缺点**：可能不兼容、未必测试充分、不完全符合需求要改、别人改了库结果会变。搬过去的是“点 + because”的形状；要换的是方向，而且缺点要写成“对使用者会发生什么”。
+- **反例**：定义只写 a collection of code（漏 pre-written / pre-tested）。
 
 **下一道变式**　⟦9618_w25_11:5(b)(ii)⟧　（反面：使用库例程的一个缺点，“缺点 + 展开”。）
 
@@ -269,6 +289,12 @@
 **与 MS 对齐**　Interpreter ←“Use an interpreter while writing/coding the program”“… to test / debug the partially completed program”“… because errors can be corrected and processing continue from where the execution stopped”；Compiler ←“Use the compiler after the program is complete”“… to create an executable file so source code not seen”“Use the compiler to repeatedly test the same completed section without having to re-interpret every time”。
 
 **英文作答句**　Interpreter: use an interpreter while writing the program to test and debug the partially completed program, because errors can be corrected in real time and processing can continue from where the execution stopped. Compiler: use the compiler after the program is complete to create an executable file, so the source code is not seen.
+
+**迁移与卡点**
+- **卡点**：解释器的优势在**调试**不在速度（解释执行反而更慢）；编译器的优势在**发布**（可执行文件、不暴露源码、用户不需要翻译程序）。记成一条时间线：开发中 → 解释器，完成后 → 编译器。
+- **考官在换什么**：问哪个阶段、问好处还是缺点、要不要选择并论证（选择不给分）、分栏各封顶。
+- **从代表题到变式**：代表题按两个阶段分栏写；变式只给一个阶段（团队开发中途）要你选——理由仍是调试那三条（当场改错、一次一个错误、能测未完成的程序）。搬过去的是两张理由清单；要换的是只写一栏，并把理由扣到“团队、开发中途”。
+- **反例**：理由写成两种翻译程序的定义；完成后用编译器的理由写成 to find errors。
 
 **下一道变式**　⟦9618_s23_12:7(b)⟧　（团队开发中途：选解释器还是编译器并论证；选择本身不给分。）
 
@@ -371,6 +397,12 @@
 **英文作答句**　Breakpoints: stop the code at a specific line to check the current progress and values. Dynamic syntax checks: highlight or underline syntax errors as the code is entered. Context-sensitive prompts: suggest the code to add and automatically complete statements. Single stepping: run the code one line at a time so the values can be checked.
 
 **直观**　断点像录像的“暂停在某一帧”，单步像“一帧一帧往前按”，报告窗口是旁边实时显示的计分板。
+
+**迁移与卡点**
+- **卡点**：三类分法——呈现（prettyprint、折叠、缩进）和调试（断点、单步、变量监视）最容易混；描述不能重复名字，要写“做什么 → 让你检查什么”。
+- **考官在换什么**：给名称要描述、给类别要举例并描述、给一个要“另一个”、问怎样用来测试；都从章里那张三类表取。
+- **从代表题到变式**：代表题是四个指定功能的描述；变式要每类各举一个**不同**的功能并描述——先在三类里各选一个最稳的（上下文提示 / prettyprint / 断点），再各写一句“做什么 + 用处”。搬过去的是描述句；要注意的是“不同类”这个约束。
+- **反例**：单步和断点互换；把编译器当成 IDE 的功能。
 
 **下一道变式**　⟦9618_s24_12:8(b)⟧　（编码、呈现、调试三类各举一个不同功能并描述，6 分。）
 

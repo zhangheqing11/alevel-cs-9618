@@ -4,7 +4,9 @@
 
 示例 4–5 是**批改示范**（加速模式里「批改」那一段）：题目和 MS 原文取自真实语料，学生作答是虚构的，测试输出是用这份虚构作答实际跑出来的。学它们的批改顺序、得分点表、门槛判定与记录写法。
 
-五段都不是已经发生的教学或掌握记录；实际批改时，得分一律以该题自己的 MS 为准。
+示例 6–8 是**诊断、检索与错误转题的示范**：题目和 MS 原文同样取自真实语料，学生作答是虚构的。学它们怎样用一个问题找到学生缺的那一环、怎样把一次丢分变成下次开场的 30 秒检索题、怎样做开场检索而不越过 SKILL.md 的门槛与记录规则。
+
+八段都不是已经发生的教学或掌握记录；实际批改时，得分一律以该题自己的 MS 为准。
 
 ## 要复刻的模式
 
@@ -18,6 +20,39 @@
 | 落到考试措辞 | 连接理解与得分 | 三层定义；「explain why」要指出具体字段 |
 | 回应追问时修正说法 | 修补真正卡住的那一环 | 「Python 都是传引用」这句话哪里不准 |
 | 讲完一条链就停 | 控制新概念的数量 | 每段结尾指出下一步可以接什么 |
+| 一个探针找缺环 | 批改前先知道他是哪一环没想通，讲解只补那一环 | “一块内存自己能把数据送到光盘上吗？” |
+| 当前值看列底 | 把追踪从“脑中的印象”变成“查表” | 第 4 轮读 Mix[2]，看那一列最后填的格 |
+| 错误转成下一题 | 让丢过的分在间隔之后再被取出一次 | 缓冲区 → 位流播放时缓冲区在哪一端、解决什么 |
+
+## 先找缺的那一环：六种探针
+
+学生答错或答得含糊时，先别讲。错误几乎都来自链条上**某一环**缺失（不知道这东西为什么存在、把部件当成了有行为的主体、跟踪的是印象不是状态、没想过边界）。问一个问题把那一环找出来，讲解就只需要补它，学生也更记得住——是他自己把那一环推出来的。
+
+| 探针 | 问法 | 用在 | 能看出什么 |
+|:--|:--|:--|:--|
+| 机制 | “X 自己能做这件事吗？不能的话是谁做？” | 把部件当成主体的句子：the buffer sends、the OS decides、the hash finds | 对部件 / 机制的角色是否清楚 |
+| 反事实 | “如果两边一样快 / 如果没有这一步，会怎样？” | 定义题、作用题、“why is X used” | 是否知道这个东西存在的理由 |
+| 状态 | “这一刻 Mix[2] / Top / HeadPointer 是几？你从哪里看出来的？” | 追踪表、指针操作、递归 | 是否在跟踪真实的状态 |
+| 边界 | “第一个元素 / 空文件 / 找不到时，你的代码走哪条路？” | 写代码题 | 算法是否完整，是否只想了“正常情况” |
+| 对比 | “它和 Y 的区别只用一句话说是什么？” | 易混题型：validation / verification、interrupt / exception、virtual machine / virtual memory、RISC / CISC | 概念边界是否清楚 |
+| 反向 | “如果 MS 要的是 ‘so that …’ 这一点，题目会怎么问？” | 措辞题、题型识别 | 能否从得分点反推题型 |
+
+用法规则：
+
+- **一次只问一个**，等他答；他答对了就从那一环往下讲，答错了换一个更具体的探针，最多两个，再不行就直接讲（SKILL.md §4.2：卡住时给一次详细讲解，标学习中，继续）。
+- 只在理解看不出来时问（SKILL.md §6 理论门槛第 2 条）；作答已经显示掌握的不问。
+- **得分按探针之前的作答判**；探针之后的改写只作为理解证据写进「解释证据」，不改这道题的得分，也不把它当作独立完成。
+- 编程题卡住时的提示阶梯是另一套（programming.md §9）：探针用于“写出来了但错了”，提示阶梯用于“写不出来”。
+
+## 把错误转成下一道题
+
+每个 ✗ 都应该在**间隔之后**再被取出一次，否则下次模考还会丢同一分。做法：
+
+1. 批改时，把每个 ✗ 换成一道**30 秒能答的检索题**：只问缺的那一环，不是整道题；换一个情境问同一个模型（缓冲区 → 位流播放时的缓冲区；队列判空 → 栈判空），这样测的是迁移而不是记忆。写进交接文档「待办 · 下次开场检索」（handoff-template.md §6）。
+2. 下次开场（SKILL.md §2 之后、首学或复测之前）用 **2 分钟做 2–3 道**：不看笔记、用英文写；✗ 的当场给该题 MS 句或概念表的句子，不展开讲。
+3. **检索不是复测**：不改记录表的状态与得分（复测仍按 SKILL.md §4.5 用不同卷、没做过的整道题判门槛）；只在交接文档「常见错误」里记次数（“已错两次”）。
+4. 间隔：第一次在下次课，第二次隔一周，第三次合并进章末复测；连续两次答对就从清单删除。
+5. 检索题的答案一律以某题 MS 或概念表英文列为准；自己编的句子标「非 MS 原文」。
 
 ---
 
@@ -381,3 +416,192 @@ python3 skill/cie-9618-cs-tutor/scripts/ledger.py set P4 P4-SQ-02 状态=学习�
 （接着讲下一型，回复末尾附锚点；锚点的「未解决」写「函数里给全局变量赋值要 global」。）
 
 **要点**：先跑本型的测试（K 取对照表里的测试名，连同依赖的 3(a)），再逐点对 MS，测试与 MS 两列分开判；traceback 讲到「为什么」，修改留给学生（提示阶梯第 3 级）；MS 范例缺陷按 D45 的口径说明；记录表写行 id、MS 分与测试数。
+
+---
+
+## 示例 6：一个探针找到缺的那一环（P1-HW-06 的变式）
+
+**背景**：讲完代表题后布置变式 w24/11 Q3(d)(ii)（3 分）：一台双核计算机每五秒把温度传感器的数据写到光盘上；“Explain the use of a buffer when writing data to the optical disc.” 只给了题面（`rows.py get`，QP p.8）。
+
+**User**
+
+> The buffer temporarily stores the data from the sensor and then sends it to the optical disc. This means the data is not lost and the computer can write to the disc more easily.
+
+**Assistant**
+
+先不打分，问你一个问题：缓冲区是一块内存。一块内存自己能把数据“送”到光盘上吗？如果不能，是谁在搬？
+
+**User**
+
+应该不能……是 CPU？或者光盘读写器自己从缓冲区里取？
+
+**Assistant**
+
+是读写器从缓冲区里取。再想一步：计算机往缓冲区放数据的速度，和读写器从缓冲区取数据的速度，哪个快？如果两边一样快，还需要缓冲区吗？
+
+**User**
+
+计算机快得多。一样快的话好像就不需要了。
+
+**Assistant**
+
+这就是你答案里缺的那一环：**缓冲区存在的理由是两端速度不一样**。计算机能以很高的速度产生和写出数据，光盘读写器只能以慢得多的速度把数据写到盘上。没有缓冲区，计算机每写一点就得停下来等读写器；有了缓冲区，计算机把一批数据快速放进去就可以去做别的事（这台机器还要每五秒收一次传感器数据），读写器再按自己的速度从缓冲区里取。所以缓冲区只做一件事——**临时存放**；“搬”的动作一边是计算机写入，另一边是读写器读出。
+
+**批改 · w24/11 Q3(d)(ii)（3 分）**　1/3（按探针之前的作答）
+
+| MS 得分点（原文） | 你的原句 | 结果 |
+|:--|:--|:--|
+| The computer and optical disc reader/writer send and receive at different speeds | — | ✗ |
+| A buffer allows temporary storage of the data | The buffer temporarily stores the data | ✓ |
+| … so that the computer can transfer data to the buffer at the higher speed | — | ✗ |
+| ... and is not held up waiting for data to transfer // so the computer can carry on with other tasks | the computer can write to the disc more easily | ✗（more easily 不是机制） |
+| … and so that data is transferred to optical disc reader/writer from the buffer at the slower rate | then sends it to the optical disc | ✗ |
+
+- 做对的：temporarily 这个限定词写了，这一分稳。
+- ✗〔概念〕“the buffer … sends it”：缓冲区是存储区，没有发送的能力。考官报告指出，写 “the buffer sends” 表明不理解缓冲区是什么，而且几乎没有考生提到两端速度不匹配（w24 9618/11 Q3(d)(ii)）。
+- ✗〔考试措辞〕“data is not lost”“more easily”没有对应任何得分点：要写出速度差和它带来的后果（计算机不用等、可以继续做别的；读写器不会过载）。
+
+探针之后你自己推出了速度差这一环，这是理解证据，但这道题的分仍按第一次作答算。改写成能得分的英文（非 MS 原文，得分点见上表）：
+
+> The computer sends data much faster than the optical disc reader/writer can write it. The buffer temporarily stores the data, so the computer can transfer data to the buffer at its higher speed and carry on with other tasks, while the data is transferred from the buffer to the optical disc at the slower rate.
+
+三层定义：
+
+- **English**：「A buffer allows temporary storage of the data」⟦9618_w24_11:3(d)(ii)⟧，用在两个速度不同的设备之间。
+- **中文**：缓冲区是一块临时存放数据的内存区域，用来抹平发送方与接收方的速度差。
+- **直观**：水池接住水龙头的急流，再让下面的小管子慢慢放——池子本身不会把水“送”到任何地方。
+
+记录表：P1-HW-06 → 学习中（已写入）
+
+```bash
+python3 skill/cie-9618-cs-tutor/scripts/ledger.py set P1 P1-HW-06 状态=学习中 得分=1/3 \
+  独立题目+="9618_w24_11:3(d)(ii)" 错误类别+="概念；考试措辞" \
+  解释证据="w24/11 Q3(d)(ii) 1/3：写成 the buffer sends，缺“两端速度不同”这一环；探针后能自己说出读写器从缓冲区取、计算机可继续做别的" \
+  复测日期=2026-11-07
+```
+
+下次开场检索（写进交接文档「待办」）：*位流播放视频时，缓冲区在哪一端、解决的是谁和谁的速度差？*（同一个模型换到 CM-12 的情境。）
+
+（接着讲下一型 P1-HW-07，回复末尾附锚点。）
+
+**要点**：一个探针（机制探针）就找到了缺环，第二个探针（反事实）让他自己推出理由；讲解只补这一环；得分按探针前的作答；错误当场变成下次的检索题。
+
+---
+
+## 示例 7：追踪表迷路——当前值看列底（P2-SD-07 的变式）
+
+**背景**：讲完代表题后布置变式 w23/23 Q5（6 分，QP p.10）。题面（按原卷整理，箭头在抽取文本里错位）：全局数组 `Mix[1..4]` 初值 4、2、3、5；过程如下；用 `CALL Process(2)` 干跑，填追踪表（列：Index、Value、Total、Mix[1]、Mix[2]、Mix[3]、Mix[4]）。
+
+```pseudocode
+PROCEDURE Process(Start : INTEGER)
+   DECLARE Value, Index, Total : INTEGER
+   Index ← Start
+   Total ← 0
+   WHILE Total < 20
+      Value ← Mix[Index]
+      Total ← Total + Value
+      IF Index < 4 THEN
+         Mix[Index] ← Mix[Index] + Mix[Index + 1]
+      ELSE
+         Mix[Index] ← Mix[Index] + Mix[1]
+      ENDIF
+      Index ← (Value MOD 4) + 1
+   ENDWHILE
+   Mix[1] ← Total * Index
+ENDPROCEDURE
+```
+
+**User**
+
+| Index | Value | Total | Mix[1] | Mix[2] | Mix[3] | Mix[4] |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 2 | | 0 | 4 | 2 | 3 | 5 |
+| 3 | 2 | 2 | | 5 | | |
+| 4 | 3 | 5 | | | 8 | |
+| 2 | 5 | 10 | | | | 9 |
+| 3 | 2 | 12 | | 10 | | |
+| 1 | 8 | 20 | | | 17 | |
+| | | | 20 | | | |
+
+**Assistant**
+
+前三轮全对。先看第 4 轮：这一轮开始时 Index = 2，你给 Value 写了 2。往上看 Mix[2] 这一列，最后一次写进去的值是几？
+
+**User**
+
+5……第 1 轮把它改成 5 了。我用的是题目开头给的 2。
+
+**Assistant**
+
+对，这就是迷路的地方。追踪表里一个变量**此刻的值 = 它那一列最下面那个填了的格**，不是题目开头的初值。第 4 轮 `Value ← Mix[2]` 读到的是 5，于是 Total 变成 15，`Mix[2] ← Mix[2] + Mix[3]` = 5 + 8 = 13，`Index ← (5 MOD 4) + 1` = 2。第 5 轮再读 Mix[2]，这次列底是 13：Total = 28，Mix[2] = 13 + 8 = 21，Index 仍是 2。28 不小于 20，循环结束，`Mix[1] ← 28 × 2` = 56。
+
+改对后的第 4 轮起：
+
+| Index | Value | Total | Mix[1] | Mix[2] | Mix[3] | Mix[4] |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 2 | 5 | 15 | | 13 | | |
+| 2 | 13 | 28 | | 21 | | |
+| | | | 56 | | | |
+
+一个不迷路的办法：每一轮按语句顺序做四件事——①读 `Mix[Index]`（看那一列的列底）写 Value；②算 Total；③改 `Mix[Index]`（也看列底）；④算新 Index。四步一行，做完才进下一轮。
+
+**批改 · w23/23 Q5（6 分）**　4/6
+
+| MP | MS 要求（原文） | 你的表 | 结果 |
+|:--|:--|:--|:--|
+| 1 | Row 1 (initialisation) | Index 2、Total 0、Mix 4 2 3 5 | ✓ |
+| 2 | 1 – Total 2 | 2 | ✓ |
+| 3 | 2 – Total 5 | 5 | ✓ |
+| 4 | 3 – Total 10 | 10 | ✓ |
+| 5 | 4 – Total 15 | 12 | ✗ |
+| 6 | 5 – Total 28 and final Mix[1] = 56 | 20 / 20 | ✗ |
+
+- ✗〔测试与调试〕第 4 轮读 Mix[2] 用了初值而不是当前值；后面的错都是它带出来的。考官报告指出这道题很少有人拿满 6 分，多数人拿到初值那一分后“很快迷路”（w23 9618/23 Q5）——迷路的原因通常就是这一个。
+- 规范提示（不扣分）：改数组的那一格只写被改的那个元素，其他列留空，和 MS 的表一致。
+
+记录表：P2-SD-07 → 学习中（已写入）
+
+```bash
+python3 skill/cie-9618-cs-tutor/scripts/ledger.py set P2 P2-SD-07 状态=学习中 得分=4/6 \
+  独立题目+="9618_w23_23:5" 错误类别+=测试与调试 \
+  解释证据="w23/23 Q5 4/6：前三轮对；第 4 轮读 Mix[2] 用初值 2 而不是列底的 5；探针后能自己改对 4、5 轮与 Mix[1] = 56" \
+  复测日期=2026-12-04
+```
+
+下次开场检索（写进交接文档「待办」）：*一个 3 元素数组，循环里先改 `A[2]` 再读 `A[2]`，只问第 3 轮读到的是几*——只测“当前值看列底”这一环，30 秒。复测仍用另一卷的整道追踪表题（§4.5）。
+
+**要点**：状态探针只问“此刻是几、从哪看出来”；讲解只补这一条规则，再给一个四步法；得分按原表；检索题比原题小得多，只测那一环。
+
+---
+
+## 示例 8：开场的两分钟检索
+
+**背景**：新对话。`ledger.py summary` 显示 P1 学习中：HW-06（缓冲区）、IR-05（溢出定义写成 “too big”）、PF-04（中断只比较中断之间的优先级）；交接文档「待办 · 下次开场检索」列了三题。按 SKILL.md §2 报告位置后、首学 P1-PF-05 之前，先做检索。
+
+**Assistant**
+
+`首学 · 加速｜P1 PF 处理器，下一型 P1-PF-05｜P1 已掌握 14 / 学习中 3 / 未学 71｜到期复测 0｜AS 段首学 17/142`
+
+开始新内容前先做两分钟检索，三道 30 秒的小题，不看笔记，用英文写：
+
+1. Streaming a video: at which end is the buffer, and whose speed difference does it smooth out?
+2. Give the MS wording for what an overflow is.
+3. When the processor detects an interrupt, which two priorities does it compare?
+
+**User**
+
+1. At the user's device; the server sends faster than the video is played.
+2. The answer is too big to store.
+3. The priority of the interrupt and the priority of the one before it.
+
+**Assistant**
+
+- 1 ✓：缓冲区在接收端，抹平“到达的速度”和“播放的速度”的差——和光盘那题是同一个模型，你已经能换情境用了。
+- 2 ✗：“too big” 还是那个含糊的说法。MS 的句子是「The answer cannot be represented in the number of bits available」⟦9618_w24_11:1(d)⟧——关键词是 *number of bits available*。
+- 3 ✗：比较的是**中断的优先级和当前正在运行的进程的优先级**：「if the priority of the interrupt is higher than the current process」⟦9618_s25_12:1(c)⟧。“前一个中断”不是 MS 要的。
+
+记录表不动（这不是复测）；IR-05 和 PF-04 的这两句写进交接文档「常见错误」（溢出定义已错两次），下次开场再各问一次。现在开始 P1-PF-05。
+
+（接着按首学骨架讲 P1-PF-05。）
+
+**要点**：三题各 30 秒，只问上次缺的那一环；✓ 的点出迁移，✗ 的只给 MS 句不展开；不改记录表；连续两次答对才从清单删除。
