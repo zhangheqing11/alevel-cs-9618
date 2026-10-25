@@ -15,7 +15,7 @@ from .stats import COMMAND_LABELS, rows_for_type
 
 
 ROW_REF = re.compile(r"⟦([^⟧\s]+)⟧")
-QUOTE_REF = re.compile(r"「(.*?)」\s*⟦([^⟧\s]+)⟧", re.S)
+QUOTE_REF = re.compile(r"「([^「」]*)」\s*⟦([^⟧\s]+)⟧")
 AUTO_BLOCK = re.compile(r"<!--\s*auto:\s*([a-z-]+)(?:\s+([^\s>]+))?\s*-->")
 
 
@@ -88,7 +88,7 @@ def render_citations(text: str, metadata: Mapping[str, Mapping], *, output: str 
     its page fragment and keeps the QP/MS page tooltip for quick source checking.
     """
 
-    combined = re.compile(r"「(.*?)」\s*⟦([^⟧\s]+)⟧|⟦([^⟧\s]+)⟧", re.S)
+    combined = re.compile(r"「([^「」]*)」\s*⟦([^⟧\s]+)⟧|⟦([^⟧\s]+)⟧")
 
     def replace(match: re.Match) -> str:
         quote, quoted_id, bare_id = match.groups()
