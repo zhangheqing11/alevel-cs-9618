@@ -1,6 +1,6 @@
 # The repo folder name contains a space, so the venv lives outside it.
 PY := $(HOME)/.venvs/alevel-cs/bin/python
-UNIT_TEST_PATHS := pipeline/er pipeline/extract pipeline/mock pipeline/tag tools build/tests
+UNIT_TEST_PATHS := pipeline/er pipeline/extract pipeline/mock pipeline/tag pipeline/thresholds tools build/tests
 
 .PHONY: setup check check-all unit-tests check-scope build try
 
