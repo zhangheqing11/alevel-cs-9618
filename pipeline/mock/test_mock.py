@@ -60,12 +60,19 @@ def test_all_s26_papers_and_materials(tmp_path):
     papers = sorted((ROOT / 'corpus/rows').glob('p*/9618_s26_*.jsonl'))
     assert len(papers) == 12
     for path in papers:
+        info, rows = load_paper(path.stem)
         folder = generate(path.stem, tmp_path)
         md = (folder / 'marking.md').read_text()
         if path.stem.endswith(('41', '42', '43')):
-            assert '_sf_' in md
-            assert '150 分钟' in md
-            assert '未标注' in md
+            assert info['sf']
+            assert info['qp'] in md
+            assert info['ms'] in md
+            assert info['sf'] in md
+            assert '考试时长：150 分钟' in md
+            for row in rows:
+                primary = row.get('types', {}).get('primary')
+                assert primary, f"{row['id']} has no primary type"
+                assert f'主题型：[{primary}](' in md
         assert len(list(folder.iterdir())) == 3
 
 
