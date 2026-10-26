@@ -34,6 +34,8 @@ import textwrap
 
 DEFAULT_SOURCES = "/Users/zhangheqing/Desktop/alevel cs/sources"
 RESERVED_SESSIONS = {("s", 2026)}          # kept for timed full papers in the sprint (SKILL.md §3.5)
+# Larger values are later in the exam year; newest_first negates this value so
+# a same-year winter (w) paper is listed before a summer (s) paper.
 SESSION_ORDER = {"m": 1, "s": 2, "w": 3}
 PAPER_RE = re.compile(r"^9618_([msw])(\d{2})_([1-4])([1-3])$")
 LEDGER_FILES = {1: "P1.csv", 2: "P2.csv", 3: "P3.csv", 4: "P4.csv"}

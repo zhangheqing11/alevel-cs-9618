@@ -34,6 +34,9 @@ COMMAND_GROUPS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("calculate", ("calculate", "convert", "show", "work out", "determine", "find")),
     ("compare", ("compare", "evaluate", "discuss", "distinguish", "difference", "contrast")),
 )
+# Larger values are later in the exam year; reverse sorting therefore puts a
+# same-year winter (w) paper before a summer (s) paper.
+SESSION_ORDER = {"m": 1, "s": 2, "w": 3}
 
 
 def load_rows(root: Path, component: int | None = None) -> list[dict]:
@@ -233,13 +236,12 @@ def rows_for_type(rows: Iterable[Mapping], code: str, *, extension: bool | None 
         if code == primary or code in cross:
             found.append(dict(row))
 
-    session_order = {"s": 2, "w": 1, "m": 0}
     # Newer papers come first, while leaves within one paper retain exam order.
     # Sorting the complete tuple in reverse would incorrectly put Q2 after Q1's
     # subparts, so sort papers first and each paper's question labels separately.
     paper_order = sorted({str(row.get("paper", "")) for row in found}, key=lambda paper: (
         int(next((r.get("year", 0) for r in found if r.get("paper") == paper), 0) or 0),
-        session_order.get(str(next((r.get("session", "") for r in found if r.get("paper") == paper), "")), -1),
+        SESSION_ORDER.get(str(next((r.get("session", "") for r in found if r.get("paper") == paper), "")), -1),
         paper,
     ), reverse=True)
 
