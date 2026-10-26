@@ -1,8 +1,35 @@
 #!/usr/bin/env python3
 """Validate P3 annotation sources without reading pilot inputs."""
+import importlib.util
 import json
-from workbench import HERE, ROOT, rows, records, duplicates, norm
-from apply_p3 import index_records
+from pathlib import Path
+
+
+def _load_sibling(name):
+    """Load a sibling when this file is executed as a standalone script.
+
+    Pytest's importlib mode keeps test modules isolated, but the repository's
+    pipeline scripts are also run directly (``python pipeline/.../check_p3.py``).
+    A unique module name avoids the three component-local ``workbench.py``
+    files competing in ``sys.modules`` during a root pytest run.
+    """
+    path = Path(__file__).with_name(name + ".py")
+    spec = importlib.util.spec_from_file_location(f"_p3_check_{name}", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+try:
+    from .workbench import HERE, ROOT, rows, records, duplicates, norm
+    from .apply_p3 import index_records
+except ImportError:
+    _workbench = _load_sibling("workbench")
+    _apply_p3 = _load_sibling("apply_p3")
+    HERE, ROOT = _workbench.HERE, _workbench.ROOT
+    rows, records = _workbench.rows, _workbench.records
+    duplicates, norm = _workbench.duplicates, _workbench.norm
+    index_records = _apply_p3.index_records
 
 ALWAYS = {'DR-03', 'DR-05', 'CT-02', 'CT-03', 'CT-06', 'CT-07', 'FP-06', 'FP-10'}
 CONDITIONAL = {'CT-08', 'CT-09', 'FP-05'}

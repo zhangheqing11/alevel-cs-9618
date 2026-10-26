@@ -1,6 +1,11 @@
 """Exercise annotation guardrails before any corpus mutation."""
 from copy import deepcopy
+from pathlib import Path
+import sys
+
 import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_p3 import validate
 
 ROW = {'id': 'x', 'component': 3, 'marks': 4, 'ms_text': 'TYPE A ENDTYPE', 'equivalent_of': None}

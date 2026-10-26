@@ -1,8 +1,26 @@
 #!/usr/bin/env python3
 """Validate the P4 annotation sources (p4_tags.jsonl, p4_markpoints.jsonl). Never reads pilot inputs."""
+import importlib.util
 import json
+from pathlib import Path
 
-from workbench import HERE, ROOT, rows, records, duplicates, norm
+
+def _load_workbench():
+    """Load this component's workbench without sharing a top-level name."""
+    path = Path(__file__).with_name("workbench.py")
+    spec = importlib.util.spec_from_file_location("_p4_check_workbench", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+try:
+    from .workbench import HERE, ROOT, rows, records, duplicates, norm
+except ImportError:
+    _workbench = _load_workbench()
+    HERE, ROOT = _workbench.HERE, _workbench.ROOT
+    rows, records = _workbench.rows, _workbench.records
+    duplicates, norm = _workbench.duplicates, _workbench.norm
 
 NOLIST_NOTE = "MS 无计分清单，未拆"
 FORBIDDEN = {"flowchart-draw", "flowchart-to-pseudocode", "trace-dry-run", "case-of", "case-range",
